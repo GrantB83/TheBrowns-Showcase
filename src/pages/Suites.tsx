@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { SuiteDetail } from "@/components/ui/suite-detail";
-import { SuiteGallery } from "@/components/ui/suite-gallery";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { SEO } from "@/components/ui/seo";
@@ -11,11 +10,6 @@ const luxurySuites = [
     capacity: "4 guests",
     bedConfig: "King XL bed + Double sofa bed (kids under 12)",
     description: "Our flagship suite offers the ultimate in luxury with a spacious private unit featuring a dedicated dressing room, elegant lounge area, and ensuite bathroom with double vanity, shower, and toilet. The Master Suite interleads with the Loft Suite, making it perfect for families seeking connected accommodation.",
-    images: [
-      { src: "/images/suites/master-suite-bedroom.jpg", alt: "Master Suite elegant bedroom with King XL bed" }, // filename: master-suite-bedroom.jpg, folder: /images/suites/, dimensions: 800x600
-      { src: "/images/suites/master-suite-lounge.jpg", alt: "Master Suite private lounge area" }, // filename: master-suite-lounge.jpg, folder: /images/suites/, dimensions: 800x600
-      { src: "/images/suites/master-suite-bathroom.jpg", alt: "Master Suite ensuite bathroom with double vanity" } // filename: master-suite-bathroom.jpg, folder: /images/suites/, dimensions: 800x600
-    ],
     amenities: [
       "Underfloor heating",
       "Netflix & entertainment system", 
@@ -35,11 +29,6 @@ const luxurySuites = [
     capacity: "4 guests",
     bedConfig: "Queen XL bed + 2 Single XL beds",
     description: "Perfect for families, the Loft Suite features two comfortable bedrooms with spectacular views, a welcoming lounge area, and a spacious bathroom with double vanity and toilet. The suite offers underfloor heating in bedrooms and connects seamlessly with the Master Suite for larger group bookings.",
-    images: [
-      { src: "/images/suites/loft-suite-bedroom.jpg", alt: "Loft Suite family bedroom with Queen XL bed" }, // filename: loft-suite-bedroom.jpg, folder: /images/suites/, dimensions: 800x600
-      { src: "/images/suites/loft-suite-twin.jpg", alt: "Loft Suite twin bedroom with Single XL beds" }, // filename: loft-suite-twin.jpg, folder: /images/suites/, dimensions: 800x600
-      { src: "/images/suites/loft-suite-lounge.jpg", alt: "Loft Suite lounge area with mountain views" } // filename: loft-suite-lounge.jpg, folder: /images/suites/, dimensions: 800x600
-    ],
     amenities: [
       "Spectacular mountain views",
       "Underfloor heating in bedrooms",
@@ -59,11 +48,6 @@ const luxurySuites = [
     capacity: "2 guests",
     bedConfig: "Queen XL bed",
     description: "A romantic ground floor retreat with private entrance and enchanting garden views. The Garden Suite features a luxurious dual vanity bathroom with both bath and shower, creating the perfect sanctuary for couples seeking privacy and tranquility in our beautifully landscaped grounds.",
-    images: [
-      { src: "/images/suites/garden-suite-bedroom.jpg", alt: "Garden Suite romantic bedroom with garden views" }, // filename: garden-suite-bedroom.jpg, folder: /images/suites/, dimensions: 800x600
-      { src: "/images/suites/garden-suite-entrance.jpg", alt: "Garden Suite private entrance" }, // filename: garden-suite-entrance.jpg, folder: /images/suites/, dimensions: 800x600
-      { src: "/images/suites/garden-suite-bathroom.jpg", alt: "Garden Suite spa bathroom with bath and shower" } // filename: garden-suite-bathroom.jpg, folder: /images/suites/, dimensions: 800x600
-    ],
     amenities: [
       "Stunning garden views",
       "Private entrance",
@@ -83,11 +67,6 @@ const luxurySuites = [
     capacity: "2 guests",
     bedConfig: "Queen XL bed",
     description: "An intimate ground floor suite featuring a cozy lounge, comfortable bedroom, and modern shower-only bathroom. The Cove Suite offers a perfect blend of comfort and convenience with premium entertainment systems and luxury amenities for couples seeking a peaceful retreat.",
-    images: [
-      { src: "/images/suites/cove-suite-bedroom.jpg", alt: "Cove Suite cozy bedroom" }, // filename: cove-suite-bedroom.jpg, folder: /images/suites/, dimensions: 800x600
-      { src: "/images/suites/cove-suite-lounge.jpg", alt: "Cove Suite comfortable lounge area" }, // filename: cove-suite-lounge.jpg, folder: /images/suites/, dimensions: 800x600
-      { src: "/images/suites/cove-suite-bathroom.jpg", alt: "Cove Suite modern shower bathroom" } // filename: cove-suite-bathroom.jpg, folder: /images/suites/, dimensions: 800x600
-    ],
     amenities: [
       "Underfloor heating",
       "48-inch LED TV",
@@ -110,11 +89,6 @@ const cottageSuites = [
     capacity: "4 guests",
     bedConfig: "King XL bed or 2 Singles + Fold-out double sofa (kids under 12)",
     description: "Stylish and comfortable cottage suite featuring a warm fireplace and flexible bedding arrangements. The Robin Suite combines modern comfort with charming cottage character, offering premium amenities and cozy atmosphere perfect for families or couples seeking authentic Dullstroom charm.",
-    images: [
-      { src: "/images/suites/robin-suite-bedroom.jpg", alt: "Robin Suite stylish bedroom with fireplace" }, // filename: robin-suite-bedroom.jpg, folder: /images/suites/, dimensions: 800x600
-      { src: "/images/suites/robin-suite-02.jpg", alt: "Robin Suite cozy living area" }, // filename: robin-suite-02.jpg, folder: /images/suites/, dimensions: 800x600
-      { src: "/images/suites/robin-suite-03.jpg", alt: "Robin Suite full ensuite bathroom" } // filename: robin-suite-03.jpg, folder: /images/suites/, dimensions: 800x600
-    ],
     amenities: [
       "Warm fireplace",
       "Netflix entertainment",
@@ -134,11 +108,6 @@ const cottageSuites = [
     capacity: "2 guests", 
     bedConfig: "Flexible bed configuration",
     description: "Charming and comfortable cottage suite designed for couples, featuring a private beverage station and cozy fireplace. The Blue Crane Suite embodies the essence of cottage comfort with thoughtful amenities and intimate spaces perfect for romantic getaways.",
-    images: [
-      { src: "/images/suites/blue-crane-suite-01.jpg", alt: "Blue Crane Suite charming bedroom" }, // filename: blue-crane-suite-01.jpg, folder: /images/suites/, dimensions: 800x600
-      { src: "/images/suites/blue-crane-suite-02.jpg", alt: "Blue Crane Suite private beverage station" }, // filename: blue-crane-suite-02.jpg, folder: /images/suites/, dimensions: 800x600
-      { src: "/images/suites/blue-crane-suite-03.jpg", alt: "Blue Crane Suite cozy fireplace area" } // filename: blue-crane-suite-03.jpg, folder: /images/suites/, dimensions: 800x600
-    ],
     amenities: [
       "Private beverage station",
       "Cozy fireplace",
@@ -158,11 +127,6 @@ const cottageSuites = [
     capacity: "2-3 guests",
     bedConfig: "Flexible bed configuration for small families",
     description: "Spacious and elegant cottage suite offering cozy comfort with sophisticated touches. The Falcon Suite features a warm fireplace, premium entertainment system, and flexible accommodation perfect for small families or couples seeking extra space and cottage charm.",
-    images: [
-      { src: "/images/suites/falcon-suite-01.jpg", alt: "Falcon Suite spacious bedroom" }, // filename: falcon-suite-01.jpg, folder: /images/suites/, dimensions: 800x600
-      { src: "/images/suites/falcon-suite-02.jpg", alt: "Falcon Suite elegant living space" }, // filename: falcon-suite-02.jpg, folder: /images/suites/, dimensions: 800x600
-      { src: "/images/suites/falcon-suite-03.jpg", alt: "Falcon Suite fireplace and entertainment area" } // filename: falcon-suite-03.jpg, folder: /images/suites/, dimensions: 800x600
-    ],
     amenities: [
       "Warm fireplace",
       "Flat-screen TV with Netflix",
@@ -234,14 +198,7 @@ export default function Suites() {
 
               <div className="space-y-8 sm:space-y-12">
                 {luxurySuites.map((suite, index) => (
-                  <div key={index} className="space-y-6">
-                    <SuiteDetail {...suite} />
-                    <SuiteGallery 
-                      suiteSlug={suite.slug}
-                      suiteName={suite.title}
-                      className="mt-6"
-                    />
-                  </div>
+                  <SuiteDetail key={index} {...suite} />
                 ))}
               </div>
             </div>
@@ -265,14 +222,7 @@ export default function Suites() {
 
               <div className="space-y-8 sm:space-y-12">
                 {cottageSuites.map((suite, index) => (
-                  <div key={index} className="space-y-6">
-                    <SuiteDetail {...suite} />
-                    <SuiteGallery 
-                      suiteSlug={suite.slug}
-                      suiteName={suite.title}
-                      className="mt-6"
-                    />
-                  </div>
+                  <SuiteDetail key={index} {...suite} />
                 ))}
               </div>
             </div>

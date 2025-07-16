@@ -3,16 +3,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ImageSlider } from "@/components/ui/image-slider";
 import { Users, Bed, Bath, Wifi, Coffee, Tv, Thermometer, Eye, CarFront } from "lucide-react";
+import { useMemo } from "react";
 
 interface SuiteDetailProps {
   title: string;
   capacity: string;
   bedConfig: string;
   description: string;
-  images: Array<{
-    src: string;
-    alt: string;
-  }>;
+  slug: string;
   amenities: string[];
   className?: string;
 }
@@ -22,10 +20,25 @@ export function SuiteDetail({
   capacity,
   bedConfig,
   description,
-  images,
+  slug,
   amenities,
   className
 }: SuiteDetailProps) {
+  // Generate image array based on naming convention
+  const images = useMemo(() => {
+    const imageArray = [];
+    // Support up to 20 images per suite
+    for (let i = 1; i <= 20; i++) {
+      const paddedNumber = i.toString().padStart(2, '0');
+      imageArray.push({
+        src: `/images/suites/${slug}-${paddedNumber}.jpg`,
+        alt: `${title} - Image ${i}`,
+        title: `${title} View ${i}`,
+        // Fallback handling will be done by ImageSlider component
+      });
+    }
+    return imageArray;
+  }, [slug, title]);
   const getAmenityIcon = (amenity: string) => {
     const lower = amenity.toLowerCase();
     if (lower.includes('wifi')) return <Wifi className="h-4 w-4" />;
