@@ -46,10 +46,10 @@ export function EnhancedGallery({
 
   const getGridCols = () => {
     switch (columns) {
-      case 2: return "grid-cols-1 md:grid-cols-2";
-      case 3: return "grid-cols-1 md:grid-cols-2 lg:grid-cols-3";
-      case 4: return "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4";
-      default: return "grid-cols-1 md:grid-cols-2 lg:grid-cols-3";
+      case 2: return "grid-cols-1 sm:grid-cols-2";
+      case 3: return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3";
+      case 4: return "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4";
+      default: return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3";
     }
   };
 
@@ -57,22 +57,27 @@ export function EnhancedGallery({
     <div className={cn("space-y-6", className)}>
       {/* Category Filter */}
       {showCategories && categories.length > 0 && (
-        <div className="flex flex-wrap justify-center gap-2">
+        <div className="flex flex-wrap justify-center gap-2 px-4">
           {allCategories.map((category) => (
-            <Badge
+            <button
               key={category}
-              variant={category === selectedCategory ? "default" : "secondary"}
-              className="cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors"
+              className={cn(
+                "px-3 py-2 rounded-full text-sm font-medium transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center",
+                category === selectedCategory 
+                  ? "bg-primary text-primary-foreground" 
+                  : "bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground"
+              )}
               onClick={() => setSelectedCategory(category)}
+              aria-label={`Filter by ${category}`}
             >
               {category}
-            </Badge>
+            </button>
           ))}
         </div>
       )}
 
       {/* Gallery Grid */}
-      <div className={cn("grid gap-4", getGridCols())}>
+      <div className={cn("grid gap-3 sm:gap-4", getGridCols())}>
         {filteredImages.map((image, index) => (
           <Card 
             key={index} 
@@ -80,17 +85,24 @@ export function EnhancedGallery({
             onClick={() => openLightbox(index)}
           >
             <div className="relative aspect-square overflow-hidden">
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                loading="lazy"
-              />
+              <picture>
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  loading={index < 6 ? "eager" : "lazy"}
+                  onError={(e) => {
+                    // Fallback placeholder
+                    const target = e.target as HTMLImageElement;
+                    target.src = `https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=400&fit=crop&crop=center`;
+                  }}
+                />
+              </picture>
               
               {/* Overlay */}
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
                 <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex space-x-2">
-                  <Button size="sm" variant="secondary" className="bg-white/90 hover:bg-white">
+                  <Button size="sm" variant="secondary" className="bg-white/90 hover:bg-white min-h-[44px]">
                     <ZoomIn className="h-4 w-4 mr-1" />
                     View
                   </Button>
@@ -100,21 +112,21 @@ export function EnhancedGallery({
               {/* Category Badge */}
               {image.category && (
                 <div className="absolute top-2 left-2">
-                  <Badge variant="secondary" className="text-xs">
+                  <div className="bg-background/90 backdrop-blur-sm px-2 py-1 rounded text-xs font-medium">
                     {image.category}
-                  </Badge>
+                  </div>
                 </div>
               )}
             </div>
 
             {/* Image Info */}
             {(image.title || image.description) && (
-              <div className="p-4">
+              <div className="p-3 sm:p-4">
                 {image.title && (
-                  <h3 className="font-medium text-sm mb-1">{image.title}</h3>
+                  <h3 className="font-medium text-sm mb-1 line-clamp-1">{image.title}</h3>
                 )}
                 {image.description && (
-                  <p className="text-xs text-muted-foreground">{image.description}</p>
+                  <p className="text-xs text-muted-foreground line-clamp-2">{image.description}</p>
                 )}
               </div>
             )}

@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { SuiteDetail } from "@/components/ui/suite-detail";
+import { SuiteGallery } from "@/components/ui/suite-gallery";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { SEO } from "@/components/ui/seo";
 
 const luxurySuites = [
   {
@@ -16,7 +18,7 @@ const luxurySuites = [
     ],
     amenities: [
       "Underfloor heating",
-      "Netflix & entertainment system",
+      "Netflix & entertainment system", 
       "Premium beverage station",
       "Beautiful garden views",
       "Double vanity ensuite",
@@ -25,7 +27,8 @@ const luxurySuites = [
       "Interleads with Loft Suite",
       "Free WiFi",
       "Charlotte Rhys toiletries"
-    ]
+    ],
+    slug: "master-suite"
   },
   {
     title: "Loft Suite",
@@ -43,12 +46,13 @@ const luxurySuites = [
       "Netflix & entertainment",
       "Nespresso coffee machine",
       "Double vanity bathroom",
-      "Two separate bedrooms",
+      "Two separate bedrooms", 
       "Comfortable lounge area",
       "Free WiFi",
       "Premium tea selection",
       "Charlotte Rhys amenities"
-    ]
+    ],
+    slug: "loft-suite"
   },
   {
     title: "Garden Suite",
@@ -71,10 +75,11 @@ const luxurySuites = [
       "Free WiFi",
       "Nespresso machine",
       "Charlotte Rhys toiletries"
-    ]
+    ],
+    slug: "garden-suite"
   },
   {
-    title: "Cove Suite",
+    title: "Cove Suite", 
     capacity: "2 guests",
     bedConfig: "Queen XL bed",
     description: "An intimate ground floor suite featuring a cozy lounge, comfortable bedroom, and modern shower-only bathroom. The Cove Suite offers a perfect blend of comfort and convenience with premium entertainment systems and luxury amenities for couples seeking a peaceful retreat.",
@@ -94,7 +99,8 @@ const luxurySuites = [
       "Premium entertainment system",
       "Charlotte Rhys toiletries",
       "Daily housekeeping available"
-    ]
+    ],
+    slug: "cove-suite"
   }
 ];
 
@@ -106,8 +112,8 @@ const cottageSuites = [
     description: "Stylish and comfortable cottage suite featuring a warm fireplace and flexible bedding arrangements. The Robin Suite combines modern comfort with charming cottage character, offering premium amenities and cozy atmosphere perfect for families or couples seeking authentic Dullstroom charm.",
     images: [
       { src: "/images/suites/robin-suite-bedroom.jpg", alt: "Robin Suite stylish bedroom with fireplace" }, // filename: robin-suite-bedroom.jpg, folder: /images/suites/, dimensions: 800x600
-      { src: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=800&q=80", alt: "Robin Suite cozy living area" },
-      { src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80", alt: "Robin Suite full ensuite bathroom" }
+      { src: "/images/suites/robin-suite-02.jpg", alt: "Robin Suite cozy living area" }, // filename: robin-suite-02.jpg, folder: /images/suites/, dimensions: 800x600
+      { src: "/images/suites/robin-suite-03.jpg", alt: "Robin Suite full ensuite bathroom" } // filename: robin-suite-03.jpg, folder: /images/suites/, dimensions: 800x600
     ],
     amenities: [
       "Warm fireplace",
@@ -120,17 +126,18 @@ const cottageSuites = [
       "Cottage garden access",
       "Premium tea selection",
       "Daily housekeeping available"
-    ]
+    ],
+    slug: "robin-suite"
   },
   {
     title: "Blue Crane Suite",
-    capacity: "2 guests",
+    capacity: "2 guests", 
     bedConfig: "Flexible bed configuration",
     description: "Charming and comfortable cottage suite designed for couples, featuring a private beverage station and cozy fireplace. The Blue Crane Suite embodies the essence of cottage comfort with thoughtful amenities and intimate spaces perfect for romantic getaways.",
     images: [
-      { src: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=800&q=80", alt: "Blue Crane Suite charming bedroom" },
-      { src: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=800&q=80", alt: "Blue Crane Suite private beverage station" },
-      { src: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=800&q=80", alt: "Blue Crane Suite cozy fireplace area" }
+      { src: "/images/suites/blue-crane-suite-01.jpg", alt: "Blue Crane Suite charming bedroom" }, // filename: blue-crane-suite-01.jpg, folder: /images/suites/, dimensions: 800x600
+      { src: "/images/suites/blue-crane-suite-02.jpg", alt: "Blue Crane Suite private beverage station" }, // filename: blue-crane-suite-02.jpg, folder: /images/suites/, dimensions: 800x600
+      { src: "/images/suites/blue-crane-suite-03.jpg", alt: "Blue Crane Suite cozy fireplace area" } // filename: blue-crane-suite-03.jpg, folder: /images/suites/, dimensions: 800x600
     ],
     amenities: [
       "Private beverage station",
@@ -143,7 +150,8 @@ const cottageSuites = [
       "Garden views",
       "Flexible room layout",
       "Romantic ambiance"
-    ]
+    ],
+    slug: "blue-crane-suite"
   },
   {
     title: "Falcon Suite",
@@ -151,9 +159,9 @@ const cottageSuites = [
     bedConfig: "Flexible bed configuration for small families",
     description: "Spacious and elegant cottage suite offering cozy comfort with sophisticated touches. The Falcon Suite features a warm fireplace, premium entertainment system, and flexible accommodation perfect for small families or couples seeking extra space and cottage charm.",
     images: [
-      { src: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=800&q=80", alt: "Falcon Suite spacious bedroom" },
-      { src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80", alt: "Falcon Suite elegant living space" },
-      { src: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=800&q=80", alt: "Falcon Suite fireplace and entertainment area" }
+      { src: "/images/suites/falcon-suite-01.jpg", alt: "Falcon Suite spacious bedroom" }, // filename: falcon-suite-01.jpg, folder: /images/suites/, dimensions: 800x600
+      { src: "/images/suites/falcon-suite-02.jpg", alt: "Falcon Suite elegant living space" }, // filename: falcon-suite-02.jpg, folder: /images/suites/, dimensions: 800x600
+      { src: "/images/suites/falcon-suite-03.jpg", alt: "Falcon Suite fireplace and entertainment area" } // filename: falcon-suite-03.jpg, folder: /images/suites/, dimensions: 800x600
     ],
     amenities: [
       "Warm fireplace",
@@ -161,112 +169,137 @@ const cottageSuites = [
       "Bootlegger coffee station",
       "Free WiFi",
       "Charlotte Rhys toiletries",
-      "Spacious living area",
+      "Spacious living area", 
       "Elegant cozy comfort",
       "Family-friendly layout",
       "Cottage garden access",
       "Premium entertainment system"
-    ]
+    ],
+    slug: "falcon-suite"
   }
 ];
 
 export default function Suites() {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-accent to-muted">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-primary mb-6">Our Luxury Suites</h1>
-            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              Choose from our collection of elegantly appointed suites, each uniquely designed 
-              with premium amenities and thoughtful touches for an unforgettable stay.
+    <>
+      <SEO 
+        title="Luxury Suites & Cottage Accommodation | The Browns Dullstroom"
+        description="Choose from our luxury guest suites and charming cottage rooms in Dullstroom. Modern amenities, spectacular views, and authentic highland comfort await."
+        keywords="luxury suites Dullstroom, cottage accommodation, family suites, romantic getaway, premium lodging Mpumalanga"
+      />
+      
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-accent to-muted">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-primary mb-6">Our Luxury Suites</h1>
+              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8">
+                Choose from our collection of elegantly appointed suites, each uniquely designed 
+                with premium amenities and thoughtful touches for an unforgettable stay.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="min-h-[48px]" asChild>
+                  <a 
+                    href="https://book.nightsbridge.com/00000" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    aria-label="Book your suite now"
+                  >
+                    Book Your Suite
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" className="min-h-[48px]" asChild>
+                  <a href="/contact" aria-label="Contact us for inquiries">
+                    Contact Us
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Luxury Guest Suites */}
+        <section className="py-12 sm:py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-8 sm:mb-12">
+                <Badge variant="secondary" className="text-sm sm:text-lg px-3 py-1 sm:px-4 sm:py-2 mb-4">Modern Luxury</Badge>
+                <h2 className="text-primary mb-4">Luxury Guest Suites</h2>
+                <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                  Our main house features 4 elegantly appointed ensuite rooms with sophisticated design, 
+                  premium amenities, and modern luxury touches. Perfect for up to 10 adults and 2 children.
+                </p>
+              </div>
+
+              <div className="space-y-8 sm:space-y-12">
+                {luxurySuites.map((suite, index) => (
+                  <div key={index} className="space-y-6">
+                    <SuiteDetail {...suite} />
+                    <SuiteGallery 
+                      suiteSlug={suite.slug}
+                      suiteName={suite.title}
+                      className="mt-6"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <Separator className="my-0" />
+
+        {/* Cottage Suites */}
+        <section className="py-12 sm:py-16 bg-muted">
+          <div className="container mx-auto px-4">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-8 sm:mb-12">
+                <Badge className="text-sm sm:text-lg px-3 py-1 sm:px-4 sm:py-2 mb-4 bg-secondary text-secondary-foreground">Charming Comfort</Badge>
+                <h2 className="text-primary mb-4">Cottage Suites</h2>
+                <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                  Our neighboring cottage offers 3 available rooms with cozy, charming vibes and 
+                  old-school comfort. Perfect for intimate stays accommodating up to 6 adults and 1 child.
+                </p>
+              </div>
+
+              <div className="space-y-8 sm:space-y-12">
+                {cottageSuites.map((suite, index) => (
+                  <div key={index} className="space-y-6">
+                    <SuiteDetail {...suite} />
+                    <SuiteGallery 
+                      suiteSlug={suite.slug}
+                      suiteName={suite.title}
+                      className="mt-6"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Booking CTA */}
+        <section className="py-12 sm:py-16 bg-primary text-primary-foreground">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-primary-foreground mb-4">Ready to Experience Luxury?</h2>
+            <p className="text-lg sm:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+              Book directly with us through Nightsbridge for the best rates, personalized service, 
+              and seamless reservation experience.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
-                <a 
-                  href="https://book.nightsbridge.com/00000" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  Book Your Suite
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a href="/contact">
-                  Contact Us
-                </a>
-              </Button>
-            </div>
+            <Button size="lg" variant="secondary" className="min-h-[48px]" asChild>
+              <a 
+                href="https://book.nightsbridge.com/00000" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Book your luxury suite now"
+              >
+                Book Your Luxury Suite Now
+              </a>
+            </Button>
           </div>
-        </div>
-      </section>
-
-      {/* Luxury Guest Suites */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge variant="secondary" className="text-lg px-4 py-2 mb-4">Modern Luxury</Badge>
-              <h2 className="text-primary mb-4">Luxury Guest Suites</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Our main house features 4 elegantly appointed ensuite rooms with sophisticated design, 
-                premium amenities, and modern luxury touches. Perfect for up to 10 adults and 2 children.
-              </p>
-            </div>
-
-            <div className="space-y-12">
-              {luxurySuites.map((suite, index) => (
-                <SuiteDetail key={index} {...suite} />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Separator className="my-0" />
-
-      {/* Cottage Suites */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge className="text-lg px-4 py-2 mb-4 bg-secondary text-secondary-foreground">Charming Comfort</Badge>
-              <h2 className="text-primary mb-4">Cottage Suites</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Our neighboring cottage offers 3 available rooms with cozy, charming vibes and 
-                old-school comfort. Perfect for intimate stays accommodating up to 6 adults and 1 child.
-              </p>
-            </div>
-
-            <div className="space-y-12">
-              {cottageSuites.map((suite, index) => (
-                <SuiteDetail key={index} {...suite} />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Booking CTA */}
-      <section className="py-16 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-primary-foreground mb-4">Ready to Experience Luxury?</h2>
-          <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Book directly with us through Nightsbridge for the best rates, personalized service, 
-            and seamless reservation experience.
-          </p>
-          <Button size="lg" variant="secondary" asChild>
-            <a 
-              href="https://book.nightsbridge.com/00000" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              Book Your Luxury Suite Now
-            </a>
-          </Button>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 }

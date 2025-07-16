@@ -37,16 +37,16 @@ export function Header() {
         : "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     )}>
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-14 sm:h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <img 
               src="/assets/logo.png" 
               alt="The Browns Logo" 
-              className="h-8 w-8"
+              className="h-6 w-6 sm:h-8 sm:w-8"
             />
             {/* Logo placeholder: filename: logo.png, folder: /assets/, dimensions: 200x50 */}
-            <span className="font-playfair text-xl font-semibold text-primary">
+            <span className="font-playfair text-lg sm:text-xl font-semibold text-primary">
               The Browns
             </span>
           </Link>
@@ -70,12 +70,13 @@ export function Header() {
           </nav>
 
           {/* Book Now Button & Mobile Menu */}
-          <div className="flex items-center space-x-4">
-            <Button asChild className="hidden sm:inline-flex">
+          <div className="flex items-center space-x-2 sm:space-x-4">
+            <Button asChild className="hidden sm:inline-flex text-sm px-4 py-2" size="sm">
               <a 
                 href="https://book.nightsbridge.com/00000" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                aria-label="Book accommodation now"
               >
                 Book Now
               </a>
@@ -87,7 +88,8 @@ export function Header() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="md:hidden"
+                  className="md:hidden min-h-[44px] min-w-[44px]"
+                  aria-label="Open navigation menu"
                 >
                   <Menu className="h-5 w-5" />
                 </Button>
@@ -115,7 +117,7 @@ export function Header() {
                           key={item.name}
                           to={item.href}
                           className={cn(
-                            "block px-3 py-3 text-base font-medium transition-colors hover:text-primary rounded-lg",
+                            "block px-4 py-4 text-base font-medium transition-colors hover:text-primary rounded-lg min-h-[44px] flex items-center",
                             location.pathname === item.href
                               ? "text-primary bg-accent"
                               : "text-muted-foreground hover:bg-accent/50"
@@ -129,15 +131,23 @@ export function Header() {
 
                     {/* Contact Info in Mobile Menu */}
                     <div className="mt-8 pt-6 border-t space-y-4">
-                      <div className="flex items-center space-x-3 text-sm">
-                        <Phone className="h-4 w-4 text-primary" />
-                        <a href="tel:+27000000000" className="hover:text-primary">
+                      <div className="flex items-center space-x-3 text-sm min-h-[44px]">
+                        <Phone className="h-4 w-4 text-primary flex-shrink-0" />
+                        <a 
+                          href="tel:+27000000000" 
+                          className="hover:text-primary py-2"
+                          aria-label="Call The Browns"
+                        >
                           +27 00 000 0000
                         </a>
                       </div>
-                      <div className="flex items-center space-x-3 text-sm">
-                        <Mail className="h-4 w-4 text-primary" />
-                        <a href="mailto:info@thebrowns.co.za" className="hover:text-primary">
+                      <div className="flex items-center space-x-3 text-sm min-h-[44px]">
+                        <Mail className="h-4 w-4 text-primary flex-shrink-0" />
+                        <a 
+                          href="mailto:info@thebrowns.co.za" 
+                          className="hover:text-primary py-2"
+                          aria-label="Email The Browns"
+                        >
                           info@thebrowns.co.za
                         </a>
                       </div>
