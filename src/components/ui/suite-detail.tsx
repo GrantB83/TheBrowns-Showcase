@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ImageSlider } from "@/components/ui/image-slider";
 import { Users, Bed, Bath, Wifi, Coffee, Tv, Thermometer, Eye, CarFront } from "lucide-react";
-import { useMemo } from "react";
+import { useMemo, useState, useEffect } from "react";
 
 interface SuiteDetailProps {
   title: string;
@@ -24,20 +24,43 @@ export function SuiteDetail({
   amenities,
   className
 }: SuiteDetailProps) {
-  // Generate image array based on naming convention
-  const images = useMemo(() => {
-    const imageArray = [];
-    // Support up to 20 images per suite
-    for (let i = 1; i <= 20; i++) {
-      const paddedNumber = i.toString().padStart(2, '0');
-      imageArray.push({
-        src: `/images/suites/${slug}-${paddedNumber}.jpg`,
-        alt: `${title} - Image ${i}`,
-        title: `${title} View ${i}`,
-        // Fallback handling will be done by ImageSlider component
-      });
-    }
-    return imageArray;
+  // State to track which images actually exist
+  const [availableImages, setAvailableImages] = useState<Array<{src: string, alt: string, title: string}>>([]);
+
+  // Check which images exist and build the array
+  useEffect(() => {
+    const checkImages = async () => {
+      const existingImages: Array<{src: string, alt: string, title: string}> = [];
+      
+      for (let i = 1; i <= 20; i++) {
+        const paddedNumber = i.toString().padStart(2, '0');
+        const imageSrc = `/images/suites/${slug}-${paddedNumber}.jpg`;
+        
+        try {
+          // Check if image exists by trying to load it
+          await new Promise<void>((resolve, reject) => {
+            const img = new Image();
+            img.onload = () => resolve();
+            img.onerror = () => reject();
+            img.src = imageSrc;
+          });
+          
+          // If we get here, the image exists
+          existingImages.push({
+            src: imageSrc,
+            alt: `${title} - Image ${i}`,
+            title: `${title} View ${i}`,
+          });
+        } catch {
+          // Image doesn't exist, skip it
+          continue;
+        }
+      }
+      
+      setAvailableImages(existingImages);
+    };
+    
+    checkImages();
   }, [slug, title]);
   const getAmenityIcon = (amenity: string) => {
     const lower = amenity.toLowerCase();
@@ -57,7 +80,7 @@ export function SuiteDetail({
         {/* Image Gallery */}
         <div className="relative">
           <ImageSlider 
-            images={images}
+            images={availableImages}
             className="h-80 lg:h-full rounded-l-lg"
             autoPlay={false}
           />
