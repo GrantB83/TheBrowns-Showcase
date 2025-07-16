@@ -47,10 +47,11 @@ export default function About() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
               <div>
                 <img
-                  src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=800&q=80"
+                  src="/images/about/browns-exterior.jpg"
                   alt="The Browns luxury guest suites exterior in Dullstroom"
                   className="rounded-lg shadow-lg w-full"
                 />
+                {/* Image placeholder: filename: browns-exterior.jpg, folder: /images/about/, dimensions: 800x600 */}
               </div>
               <div className="space-y-6">
                 <h2 className="text-primary">Our Story</h2>
@@ -102,10 +103,11 @@ export default function About() {
                 <Card className="overflow-hidden">
                   <div className="relative">
                     <img
-                      src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=600&q=80"
+                      src="/images/about/luxury-guest-suites.jpg"
                       alt="Luxury Guest Suites elegant interior at The Browns"
                       className="w-full h-64 object-cover"
                     />
+                    {/* Image placeholder: filename: luxury-guest-suites.jpg, folder: /images/about/, dimensions: 600x400 */}
                     <div className="absolute top-4 left-4">
                       <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
                         Modern Luxury
@@ -140,10 +142,11 @@ export default function About() {
                 <Card className="overflow-hidden">
                   <div className="relative">
                     <img
-                      src="https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=600&q=80"
+                      src="/images/about/cottage-suites.jpg"
                       alt="Cottage Suites cozy interior with fireplace at The Browns"
                       className="w-full h-64 object-cover"
                     />
+                    {/* Image placeholder: filename: cottage-suites.jpg, folder: /images/about/, dimensions: 600x400 */}
                     <div className="absolute top-4 left-4">
                       <span className="bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-medium">
                         Charming Comfort

@@ -7,37 +7,37 @@ const attractions = [
     icon: Fish, 
     title: "World-Class Fly-Fishing", 
     description: "Experience premier trout fishing in pristine highland waters at Dullstroom Dam and surrounding streams. Perfect for both beginners and expert anglers.",
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+    image: "/images/location/fly-fishing.jpg" // filename: fly-fishing.jpg, folder: /images/location/, dimensions: 600x400
   },
   { 
     icon: Mountain, 
     title: "Highland Hiking Trails", 
     description: "Explore scenic nature trails with breathtaking mountain views, from gentle walks to challenging highland hikes through Mpumalanga's stunning landscapes.",
-    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=600&q=80"
+    image: "/images/location/highland-hiking.jpg" // filename: highland-hiking.jpg, folder: /images/location/, dimensions: 600x400
   },
   { 
     icon: Camera, 
     title: "Birdwatching Paradise", 
     description: "Discover diverse bird species in their natural highland habitat. The area is renowned for its rich avian life and spectacular birdwatching opportunities.",
-    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=600&q=80"
+    image: "/images/location/birdwatching.jpg" // filename: birdwatching.jpg, folder: /images/location/, dimensions: 600x400
   },
   { 
     icon: Calendar, 
     title: "Seasonal Festivals & Events", 
     description: "Join local events and cultural celebrations throughout the year, including arts festivals, food markets, and traditional highland gatherings.",
-    image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=600&q=80"
+    image: "/images/location/seasonal-festivals.jpg" // filename: seasonal-festivals.jpg, folder: /images/location/, dimensions: 600x400
   },
   { 
     icon: Utensils, 
     title: "Fine Dining & Local Cuisine", 
     description: "Savor acclaimed restaurants and authentic local culinary experiences. From fine dining to traditional pub fare, all within walking distance.",
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=600&q=80"
+    image: "/images/location/fine-dining.jpg" // filename: fine-dining.jpg, folder: /images/location/, dimensions: 600x400
   },
   { 
     icon: Music, 
     title: "Whiskey Tastings & Distilleries", 
     description: "Experience local distillery tours and premium whiskey tastings. Discover the craft of highland spirits in authentic Mpumalanga settings.",
-    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=600&q=80"
+    image: "/images/location/whiskey-tastings.jpg" // filename: whiskey-tastings.jpg, folder: /images/location/, dimensions: 600x400
   }
 ];
 

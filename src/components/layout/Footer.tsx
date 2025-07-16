@@ -25,7 +25,12 @@ export function Footer() {
           {/* Logo & Description */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="h-8 w-8 rounded-full bg-primary"></div>
+              <img 
+                src="/assets/logo.png" 
+                alt="The Browns Logo" 
+                className="h-8 w-8"
+              />
+              {/* Logo placeholder: filename: logo.png, folder: /assets/, dimensions: 200x50 */}
               <span className="font-playfair text-xl font-semibold text-primary">
                 The Browns
               </span>

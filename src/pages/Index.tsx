@@ -8,19 +8,19 @@ import { MapPin, Wifi, Car, Coffee, Zap, Shield, Droplets, Tv } from "lucide-rea
 
 const heroImages = [
   {
-    src: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=2000&q=80",
+    src: "/images/hero/browns-exterior.jpg", // filename: browns-exterior.jpg, folder: /images/hero/, dimensions: 2000x1200
     alt: "The Browns luxury guest suites exterior in Dullstroom",
     title: "Welcome to The Browns",
     subtitle: "Luxury Guest Suites & Cottage in Dullstroom"
   },
   {
-    src: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=2000&q=80",
+    src: "/images/hero/suite-interior.jpg", // filename: suite-interior.jpg, folder: /images/hero/, dimensions: 2000x1200
     alt: "Elegant interior of luxury suite at The Browns",
     title: "Modern Luxury",
     subtitle: "Beautifully appointed suites with premium amenities"
   },
   {
-    src: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=2000&q=80",
+    src: "/images/hero/gardens-mountains.jpg", // filename: gardens-mountains.jpg, folder: /images/hero/, dimensions: 2000x1200
     alt: "Serene gardens and mountain views at The Browns Dullstroom",
     title: "Serene Setting",
     subtitle: "Peaceful gardens in the heart of Mpumalanga highlands"
@@ -33,7 +33,7 @@ const featuredSuites = [
     description: "Our premium suite with elegant appointments and spacious living area.",
     capacity: "4 guests",
     bedConfig: "King XL + Double sofa bed",
-    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=800&q=80",
+    image: "/images/suites/master-suite-card.jpg", // filename: master-suite-card.jpg, folder: /images/suites/, dimensions: 800x600
     amenities: ["Underfloor heating", "Netflix", "Nespresso", "Double vanity", "Private lounge", "Garden views"]
   },
   {
@@ -41,7 +41,7 @@ const featuredSuites = [
     description: "Ground floor suite with private entrance and beautiful garden views.",
     capacity: "2 guests",
     bedConfig: "Queen XL bed",
-    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80",
+    image: "/images/suites/garden-suite-card.jpg", // filename: garden-suite-card.jpg, folder: /images/suites/, dimensions: 800x600
     amenities: ["Garden views", "Private entrance", "Spa bath", "Netflix", "WiFi", "Nespresso"]
   },
   {
@@ -49,7 +49,7 @@ const featuredSuites = [
     description: "Cottage suite with fireplace and charming, comfortable styling.",
     capacity: "4 guests",
     bedConfig: "King XL or 2 Singles + Sofa bed",
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=800&q=80",
+    image: "/images/suites/robin-suite-card.jpg", // filename: robin-suite-card.jpg, folder: /images/suites/, dimensions: 800x600
     amenities: ["Fireplace", "Netflix", "Nespresso", "Charlotte Rhys", "Full ensuite", "WiFi"]
   }
 ];

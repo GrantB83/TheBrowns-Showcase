@@ -10,9 +10,9 @@ const luxurySuites = [
     bedConfig: "King XL bed + Double sofa bed (kids under 12)",
     description: "Our flagship suite offers the ultimate in luxury with a spacious private unit featuring a dedicated dressing room, elegant lounge area, and ensuite bathroom with double vanity, shower, and toilet. The Master Suite interleads with the Loft Suite, making it perfect for families seeking connected accommodation.",
     images: [
-      { src: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=800&q=80", alt: "Master Suite elegant bedroom with King XL bed" },
-      { src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80", alt: "Master Suite private lounge area" },
-      { src: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=800&q=80", alt: "Master Suite ensuite bathroom with double vanity" }
+      { src: "/images/suites/master-suite-bedroom.jpg", alt: "Master Suite elegant bedroom with King XL bed" }, // filename: master-suite-bedroom.jpg, folder: /images/suites/, dimensions: 800x600
+      { src: "/images/suites/master-suite-lounge.jpg", alt: "Master Suite private lounge area" }, // filename: master-suite-lounge.jpg, folder: /images/suites/, dimensions: 800x600
+      { src: "/images/suites/master-suite-bathroom.jpg", alt: "Master Suite ensuite bathroom with double vanity" } // filename: master-suite-bathroom.jpg, folder: /images/suites/, dimensions: 800x600
     ],
     amenities: [
       "Underfloor heating",
@@ -33,9 +33,9 @@ const luxurySuites = [
     bedConfig: "Queen XL bed + 2 Single XL beds",
     description: "Perfect for families, the Loft Suite features two comfortable bedrooms with spectacular views, a welcoming lounge area, and a spacious bathroom with double vanity and toilet. The suite offers underfloor heating in bedrooms and connects seamlessly with the Master Suite for larger group bookings.",
     images: [
-      { src: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=800&q=80", alt: "Loft Suite family bedroom with Queen XL bed" },
-      { src: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=800&q=80", alt: "Loft Suite twin bedroom with Single XL beds" },
-      { src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80", alt: "Loft Suite lounge area with mountain views" }
+      { src: "/images/suites/loft-suite-bedroom.jpg", alt: "Loft Suite family bedroom with Queen XL bed" }, // filename: loft-suite-bedroom.jpg, folder: /images/suites/, dimensions: 800x600
+      { src: "/images/suites/loft-suite-twin.jpg", alt: "Loft Suite twin bedroom with Single XL beds" }, // filename: loft-suite-twin.jpg, folder: /images/suites/, dimensions: 800x600
+      { src: "/images/suites/loft-suite-lounge.jpg", alt: "Loft Suite lounge area with mountain views" } // filename: loft-suite-lounge.jpg, folder: /images/suites/, dimensions: 800x600
     ],
     amenities: [
       "Spectacular mountain views",
@@ -56,9 +56,9 @@ const luxurySuites = [
     bedConfig: "Queen XL bed",
     description: "A romantic ground floor retreat with private entrance and enchanting garden views. The Garden Suite features a luxurious dual vanity bathroom with both bath and shower, creating the perfect sanctuary for couples seeking privacy and tranquility in our beautifully landscaped grounds.",
     images: [
-      { src: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=800&q=80", alt: "Garden Suite romantic bedroom with garden views" },
-      { src: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=800&q=80", alt: "Garden Suite private entrance" },
-      { src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80", alt: "Garden Suite spa bathroom with bath and shower" }
+      { src: "/images/suites/garden-suite-bedroom.jpg", alt: "Garden Suite romantic bedroom with garden views" }, // filename: garden-suite-bedroom.jpg, folder: /images/suites/, dimensions: 800x600
+      { src: "/images/suites/garden-suite-entrance.jpg", alt: "Garden Suite private entrance" }, // filename: garden-suite-entrance.jpg, folder: /images/suites/, dimensions: 800x600
+      { src: "/images/suites/garden-suite-bathroom.jpg", alt: "Garden Suite spa bathroom with bath and shower" } // filename: garden-suite-bathroom.jpg, folder: /images/suites/, dimensions: 800x600
     ],
     amenities: [
       "Stunning garden views",
@@ -79,9 +79,9 @@ const luxurySuites = [
     bedConfig: "Queen XL bed",
     description: "An intimate ground floor suite featuring a cozy lounge, comfortable bedroom, and modern shower-only bathroom. The Cove Suite offers a perfect blend of comfort and convenience with premium entertainment systems and luxury amenities for couples seeking a peaceful retreat.",
     images: [
-      { src: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=800&q=80", alt: "Cove Suite cozy bedroom" },
-      { src: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=800&q=80", alt: "Cove Suite comfortable lounge area" },
-      { src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80", alt: "Cove Suite modern shower bathroom" }
+      { src: "/images/suites/cove-suite-bedroom.jpg", alt: "Cove Suite cozy bedroom" }, // filename: cove-suite-bedroom.jpg, folder: /images/suites/, dimensions: 800x600
+      { src: "/images/suites/cove-suite-lounge.jpg", alt: "Cove Suite comfortable lounge area" }, // filename: cove-suite-lounge.jpg, folder: /images/suites/, dimensions: 800x600
+      { src: "/images/suites/cove-suite-bathroom.jpg", alt: "Cove Suite modern shower bathroom" } // filename: cove-suite-bathroom.jpg, folder: /images/suites/, dimensions: 800x600
     ],
     amenities: [
       "Underfloor heating",
@@ -105,7 +105,7 @@ const cottageSuites = [
     bedConfig: "King XL bed or 2 Singles + Fold-out double sofa (kids under 12)",
     description: "Stylish and comfortable cottage suite featuring a warm fireplace and flexible bedding arrangements. The Robin Suite combines modern comfort with charming cottage character, offering premium amenities and cozy atmosphere perfect for families or couples seeking authentic Dullstroom charm.",
     images: [
-      { src: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=800&q=80", alt: "Robin Suite stylish bedroom with fireplace" },
+      { src: "/images/suites/robin-suite-bedroom.jpg", alt: "Robin Suite stylish bedroom with fireplace" }, // filename: robin-suite-bedroom.jpg, folder: /images/suites/, dimensions: 800x600
       { src: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=800&q=80", alt: "Robin Suite cozy living area" },
       { src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80", alt: "Robin Suite full ensuite bathroom" }
     ],

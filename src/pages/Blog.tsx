@@ -13,7 +13,7 @@ const blogPosts = [
     author: "The Browns Team",
     date: "March 15, 2024",
     readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+    image: "/images/blog/fly-fishing-dullstroom.jpg", // filename: fly-fishing-dullstroom.jpg, folder: /images/blog/, dimensions: 800x600
     keywords: ["Dullstroom fishing accommodation", "trout fishing", "fly fishing", "Mpumalanga activities", "highland fishing"]
   },
   {
@@ -23,7 +23,7 @@ const blogPosts = [
     author: "The Browns Team", 
     date: "March 10, 2024",
     readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=800&q=80",
+    image: "/images/blog/mpumalanga-events.jpg", // filename: mpumalanga-events.jpg, folder: /images/blog/, dimensions: 800x600
     keywords: ["Dullstroom events", "Mpumalanga festivals", "seasonal celebrations", "local markets"]
   },
   {
@@ -33,7 +33,7 @@ const blogPosts = [
     author: "The Browns Team",
     date: "March 5, 2024",
     readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=800&q=80",
+    image: "/images/blog/self-catering-luxury.jpg", // filename: self-catering-luxury.jpg, folder: /images/blog/, dimensions: 800x600
     keywords: ["self-catering luxury", "Dullstroom accommodation", "luxury suites", "highland retreat"]
   },
   {
@@ -43,7 +43,7 @@ const blogPosts = [
     author: "The Browns Team",
     date: "February 28, 2024",
     readTime: "7 min read",
-    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=800&q=80",
+    image: "/images/blog/dullstroom-food-scene.jpg", // filename: dullstroom-food-scene.jpg, folder: /images/blog/, dimensions: 800x600
     keywords: ["Dullstroom dining", "fine dining", "local cuisine", "artisanal food", "restaurant recommendations"]
   },
   {
@@ -53,7 +53,7 @@ const blogPosts = [
     author: "The Browns Team",
     date: "February 20, 2024",
     readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80",
+    image: "/images/blog/highland-hiking-trails.jpg", // filename: highland-hiking-trails.jpg, folder: /images/blog/, dimensions: 800x600
     keywords: ["Dullstroom hiking", "highland trails", "nature walks", "outdoor activities", "mountain hiking"]
   }
 ];

@@ -40,7 +40,12 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded-full bg-primary"></div>
+            <img 
+              src="/assets/logo.png" 
+              alt="The Browns Logo" 
+              className="h-8 w-8"
+            />
+            {/* Logo placeholder: filename: logo.png, folder: /assets/, dimensions: 200x50 */}
             <span className="font-playfair text-xl font-semibold text-primary">
               The Browns
             </span>
@@ -91,7 +96,12 @@ export function Header() {
                 <div className="flex flex-col h-full">
                   {/* Logo */}
                   <div className="flex items-center space-x-2 mb-8">
-                    <div className="h-8 w-8 rounded-full bg-primary"></div>
+                    <img 
+                      src="/assets/logo.png" 
+                      alt="The Browns Logo" 
+                      className="h-8 w-8"
+                    />
+                    {/* Logo placeholder: filename: logo.png, folder: /assets/, dimensions: 200x50 */}
                     <span className="font-playfair text-xl font-semibold text-primary">
                       The Browns
                     </span>
