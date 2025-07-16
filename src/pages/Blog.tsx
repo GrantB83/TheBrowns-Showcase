@@ -1,6 +1,8 @@
+import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { BlogSearch } from "@/components/ui/blog-search";
 import { Calendar, Clock, User, ExternalLink } from "lucide-react";
 
 const blogPosts = [
@@ -59,6 +61,24 @@ const blogPosts = [
 const categories = ["All", "Activities", "Events", "Accommodation", "Dining", "Outdoor Activities"];
 
 export default function Blog() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+
+  // Filter blog posts based on search and categories
+  const filteredPosts = useMemo(() => {
+    return blogPosts.filter(post => {
+      const matchesSearch = searchTerm === "" || 
+        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.keywords.some(keyword => keyword.toLowerCase().includes(searchTerm.toLowerCase()));
+      
+      const matchesCategory = selectedCategories.length === 0 || 
+        selectedCategories.includes(post.category);
+      
+      return matchesSearch && matchesCategory;
+    });
+  }, [searchTerm, selectedCategories]);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -74,21 +94,18 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Categories Filter */}
+      {/* Search & Filter */}
       <section className="py-8 bg-background border-b">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-2">
-              {categories.map((category) => (
-                <Badge 
-                  key={category} 
-                  variant={category === "All" ? "default" : "secondary"}
-                  className="cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors"
-                >
-                  {category}
-                </Badge>
-              ))}
-            </div>
+          <div className="max-w-4xl mx-auto">
+            <BlogSearch
+              searchTerm={searchTerm}
+              onSearchChange={setSearchTerm}
+              selectedCategories={selectedCategories}
+              onCategoryChange={setSelectedCategories}
+              availableCategories={categories}
+              resultsCount={filteredPosts.length}
+            />
           </div>
         </div>
       </section>
@@ -97,8 +114,24 @@ export default function Blog() {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {blogPosts.map((post, index) => (
+            {filteredPosts.length === 0 ? (
+              <div className="text-center py-12">
+                <p className="text-muted-foreground text-lg mb-4">
+                  No blog posts found matching your search criteria.
+                </p>
+                <Button 
+                  variant="ghost" 
+                  onClick={() => {
+                    setSearchTerm("");
+                    setSelectedCategories([]);
+                  }}
+                >
+                  Clear Filters
+                </Button>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {filteredPosts.map((post, index) => (
                 <Card key={index} className="group hover:shadow-lg transition-shadow cursor-pointer">
                   <div className="relative overflow-hidden">
                     <img
@@ -146,8 +179,9 @@ export default function Blog() {
                     </div>
                   </CardContent>
                 </Card>
-              ))}
-            </div>
+                ))}
+              </div>
+            )}
 
             {/* Load More */}
             <div className="text-center mt-12">
