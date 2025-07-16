@@ -49,9 +49,10 @@ export default function Contact() {
                     <Phone className="h-5 w-5 text-primary" />
                     <div>
                       <p className="font-medium">Phone / WhatsApp</p>
-                      <a href="tel:+27000000000" className="text-muted-foreground hover:text-primary">
+                       <a href="tel:+27000000000" className="text-muted-foreground hover:text-primary">
                         +27 00 000 0000
                       </a>
+                      <p className="text-sm text-muted-foreground mt-1">WhatsApp available</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
