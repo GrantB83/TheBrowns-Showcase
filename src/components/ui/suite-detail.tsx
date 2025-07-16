@@ -25,12 +25,12 @@ export function SuiteDetail({
   className
 }: SuiteDetailProps) {
   // State to track which images actually exist
-  const [availableImages, setAvailableImages] = useState<Array<{src: string, alt: string, title: string}>>([]);
+  const [availableImages, setAvailableImages] = useState<Array<{src: string, alt: string}>>([]);
 
   // Check which images exist and build the array
   useEffect(() => {
     const checkImages = async () => {
-      const existingImages: Array<{src: string, alt: string, title: string}> = [];
+      const existingImages: Array<{src: string, alt: string}> = [];
       
       for (let i = 1; i <= 20; i++) {
         const paddedNumber = i.toString().padStart(2, '0');
@@ -49,7 +49,6 @@ export function SuiteDetail({
           existingImages.push({
             src: imageSrc,
             alt: `${title} - Image ${i}`,
-            title: `${title} View ${i}`,
           });
         } catch {
           // Image doesn't exist, skip it
