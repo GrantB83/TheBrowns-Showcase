@@ -79,10 +79,10 @@ export function SuiteDetail({
     <Card className={className}>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Image Gallery */}
-        <div className="relative">
+        <div className="relative flex items-center min-h-[400px] lg:min-h-full">
           <ImageSlider 
             images={availableImages}
-            className="h-80 lg:h-full rounded-l-lg"
+            className="h-80 lg:h-96 w-full rounded-l-lg"
             autoPlay={false}
           />
         </div>

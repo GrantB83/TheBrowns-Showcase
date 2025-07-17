@@ -288,7 +288,7 @@ export default function Suites() {
               </p>
             </div>
             
-            <div className="space-y-16">
+            <div className="space-y-20">
               {luxurySuites.map((suite, index) => (
                 <SuiteDetail
                   key={suite.slug}
@@ -320,7 +320,7 @@ export default function Suites() {
               </p>
             </div>
             
-            <div className="space-y-16">
+            <div className="space-y-20">
               {cottageSuites.map((suite, index) => (
                 <SuiteDetail
                   key={suite.slug}
