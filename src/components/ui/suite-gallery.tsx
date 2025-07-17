@@ -160,13 +160,13 @@ export function SuiteGallery({ suiteSlug, suiteName, className }: SuiteGalleryPr
           </Button>
 
           {/* Slide Indicators */}
-          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex space-x-1.5">
+          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex space-x-1">
             {images.slice(0, 8).map((_, index) => (
               <button
                 key={index}
                 className={cn(
-                  "w-1.5 h-1.5 rounded-full transition-colors",
-                  index === currentSlide ? "bg-white" : "bg-white/60"
+                  "w-1 h-1 rounded-full transition-colors opacity-80",
+                  index === currentSlide ? "bg-white" : "bg-white/50"
                 )}
                 onClick={() => setCurrentSlide(index)}
                 aria-label={`Go to slide ${index + 1}`}
