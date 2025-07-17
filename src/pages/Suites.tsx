@@ -156,12 +156,70 @@ export default function Suites() {
         {/* Hero Section */}
         <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-accent to-muted">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-primary mb-6">Our Luxury Suites</h1>
-              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8">
-                Choose from our collection of elegantly appointed suites, each uniquely designed 
-                with premium amenities and thoughtful touches for an unforgettable stay.
+            <div className="max-w-6xl mx-auto text-center mb-12">
+              <h1 className="text-primary mb-6">Two Distinct Accommodation Experiences</h1>
+              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-12">
+                Choose between modern luxury and cottage charm, each offering unique character 
+                and amenities to create your perfect Dullstroom escape.
               </p>
+            </div>
+            
+            {/* Two House Options */}
+            <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 mb-12">
+              {/* Luxury House */}
+              <div className="bg-background rounded-lg p-8 shadow-lg border">
+                <div className="text-center">
+                  <Badge variant="secondary" className="text-lg px-4 py-2 mb-4">Modern Luxury</Badge>
+                  <h2 className="text-2xl font-bold text-primary mb-4">Luxury Guest Suites</h2>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Sophisticated design, premium amenities, and contemporary comfort. 
+                    4 ensuite rooms accommodating up to 10 adults and 2 children.
+                  </p>
+                  <div className="space-y-2 text-sm text-muted-foreground mb-6">
+                    <div className="flex items-center justify-center gap-2">
+                      <span>•</span>
+                      <span>Underfloor heating & modern amenities</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                      <span>•</span>
+                      <span>Netflix, Nespresso & premium finishes</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                      <span>•</span>
+                      <span>Spectacular mountain & garden views</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Cottage House */}
+              <div className="bg-background rounded-lg p-8 shadow-lg border">
+                <div className="text-center">
+                  <Badge className="text-lg px-4 py-2 mb-4 bg-secondary text-secondary-foreground">Cottage Cozy</Badge>
+                  <h2 className="text-2xl font-bold text-primary mb-4">Cottage Suites</h2>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Charming character, cozy fireplaces, and authentic cottage atmosphere. 
+                    3 intimate rooms accommodating up to 6 adults and 1 child.
+                  </p>
+                  <div className="space-y-2 text-sm text-muted-foreground mb-6">
+                    <div className="flex items-center justify-center gap-2">
+                      <span>•</span>
+                      <span>Warm fireplaces & cottage charm</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                      <span>•</span>
+                      <span>Flexible layouts & family-friendly</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                      <span>•</span>
+                      <span>Garden access & intimate spaces</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="text-center">
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="min-h-[48px]" asChild>
                   <a 
