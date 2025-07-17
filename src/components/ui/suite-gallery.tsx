@@ -114,7 +114,7 @@ export function SuiteGallery({ suiteSlug, suiteName, className }: SuiteGalleryPr
                   <img
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-center"
                     loading={index === 0 ? "eager" : "lazy"}
                     onError={(e) => {
                       // Fallback placeholder
@@ -191,7 +191,7 @@ export function SuiteGallery({ suiteSlug, suiteName, className }: SuiteGalleryPr
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-300"
                   loading={index < 4 ? "eager" : "lazy"}
                   onError={(e) => {
                     // Fallback placeholder
