@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Instagram, Phone, Mail, MapPin, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const footerLinks = {
@@ -24,16 +24,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo & Description */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center">
               <img 
                 src="/assets/logo.png" 
                 alt="The Browns Logo" 
-                className="h-8 w-8"
+                className="h-10 w-auto"
               />
-              {/* Logo placeholder: filename: logo.png, folder: /assets/, dimensions: 200x50 */}
-              <span className="font-playfair text-xl font-semibold text-primary">
-                The Browns
-              </span>
             </Link>
             <p className="text-sm text-muted-foreground">
               Luxury guest suites and cottage accommodation in the heart of Dullstroom, Mpumalanga.
@@ -93,8 +89,35 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold">Follow Us</h3>
             <div className="flex space-x-2">
-              <Button variant="outline" size="icon">
-                <Instagram className="h-4 w-4" />
+              <Button variant="outline" size="icon" asChild>
+                <a 
+                  href="https://www.facebook.com/thebrownsluxury/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label="Follow us on Facebook"
+                >
+                  <Facebook className="h-4 w-4" />
+                </a>
+              </Button>
+              <Button variant="outline" size="icon" asChild>
+                <a 
+                  href="https://www.instagram.com/thebrowns.dullstroom/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label="Follow us on Instagram"
+                >
+                  <Instagram className="h-4 w-4" />
+                </a>
+              </Button>
+              <Button variant="outline" size="icon" asChild>
+                <a 
+                  href="https://g.co/kgs/yXm4ixA" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label="Visit our Google Business page"
+                >
+                  <MapPin className="h-4 w-4" />
+                </a>
               </Button>
             </div>
             <div className="pt-4">
