@@ -96,12 +96,14 @@ const galleryCategories = ["Property Exteriors", "Suite Interiors", "Gardens & G
 
 export default function Gallery() {
   return (
-    <div className="min-h-screen py-16">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-primary mb-4">Gallery</h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+    <div className="min-h-screen py-8 sm:py-12 lg:py-16">
+      <div className="container mx-auto px-3 sm:px-4 lg:px-6">
+        <div className="max-w-full xl:max-w-7xl mx-auto">
+          <div className="text-center mb-6 sm:mb-8 lg:mb-12">
+            <h1 className="fluid-heading text-primary mb-3 sm:mb-4 px-2">
+              Gallery
+            </h1>
+            <p className="fluid-text text-muted-foreground max-w-2xl mx-auto px-4 leading-relaxed">
               Explore our luxury suites, beautiful gardens, and stunning Dullstroom location through our interactive photo gallery.
             </p>
           </div>
