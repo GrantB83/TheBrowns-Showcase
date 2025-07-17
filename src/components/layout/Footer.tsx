@@ -66,7 +66,8 @@ export function Footer() {
             <div className="space-y-2 text-sm text-muted-foreground">
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
-                <span>279 Blue Crane Drive, Dullstroom 1110</span>
+                <span>278 & 279 Blue Crane Drive,
+Dullstroom 1110</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
