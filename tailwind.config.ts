@@ -14,18 +14,35 @@ export default {
 			center: true,
 			padding: {
 				DEFAULT: '1rem',
+				xs: '1rem',
 				sm: '1.5rem',
+				md: '1.5rem',
 				lg: '2rem',
 				xl: '2.5rem',
 				'2xl': '3rem',
 			},
 			screens: {
-				'sm': '640px',
+				'xs': '360px',
+				'sm': '576px',
 				'md': '768px',
 				'lg': '1024px',
-				'xl': '1280px',
-				'2xl': '1400px'
+				'xl': '1200px',
+				'2xl': '1366px',
+				'3xl': '1536px',
+				'4xl': '1920px'
 			}
+		},
+		screens: {
+			'xs': '360px',
+			'mobile-landscape': '390px',
+			'sm': '576px',
+			'md': '768px',
+			'tablet-large': '810px',
+			'lg': '1024px',
+			'xl': '1200px',
+			'laptop': '1366px',
+			'2xl': '1536px',
+			'desktop-lg': '1920px',
 		},
 		extend: {
 			fontFamily: {

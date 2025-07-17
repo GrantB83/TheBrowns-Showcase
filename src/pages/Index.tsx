@@ -114,16 +114,20 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen">
+      <section className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen">
         <ImageSlider 
           images={heroImages}
           className="h-full w-full"
           autoPlay={true}
           autoPlayInterval={6000}
         />
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" asChild className="bg-primary hover:bg-primary/90">
+        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 text-center w-full px-4">
+          <div className="flex flex-col mobile-landscape:flex-row gap-3 sm:gap-4 max-w-md mx-auto">
+            <Button 
+              size="lg" 
+              asChild 
+              className="bg-primary hover:bg-primary/90 min-h-[48px] text-fluid-base font-medium"
+            >
               <a 
                 href="https://book.nightsbridge.com/00000" 
                 target="_blank" 
@@ -132,7 +136,12 @@ const Index = () => {
                 Book Now
               </a>
             </Button>
-            <Button variant="outline" size="lg" asChild className="bg-white/90 hover:bg-white">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              asChild 
+              className="bg-white/90 hover:bg-white border-white text-foreground min-h-[48px] text-fluid-base font-medium"
+            >
               <Link to="/suites">
                 View Our Suites
               </Link>
@@ -142,24 +151,24 @@ const Index = () => {
       </section>
 
       {/* Property Overview */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-primary mb-6">Luxury Accommodation in Dullstroom</h2>
-            <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
+            <h2 className="text-primary mb-4 sm:mb-6">Luxury Accommodation in Dullstroom</h2>
+            <p className="text-fluid-lg text-muted-foreground mb-8 sm:mb-10 md:mb-12 leading-relaxed max-w-none sm:max-w-3xl mx-auto">
               Nestled in Dullstroom, Mpumalanga, our luxurious suites offer modern comfort in two exquisite properties. 
               The Luxury Guest Suites accommodate up to 10 adults and 2 children across 4 elegant ensuite rooms, 
               while our charming Cottage Suites provide intimate accommodation for up to 6 adults and 1 child. 
               Experience self-catering excellence with premium amenities in the heart of South Africa's premier highland retreat.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {keyFeatures.map((feature, index) => (
-                <Card key={index} className="text-center">
-                  <CardContent className="p-6">
-                    <feature.icon className="h-8 w-8 text-primary mx-auto mb-4" />
-                    <h3 className="font-semibold mb-2">{feature.title}</h3>
-                    <p className="text-sm text-muted-foreground">{feature.description}</p>
+                <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
+                  <CardContent className="p-4 sm:p-6">
+                    <feature.icon className="h-6 w-6 sm:h-8 sm:w-8 text-primary mx-auto mb-3 sm:mb-4" />
+                    <h3 className="font-semibold mb-2 text-fluid-base">{feature.title}</h3>
+                    <p className="text-fluid-sm text-muted-foreground leading-snug">{feature.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -169,24 +178,24 @@ const Index = () => {
       </section>
 
       {/* Featured Suites */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-muted">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
             <h2 className="text-primary mb-4">Featured Suites</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-fluid-lg text-muted-foreground max-w-none sm:max-w-2xl mx-auto leading-relaxed">
               Choose from our collection of luxury suites, each uniquely designed with premium amenities 
               and thoughtful touches for an unforgettable stay.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
             {featuredSuites.map((suite, index) => (
               <SuiteCard key={index} {...suite} />
             ))}
           </div>
           
-          <div className="text-center mt-12">
-            <Button asChild size="lg" variant="outline">
+          <div className="text-center mt-8 sm:mt-10 md:mt-12">
+            <Button asChild size="lg" variant="outline" className="min-h-[48px] text-fluid-base font-medium">
               <Link to="/suites">
                 View All Suites
               </Link>
@@ -196,16 +205,16 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
             <h2 className="text-primary mb-4">Guest Testimonials</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-fluid-lg text-muted-foreground max-w-none sm:max-w-2xl mx-auto leading-relaxed">
               See what our guests say about their luxury stay at The Browns.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <TestimonialCard key={index} {...testimonial} />
             ))}
@@ -214,23 +223,23 @@ const Index = () => {
       </section>
 
       {/* Dullstroom Highlights */}
-      <section className="py-16 bg-accent">
-        <div className="container mx-auto px-4">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-accent">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-primary mb-6">Discover Dullstroom</h2>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            <h2 className="text-primary mb-4 sm:mb-6">Discover Dullstroom</h2>
+            <p className="text-fluid-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
               Located in the heart of Mpumalanga's highlands, Dullstroom offers world-class fly-fishing, 
               scenic hiking trails, artisanal shops, fine dining, and seasonal festivals. Our suites 
               provide the perfect base for exploring this charming highland town.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg">
+            <div className="flex flex-col mobile-landscape:flex-row gap-3 sm:gap-4 justify-center max-w-md mx-auto">
+              <Button asChild size="lg" className="min-h-[48px] text-fluid-base font-medium">
                 <Link to="/location">
                   Explore Location & Activities
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline">
+              <Button asChild size="lg" variant="outline" className="min-h-[48px] text-fluid-base font-medium">
                 <Link to="/contact">
                   Contact Us
                 </Link>
@@ -241,14 +250,14 @@ const Index = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-primary-foreground mb-4">Ready for Your Luxury Escape?</h2>
-          <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
+          <p className="text-fluid-xl mb-6 sm:mb-8 text-primary-foreground/90 max-w-none sm:max-w-2xl mx-auto leading-relaxed">
             Book directly with us for the best rates and personalized service. 
             Experience the perfect blend of luxury and comfort in Dullstroom.
           </p>
-          <Button size="lg" variant="secondary" asChild>
+          <Button size="lg" variant="secondary" asChild className="min-h-[48px] text-fluid-base font-medium">
             <a 
               href="https://book.nightsbridge.com/00000" 
               target="_blank" 

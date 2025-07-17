@@ -277,18 +277,18 @@ export default function Suites() {
         </section>
 
         {/* Luxury Suites Section */}
-        <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <Badge variant="secondary" className="text-lg px-4 py-2 mb-4">Modern Luxury</Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Luxury Guest Suites</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+        <section className="py-8 sm:py-12 md:py-16 lg:py-20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8 sm:mb-10 md:mb-12">
+              <Badge variant="secondary" className="text-fluid-base px-3 py-2 sm:px-4 sm:py-2 mb-4">Modern Luxury</Badge>
+              <h2 className="text-primary mb-4">Luxury Guest Suites</h2>
+              <p className="text-fluid-lg text-muted-foreground max-w-none sm:max-w-3xl mx-auto leading-relaxed">
                 Experience sophisticated comfort in our luxury guest house featuring modern amenities, 
                 premium finishes, and breathtaking views of the Dullstroom highlands.
               </p>
             </div>
             
-            <div className="space-y-20">
+            <div className="space-y-12 sm:space-y-16 md:space-y-20">
               {luxurySuites.map((suite, index) => (
                 <SuiteDetail
                   key={suite.slug}
@@ -309,18 +309,18 @@ export default function Suites() {
         <Separator className="my-8" />
 
         {/* Cottage Suites Section */}
-        <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <Badge className="text-lg px-4 py-2 mb-4 bg-secondary text-secondary-foreground">Cottage Cozy</Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Cottage Suites</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+        <section className="py-8 sm:py-12 md:py-16 lg:py-20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8 sm:mb-10 md:mb-12">
+              <Badge className="text-fluid-base px-3 py-2 sm:px-4 sm:py-2 mb-4 bg-secondary text-secondary-foreground">Cottage Cozy</Badge>
+              <h2 className="text-primary mb-4">Cottage Suites</h2>
+              <p className="text-fluid-lg text-muted-foreground max-w-none sm:max-w-3xl mx-auto leading-relaxed">
                 Discover authentic charm in our cottage suites featuring warm fireplaces, 
                 cozy atmospheres, and the genuine hospitality of highland cottage living.
               </p>
             </div>
             
-            <div className="space-y-20">
+            <div className="space-y-12 sm:space-y-16 md:space-y-20">
               {cottageSuites.map((suite, index) => (
                 <SuiteDetail
                   key={suite.slug}
@@ -339,15 +339,15 @@ export default function Suites() {
         </section>
 
         {/* Call to Action Section */}
-        <section className="py-16 lg:py-20 bg-gradient-to-br from-primary/5 to-accent/10">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">Ready to Experience The Browns?</h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+        <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-primary/5 to-accent/10">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-primary mb-4 sm:mb-6">Ready to Experience The Browns?</h2>
+            <p className="text-fluid-lg text-muted-foreground mb-6 sm:mb-8 max-w-none sm:max-w-2xl mx-auto leading-relaxed">
               Whether you choose modern luxury or cottage charm, unforgettable memories await 
               in the heart of Dullstroom's spectacular highland landscape.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="min-h-[48px]" asChild>
+            <div className="flex flex-col mobile-landscape:flex-row gap-3 sm:gap-4 justify-center max-w-md mx-auto">
+              <Button size="lg" className="min-h-[48px] text-fluid-base font-medium" asChild>
                 <a 
                   href="https://book.nightsbridge.com/00000" 
                   target="_blank" 
@@ -356,7 +356,7 @@ export default function Suites() {
                   Book Your Perfect Suite
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="min-h-[48px]" asChild>
+              <Button variant="outline" size="lg" className="min-h-[48px] text-fluid-base font-medium" asChild>
                 <a href="/gallery">View Our Gallery</a>
               </Button>
             </div>

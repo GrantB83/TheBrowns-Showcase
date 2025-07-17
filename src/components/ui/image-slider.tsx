@@ -64,14 +64,14 @@ export function ImageSlider({
             />
             {(image.title || image.subtitle) && (
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                <div className="text-center text-white px-4">
+                <div className="text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
                   {image.title && (
-                    <h1 className="text-4xl lg:text-6xl font-playfair font-bold mb-4">
+                    <h1 className="font-playfair font-bold mb-2 sm:mb-4" style={{ fontSize: 'clamp(1.75rem, 6vw, 3.75rem)' }}>
                       {image.title}
                     </h1>
                   )}
                   {image.subtitle && (
-                    <p className="text-xl lg:text-2xl">
+                    <p className="leading-relaxed" style={{ fontSize: 'clamp(1rem, 3vw, 1.5rem)' }}>
                       {image.subtitle}
                     </p>
                   )}
@@ -88,36 +88,41 @@ export function ImageSlider({
           <Button
             variant="outline"
             size="icon"
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background/90"
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background/90 min-h-[44px] min-w-[44px] backdrop-blur-sm"
             onClick={goToPrevious}
+            aria-label="Previous image"
           >
-            <ChevronLeft className="h-4 w-4" />
+            <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
           </Button>
           <Button
             variant="outline"
             size="icon"
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background/90"
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background/90 min-h-[44px] min-w-[44px] backdrop-blur-sm"
             onClick={goToNext}
+            aria-label="Next image"
           >
-            <ChevronRight className="h-4 w-4" />
+            <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
           </Button>
         </>
       )}
 
       {/* Dots Indicator */}
       {images.length > 1 && (
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+        <div className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex space-x-1.5 sm:space-x-2">
           {images.map((_, index) => (
             <button
               key={index}
               className={cn(
-                "w-3 h-3 rounded-full transition-colors",
+                "w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors min-h-[24px] min-w-[24px] flex items-center justify-center",
                 index === currentIndex
                   ? "bg-primary"
                   : "bg-white/50 hover:bg-white/70"
               )}
               onClick={() => goToSlide(index)}
-            />
+              aria-label={`Go to slide ${index + 1}`}
+            >
+              <span className="sr-only">Slide {index + 1}</span>
+            </button>
           ))}
         </div>
       )}

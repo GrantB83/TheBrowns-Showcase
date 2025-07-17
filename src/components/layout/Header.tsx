@@ -36,25 +36,25 @@ export function Header() {
         ? "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 shadow-sm" 
         : "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     )}>
-      <div className="container mx-auto px-4">
-        <div className="flex h-14 sm:h-16 items-center justify-between">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 md:h-18 lg:h-20 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center flex-shrink-0">
             <img 
               src="/assets/logo.png" 
               alt="The Browns Logo" 
-              className="h-8 w-auto sm:h-10"
+              className="h-10 w-auto sm:h-12 md:h-14 lg:h-16"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
+                  "text-fluid-sm lg:text-base font-medium transition-colors hover:text-primary min-h-[44px] flex items-center",
                   location.pathname === item.href
                     ? "text-primary"
                     : "text-muted-foreground"
@@ -66,8 +66,8 @@ export function Header() {
           </nav>
 
           {/* Book Now Button & Mobile Menu */}
-          <div className="flex items-center space-x-2 sm:space-x-4">
-            <Button asChild className="hidden sm:inline-flex text-sm px-4 py-2" size="sm">
+          <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
+            <Button asChild className="hidden sm:inline-flex text-fluid-sm px-3 py-2 lg:px-4 lg:py-2" size="sm">
               <a 
                 href="https://book.nightsbridge.com/00000" 
                 target="_blank" 
