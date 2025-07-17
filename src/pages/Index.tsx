@@ -31,10 +31,10 @@ const featuredSuites = [
   {
     title: "Master Suite",
     description: "Our premium suite with elegant appointments and spacious living area.",
-    capacity: "4 guests",
+    capacity: "2 adults + 2 children under 12",
     bedConfig: "King XL + Double sofa bed",
     image: "/images/suites/master-suite-card.jpg", // filename: master-suite-card.jpg, folder: /images/suites/, dimensions: 800x600
-    amenities: ["Underfloor heating", "Netflix", "Nespresso", "Double vanity", "Private lounge", "Garden views"]
+    amenities: ["Hot water bottles & electric blankets", "Netflix", "Nespresso", "Double vanity", "Private lounge", "Garden views"]
   },
   {
     title: "Garden Suite",

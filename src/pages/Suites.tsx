@@ -7,31 +7,34 @@ import { SEO } from "@/components/ui/seo";
 const luxurySuites = [
   {
     title: "Master Suite",
-    capacity: "4 guests",
+    capacity: "2 adults + 2 children under 12",
     bedConfig: "King XL bed + Double sofa bed (kids under 12)",
     description: "Our flagship suite offers the ultimate in luxury with a spacious private unit featuring a dedicated dressing room, elegant lounge area, and ensuite bathroom with double vanity, shower, and toilet. The Master Suite interleads with the Loft Suite, making it perfect for families seeking connected accommodation.",
     amenities: [
-      "Underfloor heating",
+      "Hot water bottles & electric blankets",
       "Netflix & entertainment system", 
-      "Premium beverage station",
+      "Nespresso coffee machine",
       "Beautiful garden views",
       "Double vanity ensuite",
       "Private dressing room",
       "Elegant lounge area",
       "Interleads with Loft Suite",
       "Free WiFi",
-      "Charlotte Rhys toiletries"
+      "Charlotte Rhys toiletries",
+      "Extra mattresses available",
+      "Cot with linen for infants",
+      "High chair & microwave for infants"
     ],
     slug: "master-suite"
   },
   {
     title: "Loft Suite",
-    capacity: "4 guests",
+    capacity: "2 adults + 2 children",
     bedConfig: "Queen XL bed + 2 Single XL beds",
-    description: "Perfect for families, the Loft Suite features two comfortable bedrooms with spectacular views, a welcoming lounge area, and a spacious bathroom with double vanity and toilet. The suite offers underfloor heating in bedrooms and connects seamlessly with the Master Suite for larger group bookings.",
+    description: "Perfect for families, the Loft Suite features two comfortable bedrooms with spectacular views, a welcoming lounge area, and a spacious bathroom with double vanity and toilet. The suite offers hot water bottles and electric blankets for warmth and connects seamlessly with the Master Suite for larger group bookings.",
     amenities: [
       "Spectacular mountain views",
-      "Underfloor heating in bedrooms",
+      "Hot water bottles & electric blankets",
       "Netflix & entertainment",
       "Nespresso coffee machine",
       "Double vanity bathroom",
@@ -39,7 +42,10 @@ const luxurySuites = [
       "Comfortable lounge area",
       "Free WiFi",
       "Premium tea selection",
-      "Charlotte Rhys amenities"
+      "Charlotte Rhys amenities",
+      "Extra mattresses available",
+      "Cot with linen for infants",
+      "High chair & microwave for infants"
     ],
     slug: "loft-suite"
   },
@@ -53,12 +59,15 @@ const luxurySuites = [
       "Private entrance",
       "Dual vanity bathroom",
       "Spa bath and shower",
-      "Underfloor heating",
+      "Hot water bottles & electric blankets",
       "48-inch LED TV",
       "Netflix & DVD player",
       "Free WiFi",
       "Nespresso machine",
-      "Charlotte Rhys toiletries"
+      "Charlotte Rhys toiletries",
+      "Extra mattresses available",
+      "Cot with linen for infants",
+      "High chair & microwave for infants"
     ],
     slug: "garden-suite"
   },
@@ -68,7 +77,7 @@ const luxurySuites = [
     bedConfig: "Queen XL bed",
     description: "An intimate ground floor suite featuring a cozy lounge, comfortable bedroom, and modern shower-only bathroom. The Cove Suite offers a perfect blend of comfort and convenience with premium entertainment systems and luxury amenities for couples seeking a peaceful retreat.",
     amenities: [
-      "Underfloor heating",
+      "Hot water bottles & electric blankets",
       "48-inch LED TV",
       "Netflix & DVD player",
       "Nespresso coffee machine",
@@ -77,7 +86,10 @@ const luxurySuites = [
       "Free WiFi",
       "Premium entertainment system",
       "Charlotte Rhys toiletries",
-      "Daily housekeeping available"
+      "Daily housekeeping available",
+      "Extra mattresses available",
+      "Cot with linen for infants",
+      "High chair & microwave for infants"
     ],
     slug: "cove-suite"
   }
@@ -86,7 +98,7 @@ const luxurySuites = [
 const cottageSuites = [
   {
     title: "Robin Suite",
-    capacity: "4 guests",
+    capacity: "2 adults + 2 children under 12",
     bedConfig: "King XL bed or 2 Singles + Fold-out double sofa (kids under 12)",
     description: "Stylish and comfortable cottage suite featuring a warm fireplace and flexible bedding arrangements. The Robin Suite combines modern comfort with charming cottage character, offering premium amenities and cozy atmosphere perfect for families or couples seeking authentic Dullstroom charm.",
     amenities: [
@@ -99,7 +111,11 @@ const cottageSuites = [
       "Flexible bedding options",
       "Cottage garden access",
       "Premium tea selection",
-      "Daily housekeeping available"
+      "Daily housekeeping available",
+      "Hot water bottles & electric blankets",
+      "Extra mattresses available",
+      "Cot with linen for infants",
+      "High chair & microwave for infants"
     ],
     slug: "robin-suite"
   },
@@ -118,7 +134,11 @@ const cottageSuites = [
       "Premium coffee facilities",
       "Garden views",
       "Flexible room layout",
-      "Romantic ambiance"
+      "Romantic ambiance",
+      "Hot water bottles & electric blankets",
+      "Extra mattresses available",
+      "Cot with linen for infants",
+      "High chair & microwave for infants"
     ],
     slug: "blue-crane-suite"
   },
@@ -137,7 +157,11 @@ const cottageSuites = [
       "Elegant cozy comfort",
       "Family-friendly layout",
       "Cottage garden access",
-      "Premium entertainment system"
+      "Premium entertainment system",
+      "Hot water bottles & electric blankets",
+      "Extra mattresses available",
+      "Cot with linen for infants",
+      "High chair & microwave for infants"
     ],
     slug: "falcon-suite"
   }
@@ -178,7 +202,7 @@ export default function Suites() {
                   <div className="space-y-2 text-sm text-muted-foreground mb-6">
                     <div className="flex items-center justify-center gap-2">
                       <span>•</span>
-                      <span>Underfloor heating & modern amenities</span>
+                      <span>Hot water bottles, electric blankets & modern amenities</span>
                     </div>
                     <div className="flex items-center justify-center gap-2">
                       <span>•</span>

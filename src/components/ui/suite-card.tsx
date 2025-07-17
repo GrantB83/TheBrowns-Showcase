@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Users, Bed, Bath, Wifi, Coffee, Tv } from "lucide-react";
+import { Users, Bed, Bath, Wifi, Coffee, Tv, Flame, Baby, Home, Mountain, Utensils, Sparkles, Car, Zap, Droplet, Wind, Gift, Shirt, Shield } from "lucide-react";
 
 interface SuiteCardProps {
   title: string;
@@ -25,10 +25,21 @@ export function SuiteCard({
   className
 }: SuiteCardProps) {
   const getAmenityIcon = (amenity: string) => {
-    if (amenity.toLowerCase().includes('wifi')) return <Wifi className="h-4 w-4" />;
-    if (amenity.toLowerCase().includes('coffee') || amenity.toLowerCase().includes('nespresso')) return <Coffee className="h-4 w-4" />;
-    if (amenity.toLowerCase().includes('tv') || amenity.toLowerCase().includes('netflix')) return <Tv className="h-4 w-4" />;
-    if (amenity.toLowerCase().includes('bathroom') || amenity.toLowerCase().includes('ensuite')) return <Bath className="h-4 w-4" />;
+    const lower = amenity.toLowerCase();
+    if (lower.includes('wifi')) return <Wifi className="h-4 w-4" />;
+    if (lower.includes('coffee') || lower.includes('nespresso')) return <Coffee className="h-4 w-4" />;
+    if (lower.includes('tv') || lower.includes('netflix')) return <Tv className="h-4 w-4" />;
+    if (lower.includes('bathroom') || lower.includes('ensuite')) return <Bath className="h-4 w-4" />;
+    if (lower.includes('fireplace')) return <Flame className="h-4 w-4" />;
+    if (lower.includes('mountain') || lower.includes('view')) return <Mountain className="h-4 w-4" />;
+    if (lower.includes('garden')) return <Home className="h-4 w-4" />;
+    if (lower.includes('cot') || lower.includes('infant') || lower.includes('high chair')) return <Baby className="h-4 w-4" />;
+    if (lower.includes('charlotte rhys') || lower.includes('toiletries')) return <Sparkles className="h-4 w-4" />;
+    if (lower.includes('private') || lower.includes('entrance')) return <Shield className="h-4 w-4" />;
+    if (lower.includes('shower') || lower.includes('bath') || lower.includes('vanity')) return <Droplet className="h-4 w-4" />;
+    if (lower.includes('hot water') || lower.includes('electric blanket') || lower.includes('heating')) return <Zap className="h-4 w-4" />;
+    if (lower.includes('entertainment') || lower.includes('lounge')) return <Tv className="h-4 w-4" />;
+    if (lower.includes('tea') || lower.includes('beverage')) return <Coffee className="h-4 w-4" />;
     return null;
   };
 

@@ -130,10 +130,10 @@ export default function About() {
                         <Users className="h-4 w-4 mr-2 text-primary" />
                         Up to 10 adults + 2 children accommodation
                       </li>
-                      <li className="flex items-center">
-                        <Calendar className="h-4 w-4 mr-2 text-primary" />
-                        Underfloor heating and premium comfort features
-                      </li>
+                       <li className="flex items-center">
+                         <Calendar className="h-4 w-4 mr-2 text-primary" />
+                         Hot water bottles, electric blankets & premium comfort
+                       </li>
                     </ul>
                   </CardContent>
                 </Card>
