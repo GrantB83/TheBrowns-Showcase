@@ -184,7 +184,7 @@ export function SuiteGallery({ suiteSlug, suiteName, className }: SuiteGalleryPr
             className="group overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300"
             onClick={() => openLightbox(index)}
           >
-            <div className="relative aspect-square overflow-hidden">
+            <div className="relative aspect-[4/3] overflow-hidden">
               <picture>
                 <source srcSet={image.srcWebp} type="image/webp" />
                 <source srcSet={image.srcPng} type="image/png" />
