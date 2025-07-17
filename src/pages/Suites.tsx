@@ -29,7 +29,7 @@ const luxurySuites = [
   },
   {
     title: "Loft Suite",
-    capacity: "2 adults + 2 children",
+    capacity: "4 adults",
     bedConfig: "Queen XL bed + 2 Single XL beds",
     description: "Perfect for families, the Loft Suite features two comfortable bedrooms with spectacular views, a welcoming lounge area, and a spacious bathroom with double vanity and toilet. The suite offers hot water bottles and electric blankets for warmth and connects seamlessly with the Master Suite for larger group bookings.",
     amenities: [

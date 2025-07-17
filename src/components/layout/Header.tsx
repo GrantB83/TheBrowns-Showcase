@@ -39,16 +39,12 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-14 sm:h-16 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center">
             <img 
               src="/assets/logo.png" 
               alt="The Browns Logo" 
-              className="h-6 w-6 sm:h-8 sm:w-8"
+              className="h-8 w-auto sm:h-10"
             />
-            {/* Logo placeholder: filename: logo.png, folder: /assets/, dimensions: 200x50 */}
-            <span className="font-playfair text-lg sm:text-xl font-semibold text-primary">
-              The Browns
-            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -97,16 +93,12 @@ export function Header() {
               <SheetContent side="right" className="w-80">
                 <div className="flex flex-col h-full">
                   {/* Logo */}
-                  <div className="flex items-center space-x-2 mb-8">
+                  <div className="flex items-center mb-8">
                     <img 
                       src="/assets/logo.png" 
                       alt="The Browns Logo" 
-                      className="h-8 w-8"
+                      className="h-10 w-auto"
                     />
-                    {/* Logo placeholder: filename: logo.png, folder: /assets/, dimensions: 200x50 */}
-                    <span className="font-playfair text-xl font-semibold text-primary">
-                      The Browns
-                    </span>
                   </div>
 
                   {/* Navigation */}
