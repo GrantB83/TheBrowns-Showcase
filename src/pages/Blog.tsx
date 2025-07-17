@@ -82,11 +82,11 @@ export default function Blog() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-accent to-muted">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-accent to-muted">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-primary mb-6">The Browns Blog</h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <h1 className="text-primary mb-4 sm:mb-6">The Browns Blog</h1>
+            <p className="text-fluid-lg sm:text-fluid-xl text-muted-foreground leading-relaxed max-w-none sm:max-w-3xl mx-auto">
               Discover Dullstroom's hidden gems, local insights, and travel inspiration 
               from our luxury guest suites in the heart of Mpumalanga highlands.
             </p>
@@ -95,8 +95,8 @@ export default function Blog() {
       </section>
 
       {/* Search & Filter */}
-      <section className="py-8 bg-background border-b">
-        <div className="container mx-auto px-4">
+      <section className="py-6 sm:py-8 bg-background border-b">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <BlogSearch
               searchTerm={searchTerm}
@@ -111,16 +111,17 @@ export default function Blog() {
       </section>
 
       {/* Blog Posts */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             {filteredPosts.length === 0 ? (
-              <div className="text-center py-12">
-                <p className="text-muted-foreground text-lg mb-4">
+              <div className="text-center py-8 sm:py-12">
+                <p className="text-muted-foreground text-fluid-lg mb-4">
                   No blog posts found matching your search criteria.
                 </p>
                 <Button 
                   variant="ghost" 
+                  className="min-h-[48px] text-fluid-base"
                   onClick={() => {
                     setSearchTerm("");
                     setSelectedCategories([]);
@@ -130,50 +131,52 @@ export default function Blog() {
                 </Button>
               </div>
             ) : (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6 sm:gap-8">
                 {filteredPosts.map((post, index) => (
                 <Card key={index} className="group hover:shadow-lg transition-shadow cursor-pointer">
                   <div className="relative overflow-hidden">
                     <img
                       src={post.image}
                       alt={post.title}
-                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-48 sm:h-56 md:h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
                     />
-                    <div className="absolute top-4 left-4">
-                      <Badge variant="secondary">{post.category}</Badge>
+                    <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
+                      <Badge variant="secondary" className="text-xs sm:text-sm">{post.category}</Badge>
                     </div>
                   </div>
-                  <CardHeader>
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground mb-2">
+                  <CardHeader className="p-4 sm:p-6">
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm text-muted-foreground mb-2">
                       <div className="flex items-center gap-1">
-                        <Calendar className="h-4 w-4" />
-                        {post.date}
+                        <Calendar className="h-3 w-3 sm:h-4 sm:w-4" />
+                        <span className="truncate">{post.date}</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <Clock className="h-4 w-4" />
-                        {post.readTime}
+                        <Clock className="h-3 w-3 sm:h-4 sm:w-4" />
+                        <span>{post.readTime}</span>
                       </div>
-                      <div className="flex items-center gap-1">
-                        <User className="h-4 w-4" />
-                        {post.author}
+                      <div className="flex items-center gap-1 hidden sm:flex">
+                        <User className="h-3 w-3 sm:h-4 sm:w-4" />
+                        <span className="truncate">{post.author}</span>
                       </div>
                     </div>
-                    <CardTitle className="group-hover:text-primary transition-colors">
+                    <CardTitle className="group-hover:text-primary transition-colors text-fluid-lg leading-tight">
                       {post.title}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">{post.excerpt}</p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex flex-wrap gap-1">
+                  <CardContent className="p-4 sm:p-6 pt-0">
+                    <p className="text-muted-foreground mb-4 text-fluid-sm leading-relaxed line-clamp-3">{post.excerpt}</p>
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="flex flex-wrap gap-1 flex-1 min-w-0">
                         {post.keywords.slice(0, 2).map((keyword, idx) => (
-                          <Badge key={idx} variant="outline" className="text-xs">
+                          <Badge key={idx} variant="outline" className="text-xs truncate">
                             {keyword}
                           </Badge>
                         ))}
                       </div>
-                      <Button variant="ghost" size="sm" className="group-hover:text-primary">
-                        Read More
+                      <Button variant="ghost" size="sm" className="group-hover:text-primary flex-shrink-0 min-h-[40px]">
+                        <span className="hidden sm:inline">Read More</span>
+                        <span className="sm:hidden">Read</span>
                         <ExternalLink className="h-3 w-3 ml-1" />
                       </Button>
                     </div>
@@ -184,8 +187,8 @@ export default function Blog() {
             )}
 
             {/* Load More */}
-            <div className="text-center mt-12">
-              <Button variant="outline" size="lg">
+            <div className="text-center mt-8 sm:mt-12">
+              <Button variant="outline" size="lg" className="min-h-[48px] text-fluid-base">
                 Load More Posts
               </Button>
             </div>
@@ -194,34 +197,34 @@ export default function Blog() {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
+      <section className="py-8 sm:py-12 md:py-16 bg-muted">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-primary mb-4">Stay Updated</h2>
-            <p className="text-muted-foreground mb-8">
+            <p className="text-fluid-base text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
               Subscribe to our blog for the latest Dullstroom insights, travel tips, 
               and exclusive offers for The Browns guests.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <div className="flex flex-col mobile-landscape:flex-row gap-3 sm:gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 rounded-lg border border-input bg-background"
+                className="flex-1 px-4 py-3 rounded-lg border border-input bg-background text-fluid-base min-h-[48px]"
               />
-              <Button>Subscribe</Button>
+              <Button className="min-h-[48px] text-fluid-base font-medium">Subscribe</Button>
             </div>
           </div>
         </div>
       </section>
 
       {/* Book CTA */}
-      <section className="py-16 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-8 sm:py-12 md:py-16 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-primary-foreground mb-4">Ready to Experience Dullstroom?</h2>
-          <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-fluid-lg sm:text-fluid-xl text-primary-foreground/90 mb-6 sm:mb-8 max-w-none sm:max-w-2xl mx-auto leading-relaxed">
             Book your luxury stay at The Browns and explore all that Dullstroom has to offer.
           </p>
-          <Button size="lg" variant="secondary" asChild>
+          <Button size="lg" variant="secondary" asChild className="min-h-[48px] text-fluid-base font-medium">
             <a 
               href="https://book.nightsbridge.com/00000" 
               target="_blank" 
