@@ -177,11 +177,11 @@ export function SuiteGallery({ suiteSlug, suiteName, className }: SuiteGalleryPr
       </div>
 
       {/* Desktop Grid View */}
-      <div className="hidden lg:grid grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
+      <div className="hidden lg:grid grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 justify-items-center">
         {images.slice(0, 12).map((image, index) => (
           <Card 
             key={index}
-            className="group overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300"
+            className="group overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300 w-full max-w-[300px]"
             onClick={() => openLightbox(index)}
           >
             <div className="relative aspect-[4/3] overflow-hidden">
