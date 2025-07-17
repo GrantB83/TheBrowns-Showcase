@@ -112,58 +112,79 @@ export function ContactForm() {
 
   return (
     <Card>
-      <CardHeader>
-        <CardTitle>Send us a Message</CardTitle>
-        <p className="text-sm text-muted-foreground">
+      <CardHeader className="pb-4 sm:pb-6">
+        <CardTitle className="fluid-subheading">Send us a Message</CardTitle>
+        <p className="text-xs sm:text-sm text-muted-foreground">
           We'll respond within 24 hours during business days.
         </p>
       </CardHeader>
       <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <Label htmlFor="name">Name *</Label>
+        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+          {/* Name and Email Row */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            <div className="space-y-2">
+              <Label htmlFor="name" className="text-sm font-medium">Name *</Label>
               <Input
                 id="name"
                 value={formData.name}
                 onChange={(e) => handleInputChange("name", e.target.value)}
                 placeholder="Your full name"
-                className={errors.name ? "border-red-500" : ""}
+                className={`min-h-[44px] ${errors.name ? "border-destructive focus:border-destructive" : ""}`}
+                autoComplete="name"
               />
-              {errors.name && <p className="text-sm text-red-500 mt-1">{errors.name}</p>}
+              {errors.name && (
+                <p className="text-xs text-destructive mt-1 flex items-center">
+                  <span className="sr-only">Error:</span>
+                  {errors.name}
+                </p>
+              )}
             </div>
-            <div>
-              <Label htmlFor="email">Email *</Label>
+            <div className="space-y-2">
+              <Label htmlFor="email" className="text-sm font-medium">Email *</Label>
               <Input
                 id="email"
                 type="email"
                 value={formData.email}
                 onChange={(e) => handleInputChange("email", e.target.value)}
                 placeholder="your@email.com"
-                className={errors.email ? "border-red-500" : ""}
+                className={`min-h-[44px] ${errors.email ? "border-destructive focus:border-destructive" : ""}`}
+                autoComplete="email"
               />
-              {errors.email && <p className="text-sm text-red-500 mt-1">{errors.email}</p>}
+              {errors.email && (
+                <p className="text-xs text-destructive mt-1 flex items-center">
+                  <span className="sr-only">Error:</span>
+                  {errors.email}
+                </p>
+              )}
             </div>
           </div>
 
-          <div>
-            <Label htmlFor="phone">Phone Number</Label>
+          {/* Phone Number */}
+          <div className="space-y-2">
+            <Label htmlFor="phone" className="text-sm font-medium">Phone Number</Label>
             <Input
               id="phone"
               type="tel"
               value={formData.phone}
               onChange={(e) => handleInputChange("phone", e.target.value)}
               placeholder="+27 83 XXX XXXX"
+              className="min-h-[44px]"
+              autoComplete="tel"
             />
+            <p className="text-xs text-muted-foreground">Optional - for faster response</p>
           </div>
 
-          <div>
-            <Label htmlFor="subject">Subject *</Label>
+          {/* Subject */}
+          <div className="space-y-2">
+            <Label htmlFor="subject" className="text-sm font-medium">Subject *</Label>
             <Select value={formData.subject} onValueChange={(value) => handleInputChange("subject", value)}>
-              <SelectTrigger className={errors.subject ? "border-red-500" : ""}>
+              <SelectTrigger 
+                className={`min-h-[44px] ${errors.subject ? "border-destructive focus:border-destructive" : ""}`}
+                aria-label="Select inquiry subject"
+              >
                 <SelectValue placeholder="Select a subject" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="z-50">
                 <SelectItem value="booking">Booking Inquiry</SelectItem>
                 <SelectItem value="rates">Rates & Availability</SelectItem>
                 <SelectItem value="facilities">Facilities & Amenities</SelectItem>
@@ -172,49 +193,91 @@ export function ContactForm() {
                 <SelectItem value="other">Other</SelectItem>
               </SelectContent>
             </Select>
-            {errors.subject && <p className="text-sm text-red-500 mt-1">{errors.subject}</p>}
+            {errors.subject && (
+              <p className="text-xs text-destructive mt-1 flex items-center">
+                <span className="sr-only">Error:</span>
+                {errors.subject}
+              </p>
+            )}
           </div>
 
-          <div>
-            <Label htmlFor="message">Message *</Label>
+          {/* Message */}
+          <div className="space-y-2">
+            <Label htmlFor="message" className="text-sm font-medium">Message *</Label>
             <Textarea
               id="message"
               value={formData.message}
               onChange={(e) => handleInputChange("message", e.target.value)}
               placeholder="Tell us about your inquiry..."
-              rows={6}
-              className={errors.message ? "border-red-500" : ""}
+              rows={5}
+              maxLength={500}
+              className={`min-h-[120px] resize-none ${errors.message ? "border-destructive focus:border-destructive" : ""}`}
             />
-            {errors.message && <p className="text-sm text-red-500 mt-1">{errors.message}</p>}
-            <p className="text-xs text-muted-foreground mt-1">
-              {formData.message.length}/500 characters
-            </p>
+            {errors.message && (
+              <p className="text-xs text-destructive mt-1 flex items-center">
+                <span className="sr-only">Error:</span>
+                {errors.message}
+              </p>
+            )}
+            <div className="flex justify-between items-center">
+              <p className="text-xs text-muted-foreground">
+                Minimum 10 characters required
+              </p>
+              <p className="text-xs text-muted-foreground">
+                {formData.message.length}/500
+              </p>
+            </div>
           </div>
 
-          <div className="flex items-center space-x-2">
+          {/* Newsletter Subscription */}
+          <div className="flex items-start space-x-2 sm:space-x-3 p-3 sm:p-4 bg-muted/50 rounded-lg">
             <Checkbox
               id="newsletter"
               checked={formData.newsletter}
               onCheckedChange={(checked) => handleInputChange("newsletter", checked as boolean)}
+              className="mt-0.5 flex-shrink-0"
             />
-            <Label htmlFor="newsletter" className="text-sm">
-              Subscribe to our newsletter for special offers and updates
-            </Label>
+            <div className="flex-1 min-w-0">
+              <Label 
+                htmlFor="newsletter" 
+                className="text-xs sm:text-sm leading-relaxed cursor-pointer"
+              >
+                Subscribe to our newsletter for special offers and updates about The Browns
+              </Label>
+            </div>
           </div>
 
-          <Button type="submit" className="w-full" disabled={isSubmitting}>
+          {/* Submit Button */}
+          <Button 
+            type="submit" 
+            className="w-full min-h-[44px] touch-manipulation text-sm sm:text-base" 
+            disabled={isSubmitting}
+          >
             {isSubmitting ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Sending Message...
+                <span>Sending Message...</span>
               </>
             ) : (
               <>
                 <Send className="mr-2 h-4 w-4" />
-                Send Message
+                <span>Send Message</span>
               </>
             )}
           </Button>
+
+          {/* Form Help Text */}
+          <div className="text-center pt-2">
+            <p className="text-xs text-muted-foreground">
+              For urgent inquiries, call us at{" "}
+              <a 
+                href="tel:+27000000000" 
+                className="text-primary hover:underline touch-manipulation"
+              >
+                +27 00 000 0000
+              </a>
+            </p>
+          </div>
         </form>
       </CardContent>
     </Card>
