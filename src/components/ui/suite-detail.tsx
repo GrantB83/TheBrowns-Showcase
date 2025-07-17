@@ -11,8 +11,8 @@ interface SuiteDetailProps {
   bedConfig: string;
   description: string;
   slug: string;
-  mainAmenities: Array<{ text: string; emoji: string }>;
-  additionalAmenities: string[];
+  mainAmenities?: Array<{ text: string; emoji: string }>;
+  additionalAmenities?: string[];
   className?: string;
 }
 
@@ -114,7 +114,7 @@ export function SuiteDetail({
               
               {/* Main amenities with emojis */}
               <div className="grid grid-cols-1 gap-3 mb-4">
-                {mainAmenities.map((amenity, index) => (
+                {(mainAmenities || []).map((amenity, index) => (
                   <div key={index} className="flex items-center text-sm">
                     <span className="text-lg mr-3" role="img" aria-label={amenity.text}>
                       {amenity.emoji}
@@ -125,7 +125,7 @@ export function SuiteDetail({
               </div>
               
               {/* Additional amenities */}
-              {additionalAmenities.length > 0 && (
+              {additionalAmenities && additionalAmenities.length > 0 && (
                 <div className="text-sm text-muted-foreground">
                   <strong className="text-foreground">Additional amenities: </strong>
                   {additionalAmenities.join(", ")}.
