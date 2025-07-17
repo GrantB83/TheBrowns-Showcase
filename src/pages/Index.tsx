@@ -34,7 +34,15 @@ const featuredSuites = [
     capacity: "2 adults + 2 children under 12",
     bedConfig: "King XL + Double sofa bed",
     image: "/images/suites/master-suite-card.jpg", // filename: master-suite-card.jpg, folder: /images/suites/, dimensions: 800x600
-    amenities: ["Hot water bottles & electric blankets", "Netflix", "Nespresso", "Double vanity", "Private lounge", "Garden views"]
+    mainAmenities: [
+      { text: "Hot water bottles & electric blankets", emoji: "🔥" },
+      { text: "Netflix", emoji: "📺" },
+      { text: "Nespresso", emoji: "☕" },
+      { text: "Double vanity", emoji: "🛁" },
+      { text: "Private lounge", emoji: "🛋️" },
+      { text: "Garden views", emoji: "🌿" }
+    ],
+    additionalAmenities: []
   },
   {
     title: "Garden Suite",
@@ -42,7 +50,15 @@ const featuredSuites = [
     capacity: "2 guests",
     bedConfig: "Queen XL bed",
     image: "/images/suites/garden-suite-card.jpg", // filename: garden-suite-card.jpg, folder: /images/suites/, dimensions: 800x600
-    amenities: ["Garden views", "Private entrance", "Spa bath", "Netflix", "WiFi", "Nespresso"]
+    mainAmenities: [
+      { text: "Garden views", emoji: "🌿" },
+      { text: "Private entrance", emoji: "🚪" },
+      { text: "Spa bath", emoji: "🛀" },
+      { text: "Netflix", emoji: "📺" },
+      { text: "WiFi", emoji: "📶" },
+      { text: "Nespresso", emoji: "☕" }
+    ],
+    additionalAmenities: []
   },
   {
     title: "Robin Suite",
@@ -50,7 +66,15 @@ const featuredSuites = [
     capacity: "4 guests",
     bedConfig: "King XL or 2 Singles + Sofa bed",
     image: "/images/suites/robin-suite-card.jpg", // filename: robin-suite-card.jpg, folder: /images/suites/, dimensions: 800x600
-    amenities: ["Fireplace", "Netflix", "Nespresso", "Charlotte Rhys", "Full ensuite", "WiFi"]
+    mainAmenities: [
+      { text: "Fireplace", emoji: "🔥" },
+      { text: "Netflix", emoji: "📺" },
+      { text: "Nespresso", emoji: "☕" },
+      { text: "Charlotte Rhys", emoji: "✨" },
+      { text: "Full ensuite", emoji: "🛁" },
+      { text: "WiFi", emoji: "📶" }
+    ],
+    additionalAmenities: []
   }
 ];
 

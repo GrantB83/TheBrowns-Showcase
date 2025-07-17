@@ -11,7 +11,8 @@ interface SuiteDetailProps {
   bedConfig: string;
   description: string;
   slug: string;
-  amenities: string[];
+  mainAmenities: Array<{ text: string; emoji: string }>;
+  additionalAmenities: string[];
   className?: string;
 }
 
@@ -21,7 +22,8 @@ export function SuiteDetail({
   bedConfig,
   description,
   slug,
-  amenities,
+  mainAmenities,
+  additionalAmenities,
   className
 }: SuiteDetailProps) {
   // State to track which images actually exist
@@ -106,17 +108,29 @@ export function SuiteDetail({
               {description}
             </p>
 
-            {/* Amenities Grid */}
+            {/* Amenities */}
             <div>
               <h4 className="font-semibold text-foreground mb-3">Suite Amenities</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {amenities.map((amenity, index) => (
-                  <div key={index} className="flex items-center text-sm text-muted-foreground">
-                    {getAmenityIcon(amenity)}
-                    <span className="ml-2">{amenity}</span>
+              
+              {/* Main amenities with emojis */}
+              <div className="grid grid-cols-1 gap-3 mb-4">
+                {mainAmenities.map((amenity, index) => (
+                  <div key={index} className="flex items-center text-sm">
+                    <span className="text-lg mr-3" role="img" aria-label={amenity.text}>
+                      {amenity.emoji}
+                    </span>
+                    <span>{amenity.text}</span>
                   </div>
                 ))}
               </div>
+              
+              {/* Additional amenities */}
+              {additionalAmenities.length > 0 && (
+                <div className="text-sm text-muted-foreground">
+                  <strong className="text-foreground">Additional amenities: </strong>
+                  {additionalAmenities.join(", ")}.
+                </div>
+              )}
             </div>
 
             {/* Book Now Button */}
