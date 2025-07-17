@@ -184,14 +184,14 @@ export function SuiteGallery({ suiteSlug, suiteName, className }: SuiteGalleryPr
             className="group overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300 w-full max-w-[300px]"
             onClick={() => openLightbox(index)}
           >
-            <div className="relative aspect-[4/3] overflow-hidden">
+            <div className="relative overflow-hidden">
               <picture>
                 <source srcSet={image.srcWebp} type="image/webp" />
                 <source srcSet={image.srcPng} type="image/png" />
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
                   loading={index < 4 ? "eager" : "lazy"}
                   onError={(e) => {
                     // Fallback placeholder
