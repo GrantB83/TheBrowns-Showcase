@@ -140,7 +140,7 @@ const Index = () => {
               variant="outline" 
               size="lg" 
               asChild 
-              className="bg-white/90 hover:bg-white border-white min-h-[48px] text-fluid-base font-medium"
+              className="bg-white/90 hover:bg-white border-white text-foreground min-h-[48px] text-fluid-base font-medium"
             >
               <Link to="/suites">
                 View Our Suites
