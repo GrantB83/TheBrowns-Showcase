@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ImageSlider } from "@/components/ui/image-slider";
 import { Users, Bed, Bath, Wifi, Coffee, Tv, Thermometer, Eye, CarFront } from "lucide-react";
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState, useEffect, useCallback } from "react";
 
 interface SuiteDetailProps {
   title: string;
@@ -16,6 +16,73 @@ interface SuiteDetailProps {
   className?: string;
 }
 
+// Global cache for detected images to avoid re-checking
+const imageCache = new Map<string, Array<{src: string, alt: string}>>();
+
+// Optimized image detection with parallel checking
+const detectSuiteImages = async (slug: string, title: string): Promise<Array<{src: string, alt: string}>> => {
+  // Check cache first
+  const cacheKey = `${slug}-${title}`;
+  if (imageCache.has(cacheKey)) {
+    return imageCache.get(cacheKey)!;
+  }
+
+  const images: Array<{src: string, alt: string}> = [];
+  
+  // Use a more efficient approach: check in batches
+  const batchSize = 5;
+  const maxImages = 20; // Reasonable limit
+  
+  for (let batch = 0; batch < maxImages / batchSize; batch++) {
+    const batchPromises = [];
+    
+    for (let i = 0; i < batchSize; i++) {
+      const imageNumber = batch * batchSize + i + 1;
+      const paddedNumber = imageNumber.toString().padStart(2, '0');
+      const imageSrc = `/images/suites/${slug}-${paddedNumber}.jpg`;
+      
+      const promise = new Promise<{src: string, alt: string} | null>((resolve) => {
+        const img = new Image();
+        const timeout = setTimeout(() => {
+          resolve(null);
+        }, 2000); // Reduced timeout for faster detection
+        
+        img.onload = () => {
+          clearTimeout(timeout);
+          resolve({
+            src: imageSrc,
+            alt: `${title} - Image ${imageNumber}`,
+          });
+        };
+        
+        img.onerror = () => {
+          clearTimeout(timeout);
+          resolve(null);
+        };
+        
+        img.src = imageSrc;
+      });
+      
+      batchPromises.push(promise);
+    }
+    
+    // Wait for batch to complete
+    const batchResults = await Promise.all(batchPromises);
+    const validImages = batchResults.filter(img => img !== null) as Array<{src: string, alt: string}>;
+    
+    // If no images found in this batch, stop checking
+    if (validImages.length === 0) {
+      break;
+    }
+    
+    images.push(...validImages);
+  }
+  
+  // Cache the results
+  imageCache.set(cacheKey, images);
+  return images;
+};
+
 export function SuiteDetail({
   title,
   capacity,
@@ -26,43 +93,29 @@ export function SuiteDetail({
   additionalAmenities,
   className
 }: SuiteDetailProps) {
-  // State to track which images actually exist
   const [availableImages, setAvailableImages] = useState<Array<{src: string, alt: string}>>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  // Check which images exist and build the array
-  useEffect(() => {
-    const checkImages = async () => {
-      const existingImages: Array<{src: string, alt: string}> = [];
-      
-      for (let i = 1; i <= 20; i++) {
-        const paddedNumber = i.toString().padStart(2, '0');
-        const imageSrc = `/images/suites/${slug}-${paddedNumber}.jpg`;
-        
-        try {
-          // Check if image exists by trying to load it
-          await new Promise<void>((resolve, reject) => {
-            const img = new Image();
-            img.onload = () => resolve();
-            img.onerror = () => reject();
-            img.src = imageSrc;
-          });
-          
-          // If we get here, the image exists
-          existingImages.push({
-            src: imageSrc,
-            alt: `${title} - Image ${i}`,
-          });
-        } catch {
-          // Image doesn't exist, skip it
-          continue;
-        }
-      }
-      
-      setAvailableImages(existingImages);
-    };
-    
-    checkImages();
+  // Memoized image detection
+  const loadImages = useCallback(async () => {
+    try {
+      setIsLoading(true);
+      setError(null);
+      const images = await detectSuiteImages(slug, title);
+      setAvailableImages(images);
+    } catch (err) {
+      setError('Failed to load images');
+      console.error('Image detection error:', err);
+    } finally {
+      setIsLoading(false);
+    }
   }, [slug, title]);
+
+  useEffect(() => {
+    loadImages();
+  }, [loadImages]);
+
   const getAmenityIcon = (amenity: string) => {
     const lower = amenity.toLowerCase();
     if (lower.includes('wifi')) return <Wifi className="h-4 w-4" />;
@@ -75,16 +128,53 @@ export function SuiteDetail({
     return null;
   };
 
+  // Clear cache when component unmounts (optional, for memory management)
+  useEffect(() => {
+    return () => {
+      // Optionally clear cache after some time to allow for image updates
+      setTimeout(() => {
+        imageCache.delete(`${slug}-${title}`);
+      }, 300000); // Clear after 5 minutes
+    };
+  }, [slug, title]);
+
   return (
     <Card className={className}>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Image Gallery */}
         <div className="relative flex items-center min-h-[400px] lg:min-h-full">
-          <ImageSlider 
-            images={availableImages}
-            className="h-80 lg:h-96 w-full rounded-l-lg"
-            autoPlay={false}
-          />
+          {isLoading ? (
+            <div className="w-full h-80 lg:h-96 bg-muted rounded-l-lg flex items-center justify-center">
+              <div className="flex flex-col items-center space-y-2">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+                <div className="text-muted-foreground text-sm">Loading gallery...</div>
+              </div>
+            </div>
+          ) : error ? (
+            <div className="w-full h-80 lg:h-96 bg-muted rounded-l-lg flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-muted-foreground mb-2">{error}</div>
+                <Button variant="outline" size="sm" onClick={loadImages}>
+                  Retry
+                </Button>
+              </div>
+            </div>
+          ) : availableImages.length > 0 ? (
+            <ImageSlider 
+              images={availableImages}
+              className="h-80 lg:h-96 w-full rounded-l-lg"
+              autoPlay={false}
+            />
+          ) : (
+            <div className="w-full h-80 lg:h-96 bg-muted rounded-l-lg flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-muted-foreground mb-2">No images available</div>
+                <Button variant="outline" size="sm" onClick={loadImages}>
+                  Refresh
+                </Button>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Suite Details */}
