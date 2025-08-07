@@ -81,14 +81,7 @@ export function InteractiveMap({ className }: InteractiveMapProps) {
   const [mapboxToken, setMapboxToken] = useState<string>('');
   const [showTokenInput, setShowTokenInput] = useState(true);
 
-  useEffect(() => {
-    // Check if we have a token from environment or Supabase
-    const token = process.env.VITE_MAPBOX_TOKEN;
-    if (token) {
-      setMapboxToken(token);
-      setShowTokenInput(false);
-    }
-  }, []);
+  // No need to check environment variables in this setup
 
   const initializeMap = (token: string) => {
     if (!mapContainer.current || !token) return;
