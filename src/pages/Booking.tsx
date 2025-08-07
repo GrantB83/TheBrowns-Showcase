@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { BookingFlow } from "@/components/ui/booking-flow";
 import { BookingWidget } from "@/components/ui/booking-widget";
+import { WhatsAppBookingButton } from "@/components/ui/whatsapp-contact";
 import { 
   Calendar, 
   Clock, 

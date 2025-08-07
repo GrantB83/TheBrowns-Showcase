@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ContactForm } from "@/components/ui/contact-form";
+import { WhatsAppContact } from "@/components/ui/whatsapp-contact";
 import { Phone, Mail, MapPin, Instagram } from "lucide-react";
 
 export default function Contact() {
@@ -43,7 +44,12 @@ export default function Contact() {
                       >
                         +27 00 000 0000
                       </a>
-                      <p className="text-xs sm:text-sm text-muted-foreground mt-1">WhatsApp available</p>
+                      <div className="mt-2">
+                        <WhatsAppContact 
+                          variant="inline" 
+                          message="Hi! I'd like to enquire about The Browns Guest Suites."
+                        />
+                      </div>
                     </div>
                   </div>
 

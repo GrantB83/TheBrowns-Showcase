@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Instagram, Phone, Mail, MapPin, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { WhatsAppInlineLink } from "@/components/ui/whatsapp-contact";
 const footerLinks = {
   pages: [{
     name: "Home",
@@ -78,6 +79,12 @@ Dullstroom 1110</span>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
                 <a href="mailto:info@thebrowns.co.za" className="hover:text-primary transition-colors">stay@thebrowns.co.za</a>
+              </div>
+              <div className="flex items-center space-x-2">
+                <WhatsAppInlineLink 
+                  message="Hi! I'd like to enquire about The Browns Guest Suites in Dullstroom."
+                  className="text-sm"
+                />
               </div>
             </div>
           </div>
