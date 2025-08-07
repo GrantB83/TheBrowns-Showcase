@@ -10,7 +10,7 @@ interface SuiteCardProps {
   description: string;
   capacity: string;
   bedConfig: string;
-  image: string;
+  image: string | React.ReactNode;
   mainAmenities: Array<{ text: string; emoji: string }>;
   additionalAmenities: string[];
   price?: string;
@@ -33,12 +33,16 @@ export function SuiteCard({
   return (
     <Card className={`${className} hover:shadow-lg transition-shadow duration-300`}>
       <div className="relative">
-        <img
-          src={image}
-          alt={`${title} interior at The Browns luxury accommodation in Dullstroom`}
-          className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-t-lg"
-          loading="lazy"
-        />
+        {typeof image === 'string' ? (
+          <img
+            src={image}
+            alt={`${title} interior at The Browns luxury accommodation in Dullstroom`}
+            className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-t-lg"
+            loading="lazy"
+          />
+        ) : (
+          image
+        )}
         {price && (
           <Badge className="absolute top-2 sm:top-3 right-2 sm:right-3 bg-primary text-primary-foreground text-xs sm:text-sm">
             {price}

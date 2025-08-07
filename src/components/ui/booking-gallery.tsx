@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Lightbox } from "@/components/ui/lightbox";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
+import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import { ZoomIn, Eye, ExternalLink, Clock, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -17,6 +18,7 @@ interface GalleryImage {
   suiteCode?: string;
   roomId?: number;
   urgencyMessage?: string;
+  placeholder?: { filename: string; folder: string; width: number; height: number };
 }
 
 interface BookingGalleryProps {
@@ -154,7 +156,26 @@ export function BookingGallery({
                   decoding="async"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
-                    target.src = `https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=300&fit=crop&crop=center&q=85`;
+                    const container = target.closest('.relative');
+                    if (image.placeholder && container) {
+                      // Replace with placeholder component
+                      const placeholderHTML = `
+                        <div class="bg-muted border-2 border-dashed border-muted-foreground/25 rounded-lg flex flex-col items-center justify-center text-center p-4 h-full min-h-[200px] w-full absolute inset-0">
+                          <div class="text-4xl text-muted-foreground/50 mb-4">📷</div>
+                          <div class="space-y-2">
+                            <div class="font-medium text-sm text-muted-foreground">Image Placeholder</div>
+                            <div class="text-xs text-muted-foreground/75 space-y-1">
+                              <div><strong>File:</strong> ${image.placeholder.filename}</div>
+                              <div><strong>Path:</strong> ${image.placeholder.folder}</div>
+                              <div><strong>Size:</strong> ${image.placeholder.width}×${image.placeholder.height}px</div>
+                            </div>
+                          </div>
+                        </div>
+                      `;
+                      container.innerHTML = placeholderHTML;
+                    } else {
+                      target.src = `https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=300&fit=crop&crop=center&q=85`;
+                    }
                   }}
                 />
               </picture>

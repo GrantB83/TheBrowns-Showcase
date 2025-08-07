@@ -1,5 +1,6 @@
 import { BookingGallery } from "@/components/ui/booking-gallery";
 import { SEO } from "@/components/ui/seo";
+import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 
 // Enhanced gallery images with booking CTAs and urgency messaging
 const allGalleryImages = [
@@ -10,7 +11,8 @@ const allGalleryImages = [
     title: "Main Building Exterior",
     category: "Property Exteriors",
     description: "Stunning mountain backdrop views",
-    caption: "Award-winning architecture nestled in Dullstroom's misty highlands"
+    caption: "Award-winning architecture nestled in Dullstroom's misty highlands",
+    placeholder: { filename: "main-building-exterior.jpg", folder: "/images/gallery/", width: 800, height: 600 }
   },
   { 
     src: "/images/gallery/cottage-suites-exterior.jpg",
@@ -18,7 +20,8 @@ const allGalleryImages = [
     title: "Cottage Suites",
     category: "Property Exteriors", 
     description: "Highland cottage setting",
-    caption: "Individual cottage suites for ultimate privacy and tranquility"
+    caption: "Individual cottage suites for ultimate privacy and tranquility",
+    placeholder: { filename: "cottage-suites-exterior.jpg", folder: "/images/gallery/", width: 800, height: 600 }
   },
   { 
     src: "/images/gallery/evening-exterior.jpg",
@@ -26,7 +29,8 @@ const allGalleryImages = [
     title: "Evening Ambiance",
     category: "Property Exteriors",
     description: "Magical evening atmosphere",
-    caption: "Romantic evening lighting perfect for highland getaways"
+    caption: "Romantic evening lighting perfect for highland getaways",
+    placeholder: { filename: "evening-exterior.jpg", folder: "/images/gallery/", width: 800, height: 600 }
   },
   
   // Suite Interiors with Booking CTAs
@@ -39,7 +43,8 @@ const allGalleryImages = [
     caption: "Master Suite Nespresso corner – Book Direct for 10% Off",
     suiteCode: "Master Suite",
     roomId: 6,
-    urgencyMessage: "Limited Availability"
+    urgencyMessage: "Limited Availability",
+    placeholder: { filename: "master-suite-bedroom.jpg", folder: "/images/gallery/", width: 800, height: 600 }
   },
   { 
     src: "/images/gallery/robin-suite-living.jpg",
@@ -50,7 +55,8 @@ const allGalleryImages = [
     caption: "Robin Suite fireplace – Perfect for Dullstroom winter nights",
     suiteCode: "Robin Suite",
     roomId: 15,
-    urgencyMessage: "Only 2 Nights Left"
+    urgencyMessage: "Only 2 Nights Left",
+    placeholder: { filename: "robin-suite-living.jpg", folder: "/images/gallery/", width: 800, height: 600 }
   },
   { 
     src: "/images/gallery/luxury-ensuite.jpg",
@@ -58,7 +64,8 @@ const allGalleryImages = [
     title: "Luxury Ensuite",
     category: "Suite Interiors", 
     description: "Spa-inspired bathroom",
-    caption: "Premium Charlotte Rhys toiletries in every suite"
+    caption: "Premium Charlotte Rhys toiletries in every suite",
+    placeholder: { filename: "luxury-ensuite.jpg", folder: "/images/gallery/", width: 800, height: 600 }
   },
   { 
     src: "/images/gallery/garden-suite-interior.jpg",
@@ -69,7 +76,8 @@ const allGalleryImages = [
     caption: "Garden Suite kitchen – Book Direct for Best Rates",
     suiteCode: "Garden Suite", 
     roomId: 4,
-    urgencyMessage: "Weekend Special"
+    urgencyMessage: "Weekend Special",
+    placeholder: { filename: "garden-suite-interior.jpg", folder: "/images/gallery/", width: 800, height: 600 }
   },
   { 
     src: "/images/gallery/loft-family-suite.jpg",
@@ -79,7 +87,8 @@ const allGalleryImages = [
     description: "Spacious family accommodation", 
     caption: "Loft Family Suite – Perfect for Dullstroom family holidays",
     suiteCode: "Loft Family Suite",
-    roomId: 5
+    roomId: 5,
+    placeholder: { filename: "loft-family-suite.jpg", folder: "/images/gallery/", width: 800, height: 600 }
   },
   { 
     src: "/images/gallery/blue-crane-suite.jpg",
@@ -90,7 +99,8 @@ const allGalleryImages = [
     caption: "Blue Crane Suite – Book Direct Save 10%",
     suiteCode: "Blue Crane Suite",
     roomId: 17,
-    urgencyMessage: "Last Room Available"
+    urgencyMessage: "Last Room Available",
+    placeholder: { filename: "blue-crane-suite.jpg", folder: "/images/gallery/", width: 800, height: 600 }
   },
   
   // Gardens & Grounds
@@ -100,7 +110,8 @@ const allGalleryImages = [
     title: "Garden Pathways",
     category: "Gardens & Grounds",
     description: "Highland garden walks",
-    caption: "Peaceful garden paths with panoramic Dullstroom mountain views"
+    caption: "Peaceful garden paths with panoramic Dullstroom mountain views",
+    placeholder: { filename: "garden-pathways.jpg", folder: "/images/gallery/", width: 800, height: 600 }
   },
   { 
     src: "/images/gallery/private-garden-terrace.jpg",
@@ -108,7 +119,8 @@ const allGalleryImages = [
     title: "Private Garden Terrace", 
     category: "Gardens & Grounds",
     description: "Private outdoor relaxation",
-    caption: "Private terraces for morning coffee and highland sunsets"
+    caption: "Private terraces for morning coffee and highland sunsets",
+    placeholder: { filename: "private-garden-terrace.jpg", folder: "/images/gallery/", width: 800, height: 600 }
   },
   { 
     src: "/images/gallery/indigenous-garden.jpg",
@@ -116,7 +128,8 @@ const allGalleryImages = [
     title: "Indigenous Highland Garden",
     category: "Gardens & Grounds", 
     description: "Native highland flora",
-    caption: "Carefully curated indigenous gardens celebrating Dullstroom's natural beauty"
+    caption: "Carefully curated indigenous gardens celebrating Dullstroom's natural beauty",
+    placeholder: { filename: "indigenous-garden.jpg", folder: "/images/gallery/", width: 800, height: 600 }
   },
   
   // Dullstroom Attractions
@@ -126,7 +139,8 @@ const allGalleryImages = [
     title: "Dullstroom Dam Fishing",
     category: "Dullstroom Attractions",
     description: "World-class fly-fishing",
-    caption: "World-renowned trout fishing just minutes from your suite"
+    caption: "World-renowned trout fishing just minutes from your suite",
+    placeholder: { filename: "dullstroom-dam-fishing.jpg", folder: "/images/gallery/", width: 800, height: 600 }
   },
   { 
     src: "/images/gallery/dullstroom-village.jpg",
@@ -134,7 +148,8 @@ const allGalleryImages = [
     title: "Dullstroom Village",
     category: "Dullstroom Attractions", 
     description: "Charming highland town",
-    caption: "Historic Dullstroom village within walking distance"
+    caption: "Historic Dullstroom village within walking distance",
+    placeholder: { filename: "dullstroom-village.jpg", folder: "/images/gallery/", width: 800, height: 600 }
   },
   { 
     src: "/images/gallery/highland-hiking-trails.jpg",
@@ -142,7 +157,8 @@ const allGalleryImages = [
     title: "Highland Hiking Trails",
     category: "Dullstroom Attractions",
     description: "Mountain hiking adventures", 
-    caption: "Explore scenic highland trails from your luxury base"
+    caption: "Explore scenic highland trails from your luxury base",
+    placeholder: { filename: "highland-hiking-trails.jpg", folder: "/images/gallery/", width: 800, height: 600 }
   },
   { 
     src: "/images/gallery/panorama-route-views.jpg",
@@ -150,7 +166,8 @@ const allGalleryImages = [
     title: "Panorama Route Access",
     category: "Dullstroom Attractions",
     description: "Day trips to iconic attractions",
-    caption: "Perfect base for Panorama Route adventures to God's Window"
+    caption: "Perfect base for Panorama Route adventures to God's Window",
+    placeholder: { filename: "panorama-route-views.jpg", folder: "/images/gallery/", width: 800, height: 600 }
   }
 ];
 

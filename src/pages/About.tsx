@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SEO } from "@/components/ui/seo";
+import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import { Link } from "react-router-dom";
 import { MapPin, Calendar, Users, Home, Utensils, Car } from "lucide-react";
 
@@ -54,13 +55,14 @@ export default function About() {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center mb-8 sm:mb-12 lg:mb-16">
               <div className="order-2 lg:order-1">
-                <img
-                  src="/images/about/browns-exterior.jpg"
+                <ImagePlaceholder 
+                  filename="browns-exterior.jpg" 
+                  folder="/images/about/" 
+                  width={800} 
+                  height={600}
+                  className="rounded-lg shadow-lg w-full"
                   alt="The Browns luxury guest suites exterior in Dullstroom"
-                  className="rounded-lg shadow-lg w-full h-auto"
-                  loading="lazy"
                 />
-                {/* Image placeholder: filename: browns-exterior.jpg, folder: /images/about/, dimensions: 800x600 */}
               </div>
               <div className="space-y-4 sm:space-y-6 order-1 lg:order-2">
                 <h2 className="text-primary">Our Story</h2>
@@ -111,13 +113,14 @@ export default function About() {
                 {/* Luxury Guest Suites */}
                 <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
                   <div className="relative">
-                    <img
-                      src="/images/about/luxury-guest-suites.jpg"
+                    <ImagePlaceholder 
+                      filename="luxury-guest-suites.jpg" 
+                      folder="/images/about/" 
+                      width={600} 
+                      height={400}
+                      className="w-full h-48 sm:h-56 md:h-64"
                       alt="Luxury Guest Suites elegant interior at The Browns"
-                      className="w-full h-48 sm:h-56 md:h-64 object-cover"
-                      loading="lazy"
                     />
-                    {/* Image placeholder: filename: luxury-guest-suites.jpg, folder: /images/about/, dimensions: 600x400 */}
                     <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
                       <span className="bg-primary text-primary-foreground px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
                         Modern Luxury
@@ -151,13 +154,14 @@ export default function About() {
                 {/* Cottage Suites */}
                 <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
                   <div className="relative">
-                    <img
-                      src="/images/about/cottage-suites.jpg"
+                    <ImagePlaceholder 
+                      filename="cottage-suites.jpg" 
+                      folder="/images/about/" 
+                      width={600} 
+                      height={400}
+                      className="w-full h-48 sm:h-56 md:h-64"
                       alt="Cottage Suites cozy interior with fireplace at The Browns"
-                      className="w-full h-48 sm:h-56 md:h-64 object-cover"
-                      loading="lazy"
                     />
-                    {/* Image placeholder: filename: cottage-suites.jpg, folder: /images/about/, dimensions: 600x400 */}
                     <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
                       <span className="bg-secondary text-secondary-foreground px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
                         Charming Comfort

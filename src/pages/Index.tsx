@@ -9,6 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MobileSEO } from "@/components/ui/mobile-seo";
 import { DullstroomInfographic } from "@/components/ui/dullstroom-infographic";
 import { PremiumImage } from "@/components/ui/premium-image";
+import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useMobileDetection } from "@/hooks/use-mobile-optimization";
 import { MapPin, Wifi, Car, Coffee, Zap, Shield, Droplets, Tv } from "lucide-react";
@@ -40,7 +41,7 @@ const featuredSuites = [
     description: "Our premium suite with elegant appointments and spacious living area.",
     capacity: "2 adults + 2 children under 12",
     bedConfig: "King XL + Double sofa bed",
-    image: "/images/suites/master-suite-card.jpg", // filename: master-suite-card.jpg, folder: /images/suites/, dimensions: 800x600
+    image: <ImagePlaceholder filename="master-suite-card.jpg" folder="/images/suites/" width={800} height={600} className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-t-lg" />, // filename: master-suite-card.jpg, folder: /images/suites/, dimensions: 800x600
     mainAmenities: [
       { text: "Hot water bottles & electric blankets", emoji: "🔥" },
       { text: "Netflix", emoji: "📺" },
@@ -56,7 +57,7 @@ const featuredSuites = [
     description: "Ground floor suite with private entrance and beautiful garden views.",
     capacity: "2 guests",
     bedConfig: "Queen XL bed",
-    image: "/images/suites/garden-suite-card.jpg", // filename: garden-suite-card.jpg, folder: /images/suites/, dimensions: 800x600
+    image: <ImagePlaceholder filename="garden-suite-card.jpg" folder="/images/suites/" width={800} height={600} className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-t-lg" />, // filename: garden-suite-card.jpg, folder: /images/suites/, dimensions: 800x600
     mainAmenities: [
       { text: "Garden views", emoji: "🌿" },
       { text: "Private entrance", emoji: "🚪" },
@@ -72,7 +73,7 @@ const featuredSuites = [
     description: "Cottage suite with fireplace and charming, comfortable styling.",
     capacity: "4 guests",
     bedConfig: "King XL or 2 Singles + Sofa bed",
-    image: "/images/suites/robin-suite-card.jpg", // filename: robin-suite-card.jpg, folder: /images/suites/, dimensions: 800x600
+    image: <ImagePlaceholder filename="robin-suite-card.jpg" folder="/images/suites/" width={800} height={600} className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-t-lg" />, // filename: robin-suite-card.jpg, folder: /images/suites/, dimensions: 800x600
     mainAmenities: [
       { text: "Fireplace", emoji: "🔥" },
       { text: "Netflix", emoji: "📺" },
