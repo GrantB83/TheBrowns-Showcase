@@ -5,24 +5,27 @@ import { SuiteCard } from "@/components/ui/suite-card";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { Card, CardContent } from "@/components/ui/card";
 import { SEO } from "@/components/ui/seo";
-import { MapPin, Wifi, Car, Coffee, Zap, Shield, Droplets, Tv, Fish, Camera, TreePine } from "lucide-react";
+import { DullstroomInfographic } from "@/components/ui/dullstroom-infographic";
+import { PremiumImage } from "@/components/ui/premium-image";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { MapPin, Wifi, Car, Coffee, Zap, Shield, Droplets, Tv } from "lucide-react";
 
 const heroImages = [
   {
-    src: "/images/hero/browns-exterior.jpg", // filename: browns-exterior.jpg, folder: /images/hero/, dimensions: 2000x1200
-    alt: "The Browns luxury guest suites exterior in Dullstroom",
+    src: "/images/hero/browns-exterior.jpg",
+    alt: "The Browns luxury guest suites exterior overlooking Dullstroom misty highlands with mountain backdrop",
     title: "Welcome to The Browns",
     subtitle: "Luxury Guest Suites & Cottage in Dullstroom"
   },
   {
-    src: "/images/hero/suite-interior.jpg", // filename: suite-interior.jpg, folder: /images/hero/, dimensions: 2000x1200
-    alt: "Elegant interior of luxury suite at The Browns",
+    src: "/images/hero/suite-interior.jpg",
+    alt: "Elegant interior of premium suite at The Browns featuring modern luxury amenities and boutique styling",
     title: "Modern Luxury",
     subtitle: "Beautifully appointed suites with premium amenities"
   },
   {
-    src: "/images/hero/gardens-mountains.jpg", // filename: gardens-mountains.jpg, folder: /images/hero/, dimensions: 2000x1200
-    alt: "Serene gardens and mountain views at The Browns Dullstroom",
+    src: "/images/hero/gardens-mountains.jpg",
+    alt: "Serene gardens and panoramic mountain views at The Browns Dullstroom guest house in Mpumalanga highlands",
     title: "Serene Setting",
     subtitle: "Peaceful gardens in the heart of Mpumalanga highlands"
   }
@@ -112,6 +115,10 @@ const keyFeatures = [
 ];
 
 const Index = () => {
+  const { elementRef: overviewRef, isVisible: overviewVisible } = useScrollAnimation();
+  const { elementRef: suitesRef, isVisible: suitesVisible } = useScrollAnimation();
+  const { elementRef: testimonialsRef, isVisible: testimonialsVisible } = useScrollAnimation();
+
   return (
     <>
       <SEO />
@@ -154,7 +161,12 @@ const Index = () => {
       </section>
 
       {/* Property Overview */}
-      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-background">
+      <section 
+        ref={overviewRef}
+        className={`py-8 sm:py-12 md:py-16 lg:py-20 bg-background transition-all duration-1000 ${
+          overviewVisible ? 'scroll-animate' : 'opacity-0'
+        }`}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-primary mb-4 sm:mb-6">Luxury Accommodation in Dullstroom</h2>
@@ -181,7 +193,12 @@ const Index = () => {
       </section>
 
       {/* Featured Suites */}
-      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-muted">
+      <section 
+        ref={suitesRef}
+        className={`py-8 sm:py-12 md:py-16 lg:py-20 bg-muted transition-all duration-1000 ${
+          suitesVisible ? 'scroll-animate' : 'opacity-0'
+        }`}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-10 md:mb-12">
             <h2 className="text-primary mb-4">Featured Suites</h2>
@@ -208,7 +225,12 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-background">
+      <section 
+        ref={testimonialsRef}
+        className={`py-8 sm:py-12 md:py-16 lg:py-20 bg-background transition-all duration-1000 ${
+          testimonialsVisible ? 'scroll-animate' : 'opacity-0'
+        }`}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-10 md:mb-12">
             <h2 className="text-primary mb-4">Guest Testimonials</h2>
@@ -225,29 +247,26 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Dullstroom Highlights */}
+      {/* Dullstroom Highlights - Interactive Infographic */}
       <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-accent">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-primary mb-4 sm:mb-6">Discover Dullstroom</h2>
-            <p className="text-fluid-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
-              Located in the heart of Mpumalanga's highlands, Dullstroom offers world-class fly-fishing, 
-              scenic hiking trails, artisanal shops, fine dining, and seasonal festivals. Our suites 
-              provide the perfect base for exploring this charming highland town.
-            </p>
-            
-            <div className="flex flex-col mobile-landscape:flex-row gap-3 sm:gap-4 justify-center max-w-md mx-auto">
-              <Button asChild size="lg" className="min-h-[48px] text-fluid-base font-medium">
+          <DullstroomInfographic 
+            variant="grid"
+            showShareButton={true}
+            className="max-w-6xl mx-auto"
+          />
+          
+          <div className="flex flex-col mobile-landscape:flex-row gap-3 sm:gap-4 justify-center max-w-md mx-auto mt-8">
+            <Button asChild size="lg" className="min-h-[48px] text-fluid-base font-medium">
               <Link to="/activities">
                 Explore Highland Activities
               </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="min-h-[48px] text-fluid-base font-medium">
-                <Link to="/contact">
-                  Contact Us
-                </Link>
-              </Button>
-            </div>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="min-h-[48px] text-fluid-base font-medium">
+              <Link to="/contact">
+                Contact Us
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
