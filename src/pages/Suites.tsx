@@ -1,16 +1,18 @@
 import { Button } from "@/components/ui/button";
-import { SuiteDetail } from "@/components/ui/suite-detail";
+import { SuiteBookingCard } from "@/components/ui/suite-booking-card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { SEO } from "@/components/ui/seo";
+import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { Link } from "react-router-dom";
+import { Clock, Gift, Users, ExternalLink } from "lucide-react";
 
 const luxurySuites = [
   {
     title: "Master Suite",
     capacity: "2 adults + 2 children under 12",
     bedConfig: "King XL bed + Double sofa bed (kids under 12)",
-    description: "Our flagship suite offers the ultimate in luxury with a spacious private unit featuring a dedicated dressing room, elegant lounge area, and ensuite bathroom with double vanity, shower, and toilet. The Master Suite interleads with the Loft Suite, making it perfect for families seeking connected accommodation.",
+    description: "Our flagship suite offers the ultimate in luxury with a spacious private unit featuring a dedicated dressing room, elegant lounge area, and ensuite bathroom with double vanity. Perfect for romantic getaways with modern conveniences.",
     mainAmenities: [
       { text: "Hot water bottles & electric blankets", emoji: "🔥" },
       { text: "Netflix & entertainment system", emoji: "📺" },
@@ -20,21 +22,32 @@ const luxurySuites = [
       { text: "Private dressing room", emoji: "👗" }
     ],
     additionalAmenities: [
-      "Elegant lounge area",
-      "Interleads with Loft Suite",
-      "Free WiFi",
-      "Charlotte Rhys toiletries",
-      "Extra mattresses available",
+      "Elegant lounge area with fireplace",
+      "Interleads with Loft Suite for families",
+      "Free high-speed WiFi throughout",
+      "Charlotte Rhys premium toiletries",
+      "Extra mattresses available for children",
       "Cot with linen for infants",
-      "High chair & microwave for infants"
+      "High chair & microwave for baby feeding",
+      "Secure parking included",
+      "Daily housekeeping available",
+      "Complimentary tea and coffee selection"
     ],
-    slug: "master-suite"
+    slug: "master-suite",
+    roomId: 6,
+    price: "From R3,200/night",
+    urgencyMessage: "Only 2 Dates Left This Month",
+    testimonial: {
+      quote: "The Master Suite exceeded all expectations. Perfect for our anniversary with incredible attention to detail.",
+      author: "Sarah & Michael K.",
+      rating: 5
+    }
   },
   {
-    title: "Loft Suite",
+    title: "Loft Family Suite",
     capacity: "4 adults",
     bedConfig: "Queen XL bed + 2 Single XL beds",
-    description: "Perfect for families, the Loft Suite features two comfortable bedrooms with spectacular views, a welcoming lounge area, and a spacious bathroom with double vanity and toilet. The suite offers hot water bottles and electric blankets for warmth and connects seamlessly with the Master Suite for larger group bookings.",
+    description: "Perfect for families, the Loft Suite features two comfortable bedrooms with spectacular mountain views, a welcoming lounge area, and spacious bathroom. Connects with Master Suite for larger groups.",
     mainAmenities: [
       { text: "Spectacular mountain views", emoji: "🏔️" },
       { text: "Hot water bottles & electric blankets", emoji: "🔥" },
@@ -44,21 +57,32 @@ const luxurySuites = [
       { text: "Two separate bedrooms", emoji: "🛏️" }
     ],
     additionalAmenities: [
-      "Comfortable lounge area",
-      "Free WiFi",
-      "Premium tea selection",
-      "Charlotte Rhys amenities",
-      "Extra mattresses available",
+      "Comfortable family lounge area",
+      "Connects to Master Suite for large groups",
+      "Free WiFi throughout both bedrooms",
+      "Premium tea and coffee selection",
+      "Charlotte Rhys toiletries and amenities",
+      "Extra mattresses for additional guests",
       "Cot with linen for infants",
-      "High chair & microwave for infants"
+      "High chair & microwave facilities",
+      "Mountain view from every window",
+      "Secure covered parking"
     ],
-    slug: "loft-suite"
+    slug: "loft-suite",
+    roomId: 5,
+    price: "From R2,800/night",
+    urgencyMessage: "Family Special Available",
+    testimonial: {
+      quote: "Perfect for our family of four. The kids loved having their own space while we enjoyed the mountain views.",
+      author: "The Johnson Family",
+      rating: 5
+    }
   },
   {
     title: "Garden Suite",
     capacity: "2 guests",
     bedConfig: "Queen XL bed",
-    description: "A romantic ground floor retreat with private entrance and enchanting garden views. The Garden Suite features a luxurious dual vanity bathroom with both bath and shower, creating the perfect sanctuary for couples seeking privacy and tranquility in our beautifully landscaped grounds.",
+    description: "A romantic ground floor retreat with private entrance and enchanting garden views. Features luxurious dual vanity bathroom with both spa bath and shower, perfect for couples seeking intimate luxury.",
     mainAmenities: [
       { text: "Stunning garden views", emoji: "🌿" },
       { text: "Private entrance", emoji: "🚪" },
@@ -68,21 +92,32 @@ const luxurySuites = [
       { text: "Netflix & DVD player", emoji: "📺" }
     ],
     additionalAmenities: [
-      "48-inch LED TV",
-      "Free WiFi",
-      "Nespresso machine",
-      "Charlotte Rhys toiletries",
-      "Extra mattresses available",
+      "48-inch LED TV with premium channels",
+      "Free high-speed WiFi",
+      "Nespresso machine with premium pods",
+      "Charlotte Rhys luxury toiletries",
+      "Private garden terrace access",
+      "Romantic lighting and ambiance",
+      "Extra mattresses if needed",
       "Cot with linen for infants",
-      "High chair & microwave for infants"
+      "High chair & microwave for babies",
+      "Complimentary wine on arrival (weekends)"
     ],
-    slug: "garden-suite"
+    slug: "garden-suite",
+    roomId: 4,
+    price: "From R2,500/night",
+    urgencyMessage: "Weekend Special - 15% Off",
+    testimonial: {
+      quote: "The most romantic suite with incredible garden views. The spa bath was pure luxury after a day of fly-fishing.",
+      author: "Emma & David R.",
+      rating: 5
+    }
   },
   {
     title: "Cove Suite", 
     capacity: "2 guests",
     bedConfig: "Queen XL bed",
-    description: "An intimate ground floor suite featuring a cozy lounge, comfortable bedroom, and modern shower-only bathroom. The Cove Suite offers a perfect blend of comfort and convenience with premium entertainment systems and luxury amenities for couples seeking a peaceful retreat.",
+    description: "An intimate ground floor suite featuring a cozy lounge, comfortable bedroom, and modern shower bathroom. Perfect blend of comfort and convenience with premium entertainment and luxury amenities.",
     mainAmenities: [
       { text: "Hot water bottles & electric blankets", emoji: "🔥" },
       { text: "Netflix & DVD player", emoji: "📺" },
@@ -92,15 +127,21 @@ const luxurySuites = [
       { text: "Premium entertainment system", emoji: "🎬" }
     ],
     additionalAmenities: [
-      "48-inch LED TV",
-      "Free WiFi",
-      "Charlotte Rhys toiletries",
-      "Daily housekeeping available",
+      "48-inch LED TV with streaming",
+      "Free WiFi throughout suite",
+      "Charlotte Rhys premium toiletries",
+      "Daily housekeeping service available",
+      "Ground floor accessibility",
+      "Intimate dining space for two",
       "Extra mattresses available",
       "Cot with linen for infants",
-      "High chair & microwave for infants"
+      "High chair & microwave facilities",
+      "Private entrance and parking"
     ],
-    slug: "cove-suite"
+    slug: "cove-suite",
+    roomId: 3,
+    price: "From R2,300/night",
+    urgencyMessage: "Last Room This Weekend"
   }
 ];
 
@@ -109,7 +150,7 @@ const cottageSuites = [
     title: "Robin Suite",
     capacity: "2 adults + 2 children under 12",
     bedConfig: "King XL bed or 2 Singles + Fold-out double sofa (kids under 12)",
-    description: "Stylish and comfortable cottage suite featuring a warm fireplace and flexible bedding arrangements. The Robin Suite combines modern comfort with charming cottage character, offering premium amenities and cozy atmosphere perfect for families or couples seeking authentic Dullstroom charm.",
+    description: "Stylish and comfortable cottage suite featuring a warm fireplace and flexible bedding arrangements. Combines modern comfort with authentic Dullstroom cottage character, perfect for families.",
     mainAmenities: [
       { text: "Warm fireplace", emoji: "🔥" },
       { text: "Netflix entertainment", emoji: "📺" },
@@ -119,22 +160,33 @@ const cottageSuites = [
       { text: "Cottage garden access", emoji: "🌿" }
     ],
     additionalAmenities: [
-      "Charlotte Rhys toiletries",
-      "Free WiFi throughout",
-      "Premium tea selection",
+      "Charlotte Rhys luxury toiletries",
+      "Free WiFi throughout cottage",
+      "Premium tea and coffee selection",
       "Daily housekeeping available",
       "Hot water bottles & electric blankets",
-      "Extra mattresses available",
+      "Authentic cottage atmosphere",
+      "Extra mattresses for children",
       "Cot with linen for infants",
-      "High chair & microwave for infants"
+      "High chair & microwave for babies",
+      "Private cottage garden access",
+      "Wood for fireplace included"
     ],
-    slug: "robin-suite"
+    slug: "robin-suite",
+    roomId: 15,
+    price: "From R2,400/night",
+    urgencyMessage: "Cottage Special - Book 3 Nights Save 20%",
+    testimonial: {
+      quote: "The cottage charm is incredible! Kids loved the fireplace and we loved the authentic Dullstroom experience.",
+      author: "The Williams Family",
+      rating: 5
+    }
   },
   {
     title: "Blue Crane Suite",
     capacity: "2 guests", 
     bedConfig: "Flexible bed configuration",
-    description: "Charming and comfortable cottage suite designed for couples, featuring a private beverage station and cozy fireplace. The Blue Crane Suite embodies the essence of cottage comfort with thoughtful amenities and intimate spaces perfect for romantic getaways.",
+    description: "Charming and comfortable cottage suite designed for couples, featuring a private beverage station and cozy fireplace. Embodies the essence of cottage comfort with romantic atmosphere.",
     mainAmenities: [
       { text: "Private beverage station", emoji: "☕" },
       { text: "Cozy fireplace", emoji: "🔥" },
@@ -144,22 +196,28 @@ const cottageSuites = [
       { text: "Cottage atmosphere", emoji: "🏡" }
     ],
     additionalAmenities: [
-      "Free WiFi",
-      "Charlotte Rhys toiletries",
-      "Premium coffee facilities",
-      "Flexible room layout",
+      "Free WiFi throughout",
+      "Charlotte Rhys luxury toiletries",
+      "Premium coffee and tea facilities",
+      "Flexible room layout options",
       "Hot water bottles & electric blankets",
+      "Cottage garden access",
       "Extra mattresses available",
       "Cot with linen for infants",
-      "High chair & microwave for infants"
+      "High chair & microwave facilities",
+      "Romantic cottage lighting",
+      "Complimentary wood for fireplace"
     ],
-    slug: "blue-crane-suite"
+    slug: "blue-crane-suite",
+    roomId: 17,
+    price: "From R2,200/night",
+    urgencyMessage: "Romantic Special Available"
   },
   {
     title: "Falcon Suite",
     capacity: "2-3 guests",
     bedConfig: "Flexible bed configuration for small families",
-    description: "Spacious and elegant cottage suite offering cozy comfort with sophisticated touches. The Falcon Suite features a warm fireplace, premium entertainment system, and flexible accommodation perfect for small families or couples seeking extra space and cottage charm.",
+    description: "Spacious and elegant cottage suite offering cozy comfort with sophisticated touches. Features warm fireplace, premium entertainment, and flexible accommodation for small families.",
     mainAmenities: [
       { text: "Warm fireplace", emoji: "🔥" },
       { text: "Netflix entertainment", emoji: "📺" },
@@ -169,16 +227,75 @@ const cottageSuites = [
       { text: "Cottage garden access", emoji: "🌿" }
     ],
     additionalAmenities: [
-      "Free WiFi",
+      "Free WiFi throughout cottage",
       "Charlotte Rhys toiletries",
-      "Elegant cozy comfort",
+      "Elegant cozy comfort furnishings",
       "Premium entertainment system",
       "Hot water bottles & electric blankets",
+      "Flexible family sleeping arrangements",
       "Extra mattresses available",
       "Cot with linen for infants",
-      "High chair & microwave for infants"
+      "High chair & microwave for children",
+      "Private cottage entrance",
+      "Secure parking space"
     ],
-    slug: "falcon-suite"
+    slug: "falcon-suite",
+    roomId: 16,
+    price: "From R2,600/night"
+  }
+];
+
+const selfCateringHouse = {
+  title: "Self Catering House",
+  capacity: "Up to 16 guests",
+  bedConfig: "8 bedrooms with flexible configurations",
+  description: "Fully equipped luxury self-catering house perfect for large groups, families, or corporate retreats. Features multiple bedrooms, full kitchen facilities, barbecue areas, and secure parking for the ultimate Dullstroom group experience.",
+  mainAmenities: [
+    { text: "Full kitchen facilities", emoji: "🍳" },
+    { text: "Barbecue entertainment areas", emoji: "🔥" },
+    { text: "Secure parking for multiple vehicles", emoji: "🚗" },
+    { text: "Large group dining areas", emoji: "🍽️" },
+    { text: "Multiple entertainment zones", emoji: "📺" },
+    { text: "Highland mountain views", emoji: "🏔️" }
+  ],
+  additionalAmenities: [
+    "8 fully equipped bedrooms",
+    "Multiple bathroom facilities",
+    "Large commercial-style kitchen",
+    "Indoor and outdoor dining spaces",
+    "Entertainment and lounge areas",
+    "Secure off-street parking",
+    "Free WiFi throughout property",
+    "Laundry facilities included",
+    "Barbecue and outdoor entertaining",
+    "Group booking discounts available",
+    "Corporate retreat facilities",
+    "Event hosting capabilities"
+  ],
+  slug: "self-catering-house",
+  roomId: 18,
+  price: "From R8,500/night",
+  urgencyMessage: "Perfect for Groups - Limited Weekend Availability"
+};
+
+const testimonials = [
+  {
+    quote: "Best Dullstroom family guesthouse experience! The luxury suites were perfect and the kids loved the space.",
+    author: "The Thompson Family",
+    rating: 5,
+    year: "2024"
+  },
+  {
+    quote: "The cottage suites have such authentic charm. We felt completely at home in the highlands.",
+    author: "Mark & Lisa K.",
+    rating: 5,
+    year: "2024"
+  },
+  {
+    quote: "Perfect location for fly-fishing. Walking distance to everything with luxury accommodation.",
+    author: "Robert S.",
+    rating: 5,
+    year: "2024"
   }
 ];
 
@@ -186,121 +303,98 @@ export default function Suites() {
   return (
     <>
       <SEO 
-        title="Luxury Suites & Cottage Accommodation | The Browns Dullstroom"
-        description="Choose from our luxury guest suites and charming cottage rooms in Dullstroom. Modern amenities, spectacular views, and authentic highland comfort await."
-        keywords="luxury suites Dullstroom, cottage accommodation, family suites, romantic getaway, premium lodging Mpumalanga"
+        title="Discover Tailored Dullstroom Luxury Suites 2025 | The Browns"
+        description="Book direct for 10% off luxury Dullstroom accommodation. Master Suite with King XL bed, Self Catering House for groups up to 16. Free fly-fishing guide included."
+        keywords="Dullstroom luxury guesthouse 2025, Panorama Route accommodation, self catering Dullstroom, family suites Mpumalanga, luxury cottage accommodation"
       />
       
       <div className="min-h-screen">
-        {/* Hero Section */}
-        <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-accent to-muted">
+        {/* Enhanced Hero Section */}
+        <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-primary/10 to-accent/5">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto text-center mb-12">
-              <h1 className="text-primary mb-6">Two Distinct Accommodation Experiences</h1>
-              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-12">
-                Choose between modern luxury and cottage charm, each offering unique character 
-                and amenities to create your perfect Dullstroom escape.
+            <div className="max-w-6xl mx-auto text-center mb-8">
+              <Badge variant="secondary" className="mb-4 text-sm px-4 py-2">
+                <Clock className="h-4 w-4 mr-2" />
+                Limited 2025 Availability
+              </Badge>
+              
+              <h1 className="text-primary mb-6">
+                Discover Tailored Dullstroom Luxury Suites 2025
+              </h1>
+              
+              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8 max-w-4xl mx-auto">
+                Experience luxury highland accommodation with two distinct styles: modern sophistication 
+                or authentic cottage charm. Each suite features premium amenities, stunning views, and 
+                personalized service in the heart of Dullstroom's fly-fishing paradise.
               </p>
-            </div>
-            
-            {/* Two House Options */}
-            <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 mb-12">
-              {/* Luxury House */}
-              <div className="bg-background rounded-lg p-8 shadow-lg border">
-                <div className="text-center">
-                  <Badge variant="secondary" className="text-lg px-4 py-2 mb-4">Modern Luxury</Badge>
-                  <h2 className="text-2xl font-bold text-primary mb-4">Luxury Guest Suites</h2>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Sophisticated design, premium amenities, and contemporary comfort. 
-                    4 ensuite rooms accommodating up to 10 adults and 2 children.
-                  </p>
-                  <div className="space-y-2 text-sm text-muted-foreground mb-6">
-                    <div className="flex items-center justify-center gap-2">
-                      <span>•</span>
-                      <span>Hot water bottles, electric blankets & modern amenities</span>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                      <span>•</span>
-                      <span>Netflix, Nespresso & premium finishes</span>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                      <span>•</span>
-                      <span>Spectacular mountain & garden views</span>
-                    </div>
-                  </div>
+              
+              <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mb-8 max-w-2xl mx-auto">
+                <div className="flex items-center justify-center gap-2 text-primary font-semibold">
+                  <Gift className="h-5 w-5" />
+                  <span>Book Direct Save 10% + Free Fly-Fishing Guide</span>
                 </div>
+                <p className="text-sm text-muted-foreground mt-2">
+                  Best rate guaranteed • Free cancellation • No booking fees
+                </p>
               </div>
               
-              {/* Cottage House */}
-              <div className="bg-background rounded-lg p-8 shadow-lg border">
-                <div className="text-center">
-                  <Badge className="text-lg px-4 py-2 mb-4 bg-secondary text-secondary-foreground">Cottage Cozy</Badge>
-                  <h2 className="text-2xl font-bold text-primary mb-4">Cottage Suites</h2>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Charming character, cozy fireplaces, and authentic cottage atmosphere. 
-                    3 intimate rooms accommodating up to 6 adults and 1 child.
-                  </p>
-                  <div className="space-y-2 text-sm text-muted-foreground mb-6">
-                    <div className="flex items-center justify-center gap-2">
-                      <span>•</span>
-                      <span>Warm fireplaces & cottage charm</span>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                      <span>•</span>
-                      <span>Flexible layouts & family-friendly</span>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                      <span>•</span>
-                      <span>Garden access & intimate spaces</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="min-h-[48px]" asChild>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                <Button size="lg" className="min-h-[48px] flex-1" asChild>
                   <a 
                     href="https://book.nightsbridge.com/00000" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
-                    Book Your Stay
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    Book Direct Now
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" className="min-h-[48px]" asChild>
-                  <Link to="/contact">Contact Us</Link>
+                <Button variant="outline" size="lg" className="min-h-[48px] flex-1" asChild>
+                  <Link to="/gallery">View Gallery</Link>
                 </Button>
+              </div>
+            </div>
+            
+            {/* Quick Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+              <div className="text-center bg-background/50 rounded-lg p-4">
+                <div className="text-2xl font-bold text-primary">8</div>
+                <div className="text-sm text-muted-foreground">Luxury Suites</div>
+              </div>
+              <div className="text-center bg-background/50 rounded-lg p-4">
+                <div className="text-2xl font-bold text-primary">22</div>
+                <div className="text-sm text-muted-foreground">Max Guests</div>
+              </div>
+              <div className="text-center bg-background/50 rounded-lg p-4">
+                <div className="text-2xl font-bold text-primary">2</div>
+                <div className="text-sm text-muted-foreground">Property Styles</div>
+              </div>
+              <div className="text-center bg-background/50 rounded-lg p-4">
+                <div className="text-2xl font-bold text-primary">4.9</div>
+                <div className="text-sm text-muted-foreground">Guest Rating</div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Luxury Suites Section */}
-        <section className="py-8 sm:py-12 md:py-16 lg:py-20">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-8 sm:mb-10 md:mb-12">
-              <Badge variant="secondary" className="text-fluid-base px-3 py-2 sm:px-4 sm:py-2 mb-4">Modern Luxury</Badge>
+        <section className="py-12 sm:py-16 lg:py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <Badge variant="secondary" className="mb-4">Modern Luxury</Badge>
               <h2 className="text-primary mb-4">Luxury Guest Suites</h2>
-              <p className="text-fluid-lg text-muted-foreground max-w-none sm:max-w-3xl mx-auto leading-relaxed">
-                Experience sophisticated comfort in our luxury guest house featuring modern amenities, 
-                premium finishes, and breathtaking views of the Dullstroom highlands.
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Sophisticated design meets modern comfort in our luxury guest house. Perfect for couples, 
+                families, and discerning travelers seeking premium highland accommodation.
               </p>
             </div>
             
-            <div className="space-y-12 sm:space-y-16 md:space-y-20">
+            <div className="space-y-8">
               {luxurySuites.map((suite, index) => (
-                <SuiteDetail
+                <SuiteBookingCard
                   key={suite.slug}
-                  title={suite.title}
-                  capacity={suite.capacity}
-                  bedConfig={suite.bedConfig}
-                  description={suite.description}
-                  mainAmenities={suite.mainAmenities}
-                  additionalAmenities={suite.additionalAmenities}
-                  slug={suite.slug}
-                  className={index % 2 === 1 ? "md:flex-row-reverse" : ""}
+                  {...suite}
+                  className={index % 2 === 1 ? "bg-muted/20" : ""}
                 />
               ))}
             </div>
@@ -310,55 +404,103 @@ export default function Suites() {
         <Separator className="my-8" />
 
         {/* Cottage Suites Section */}
-        <section className="py-8 sm:py-12 md:py-16 lg:py-20">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-8 sm:mb-10 md:mb-12">
-              <Badge className="text-fluid-base px-3 py-2 sm:px-4 sm:py-2 mb-4 bg-secondary text-secondary-foreground">Cottage Cozy</Badge>
+        <section className="py-12 sm:py-16 lg:py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <Badge className="mb-4 bg-secondary text-secondary-foreground">Cottage Charm</Badge>
               <h2 className="text-primary mb-4">Cottage Suites</h2>
-              <p className="text-fluid-lg text-muted-foreground max-w-none sm:max-w-3xl mx-auto leading-relaxed">
-                Discover authentic charm in our cottage suites featuring warm fireplaces, 
-                cozy atmospheres, and the genuine hospitality of highland cottage living.
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Authentic cottage character with warm fireplaces and cozy atmospheres. 
+                Perfect for romantic getaways and families seeking genuine highland charm.
               </p>
             </div>
             
-            <div className="space-y-12 sm:space-y-16 md:space-y-20">
+            <div className="space-y-8">
               {cottageSuites.map((suite, index) => (
-                <SuiteDetail
+                <SuiteBookingCard
                   key={suite.slug}
-                  title={suite.title}
-                  capacity={suite.capacity}
-                  bedConfig={suite.bedConfig}
-                  description={suite.description}
-                  mainAmenities={suite.mainAmenities}
-                  additionalAmenities={suite.additionalAmenities}
-                  slug={suite.slug}
-                  className={index % 2 === 1 ? "md:flex-row-reverse" : ""}
+                  {...suite}
+                  className={index % 2 === 0 ? "bg-muted/20" : ""}
                 />
               ))}
             </div>
           </div>
         </section>
 
-        {/* Call to Action Section */}
-        <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-primary/5 to-accent/10">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-primary mb-4 sm:mb-6">Ready to Experience The Browns?</h2>
-            <p className="text-fluid-lg text-muted-foreground mb-6 sm:mb-8 max-w-none sm:max-w-2xl mx-auto leading-relaxed">
-              Whether you choose modern luxury or cottage charm, unforgettable memories await 
-              in the heart of Dullstroom's spectacular highland landscape.
+        <Separator className="my-8" />
+
+        {/* Self Catering House Section */}
+        <section className="py-12 sm:py-16 lg:py-20 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <Badge variant="outline" className="mb-4 border-primary text-primary">
+                <Users className="h-4 w-4 mr-2" />
+                Groups & Events
+              </Badge>
+              <h2 className="text-primary mb-4">Self Catering House</h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Perfect for large groups, family reunions, or corporate retreats. 
+                Fully equipped for independent luxury living in the Dullstroom highlands.
+              </p>
+            </div>
+            
+            <SuiteBookingCard {...selfCateringHouse} className="max-w-4xl mx-auto" />
+          </div>
+        </section>
+
+        {/* Social Proof Section */}
+        <section className="py-12 sm:py-16 lg:py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl font-bold text-primary mb-4">What Our Guests Say</h2>
+              <div className="flex items-center justify-center gap-1 mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <div key={i} className="h-5 w-5 text-secondary fill-secondary">⭐</div>
+                ))}
+                <span className="ml-2 text-muted-foreground">4.9/5 from 200+ reviews</span>
+              </div>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {testimonials.map((testimonial, index) => (
+                <TestimonialCard key={index} {...testimonial} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Final Call to Action */}
+        <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-primary/10 to-accent/5">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-primary mb-6">Ready for Your Dullstroom Highland Escape?</h2>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+              Book direct for guaranteed best rates, 10% savings, and complimentary fly-fishing guide. 
+              Your luxury highland experience awaits in the heart of South Africa's trout fishing capital.
             </p>
-            <div className="flex flex-col mobile-landscape:flex-row gap-3 sm:gap-4 justify-center max-w-md mx-auto">
-              <Button size="lg" className="min-h-[48px] text-fluid-base font-medium" asChild>
+            
+            <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mb-8 max-w-md mx-auto">
+              <div className="flex items-center justify-center gap-2 text-primary font-semibold mb-2">
+                <Clock className="h-4 w-4" />
+                <span>Rooms Filling Fast for 2025</span>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Secure your dates today with free cancellation
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <Button size="lg" className="min-h-[48px] flex-1" asChild>
                 <a 
                   href="https://book.nightsbridge.com/00000" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
+                  <ExternalLink className="h-4 w-4 mr-2" />
                   Book Your Perfect Suite
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="min-h-[48px] text-fluid-base font-medium" asChild>
-                <Link to="/gallery">View Our Gallery</Link>
+              <Button variant="outline" size="lg" className="min-h-[48px] flex-1" asChild>
+                <Link to="/contact">Ask Questions</Link>
               </Button>
             </div>
           </div>
