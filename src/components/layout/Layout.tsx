@@ -6,6 +6,9 @@ import { PageTransition } from "@/components/ui/page-transition";
 import { SkipToContent } from "@/components/ui/accessibility";
 import { ErrorBoundary } from "@/components/ui/error-boundary";
 import { BreadcrumbNavigation } from "@/components/ui/breadcrumb-navigation";
+import { PerformanceMonitor } from "@/components/ui/performance-monitor";
+import { AccessibilityTester } from "@/components/ui/accessibility-tester";
+import { BookingTester } from "@/components/ui/booking-tester";
 
 export function Layout() {
   return (
@@ -21,6 +24,9 @@ export function Layout() {
         </main>
         <Footer />
         <ScrollToTop />
+        <PerformanceMonitor />
+        <AccessibilityTester />
+        <BookingTester />
       </div>
     </ErrorBoundary>
   );
