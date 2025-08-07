@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { SEO } from "@/components/ui/seo";
+import { StructuredData } from "@/components/ui/structured-data";
 import { EnhancedImageSlider } from "@/components/ui/enhanced-image-slider";
 import { SuiteCard } from "@/components/ui/suite-card";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
@@ -123,6 +125,17 @@ const Index = () => {
 
   return (
     <>
+      <SEO
+        title="The Browns - Luxury Highland Accommodation | Dullstroom Guest Suites 2025"
+        description="Premier luxury guest suites in Dullstroom's misty highlands. World-class fly-fishing access, Panorama Route base, mountain views, premium amenities. Book direct for best rates and exclusive perks."
+        keywords="Dullstroom luxury accommodation 2025, highland guest suites Mpumalanga, boutique hotel fly fishing, Panorama Route accommodation, luxury self-catering Dullstroom, mountain view suites South Africa"
+      />
+      
+      <StructuredData 
+        type="hotel" 
+        data={{}}
+      />
+      
       <MobileSEO />
       <div className="min-h-screen mobile-scroll-smooth">
       {/* Hero Section - Mobile Optimized */}
