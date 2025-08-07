@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ImageSlider } from "@/components/ui/image-slider";
+import { EnhancedImageSlider } from "@/components/ui/enhanced-image-slider";
 import { SuiteCard } from "@/components/ui/suite-card";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { Card, CardContent } from "@/components/ui/card";
-import { SEO } from "@/components/ui/seo";
+import { MobileSEO } from "@/components/ui/mobile-seo";
 import { DullstroomInfographic } from "@/components/ui/dullstroom-infographic";
 import { PremiumImage } from "@/components/ui/premium-image";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useMobileDetection } from "@/hooks/use-mobile-optimization";
 import { MapPin, Wifi, Car, Coffee, Zap, Shield, Droplets, Tv } from "lucide-react";
 
 const heroImages = [
@@ -118,30 +119,33 @@ const Index = () => {
   const { elementRef: overviewRef, isVisible: overviewVisible } = useScrollAnimation();
   const { elementRef: suitesRef, isVisible: suitesVisible } = useScrollAnimation();
   const { elementRef: testimonialsRef, isVisible: testimonialsVisible } = useScrollAnimation();
+  const { isMobile, isTouch } = useMobileDetection();
 
   return (
     <>
-      <SEO />
-      <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen">
-        <ImageSlider 
+      <MobileSEO />
+      <div className="min-h-screen mobile-scroll-smooth">
+      {/* Hero Section - Mobile Optimized */}
+      <section className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen mobile-select-none">
+        <EnhancedImageSlider 
           images={heroImages}
           className="h-full w-full"
-          autoPlay={true}
+          autoPlay={!isTouch} // Disable autoplay on touch devices for better UX
           autoPlayInterval={6000}
+          enableSwipe={true}
         />
         <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 text-center w-full px-4">
-          <div className="flex flex-col mobile-landscape:flex-row gap-3 sm:gap-4 max-w-md mx-auto">
+          <div className="mobile-stack max-w-md mx-auto">
             <Button 
               size="lg" 
               asChild 
-              className="bg-primary hover:bg-primary/90 min-h-[48px] text-fluid-base font-medium"
+              className="bg-primary hover:bg-primary/90 min-h-[48px] text-fluid-base font-medium touch-feedback mobile-tap-highlight"
             >
               <a 
                 href="https://book.nightsbridge.com/00000" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                aria-label="Book your luxury Dullstroom accommodation now"
               >
                 Book Now
               </a>
@@ -150,9 +154,12 @@ const Index = () => {
               variant="outline" 
               size="lg" 
               asChild 
-              className="bg-white/90 hover:bg-white border-white text-foreground min-h-[48px] text-fluid-base font-medium"
+              className="bg-white/90 hover:bg-white border-white text-foreground min-h-[48px] text-fluid-base font-medium touch-feedback mobile-tap-highlight"
             >
-              <Link to="/accommodations">
+              <Link 
+                to="/accommodations"
+                aria-label="View our luxury suite accommodations"
+              >
                 View Our Suites
               </Link>
             </Button>
@@ -177,9 +184,13 @@ const Index = () => {
               Experience self-catering excellence with premium amenities in the heart of South Africa's premier highland retreat.
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <div className="mobile-grid max-w-6xl mx-auto">
               {keyFeatures.map((feature, index) => (
-                <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
+                <Card 
+                  key={index} 
+                  className="text-center hover:shadow-lg transition-all duration-300 touch-feedback mobile-tap-highlight"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
                   <CardContent className="p-4 sm:p-6">
                     <feature.icon className="h-6 w-6 sm:h-8 sm:w-8 text-primary mx-auto mb-3 sm:mb-4" />
                     <h3 className="font-semibold mb-2 text-fluid-base">{feature.title}</h3>
@@ -208,15 +219,29 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
+          <div className="mobile-grid max-w-7xl mx-auto">
             {featuredSuites.map((suite, index) => (
-              <SuiteCard key={index} {...suite} />
+              <div 
+                key={index}
+                style={{ animationDelay: `${index * 150}ms` }}
+                className="scroll-animate"
+              >
+                <SuiteCard {...suite} />
+              </div>
             ))}
           </div>
           
           <div className="text-center mt-8 sm:mt-10 md:mt-12">
-            <Button asChild size="lg" variant="outline" className="min-h-[48px] text-fluid-base font-medium">
-              <Link to="/accommodations">
+            <Button 
+              asChild 
+              size="lg" 
+              variant="outline" 
+              className="min-h-[48px] text-fluid-base font-medium touch-feedback mobile-tap-highlight"
+            >
+              <Link 
+                to="/accommodations"
+                aria-label="View all luxury accommodation options"
+              >
                 View All Suites
               </Link>
             </Button>
@@ -239,9 +264,15 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
+          <div className="mobile-grid max-w-7xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <TestimonialCard key={index} {...testimonial} />
+              <div 
+                key={index}
+                style={{ animationDelay: `${index * 150}ms` }}
+                className="scroll-animate"
+              >
+                <TestimonialCard {...testimonial} />
+              </div>
             ))}
           </div>
         </div>
@@ -256,14 +287,29 @@ const Index = () => {
             className="max-w-6xl mx-auto"
           />
           
-          <div className="flex flex-col mobile-landscape:flex-row gap-3 sm:gap-4 justify-center max-w-md mx-auto mt-8">
-            <Button asChild size="lg" className="min-h-[48px] text-fluid-base font-medium">
-              <Link to="/activities">
+          <div className="mobile-stack max-w-md mx-auto mt-8">
+            <Button 
+              asChild 
+              size="lg" 
+              className="min-h-[48px] text-fluid-base font-medium touch-feedback mobile-tap-highlight"
+            >
+              <Link 
+                to="/activities"
+                aria-label="Explore Dullstroom highland activities and attractions"
+              >
                 Explore Highland Activities
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="min-h-[48px] text-fluid-base font-medium">
-              <Link to="/contact">
+            <Button 
+              asChild 
+              size="lg" 
+              variant="outline" 
+              className="min-h-[48px] text-fluid-base font-medium touch-feedback mobile-tap-highlight"
+            >
+              <Link 
+                to="/contact"
+                aria-label="Contact The Browns for bookings and inquiries"
+              >
                 Contact Us
               </Link>
             </Button>
@@ -279,11 +325,17 @@ const Index = () => {
             Book directly with us for the best rates and personalized service. 
             Experience the perfect blend of luxury and comfort in Dullstroom.
           </p>
-          <Button size="lg" variant="secondary" asChild className="min-h-[48px] text-fluid-base font-medium">
+          <Button 
+            size="lg" 
+            variant="secondary" 
+            asChild 
+            className="min-h-[48px] text-fluid-base font-medium touch-feedback mobile-tap-highlight"
+          >
             <a 
               href="https://book.nightsbridge.com/00000" 
               target="_blank" 
               rel="noopener noreferrer"
+              aria-label="Book your luxury Dullstroom stay now - best rates guaranteed"
             >
               Book Your Stay Now
             </a>
