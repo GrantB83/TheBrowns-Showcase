@@ -5,6 +5,7 @@ import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { PageTransition } from "@/components/ui/page-transition";
 import { SkipToContent } from "@/components/ui/accessibility";
 import { ErrorBoundary } from "@/components/ui/error-boundary";
+import { BreadcrumbNavigation } from "@/components/ui/breadcrumb-navigation";
 
 export function Layout() {
   return (
@@ -13,6 +14,7 @@ export function Layout() {
         <SkipToContent />
         <Header />
         <main id="main-content" className="flex-1">
+          <BreadcrumbNavigation className="container mx-auto px-4 py-4" />
           <PageTransition>
             <Outlet />
           </PageTransition>

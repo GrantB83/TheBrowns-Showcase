@@ -8,6 +8,9 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Suites from "./pages/Suites";
 import Gallery from "./pages/Gallery";
+import Activities from "./pages/Activities";
+import PayWhatYouCan from "./pages/PayWhatYouCan";
+import Booking from "./pages/Booking";
 import Location from "./pages/Location";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
@@ -26,8 +29,12 @@ const App = () => (
           <Route path="/" element={<Layout />}>
             <Route index element={<Index />} />
             <Route path="about" element={<About />} />
-            <Route path="suites" element={<Suites />} />
+            <Route path="accommodations" element={<Suites />} />
+            <Route path="suites" element={<Suites />} /> {/* Legacy route redirect */}
             <Route path="gallery" element={<Gallery />} />
+            <Route path="activities" element={<Activities />} />
+            <Route path="pay-what-you-can" element={<PayWhatYouCan />} />
+            <Route path="booking" element={<Booking />} />
             <Route path="location" element={<Location />} />
             <Route path="contact" element={<Contact />} />
             <Route path="blog" element={<Blog />} />

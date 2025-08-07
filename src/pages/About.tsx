@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { SEO } from "@/components/ui/seo";
+import { Link } from "react-router-dom";
 import { MapPin, Calendar, Users, Home, Utensils, Car } from "lucide-react";
 
 const propertyFeatures = [
@@ -27,7 +29,13 @@ const propertyFeatures = [
 
 export default function About() {
   return (
-    <div className="min-h-screen">
+    <>
+      <SEO
+        title="About The Browns - Luxury Dullstroom Guest Suites & Highland Hospitality"
+        description="Discover The Browns luxury guest suites in Dullstroom, Mpumalanga. Premium self-catering accommodation with personalized highland hospitality and modern amenities."
+        keywords="The Browns Dullstroom, luxury guest suites Mpumalanga, Dullstroom accommodation, highland hospitality, self-catering luxury, trout fishing accommodation"
+      />
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-accent to-muted">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -207,9 +215,9 @@ export default function About() {
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" asChild className="min-h-[48px] text-fluid-base font-medium">
-                  <a href="/suites">
+                  <Link to="/accommodations">
                     Explore Our Suites
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -217,5 +225,6 @@ export default function About() {
         </div>
       </section>
     </div>
+    </>
   );
 }

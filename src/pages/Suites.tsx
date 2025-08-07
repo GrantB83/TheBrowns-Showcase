@@ -3,6 +3,7 @@ import { SuiteDetail } from "@/components/ui/suite-detail";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { SEO } from "@/components/ui/seo";
+import { Link } from "react-router-dom";
 
 const luxurySuites = [
   {
@@ -269,7 +270,7 @@ export default function Suites() {
                   </a>
                 </Button>
                 <Button variant="outline" size="lg" className="min-h-[48px]" asChild>
-                  <a href="/contact">Contact Us</a>
+                  <Link to="/contact">Contact Us</Link>
                 </Button>
               </div>
             </div>
@@ -357,7 +358,7 @@ export default function Suites() {
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="min-h-[48px] text-fluid-base font-medium" asChild>
-                <a href="/gallery">View Our Gallery</a>
+                <Link to="/gallery">View Our Gallery</Link>
               </Button>
             </div>
           </div>

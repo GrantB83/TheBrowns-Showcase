@@ -4,7 +4,8 @@ import { ImageSlider } from "@/components/ui/image-slider";
 import { SuiteCard } from "@/components/ui/suite-card";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Wifi, Car, Coffee, Zap, Shield, Droplets, Tv } from "lucide-react";
+import { SEO } from "@/components/ui/seo";
+import { MapPin, Wifi, Car, Coffee, Zap, Shield, Droplets, Tv, Fish, Camera, TreePine } from "lucide-react";
 
 const heroImages = [
   {
@@ -112,7 +113,9 @@ const keyFeatures = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <>
+      <SEO />
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen">
         <ImageSlider 
@@ -142,7 +145,7 @@ const Index = () => {
               asChild 
               className="bg-white/90 hover:bg-white border-white text-foreground min-h-[48px] text-fluid-base font-medium"
             >
-              <Link to="/suites">
+              <Link to="/accommodations">
                 View Our Suites
               </Link>
             </Button>
@@ -196,7 +199,7 @@ const Index = () => {
           
           <div className="text-center mt-8 sm:mt-10 md:mt-12">
             <Button asChild size="lg" variant="outline" className="min-h-[48px] text-fluid-base font-medium">
-              <Link to="/suites">
+              <Link to="/accommodations">
                 View All Suites
               </Link>
             </Button>
@@ -235,9 +238,9 @@ const Index = () => {
             
             <div className="flex flex-col mobile-landscape:flex-row gap-3 sm:gap-4 justify-center max-w-md mx-auto">
               <Button asChild size="lg" className="min-h-[48px] text-fluid-base font-medium">
-                <Link to="/location">
-                  Explore Location & Activities
-                </Link>
+              <Link to="/activities">
+                Explore Highland Activities
+              </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="min-h-[48px] text-fluid-base font-medium">
                 <Link to="/contact">
@@ -269,6 +272,7 @@ const Index = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
