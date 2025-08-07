@@ -41,22 +41,22 @@ export function WhatsAppContact({
       <Button
         onClick={handleWhatsAppClick}
         className={cn(
-          // Positioning: Bottom-right following international standards
-          "fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50",
+          // Positioning: Bottom-right following international standards with safe areas
+          "fixed bottom-4 right-4 md:bottom-6 md:right-6 z-40",
+          "pb-safe-bottom pr-safe-right",
           // Official WhatsApp green colors for brand recognition
           "bg-[#25D366] hover:bg-[#128C7E] active:bg-[#075E54]",
           // Shape and sizing for optimal touch targets (44px minimum)
-          "rounded-full shadow-xl hover:shadow-2xl",
+          "rounded-full shadow-lg hover:shadow-xl",
           "h-14 w-14 md:h-16 md:w-16 min-w-[44px] min-h-[44px]",
-          // Smooth animations without being distracting
-          "transition-all duration-300 ease-in-out",
-          "hover:scale-110 active:scale-95",
-          // Subtle breathing animation
-          "animate-pulse hover:animate-none",
+          // Smooth, non-distracting animations
+          "transition-all duration-200 ease-out",
+          "hover:scale-105 active:scale-95",
+          "transform-gpu will-change-transform",
           // Better contrast and accessibility
           "text-white border-0 focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2",
-          // Safe area for mobile devices
-          "mb-safe-area-inset-bottom mr-safe-area-inset-right",
+          // Prevent layout shift and ensure stable positioning
+          "touch-manipulation select-none",
           className
         )}
         size="icon"
@@ -64,9 +64,6 @@ export function WhatsAppContact({
         title="Chat with us on WhatsApp"
       >
         <MessageCircle className="h-6 w-6 md:h-7 md:w-7" />
-        {/* Add visual feedback dot */}
-        <span className="absolute -top-1 -right-1 h-3 w-3 bg-red-500 rounded-full animate-ping" aria-hidden="true" />
-        <span className="absolute -top-1 -right-1 h-3 w-3 bg-red-500 rounded-full" aria-hidden="true" />
       </Button>
     );
   }
