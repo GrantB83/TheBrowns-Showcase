@@ -32,6 +32,7 @@ const luxurySuites = [{
     emoji: "👗"
   }],
   additionalAmenities: ["Elegant lounge area with fireplace", "Interleads with Loft Suite for families", "Free high-speed WiFi throughout", "Charlotte Rhys premium toiletries", "Extra mattresses available for children", "Cot with linen for infants", "High chair & microwave for baby feeding", "Secure parking included", "Daily housekeeping available", "Complimentary tea and coffee selection"],
+  images: ["/images/suites/master-suite-01.jpg", "/images/suites/master-suite-02.jpg", "/images/suites/master-suite-03.jpg", "/images/suites/master-suite-04.jpg", "/images/suites/master-suite-05.jpg", "/images/suites/master-suite-06.jpg", "/images/suites/master-suite-07.jpg"],
   slug: "master-suite",
   roomId: 6,
   price: "From R3,200/night",
@@ -66,6 +67,7 @@ const luxurySuites = [{
     emoji: "🛏️"
   }],
   additionalAmenities: ["Comfortable family lounge area", "Connects to Master Suite for large groups", "Free WiFi throughout both bedrooms", "Premium tea and coffee selection", "Charlotte Rhys toiletries and amenities", "Extra mattresses for additional guests", "Cot with linen for infants", "High chair & microwave facilities", "Mountain view from every window", "Secure covered parking"],
+  images: ["/images/suites/loft-suite-01.jpg", "/images/suites/loft-suite-02.jpg", "/images/suites/loft-suite-03.jpg", "/images/suites/loft-suite-04.jpg", "/images/suites/loft-suite-05.jpg", "/images/suites/loft-suite-06.jpg", "/images/suites/loft-suite-07.jpg"],
   slug: "loft-suite",
   roomId: 5,
   price: "From R2,800/night",
@@ -100,6 +102,7 @@ const luxurySuites = [{
     emoji: "📺"
   }],
   additionalAmenities: ["48-inch LED TV with premium channels", "Free high-speed WiFi", "Nespresso machine with premium pods", "Charlotte Rhys luxury toiletries", "Private garden terrace access", "Romantic lighting and ambiance", "Extra mattresses if needed", "Cot with linen for infants", "High chair & microwave for babies", "Complimentary wine on arrival (weekends)"],
+  images: ["/images/suites/garden-suite-01.jpg", "/images/suites/garden-suite-02.jpg", "/images/suites/garden-suite-03.jpg", "/images/suites/garden-suite-04.jpg", "/images/suites/garden-suite-05.jpg", "/images/suites/garden-suite-06.jpg"],
   slug: "garden-suite",
   roomId: 4,
   price: "From R2,500/night",
@@ -134,6 +137,7 @@ const luxurySuites = [{
     emoji: "🎬"
   }],
   additionalAmenities: ["48-inch LED TV with streaming", "Free WiFi throughout suite", "Charlotte Rhys premium toiletries", "Daily housekeeping service available", "Ground floor accessibility", "Intimate dining space for two", "Extra mattresses available", "Cot with linen for infants", "High chair & microwave facilities", "Private entrance and parking"],
+  images: ["/images/suites/cove-suite-01.jpg", "/images/suites/cove-suite-02.jpg", "/images/suites/cove-suite-03.jpg", "/images/suites/cove-suite-04.jpg", "/images/suites/cove-suite-05.jpg", "/images/suites/cove-suite-06.jpg"],
   slug: "cove-suite",
   roomId: 3,
   price: "From R2,300/night",
@@ -164,6 +168,7 @@ const cottageSuites = [{
     emoji: "🌿"
   }],
   additionalAmenities: ["Charlotte Rhys luxury toiletries", "Free WiFi throughout cottage", "Premium tea and coffee selection", "Daily housekeeping available", "Hot water bottles & electric blankets", "Authentic cottage atmosphere", "Extra mattresses for children", "Cot with linen for infants", "High chair & microwave for babies", "Private cottage garden access", "Wood for fireplace included"],
+  images: ["/images/suites/robin-suite-01.jpg", "/images/suites/robin-suite-02.jpg", "/images/suites/robin-suite-03.jpg", "/images/suites/robin-suite-04.jpg", "/images/suites/robin-suite-05.jpg", "/images/suites/robin-suite-06.jpg"],
   slug: "robin-suite",
   roomId: 15,
   price: "From R2,400/night",
@@ -198,6 +203,7 @@ const cottageSuites = [{
     emoji: "🏡"
   }],
   additionalAmenities: ["Free WiFi throughout", "Charlotte Rhys luxury toiletries", "Premium coffee and tea facilities", "Flexible room layout options", "Hot water bottles & electric blankets", "Cottage garden access", "Extra mattresses available", "Cot with linen for infants", "High chair & microwave facilities", "Romantic cottage lighting", "Complimentary wood for fireplace"],
+  images: ["/images/suites/blue-crane-suite-01.jpg", "/images/suites/blue-crane-suite-02.jpg", "/images/suites/blue-crane-suite-03.jpg", "/images/suites/blue-crane-suite-04.jpg", "/images/suites/blue-crane-suite-05.jpg", "/images/suites/blue-crane-suite-06.jpg", "/images/suites/blue-crane-suite-07.jpg"],
   slug: "blue-crane-suite",
   roomId: 17,
   price: "From R2,200/night",
@@ -227,6 +233,7 @@ const cottageSuites = [{
     emoji: "🌿"
   }],
   additionalAmenities: ["Free WiFi throughout cottage", "Charlotte Rhys toiletries", "Elegant cozy comfort furnishings", "Premium entertainment system", "Hot water bottles & electric blankets", "Flexible family sleeping arrangements", "Extra mattresses available", "Cot with linen for infants", "High chair & microwave for children", "Private cottage entrance", "Secure parking space"],
+  images: ["/images/suites/falcon-suite-01.jpg", "/images/suites/falcon-suite-02.jpg", "/images/suites/falcon-suite-03.jpg", "/images/suites/falcon-suite-04.jpg", "/images/suites/falcon-suite-05.jpg", "/images/suites/falcon-suite-06.jpg", "/images/suites/falcon-suite-07.jpg"],
   slug: "falcon-suite",
   roomId: 16,
   price: "From R2,600/night"
