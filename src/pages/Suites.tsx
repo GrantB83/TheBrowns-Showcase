@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { SEO } from "@/components/ui/seo";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
+import { BookingWidget } from "@/components/ui/booking-widget";
 import { Link } from "react-router-dom";
 import { Clock, Gift, Users, ExternalLink } from "lucide-react";
 
@@ -465,6 +466,22 @@ export default function Suites() {
               {testimonials.map((testimonial, index) => (
                 <TestimonialCard key={index} {...testimonial} />
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Enhanced Booking Section */}
+        <section className="py-12 sm:py-16 lg:py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-2xl mx-auto">
+              <div className="text-center mb-8">
+                <h2 className="text-primary mb-4">Ready to Book Your Suite?</h2>
+                <p className="text-lg text-muted-foreground">
+                  Secure your luxury highland accommodation with our streamlined booking process
+                </p>
+              </div>
+              
+              <BookingWidget showRecommendations={true} />
             </div>
           </div>
         </section>
