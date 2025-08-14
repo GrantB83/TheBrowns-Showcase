@@ -85,7 +85,7 @@ export function BookingFlow({
   currentStep = 1, 
   totalSteps = 4, 
   className,
-  urgencyMessage = "Only 3 suites left for your dates",
+  urgencyMessage = "Popular dates fill quickly - book early",
   showTrustBadges = true 
 }: BookingFlowProps) {
   const [selectedDates, setSelectedDates] = useState<string>("");
@@ -193,7 +193,7 @@ export function BookingFlow({
               <span>Secure Direct Booking: Lowest Rates + Exclusives</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              ✓ Best Rate Guarantee ✓ Free Welcome Drink ✓ Complimentary WiFi ✓ Late Checkout
+              ✓ Rate Match + 5% Off ✓ Free Welcome Drink ✓ Complimentary WiFi ✓ Late Checkout
             </p>
           </div>
           <CardTitle className="text-xl mb-2">Ready to Book Your Highland Escape?</CardTitle>

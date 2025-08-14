@@ -87,7 +87,7 @@ export function SuiteBookingCard({
   roomId,
   price = "From R2,500/night",
   urgencyMessage,
-  offerText = "Book Direct Save 10% + Free Fly-Fishing Guide",
+  offerText = "Book Direct: Rate Match + 5% + Free Welcome Drink",
   testimonial,
   images = [],
   className
@@ -188,7 +188,7 @@ export function SuiteBookingCard({
           <div className="flex flex-col items-end gap-2">
             <div className="text-right">
               <div className="text-lg font-bold text-primary">{price}</div>
-              <div className="text-xs text-muted-foreground">Best Rate Guaranteed</div>
+              <div className="text-xs text-muted-foreground">Rate Match + 5% Off</div>
             </div>
             
             <Button 
@@ -240,7 +240,7 @@ export function SuiteBookingCard({
               className="w-full min-h-[48px] mt-4"
               onClick={handleBookNow}
             >
-              Book {title} - Save 10%
+              Book {title} - Best Rate + 5%
             </Button>
           </TabsContent>
 

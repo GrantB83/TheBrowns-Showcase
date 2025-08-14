@@ -136,10 +136,10 @@ export function BookingWidget({
       <div className="bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 rounded-lg p-4">
         <div className="flex items-center justify-center gap-2 text-red-700 mb-2">
           <Clock className="h-4 w-4" />
-          <span className="font-semibold text-sm">Limited Availability - Book Now!</span>
+          <span className="font-semibold text-sm">Popular Dates Fill Quickly - Book Early!</span>
         </div>
         <p className="text-center text-xs text-red-600">
-          High demand period • Best rates when booking direct • Free cancellation
+          High demand period • Best rates when booking direct • Flexible cancellation policy
         </p>
       </div>
 
@@ -156,7 +156,7 @@ export function BookingWidget({
               Direct Bookers Get a Free Welcome Drink + WiFi
             </div>
             <p className="text-xs text-muted-foreground">
-              Best rate guarantee • Instant confirmation • Free cancellation up to 48hrs
+              We match any rate plus 5% • Instant confirmation • Flexible cancellation policy
             </p>
           </div>
         </CardHeader>

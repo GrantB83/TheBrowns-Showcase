@@ -25,9 +25,9 @@ import { Link } from "react-router-dom";
 const directBookingBenefits = [
   {
     title: "Best Rate Guarantee",
-    description: "We match any lower rate found online plus give you 5% off",
+    description: "We match any rate plus 5%",
     icon: Crown,
-    highlight: "Save up to 15%"
+    highlight: "Plus 5% off"
   },
   {
     title: "Exclusive Perks",
@@ -43,7 +43,7 @@ const directBookingBenefits = [
   },
   {
     title: "Flexible Cancellation",
-    description: "Free cancellation up to 48 hours before arrival",
+    description: "Flexible cancellation policy with clear terms",
     icon: Calendar,
     highlight: "Peace of mind"
   },
@@ -151,7 +151,7 @@ export default function Booking() {
               <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-8 text-center">
                 <div className="flex items-center justify-center gap-2 text-red-700 mb-2">
                   <AlertCircle className="h-5 w-5" />
-                  <span className="font-bold">Limited Availability - Only Few Spots Left for 2025!</span>
+                  <span className="font-bold">Popular Dates Fill Quickly - Book Early!</span>
                 </div>
                 <p className="text-sm text-red-600">
                   High demand period • Book now to secure your highland escape
@@ -169,7 +169,7 @@ export default function Booking() {
                 </h1>
                 
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
-                  Book directly with The Browns for guaranteed best rates, exclusive perks worth R300+, 
+                  Book directly with The Browns for guaranteed best rates plus 5%, free welcome drink, 
                   and personalized service in Dullstroom's premier luxury highland accommodation.
                 </p>
                 
@@ -460,10 +460,10 @@ export default function Booking() {
               <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mb-8">
                 <div className="flex items-center justify-center gap-2 text-primary font-semibold mb-2">
                   <Clock className="h-4 w-4" />
-                  <span>Limited Time: Save 10% + Free Perks Worth R300</span>
+                  <span>Direct Booking Benefits: Rate Match + 5% + Free Welcome Drink</span>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Offer valid for direct bookings • Subject to availability
+                  Flexible cancellation policy • Best rate guarantee
                 </p>
               </div>
               

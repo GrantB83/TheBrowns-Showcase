@@ -39,7 +39,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: "What is your cancellation policy for direct bookings?",
-    answer: "Direct bookings enjoy free cancellation up to 48 hours before arrival. We offer flexible booking terms because we understand travel plans can change. This is one of the exclusive benefits of booking directly with us rather than through third-party platforms.",
+    answer: "We offer a flexible cancellation policy for direct bookings. You can cancel your booking and receive a full refund if cancelled 28+ days before arrival. Bookings cancelled within 28 days forfeit the 50% deposit, and cancellations within 14 days forfeit the full booking value. This flexible policy is one of the exclusive benefits of booking directly with us.",
     category: "Booking"
   },
   {
@@ -64,7 +64,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: "Do you offer any special packages or deals?",
-    answer: "Yes! Direct bookers receive our best rates plus exclusive perks worth R300+ including welcome drinks, late checkout, and free WiFi. We also offer seasonal packages combining accommodation with activities like spa treatments, fishing guides, and Panorama Route tours.",
+    answer: "Yes! Direct bookers receive our best rate guarantee - we match any rate plus 5% off - plus exclusive perks worth R300+ including free welcome drink, late checkout, and complimentary WiFi. We also offer seasonal packages combining accommodation with activities like spa treatments, fishing guides, and Panorama Route tours.",
     category: "Booking"
   }
 ];
