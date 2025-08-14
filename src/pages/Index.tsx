@@ -88,22 +88,22 @@ const featuredSuites = [
 
 const testimonials = [
   {
-    quote: "Beautifully appointed suites, spotlessly clean, central location – perfect stay!",
-    author: "Anonymous",
+    quote: "The room was pretty big, especially the bathroom. It had an espresso machine, coffee capsules, hot chocolate, snacks, and sweets.",
+    author: "Sabrina",
     rating: 5,
-    year: "2024"
+    year: "2023"
   },
   {
-    quote: "Big room with espresso machine and snacks, very cozy.",
-    author: "Guest",
+    quote: "The accommodation was lovely and had all the extra little finishing touches – home away from home!",
+    author: "Laura Bolton",
     rating: 5,
-    year: "2021"
+    year: "2022"
   },
   {
-    quote: "Suites were well-equipped and clean, easy to explore town.",
-    author: "Sarah M.",
+    quote: "The room was nicely appointed with lots of extra touches such as hot chocolate, a Nespresso machine, and a decanter of sherry.",
+    author: "dhw77",
     rating: 5,
-    year: "2024"
+    year: "2022"
   }
 ];
 

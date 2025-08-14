@@ -42,22 +42,22 @@ const ROOM_CODES = {
 
 const testimonials = [
   {
-    quote: "The most luxurious stay in Dullstroom! The Master Suite was absolutely perfect for our anniversary.",
-    author: "Sarah & Michael",
+    quote: "What a wonderfully comfortable stay. Exceptional quality furnishings, excellent linen and bed, soft candles at the bath.",
+    author: "tdvilliers",
     rating: 5,
-    year: "2024"
+    year: "2020"
   },
   {
-    quote: "Best Dullstroom family guesthouse experience. The kids loved the space and we loved the tranquility.",
-    author: "The Johnson Family",
+    quote: "We had a fabulous 1-night stay in 'The Loft'. The room was nicely appointed with lots of extra touches.",
+    author: "dhw77",
     rating: 5,
-    year: "2024"
+    year: "2022"
   },
   {
-    quote: "Perfect location for fly-fishing. Walking distance to everything in Dullstroom.",
-    author: "David R.",
+    quote: "The converted residence offers four rooms and all the comforts and options you need and want.",
+    author: "SouthAfricaSanta",
     rating: 5,
-    year: "2024"
+    year: "2019"
   }
 ];
 

@@ -269,20 +269,20 @@ const selfCateringHouse = {
   urgencyMessage: "Perfect for groups"
 };
 const testimonials = [{
-  quote: "Best Dullstroom family guesthouse experience! The luxury suites were perfect and the kids loved the space.",
-  author: "The Thompson Family",
+  quote: "Everything was so luxurious, it felt like we booked into a hotel. The rooms are spacious, and the beds have electric blankets.",
+  author: "Elsabe83",
   rating: 5,
-  year: "2024"
+  year: "2021"
 }, {
-  quote: "The cottage suites have such authentic charm. We felt completely at home in the highlands.",
-  author: "Mark & Lisa K.",
+  quote: "Thoughtful touches such as hot chocolate, espresso machine with milk frother and sweets. Exceptional quality furnishings.",
+  author: "tdvilliers",
   rating: 5,
-  year: "2024"
+  year: "2020"
 }, {
-  quote: "Perfect location for fly-fishing. Walking distance to everything with luxury accommodation.",
-  author: "Robert S.",
+  quote: "Great linens, bed, bath, and services. What a comfortable stay!",
+  author: "SouthAfricaSanta",
   rating: 5,
-  year: "2024"
+  year: "2019"
 }];
 export default function Suites() {
   return <>
