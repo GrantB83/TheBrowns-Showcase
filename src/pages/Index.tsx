@@ -43,12 +43,12 @@ const featuredSuites = [
     bedConfig: "King XL + Double sofa bed",
     image: <img src="/images/suites/master-suite-01.jpg" alt="Master Suite at The Browns featuring king XL bed and elegant luxury appointments" className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-t-lg" />,
     mainAmenities: [
-      { text: "Hot water bottles & electric blankets", emoji: "🔥" },
+      { text: "Dressing room", emoji: "👗" },
+      { text: "Large lounge + sofa bed", emoji: "🛋️" },
+      { text: "Hot water bottle", emoji: "🔥" },
+      { text: "Double shower", emoji: "🚿" },
       { text: "Netflix", emoji: "📺" },
-      { text: "Nespresso", emoji: "☕" },
-      { text: "Double vanity", emoji: "🛁" },
-      { text: "Private lounge", emoji: "🛋️" },
-      { text: "Garden views", emoji: "🌿" }
+      { text: "Nespresso", emoji: "☕" }
     ],
     additionalAmenities: []
   },
@@ -59,11 +59,11 @@ const featuredSuites = [
     bedConfig: "Queen XL bed",
     image: <img src="/images/suites/garden-suite-01.jpg" alt="Garden Suite at The Browns with private entrance and beautiful garden views" className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-t-lg" />,
     mainAmenities: [
-      { text: "Garden views", emoji: "🌿" },
+      { text: "Lovely bath", emoji: "🛀" },
+      { text: "Double vanity", emoji: "🪞" },
+      { text: "Hot water bottle", emoji: "🔥" },
       { text: "Private entrance", emoji: "🚪" },
-      { text: "Spa bath", emoji: "🛀" },
       { text: "Netflix", emoji: "📺" },
-      { text: "WiFi", emoji: "📶" },
       { text: "Nespresso", emoji: "☕" }
     ],
     additionalAmenities: []
@@ -71,16 +71,16 @@ const featuredSuites = [
   {
     title: "Robin Suite",
     description: "Cottage suite with fireplace and charming, comfortable styling.",
-    capacity: "4 guests",
-    bedConfig: "King XL or 2 Singles + Sofa bed",
-    image: <img src="/images/suites/robin-suite-01.jpg" alt="Robin Suite at The Browns cottage with fireplace and comfortable styling for 4 guests" className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-t-lg" />,
+    capacity: "2 guests",
+    bedConfig: "King or 2 Singles",
+    image: <img src="/images/suites/robin-suite-01.jpg" alt="Robin Suite at The Browns cottage with fireplace and comfortable styling for 2 guests" className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-t-lg" />,
     mainAmenities: [
       { text: "Fireplace", emoji: "🔥" },
-      { text: "Netflix", emoji: "📺" },
-      { text: "Nespresso", emoji: "☕" },
+      { text: "Configurable twin/king", emoji: "🛏️" },
       { text: "Charlotte Rhys", emoji: "✨" },
       { text: "Full ensuite", emoji: "🛁" },
-      { text: "WiFi", emoji: "📶" }
+      { text: "Netflix", emoji: "📺" },
+      { text: "Nespresso", emoji: "☕" }
     ],
     additionalAmenities: []
   }
