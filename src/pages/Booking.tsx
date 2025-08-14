@@ -68,8 +68,8 @@ const suiteHighlights = [
     roomId: 6,
     capacity: "2 Adults + 2 Children",
     features: ["King XL Bed", "Private Lounge", "Mountain Views", "Fireplace", "Netflix"],
-    rate: "From R3,200/night",
-    originalRate: "R3,600/night",
+    rate: "From R3,200pppn",
+    originalRate: "R3,600pppn",
     urgencyMessage: "Only 2 left this month",
     image: "/images/suites/master-suite-01.jpg",
     description: "Luxury flagship suite with private lounge and mountain views"
@@ -80,8 +80,8 @@ const suiteHighlights = [
     roomId: 4,
     capacity: "2 Adults",
     features: ["Queen XL Bed", "Garden Views", "Spa Bath", "Private Entrance"],
-    rate: "From R2,500/night",
-    originalRate: "R2,800/night",
+    rate: "From R2,500pppn",
+    originalRate: "R2,800pppn",
     urgencyMessage: "Perfect for romantic getaways",
     image: "/images/suites/garden-suite-01.jpg",
     description: "Romantic retreat with private garden access and spa bath"
@@ -92,8 +92,8 @@ const suiteHighlights = [
     roomId: 5,
     capacity: "4 Adults", 
     features: ["2 Bedrooms", "Family Lounge", "Mountain Views", "Entertainment"],
-    rate: "From R2,800/night",
-    originalRate: "R3,200/night",
+    rate: "From R2,800pppn",
+    originalRate: "R3,200pppn",
     urgencyMessage: "Family favorite - book early",
     image: "/images/suites/loft-suite-01.jpg",
     description: "Perfect for families with separate bedrooms and entertainment"

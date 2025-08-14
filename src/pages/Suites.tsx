@@ -35,7 +35,7 @@ const luxurySuites = [{
   images: ["/images/suites/master-suite-01.jpg", "/images/suites/master-suite-02.jpg", "/images/suites/master-suite-03.jpg", "/images/suites/master-suite-04.jpg", "/images/suites/master-suite-05.jpg", "/images/suites/master-suite-06.jpg", "/images/suites/master-suite-07.jpg"],
   slug: "master-suite",
   roomId: 6,
-  price: "From R3,200/night",
+  price: "From R3,200pppn",
   urgencyMessage: "Only 2 Dates Left This Month",
   testimonial: {
     quote: "The Master Suite exceeded all expectations. Perfect for our anniversary with incredible attention to detail.",
@@ -70,7 +70,7 @@ const luxurySuites = [{
   images: ["/images/suites/loft-suite-01.jpg", "/images/suites/loft-suite-02.jpg", "/images/suites/loft-suite-03.jpg", "/images/suites/loft-suite-04.jpg", "/images/suites/loft-suite-05.jpg", "/images/suites/loft-suite-06.jpg", "/images/suites/loft-suite-07.jpg"],
   slug: "loft-suite",
   roomId: 5,
-  price: "From R2,800/night",
+  price: "From R2,800pppn",
   urgencyMessage: "Family Special Available",
   testimonial: {
     quote: "Perfect for our family of four. The kids loved having their own space while we enjoyed the mountain views.",
@@ -105,7 +105,7 @@ const luxurySuites = [{
   images: ["/images/suites/garden-suite-01.jpg", "/images/suites/garden-suite-02.jpg", "/images/suites/garden-suite-03.jpg", "/images/suites/garden-suite-04.jpg", "/images/suites/garden-suite-05.jpg", "/images/suites/garden-suite-06.jpg"],
   slug: "garden-suite",
   roomId: 4,
-  price: "From R2,500/night",
+  price: "From R2,500pppn",
   urgencyMessage: "Weekend Special - 15% Off",
   testimonial: {
     quote: "The most romantic suite with incredible garden views. The spa bath was pure luxury after a day of fly-fishing.",
@@ -140,7 +140,7 @@ const luxurySuites = [{
   images: ["/images/suites/cove-suite-01.jpg", "/images/suites/cove-suite-02.jpg", "/images/suites/cove-suite-03.jpg", "/images/suites/cove-suite-04.jpg", "/images/suites/cove-suite-05.jpg", "/images/suites/cove-suite-06.jpg"],
   slug: "cove-suite",
   roomId: 3,
-  price: "From R2,300/night",
+  price: "From R2,300pppn",
   urgencyMessage: "Last Room This Weekend"
 }];
 const cottageSuites = [{
@@ -171,7 +171,7 @@ const cottageSuites = [{
   images: ["/images/suites/robin-suite-01.jpg", "/images/suites/robin-suite-02.jpg", "/images/suites/robin-suite-03.jpg", "/images/suites/robin-suite-04.jpg", "/images/suites/robin-suite-05.jpg", "/images/suites/robin-suite-06.jpg"],
   slug: "robin-suite",
   roomId: 15,
-  price: "From R2,400/night",
+  price: "From R2,400pppn",
   urgencyMessage: "Cottage Special - Book 3 Nights Save 20%",
   testimonial: {
     quote: "The cottage charm is incredible! Kids loved the fireplace and we loved the authentic Dullstroom experience.",
@@ -206,7 +206,7 @@ const cottageSuites = [{
   images: ["/images/suites/blue-crane-suite-01.jpg", "/images/suites/blue-crane-suite-02.jpg", "/images/suites/blue-crane-suite-03.jpg", "/images/suites/blue-crane-suite-04.jpg", "/images/suites/blue-crane-suite-05.jpg", "/images/suites/blue-crane-suite-06.jpg", "/images/suites/blue-crane-suite-07.jpg"],
   slug: "blue-crane-suite",
   roomId: 17,
-  price: "From R2,200/night",
+  price: "From R2,200pppn",
   urgencyMessage: "Romantic Special Available"
 }, {
   title: "Falcon Suite",
@@ -236,7 +236,7 @@ const cottageSuites = [{
   images: ["/images/suites/falcon-suite-01.jpg", "/images/suites/falcon-suite-02.jpg", "/images/suites/falcon-suite-03.jpg", "/images/suites/falcon-suite-04.jpg", "/images/suites/falcon-suite-05.jpg", "/images/suites/falcon-suite-06.jpg", "/images/suites/falcon-suite-07.jpg"],
   slug: "falcon-suite",
   roomId: 16,
-  price: "From R2,600/night"
+  price: "From R2,600pppn"
 }];
 const selfCateringHouse = {
   title: "Self Catering House",
@@ -265,7 +265,7 @@ const selfCateringHouse = {
   additionalAmenities: ["8 fully equipped bedrooms", "Multiple bathroom facilities", "Large commercial-style kitchen", "Indoor and outdoor dining spaces", "Entertainment and lounge areas", "Secure off-street parking", "Free WiFi throughout property", "Laundry facilities included", "Barbecue and outdoor entertaining", "Group booking discounts available", "Corporate retreat facilities", "Event hosting capabilities"],
   slug: "self-catering-house",
   roomId: 18,
-  price: "From R8,500/night",
+  price: "From R8,500pppn",
   urgencyMessage: "Perfect for Groups - Limited Weekend Availability"
 };
 const testimonials = [{

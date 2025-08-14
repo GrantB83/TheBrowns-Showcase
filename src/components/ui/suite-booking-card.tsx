@@ -85,7 +85,7 @@ export function SuiteBookingCard({
   additionalAmenities,
   slug,
   roomId,
-  price = "From R2,500/night",
+  price = "From R2,500pppn",
   urgencyMessage,
   offerText = "Book Direct: Best Rate Guarantee + Free Welcome Drink",
   testimonial,
