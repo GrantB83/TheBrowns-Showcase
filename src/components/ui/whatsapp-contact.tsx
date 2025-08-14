@@ -42,7 +42,7 @@ export function WhatsAppContact({
         onClick={handleWhatsAppClick}
         className={cn(
           // Positioning: Bottom-right following international standards with safe areas
-          "fixed bottom-4 right-4 md:bottom-6 md:right-6 z-40",
+          "fixed bottom-20 right-4 md:bottom-24 md:right-6 z-40",
           "pb-safe-bottom pr-safe-right",
           // Official WhatsApp green colors for brand recognition
           "bg-[#25D366] hover:bg-[#128C7E] active:bg-[#075E54]",
