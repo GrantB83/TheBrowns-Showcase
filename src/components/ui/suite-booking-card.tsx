@@ -164,7 +164,7 @@ export function SuiteBookingCard({
               {urgencyMessage && (
                 <Badge variant="destructive" className="bg-red-500 text-white text-xs">
                   <Clock className="h-3 w-3 mr-1" />
-                  Limited availability this week
+                  {urgencyMessage}
                 </Badge>
               )}
             </div>
