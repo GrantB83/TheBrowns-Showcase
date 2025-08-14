@@ -106,7 +106,7 @@ const luxurySuites = [{
   slug: "garden-suite",
   roomId: 4,
   price: "From R2,500/night",
-  urgencyMessage: "Weekend Special - 15% Off",
+  urgencyMessage: "Weekend Special",
   testimonial: {
     quote: "The most romantic suite with incredible garden views. The spa bath was pure luxury after a day of fly-fishing.",
     author: "Emma & David R.",
@@ -286,7 +286,7 @@ const testimonials = [{
 }];
 export default function Suites() {
   return <>
-      <SEO title="Discover Tailored Dullstroom Luxury Suites 2025 | The Browns" description="Book direct for 10% off luxury Dullstroom accommodation. Master Suite with King XL bed, Self Catering House for groups up to 16. Free fly-fishing guide included." keywords="Dullstroom luxury guesthouse 2025, Panorama Route accommodation, self catering Dullstroom, family suites Mpumalanga, luxury cottage accommodation" />
+      <SEO title="Discover Tailored Dullstroom Luxury Suites 2025 | The Browns" description="Book direct for best rates on luxury Dullstroom accommodation. Master Suite with King XL bed, Self Catering House for groups up to 16. Free fly-fishing guide included." keywords="Dullstroom luxury guesthouse 2025, Panorama Route accommodation, self catering Dullstroom, family suites Mpumalanga, luxury cottage accommodation" />
       
       <div className="min-h-screen">
         {/* Enhanced Hero Section */}

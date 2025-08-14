@@ -25,9 +25,9 @@ import { Link } from "react-router-dom";
 const directBookingBenefits = [
   {
     title: "Best Rate Guarantee",
-    description: "We match any rate plus 5%",
+    description: "We match any competitive rate",
     icon: Crown,
-    highlight: "Plus 5% off"
+    highlight: "Best rates guaranteed"
   },
   {
     title: "Exclusive Perks",

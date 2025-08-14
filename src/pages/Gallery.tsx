@@ -40,7 +40,7 @@ const allGalleryImages = [
     title: "Master Suite Bedroom",
     category: "Suite Interiors",
     description: "King XL bed, luxury amenities",
-    caption: "Master Suite Nespresso corner – Book Direct for 10% Off",
+    caption: "Master Suite Nespresso corner – Book Direct for Best Rates",
     suiteCode: "Master Suite",
     roomId: 6,
     urgencyMessage: "Limited Availability",
@@ -190,7 +190,7 @@ export default function Gallery() {
                 Gallery - Luxury Dullstroom Accommodation
               </h1>
               <p className="fluid-text text-muted-foreground max-w-3xl mx-auto px-4 leading-relaxed">
-                Explore our luxury suites, beautiful highland gardens, and stunning Dullstroom location. Book direct for guaranteed best rates and 10% off your stay.
+                Explore our luxury suites, beautiful highland gardens, and stunning Dullstroom location. Book direct for guaranteed best rates and exclusive perks.
               </p>
             </div>
 

@@ -261,7 +261,7 @@ export function BookingGallery({
                       handleBookNow(image.roomId!, image.suiteCode || 'Suite');
                     }}
                   >
-                    Book {image.suiteCode} - 10% Off Direct
+                    Book {image.suiteCode} Direct
                   </Button>
                   <p className="text-xs text-center text-muted-foreground">
                     Best rate guaranteed • Free cancellation
