@@ -268,7 +268,7 @@ export default function Activities() {
               <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mb-8 max-w-2xl mx-auto">
                 <div className="flex items-center justify-center gap-2 text-primary font-semibold">
                   <Gift className="h-5 w-5" />
-                  <span>Book Experience Packages & Save 15% on Activities</span>
+                  <span>Book Experience Packages for Enhanced Value</span>
                 </div>
                 <p className="text-sm text-muted-foreground mt-2">
                   Combine accommodation with activities for the best rates
@@ -678,7 +678,7 @@ export default function Activities() {
                   <span>Activity Package Deals Available</span>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Save 15% when booking accommodation + 2 or more activities
+                  Enhanced value when booking accommodation + 2 or more activities
                 </p>
               </div>
               

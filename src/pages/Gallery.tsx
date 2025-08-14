@@ -96,7 +96,7 @@ const allGalleryImages = [
     title: "Blue Crane Suite",
     category: "Suite Interiors",
     description: "Highland-inspired luxury",
-    caption: "Blue Crane Suite – Book Direct Save 10%",
+    caption: "Blue Crane Suite – Highland luxury accommodation",
     suiteCode: "Blue Crane Suite",
     roomId: 17,
     urgencyMessage: "Last Room Available",
@@ -178,7 +178,7 @@ export default function Gallery() {
     <>
       <SEO
         title="Photo Gallery - The Browns Luxury Guest Suites Dullstroom"
-        description="View luxury suites, gardens, and Dullstroom attractions. Book direct for 10% off at The Browns - premier highland accommodation near fly-fishing and Panorama Route."
+        description="View luxury suites, gardens, and Dullstrom attractions. The Browns - premier highland accommodation near fly-fishing and Panorama Route with direct booking benefits."
         keywords="Dullstroom luxury guesthouse photos, highland accommodation gallery, Panorama Route accommodation, Dullstroom suite interiors, self-catering luxury Mpumalanga"
       />
       

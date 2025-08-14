@@ -48,7 +48,7 @@ const suiteRecommendations: SuiteRecommendation[] = [
     features: ["King XL Bed", "Private Lounge", "Mountain Views", "Fireplace"],
     rate: "R3,200",
     originalRate: "R3,600",
-    urgencyMessage: "Only 1 left for your dates",
+    urgencyMessage: "Premium luxury suite",
     recommended: true,
     image: "/images/suites/master-suite-01.jpg"
   },

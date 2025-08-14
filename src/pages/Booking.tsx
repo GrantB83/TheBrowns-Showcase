@@ -70,7 +70,7 @@ const suiteHighlights = [
     features: ["King XL Bed", "Private Lounge", "Mountain Views", "Fireplace", "Netflix"],
     rate: "From R3,200pppn",
     originalRate: "R3,600pppn",
-    urgencyMessage: "Only 2 left this month",
+    urgencyMessage: "Luxury flagship suite",
     image: "/images/suites/master-suite-01.jpg",
     description: "Luxury flagship suite with private lounge and mountain views"
   },
@@ -240,7 +240,7 @@ export default function Booking() {
               
               <BookingFlow 
                 currentStep={1}
-                urgencyMessage="Only 3 suites left for your dates - book now!"
+                urgencyMessage="Book direct for guaranteed best rates"
                 showTrustBadges={true}
               />
             </div>
@@ -326,7 +326,7 @@ export default function Booking() {
                     </div>
                     <div className="absolute top-4 right-4">
                       <Badge className="bg-green-600 text-white text-xs">
-                        Save 10% Direct
+                        Direct Booking
                       </Badge>
                     </div>
                   </div>
