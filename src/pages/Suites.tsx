@@ -449,7 +449,7 @@ export default function Suites() {
                 <span>Rooms Filling Fast for 2025</span>
               </div>
               <p className="text-sm text-muted-foreground">
-                Secure your dates today with free cancellation
+                Secure your dates today for the best rates
               </p>
             </div>
             

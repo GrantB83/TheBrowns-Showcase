@@ -264,7 +264,7 @@ export function BookingGallery({
                     Book {image.suiteCode} Direct
                   </Button>
                   <p className="text-xs text-center text-muted-foreground">
-                    Best rate guaranteed • Free cancellation
+                    Best rate guaranteed • Direct booking benefits
                   </p>
                 </div>
               )}
