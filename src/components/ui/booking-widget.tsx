@@ -48,7 +48,7 @@ const suiteRecommendations: SuiteRecommendation[] = [
     features: ["King XL Bed", "Private Lounge", "Mountain Views", "Fireplace"],
     rate: "R3,200",
     originalRate: "R3,600",
-    urgencyMessage: "Premium luxury suite",
+    urgencyMessage: "Luxury flagship suite",
     recommended: true,
     image: "/images/suites/master-suite-01.jpg"
   },
@@ -60,7 +60,7 @@ const suiteRecommendations: SuiteRecommendation[] = [
     features: ["Queen XL Bed", "Garden Views", "Spa Bath", "Private Entrance"],
     rate: "R2,500",
     originalRate: "R2,800",
-    urgencyMessage: "Perfect for couples",
+    urgencyMessage: "Romantic garden suite",
     image: "/images/suites/garden-suite-01.jpg"
   },
   {
@@ -70,7 +70,7 @@ const suiteRecommendations: SuiteRecommendation[] = [
     capacity: "4 Adults",
     features: ["2 Bedrooms", "Family Lounge", "Mountain Views", "Netflix"],
     rate: "R2,800",
-    urgencyMessage: "Family favorite",
+    urgencyMessage: "Family mountain views",
     image: "/images/suites/loft-suite-01.jpg"
   }
 ];

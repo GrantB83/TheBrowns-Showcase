@@ -85,7 +85,7 @@ export function BookingFlow({
   currentStep = 1, 
   totalSteps = 4, 
   className,
-  urgencyMessage = "Popular dates fill quickly - book early",
+  urgencyMessage = "Highland luxury accommodation",
   showTrustBadges = true 
 }: BookingFlowProps) {
   const [selectedDates, setSelectedDates] = useState<string>("");

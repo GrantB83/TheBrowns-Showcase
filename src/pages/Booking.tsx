@@ -70,7 +70,7 @@ const suiteHighlights = [
     features: ["King XL Bed", "Private Lounge", "Mountain Views", "Fireplace", "Netflix"],
     rate: "From R3,200pppn",
     originalRate: "R3,600pppn",
-    urgencyMessage: "Luxury flagship suite",
+    urgencyMessage: "Premium flagship suite",
     image: "/images/suites/master-suite-01.jpg",
     description: "Luxury flagship suite with private lounge and mountain views"
   },
@@ -82,7 +82,7 @@ const suiteHighlights = [
     features: ["Queen XL Bed", "Garden Views", "Spa Bath", "Private Entrance"],
     rate: "From R2,500pppn",
     originalRate: "R2,800pppn",
-    urgencyMessage: "Perfect for romantic getaways",
+    urgencyMessage: "Garden view romance",
     image: "/images/suites/garden-suite-01.jpg",
     description: "Romantic retreat with private garden access and spa bath"
   },
@@ -94,7 +94,7 @@ const suiteHighlights = [
     features: ["2 Bedrooms", "Family Lounge", "Mountain Views", "Entertainment"],
     rate: "From R2,800pppn",
     originalRate: "R3,200pppn",
-    urgencyMessage: "Family favorite - book early",
+    urgencyMessage: "Mountain view family suite",
     image: "/images/suites/loft-suite-01.jpg",
     description: "Perfect for families with separate bedrooms and entertainment"
   }

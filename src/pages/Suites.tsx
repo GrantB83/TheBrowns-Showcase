@@ -36,7 +36,7 @@ const luxurySuites = [{
   slug: "master-suite",
   roomId: 6,
   price: "From R3,200pppn",
-  urgencyMessage: "Only 2 Dates Left This Month",
+  urgencyMessage: "Premium luxury suite",
   testimonial: {
     quote: "The Master Suite exceeded all expectations. Perfect for our anniversary with incredible attention to detail.",
     author: "Sarah & Michael K.",
@@ -71,7 +71,7 @@ const luxurySuites = [{
   slug: "loft-suite",
   roomId: 5,
   price: "From R2,800pppn",
-  urgencyMessage: "Family Special Available",
+  urgencyMessage: "Ideal for families",
   testimonial: {
     quote: "Perfect for our family of four. The kids loved having their own space while we enjoyed the mountain views.",
     author: "The Johnson Family",
@@ -106,7 +106,7 @@ const luxurySuites = [{
   slug: "garden-suite",
   roomId: 4,
   price: "From R2,500pppn",
-  urgencyMessage: "Perfect for romantic getaways",
+  urgencyMessage: "Romantic retreat",
   testimonial: {
     quote: "The most romantic suite with incredible garden views. The spa bath was pure luxury after a day of fly-fishing.",
     author: "Emma & David R.",
@@ -141,7 +141,7 @@ const luxurySuites = [{
   slug: "cove-suite",
   roomId: 3,
   price: "From R2,300pppn",
-  urgencyMessage: "Last Room This Weekend"
+  urgencyMessage: "Intimate & modern"
 }];
 const cottageSuites = [{
   title: "Robin Suite",
@@ -172,7 +172,7 @@ const cottageSuites = [{
   slug: "robin-suite",
   roomId: 15,
   price: "From R2,400pppn",
-  urgencyMessage: "Authentic cottage experience",
+  urgencyMessage: "Cottage charm",
   testimonial: {
     quote: "The cottage charm is incredible! Kids loved the fireplace and we loved the authentic Dullstroom experience.",
     author: "The Williams Family",
@@ -207,7 +207,7 @@ const cottageSuites = [{
   slug: "blue-crane-suite",
   roomId: 17,
   price: "From R2,200pppn",
-  urgencyMessage: "Romantic Special Available"
+  urgencyMessage: "Couples' favorite"
 }, {
   title: "Falcon Suite",
   capacity: "2-3 guests",
@@ -262,11 +262,11 @@ const selfCateringHouse = {
     text: "Highland mountain views",
     emoji: "🏔️"
   }],
-  additionalAmenities: ["8 fully equipped bedrooms", "Multiple bathroom facilities", "Large commercial-style kitchen", "Indoor and outdoor dining spaces", "Entertainment and lounge areas", "Secure off-street parking", "Free WiFi throughout property", "Laundry facilities included", "Barbecue and outdoor entertaining", "Group booking discounts available", "Corporate retreat facilities", "Event hosting capabilities"],
+  additionalAmenities: ["8 fully equipped bedrooms", "Multiple bathroom facilities", "Large commercial-style kitchen", "Indoor and outdoor dining spaces", "Entertainment and lounge areas", "Secure off-street parking", "Free WiFi throughout property", "Laundry facilities included", "Barbecue and outdoor entertaining", "Group accommodation rates", "Corporate retreat facilities", "Event hosting capabilities"],
   slug: "self-catering-house",
   roomId: 18,
   price: "From R8,500pppn",
-  urgencyMessage: "Perfect for Groups - Limited Weekend Availability"
+  urgencyMessage: "Perfect for groups"
 };
 const testimonials = [{
   quote: "Best Dullstroom family guesthouse experience! The luxury suites were perfect and the kids loved the space.",
@@ -440,15 +440,15 @@ export default function Suites() {
             <h2 className="text-primary mb-6">Ready for Your Dullstroom Highland Escape?</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">Book direct for guaranteed best rates, and a complimentary welcome drink. Your luxury highland experience awaits in the heart of South Africa's trout fishing capital.</p>
             
-            <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mb-8 max-w-md mx-auto">
-              <div className="flex items-center justify-center gap-2 text-primary font-semibold mb-2">
-                <Clock className="h-4 w-4" />
-                <span>Rooms Filling Fast for 2025</span>
+              <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mb-8 max-w-md mx-auto">
+                <div className="flex items-center justify-center gap-2 text-primary font-semibold mb-2">
+                  <Clock className="h-4 w-4" />
+                  <span>Highland Luxury Awaits</span>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Experience the best of Dullstroom hospitality
+                </p>
               </div>
-              <p className="text-sm text-muted-foreground">
-                Secure your dates today with free cancellation
-              </p>
-            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <Button size="lg" className="min-h-[48px] flex-1" asChild>

@@ -43,7 +43,7 @@ const allGalleryImages = [
     caption: "Master Suite Nespresso corner – Book Direct for Best Rates",
     suiteCode: "Master Suite",
     roomId: 6,
-    urgencyMessage: "Limited Availability",
+    urgencyMessage: "Flagship luxury suite",
     placeholder: { filename: "master-suite-bedroom.jpg", folder: "/images/gallery/", width: 800, height: 600 }
   },
   { 
@@ -55,7 +55,7 @@ const allGalleryImages = [
     caption: "Robin Suite fireplace – Perfect for Dullstroom winter nights",
     suiteCode: "Robin Suite",
     roomId: 15,
-    urgencyMessage: "Only 2 Nights Left",
+    urgencyMessage: "Cottage fireplace charm",
     placeholder: { filename: "robin-suite-living.jpg", folder: "/images/gallery/", width: 800, height: 600 }
   },
   { 
@@ -76,7 +76,7 @@ const allGalleryImages = [
     caption: "Garden Suite kitchen – Book Direct for Best Rates",
     suiteCode: "Garden Suite", 
     roomId: 4,
-    urgencyMessage: "Weekend Special",
+    urgencyMessage: "Garden retreat views",
     placeholder: { filename: "garden-suite-interior.jpg", folder: "/images/gallery/", width: 800, height: 600 }
   },
   { 
@@ -99,7 +99,7 @@ const allGalleryImages = [
     caption: "Blue Crane Suite – Highland luxury accommodation",
     suiteCode: "Blue Crane Suite",
     roomId: 17,
-    urgencyMessage: "Last Room Available",
+    urgencyMessage: "Highland cottage luxury",
     placeholder: { filename: "blue-crane-suite.jpg", folder: "/images/gallery/", width: 800, height: 600 }
   },
   
