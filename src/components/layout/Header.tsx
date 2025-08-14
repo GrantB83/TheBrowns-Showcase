@@ -6,14 +6,14 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Accommodations", href: "/accommodations" },
-  { name: "Gallery", href: "/gallery" },
-  { name: "Activities", href: "/activities" },
-  { name: "Pay What You Can", href: "/pay-what-you-can" },
-  { name: "Booking", href: "/booking" },
-  { name: "Contact", href: "/contact" },
+  { name: "Home", href: "/", priority: "high" },
+  { name: "About", href: "/about", priority: "medium" },
+  { name: "Accommodations", href: "/accommodations", priority: "high" },
+  { name: "Gallery", href: "/gallery", priority: "low" },
+  { name: "Activities", href: "/activities", priority: "low" },
+  { name: "Pay What You Can", href: "/pay-what-you-can", priority: "low", shortName: "PWYC" },
+  { name: "Booking", href: "/booking", priority: "high" },
+  { name: "Contact", href: "/contact", priority: "high" },
 ];
 
 export function Header() {
@@ -49,21 +49,37 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className={cn(
-                  "text-fluid-sm lg:text-base font-medium transition-colors hover:text-primary min-h-[44px] flex items-center",
-                  location.pathname === item.href
-                    ? "text-primary"
-                    : "text-muted-foreground"
-                )}
-              >
-                {item.name}
-              </Link>
-            ))}
+          <nav className="hidden md:flex items-center space-x-2 lg:space-x-3 xl:space-x-4 2xl:space-x-6">
+            {navigation.map((item) => {
+              // Progressive hiding: show high priority items first, then medium, then low
+              const visibilityClass = item.priority === 'high' 
+                ? 'md:flex' 
+                : item.priority === 'medium' 
+                ? 'lg:flex' 
+                : 'xl:flex';
+              
+              return (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={cn(
+                    "text-sm lg:text-base font-medium transition-colors hover:text-primary min-h-[44px] items-center whitespace-nowrap",
+                    visibilityClass,
+                    location.pathname === item.href
+                      ? "text-primary"
+                      : "text-muted-foreground"
+                  )}
+                >
+                  {/* Show short name on smaller screens, full name on larger */}
+                  <span className="xl:hidden">
+                    {item.shortName || item.name}
+                  </span>
+                  <span className="hidden xl:inline">
+                    {item.name}
+                  </span>
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Book Now Button & Mobile Menu */}
