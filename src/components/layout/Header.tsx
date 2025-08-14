@@ -1,20 +1,33 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 
 const navigation = [
-  { name: "Home", href: "/", priority: "high" },
-  { name: "About", href: "/about", priority: "medium" },
-  { name: "Accommodations", href: "/accommodations", priority: "high" },
-  { name: "Gallery", href: "/gallery", priority: "low" },
-  { name: "Activities", href: "/activities", priority: "low" },
-  { name: "Pay What You Can", href: "/pay-what-you-can", priority: "low", shortName: "PWYC" },
-  { name: "Booking", href: "/booking", priority: "high" },
-  { name: "Contact", href: "/contact", priority: "high" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Accommodations", href: "/accommodations" },
+  { name: "Gallery", href: "/gallery" },
+  { name: "Activities", href: "/activities" },
+  { name: "Pay What You Can", href: "/pay-what-you-can" },
+  { name: "Booking", href: "/booking" },
+  { name: "Contact", href: "/contact" },
 ];
+
+// Priority order for showing items (high priority stays visible longest)
+const itemPriority = {
+  "Home": 1,
+  "Accommodations": 2, 
+  "Activities": 3,
+  "Booking": 4,
+  "Contact": 5,
+  "About": 6,
+  "Gallery": 7,
+  "Pay What You Can": 8,
+};
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,6 +42,23 @@ export function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Get items sorted by priority (lower number = higher priority)
+  const sortedNavigation = [...navigation].sort((a, b) => 
+    (itemPriority[a.name as keyof typeof itemPriority] || 99) - 
+    (itemPriority[b.name as keyof typeof itemPriority] || 99)
+  );
+
+  // For responsive breakpoints, show different numbers of items
+  const getVisibleItems = (breakpoint: 'md' | 'lg' | 'xl') => {
+    const maxItems = breakpoint === 'md' ? 4 : breakpoint === 'lg' ? 6 : 8;
+    return sortedNavigation.slice(0, maxItems);
+  };
+
+  const getOverflowItems = (breakpoint: 'md' | 'lg' | 'xl') => {
+    const maxItems = breakpoint === 'md' ? 4 : breakpoint === 'lg' ? 6 : 8;
+    return sortedNavigation.slice(maxItems);
+  };
 
   return (
     <header className={cn(
@@ -49,37 +79,92 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-2 lg:space-x-3 xl:space-x-4 2xl:space-x-6">
-            {navigation.map((item) => {
-              // Progressive hiding: show high priority items first, then medium, then low
-              const visibilityClass = item.priority === 'high' 
-                ? 'md:flex' 
-                : item.priority === 'medium' 
-                ? 'lg:flex' 
-                : 'xl:flex';
-              
-              return (
+          <nav className="hidden md:flex items-center space-x-3 lg:space-x-4 xl:space-x-6">
+            {/* Always visible items (highest priority) */}
+            <div className="flex items-center space-x-3 lg:space-x-4 xl:space-x-6">
+              {getVisibleItems('md').map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
                   className={cn(
-                    "text-sm lg:text-base font-medium transition-colors hover:text-primary min-h-[44px] items-center whitespace-nowrap",
-                    visibilityClass,
+                    "text-sm lg:text-base font-medium transition-colors hover:text-primary min-h-[44px] flex items-center whitespace-nowrap",
                     location.pathname === item.href
                       ? "text-primary"
                       : "text-muted-foreground"
                   )}
                 >
-                  {/* Show short name on smaller screens, full name on larger */}
-                  <span className="xl:hidden">
-                    {item.shortName || item.name}
-                  </span>
-                  <span className="hidden xl:inline">
-                    {item.name}
-                  </span>
+                  {item.name}
                 </Link>
-              );
-            })}
+              ))}
+            </div>
+
+            {/* Medium screens: show more items, dropdown for overflow */}
+            <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
+              {getVisibleItems('lg').slice(4).map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={cn(
+                    "text-sm lg:text-base font-medium transition-colors hover:text-primary min-h-[44px] flex items-center whitespace-nowrap",
+                    location.pathname === item.href
+                      ? "text-primary"
+                      : "text-muted-foreground"
+                  )}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+
+            {/* Large screens: show even more items */}
+            <div className="hidden xl:flex items-center space-x-6">
+              {getVisibleItems('xl').slice(6).map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={cn(
+                    "text-base font-medium transition-colors hover:text-primary min-h-[44px] flex items-center whitespace-nowrap",
+                    location.pathname === item.href
+                      ? "text-primary"
+                      : "text-muted-foreground"
+                  )}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+
+            {/* More dropdown for overflow items */}
+            {getOverflowItems('md').length > 0 && (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    className="text-sm lg:text-base font-medium text-muted-foreground hover:text-primary min-h-[44px] px-2"
+                  >
+                    More
+                    <ChevronDown className="ml-1 h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="bg-background border shadow-lg z-50">
+                  {getOverflowItems('md').map((item) => (
+                    <DropdownMenuItem key={item.name} asChild>
+                      <Link
+                        to={item.href}
+                        className={cn(
+                          "block px-4 py-2 text-sm font-medium transition-colors hover:text-primary cursor-pointer",
+                          location.pathname === item.href
+                            ? "text-primary bg-accent"
+                            : "text-muted-foreground"
+                        )}
+                      >
+                        {item.name}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            )}
           </nav>
 
           {/* Book Now Button & Mobile Menu */}
