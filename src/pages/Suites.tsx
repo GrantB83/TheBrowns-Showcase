@@ -397,7 +397,7 @@ export default function Suites() {
               </p>
             </div>
             
-            <SuiteBookingCard {...selfCateringHouse} className="max-w-4xl mx-auto" />
+            <SuiteBookingCard {...selfCateringHouse} images={['/images/suites/self-catering-house-01.jpg', '/images/suites/self-catering-house-02.jpg']} className="max-w-4xl mx-auto" />
           </div>
         </section>
 

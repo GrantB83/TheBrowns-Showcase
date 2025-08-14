@@ -135,6 +135,27 @@ export function SuiteBookingCard({
 
   return (
     <Card className={cn("overflow-hidden hover:shadow-xl transition-shadow duration-300", className)}>
+      {/* Main Image */}
+      {images && images.length > 0 && (
+        <div className="relative h-48 sm:h-64 overflow-hidden">
+          <img
+            src={images[0]}
+            alt={`${title} - luxury suite interior at The Browns Dullstroom`}
+            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = `https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=800&h=600&fit=crop&crop=center`;
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+          {price && (
+            <Badge className="absolute top-3 right-3 bg-primary text-primary-foreground">
+              {price}
+            </Badge>
+          )}
+        </div>
+      )}
       <CardHeader className="pb-4">
         <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
           <div className="flex-1">
