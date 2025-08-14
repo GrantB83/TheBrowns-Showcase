@@ -36,7 +36,7 @@ const luxurySuites = [{
   slug: "master-suite",
   roomId: 6,
   price: "From R3,200/night",
-  urgencyMessage: "Only 2 Dates Left This Month",
+  urgencyMessage: "Popular dates fill quickly",
   testimonial: {
     quote: "The Master Suite exceeded all expectations. Perfect for our anniversary with incredible attention to detail.",
     author: "Sarah & Michael K.",
@@ -106,7 +106,7 @@ const luxurySuites = [{
   slug: "garden-suite",
   roomId: 4,
   price: "From R2,500/night",
-  urgencyMessage: "Weekend Special - 15% Off",
+  urgencyMessage: "Perfect for romantic getaways",
   testimonial: {
     quote: "The most romantic suite with incredible garden views. The spa bath was pure luxury after a day of fly-fishing.",
     author: "Emma & David R.",
@@ -141,7 +141,7 @@ const luxurySuites = [{
   slug: "cove-suite",
   roomId: 3,
   price: "From R2,300/night",
-  urgencyMessage: "Last Room This Weekend"
+  urgencyMessage: "Intimate ground floor suite"
 }];
 const cottageSuites = [{
   title: "Robin Suite",
@@ -172,7 +172,7 @@ const cottageSuites = [{
   slug: "robin-suite",
   roomId: 15,
   price: "From R2,400/night",
-  urgencyMessage: "Cottage Special - Book 3 Nights Save 20%",
+  urgencyMessage: "Authentic cottage charm",
   testimonial: {
     quote: "The cottage charm is incredible! Kids loved the fireplace and we loved the authentic Dullstroom experience.",
     author: "The Williams Family",
@@ -266,7 +266,7 @@ const selfCateringHouse = {
   slug: "self-catering-house",
   roomId: 18,
   price: "From R8,500/night",
-  urgencyMessage: "Perfect for Groups - Limited Weekend Availability"
+  urgencyMessage: "Perfect for Groups"
 };
 const testimonials = [{
   quote: "Best Dullstroom family guesthouse experience! The luxury suites were perfect and the kids loved the space.",
@@ -295,7 +295,7 @@ export default function Suites() {
             <div className="max-w-6xl mx-auto text-center mb-8">
               <Badge variant="secondary" className="mb-4 text-sm px-4 py-2">
                 <Clock className="h-4 w-4 mr-2" />
-                Limited 2025 Availability
+                Book Early for 2025
               </Badge>
               
               <h1 className="text-primary mb-6">Discover Dullstroom Luxury Suites 2025</h1>
@@ -305,7 +305,7 @@ export default function Suites() {
               <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mb-8 max-w-2xl mx-auto">
                 <div className="flex items-center justify-center gap-2 text-primary font-semibold">
                   <Gift className="h-5 w-5" />
-                  <span>Book Direct Save 10% + Free Welcome Sherry</span>
+                  <span>Rate Match + 5% + Free Welcome Drink</span>
                 </div>
                 <p className="text-sm text-muted-foreground mt-2">Best rate guaranteed • Flexible cancellation policy • No booking fees</p>
               </div>
