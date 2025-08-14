@@ -64,7 +64,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: "Do you offer any special packages or deals?",
-    answer: "Yes! Direct bookers receive our best rate guarantee - we match any rate plus 5% off - plus exclusive perks worth R300+ including free welcome drink, late checkout, and complimentary WiFi. We also offer seasonal packages combining accommodation with activities like spa treatments, fishing guides, and Panorama Route tours.",
+    answer: "Yes! Direct bookers receive our best rate guarantee - we match any rate found elsewhere - plus exclusive perks worth R300+ including free welcome drink, late checkout, and complimentary WiFi. We also offer seasonal packages combining accommodation with activities like spa treatments, fishing guides, and Panorama Route tours.",
     category: "Booking"
   }
 ];

@@ -193,7 +193,7 @@ export function BookingFlow({
               <span>Secure Direct Booking: Lowest Rates + Exclusives</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              ✓ Rate Match + 5% Off ✓ Free Welcome Drink ✓ Complimentary WiFi ✓ Late Checkout
+              ✓ Best Rate Guarantee ✓ Free Welcome Drink ✓ Complimentary WiFi ✓ Late Checkout
             </p>
           </div>
           <CardTitle className="text-xl mb-2">Ready to Book Your Highland Escape?</CardTitle>

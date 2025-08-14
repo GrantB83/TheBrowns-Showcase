@@ -169,7 +169,7 @@ export default function Booking() {
                 </h1>
                 
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
-                  Book directly with The Browns for guaranteed best rates plus 5%, free welcome drink, 
+                  Book directly with The Browns for guaranteed best rates, free welcome drink, 
                   and personalized service in Dullstroom's premier luxury highland accommodation.
                 </p>
                 
@@ -460,7 +460,7 @@ export default function Booking() {
               <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mb-8">
                 <div className="flex items-center justify-center gap-2 text-primary font-semibold mb-2">
                   <Clock className="h-4 w-4" />
-                  <span>Direct Booking Benefits: Rate Match + 5% + Free Welcome Drink</span>
+                  <span>Direct Booking Benefits: Best Rate Guarantee + Free Welcome Drink</span>
                 </div>
                 <p className="text-sm text-muted-foreground">
                   Flexible cancellation policy • Best rate guarantee
