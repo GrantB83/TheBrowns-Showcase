@@ -39,7 +39,7 @@ const featuredSuites = [
   {
     title: "Master Suite",
     description: "Our premium suite with elegant appointments and spacious living area.",
-    capacity: "2 adults + 2 children under 12",
+    capacity: "Family of 4",
     bedConfig: "King XL + Double sofa bed",
     image: <img src="/images/suites/master-suite-01.jpg" alt="Master Suite at The Browns featuring king XL bed and elegant luxury appointments" className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-t-lg" />,
     mainAmenities: [
