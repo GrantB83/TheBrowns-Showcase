@@ -106,7 +106,7 @@ const luxurySuites = [{
   slug: "garden-suite",
   roomId: 4,
   price: "From R2,500/night",
-  urgencyMessage: "Weekend Special",
+  urgencyMessage: "Weekend Special - 15% Off",
   testimonial: {
     quote: "The most romantic suite with incredible garden views. The spa bath was pure luxury after a day of fly-fishing.",
     author: "Emma & David R.",
@@ -286,7 +286,7 @@ const testimonials = [{
 }];
 export default function Suites() {
   return <>
-      <SEO title="Discover Tailored Dullstroom Luxury Suites 2025 | The Browns" description="Book direct for best rates on luxury Dullstroom accommodation. Master Suite with King XL bed, Self Catering House for groups up to 16. Free fly-fishing guide included." keywords="Dullstroom luxury guesthouse 2025, Panorama Route accommodation, self catering Dullstroom, family suites Mpumalanga, luxury cottage accommodation" />
+      <SEO title="Discover Tailored Dullstroom Luxury Suites 2025 | The Browns" description="Book direct for 10% off luxury Dullstroom accommodation. Master Suite with King XL bed, Self Catering House for groups up to 16. Free fly-fishing guide included." keywords="Dullstroom luxury guesthouse 2025, Panorama Route accommodation, self catering Dullstroom, family suites Mpumalanga, luxury cottage accommodation" />
       
       <div className="min-h-screen">
         {/* Enhanced Hero Section */}
@@ -438,10 +438,7 @@ export default function Suites() {
         <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-primary/10 to-accent/5">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-primary mb-6">Ready for Your Dullstroom Highland Escape?</h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-              Book direct for guaranteed best rates, 10% savings, and complimentary fly-fishing guide. 
-              Your luxury highland experience awaits in the heart of South Africa's trout fishing capital.
-            </p>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">Book direct for guaranteed best rates, and a complimentary welcome drink. Your luxury highland experience awaits in the heart of South Africa's trout fishing capital.</p>
             
             <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mb-8 max-w-md mx-auto">
               <div className="flex items-center justify-center gap-2 text-primary font-semibold mb-2">
@@ -449,7 +446,7 @@ export default function Suites() {
                 <span>Rooms Filling Fast for 2025</span>
               </div>
               <p className="text-sm text-muted-foreground">
-                Secure your dates today for the best rates
+                Secure your dates today with free cancellation
               </p>
             </div>
             
