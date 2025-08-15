@@ -26,8 +26,6 @@ interface SuiteRecommendation {
   roomId: number;
   capacity: string;
   features: string[];
-  rate: string;
-  originalRate?: string;
   urgencyMessage?: string;
   recommended?: boolean;
   image: string;
@@ -46,8 +44,6 @@ const suiteRecommendations: SuiteRecommendation[] = [
     roomId: 6,
     capacity: "2 Adults + 2 Children",
     features: ["King XL Bed", "Private Lounge", "Mountain Views", "Fireplace"],
-    rate: "R3,200",
-    originalRate: "R3,600",
     urgencyMessage: "Luxury flagship suite",
     recommended: true,
     image: "/images/suites/master-suite-01.jpg"
@@ -58,8 +54,6 @@ const suiteRecommendations: SuiteRecommendation[] = [
     roomId: 4,
     capacity: "2 Adults",
     features: ["Queen XL Bed", "Garden Views", "Spa Bath", "Private Entrance"],
-    rate: "R2,500",
-    originalRate: "R2,800",
     urgencyMessage: "Romantic garden suite",
     image: "/images/suites/garden-suite-01.jpg"
   },
@@ -69,7 +63,6 @@ const suiteRecommendations: SuiteRecommendation[] = [
     roomId: 5,
     capacity: "4 Adults",
     features: ["2 Bedrooms", "Family Lounge", "Mountain Views", "Netflix"],
-    rate: "R2,800",
     urgencyMessage: "Family mountain views",
     image: "/images/suites/loft-suite-01.jpg"
   }
@@ -277,14 +270,6 @@ export function BookingWidget({
                           </Badge>
                         ))}
                       </div>
-                    </div>
-                    <div className="text-right">
-                      <div className="font-bold text-lg text-primary">{suite.rate}/night</div>
-                      {suite.originalRate && (
-                        <div className="text-xs text-muted-foreground line-through">
-                          {suite.originalRate}
-                        </div>
-                      )}
                     </div>
                   </div>
                   

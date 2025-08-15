@@ -13,7 +13,7 @@ interface SuiteCardProps {
   image: string | React.ReactNode;
   mainAmenities: Array<{ text: string; emoji: string }>;
   additionalAmenities: string[];
-  price?: string;
+  
   className?: string;
 }
 
@@ -25,7 +25,7 @@ export function SuiteCard({
   image,
   mainAmenities,
   additionalAmenities,
-  price,
+  
   className
 }: SuiteCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -42,11 +42,6 @@ export function SuiteCard({
           />
         ) : (
           image
-        )}
-        {price && (
-          <Badge className="absolute top-2 sm:top-3 right-2 sm:right-3 bg-primary text-primary-foreground text-xs sm:text-sm">
-            {price}
-          </Badge>
         )}
       </div>
       

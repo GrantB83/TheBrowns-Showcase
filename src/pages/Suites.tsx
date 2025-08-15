@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { SuiteBookingCard } from "@/components/ui/suite-booking-card";
 import { Badge } from "@/components/ui/badge";
@@ -6,8 +7,9 @@ import { SEO } from "@/components/ui/seo";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { BookingWidget } from "@/components/ui/booking-widget";
 import { ReviewShowcase } from "@/components/ui/review-showcase";
+import { TwoHouseSelectionHero } from "@/components/ui/two-house-selection-hero";
 import { Link } from "react-router-dom";
-import { Clock, Gift, Users, ExternalLink } from "lucide-react";
+import { Clock, Gift, Users, ExternalLink, Filter } from "lucide-react";
 const luxurySuites = [{
   title: "Master Suite",
   capacity: "2 adults + 2 children under 12",
@@ -36,7 +38,6 @@ const luxurySuites = [{
   images: ["/images/suites/master-suite-01.jpg", "/images/suites/master-suite-02.jpg", "/images/suites/master-suite-03.jpg", "/images/suites/master-suite-04.jpg", "/images/suites/master-suite-05.jpg", "/images/suites/master-suite-06.jpg", "/images/suites/master-suite-07.jpg"],
   slug: "master-suite",
   roomId: 6,
-  price: "From R3,200pppn",
   urgencyMessage: "Premium luxury suite",
   testimonial: {
     quote: "The Master Suite exceeded all expectations. Perfect for our anniversary with incredible attention to detail.",
@@ -71,7 +72,6 @@ const luxurySuites = [{
   images: ["/images/suites/loft-suite-01.jpg", "/images/suites/loft-suite-02.jpg", "/images/suites/loft-suite-03.jpg", "/images/suites/loft-suite-04.jpg", "/images/suites/loft-suite-05.jpg", "/images/suites/loft-suite-06.jpg", "/images/suites/loft-suite-07.jpg"],
   slug: "loft-suite",
   roomId: 5,
-  price: "From R2,800pppn",
   urgencyMessage: "Ideal for families",
   testimonial: {
     quote: "Perfect for our family of four. The kids loved having their own space while we enjoyed the mountain views.",
@@ -106,7 +106,6 @@ const luxurySuites = [{
   images: ["/images/suites/garden-suite-01.jpg", "/images/suites/garden-suite-02.jpg", "/images/suites/garden-suite-03.jpg", "/images/suites/garden-suite-04.jpg", "/images/suites/garden-suite-05.jpg", "/images/suites/garden-suite-06.jpg"],
   slug: "garden-suite",
   roomId: 4,
-  price: "From R2,500pppn",
   urgencyMessage: "Romantic retreat",
   testimonial: {
     quote: "The most romantic suite with incredible garden views. The spa bath was pure luxury after a day of fly-fishing.",
@@ -141,7 +140,6 @@ const luxurySuites = [{
   images: ["/images/suites/cove-suite-01.jpg", "/images/suites/cove-suite-02.jpg", "/images/suites/cove-suite-03.jpg", "/images/suites/cove-suite-04.jpg", "/images/suites/cove-suite-05.jpg", "/images/suites/cove-suite-06.jpg"],
   slug: "cove-suite",
   roomId: 3,
-  price: "From R2,300pppn",
   urgencyMessage: "Intimate & modern"
 }];
 const cottageSuites = [{
@@ -172,7 +170,6 @@ const cottageSuites = [{
   images: ["/images/suites/robin-suite-01.jpg", "/images/suites/robin-suite-02.jpg", "/images/suites/robin-suite-03.jpg", "/images/suites/robin-suite-04.jpg", "/images/suites/robin-suite-05.jpg", "/images/suites/robin-suite-06.jpg"],
   slug: "robin-suite",
   roomId: 15,
-  price: "From R2,400pppn",
   urgencyMessage: "Cottage charm",
   testimonial: {
     quote: "The cottage charm is incredible! Kids loved the fireplace and we loved the authentic Dullstroom experience.",
@@ -207,7 +204,6 @@ const cottageSuites = [{
   images: ["/images/suites/blue-crane-suite-01.jpg", "/images/suites/blue-crane-suite-02.jpg", "/images/suites/blue-crane-suite-03.jpg", "/images/suites/blue-crane-suite-04.jpg", "/images/suites/blue-crane-suite-05.jpg", "/images/suites/blue-crane-suite-06.jpg", "/images/suites/blue-crane-suite-07.jpg"],
   slug: "blue-crane-suite",
   roomId: 17,
-  price: "From R2,200pppn",
   urgencyMessage: "Couples' favorite"
 }, {
   title: "Falcon Suite",
@@ -237,7 +233,7 @@ const cottageSuites = [{
   images: ["/images/suites/falcon-suite-01.jpg", "/images/suites/falcon-suite-02.jpg", "/images/suites/falcon-suite-03.jpg", "/images/suites/falcon-suite-04.jpg", "/images/suites/falcon-suite-05.jpg", "/images/suites/falcon-suite-06.jpg", "/images/suites/falcon-suite-07.jpg"],
   slug: "falcon-suite",
   roomId: 16,
-  price: "From R2,600pppn"
+  urgencyMessage: "Family elegance"
 }];
 const selfCateringHouse = {
   title: "Self Catering House",
@@ -266,7 +262,6 @@ const selfCateringHouse = {
   additionalAmenities: ["8 fully equipped bedrooms", "Multiple bathroom facilities", "Large commercial-style kitchen", "Indoor and outdoor dining spaces", "Entertainment and lounge areas", "Secure off-street parking", "Free WiFi throughout property", "Laundry facilities included", "Barbecue and outdoor entertaining", "Group accommodation rates", "Corporate retreat facilities", "Event hosting capabilities"],
   slug: "self-catering-house",
   roomId: 18,
-  price: "From R8,500pppn",
   urgencyMessage: "Perfect for groups"
 };
 const testimonials = [{
@@ -286,120 +281,154 @@ const testimonials = [{
   year: "2019"
 }];
 export default function Suites() {
+  const [activeFilter, setActiveFilter] = useState<'all' | 'luxury' | 'cottage'>('all');
+
+  const filteredLuxurySuites = activeFilter === 'cottage' ? [] : luxurySuites;
+  const filteredCottageSuites = activeFilter === 'luxury' ? [] : cottageSuites;
+  const showSelfCateringHouse = activeFilter !== 'cottage';
+
+  const handleFilterChange = (filter: 'all' | 'luxury' | 'cottage') => {
+    setActiveFilter(filter);
+  };
+
   return <>
       <SEO title="Discover Tailored Dullstroom Luxury Suites 2025 | The Browns" description="Luxury Dullstroom accommodation with Master Suite featuring King XL bed, Self Catering House for groups up to 16. Direct booking benefits included." keywords="Dullstroom luxury guesthouse 2025, Panorama Route accommodation, self catering Dullstroom, family suites Mpumalanga, luxury cottage accommodation" />
       
       <div className="min-h-screen">
-        {/* Enhanced Hero Section */}
-        <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-primary/10 to-accent/5">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto text-center mb-8">
-              
-              <h1 className="text-primary mb-6">Discover Dullstroom Luxury Suites 2025</h1>
-              
-              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8 max-w-4xl mx-auto">Experience luxury highland accommodation with two distinct styles: modern sophistication or authentic cottage charm. Each suite features premium amenities, stunning views, and personalized service in the heart of the Dullstroom Village.</p>
-              
-              <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mb-8 max-w-2xl mx-auto">
-                <div className="flex items-center justify-center gap-2 text-primary font-semibold">
-                  <Gift className="h-5 w-5" />
-                  <span>Rate Match + Free Welcome Drink</span>
-                </div>
-                <p className="text-sm text-muted-foreground mt-2">Best rate guaranteed • Flexible cancellation policy • No booking fees</p>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                <Button size="lg" className="min-h-[48px] flex-1" asChild>
-                  <a href="https://book.nightsbridge.com/00000" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Book Direct Now
-                  </a>
-                </Button>
-                <Button variant="outline" size="lg" className="min-h-[48px] flex-1" asChild>
-                  <Link to="/gallery">View Gallery</Link>
-                </Button>
-              </div>
-            </div>
-            
-            {/* Quick Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-              <div className="text-center bg-background/50 rounded-lg p-4">
-                <div className="text-2xl font-bold text-primary">7</div>
-                <div className="text-sm text-muted-foreground">Luxury Suites</div>
-              </div>
-              <div className="text-center bg-background/50 rounded-lg p-4">
-                <div className="text-2xl font-bold text-primary">19</div>
-                <div className="text-sm text-muted-foreground">Max Guests</div>
-              </div>
-              <div className="text-center bg-background/50 rounded-lg p-4">
-                <div className="text-2xl font-bold text-primary">2</div>
-                <div className="text-sm text-muted-foreground">Adjoining Properties</div>
-              </div>
-              <div className="text-center bg-background/50 rounded-lg p-4">
-                <div className="text-2xl font-bold text-primary">8.8</div>
-                <div className="text-sm text-muted-foreground">Booking.com Rating</div>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Two House Selection Hero */}
+        <TwoHouseSelectionHero 
+          onFilterChange={handleFilterChange}
+          activeFilter={activeFilter}
+        />
 
         {/* Review Showcase Section */}
         <ReviewShowcase />
 
-        {/* Luxury Suites Section */}
-        <section className="py-12 sm:py-16 lg:py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <Badge variant="secondary" className="mb-4">Modern Luxury</Badge>
-              <h2 className="text-primary mb-4">Luxury Guest Suites</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">Sophisticated design meets modern comfort in our guest house. Perfect for couples, families, and discerning travelers seeking premium highland accommodation.</p>
+        {/* Filter Tabs */}
+        {activeFilter !== 'all' && (
+          <section className="py-6 bg-muted/30" id="suites-section">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <div className="flex items-center gap-2">
+                    <Filter className="h-4 w-4 text-muted-foreground" />
+                    <span className="text-sm text-muted-foreground">
+                      Showing: {activeFilter === 'luxury' ? 'Luxury Guest Suites' : 'Heritage Cottage Suites'}
+                    </span>
+                  </div>
+                  <div className="flex gap-2">
+                    <Button 
+                      variant={activeFilter === 'luxury' ? 'default' : 'outline'}
+                      size="sm"
+                      onClick={() => setActiveFilter('luxury')}
+                    >
+                      Luxury Suites
+                    </Button>
+                    <Button 
+                      variant={activeFilter === 'cottage' ? 'default' : 'outline'}
+                      size="sm"
+                      onClick={() => setActiveFilter('cottage')}
+                    >
+                      Cottage Suites
+                    </Button>
+                    <Button 
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => setActiveFilter('all')}
+                    >
+                      Show All
+                    </Button>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-            <div className="space-y-8">
-              {luxurySuites.map((suite, index) => <SuiteBookingCard key={suite.slug} {...suite} className={index % 2 === 1 ? "bg-muted/20" : ""} />)}
-            </div>
-          </div>
-        </section>
+          </section>
+        )}
 
-        <Separator className="my-8" />
+        {/* Luxury Suites Section */}
+        {filteredLuxurySuites.length > 0 && (
+          <section className="py-12 sm:py-16 lg:py-20" id={activeFilter === 'all' ? 'suites-section' : ''}>
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-12">
+                <Badge variant="secondary" className="mb-4">Modern Luxury</Badge>
+                <h2 className="text-primary mb-4">Luxury Guest Suites</h2>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                  Sophisticated design meets modern comfort in our guest house. Perfect for couples, families, 
+                  and discerning travelers seeking premium highland accommodation.
+                </p>
+              </div>
+              
+              <div className="space-y-8">
+                {filteredLuxurySuites.map((suite, index) => (
+                  <SuiteBookingCard 
+                    key={suite.slug} 
+                    {...suite} 
+                    className={index % 2 === 1 ? "bg-muted/20" : ""} 
+                  />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {(filteredLuxurySuites.length > 0 && filteredCottageSuites.length > 0) && (
+          <Separator className="my-8" />
+        )}
 
         {/* Cottage Suites Section */}
-        <section className="py-12 sm:py-16 lg:py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <Badge className="mb-4 bg-secondary text-secondary-foreground">Cottage Charm</Badge>
-              <h2 className="text-primary mb-4">Cottage Suites</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Authentic cottage character with warm fireplaces and cozy atmospheres. 
-                Perfect for romantic getaways and families seeking genuine highland charm.
-              </p>
+        {filteredCottageSuites.length > 0 && (
+          <section className="py-12 sm:py-16 lg:py-20">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-12">
+                <Badge className="mb-4 bg-secondary text-secondary-foreground">Cottage Charm</Badge>
+                <h2 className="text-primary mb-4">Heritage Cottage Suites</h2>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                  Authentic cottage character with warm fireplaces and cozy atmospheres. 
+                  Perfect for romantic getaways and families seeking genuine highland charm.
+                </p>
+              </div>
+              
+              <div className="space-y-8">
+                {filteredCottageSuites.map((suite, index) => (
+                  <SuiteBookingCard 
+                    key={suite.slug} 
+                    {...suite} 
+                    className={index % 2 === 0 ? "bg-muted/20" : ""} 
+                  />
+                ))}
+              </div>
             </div>
-            
-            <div className="space-y-8">
-              {cottageSuites.map((suite, index) => <SuiteBookingCard key={suite.slug} {...suite} className={index % 2 === 0 ? "bg-muted/20" : ""} />)}
-            </div>
-          </div>
-        </section>
+          </section>
+        )}
 
-        <Separator className="my-8" />
+        {(filteredCottageSuites.length > 0 && showSelfCateringHouse) && (
+          <Separator className="my-8" />
+        )}
 
         {/* Self Catering House Section */}
-        <section className="py-12 sm:py-16 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4 border-primary text-primary">
-                <Users className="h-4 w-4 mr-2" />
-                Groups & Events
-              </Badge>
-              <h2 className="text-primary mb-4">Self Catering House</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Perfect for large groups, family reunions, or corporate retreats. 
-                Fully equipped for independent luxury living in the Dullstroom highlands.
-              </p>
+        {showSelfCateringHouse && (
+          <section className="py-12 sm:py-16 lg:py-20 bg-muted/30">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-12">
+                <Badge variant="outline" className="mb-4 border-primary text-primary">
+                  <Users className="h-4 w-4 mr-2" />
+                  Groups & Events
+                </Badge>
+                <h2 className="text-primary mb-4">Self Catering House</h2>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                  Perfect for large groups, family reunions, or corporate retreats. 
+                  Fully equipped for independent luxury living in the Dullstroom highlands.
+                </p>
+              </div>
+              
+              <SuiteBookingCard 
+                {...selfCateringHouse} 
+                images={['/images/suites/self-catering-house-01.jpg', '/images/suites/self-catering-house-02.jpg']} 
+                className="max-w-4xl mx-auto" 
+              />
             </div>
-            
-            <SuiteBookingCard {...selfCateringHouse} images={['/images/suites/self-catering-house-01.jpg', '/images/suites/self-catering-house-02.jpg']} className="max-w-4xl mx-auto" />
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* Social Proof Section */}
         <section className="py-12 sm:py-16 lg:py-20">

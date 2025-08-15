@@ -40,7 +40,7 @@ interface SuiteBookingCardProps {
   additionalAmenities: string[];
   slug: string;
   roomId: number;
-  price?: string;
+  
   urgencyMessage?: string;
   offerText?: string;
   testimonial?: {
@@ -85,7 +85,7 @@ export function SuiteBookingCard({
   additionalAmenities,
   slug,
   roomId,
-  price = "From R2,500pppn",
+  
   urgencyMessage,
   offerText = "Book Direct: Best Rate Guarantee + Free Welcome Drink",
   testimonial,
@@ -149,11 +149,6 @@ export function SuiteBookingCard({
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-          {price && (
-            <Badge className="absolute top-3 right-3 bg-primary text-primary-foreground">
-              {price}
-            </Badge>
-          )}
         </div>
       )}
       <CardHeader className="pb-4">
@@ -186,10 +181,6 @@ export function SuiteBookingCard({
           </div>
           
           <div className="flex flex-col items-end gap-2">
-            <div className="text-right">
-              <div className="text-lg font-bold text-primary">{price}</div>
-              <div className="text-xs text-muted-foreground">Best Rate Guarantee</div>
-            </div>
             
             <Button 
               size="sm" 

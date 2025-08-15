@@ -68,8 +68,6 @@ const suiteHighlights = [
     roomId: 6,
     capacity: "2 Adults + 2 Children",
     features: ["King XL Bed", "Private Lounge", "Mountain Views", "Fireplace", "Netflix"],
-    rate: "From R3,200pppn",
-    originalRate: "R3,600pppn",
     urgencyMessage: "Premium flagship suite",
     image: "/images/suites/master-suite-01.jpg",
     description: "Luxury flagship suite with private lounge and mountain views"
@@ -80,8 +78,6 @@ const suiteHighlights = [
     roomId: 4,
     capacity: "2 Adults",
     features: ["Queen XL Bed", "Garden Views", "Spa Bath", "Private Entrance"],
-    rate: "From R2,500pppn",
-    originalRate: "R2,800pppn",
     urgencyMessage: "Garden view romance",
     image: "/images/suites/garden-suite-01.jpg",
     description: "Romantic retreat with private garden access and spa bath"
@@ -92,8 +88,6 @@ const suiteHighlights = [
     roomId: 5,
     capacity: "4 Adults", 
     features: ["2 Bedrooms", "Family Lounge", "Mountain Views", "Entertainment"],
-    rate: "From R2,800pppn",
-    originalRate: "R3,200pppn",
     urgencyMessage: "Mountain view family suite",
     image: "/images/suites/loft-suite-01.jpg",
     description: "Perfect for families with separate bedrooms and entertainment"
@@ -332,15 +326,9 @@ export default function Booking() {
                   </div>
                   
                   <CardHeader>
-                    <div className="flex justify-between items-start mb-2">
-                      <CardTitle className="text-xl">{suite.name}</CardTitle>
-                      <div className="text-right">
-                        <div className="text-lg font-bold text-primary">{suite.rate}</div>
-                        <div className="text-xs text-muted-foreground line-through">
-                          {suite.originalRate}
-                        </div>
-                      </div>
-                    </div>
+                     <div className="flex justify-between items-start mb-2">
+                       <CardTitle className="text-xl">{suite.name}</CardTitle>
+                     </div>
                     
                     <div className="flex items-center gap-2 text-muted-foreground mb-3">
                       <Users className="h-4 w-4" />

@@ -36,7 +36,7 @@ interface Activity {
   suiteLink: string;
   tips: string[];
   image: string;
-  price?: string;
+  
 }
 
 const activities: Activity[] = [
@@ -59,7 +59,7 @@ const activities: Activity[] = [
       "Bring a camera for scenic stream photography"
     ],
     image: "https://images.unsplash.com/photo-1544966503-7cc5ac882d5d?auto=format&fit=crop&w=800&q=80",
-    price: "From R800/day with guide"
+    
   },
   {
     id: "panorama-route",
@@ -80,7 +80,7 @@ const activities: Activity[] = [
       "Allow extra time for photo stops"
     ],
     image: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?auto=format&fit=crop&w=800&q=80",
-    price: "Self-drive or guided tours from R1,200"
+    
   },
   {
     id: "highland-spa",
@@ -101,7 +101,7 @@ const activities: Activity[] = [
       "Combine with romantic dinner packages"
     ],
     image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80",
-    price: "Treatments from R450"
+    
   },
   {
     id: "whisky-tasting",
@@ -122,7 +122,7 @@ const activities: Activity[] = [
       "Purchase bottles as memorable souvenirs"
     ],
     image: "https://images.unsplash.com/photo-1546171753-97d7676e4602?auto=format&fit=crop&w=800&q=80",
-    price: "Tastings from R150/person"
+    
   },
   {
     id: "art-galleries",
@@ -143,7 +143,7 @@ const activities: Activity[] = [
       "Combine with coffee shop visits"
     ],
     image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=800&q=80",
-    price: "Gallery entry usually free"
+    
   },
   {
     id: "highland-hiking",
@@ -164,7 +164,7 @@ const activities: Activity[] = [
       "Inform someone of your hiking plans"
     ],
     image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80",
-    price: "Self-guided trails free"
+    
   },
   {
     id: "cheese-factories",
@@ -185,7 +185,7 @@ const activities: Activity[] = [
       "Learn about cheese-making process"
     ],
     image: "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?auto=format&fit=crop&w=800&q=80",
-    price: "Tours from R200/person"
+    
   },
   {
     id: "golf",
@@ -206,7 +206,7 @@ const activities: Activity[] = [
       "Enjoy post-game dining at clubhouse"
     ],
     image: "https://images.unsplash.com/photo-1535131749006-b7f58c99034d?auto=format&fit=crop&w=800&q=80",
-    price: "Green fees from R450"
+    
   }
 ];
 
@@ -323,13 +323,6 @@ export default function Activities() {
                         <div className="absolute top-4 left-4">
                           <Badge variant="secondary">{activity.season}</Badge>
                         </div>
-                        {activity.price && (
-                          <div className="absolute top-4 right-4">
-                            <Badge className="bg-primary/90 text-primary-foreground">
-                              {activity.price}
-                            </Badge>
-                          </div>
-                        )}
                       </div>
                       <CardHeader>
                         <div className="flex items-center gap-3 mb-2">
@@ -399,13 +392,6 @@ export default function Activities() {
                         <div className="absolute top-4 left-4">
                           <Badge variant="secondary">{activity.season}</Badge>
                         </div>
-                        {activity.price && (
-                          <div className="absolute top-4 right-4">
-                            <Badge className="bg-primary/90 text-primary-foreground">
-                              {activity.price}
-                            </Badge>
-                          </div>
-                        )}
                       </div>
                       <CardHeader>
                         <div className="flex items-center gap-3 mb-2">
@@ -476,13 +462,6 @@ export default function Activities() {
                         <div className="absolute top-4 left-4">
                           <Badge variant="secondary">{activity.season}</Badge>
                         </div>
-                        {activity.price && (
-                          <div className="absolute top-4 right-4">
-                            <Badge className="bg-primary/90 text-primary-foreground">
-                              {activity.price}
-                            </Badge>
-                          </div>
-                        )}
                       </div>
                       <CardHeader>
                         <div className="flex items-center gap-3 mb-2">
@@ -547,13 +526,6 @@ export default function Activities() {
                         <div className="absolute top-4 left-4">
                           <Badge variant="secondary">{activity.season}</Badge>
                         </div>
-                        {activity.price && (
-                          <div className="absolute top-4 right-4">
-                            <Badge className="bg-primary/90 text-primary-foreground">
-                              {activity.price}
-                            </Badge>
-                          </div>
-                        )}
                       </div>
                       <CardHeader>
                         <div className="flex items-center gap-3 mb-2">

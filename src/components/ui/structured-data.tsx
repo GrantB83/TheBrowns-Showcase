@@ -42,7 +42,7 @@ export function StructuredData({ type, data }: StructuredDataProps) {
             ratingValue: "5",
             bestRating: "5"
           },
-          priceRange: "R2200-R3600",
+          
           amenityFeature: [
             {
               "@type": "LocationFeatureSpecification",

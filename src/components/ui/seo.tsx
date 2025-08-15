@@ -105,7 +105,7 @@ export function SEO({
             latitude: -25.4167,
             longitude: 30.1078
           },
-          priceRange: "R2200-R3600",
+          
           starRating: {
             "@type": "Rating",
             ratingValue: "5",
