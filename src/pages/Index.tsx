@@ -139,7 +139,7 @@ const Index = () => {
       <MobileSEO />
       <div className="min-h-screen mobile-scroll-smooth">
       {/* Hero Section - Mobile Optimized */}
-      <section className="relative h-[55vh] xs:h-[60vh] sm:h-[65vh] md:h-[75vh] lg:h-[85vh] xl:h-screen mobile-select-none">
+      <section className="relative h-[50vh] xs:h-[55vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[85vh] mobile-select-none">
         <EnhancedImageSlider 
           images={heroImages}
           className="h-full w-full"
@@ -183,7 +183,7 @@ const Index = () => {
       {/* Property Overview */}
       <section 
         ref={overviewRef}
-        className={`section-spacing bg-background transition-all duration-1000 ${
+        className={`py-12 sm:py-16 md:py-20 lg:py-24 bg-background transition-all duration-1000 ${
           overviewVisible ? 'scroll-animate' : 'opacity-0'
         }`}
       >
