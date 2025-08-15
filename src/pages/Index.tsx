@@ -147,7 +147,7 @@ const Index = () => {
           autoPlayInterval={6000}
           enableSwipe={true}
         />
-        <div className="absolute bottom-4 xs:bottom-6 sm:bottom-8 md:bottom-10 left-1/2 transform -translate-x-1/2 text-center w-full px-3 xs:px-4 z-20">
+        <div className="absolute bottom-16 xs:bottom-18 sm:bottom-20 md:bottom-24 left-1/2 transform -translate-x-1/2 text-center w-full px-3 xs:px-4 z-20">
           <div className="flex flex-col xs:flex-row gap-3 xs:gap-4 max-w-sm xs:max-w-md mx-auto">
             <Button 
               size="lg" 

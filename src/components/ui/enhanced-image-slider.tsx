@@ -218,7 +218,7 @@ export function EnhancedImageSlider({
 
       {/* Dots Indicator - refined size and position */}
       {images.length > 1 && (
-        <div className="absolute bottom-16 sm:bottom-10 md:bottom-12 left-1/2 -translate-x-1/2 flex space-x-2 sm:space-x-3 z-10">
+        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 flex space-x-2 sm:space-x-3 z-10">
           {images.map((_, index) => (
             <button
               key={index}
