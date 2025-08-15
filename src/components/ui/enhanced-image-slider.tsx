@@ -114,6 +114,16 @@ export function EnhancedImageSlider({
     }
   }, [autoPlay, isDragging]);
 
+  // Helper function to check if image is external
+  const isExternalImage = (src: string) => {
+    return src.startsWith('http://') || src.startsWith('https://');
+  };
+
+  // Helper function to get optimized src for external images only
+  const getOptimizedSrc = (src: string, params: string) => {
+    return isExternalImage(src) ? `${src}?${params}` : src;
+  };
+
   if (images.length === 0) return null;
 
   return (
@@ -142,17 +152,17 @@ export function EnhancedImageSlider({
           <div key={index} className="relative w-full flex-shrink-0 mobile-select-none">
             <picture>
               <source 
-                srcSet={`${image.src}?fm=webp&w=800&h=600&q=80`} 
+                srcSet={getOptimizedSrc(image.src, 'fm=webp&w=800&h=600&q=80')} 
                 type="image/webp"
                 media="(max-width: 768px)"
               />
               <source 
-                srcSet={`${image.src}?fm=webp&w=1200&h=800&q=80`} 
+                srcSet={getOptimizedSrc(image.src, 'fm=webp&w=1200&h=800&q=80')} 
                 type="image/webp"
                 media="(min-width: 769px)"
               />
               <img
-                src={`${image.src}?w=1200&h=800&q=80`}
+                src={getOptimizedSrc(image.src, 'w=1200&h=800&q=80')}
                 alt={image.alt}
                 className="w-full h-full object-cover"
                 loading={index === 0 ? "eager" : "lazy"}
