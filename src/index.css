@@ -302,20 +302,105 @@ All colors MUST be HSL.
     }
   }
 
-  /* Mobile-first grid system */
+  /* Enhanced responsive utilities */
   .mobile-grid {
-    @apply grid grid-cols-1 gap-4;
+    @apply grid grid-cols-1 gap-3;
   }
 
-  @media (min-width: 640px) {
+  @media (min-width: 480px) {
     .mobile-grid {
-      @apply grid-cols-2 gap-6;
+      @apply grid-cols-2 gap-4;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .mobile-grid {
+      @apply grid-cols-2 gap-5;
     }
   }
 
   @media (min-width: 1024px) {
     .mobile-grid {
-      @apply grid-cols-3 gap-8;
+      @apply grid-cols-3 gap-6;
     }
+  }
+
+  /* Responsive container system */
+  .responsive-container {
+    @apply container mx-auto px-4;
+  }
+
+  @media (min-width: 640px) {
+    .responsive-container {
+      @apply px-6;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .responsive-container {
+      @apply px-8;
+    }
+  }
+
+  /* Enhanced spacing utilities */
+  .section-spacing {
+    @apply py-8;
+  }
+
+  @media (min-width: 640px) {
+    .section-spacing {
+      @apply py-12;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-spacing {
+      @apply py-16;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .section-spacing {
+      @apply py-20;
+    }
+  }
+
+  /* Card responsive system */
+  .card-grid {
+    @apply grid gap-4;
+  }
+
+  @media (max-width: 639px) {
+    .card-grid {
+      @apply grid-cols-1;
+    }
+  }
+
+  @media (min-width: 640px) and (max-width: 1023px) {
+    .card-grid {
+      @apply grid-cols-2 gap-5;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .card-grid {
+      @apply grid-cols-3 gap-6;
+    }
+  }
+
+  /* Touch target utilities */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  /* Fluid typography utilities */
+  .fluid-heading {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    line-height: 1.2;
+  }
+
+  .fluid-text {
+    font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+    line-height: 1.6;
   }
 }

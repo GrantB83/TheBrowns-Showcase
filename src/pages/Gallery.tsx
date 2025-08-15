@@ -182,14 +182,14 @@ export default function Gallery() {
         keywords="Dullstroom luxury guesthouse photos, highland accommodation gallery, Panorama Route accommodation, Dullstroom suite interiors, self-catering luxury Mpumalanga"
       />
       
-      <div className="min-h-screen py-8 sm:py-12 lg:py-16">
-        <div className="container mx-auto px-3 sm:px-4 lg:px-6">
+      <div className="min-h-screen section-spacing">
+        <div className="responsive-container">
           <div className="max-w-full xl:max-w-7xl mx-auto">
             <div className="text-center mb-6 sm:mb-8 lg:mb-12">
-              <h1 className="fluid-heading text-primary mb-3 sm:mb-4 px-2">
+              <h1 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-primary mb-3 sm:mb-4 px-2 font-playfair">
                 Gallery - Luxury Dullstroom Accommodation
               </h1>
-              <p className="fluid-text text-muted-foreground max-w-3xl mx-auto px-4 leading-relaxed">
+              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto px-2 leading-relaxed">
                 Explore our luxury suites, beautiful highland gardens, and stunning Dullstroom location. Book direct for guaranteed best rates and exclusive perks.
               </p>
             </div>

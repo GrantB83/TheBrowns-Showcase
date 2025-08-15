@@ -14,12 +14,12 @@ export default {
 			center: true,
 			padding: {
 				DEFAULT: '1rem',
-				xs: '1rem',
-				sm: '1.5rem',
-				md: '1.5rem',
-				lg: '2rem',
-				xl: '2.5rem',
-				'2xl': '3rem',
+				xs: '0.75rem',
+				sm: '1rem',
+				md: '1.25rem',
+				lg: '1.5rem',
+				xl: '2rem',
+				'2xl': '2.5rem',
 			},
 			screens: {
 				'xs': '360px',
@@ -48,6 +48,25 @@ export default {
 			fontFamily: {
 				'playfair': ['Playfair Display', 'serif'],
 				'montserrat': ['Montserrat', 'sans-serif'],
+			},
+			spacing: {
+				'xs': '0.25rem',   // 4px
+				'sm': '0.5rem',    // 8px
+				'md': '0.75rem',   // 12px
+				'lg': '1rem',      // 16px
+				'xl': '1.25rem',   // 20px
+				'2xl': '1.5rem',   // 24px
+				'3xl': '2rem',     // 32px
+				'4xl': '2.5rem',   // 40px
+				'5xl': '3rem',     // 48px
+				'6xl': '4rem',     // 64px
+				'fluid-xs': 'clamp(0.25rem, 2vw, 0.5rem)',
+				'fluid-sm': 'clamp(0.5rem, 3vw, 1rem)',
+				'fluid-md': 'clamp(0.75rem, 4vw, 1.5rem)',
+				'fluid-lg': 'clamp(1rem, 5vw, 2rem)',
+				'fluid-xl': 'clamp(1.25rem, 6vw, 2.5rem)',
+				'fluid-2xl': 'clamp(1.5rem, 8vw, 3rem)',
+				'fluid-3xl': 'clamp(2rem, 10vw, 4rem)',
 			},
 			colors: {
 				border: 'hsl(var(--border))',

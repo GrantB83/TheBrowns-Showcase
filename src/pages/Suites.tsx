@@ -306,21 +306,22 @@ export default function Suites() {
 
         {/* Filter Tabs */}
         {activeFilter !== 'all' && (
-          <section className="py-6 bg-muted/30" id="suites-section">
-            <div className="container mx-auto px-4">
+          <section className="py-4 sm:py-6 bg-muted/30" id="suites-section">
+            <div className="responsive-container">
               <div className="max-w-4xl mx-auto">
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <div className="flex items-center gap-2">
+                <div className="flex flex-col xs:flex-row items-center justify-between gap-3 sm:gap-4">
+                  <div className="flex items-center gap-2 order-2 xs:order-1">
                     <Filter className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-sm text-muted-foreground">
+                    <span className="text-xs sm:text-sm text-muted-foreground">
                       Showing: {activeFilter === 'luxury' ? 'Luxury Guest Suites' : 'Heritage Cottage Suites'}
                     </span>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex flex-wrap gap-2 order-1 xs:order-2">
                     <Button 
                       variant={activeFilter === 'luxury' ? 'default' : 'outline'}
                       size="sm"
                       onClick={() => setActiveFilter('luxury')}
+                      className="min-h-[40px] text-xs sm:text-sm"
                     >
                       Luxury Suites
                     </Button>
@@ -328,6 +329,7 @@ export default function Suites() {
                       variant={activeFilter === 'cottage' ? 'default' : 'outline'}
                       size="sm"
                       onClick={() => setActiveFilter('cottage')}
+                      className="min-h-[40px] text-xs sm:text-sm"
                     >
                       Cottage Suites
                     </Button>
@@ -335,6 +337,7 @@ export default function Suites() {
                       variant="ghost"
                       size="sm"
                       onClick={() => setActiveFilter('all')}
+                      className="min-h-[40px] text-xs sm:text-sm"
                     >
                       Show All
                     </Button>
@@ -347,12 +350,12 @@ export default function Suites() {
 
         {/* Luxury Suites Section */}
         {filteredLuxurySuites.length > 0 && (
-          <section className="py-12 sm:py-16 lg:py-20" id={activeFilter === 'all' ? 'suites-section' : ''}>
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-12">
-                <Badge variant="secondary" className="mb-4">Modern Luxury</Badge>
-                <h2 className="text-primary mb-4">Luxury Guest Suites</h2>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <section className="section-spacing" id={activeFilter === 'all' ? 'suites-section' : ''}>
+            <div className="responsive-container">
+              <div className="text-center mb-8 sm:mb-10 lg:mb-12">
+                <Badge variant="secondary" className="mb-4 text-xs sm:text-sm">Modern Luxury</Badge>
+                <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl text-primary mb-4 font-playfair">Luxury Guest Suites</h2>
+                <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-2">
                   Sophisticated design meets modern comfort in our guest house. Perfect for couples, families, 
                   and discerning travelers seeking premium highland accommodation.
                 </p>

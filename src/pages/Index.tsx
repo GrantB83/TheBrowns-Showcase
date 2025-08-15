@@ -139,7 +139,7 @@ const Index = () => {
       <MobileSEO />
       <div className="min-h-screen mobile-scroll-smooth">
       {/* Hero Section - Mobile Optimized */}
-      <section className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen mobile-select-none">
+      <section className="relative h-[55vh] xs:h-[60vh] sm:h-[65vh] md:h-[75vh] lg:h-[85vh] xl:h-screen mobile-select-none">
         <EnhancedImageSlider 
           images={heroImages}
           className="h-full w-full"
@@ -147,12 +147,12 @@ const Index = () => {
           autoPlayInterval={6000}
           enableSwipe={true}
         />
-        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 text-center w-full px-4 z-20">
-          <div className="mobile-stack max-w-md mx-auto">
+        <div className="absolute bottom-4 xs:bottom-6 sm:bottom-8 md:bottom-10 left-1/2 transform -translate-x-1/2 text-center w-full px-3 xs:px-4 z-20">
+          <div className="flex flex-col xs:flex-row gap-3 xs:gap-4 max-w-sm xs:max-w-md mx-auto">
             <Button 
               size="lg" 
               asChild 
-              className="bg-primary hover:bg-primary/90 min-h-[48px] text-fluid-base font-medium touch-feedback mobile-tap-highlight"
+              className="bg-primary hover:bg-primary/90 min-h-[48px] xs:min-h-[52px] text-sm xs:text-base font-medium touch-feedback mobile-tap-highlight flex-1"
             >
               <a 
                 href="https://book.nightsbridge.com/00000" 
@@ -167,7 +167,7 @@ const Index = () => {
               variant="outline" 
               size="lg" 
               asChild 
-              className="bg-white/90 hover:bg-white border-white text-foreground min-h-[48px] text-fluid-base font-medium touch-feedback mobile-tap-highlight"
+              className="bg-white/90 hover:bg-white border-white text-foreground min-h-[48px] xs:min-h-[52px] text-sm xs:text-base font-medium touch-feedback mobile-tap-highlight flex-1"
             >
               <Link 
                 to="/accommodation"
@@ -183,11 +183,11 @@ const Index = () => {
       {/* Property Overview */}
       <section 
         ref={overviewRef}
-        className={`py-8 sm:py-12 md:py-16 lg:py-20 bg-background transition-all duration-1000 ${
+        className={`section-spacing bg-background transition-all duration-1000 ${
           overviewVisible ? 'scroll-animate' : 'opacity-0'
         }`}
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="responsive-container">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-primary mb-4 sm:mb-6">Luxury Accommodation in Dullstroom</h2>
             <p className="text-fluid-lg text-muted-foreground mb-8 sm:mb-10 md:mb-12 leading-relaxed max-w-none sm:max-w-3xl mx-auto">
@@ -216,27 +216,27 @@ const Index = () => {
       {/* Featured Suites */}
       <section 
         ref={suitesRef}
-        className={`py-8 sm:py-12 md:py-16 lg:py-20 bg-muted transition-all duration-1000 ${
+        className={`section-spacing bg-muted transition-all duration-1000 ${
           suitesVisible ? 'scroll-animate' : 'opacity-0'
         }`}
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="responsive-container">
           <div className="text-center mb-8 sm:mb-10 md:mb-12">
-            <h2 className="text-primary mb-4">Featured Suites</h2>
-            <p className="text-fluid-lg text-muted-foreground max-w-none sm:max-w-2xl mx-auto leading-relaxed">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl text-primary mb-4 font-playfair">Featured Suites</h2>
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-2">
               Choose from our collection of luxury suites, each uniquely designed with premium amenities 
               and thoughtful touches for an unforgettable stay.
             </p>
           </div>
           
-          <div className="mobile-grid max-w-7xl mx-auto">
+          <div className="card-grid max-w-7xl mx-auto">
             {featuredSuites.map((suite, index) => (
               <div 
                 key={index}
                 style={{ animationDelay: `${index * 150}ms` }}
-                className="scroll-animate"
+                className="scroll-animate h-full"
               >
-                <SuiteCard {...suite} />
+                <SuiteCard {...suite} className="h-full" />
               </div>
             ))}
           </div>
@@ -246,7 +246,7 @@ const Index = () => {
               asChild 
               size="lg" 
               variant="outline" 
-              className="min-h-[48px] text-fluid-base font-medium touch-feedback mobile-tap-highlight"
+              className="min-h-[48px] sm:min-h-[52px] text-sm sm:text-base font-medium touch-feedback mobile-tap-highlight"
             >
               <Link 
                 to="/accommodation"
@@ -262,26 +262,26 @@ const Index = () => {
       {/* Testimonials */}
       <section 
         ref={testimonialsRef}
-        className={`py-6 sm:py-8 md:py-12 lg:py-16 bg-background transition-all duration-1000 ${
+        className={`section-spacing bg-background transition-all duration-1000 ${
           testimonialsVisible ? 'scroll-animate' : 'opacity-0'
         }`}
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="responsive-container">
           <div className="text-center mb-6 sm:mb-8 md:mb-10">
-            <h2 className="text-primary mb-4">Guest Testimonials</h2>
-            <p className="text-fluid-lg text-muted-foreground max-w-none sm:max-w-2xl mx-auto leading-relaxed">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl text-primary mb-4 font-playfair">Guest Testimonials</h2>
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-2">
               See what our guests say about their luxury stay at The Browns.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6 max-w-7xl mx-auto">
+          <div className="card-grid max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <div 
                 key={index}
                 style={{ animationDelay: `${index * 150}ms` }}
-                className="scroll-animate"
+                className="scroll-animate h-full"
               >
-                <TestimonialCard {...testimonial} />
+                <TestimonialCard {...testimonial} className="h-full" />
               </div>
             ))}
           </div>
@@ -292,19 +292,19 @@ const Index = () => {
       <ReviewShowcase compact={true} className="py-4 sm:py-6" />
 
       {/* Dullstroom Highlights - Interactive Infographic */}
-      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-accent">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-spacing bg-accent">
+        <div className="responsive-container">
           <DullstroomInfographic 
             variant="grid"
             showShareButton={true}
             className="max-w-6xl mx-auto"
           />
           
-          <div className="mobile-stack max-w-md mx-auto mt-8">
+          <div className="flex flex-col xs:flex-row gap-4 max-w-md mx-auto mt-8">
             <Button 
               asChild 
               size="lg" 
-              className="min-h-[48px] text-fluid-base font-medium touch-feedback mobile-tap-highlight"
+              className="min-h-[48px] sm:min-h-[52px] text-sm sm:text-base font-medium touch-feedback mobile-tap-highlight flex-1"
             >
               <Link 
                 to="/activities"
@@ -317,7 +317,7 @@ const Index = () => {
               asChild 
               size="lg" 
               variant="outline" 
-              className="min-h-[48px] text-fluid-base font-medium touch-feedback mobile-tap-highlight"
+              className="min-h-[48px] sm:min-h-[52px] text-sm sm:text-base font-medium touch-feedback mobile-tap-highlight flex-1"
             >
               <Link 
                 to="/contact"
@@ -331,10 +331,10 @@ const Index = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-primary-foreground mb-4">Ready for Your Luxury Escape?</h2>
-          <p className="text-fluid-xl mb-6 sm:mb-8 text-primary-foreground/90 max-w-none sm:max-w-2xl mx-auto leading-relaxed">
+      <section className="section-spacing bg-primary text-primary-foreground">
+        <div className="responsive-container text-center">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl text-primary-foreground mb-4 font-playfair">Ready for Your Luxury Escape?</h2>
+          <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed px-2">
             Book directly with us for the best rates and personalized service. 
             Experience the perfect blend of luxury and comfort in Dullstroom.
           </p>
@@ -342,7 +342,7 @@ const Index = () => {
             size="lg" 
             variant="secondary" 
             asChild 
-            className="min-h-[48px] text-fluid-base font-medium touch-feedback mobile-tap-highlight"
+            className="min-h-[48px] sm:min-h-[52px] text-sm sm:text-base font-medium touch-feedback mobile-tap-highlight"
           >
             <a 
               href="https://book.nightsbridge.com/00000" 
