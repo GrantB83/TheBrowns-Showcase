@@ -139,7 +139,7 @@ const Index = () => {
       <MobileSEO />
       <div className="min-h-screen mobile-scroll-smooth">
       {/* Hero Section - Mobile Optimized */}
-      <section className="relative h-[40vh] xs:h-[45vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] xl:h-[75vh] mobile-select-none">
+      <section className="relative h-[45vh] xs:h-[50vh] sm:h-[55vh] md:h-[65vh] lg:h-[75vh] xl:h-[80vh] mobile-select-none">
         <EnhancedImageSlider 
           images={heroImages}
           className="h-full w-full"
@@ -147,7 +147,7 @@ const Index = () => {
           autoPlayInterval={6000}
           enableSwipe={true}
         />
-        <div className="absolute bottom-4 xs:bottom-6 sm:bottom-8 md:bottom-12 lg:bottom-16 left-1/2 transform -translate-x-1/2 text-center w-full px-3 xs:px-4 z-20">
+        <div className="absolute bottom-6 xs:bottom-8 sm:bottom-12 md:bottom-16 lg:bottom-20 left-1/2 transform -translate-x-1/2 text-center w-full px-3 xs:px-4 z-20">
           <div className="flex flex-col xs:flex-row gap-3 xs:gap-4 max-w-sm xs:max-w-md mx-auto">
             <Button 
               size="lg" 
@@ -183,7 +183,7 @@ const Index = () => {
       {/* Property Overview */}
       <section 
         ref={overviewRef}
-        className={`-mt-2 sm:mt-0 py-4 sm:py-8 md:py-12 lg:py-16 bg-background transition-all duration-1000 ${
+        className={`-mt-6 sm:-mt-4 md:mt-0 py-6 sm:py-10 md:py-16 lg:py-20 bg-background transition-all duration-1000 ${
           overviewVisible ? 'scroll-animate' : 'opacity-0'
         }`}
       >
@@ -216,7 +216,7 @@ const Index = () => {
       {/* Featured Suites */}
       <section 
         ref={suitesRef}
-        className={`section-spacing bg-muted transition-all duration-1000 ${
+        className={`py-6 sm:py-10 md:py-16 lg:py-20 bg-muted transition-all duration-1000 ${
           suitesVisible ? 'scroll-animate' : 'opacity-0'
         }`}
       >
@@ -262,7 +262,7 @@ const Index = () => {
       {/* Testimonials */}
       <section 
         ref={testimonialsRef}
-        className={`section-spacing bg-background transition-all duration-1000 ${
+        className={`py-6 sm:py-10 md:py-16 lg:py-20 bg-background transition-all duration-1000 ${
           testimonialsVisible ? 'scroll-animate' : 'opacity-0'
         }`}
       >
@@ -292,7 +292,7 @@ const Index = () => {
       <ReviewShowcase compact={true} className="py-4 sm:py-6" />
 
       {/* Dullstroom Highlights - Interactive Infographic */}
-      <section className="section-spacing bg-accent">
+      <section className="py-6 sm:py-10 md:py-16 lg:py-20 bg-accent">
         <div className="responsive-container">
           <DullstroomInfographic 
             variant="grid"
@@ -331,7 +331,7 @@ const Index = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="section-spacing bg-primary text-primary-foreground">
+      <section className="py-6 sm:py-10 md:py-16 lg:py-20 bg-primary text-primary-foreground">
         <div className="responsive-container text-center">
           <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl text-primary-foreground mb-4 font-playfair">Ready for Your Luxury Escape?</h2>
           <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed px-2">
