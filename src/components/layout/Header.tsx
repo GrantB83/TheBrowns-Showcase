@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
+import { useResponsiveNavigation } from "@/hooks/use-responsive-navigation";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -34,6 +35,14 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
+  // Use dynamic responsive navigation
+  const { visibleItems, overflowItems, hasOverflow, containerRef, measureItems } = 
+    useResponsiveNavigation({
+      items: navigation,
+      priority: itemPriority,
+      additionalWidth: 200 // Space for Book Now button and logo
+    });
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -43,22 +52,8 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Get items sorted by priority (lower number = higher priority)
-  const sortedNavigation = [...navigation].sort((a, b) => 
-    (itemPriority[a.name as keyof typeof itemPriority] || 99) - 
-    (itemPriority[b.name as keyof typeof itemPriority] || 99)
-  );
-
-  // For responsive breakpoints, show different numbers of items
-  const getVisibleItems = (breakpoint: 'md' | 'lg' | 'xl') => {
-    const maxItems = breakpoint === 'md' ? 4 : breakpoint === 'lg' ? 6 : 8;
-    return sortedNavigation.slice(0, maxItems);
-  };
-
-  const getOverflowItems = (breakpoint: 'md' | 'lg' | 'xl') => {
-    const maxItems = breakpoint === 'md' ? 4 : breakpoint === 'lg' ? 6 : 8;
-    return sortedNavigation.slice(maxItems);
-  };
+  // Register item references for width measurement
+  const registerItemRef = (measureItems as any).registerItemRef;
 
   return (
     <header className={cn(
@@ -79,12 +74,16 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-3 lg:space-x-4 xl:space-x-6">
-            {/* Always visible items (highest priority) */}
+          <nav 
+            ref={containerRef}
+            className="hidden md:flex items-center space-x-3 lg:space-x-4 xl:space-x-6"
+          >
+            {/* Dynamic visible items */}
             <div className="flex items-center space-x-3 lg:space-x-4 xl:space-x-6">
-              {getVisibleItems('md').map((item) => (
+              {visibleItems.map((item) => (
                 <Link
                   key={item.name}
+                  ref={(el) => registerItemRef?.(item.name, el)}
                   to={item.href}
                   className={cn(
                     "text-sm lg:text-base font-medium transition-colors hover:text-primary min-h-[44px] flex items-center whitespace-nowrap",
@@ -98,44 +97,8 @@ export function Header() {
               ))}
             </div>
 
-            {/* Medium screens: show more items, dropdown for overflow */}
-            <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
-              {getVisibleItems('lg').slice(4).map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={cn(
-                    "text-sm lg:text-base font-medium transition-colors hover:text-primary min-h-[44px] flex items-center whitespace-nowrap",
-                    location.pathname === item.href
-                      ? "text-primary"
-                      : "text-muted-foreground"
-                  )}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-
-            {/* Large screens: show even more items */}
-            <div className="hidden xl:flex items-center space-x-6">
-              {getVisibleItems('xl').slice(6).map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={cn(
-                    "text-base font-medium transition-colors hover:text-primary min-h-[44px] flex items-center whitespace-nowrap",
-                    location.pathname === item.href
-                      ? "text-primary"
-                      : "text-muted-foreground"
-                  )}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-
-            {/* More dropdown for overflow items */}
-            {getOverflowItems('md').length > 0 && (
+            {/* More dropdown for overflow items - only shows when there are actually overflow items */}
+            {hasOverflow && (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button
@@ -147,7 +110,7 @@ export function Header() {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="bg-background border shadow-lg z-50">
-                  {getOverflowItems('md').map((item) => (
+                  {overflowItems.map((item) => (
                     <DropdownMenuItem key={item.name} asChild>
                       <Link
                         to={item.href}
@@ -165,6 +128,19 @@ export function Header() {
                 </DropdownMenuContent>
               </DropdownMenu>
             )}
+            
+            {/* Hidden measurement items for all navigation items */}
+            <div className="fixed top-0 left-[-9999px] opacity-0 pointer-events-none" aria-hidden="true">
+              {navigation.map((item) => (
+                <span
+                  key={`measure-${item.name}`}
+                  ref={(el) => registerItemRef?.(item.name, el)}
+                  className="text-sm lg:text-base font-medium whitespace-nowrap px-3"
+                >
+                  {item.name}
+                </span>
+              ))}
+            </div>
           </nav>
 
           {/* Book Now Button & Mobile Menu */}
