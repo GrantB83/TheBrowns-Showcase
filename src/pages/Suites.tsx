@@ -5,6 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import { SEO } from "@/components/ui/seo";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { BookingWidget } from "@/components/ui/booking-widget";
+import { ReviewShowcase } from "@/components/ui/review-showcase";
 import { Link } from "react-router-dom";
 import { Clock, Gift, Users, ExternalLink } from "lucide-react";
 const luxurySuites = [{
@@ -340,6 +341,9 @@ export default function Suites() {
             </div>
           </div>
         </section>
+
+        {/* Review Showcase Section */}
+        <ReviewShowcase />
 
         {/* Luxury Suites Section */}
         <section className="py-12 sm:py-16 lg:py-20">

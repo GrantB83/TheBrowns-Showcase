@@ -8,6 +8,7 @@ import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { Card, CardContent } from "@/components/ui/card";
 import { MobileSEO } from "@/components/ui/mobile-seo";
 import { DullstroomInfographic } from "@/components/ui/dullstroom-infographic";
+import { ReviewShowcase } from "@/components/ui/review-showcase";
 import { PremiumImage } from "@/components/ui/premium-image";
 
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
@@ -286,6 +287,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Review Showcase Section */}
+      <ReviewShowcase compact={true} />
 
       {/* Dullstroom Highlights - Interactive Infographic */}
       <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-accent">
