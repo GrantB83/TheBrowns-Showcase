@@ -5,22 +5,31 @@ interface LogoProps {
 export function BookingLogo({ className }: LogoProps) {
   return (
     <svg 
-      viewBox="0 0 120 32" 
+      viewBox="0 0 140 32" 
       className={className}
       role="img"
       aria-label="Booking.com logo"
     >
-      <rect width="120" height="32" rx="4" fill="#003580"/>
+      <rect width="140" height="32" rx="2" fill="#003B95"/>
       <text 
-        x="60" 
-        y="20" 
-        textAnchor="middle" 
+        x="12" 
+        y="21" 
         fill="white" 
-        fontSize="12" 
-        fontWeight="bold" 
-        fontFamily="Arial, sans-serif"
+        fontSize="16" 
+        fontWeight="700" 
+        fontFamily="system-ui, -apple-system, sans-serif"
       >
-        Booking.com
+        Booking
+      </text>
+      <text 
+        x="82" 
+        y="21" 
+        fill="white" 
+        fontSize="16" 
+        fontWeight="400" 
+        fontFamily="system-ui, -apple-system, sans-serif"
+      >
+        .com
       </text>
     </svg>
   );
@@ -29,16 +38,20 @@ export function BookingLogo({ className }: LogoProps) {
 export function GoogleLogo({ className }: LogoProps) {
   return (
     <svg 
-      viewBox="0 0 92 32" 
+      viewBox="0 0 120 32" 
       className={className}
       role="img"
       aria-label="Google logo"
     >
       <g>
-        <path d="M45.12 8.4a9.6 9.6 0 0 1 6.24 2.4l-2.4 2.4a6 6 0 0 0-4.08-1.68c-3.36 0-6 2.64-6 6s2.64 6 6 6a5.52 5.52 0 0 0 4.32-2.16v-1.44h-4.32v-3.12h7.44v5.28a9.6 9.6 0 0 1-7.44 3.6c-5.28 0-9.6-4.32-9.6-9.6s4.32-9.6 9.6-9.6z" fill="#4285F4"/>
-        <path d="M66 8.4c5.28 0 9.6 4.32 9.6 9.6s-4.32 9.6-9.6 9.6-9.6-4.32-9.6-9.6 4.32-9.6 9.6-9.6zm0 3.6c-3.36 0-6 2.64-6 6s2.64 6 6 6 6-2.64 6-6-2.64-6-6-6z" fill="#EA4335"/>
-        <path d="M86.4 8.4c5.28 0 9.6 4.32 9.6 9.6s-4.32 9.6-9.6 9.6-9.6-4.32-9.6-9.6 4.32-9.6 9.6-9.6zm0 3.6c-3.36 0-6 2.64-6 6s2.64 6 6 6 6-2.64 6-6-2.64-6-6-6z" fill="#FBBC05"/>
-        <path d="M13.2 8.4v18h-3.6v-18h3.6zm8.4 0v18h-3.6v-12l-6 12h-1.2l-6-12v12h-3.6v-18h4.8l5.4 10.8 5.4-10.8h4.8z" fill="#34A853"/>
+        {/* G */}
+        <path d="M16.2 10.8c0-1.2-.1-2.3-.3-3.4H8.2v6.4h4.5c-.2 1.1-.8 2.1-1.7 2.7v2.2h2.7c1.6-1.5 2.5-3.7 2.5-6.3z" fill="#4285F4"/>
+        <path d="M8.2 20c2.3 0 4.2-.8 5.6-2.1l-2.7-2.1c-.8.5-1.8.8-2.9.8-2.2 0-4.1-1.5-4.8-3.5H0.6v2.2c1.4 2.8 4.3 4.7 7.6 4.7z" fill="#34A853"/>
+        <path d="M3.4 12.9c-.2-.5-.3-1.1-.3-1.7s.1-1.2.3-1.7V7.3H0.6c-.6 1.2-.9 2.5-.9 3.9s.3 2.7.9 3.9l2.8-2.2z" fill="#FBBC04"/>
+        <path d="M8.2 6.4c1.3 0 2.4.4 3.3 1.2l2.5-2.5C12.4 3.8 10.5 3 8.2 3 4.9 3 2 4.9.6 7.7l2.8 2.2c.7-2 2.6-3.5 4.8-3.5z" fill="#EA4335"/>
+        
+        {/* oogle text */}
+        <text x="22" y="17" fill="#5F6368" fontSize="14" fontWeight="400" fontFamily="Google Sans, arial, sans-serif">oogle</text>
       </g>
     </svg>
   );
@@ -47,29 +60,49 @@ export function GoogleLogo({ className }: LogoProps) {
 export function TripAdvisorLogo({ className }: LogoProps) {
   return (
     <svg 
-      viewBox="0 0 120 32" 
+      viewBox="0 0 140 32" 
       className={className}
       role="img"
       aria-label="TripAdvisor logo"
     >
-      <rect width="120" height="32" rx="4" fill="#00AA6C"/>
-      <g transform="translate(8, 6)">
+      <g>
         {/* Owl mascot */}
-        <circle cx="10" cy="10" r="8" fill="white"/>
-        <circle cx="7" cy="8" r="2" fill="#00AA6C"/>
-        <circle cx="13" cy="8" r="2" fill="#00AA6C"/>
-        <path d="M6 12 Q10 15 14 12" stroke="#00AA6C" strokeWidth="1" fill="none"/>
+        <circle cx="16" cy="16" r="14" fill="#34E0A1" stroke="#34E0A1" strokeWidth="1"/>
+        <circle cx="16" cy="16" r="12" fill="white"/>
+        
+        {/* Owl eyes */}
+        <circle cx="12" cy="14" r="3" fill="none" stroke="#34E0A1" strokeWidth="2"/>
+        <circle cx="20" cy="14" r="3" fill="none" stroke="#34E0A1" strokeWidth="2"/>
+        <circle cx="12" cy="14" r="1.5" fill="#34E0A1"/>
+        <circle cx="20" cy="14" r="1.5" fill="#34E0A1"/>
+        
+        {/* Owl beak */}
+        <path d="M16 17 L14 19 L18 19 Z" fill="#34E0A1"/>
+        
+        {/* Wings */}
+        <circle cx="6" cy="18" r="4" fill="none" stroke="#34E0A1" strokeWidth="1.5"/>
+        <circle cx="26" cy="18" r="4" fill="none" stroke="#34E0A1" strokeWidth="1.5"/>
         
         {/* Text */}
         <text 
-          x="24" 
-          y="14" 
-          fill="white" 
-          fontSize="10" 
-          fontWeight="bold" 
-          fontFamily="Arial, sans-serif"
+          x="38" 
+          y="11" 
+          fill="#333" 
+          fontSize="7" 
+          fontWeight="700" 
+          fontFamily="system-ui, sans-serif"
         >
-          TripAdvisor
+          Trip
+        </text>
+        <text 
+          x="38" 
+          y="21" 
+          fill="#333" 
+          fontSize="7" 
+          fontWeight="700" 
+          fontFamily="system-ui, sans-serif"
+        >
+          Advisor
         </text>
       </g>
     </svg>
