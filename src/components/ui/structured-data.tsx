@@ -15,7 +15,7 @@ export function StructuredData({ type, data }: StructuredDataProps) {
           "@context": "https://schema.org",
           "@type": "Hotel",
           name: "The Browns Luxury Guest Suites",
-          description: "Premier luxury accommodation in Dullstroom's misty highlands, offering boutique guest suites with mountain views, spa amenities, and world-class fly-fishing access.",
+          description: "Premier luxury accommodation in Dullstroom's misty highlands, offering boutique guest suites with highland views, spa amenities, and world-class fly-fishing access.",
           url: "https://thebrowns.co.za",
           image: [
             "https://thebrowns.co.za/images/gallery/main-building-exterior.jpg",
@@ -61,7 +61,7 @@ export function StructuredData({ type, data }: StructuredDataProps) {
             },
             {
               "@type": "LocationFeatureSpecification",
-              name: "Mountain Views", 
+              name: "Highland Views", 
               value: true
             },
             {

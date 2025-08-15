@@ -30,7 +30,7 @@ const heroImages = [
   },
   {
     src: "/images/hero/gardens-mountains.jpg",
-    alt: "Serene gardens and panoramic mountain views at The Browns Dullstroom guest house in Mpumalanga highlands",
+    alt: "Serene gardens and panoramic highland views at The Browns Dullstroom guest house in Mpumalanga highlands",
     title: "Serene Setting",
     subtitle: "Peaceful gardens in the heart of Mpumalanga highlands"
   }
@@ -127,7 +127,7 @@ const Index = () => {
     <>
       <SEO
         title="The Browns Luxury Guest Suites & Cottage | Dullstroom Guest Suites 2025 | Mpumalanga Highlands Accommodation"
-        description="Premier luxury guest suites in Dullstroom's misty highlands. World-class fly-fishing access, Panorama Route base, mountain views, premium amenities. Book direct for best rates and exclusive perks."
+        description="Premier luxury guest suites in Dullstroom's misty highlands. World-class fly-fishing access, Panorama Route base, highland views, premium amenities. Book direct for best rates and exclusive perks."
         keywords="Dullstroom luxury accommodation 2025, boutique guesthouse, Mpumalanga highlands accommodation,fly fishing, Panorama Route accommodation, luxury self-catering Dullstroom, luxury suites Dullstroom"
       />
       

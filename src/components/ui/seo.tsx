@@ -122,7 +122,7 @@ export function SEO({
             { "@type": "LocationFeatureSpecification", name: "Free WiFi", value: true },
             { "@type": "LocationFeatureSpecification", name: "Parking", value: true },
             { "@type": "LocationFeatureSpecification", name: "Garden Views", value: true },
-            { "@type": "LocationFeatureSpecification", name: "Mountain Views", value: true },
+            { "@type": "LocationFeatureSpecification", name: "Highland Views", value: true },
             { "@type": "LocationFeatureSpecification", name: "Fireplace", value: true },
             { "@type": "LocationFeatureSpecification", name: "Netflix", value: true }
           ],

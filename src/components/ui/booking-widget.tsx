@@ -43,7 +43,7 @@ const suiteRecommendations: SuiteRecommendation[] = [
     name: "Master Suite",
     roomId: 6,
     capacity: "2 Adults + 2 Children",
-    features: ["King XL Bed", "Private Lounge", "Mountain Views", "Fireplace"],
+    features: ["King XL Bed", "Private Lounge", "Zuikerboschkop Views", "Fireplace"],
     urgencyMessage: "Luxury flagship suite",
     recommended: true,
     image: "/images/suites/master-suite-01.jpg"
@@ -62,8 +62,8 @@ const suiteRecommendations: SuiteRecommendation[] = [
     name: "Loft Family Suite",
     roomId: 5,
     capacity: "4 Adults",
-    features: ["2 Bedrooms", "Family Lounge", "Mountain Views", "Netflix"],
-    urgencyMessage: "Family mountain views",
+    features: ["2 Bedrooms", "Family Lounge", "Zuikerboschkop Views", "Netflix"],
+    urgencyMessage: "Family suite with balcony views",
     image: "/images/suites/loft-suite-01.jpg"
   }
 ];

@@ -115,7 +115,7 @@ export function SuiteBookingCard({
       case "master-suite":
         return "King XL bed, private lounge with fireplace and Netflix – Ideal for Couples";
       case "loft-suite":
-        return "Family-friendly with 4 beds and mountain views – Perfect for Groups";
+        return "Family-friendly with 4 beds and Zuikerboschkop views – Perfect for Groups";
       case "garden-suite":
         return "Romantic retreat with garden views and spa bath – Couples' Haven";
       case "cove-suite":

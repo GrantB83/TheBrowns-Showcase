@@ -111,7 +111,7 @@ export function TwoHouseSelectionHero({ onFilterChange, activeFilter }: TwoHouse
                 </CardTitle>
                 <p className="text-muted-foreground">
                   Modern sophistication meets highland luxury in our flagship guest house. 
-                  Perfect for couples and families seeking premium comfort with stunning mountain views.
+                  Perfect for couples and families seeking premium comfort. Master and Loft suites feature Zuikerboschkop views from first-floor balcony.
                 </p>
               </CardHeader>
               
@@ -134,7 +134,7 @@ export function TwoHouseSelectionHero({ onFilterChange, activeFilter }: TwoHouse
                   </div>
                   <div className="flex items-center gap-1">
                     <span className="text-base" role="img" aria-label="mountain">🏔️</span>
-                    <span>Mountain views</span>
+                    <span>Garden views & balcony access</span>
                   </div>
                   <div className="flex items-center gap-1">
                     <span className="text-base" role="img" aria-label="coffee">☕</span>

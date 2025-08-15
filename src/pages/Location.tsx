@@ -12,7 +12,7 @@ const attractions = [
   { 
     icon: Mountain, 
     title: "Highland Hiking Trails", 
-    description: "Explore scenic nature trails with breathtaking mountain views, from gentle walks to challenging highland hikes through Mpumalanga's stunning landscapes.",
+    description: "Explore scenic nature trails with breathtaking highland views, from gentle walks to challenging highland hikes through Mpumalanga's stunning landscapes.",
     image: "/images/location/highland-hiking.jpg" // filename: highland-hiking.jpg, folder: /images/location/, dimensions: 600x400
   },
   { 

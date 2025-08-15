@@ -16,7 +16,7 @@ const allGalleryImages = [
   },
   { 
     src: "/images/gallery/cottage-suites-exterior.jpg",
-    alt: "Property exterior with spectacular highland mountain views Dullstroom accommodation",
+    alt: "Property exterior with spectacular highland views Dullstroom accommodation",
     title: "Cottage Suites",
     category: "Property Exteriors", 
     description: "Highland cottage setting",
@@ -69,10 +69,10 @@ const allGalleryImages = [
   },
   { 
     src: "/images/gallery/garden-suite-interior.jpg",
-    alt: "Garden Suite interior mountain views self-catering kitchen Dullstroom family",
+    alt: "Garden Suite interior garden views self-catering kitchen Dullstroom family",
     title: "Garden Suite Interior",
     category: "Suite Interiors",
-    description: "Mountain views, self-catering",
+    description: "Garden views, self-catering",
     caption: "Garden Suite kitchen – Book Direct for Best Rates",
     suiteCode: "Garden Suite", 
     roomId: 4,
@@ -106,11 +106,11 @@ const allGalleryImages = [
   // Gardens & Grounds
   { 
     src: "/images/gallery/garden-pathways.jpg",
-    alt: "Serene garden landscapes The Browns Dullstroom mountain views walking paths",
+    alt: "Serene garden landscapes The Browns Dullstroom highland views walking paths",
     title: "Garden Pathways",
     category: "Gardens & Grounds",
     description: "Highland garden walks",
-    caption: "Peaceful garden paths with panoramic Dullstroom mountain views",
+    caption: "Peaceful garden paths with panoramic Dullstroom highland views",
     placeholder: { filename: "garden-pathways.jpg", folder: "/images/gallery/", width: 800, height: 600 }
   },
   { 

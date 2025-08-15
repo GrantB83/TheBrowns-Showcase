@@ -67,10 +67,10 @@ const suiteHighlights = [
     name: "Master Suite",
     roomId: 6,
     capacity: "2 Adults + 2 Children",
-    features: ["King XL Bed", "Private Lounge", "Mountain Views", "Fireplace", "Netflix"],
+    features: ["King XL Bed", "Private Lounge", "Zuikerboschkop Views", "Fireplace", "Netflix"],
     urgencyMessage: "Premium flagship suite",
     image: "/images/suites/master-suite-01.jpg",
-    description: "Luxury flagship suite with private lounge and mountain views"
+    description: "Luxury flagship suite with private lounge and Zuikerboschkop views from first-floor balcony"
   },
   {
     id: "garden-suite", 
@@ -87,8 +87,8 @@ const suiteHighlights = [
     name: "Loft Family Suite",
     roomId: 5,
     capacity: "4 Adults", 
-    features: ["2 Bedrooms", "Family Lounge", "Mountain Views", "Entertainment"],
-    urgencyMessage: "Mountain view family suite",
+    features: ["2 Bedrooms", "Family Lounge", "Zuikerboschkop Views", "Entertainment"],
+    urgencyMessage: "Family suite with balcony views",
     image: "/images/suites/loft-suite-01.jpg",
     description: "Perfect for families with separate bedrooms and entertainment"
   }

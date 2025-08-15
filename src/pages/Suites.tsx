@@ -14,7 +14,7 @@ const luxurySuites = [{
   title: "Master Suite",
   capacity: "2 adults + 2 children under 12",
   bedConfig: "King XL bed + Double sofa bed (kids under 12)",
-  description: "Our flagship suite offers the ultimate in luxury with a spacious private unit featuring a dedicated dressing room, spacious lounge area, and full ensuite bathroom with double vanity and double shower. Perfect for romantic getaways with modern conveniences.",
+  description: "Our flagship suite offers the ultimate in luxury with a spacious private unit featuring a dedicated dressing room, spacious lounge area, and full ensuite bathroom with double vanity and double shower. Enjoy Zuikerboschkop mountain views from the first-floor balcony. Perfect for romantic getaways with modern conveniences.",
   mainAmenities: [{
     text: "Hot water bottles & electric blankets",
     emoji: "🔥"
@@ -25,8 +25,8 @@ const luxurySuites = [{
     text: "Nespresso coffee machine",
     emoji: "☕"
   }, {
-    text: "Beautiful garden views",
-    emoji: "🌿"
+    text: "Zuikerboschkop views from balcony",
+    emoji: "🏔️"
   }, {
     text: "Double vanity ensuite",
     emoji: "🛁"
@@ -34,7 +34,7 @@ const luxurySuites = [{
     text: "Private dressing room",
     emoji: "👗"
   }],
-  additionalAmenities: ["Elegant lounge area with fireplace", "Interleads with Loft Suite for families", "Free high-speed WiFi throughout", "Charlotte Rhys premium toiletries", "Extra mattresses available for children", "Cot with linen for infants", "High chair & microwave for baby feeding", "Secure parking included", "Daily housekeeping available", "Complimentary tea and coffee selection"],
+  additionalAmenities: ["Elegant lounge area with fireplace", "Interleads with Loft Suite for families", "Free high-speed WiFi throughout", "Charlotte Rhys premium toiletries", "Extra mattresses available for children", "Cot with linen for infants", "High chair & microwave for baby feeding", "Zuikerboschkop mountain views from first-floor balcony", "Secure parking included", "Daily housekeeping available", "Complimentary tea and coffee selection"],
   images: ["/images/suites/master-suite-01.jpg", "/images/suites/master-suite-02.jpg", "/images/suites/master-suite-03.jpg", "/images/suites/master-suite-04.jpg", "/images/suites/master-suite-05.jpg", "/images/suites/master-suite-06.jpg", "/images/suites/master-suite-07.jpg"],
   slug: "master-suite",
   roomId: 6,
@@ -48,9 +48,9 @@ const luxurySuites = [{
   title: "Loft Family Suite",
   capacity: "4 adults",
   bedConfig: "Queen XL bed + 2 Single XL beds",
-  description: "Perfect for families, the Loft Suite features two comfortable bedrooms with spectacular mountain views, a welcoming lounge area, and spacious bathroom. Connects with Master Suite for larger groups.",
+  description: "Perfect for families, the Loft Suite features two comfortable bedrooms with Zuikerboschkop mountain views from the first-floor balcony, a welcoming lounge area, and spacious bathroom. Connects with Master Suite for larger groups.",
   mainAmenities: [{
-    text: "Spectacular mountain views",
+    text: "Zuikerboschkop views from balcony",
     emoji: "🏔️"
   }, {
     text: "Hot water bottles & electric blankets",
@@ -68,13 +68,13 @@ const luxurySuites = [{
     text: "Two separate bedrooms",
     emoji: "🛏️"
   }],
-  additionalAmenities: ["Comfortable family lounge area", "Connects to Master Suite for large groups", "Free WiFi throughout both bedrooms", "Premium tea and coffee selection", "Charlotte Rhys toiletries and amenities", "Extra mattresses for additional guests", "Cot with linen for infants", "High chair & microwave facilities", "Mountain view from every window", "Secure covered parking"],
+  additionalAmenities: ["Comfortable family lounge area", "Connects to Master Suite for large groups", "Free WiFi throughout both bedrooms", "Premium tea and coffee selection", "Charlotte Rhys toiletries and amenities", "Extra mattresses for additional guests", "Cot with linen for infants", "High chair & microwave facilities", "Zuikerboschkop mountain views from first-floor balcony", "Secure covered parking"],
   images: ["/images/suites/loft-suite-01.jpg", "/images/suites/loft-suite-02.jpg", "/images/suites/loft-suite-03.jpg", "/images/suites/loft-suite-04.jpg", "/images/suites/loft-suite-05.jpg", "/images/suites/loft-suite-06.jpg", "/images/suites/loft-suite-07.jpg"],
   slug: "loft-suite",
   roomId: 5,
   urgencyMessage: "Ideal for families",
   testimonial: {
-    quote: "Perfect for our family of four. The kids loved having their own space while we enjoyed the mountain views.",
+    quote: "Perfect for our family of four. The kids loved having their own space while we enjoyed the Zuikerboschkop views from the balcony.",
     author: "The Johnson Family",
     rating: 5
   }
@@ -256,7 +256,7 @@ const selfCateringHouse = {
     text: "Multiple entertainment zones",
     emoji: "📺"
   }, {
-    text: "Highland mountain views",
+    text: "Highland countryside views",
     emoji: "🏔️"
   }],
   additionalAmenities: ["8 fully equipped bedrooms", "Multiple bathroom facilities", "Large commercial-style kitchen", "Indoor and outdoor dining spaces", "Entertainment and lounge areas", "Secure off-street parking", "Free WiFi throughout property", "Laundry facilities included", "Barbecue and outdoor entertaining", "Group accommodation rates", "Corporate retreat facilities", "Event hosting capabilities"],

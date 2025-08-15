@@ -3,7 +3,7 @@ export const STRUCTURED_DATA = {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
     "name": "The Browns Luxury Guest Suites & Cottage",
-    "description": "Luxury self-catering accommodation in Dullstroom, Mpumalanga featuring premium suites with mountain views and world-class fly-fishing.",
+    "description": "Luxury self-catering accommodation in Dullstroom, Mpumalanga featuring premium suites with highland views and world-class fly-fishing.",
     "url": "https://thebrowns.co.za",
     "telephone": "+27000000000",
     "email": "info@thebrowns.co.za",
@@ -23,7 +23,7 @@ export const STRUCTURED_DATA = {
     "amenityFeature": [
       { "@type": "LocationFeatureSpecification", "name": "Free WiFi" },
       { "@type": "LocationFeatureSpecification", "name": "Self-catering" },
-      { "@type": "LocationFeatureSpecification", "name": "Mountain Views" },
+      { "@type": "LocationFeatureSpecification", "name": "Highland Views" },
       { "@type": "LocationFeatureSpecification", "name": "Fly Fishing Access" },
       { "@type": "LocationFeatureSpecification", "name": "Private Parking" }
     ],
