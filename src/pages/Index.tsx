@@ -262,19 +262,19 @@ const Index = () => {
       {/* Testimonials */}
       <section 
         ref={testimonialsRef}
-        className={`py-8 sm:py-12 md:py-16 lg:py-20 bg-background transition-all duration-1000 ${
+        className={`py-6 sm:py-8 md:py-12 lg:py-16 bg-background transition-all duration-1000 ${
           testimonialsVisible ? 'scroll-animate' : 'opacity-0'
         }`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+          <div className="text-center mb-6 sm:mb-8 md:mb-10">
             <h2 className="text-primary mb-4">Guest Testimonials</h2>
             <p className="text-fluid-lg text-muted-foreground max-w-none sm:max-w-2xl mx-auto leading-relaxed">
               See what our guests say about their luxury stay at The Browns.
             </p>
           </div>
           
-          <div className="mobile-grid max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6 max-w-7xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <div 
                 key={index}
@@ -289,7 +289,7 @@ const Index = () => {
       </section>
 
       {/* Review Showcase Section */}
-      <ReviewShowcase compact={true} />
+      <ReviewShowcase compact={true} className="py-4 sm:py-6" />
 
       {/* Dullstroom Highlights - Interactive Infographic */}
       <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-accent">

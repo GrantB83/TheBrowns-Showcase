@@ -18,8 +18,8 @@ export function TestimonialCard({
 }: TestimonialCardProps) {
   return (
     <Card className={className}>
-      <CardContent className="p-6">
-        <div className="flex items-center mb-4">
+      <CardContent className="p-4 sm:p-5">
+        <div className="flex items-center mb-3">
           {[...Array(5)].map((_, i) => (
             <Star
               key={i}
@@ -35,7 +35,7 @@ export function TestimonialCard({
           </span>
         </div>
         
-        <blockquote className="text-muted-foreground italic mb-4">
+        <blockquote className="text-muted-foreground italic mb-3">
           "{quote}"
         </blockquote>
         
