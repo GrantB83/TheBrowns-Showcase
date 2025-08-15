@@ -248,8 +248,8 @@ export default function Activities() {
 
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-b from-primary/10 to-background py-16 lg:py-24">
-          <div className="container mx-auto px-4">
+        <section className="relative bg-gradient-to-b from-primary/10 to-background section-spacing">
+          <div className="responsive-container px-fluid-md">
             <div className="max-w-5xl mx-auto text-center">
               <Badge variant="secondary" className="mb-4 text-sm px-4 py-2">
                 <Clock className="h-4 w-4 mr-2" />
@@ -275,14 +275,14 @@ export default function Activities() {
                 </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                <Button asChild size="lg" className="min-h-[48px] flex-1">
+              <div className="flex flex-col sm:flex-row gap-fluid-md justify-center max-w-md mx-auto">
+                <Button asChild size="lg" className="min-h-[48px] flex-1 touch-manipulation">
                   <a href="https://book.nightsbridge.com/00000" target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="h-4 w-4 mr-2" />
                     Book Your Experience
                   </a>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="min-h-[48px] flex-1">
+                <Button asChild variant="outline" size="lg" className="min-h-[48px] flex-1 touch-manipulation">
                   <Link to="/accommodations">View Suites</Link>
                 </Button>
               </div>
@@ -291,11 +291,11 @@ export default function Activities() {
         </section>
 
         {/* Activities Categories */}
-        <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="mb-4">Signature Highland Experiences</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+        <section className="section-spacing">
+          <div className="responsive-container px-fluid-md">
+            <div className="text-center mb-fluid-2xl">
+              <h2 className="mb-fluid-lg">Signature Highland Experiences</h2>
+              <p className="text-fluid-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 Curated activities that showcase the best of Dullstroom and the Mpumalanga highlands, 
                 from adrenaline adventures to peaceful retreats.
               </p>

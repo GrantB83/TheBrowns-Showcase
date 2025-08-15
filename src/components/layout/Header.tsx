@@ -62,33 +62,33 @@ export function Header() {
         ? "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 shadow-sm" 
         : "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     )}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="responsive-container px-fluid-md">
         <div className="flex h-16 md:h-18 lg:h-20 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0">
             <img 
               src="/assets/logo.png" 
               alt="The Browns Logo" 
-              className="h-10 w-auto sm:h-12 md:h-14 lg:h-16"
+              className="h-8 w-auto xs:h-9 sm:h-10 md:h-12 lg:h-14 transition-all duration-200"
             />
           </Link>
 
           {/* Desktop Navigation */}
           <nav 
             ref={containerRef}
-            className="hidden md:flex items-center space-x-3 lg:space-x-4 xl:space-x-6"
+            className="hidden md:flex items-center space-x-2 lg:space-x-3 xl:space-x-4"
           >
             {/* Dynamic visible items */}
-            <div className="flex items-center space-x-3 lg:space-x-4 xl:space-x-6">
+            <div className="flex items-center space-x-2 lg:space-x-3 xl:space-x-4">
               {visibleItems.map((item) => (
                 <Link
                   key={item.name}
                   ref={(el) => registerItemRef?.(item.name, el)}
                   to={item.href}
                   className={cn(
-                    "text-sm lg:text-base font-medium transition-colors hover:text-primary min-h-[44px] flex items-center whitespace-nowrap",
+                    "text-fluid-sm font-medium transition-colors hover:text-primary min-h-[44px] px-2 lg:px-3 flex items-center whitespace-nowrap rounded-md hover:bg-accent/50",
                     location.pathname === item.href
-                      ? "text-primary"
+                      ? "text-primary bg-accent"
                       : "text-muted-foreground"
                   )}
                 >
@@ -103,7 +103,7 @@ export function Header() {
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="ghost"
-                    className="text-sm lg:text-base font-medium text-muted-foreground hover:text-primary min-h-[44px] px-2"
+                    className="text-fluid-sm font-medium text-muted-foreground hover:text-primary min-h-[44px] px-2 lg:px-3"
                   >
                     More
                     <ChevronDown className="ml-1 h-4 w-4" />
@@ -144,8 +144,8 @@ export function Header() {
           </nav>
 
           {/* Book Now Button & Mobile Menu */}
-          <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
-            <Button asChild className="hidden sm:inline-flex text-fluid-sm px-3 py-2 lg:px-4 lg:py-2" size="sm">
+          <div className="flex items-center space-x-2 sm:space-x-3">
+            <Button asChild className="hidden xs:inline-flex text-fluid-sm px-2 xs:px-3 py-2 lg:px-4 lg:py-2 min-h-[40px] md:min-h-[44px]" size="sm">
               <a 
                 href="https://book.nightsbridge.com/00000" 
                 target="_blank" 
@@ -168,26 +168,26 @@ export function Header() {
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-80">
-                <div className="flex flex-col h-full">
+              <SheetContent side="right" className="w-[85vw] max-w-sm">
+                <div className="flex flex-col h-full py-2">
                   {/* Logo */}
-                  <div className="flex items-center mb-8">
+                  <div className="flex items-center mb-6 px-2">
                     <img 
                       src="/assets/logo.png" 
                       alt="The Browns Logo" 
-                      className="h-10 w-auto"
+                      className="h-8 w-auto"
                     />
                   </div>
 
                   {/* Navigation */}
-                  <nav className="flex-1">
+                  <nav className="flex-1 px-2">
                     <div className="space-y-1">
                       {navigation.map((item) => (
                         <Link
                           key={item.name}
                           to={item.href}
                           className={cn(
-                            "block px-4 py-4 text-base font-medium transition-colors hover:text-primary rounded-lg min-h-[44px] flex items-center",
+                            "block px-3 py-3 text-fluid-base font-medium transition-colors hover:text-primary rounded-lg min-h-[48px] flex items-center touch-manipulation",
                             location.pathname === item.href
                               ? "text-primary bg-accent"
                               : "text-muted-foreground hover:bg-accent/50"
@@ -200,35 +200,35 @@ export function Header() {
                     </div>
 
                     {/* Contact Info in Mobile Menu */}
-                    <div className="mt-8 pt-6 border-t space-y-4">
-                      <div className="flex items-center space-x-3 text-sm min-h-[44px]">
+                    <div className="mt-6 pt-4 border-t space-y-3 px-2">
+                      <div className="flex items-center space-x-3 text-fluid-sm min-h-[48px]">
                         <Phone className="h-4 w-4 text-primary flex-shrink-0" />
                         <a 
                           href="tel:+27000000000" 
-                          className="hover:text-primary py-2"
+                          className="hover:text-primary py-2 touch-manipulation"
                           aria-label="Call The Browns"
                         >
                           +27 00 000 0000
                         </a>
                       </div>
-                      <div className="flex items-center space-x-3 text-sm min-h-[44px]">
+                      <div className="flex items-center space-x-3 text-fluid-sm min-h-[48px]">
                         <Mail className="h-4 w-4 text-primary flex-shrink-0" />
                         <a 
                           href="mailto:stay@thebrowns.co.za" 
-                          className="hover:text-primary py-2"
+                          className="hover:text-primary py-2 touch-manipulation break-all"
                           aria-label="Email The Browns"
                         >
                           stay@thebrowns.co.za
                         </a>
                       </div>
-                      <div className="flex items-center space-x-3 text-sm min-h-[44px]">
+                      <div className="flex items-center space-x-3 text-fluid-sm min-h-[48px]">
                         <button
                           onClick={() => {
                             const message = "Hi! I'd like to enquire about The Browns Guest Suites.";
                             const whatsappUrl = `https://wa.me/27000000000?text=${encodeURIComponent(message)}`;
                             window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
                           }}
-                          className="flex items-center space-x-3 w-full text-left hover:text-primary py-2"
+                          className="flex items-center space-x-3 w-full text-left hover:text-primary py-2 touch-manipulation"
                           aria-label="Contact via WhatsApp"
                         >
                           <svg className="h-4 w-4 text-green-600 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
@@ -241,8 +241,8 @@ export function Header() {
                   </nav>
 
                   {/* Book Now Button */}
-                  <div className="pt-6 border-t">
-                    <Button asChild className="w-full">
+                  <div className="pt-4 border-t px-2">
+                    <Button asChild className="w-full min-h-[48px] text-fluid-base touch-manipulation">
                       <a 
                         href="https://book.nightsbridge.com/00000" 
                         target="_blank" 

@@ -44,37 +44,37 @@ const attractions = [
 export default function Location() {
   return (
     <div className="min-h-screen">
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-accent to-muted">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-spacing bg-gradient-to-br from-accent to-muted">
+        <div className="responsive-container px-fluid-md">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-primary mb-4 sm:mb-6">Location & Activities</h1>
-            <p className="text-fluid-lg sm:text-fluid-xl text-muted-foreground leading-relaxed max-w-none sm:max-w-3xl mx-auto">
+            <h1 className="text-primary mb-fluid-lg">Location & Activities</h1>
+            <p className="text-fluid-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               Discover Dullstroom's Highland Magic
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-spacing bg-background">
+        <div className="responsive-container px-fluid-md">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12 lg:mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-fluid-xl mb-fluid-3xl">
               <div className="order-2 lg:order-1">
-                <h2 className="text-primary mb-4 sm:mb-6">Perfect Location</h2>
-                <div className="space-y-4 text-muted-foreground">
+                <h2 className="text-primary mb-fluid-lg">Perfect Location</h2>
+                <div className="space-y-fluid-md text-muted-foreground">
                   <div className="flex items-start space-x-3">
                     <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <strong className="text-foreground text-fluid-base">279 Blue Crane Drive, Dullstroom 1110</strong>
+                      <strong className="text-foreground text-fluid-lg">279 Blue Crane Drive, Dullstroom 1110</strong>
                       <p className="text-fluid-base leading-relaxed">Walking distance to shops, restaurants, and the Dullstroom Dam</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="bg-muted rounded-lg p-6 sm:p-8 text-center order-1 lg:order-2">
-                <h3 className="font-semibold mb-4 text-fluid-lg">Interactive Map</h3>
-                <p className="text-muted-foreground mb-4 sm:mb-6 text-fluid-base">Interactive map showing our location and nearby attractions</p>
-                <Button variant="outline" asChild className="min-h-[48px] text-fluid-base">
+              <div className="bg-muted rounded-lg p-fluid-xl text-center order-1 lg:order-2">
+                <h3 className="font-semibold mb-fluid-md text-fluid-lg">Interactive Map</h3>
+                <p className="text-muted-foreground mb-fluid-lg text-fluid-base">Interactive map showing our location and nearby attractions</p>
+                <Button variant="outline" asChild className="min-h-[48px] text-fluid-base touch-manipulation">
                   <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
                     View on Google Maps
                   </a>
@@ -82,26 +82,26 @@ export default function Location() {
               </div>
             </div>
 
-            <h2 className="text-primary text-center mb-8 sm:mb-10 lg:mb-12">Dullstroom Activities</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
+            <h2 className="text-primary text-center mb-fluid-2xl">Dullstroom Activities</h2>
+            <div className="card-grid">
               {attractions.map((attraction, index) => (
                 <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
                   <div className="relative">
                     <img
                       src={attraction.image}
                       alt={attraction.title}
-                      className="w-full h-40 sm:h-48 object-cover"
+                      className="w-full h-40 sm:h-48 md:h-52 object-cover"
                       loading="lazy"
                     />
-                    <div className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-primary/10 p-2 rounded-lg">
+                    <div className="absolute top-fluid-md left-fluid-md bg-primary/10 p-2 rounded-lg">
                       <attraction.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                     </div>
                   </div>
-                  <CardHeader className="p-4 sm:p-6">
+                  <CardHeader className="p-fluid-lg">
                     <CardTitle className="text-fluid-lg leading-tight">{attraction.title}</CardTitle>
                   </CardHeader>
-                  <CardContent className="p-4 sm:p-6 pt-0">
-                    <p className="text-muted-foreground text-fluid-sm leading-relaxed">{attraction.description}</p>
+                  <CardContent className="p-fluid-lg pt-0">
+                    <p className="text-muted-foreground text-fluid-base leading-relaxed">{attraction.description}</p>
                   </CardContent>
                 </Card>
               ))}
