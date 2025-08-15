@@ -108,14 +108,12 @@ const testimonials = [
 ];
 
 const keyFeatures = [
-  { icon: MapPin, title: "Prime Location", description: "279 Blue Crane Drive, walking distance to Dullstroom's shops and restaurants" },
-  { icon: Wifi, title: "Free WiFi", description: "High-speed internet throughout the property" },
+  { icon: MapPin, title: "Prime Location", description: "278 & 279 Blue Crane Drive, walking distance to Dullstroom's shops and restaurants" },
+  { icon: Wifi, title: "Free WiFi & Netflix", description: "High-speed internet with Netflix throughout the property" },
   { icon: Car, title: "Secure Parking", description: "Safe, covered parking for all guests" },
   { icon: Coffee, title: "Nespresso & Treats", description: "Premium coffee machines with exclusive teas and snacks" },
-  { icon: Zap, title: "Backup Power", description: "Uninterrupted stay with backup power systems" },
-  { icon: Shield, title: "Daily Cleaning", description: "Professional housekeeping services available" },
-  { icon: Droplets, title: "Backup Water", description: "Reliable water supply with backup systems" },
-  { icon: Tv, title: "Entertainment", description: "Netflix, DVD players, and premium entertainment" }
+  { icon: Zap, title: "Backup Power & Water", description: "Uninterrupted stay with backup systems" },
+  { icon: Shield, title: "Daily Housekeeping", description: "Professional housekeeping services daily" },
 ];
 
 const Index = () => {
@@ -127,9 +125,9 @@ const Index = () => {
   return (
     <>
       <SEO
-        title="The Browns - Luxury Highland Accommodation | Dullstroom Guest Suites 2025"
+        title="The Browns Luxury Guest Suites & Cottage | Dullstroom Guest Suites 2025 | Mpumalanga Highlands Accommodation"
         description="Premier luxury guest suites in Dullstroom's misty highlands. World-class fly-fishing access, Panorama Route base, mountain views, premium amenities. Book direct for best rates and exclusive perks."
-        keywords="Dullstroom luxury accommodation 2025, highland guest suites Mpumalanga, boutique hotel fly fishing, Panorama Route accommodation, luxury self-catering Dullstroom, mountain view suites South Africa"
+        keywords="Dullstroom luxury accommodation 2025, boutique guesthouse, Mpumalanga highlands accommodation,fly fishing, Panorama Route accommodation, luxury self-catering Dullstroom, luxury suites Dullstroom"
       />
       
       <StructuredData 
@@ -192,10 +190,7 @@ const Index = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-primary mb-4 sm:mb-6">Luxury Accommodation in Dullstroom</h2>
             <p className="text-fluid-lg text-muted-foreground mb-8 sm:mb-10 md:mb-12 leading-relaxed max-w-none sm:max-w-3xl mx-auto">
-              Nestled in Dullstroom, Mpumalanga, our luxurious suites offer modern comfort in two exquisite properties. 
-              The Luxury Guest Suites accommodate up to 10 adults and 2 children across 4 elegant ensuite rooms, 
-              while our charming Cottage Suites provide intimate accommodation for up to 6 adults and 1 child. 
-              Experience self-catering excellence with premium amenities in the heart of South Africa's premier highland retreat.
+            Located in Dullstroom, Mpumalanga, our luxurious suites combine modern comfort with refined style across two exceptional properties. The Luxury Guest Suites host up to 10 adults and 2 children in four elegant ensuite rooms, while the charming Cottage Suites offer intimate accommodation for up to 6 adults and 1 child. Enjoy premium self-catering amenities in the heart of South Africa’s premier highland retreat.
             </p>
             
             <div className="mobile-grid max-w-6xl mx-auto">
