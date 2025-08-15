@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/ui/seo";
 import { StructuredData } from "@/components/ui/structured-data";
-import { PerformanceEnhancedSlider } from "@/components/ui/performance-enhanced-slider";
+import { EnhancedImageSlider } from "@/components/ui/enhanced-image-slider";
 import { SuiteCard } from "@/components/ui/suite-card";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { Card, CardContent } from "@/components/ui/card";
@@ -139,7 +139,7 @@ const Index = () => {
       <div className="min-h-screen mobile-scroll-smooth">
       {/* Hero Section - Mobile Optimized */}
       <section className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen mobile-select-none">
-        <PerformanceEnhancedSlider 
+        <EnhancedImageSlider 
           images={heroImages}
           className="h-full w-full"
           autoPlay={!isTouch} // Disable autoplay on touch devices for better UX

@@ -130,7 +130,7 @@ export function OptimizedHeroImage({
             alt={alt}
             loading={priority ? "eager" : "lazy"}
             decoding={priority ? "sync" : "async"}
-            fetchPriority={priority ? "high" : "auto"}
+            {...(priority && { fetchpriority: "high" } as any)}
             className={cn(
               "w-full h-full object-cover transition-opacity duration-500",
               isLoaded ? "opacity-100" : "opacity-0"
