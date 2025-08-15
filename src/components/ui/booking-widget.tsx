@@ -319,7 +319,7 @@ export function BookingWidget({
             WhatsApp: +27 00 000 0000
           </Button>
           <Button variant="ghost" size="sm" asChild>
-            <a href="mailto:info@thebrowns.co.za">
+            <a href="mailto:stay@thebrowns.co.za">
               Email Support
             </a>
           </Button>

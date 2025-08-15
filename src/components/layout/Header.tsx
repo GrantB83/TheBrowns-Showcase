@@ -214,11 +214,11 @@ export function Header() {
                       <div className="flex items-center space-x-3 text-sm min-h-[44px]">
                         <Mail className="h-4 w-4 text-primary flex-shrink-0" />
                         <a 
-                          href="mailto:info@thebrowns.co.za" 
+                          href="mailto:stay@thebrowns.co.za" 
                           className="hover:text-primary py-2"
                           aria-label="Email The Browns"
                         >
-                          info@thebrowns.co.za
+                          stay@thebrowns.co.za
                         </a>
                       </div>
                       <div className="flex items-center space-x-3 text-sm min-h-[44px]">

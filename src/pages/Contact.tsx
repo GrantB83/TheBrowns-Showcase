@@ -61,10 +61,10 @@ export default function Contact() {
                     <div className="min-w-0 flex-1">
                       <p className="font-medium text-sm sm:text-base">Email</p>
                       <a 
-                        href="mailto:info@thebrowns.co.za" 
+                        href="mailto:stay@thebrowns.co.za" 
                         className="text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base touch-manipulation block break-all"
                       >
-                        info@thebrowns.co.za
+                        stay@thebrowns.co.za
                       </a>
                     </div>
                   </div>

@@ -6,7 +6,7 @@ export const STRUCTURED_DATA = {
     "description": "Luxury self-catering accommodation in Dullstroom, Mpumalanga featuring premium suites with highland views and world-class fly-fishing.",
     "url": "https://thebrowns.co.za",
     "telephone": "+27000000000",
-    "email": "info@thebrowns.co.za",
+    "email": "stay@thebrowns.co.za",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "279 Blue Crane Drive",
@@ -52,7 +52,7 @@ export const STRUCTURED_DATA = {
     "name": "The Browns Luxury Guest Suites",
     "image": "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=1200&q=80",
     "telephone": "+27000000000",
-    "email": "info@thebrowns.co.za",
+    "email": "stay@thebrowns.co.za",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "279 Blue Crane Drive",

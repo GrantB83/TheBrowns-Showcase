@@ -147,7 +147,7 @@ export function FAQSection() {
             </a>
           </Button>
           <Button variant="outline" asChild>
-            <a href="mailto:info@thebrowns.co.za">
+            <a href="mailto:stay@thebrowns.co.za">
               Email Support
             </a>
           </Button>

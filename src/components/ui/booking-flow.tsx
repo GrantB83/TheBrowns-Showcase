@@ -263,8 +263,8 @@ export function BookingFlow({
             WhatsApp Support
           </Button>
           <Button variant="ghost" size="sm" asChild>
-            <a href="mailto:info@thebrowns.co.za">
-              Email: info@thebrowns.co.za
+            <a href="mailto:stay@thebrowns.co.za">
+              Email: stay@thebrowns.co.za
             </a>
           </Button>
         </div>

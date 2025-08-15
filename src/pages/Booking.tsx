@@ -426,7 +426,7 @@ export default function Booking() {
                   </CardHeader>
                   <CardContent>
                     <Button asChild variant="outline" className="w-full min-h-[44px]">
-                      <a href="mailto:info@thebrowns.co.za">info@thebrowns.co.za</a>
+                      <a href="mailto:stay@thebrowns.co.za">stay@thebrowns.co.za</a>
                     </Button>
                   </CardContent>
                 </Card>

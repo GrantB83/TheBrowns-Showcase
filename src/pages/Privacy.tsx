@@ -142,7 +142,7 @@ export default function Privacy() {
                 <div className="text-muted-foreground">
                   <p><strong>The Browns Luxury Guest Suites & Cottage</strong></p>
                   <p>279 Blue Crane Drive, Dullstroom 1110, Mpumalanga</p>
-                  <p>Email: info@thebrowns.co.za</p>
+                  <p>Email: stay@thebrowns.co.za</p>
                   <p>Phone: +27 00 000 0000</p>
                 </div>
               </section>

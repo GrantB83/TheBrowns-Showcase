@@ -36,7 +36,7 @@ export function StructuredData({ type, data }: StructuredDataProps) {
             longitude: 30.1078
           },
           telephone: "+27000000000",
-          email: "info@thebrowns.co.za",
+          email: "stay@thebrowns.co.za",
           starRating: {
             "@type": "Rating",
             ratingValue: "5",

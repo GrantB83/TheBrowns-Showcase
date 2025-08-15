@@ -27,7 +27,7 @@ export function MobileSEO({
         "description": "Premium self-catering accommodation in Dullstroom, perfect for families exploring the Panorama Route and highland adventures",
         "url": "https://thebrowns.co.za",
         "telephone": "+27000000000",
-        "email": "info@thebrowns.co.za",
+        "email": "stay@thebrowns.co.za",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "279 Blue Crane Drive",

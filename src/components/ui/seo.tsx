@@ -91,7 +91,7 @@ export function SEO({
           description: "Premier boutique luxury accommodation in Dullstroom's misty highlands, specializing in personalized hospitality, world-class fly-fishing access, and Panorama Route adventures.",
           url: "https://thebrowns.co.za",
           telephone: "+27000000000",
-          email: "info@thebrowns.co.za",
+          email: "stay@thebrowns.co.za",
           address: {
             "@type": "PostalAddress",
             streetAddress: "279 Blue Crane Drive",
