@@ -11,12 +11,12 @@ const luxurySuites = [{
   title: "Master Suite",
   capacity: "2 adults + 2 children under 12",
   bedConfig: "King XL bed + Double sofa bed (kids under 12)",
-  description: "Our flagship suite offers the ultimate in luxury with a spacious private unit featuring a dedicated dressing room, elegant lounge area, and ensuite bathroom with double vanity. Perfect for romantic getaways with modern conveniences.",
+  description: "Our flagship suite offers the ultimate in luxury with a spacious private unit featuring a dedicated dressing room, spacious lounge area, and full ensuite bathroom with double vanity and double shower. Perfect for romantic getaways with modern conveniences.",
   mainAmenities: [{
     text: "Hot water bottles & electric blankets",
     emoji: "🔥"
   }, {
-    text: "Netflix & entertainment system",
+    text: "WiFi & Netflix system",
     emoji: "📺"
   }, {
     text: "Nespresso coffee machine",
@@ -293,10 +293,6 @@ export default function Suites() {
         <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-primary/10 to-accent/5">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto text-center mb-8">
-              <Badge variant="secondary" className="mb-4 text-sm px-4 py-2">
-                <Clock className="h-4 w-4 mr-2" />
-                Limited 2025 Availability
-              </Badge>
               
               <h1 className="text-primary mb-6">Discover Dullstroom Luxury Suites 2025</h1>
               
