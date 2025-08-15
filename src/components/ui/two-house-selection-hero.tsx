@@ -59,8 +59,8 @@ export function TwoHouseSelectionHero({ onFilterChange, activeFilter }: TwoHouse
             </h1>
             
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8 max-w-4xl mx-auto">
-              Experience luxury highland accommodation with two distinct styles: modern sophistication in our Guest Suites 
-              or authentic cottage charm in our Heritage Cottages. Each offers premium amenities and personalized service.
+              Experience luxury highland accommodation with two distinct styles: modern sophistication in our Luxury Guest Suites 
+              or authentic cottage charm in our neighbouring Heritage Cottage. Each offers premium amenities and personalized service.
             </p>
             
             <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mb-8 max-w-2xl mx-auto">
@@ -69,7 +69,7 @@ export function TwoHouseSelectionHero({ onFilterChange, activeFilter }: TwoHouse
                 <span>Direct Booking Benefits Included</span>
               </div>
               <p className="text-sm text-muted-foreground mt-2">
-                Best rate guaranteed • Free welcome drink • Complimentary WiFi • Late checkout
+                Best rate guaranteed • Free welcome drink • Complimentary WiFi • Flexible cancellation
               </p>
             </div>
           </div>
@@ -84,7 +84,7 @@ export function TwoHouseSelectionHero({ onFilterChange, activeFilter }: TwoHouse
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
                   src="/images/hero/browns-exterior.jpg"
-                  alt="The Browns Luxury Guest Suites - Modern highland accommodation"
+                  alt="The Browns Luxury Guest Suites - Modern highlands accommodation"
                   className="w-full h-full object-cover transition-transform hover:scale-105"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
@@ -130,7 +130,7 @@ export function TwoHouseSelectionHero({ onFilterChange, activeFilter }: TwoHouse
                 <div className="grid grid-cols-2 gap-2 text-sm">
                   <div className="flex items-center gap-1">
                     <span className="text-base" role="img" aria-label="spa">🛁</span>
-                    <span>Spa bathrooms</span>
+                    <span>Modern bathrooms</span>
                   </div>
                   <div className="flex items-center gap-1">
                     <span className="text-base" role="img" aria-label="mountain">🏔️</span>
@@ -257,10 +257,6 @@ export function TwoHouseSelectionHero({ onFilterChange, activeFilter }: TwoHouse
                 View All Suites
               </Button>
             </div>
-            
-            <p className="text-sm text-muted-foreground">
-              Questions? Call us directly: <a href="tel:+27000000000" className="text-primary hover:underline">+27 00 000 0000</a>
-            </p>
           </div>
         </div>
       </div>
