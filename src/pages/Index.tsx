@@ -139,7 +139,7 @@ const Index = () => {
       <MobileSEO />
       <div className="min-h-screen mobile-scroll-smooth">
       {/* Hero Section - Mobile Optimized */}
-      <section className="relative h-[50vh] xs:h-[55vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[85vh] mobile-select-none">
+      <section className="relative h-[45vh] xs:h-[50vh] sm:h-[55vh] md:h-[65vh] lg:h-[75vh] xl:h-[80vh] mobile-select-none">
         <EnhancedImageSlider 
           images={heroImages}
           className="h-full w-full"
@@ -147,7 +147,7 @@ const Index = () => {
           autoPlayInterval={6000}
           enableSwipe={true}
         />
-        <div className="absolute bottom-16 xs:bottom-18 sm:bottom-20 md:bottom-24 left-1/2 transform -translate-x-1/2 text-center w-full px-3 xs:px-4 z-20">
+        <div className="absolute bottom-6 xs:bottom-8 sm:bottom-12 md:bottom-16 lg:bottom-20 left-1/2 transform -translate-x-1/2 text-center w-full px-3 xs:px-4 z-20">
           <div className="flex flex-col xs:flex-row gap-3 xs:gap-4 max-w-sm xs:max-w-md mx-auto">
             <Button 
               size="lg" 
@@ -183,7 +183,7 @@ const Index = () => {
       {/* Property Overview */}
       <section 
         ref={overviewRef}
-        className={`py-12 sm:py-16 md:py-20 lg:py-24 bg-background transition-all duration-1000 ${
+        className={`py-6 sm:py-10 md:py-16 lg:py-20 bg-background transition-all duration-1000 ${
           overviewVisible ? 'scroll-animate' : 'opacity-0'
         }`}
       >
