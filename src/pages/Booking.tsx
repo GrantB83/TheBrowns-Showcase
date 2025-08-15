@@ -110,7 +110,7 @@ const bookingSteps = [
   {
     step: "2", 
     title: "Choose Your Suite",
-    description: "Browse our luxury accommodations with personalized recommendations",
+    description: "Browse our luxury accommodation with personalized recommendations",
     details: "Personalized suggestions • Detailed descriptions • Virtual tours"
   },
   {

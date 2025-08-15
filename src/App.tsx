@@ -29,7 +29,8 @@ const App = () => (
           <Route path="/" element={<Layout />}>
             <Route index element={<Index />} />
             <Route path="about" element={<About />} />
-            <Route path="accommodations" element={<Suites />} />
+            <Route path="accommodation" element={<Suites />} />
+            <Route path="accommodations" element={<Suites />} /> {/* Legacy route redirect */}
             <Route path="suites" element={<Suites />} /> {/* Legacy route redirect */}
             <Route path="gallery" element={<Gallery />} />
             <Route path="activities" element={<Activities />} />

@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Accommodations", href: "/accommodations" },
+  { name: "Accommodation", href: "/accommodation" },
   { name: "Gallery", href: "/gallery" },
   { name: "Activities", href: "/activities" },
   { name: "Pay What You Can", href: "/pay-what-you-can" },
@@ -20,7 +20,7 @@ const navigation = [
 // Priority order for showing items (high priority stays visible longest)
 const itemPriority = {
   "Home": 1,
-  "Accommodations": 2, 
+  "Accommodation": 2, 
   "Activities": 3,
   "Booking": 4,
   "Contact": 5,

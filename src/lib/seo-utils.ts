@@ -3,8 +3,8 @@ export function generateSitemap() {
   
   const staticPages = [
     { 
-      url: "", 
-      priority: "1.0", 
+      url: "/accommodation", 
+      priority: "0.9", 
       changefreq: "weekly",
       lastmod: new Date().toISOString().split('T')[0]
     },
@@ -12,12 +12,6 @@ export function generateSitemap() {
       url: "/about", 
       priority: "0.9", 
       changefreq: "monthly",
-      lastmod: new Date().toISOString().split('T')[0]
-    },
-    { 
-      url: "/accommodations", 
-      priority: "0.9", 
-      changefreq: "weekly",
       lastmod: new Date().toISOString().split('T')[0]
     },
     { 
@@ -66,14 +60,14 @@ export function generateSitemap() {
 
   // Suite-specific pages for internal linking
   const suitePages = [
-    { url: "/accommodations#master-suite", priority: "0.8", changefreq: "weekly", lastmod: new Date().toISOString().split('T')[0] },
-    { url: "/accommodations#garden-suite", priority: "0.8", changefreq: "weekly", lastmod: new Date().toISOString().split('T')[0] },
-    { url: "/accommodations#loft-suite", priority: "0.8", changefreq: "weekly", lastmod: new Date().toISOString().split('T')[0] },
-    { url: "/accommodations#cove-suite", priority: "0.8", changefreq: "weekly", lastmod: new Date().toISOString().split('T')[0] },
-    { url: "/accommodations#robin-suite", priority: "0.8", changefreq: "weekly", lastmod: new Date().toISOString().split('T')[0] },
-    { url: "/accommodations#blue-crane-suite", priority: "0.8", changefreq: "weekly", lastmod: new Date().toISOString().split('T')[0] },
-    { url: "/accommodations#falcon-suite", priority: "0.8", changefreq: "weekly", lastmod: new Date().toISOString().split('T')[0] },
-    { url: "/accommodations#self-catering-house", priority: "0.7", changefreq: "weekly", lastmod: new Date().toISOString().split('T')[0] }
+    { url: "/accommodation#master-suite", priority: "0.8", changefreq: "weekly", lastmod: new Date().toISOString().split('T')[0] },
+    { url: "/accommodation#garden-suite", priority: "0.8", changefreq: "weekly", lastmod: new Date().toISOString().split('T')[0] },
+    { url: "/accommodation#loft-suite", priority: "0.8", changefreq: "weekly", lastmod: new Date().toISOString().split('T')[0] },
+    { url: "/accommodation#cove-suite", priority: "0.8", changefreq: "weekly", lastmod: new Date().toISOString().split('T')[0] },
+    { url: "/accommodation#robin-suite", priority: "0.8", changefreq: "weekly", lastmod: new Date().toISOString().split('T')[0] },
+    { url: "/accommodation#blue-crane-suite", priority: "0.8", changefreq: "weekly", lastmod: new Date().toISOString().split('T')[0] },
+    { url: "/accommodation#falcon-suite", priority: "0.8", changefreq: "weekly", lastmod: new Date().toISOString().split('T')[0] },
+    { url: "/accommodation#self-catering-house", priority: "0.7", changefreq: "weekly", lastmod: new Date().toISOString().split('T')[0] }
   ];
 
   const allPages = [...staticPages, ...suitePages];
@@ -97,7 +91,7 @@ export function generateRobotsTxt() {
 Allow: /
 
 # Enhanced crawling for key pages
-Allow: /accommodations
+Allow: /accommodation
 Allow: /gallery
 Allow: /activities
 Allow: /booking

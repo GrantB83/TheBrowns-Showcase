@@ -169,8 +169,8 @@ const Index = () => {
               className="bg-white/90 hover:bg-white border-white text-foreground min-h-[48px] text-fluid-base font-medium touch-feedback mobile-tap-highlight"
             >
               <Link 
-                to="/accommodations"
-                aria-label="View our luxury suite accommodations"
+                to="/accommodation"
+                aria-label="View our luxury suite accommodation"
               >
                 View Our Suites
               </Link>
@@ -248,7 +248,7 @@ const Index = () => {
               className="min-h-[48px] text-fluid-base font-medium touch-feedback mobile-tap-highlight"
             >
               <Link 
-                to="/accommodations"
+                to="/accommodation"
                 aria-label="View all luxury accommodation options"
               >
                 View All Suites

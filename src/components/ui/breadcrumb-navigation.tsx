@@ -16,8 +16,9 @@ interface BreadcrumbNavigationProps {
 const routeLabels: Record<string, string> = {
   "": "Home",
   "about": "About",
-  "accommodations": "Accommodations", 
-  "suites": "Accommodations", // Legacy route mapping
+  "accommodation": "Accommodation",
+  "accommodations": "Accommodation", // Legacy route mapping
+  "suites": "Accommodation", // Legacy route mapping
   "gallery": "Gallery",
   "activities": "Activities",
   "location": "Location",
