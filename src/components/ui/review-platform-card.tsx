@@ -9,6 +9,7 @@ interface ReviewPlatformCardProps {
   reviewCount: number;
   url: string;
   color: string;
+  logo?: React.ComponentType<{ className?: string }>;
   className?: string;
 }
 
@@ -19,6 +20,7 @@ export function ReviewPlatformCard({
   reviewCount,
   url,
   color,
+  logo: Logo,
   className
 }: ReviewPlatformCardProps) {
   const isStarRating = maxRating === 5;
@@ -35,13 +37,22 @@ export function ReviewPlatformCard({
       >
         <CardContent className="p-6 text-center">
           <div className="flex items-center justify-center mb-4">
-            <div 
-              className="px-3 py-1 rounded-full text-white text-sm font-medium"
-              style={{ backgroundColor: color }}
-            >
-              {name}
-            </div>
-            <ExternalLink className="h-4 w-4 ml-2 text-muted-foreground group-hover:text-foreground transition-colors" />
+            {Logo ? (
+              <div className="flex items-center gap-2">
+                <Logo className="h-8" />
+                <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-foreground transition-colors" />
+              </div>
+            ) : (
+              <>
+                <div 
+                  className="px-3 py-1 rounded-full text-white text-sm font-medium"
+                  style={{ backgroundColor: color }}
+                >
+                  {name}
+                </div>
+                <ExternalLink className="h-4 w-4 ml-2 text-muted-foreground group-hover:text-foreground transition-colors" />
+              </>
+            )}
           </div>
           
           <div className="mb-3">

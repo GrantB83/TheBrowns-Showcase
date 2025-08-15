@@ -1,6 +1,7 @@
 import { ReviewPlatformCard } from "@/components/ui/review-platform-card";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import { BookingLogo, GoogleLogo, TripAdvisorLogo } from "@/components/ui/platform-logos";
 
 interface ReviewPlatform {
   name: string;
@@ -9,6 +10,7 @@ interface ReviewPlatform {
   reviewCount: number;
   url: string;
   color: string;
+  logo?: React.ComponentType<{ className?: string }>;
 }
 
 interface ReviewShowcaseProps {
@@ -26,7 +28,8 @@ const defaultPlatforms: ReviewPlatform[] = [
     maxRating: 10,
     reviewCount: 421,
     url: 'https://www.booking.com/reviews/za/hotel/the-browns-39-luxury-guest-suites.en-gb.html',
-    color: '#003580'
+    color: '#003580',
+    logo: BookingLogo
   },
   {
     name: 'Google',
@@ -34,7 +37,8 @@ const defaultPlatforms: ReviewPlatform[] = [
     maxRating: 5,
     reviewCount: 71,
     url: 'https://share.google/n4MnPktc9SS66LfDN',
-    color: '#4285F4'
+    color: '#4285F4',
+    logo: GoogleLogo
   },
   {
     name: 'TripAdvisor',
@@ -42,7 +46,8 @@ const defaultPlatforms: ReviewPlatform[] = [
     maxRating: 5,
     reviewCount: 28,
     url: 'https://www.tripadvisor.co.za/Hotel_Review-g472515-d14094529-Reviews-The_Browns_Luxury_Guest_Suites-Dullstroom_Mpumalanga.html',
-    color: '#00AA6C'
+    color: '#00AA6C',
+    logo: TripAdvisorLogo
   }
 ];
 
