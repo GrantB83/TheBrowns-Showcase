@@ -67,8 +67,8 @@ export default function PayWhatYouCan() {
 
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-b from-secondary/10 to-background py-16 lg:py-24">
-          <div className="container mx-auto px-4">
+        <section className="relative bg-gradient-to-b from-secondary/10 to-background section-spacing">
+          <div className="responsive-container">
             <div className="max-w-4xl mx-auto text-center">
               <Badge variant="secondary" className="mb-4">Community Initiative</Badge>
               <h1 className="mb-6 text-foreground">
@@ -93,8 +93,8 @@ export default function PayWhatYouCan() {
         </section>
 
         {/* Our Mission */}
-        <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-4">
+        <section className="section-spacing">
+          <div className="responsive-container">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
                 <h2 className="mb-6">Our Commitment to Dullstroom</h2>
@@ -125,8 +125,8 @@ export default function PayWhatYouCan() {
         </section>
 
         {/* Programs We Support */}
-        <section id="programs" className="py-16 bg-muted/30">
-          <div className="container mx-auto px-4">
+        <section id="programs" className="section-spacing bg-muted/30">
+          <div className="responsive-container">
             <div className="text-center mb-12">
               <h2 className="mb-4">Programs We Support</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -160,8 +160,8 @@ export default function PayWhatYouCan() {
         </section>
 
         {/* Contribution Options */}
-        <section id="contribute" className="py-16 lg:py-20">
-          <div className="container mx-auto px-4">
+        <section id="contribute" className="section-spacing">
+          <div className="responsive-container">
             <div className="text-center mb-12">
               <h2 className="mb-4">Choose Your Contribution</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -211,8 +211,8 @@ export default function PayWhatYouCan() {
         </section>
 
         {/* Impact Stories */}
-        <section className="py-16 bg-muted/30">
-          <div className="container mx-auto px-4">
+        <section className="section-spacing bg-muted/30">
+          <div className="responsive-container">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="mb-6">Your Impact in Action</h2>
               <Card className="bg-background">
@@ -240,8 +240,8 @@ export default function PayWhatYouCan() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-4">
+        <section className="section-spacing">
+          <div className="responsive-container">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="mb-6">Ready to Make a Difference?</h2>
               <p className="text-lg text-muted-foreground mb-8">

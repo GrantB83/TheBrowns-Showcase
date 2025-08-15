@@ -82,8 +82,8 @@ export default function Blog() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-accent to-muted">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-spacing bg-gradient-to-br from-accent to-muted">
+        <div className="responsive-container">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-primary mb-4 sm:mb-6">The Browns Blog</h1>
             <p className="text-fluid-lg sm:text-fluid-xl text-muted-foreground leading-relaxed max-w-none sm:max-w-3xl mx-auto">
@@ -95,8 +95,8 @@ export default function Blog() {
       </section>
 
       {/* Search & Filter */}
-      <section className="py-6 sm:py-8 bg-background border-b">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-spacing-sm bg-background border-b">
+        <div className="responsive-container">
           <div className="max-w-4xl mx-auto">
             <BlogSearch
               searchTerm={searchTerm}
@@ -111,8 +111,8 @@ export default function Blog() {
       </section>
 
       {/* Blog Posts */}
-      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-spacing bg-background">
+        <div className="responsive-container">
           <div className="max-w-6xl mx-auto">
             {filteredPosts.length === 0 ? (
               <div className="text-center py-8 sm:py-12">
@@ -197,8 +197,8 @@ export default function Blog() {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-8 sm:py-12 md:py-16 bg-muted">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-spacing bg-muted">
+        <div className="responsive-container">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-primary mb-4">Stay Updated</h2>
             <p className="text-fluid-base text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
@@ -218,8 +218,8 @@ export default function Blog() {
       </section>
 
       {/* Book CTA */}
-      <section className="py-8 sm:py-12 md:py-16 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="section-spacing bg-primary text-primary-foreground">
+        <div className="responsive-container text-center">
           <h2 className="text-primary-foreground mb-4">Ready to Experience Dullstroom?</h2>
           <p className="text-fluid-lg sm:text-fluid-xl text-primary-foreground/90 mb-6 sm:mb-8 max-w-none sm:max-w-2xl mx-auto leading-relaxed">
             Book your luxury stay at The Browns and explore all that Dullstroom has to offer.

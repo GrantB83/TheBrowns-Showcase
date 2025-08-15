@@ -154,33 +154,35 @@ export function BookingWidget({
           </div>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 mobile-landscape:grid-cols-2 gap-3 sm:gap-4">
             <div>
-              <Label htmlFor="checkin">Check-in</Label>
+              <Label htmlFor="checkin" className="text-fluid-sm">Check-in</Label>
               <Input
                 id="checkin"
                 type="date"
                 value={checkIn}
                 onChange={(e) => setCheckIn(e.target.value)}
                 min={new Date().toISOString().split('T')[0]}
+                className="min-h-[44px] text-fluid-sm"
               />
             </div>
             <div>
-              <Label htmlFor="checkout">Check-out</Label>
+              <Label htmlFor="checkout" className="text-fluid-sm">Check-out</Label>
               <Input
                 id="checkout"
                 type="date"
                 value={checkOut}
                 onChange={(e) => setCheckOut(e.target.value)}
                 min={checkIn || new Date().toISOString().split('T')[0]}
+                className="min-h-[44px] text-fluid-sm"
               />
             </div>
           </div>
           
           <div>
-            <Label htmlFor="guests">Guests</Label>
+            <Label htmlFor="guests" className="text-fluid-sm">Guests</Label>
             <Select value={guests} onValueChange={setGuests}>
-              <SelectTrigger>
+              <SelectTrigger className="min-h-[44px] text-fluid-sm">
                 <SelectValue placeholder="Select guests" />
               </SelectTrigger>
               <SelectContent>
@@ -193,10 +195,10 @@ export function BookingWidget({
             </Select>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 mobile-landscape:grid-cols-2 gap-3 sm:gap-4">
             <Button 
               size="lg" 
-              className="w-full min-h-[48px]"
+              className="w-full min-h-[48px] text-fluid-sm touch-manipulation"
               onClick={() => handleDirectBooking()}
             >
               <ExternalLink className="h-4 w-4 mr-2" />
@@ -205,7 +207,7 @@ export function BookingWidget({
             <Button 
               variant="outline" 
               size="lg" 
-              className="w-full min-h-[48px]"
+              className="w-full min-h-[48px] text-fluid-sm touch-manipulation"
               onClick={handleWhatsAppBooking}
             >
               <MessageCircle className="h-4 w-4 mr-2" />

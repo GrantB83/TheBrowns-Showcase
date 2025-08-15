@@ -62,8 +62,8 @@ export function Header() {
         ? "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 shadow-sm" 
         : "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     )}>
-      <div className="responsive-container px-fluid-md">
-        <div className="flex h-16 md:h-18 lg:h-20 items-center justify-between">
+      <div className="responsive-container section-spacing-sm">
+        <div className="flex h-14 xs:h-16 md:h-18 lg:h-20 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0">
             <img 
@@ -145,7 +145,7 @@ export function Header() {
 
           {/* Book Now Button & Mobile Menu */}
           <div className="flex items-center space-x-2 sm:space-x-3">
-            <Button asChild className="hidden xs:inline-flex text-fluid-sm px-2 xs:px-3 py-2 lg:px-4 lg:py-2 min-h-[40px] md:min-h-[44px]" size="sm">
+            <Button asChild className="hidden xs:inline-flex text-fluid-sm px-2 xs:px-3 py-2 lg:px-4 lg:py-2 min-h-[44px] touch-manipulation" size="sm">
               <a 
                 href="https://book.nightsbridge.com/00000" 
                 target="_blank" 

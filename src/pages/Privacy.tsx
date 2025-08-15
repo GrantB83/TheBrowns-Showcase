@@ -3,8 +3,8 @@ import { Separator } from "@/components/ui/separator";
 
 export default function Privacy() {
   return (
-    <div className="min-h-screen py-8 sm:py-12 md:py-16 lg:py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen section-spacing">
+      <div className="responsive-container">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8 sm:mb-10 lg:mb-12">
             <h1 className="text-primary mb-4">Privacy Policy</h1>

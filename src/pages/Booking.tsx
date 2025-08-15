@@ -138,8 +138,8 @@ export default function Booking() {
 
       <div className="min-h-screen">
         {/* Hero Section with Urgency */}
-        <section className="relative bg-gradient-to-b from-primary/10 to-background py-12 lg:py-20">
-          <div className="container mx-auto px-4">
+        <section className="relative bg-gradient-to-b from-primary/10 to-background section-spacing">
+          <div className="responsive-container">
             <div className="max-w-5xl mx-auto">
               {/* Urgency Banner */}
               <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-8 text-center">
@@ -222,8 +222,8 @@ export default function Booking() {
         </section>
 
         {/* Enhanced Booking Flow */}
-        <section className="py-12 lg:py-16">
-          <div className="container mx-auto px-4">
+        <section className="section-spacing">
+          <div className="responsive-container">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-8">
                 <h2 className="mb-4">Simple 3-Step Booking Process</h2>
@@ -242,8 +242,8 @@ export default function Booking() {
         </section>
 
         {/* Interactive Booking Widget */}
-        <section className="py-12 bg-muted/30">
-          <div className="container mx-auto px-4">
+        <section className="section-spacing bg-muted/30">
+          <div className="responsive-container">
             <div className="max-w-2xl mx-auto">
               <div className="text-center mb-8">
                 <h2 className="mb-4">Book Your Perfect Highland Escape</h2>
@@ -258,8 +258,8 @@ export default function Booking() {
         </section>
 
         {/* Direct Booking Benefits */}
-        <section className="py-12 lg:py-16">
-          <div className="container mx-auto px-4">
+        <section className="section-spacing">
+          <div className="responsive-container">
             <div className="text-center mb-12">
               <h2 className="mb-4">Why Book Direct with The Browns?</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -291,8 +291,8 @@ export default function Booking() {
         </section>
 
         {/* Suite Selection with Urgency */}
-        <section className="py-12 lg:py-16 bg-muted/30">
-          <div className="container mx-auto px-4">
+        <section className="section-spacing bg-muted/30">
+          <div className="responsive-container">
             <div className="text-center mb-12">
               <h2 className="mb-4">Choose Your Luxury Suite</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -377,8 +377,8 @@ export default function Booking() {
         </section>
 
         {/* Contact & Support with WhatsApp */}
-        <section className="py-12 lg:py-16">
-          <div className="container mx-auto px-4">
+        <section className="section-spacing">
+          <div className="responsive-container">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
                 <h2 className="mb-4">Need Booking Assistance?</h2>

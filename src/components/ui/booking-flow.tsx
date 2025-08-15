@@ -142,7 +142,7 @@ export function BookingFlow({
           <Progress value={progressPercentage} className="w-full h-2" />
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 mobile-landscape:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             {steps.map((step, index) => {
               const isActive = step.id === currentStep;
               const isCompleted = step.id < currentStep;
@@ -202,10 +202,10 @@ export function BookingFlow({
           </p>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 mobile-landscape:grid-cols-2 gap-3 sm:gap-4">
             <Button 
               size="lg" 
-              className="min-h-[48px] w-full"
+              className="min-h-[48px] w-full text-fluid-sm touch-manipulation"
               onClick={handleDirectBooking}
             >
               <ExternalLink className="h-4 w-4 mr-2" />
@@ -214,7 +214,7 @@ export function BookingFlow({
             <Button 
               variant="outline" 
               size="lg" 
-              className="min-h-[48px] w-full"
+              className="min-h-[48px] w-full text-fluid-sm touch-manipulation"
               onClick={handleWhatsAppInquiry}
             >
               <MessageCircle className="h-4 w-4 mr-2" />
@@ -237,7 +237,7 @@ export function BookingFlow({
       {showTrustBadges && (
         <Card>
           <CardContent className="pt-6">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 mobile-landscape:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
               {trustElements.map((element, index) => (
                 <div key={index} className="flex flex-col items-center text-center">
                   <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mb-2">
