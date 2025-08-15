@@ -206,30 +206,27 @@ export function EnhancedImageSlider({
         </>
       )}
 
-      {/* Dots Indicator - Enhanced touch targets */}
+      {/* Dots Indicator - refined size and position */}
       {images.length > 1 && (
-        <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 sm:space-x-3">
+        <div className="absolute bottom-16 sm:bottom-10 md:bottom-12 left-1/2 -translate-x-1/2 flex space-x-2 sm:space-x-3 z-10">
           {images.map((_, index) => (
             <button
               key={index}
               className={cn(
                 "rounded-full transition-all duration-300 touch-feedback mobile-tap-highlight",
-                "min-h-[44px] min-w-[44px] flex items-center justify-center",
-                "hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/50",
-                index === currentIndex
-                  ? "bg-white shadow-lg"
-                  : "bg-white/60 hover:bg-white/80"
+                "min-h-[44px] min-w-[44px] bg-transparent",
+                "hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/50"
               )}
               onClick={() => goToSlide(index)}
               aria-label={`Go to slide ${index + 1} of ${images.length}`}
               aria-current={index === currentIndex ? "true" : "false"}
             >
-              <span 
+              <span
                 className={cn(
-                  "w-3 h-3 rounded-full transition-all duration-300",
-                  index === currentIndex 
-                    ? "bg-primary scale-110" 
-                    : "bg-white/80"
+                  "w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300",
+                  index === currentIndex
+                    ? "bg-primary"
+                    : "bg-white/80 border border-white/70"
                 )}
               />
               <span className="sr-only">

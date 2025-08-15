@@ -110,7 +110,7 @@ const testimonials = [
 const keyFeatures = [
   { icon: MapPin, title: "Prime Location", description: "278 & 279 Blue Crane Drive, walking distance to Dullstroom's shops and restaurants" },
   { icon: Wifi, title: "Free WiFi & Netflix", description: "High-speed internet with Netflix throughout the property" },
-  { icon: Car, title: "Secure Parking", description: "Safe, covered parking for all guests" },
+  { icon: Car, title: "Secure Parking", description: "Secure onsite parking for all guests" },
   { icon: Coffee, title: "Nespresso & Treats", description: "Premium coffee machines with exclusive teas and snacks" },
   { icon: Zap, title: "Backup Power & Water", description: "Uninterrupted stay with backup systems" },
   { icon: Shield, title: "Daily Housekeeping", description: "Professional housekeeping services daily" },
@@ -146,7 +146,7 @@ const Index = () => {
           autoPlayInterval={6000}
           enableSwipe={true}
         />
-        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 text-center w-full px-4">
+        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 text-center w-full px-4 z-20">
           <div className="mobile-stack max-w-md mx-auto">
             <Button 
               size="lg" 

@@ -13,14 +13,14 @@ const dullstroomPerks: DullstroomPerk[] = [
   {
     icon: Fish,
     title: "World-Class Fly Fishing",
-    description: "Premium trout fishing on crystal-clear highland streams",
-    highlight: "30+ stocked dams nearby"
+    description: "Premium trout fishing on crystal-clear highland dams",
+    highlight: "Many stocked dams nearby"
   },
   {
     icon: TreePine,
     title: "Panorama Route Gateway",
-    description: "Access to God's Window, Blyde River Canyon, and more",
-    highlight: "45 min to major attractions"
+    description: "Access to Highland Gate Golf Course, God's Window, Blyde River Canyon, and more",
+    highlight: "Perfect base for exploring the area"
   },
   {
     icon: Camera,
@@ -32,7 +32,7 @@ const dullstroomPerks: DullstroomPerk[] = [
     icon: Mountain,
     title: "Highland Adventures",
     description: "Hiking trails, mountain biking, and nature walks",
-    highlight: "2000m+ elevation tranquility"
+    highlight: "High-altitude training in tranquility"
   },
   {
     icon: Coffee,
