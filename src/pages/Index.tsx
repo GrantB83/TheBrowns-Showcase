@@ -10,6 +10,7 @@ import { MobileSEO } from "@/components/ui/mobile-seo";
 import { DullstroomInfographic } from "@/components/ui/dullstroom-infographic";
 import { ReviewShowcase } from "@/components/ui/review-showcase";
 import { PremiumImage } from "@/components/ui/premium-image";
+import { HeroBookingWidget } from "@/components/ui/hero-booking-widget";
 
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useMobileDetection } from "@/hooks/use-mobile-optimization";
@@ -147,36 +148,32 @@ const Index = () => {
           autoPlayInterval={6000}
           enableSwipe={true}
         />
-        {/* CTA Buttons - Compact for narrow mobile */}
-        <div className="absolute bottom-2 xs:bottom-4 sm:bottom-6 md:bottom-8 lg:bottom-10 left-1/2 transform -translate-x-1/2 text-center w-full px-2 xs:px-3 sm:px-4 z-30">
-          <div className="flex flex-col xs:flex-row gap-2 xs:gap-3 sm:gap-4 max-w-sm xs:max-w-md mx-auto">
-            <Button 
-              size="sm"
-              asChild 
-              className="bg-primary hover:bg-primary/90 min-h-[40px] xs:min-h-[48px] sm:min-h-[52px] text-sm xs:text-base font-medium touch-feedback mobile-tap-highlight flex-1 shadow-lg"
-            >
-              <a 
-                href="https://book.nightsbridge.com/00000" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                aria-label="Book your luxury Dullstroom accommodation now"
-              >
-                Book Now
-              </a>
-            </Button>
-            <Button 
-              variant="outline" 
-              size="sm"
-              asChild 
-              className="bg-white/95 hover:bg-white border-white text-foreground min-h-[40px] xs:min-h-[48px] sm:min-h-[52px] text-sm xs:text-base font-medium touch-feedback mobile-tap-highlight flex-1 shadow-lg"
-            >
-              <Link 
-                to="/accommodation"
-                aria-label="View our luxury suite accommodation"
-              >
-                View Our Suites
-              </Link>
-            </Button>
+        {/* Hero Booking Widget - Positioned prominently */}
+        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 lg:bottom-12 left-1/2 transform -translate-x-1/2 w-full px-4 z-30">
+          <HeroBookingWidget compact={true} />
+        </div>
+      </section>
+
+      {/* Trust Signals & Social Proof */}
+      <section className="py-4 sm:py-6 bg-primary/5 border-b">
+        <div className="responsive-container">
+          <div className="text-center">
+            <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground">
+              <div className="flex items-center gap-1">
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="h-4 w-4 text-yellow-500 fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <span className="font-medium">4.9/5 Rating</span>
+              </div>
+              <div className="h-4 w-px bg-border"></div>
+              <span>300+ Happy Guests</span>
+              <div className="h-4 w-px bg-border"></div>
+              <span>Best Rate Guarantee</span>
+            </div>
           </div>
         </div>
       </section>
@@ -184,7 +181,7 @@ const Index = () => {
       {/* Property Overview */}
       <section 
         ref={overviewRef}
-        className={`-mt-6 sm:-mt-4 md:mt-0 py-6 sm:py-10 md:py-16 lg:py-20 bg-background transition-all duration-1000 ${
+        className={`py-8 sm:py-12 lg:py-16 bg-background transition-all duration-1000 ${
           overviewVisible ? 'scroll-animate' : 'opacity-0'
         }`}
       >

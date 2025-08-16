@@ -9,12 +9,8 @@ import { useResponsiveNavigation } from "@/hooks/use-responsive-navigation";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
   { name: "Accommodation", href: "/accommodation" },
-  { name: "Gallery", href: "/gallery" },
   { name: "Activities", href: "/activities" },
-  // { name: "Pay What You Can", href: "/pay-what-you-can" }, // Temporarily hidden
-  { name: "Booking", href: "/booking" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -23,11 +19,7 @@ const itemPriority = {
   "Home": 1,
   "Accommodation": 2, 
   "Activities": 3,
-  "Booking": 4,
-  "Contact": 5,
-  "About": 6,
-  "Gallery": 7,
-  // "Pay What You Can": 8, // Temporarily hidden
+  "Contact": 4,
 };
 
 export function Header() {
