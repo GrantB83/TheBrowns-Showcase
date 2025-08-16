@@ -2,7 +2,6 @@ import { SEO } from "@/components/ui/seo";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { BookingFlow } from "@/components/ui/booking-flow";
 import { BookingWidget } from "@/components/ui/booking-widget";
 import { WhatsAppBookingButton } from "@/components/ui/whatsapp-contact";
 import { 
@@ -50,7 +49,7 @@ const suiteHighlights = [
     roomId: 6,
     capacity: "2 Adults + 2 Children",
     features: ["King XL Bed", "Private Lounge", "Zuikerboschkop Views", "Fireplace", "Netflix"],
-    urgencyMessage: "Premium flagship suite",
+    valueProposition: "Mountain Views",
     image: "/images/suites/master-suite-01.jpg",
     description: "Luxury flagship suite with private lounge and Zuikerboschkop views from first-floor balcony"
   },
@@ -60,7 +59,7 @@ const suiteHighlights = [
     roomId: 4,
     capacity: "2 Adults",
     features: ["Queen XL Bed", "Garden Views", "Spa Bath", "Private Entrance"],
-    urgencyMessage: "Garden view romance",
+    valueProposition: "Romantic Retreat",
     image: "/images/suites/garden-suite-01.jpg",
     description: "Romantic retreat with private garden access and spa bath"
   },
@@ -70,7 +69,7 @@ const suiteHighlights = [
     roomId: 5,
     capacity: "4 Adults", 
     features: ["2 Bedrooms", "Family Lounge", "Zuikerboschkop Views", "Entertainment"],
-    urgencyMessage: "Family suite with balcony views",
+    valueProposition: "Family Friendly",
     image: "/images/suites/loft-suite-01.jpg",
     description: "Perfect for families with separate bedrooms and entertainment"
   }
@@ -246,8 +245,8 @@ export default function Booking() {
           </div>
         </section>
 
-        {/* Suite Selection with Urgency */}
-        <section className="section-spacing bg-muted/30">
+        {/* Suite Selection */}
+        <section className="py-8 sm:py-12 lg:py-16 bg-muted/30">
           <div className="responsive-container">
             <div className="text-center mb-12">
               <h2 className="mb-4">Choose Your Luxury Suite</h2>
@@ -270,8 +269,8 @@ export default function Booking() {
                       }}
                     />
                     <div className="absolute top-4 right-4">
-                      <Badge variant="secondary" className="text-xs">
-                        {suite.urgencyMessage}
+                      <Badge variant="secondary" className="text-xs bg-primary/90 text-white">
+                        {suite.valueProposition}
                       </Badge>
                     </div>
                   </div>
@@ -327,8 +326,8 @@ export default function Booking() {
           </div>
         </section>
 
-        {/* Contact & Support with WhatsApp */}
-        <section className="section-spacing">
+        {/* Contact & Support */}
+        <section className="py-8 sm:py-12 lg:py-16">
           <div className="responsive-container">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
@@ -386,45 +385,38 @@ export default function Booking() {
           </div>
         </section>
 
-        {/* Final Conversion CTA */}
-        <section className="py-12 lg:py-16 bg-gradient-to-br from-primary/10 to-accent/5">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="mb-6">Your Highland Adventure Awaits</h2>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Don't miss out on Dullstroom's premier luxury accommodation. Book direct for the best rates, 
-                exclusive perks, and personalized service that makes every stay unforgettable.
+        {/* Final CTA */}
+        <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-br from-primary/10 to-accent/5">
+          <div className="responsive-container">
+            <div className="max-w-2xl mx-auto text-center">
+              <h2 className="mb-4">Ready to Book Your Highland Escape?</h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Secure your luxury accommodation with our best rate guarantee and exclusive perks.
               </p>
               
-              <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mb-8">
-                <div className="flex items-center justify-center gap-2 text-primary font-semibold mb-2">
-                  <Clock className="h-4 w-4" />
-                  <span>Direct Booking Benefits: Best Rate Guarantee + Free Welcome Drink</span>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  Flexible cancellation policy • Best rate guarantee
-                </p>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   size="lg" 
-                  className="text-lg px-8 py-6 min-h-[48px] flex-1"
+                  className="text-lg px-8 py-6 min-h-[48px]"
                   onClick={() => handleDirectBooking()}
                 >
                   <ExternalLink className="h-5 w-5 mr-2" />
-                  Secure Your Booking
+                  Book Direct Now
                 </Button>
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="min-h-[48px] flex-1"
+                  className="min-h-[48px]"
                   onClick={handleWhatsAppContact}
                 >
                   <MessageCircle className="h-5 w-5 mr-2" />
-                  Ask Questions
+                  Contact Us
                 </Button>
               </div>
+              
+              <p className="text-sm text-muted-foreground mt-6">
+                Questions? Call us at <a href="tel:+27000000000" className="text-primary hover:underline">+27 00 000 0000</a>
+              </p>
             </div>
           </div>
         </section>
