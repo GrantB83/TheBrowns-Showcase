@@ -11,13 +11,15 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     // Performance optimizations
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: mode === 'production',
-        drop_debugger: mode === 'production',
+    minify: mode === 'production' ? 'esbuild' : 'esbuild',
+    ...(mode === 'production' && {
+      terserOptions: {
+        compress: {
+          drop_console: true,
+          drop_debugger: true,
+        },
       },
-    },
+    }),
     rollupOptions: {
       output: {
         manualChunks: {
