@@ -5,6 +5,9 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
+import { AmenityDisclosure, DescriptionDisclosure } from "@/components/ui/progressive-disclosure";
+import { UrgencyIndicator } from "@/components/ui/social-proof";
+import { TouchOptimizedGallery, MobileFriendlyActions } from "@/components/ui/enhanced-mobile-interactions";
 import { 
   Users, 
   Bed, 

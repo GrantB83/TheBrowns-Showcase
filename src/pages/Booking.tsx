@@ -19,6 +19,8 @@ import {
   AlertCircle,
   Crown
 } from "lucide-react";
+import { SuiteComparison } from "@/components/ui/suite-comparison";
+import { RecentBookingNotification, LiveActivityBanner, TrustIndicators } from "@/components/ui/social-proof";
 import { Link } from "react-router-dom";
 
 const directBookingBenefits = [
@@ -48,30 +50,36 @@ const suiteHighlights = [
     name: "Master Suite",
     roomId: 6,
     capacity: "2 Adults + 2 Children",
+    bedConfig: "King XL Bed",
     features: ["King XL Bed", "Private Lounge", "Zuikerboschkop Views", "Fireplace", "Netflix"],
     valueProposition: "Mountain Views",
     image: "/images/suites/master-suite-01.jpg",
-    description: "Luxury flagship suite with private lounge and Zuikerboschkop views from first-floor balcony"
+    description: "Luxury flagship suite with private lounge and Zuikerboschkop views from first-floor balcony",
+    maxGuests: 4
   },
   {
     id: "garden-suite", 
     name: "Garden Suite",
     roomId: 4,
     capacity: "2 Adults",
+    bedConfig: "Queen XL Bed",
     features: ["Queen XL Bed", "Garden Views", "Spa Bath", "Private Entrance"],
     valueProposition: "Romantic Retreat",
     image: "/images/suites/garden-suite-01.jpg",
-    description: "Romantic retreat with private garden access and spa bath"
+    description: "Romantic retreat with private garden access and spa bath",
+    maxGuests: 2
   },
   {
     id: "loft-suite",
     name: "Loft Family Suite",
     roomId: 5,
-    capacity: "4 Adults", 
+    capacity: "4 Adults",
+    bedConfig: "2 Bedrooms", 
     features: ["2 Bedrooms", "Family Lounge", "Zuikerboschkop Views", "Entertainment"],
     valueProposition: "Family Friendly",
     image: "/images/suites/loft-suite-01.jpg",
-    description: "Perfect for families with separate bedrooms and entertainment"
+    description: "Perfect for families with separate bedrooms and entertainment",
+    maxGuests: 4
   }
 ];
 
@@ -122,13 +130,8 @@ export default function Booking() {
         <section className="relative bg-gradient-to-b from-primary/10 to-background py-8 sm:py-12 lg:py-16">
           <div className="responsive-container">
             <div className="max-w-5xl mx-auto">
-              {/* Subtle Availability Notice */}
-              <div className="bg-orange-50 border border-orange-200 rounded-lg p-3 mb-6 text-center">
-                <div className="flex items-center justify-center gap-2 text-orange-700">
-                  <Clock className="h-4 w-4" />
-                  <span className="font-medium text-sm">Limited Availability - Secure Your Dates</span>
-                </div>
-              </div>
+              {/* Live Activity Banner */}
+              <LiveActivityBanner className="mb-6" />
 
               <div className="text-center mb-8">
                 <Badge variant="secondary" className="mb-4 text-sm px-4 py-2">
@@ -187,7 +190,9 @@ export default function Booking() {
                   </Button>
                 </div>
                 
-                <p className="text-sm text-muted-foreground mt-4">
+                <TrustIndicators className="mt-4 justify-center" />
+                
+                <p className="text-sm text-muted-foreground mt-2">
                   Need help? Call us directly: <a href="tel:+27000000000" className="text-primary hover:underline">+27 00 000 0000</a>
                 </p>
               </div>
@@ -318,7 +323,8 @@ export default function Booking() {
               ))}
             </div>
 
-            <div className="text-center">
+            <div className="text-center space-y-4">
+              <SuiteComparison suites={suiteHighlights} />
               <Button asChild variant="outline" size="lg">
                 <Link to="/accommodations">View All Suites & Rates</Link>
               </Button>
@@ -420,6 +426,9 @@ export default function Booking() {
             </div>
           </div>
         </section>
+        
+        {/* Social Proof */}
+        <RecentBookingNotification />
       </div>
     </>
   );
