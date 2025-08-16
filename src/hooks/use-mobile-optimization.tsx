@@ -17,15 +17,22 @@ export function usePerformanceMonitoring() {
     const reportMetric = (name: string, value: number) => {
       setMetrics(prev => ({ ...prev, [name]: value }));
       
-      // Log performance issues for mobile optimization
-      if (name === 'lcp' && value > 2500) {
-        console.warn('LCP exceeds 2.5s - consider image optimization');
+      // Production-safe performance monitoring
+      if (process.env.NODE_ENV === 'development') {
+        if (name === 'lcp' && value > 2500) {
+          console.warn('LCP exceeds 2.5s - consider image optimization');
+        }
+        if (name === 'fid' && value > 100) {
+          console.warn('FID exceeds 100ms - consider reducing JavaScript');
+        }
+        if (name === 'cls' && value > 0.1) {
+          console.warn('CLS exceeds 0.1 - check layout shifts');
+        }
       }
-      if (name === 'fid' && value > 100) {
-        console.warn('FID exceeds 100ms - consider reducing JavaScript');
-      }
-      if (name === 'cls' && value > 0.1) {
-        console.warn('CLS exceeds 0.1 - check layout shifts');
+      
+      // In production, send to analytics service instead
+      if (process.env.NODE_ENV === 'production') {
+        // Example: analytics.track('performance_metric', { name, value });
       }
     };
 
@@ -65,7 +72,9 @@ export function usePerformanceMonitoring() {
       observer.observe({ type: 'navigation', buffered: true });
     } catch (e) {
       // Fallback for browsers that don't support all entry types
-      console.log('Some performance metrics not supported');
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Some performance metrics not supported');
+      }
     }
 
     return () => observer.disconnect();

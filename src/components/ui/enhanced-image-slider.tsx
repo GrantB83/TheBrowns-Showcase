@@ -171,8 +171,8 @@ export function EnhancedImageSlider({
               />
             </picture>
             {(image.title || image.subtitle) && (
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                <div className="text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+              <div className="absolute inset-0 bg-black/40 flex items-center justify-center pointer-events-none">
+                <div className="text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto relative z-10">
                   {image.title && (
                     <h1 className="font-playfair font-bold mb-2 sm:mb-4 text-white drop-shadow-lg" 
                         style={{ fontSize: 'clamp(1.75rem, 6vw, 3.75rem)' }}>
@@ -216,15 +216,15 @@ export function EnhancedImageSlider({
         </>
       )}
 
-      {/* Dots Indicator - refined size and position */}
+      {/* Dots Indicator - positioned to avoid button overlap */}
       {images.length > 1 && (
-        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 flex space-x-2 sm:space-x-3 z-10">
+        <div className="absolute bottom-16 sm:bottom-20 md:bottom-24 lg:bottom-28 left-1/2 -translate-x-1/2 flex gap-2 sm:gap-3 z-10">
           {images.map((_, index) => (
             <button
               key={index}
               className={cn(
                 "rounded-full transition-all duration-300 touch-feedback mobile-tap-highlight",
-                "min-h-[44px] min-w-[44px] bg-transparent",
+                "min-h-[44px] min-w-[44px] bg-transparent border-0",
                 "hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/50"
               )}
               onClick={() => goToSlide(index)}
@@ -239,9 +239,6 @@ export function EnhancedImageSlider({
                     : "bg-white/80 border border-white/70"
                 )}
               />
-              <span className="sr-only">
-                Slide {index + 1} {index === currentIndex ? "(current)" : ""}
-              </span>
             </button>
           ))}
         </div>

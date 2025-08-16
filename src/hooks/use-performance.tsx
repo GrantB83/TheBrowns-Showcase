@@ -23,7 +23,7 @@ export function usePerformance() {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          if (entry.entryType === 'measure') {
+          if (entry.entryType === 'measure' && process.env.NODE_ENV === 'development') {
             console.log(`${entry.name}: ${entry.duration}ms`);
           }
         });

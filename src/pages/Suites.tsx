@@ -292,7 +292,7 @@ export default function Suites() {
   };
 
   return <>
-      <SEO title="Discover Tailored Dullstroom Luxury Suites 2025 | The Browns" description="Luxury Dullstroom accommodation with Master Suite featuring King XL bed, Self Catering House for groups up to 16. Direct booking benefits included." keywords="Dullstroom luxury guesthouse 2025, Panorama Route accommodation, self catering Dullstroom, family suites Mpumalanga, luxury cottage accommodation" />
+      <SEO title="Discover Tailored Dullstroom Luxury Suites 2025 - The Browns" description="Luxury Dullstroom accommodation with Master Suite featuring King XL bed, Self Catering House for groups up to 16. Direct booking benefits included." keywords="Dullstroom luxury guesthouse 2025, Panorama Route accommodation, self catering Dullstroom, family suites Mpumalanga, luxury cottage accommodation" />
       
       <div className="min-h-screen">
         {/* Two House Selection Hero */}

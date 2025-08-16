@@ -60,7 +60,7 @@ export default function PayWhatYouCan() {
   return (
     <>
       <SEO
-        title="Pay What You Can - Supporting Dullstroom Community | The Browns"
+        title="Pay What You Can - Supporting Dullstroom Community - The Browns"
         description="Join The Browns' Pay What You Can initiative supporting local Dullstroom community programs, conservation efforts, and skills development in the Mpumalanga highlands."
         keywords="Dullstroom community support, social responsibility, conservation Mpumalanga, community development, sustainable tourism, The Browns giving back"
       />
