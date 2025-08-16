@@ -21,6 +21,8 @@ import {
 } from "lucide-react";
 import { SuiteComparison } from "@/components/ui/suite-comparison";
 import { RecentBookingNotification, LiveActivityBanner, TrustIndicators } from "@/components/ui/social-proof";
+import { UnifiedBookingFlow } from "@/components/ui/unified-booking-flow";
+import { PersonalizationEngine } from "@/components/ui/personalization-engine";
 import { Link } from "react-router-dom";
 
 const directBookingBenefits = [
@@ -201,18 +203,18 @@ export default function Booking() {
         </section>
 
 
-        {/* Interactive Booking Widget */}
+        {/* Unified Booking Flow */}
         <section className="py-8 sm:py-12 lg:py-16 bg-muted/30">
           <div className="responsive-container">
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-4xl mx-auto">
               <div className="text-center mb-8">
-                <h2 className="mb-4">Book Your Highland Escape</h2>
+                <h2 className="mb-4">Complete Your Booking</h2>
                 <p className="text-lg text-muted-foreground">
-                  Check availability and secure your dates
+                  Secure embedded booking with progress tracking and personalized recommendations
                 </p>
               </div>
               
-              <BookingWidget showRecommendations={true} />
+              <UnifiedBookingFlow />
             </div>
           </div>
         </section>
@@ -247,6 +249,25 @@ export default function Booking() {
                 </Card>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Personalized Suite Recommendations */}
+        <section className="py-8 sm:py-12 lg:py-16">
+          <div className="responsive-container">
+            <div className="text-center mb-12">
+              <h2 className="mb-4">Personalized Recommendations</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                AI-powered suite suggestions based on your preferences and travel patterns.
+              </p>
+            </div>
+            
+            <PersonalizationEngine 
+              className="max-w-4xl mx-auto mb-12"
+              onSuiteSelect={(suiteId, roomId) => {
+                handleDirectBooking(roomId);
+              }}
+            />
           </div>
         </section>
 

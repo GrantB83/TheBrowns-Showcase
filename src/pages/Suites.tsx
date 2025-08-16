@@ -8,6 +8,8 @@ import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { BookingWidget } from "@/components/ui/booking-widget";
 import { ReviewShowcase } from "@/components/ui/review-showcase";
 import { TwoHouseSelectionHero } from "@/components/ui/two-house-selection-hero";
+import { SmartSuiteFilter } from "@/components/ui/smart-suite-filter";
+import { PersonalizationEngine } from "@/components/ui/personalization-engine";
 import { Link } from "react-router-dom";
 import { Clock, Gift, Users, ExternalLink, Filter } from "lucide-react";
 const luxurySuites = [{
@@ -304,49 +306,49 @@ export default function Suites() {
         {/* Review Showcase Section */}
         <ReviewShowcase />
 
-        {/* Filter Tabs */}
-        {activeFilter !== 'all' && (
-          <section className="py-4 sm:py-6 bg-muted/30" id="suites-section">
-            <div className="responsive-container">
-              <div className="max-w-4xl mx-auto">
-                <div className="flex flex-col xs:flex-row items-center justify-between gap-3 sm:gap-4">
-                  <div className="flex items-center gap-2 order-2 xs:order-1">
-                    <Filter className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-xs sm:text-sm text-muted-foreground">
-                      Showing: {activeFilter === 'luxury' ? 'Luxury Guest Suites' : 'Heritage Cottage Suites'}
-                    </span>
-                  </div>
-                  <div className="flex flex-wrap gap-2 order-1 xs:order-2">
-                    <Button 
-                      variant={activeFilter === 'luxury' ? 'default' : 'outline'}
-                      size="sm"
-                      onClick={() => setActiveFilter('luxury')}
-                      className="min-h-[40px] text-xs sm:text-sm"
-                    >
-                      Luxury Suites
-                    </Button>
-                    <Button 
-                      variant={activeFilter === 'cottage' ? 'default' : 'outline'}
-                      size="sm"
-                      onClick={() => setActiveFilter('cottage')}
-                      className="min-h-[40px] text-xs sm:text-sm"
-                    >
-                      Cottage Suites
-                    </Button>
-                    <Button 
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => setActiveFilter('all')}
-                      className="min-h-[40px] text-xs sm:text-sm"
-                    >
-                      Show All
-                    </Button>
-                  </div>
-                </div>
-              </div>
+        {/* Smart Suite Filter */}
+        <section className="py-8 sm:py-12 lg:py-16 bg-muted/30" id="suites-section">
+          <div className="responsive-container">
+            <div className="text-center mb-8">
+              <h2 className="mb-4">Find Your Perfect Suite</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Advanced filtering and personalized recommendations to match your exact preferences.
+              </p>
             </div>
-          </section>
-        )}
+            
+            <SmartSuiteFilter 
+              className="max-w-6xl mx-auto"
+              onSuiteSelect={(suiteId) => {
+                const roomId = luxurySuites.find(s => s.slug === suiteId)?.roomId || 
+                              cottageSuites.find(s => s.slug === suiteId)?.roomId;
+                if (roomId) {
+                  const bookingUrl = `https://book.nightsbridge.com/00000?rtid=${roomId}`;
+                  window.open(bookingUrl, '_blank', 'noopener,noreferrer');
+                }
+              }}
+            />
+          </div>
+        </section>
+
+        {/* Personalized Recommendations */}
+        <section className="py-8 sm:py-12 lg:py-16">
+          <div className="responsive-container">
+            <div className="text-center mb-8">
+              <h2 className="mb-4">Recommended For You</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                AI-powered suggestions based on your travel preferences and booking history.
+              </p>
+            </div>
+            
+            <PersonalizationEngine 
+              className="max-w-4xl mx-auto"
+              onSuiteSelect={(suiteId, roomId) => {
+                const bookingUrl = `https://book.nightsbridge.com/00000?rtid=${roomId}`;
+                window.open(bookingUrl, '_blank', 'noopener,noreferrer');
+              }}
+            />
+          </div>
+        </section>
 
         {/* Luxury Suites Section */}
         {filteredLuxurySuites.length > 0 && (
