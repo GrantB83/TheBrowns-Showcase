@@ -125,32 +125,19 @@ export function BookingWidget({
 
   return (
     <div className={cn("space-y-6", className)}>
-      {/* Urgency Banner */}
-      <div className="bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 rounded-lg p-4">
-        <div className="flex items-center justify-center gap-2 text-red-700 mb-2">
-          <Clock className="h-4 w-4" />
-          <span className="font-semibold text-sm">Popular Dates Fill Quickly - Book Early!</span>
-        </div>
-        <p className="text-center text-xs text-red-600">
-          High demand period • Best rates when booking direct • Flexible cancellation policy
-        </p>
-      </div>
 
       {/* Quick Booking Form */}
       <Card className="border-primary/20">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Calendar className="h-5 w-5 text-primary" />
-            Secure Direct Booking: Lowest Rates + Exclusives
+            Book Direct for Best Rates
           </CardTitle>
           <div className="bg-primary/10 rounded-lg p-3">
-            <div className="flex items-center gap-2 text-primary font-medium text-sm mb-1">
+            <div className="flex items-center gap-2 text-primary font-medium text-sm">
               <Gift className="h-4 w-4" />
-              Direct Bookers Get a Free Welcome Drink + WiFi
+              Free welcome drink + WiFi included
             </div>
-            <p className="text-xs text-muted-foreground">
-              We match any rate plus 5% • Instant confirmation • Flexible cancellation policy
-            </p>
           </div>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -275,14 +262,6 @@ export function BookingWidget({
                     </div>
                   </div>
                   
-                  {suite.urgencyMessage && (
-                    <div className="bg-orange-50 border border-orange-200 rounded p-2 mb-3">
-                      <div className="flex items-center gap-2 text-orange-700 text-xs">
-                        <AlertCircle className="h-3 w-3" />
-                        <span>{suite.urgencyMessage}</span>
-                      </div>
-                    </div>
-                  )}
                   
                   <div className="grid grid-cols-2 gap-2">
                     <Button 
@@ -309,24 +288,6 @@ export function BookingWidget({
         </Card>
       )}
 
-      {/* Support Fallback */}
-      <div className="bg-muted/30 rounded-lg p-4 text-center">
-        <h4 className="font-medium text-sm mb-2">Need Help with Your Booking?</h4>
-        <p className="text-xs text-muted-foreground mb-3">
-          Our local team is available to assist with special requests and recommendations
-        </p>
-        <div className="flex flex-col sm:flex-row gap-2 justify-center">
-          <Button variant="ghost" size="sm" onClick={handleWhatsAppBooking}>
-            <MessageCircle className="h-4 w-4 mr-2" />
-            WhatsApp: +27 00 000 0000
-          </Button>
-          <Button variant="ghost" size="sm" asChild>
-            <a href="mailto:stay@thebrowns.co.za">
-              Email Support
-            </a>
-          </Button>
-        </div>
-      </div>
     </div>
   );
 }

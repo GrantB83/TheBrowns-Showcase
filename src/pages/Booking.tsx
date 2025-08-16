@@ -25,39 +25,21 @@ import { Link } from "react-router-dom";
 const directBookingBenefits = [
   {
     title: "Best Rate Guarantee",
-    description: "We match any competitive rate",
+    description: "We match any competitive rate plus 5% off",
     icon: Crown,
-    highlight: "Best rates guaranteed"
+    highlight: "Lowest rates guaranteed"
   },
   {
-    title: "Exclusive Perks",
-    description: "Free welcome drink, late checkout, and WiFi included",
+    title: "Exclusive Perks", 
+    description: "Free welcome drink, complimentary WiFi, and late checkout",
     icon: Gift,
-    highlight: "Worth R300+"
+    highlight: "Worth R300+ value"
   },
   {
     title: "Instant Confirmation",
     description: "Secure your booking immediately with real-time availability",
     icon: CheckCircle,
-    highlight: "Within seconds"
-  },
-  {
-    title: "Flexible Cancellation",
-    description: "Flexible cancellation policy with clear terms",
-    icon: Calendar,
-    highlight: "Peace of mind"
-  },
-  {
-    title: "Priority Service",
-    description: "VIP treatment and personalized concierge assistance",
-    icon: Star,
-    highlight: "5-star experience"
-  },
-  {
-    title: "Secure Booking",
-    description: "SSL encrypted payment processing and data protection",
-    icon: Shield,
-    highlight: "100% secure"
+    highlight: "Confirmed within seconds"
   }
 ];
 
@@ -137,19 +119,16 @@ export default function Booking() {
       />
 
       <div className="min-h-screen">
-        {/* Hero Section with Urgency */}
-        <section className="relative bg-gradient-to-b from-primary/10 to-background section-spacing">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-b from-primary/10 to-background py-8 sm:py-12 lg:py-16">
           <div className="responsive-container">
             <div className="max-w-5xl mx-auto">
-              {/* Urgency Banner */}
-              <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-8 text-center">
-                <div className="flex items-center justify-center gap-2 text-red-700 mb-2">
-                  <AlertCircle className="h-5 w-5" />
-                  <span className="font-bold">Popular Dates Fill Quickly - Book Early!</span>
+              {/* Subtle Availability Notice */}
+              <div className="bg-orange-50 border border-orange-200 rounded-lg p-3 mb-6 text-center">
+                <div className="flex items-center justify-center gap-2 text-orange-700">
+                  <Clock className="h-4 w-4" />
+                  <span className="font-medium text-sm">Limited Availability - Secure Your Dates</span>
                 </div>
-                <p className="text-sm text-red-600">
-                  High demand period • Book now to secure your highland escape
-                </p>
               </div>
 
               <div className="text-center mb-8">
@@ -168,27 +147,23 @@ export default function Booking() {
                 </p>
                 
                 {/* Direct Benefits Highlight */}
-                <div className="bg-primary/10 border border-primary/20 rounded-lg p-6 mb-8 max-w-2xl mx-auto">
-                  <div className="flex items-center justify-center gap-2 text-primary font-bold text-lg mb-3">
-                    <Gift className="h-6 w-6" />
-                    <span>Direct Bookers Get Exclusive Benefits</span>
+                <div className="bg-primary/10 border border-primary/20 rounded-lg p-5 mb-8 max-w-2xl mx-auto">
+                  <div className="flex items-center justify-center gap-2 text-primary font-semibold text-lg mb-3">
+                    <Gift className="h-5 w-5" />
+                    <span>Book Direct Benefits</span>
                   </div>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
-                    <div className="flex items-center gap-1">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                    <div className="flex items-center justify-center gap-1">
                       <CheckCircle className="h-4 w-4 text-green-600" />
-                      <span>Best Rate Guarantee</span>
+                      <span>Best Rate + 5% Off</span>
                     </div>
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-center justify-center gap-1">
                       <CheckCircle className="h-4 w-4 text-green-600" />
                       <span>Free Welcome Drink</span>
                     </div>
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-center justify-center gap-1">
                       <CheckCircle className="h-4 w-4 text-green-600" />
-                      <span>Complimentary WiFi</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <CheckCircle className="h-4 w-4 text-green-600" />
-                      <span>Late Checkout</span>
+                      <span>Instant Confirmation</span>
                     </div>
                   </div>
                 </div>
@@ -221,34 +196,15 @@ export default function Booking() {
           </div>
         </section>
 
-        {/* Enhanced Booking Flow */}
-        <section className="section-spacing">
-          <div className="responsive-container">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-8">
-                <h2 className="mb-4">Simple 3-Step Booking Process</h2>
-                <p className="text-lg text-muted-foreground">
-                  Secure your luxury highland retreat with our streamlined booking experience
-                </p>
-              </div>
-              
-              <BookingFlow 
-                currentStep={1}
-                urgencyMessage="Book direct for guaranteed best rates"
-                showTrustBadges={true}
-              />
-            </div>
-          </div>
-        </section>
 
         {/* Interactive Booking Widget */}
-        <section className="section-spacing bg-muted/30">
+        <section className="py-8 sm:py-12 lg:py-16 bg-muted/30">
           <div className="responsive-container">
             <div className="max-w-2xl mx-auto">
               <div className="text-center mb-8">
-                <h2 className="mb-4">Book Your Perfect Highland Escape</h2>
+                <h2 className="mb-4">Book Your Highland Escape</h2>
                 <p className="text-lg text-muted-foreground">
-                  Get personalized recommendations based on your dates and group size
+                  Check availability and secure your dates
                 </p>
               </div>
               
@@ -258,29 +214,29 @@ export default function Booking() {
         </section>
 
         {/* Direct Booking Benefits */}
-        <section className="section-spacing">
+        <section className="py-8 sm:py-12 lg:py-16">
           <div className="responsive-container">
-            <div className="text-center mb-12">
-              <h2 className="mb-4">Why Book Direct with The Browns?</h2>
+            <div className="text-center mb-10">
+              <h2 className="mb-4">Why Book Direct?</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Enjoy exclusive benefits, personalized service, and guaranteed best rates when you book directly with us.
+                Get the best value and exclusive perks by booking directly with us.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {directBookingBenefits.map((benefit) => (
-                <Card key={benefit.title} className="text-center hover:shadow-lg transition-all duration-300 relative overflow-hidden">
-                  <div className="absolute top-4 right-4">
+                <Card key={benefit.title} className="text-center hover:shadow-md transition-shadow relative">
+                  <div className="absolute top-3 right-3">
                     <Badge variant="secondary" className="text-xs">
                       {benefit.highlight}
                     </Badge>
                   </div>
-                  <CardHeader>
-                    <div className="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-fit">
-                      <benefit.icon className="h-6 w-6 text-primary" />
+                  <CardHeader className="pb-4">
+                    <div className="mx-auto mb-3 p-2 bg-primary/10 rounded-full w-fit">
+                      <benefit.icon className="h-5 w-5 text-primary" />
                     </div>
-                    <CardTitle className="text-lg">{benefit.title}</CardTitle>
-                    <CardDescription className="text-sm leading-relaxed">
+                    <CardTitle className="text-base">{benefit.title}</CardTitle>
+                    <CardDescription className="text-sm">
                       {benefit.description}
                     </CardDescription>
                   </CardHeader>
@@ -313,14 +269,9 @@ export default function Booking() {
                         target.src = 'https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=300&fit=crop&crop=center';
                       }}
                     />
-                    <div className="absolute top-4 left-4">
-                      <Badge className="bg-red-500 text-white text-xs">
-                        {suite.urgencyMessage}
-                      </Badge>
-                    </div>
                     <div className="absolute top-4 right-4">
-                      <Badge className="bg-green-600 text-white text-xs">
-                        Direct Booking
+                      <Badge variant="secondary" className="text-xs">
+                        {suite.urgencyMessage}
                       </Badge>
                     </div>
                   </div>
