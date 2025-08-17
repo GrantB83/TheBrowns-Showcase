@@ -489,6 +489,118 @@ export const blogPosts: BlogPost[] = [
     keywords: ["Dullstroom hiking", "highland trails", "nature walks", "outdoor activities", "mountain hiking"],
     metaDescription: "Discover hiking trails around Dullstroom in the Mpumalanga highlands. From gentle walks to mountain challenges, explore natural beauty near The Browns.",
     published: true
+  },
+  {
+    id: "7",
+    slug: "where-to-stay-dullstroom-2025-guide",
+    title: "Where to Stay in Dullstroom: 2025 Guide to Areas, Stays, and Trip Types",
+    excerpt: "Planning a Highlands Meander break and wondering where to base yourself? This guide explains the main stay areas around Dullstroom, what each suits, and how to choose the right setup for your trip.",
+    content: `
+      <h2>Your Complete Dullstroom Accommodation Guide</h2>
+      <p><strong>Last updated:</strong> 17 August 2025</p>
+      
+      <p>Planning a Highlands Meander break and wondering where to base yourself? This guide explains the main stay areas around Dullstroom, what each suits, and how to choose the right setup for your trip.</p>
+      
+      <p>Base yourself at The Browns' Luxury Guest & Cottage Suites in Dullstroom. Book an entire house for self-catering, or choose a suite-only stay with a beverage station only. Suites include a minibar fridge, Nespresso coffee, a tea selection, hot chocolate, still water and milk. Suites do not include cooking facilities.</p>
+      
+      <h3>Quick Picks: The Fast Way to Choose</h3>
+      
+      <h4>Couples who want fireplaces and easy dinners out</h4>
+      <p>Stay close to the Dullstroom village for walking access to cafés, whisky tastings and shops. Choose suite-only at The Browns for relaxed mornings with in-room coffee.</p>
+      
+      <h4>Families or friends who want space and privacy</h4>
+      <p>Pick a whole-house self-catering option. You will have living areas for board games, a proper kitchen, and an easy base for early starts.</p>
+      
+      <h4>Anglers and outdoor weekends</h4>
+      <p>Village or near-town works best for quick permits, tackle shops and early coffees. Plan short drives to your chosen waters or walks.</p>
+      
+      <h4>Special occasions</h4>
+      <p>Look at larger homes in the near-town countryside or private estates for extra privacy. Book dinners in the village and use the house for slow breakfasts.</p>
+      
+      <h3>The Main Stay Areas and Who They Suit</h3>
+      
+      <h4>1) Dullstroom Village</h4>
+      <p>Walk to breakfast, coffee, shops and tastings. Ideal for couples, solo travellers and short stays. Parking is easy and you are minutes from the main road for day trips.</p>
+      <p><strong>Good for:</strong> restaurant hopping, whisky tastings, light shopping, quick access to permits and guides.</p>
+      <p><strong>Consider:</strong> it can be lively on peak weekends. Book early.</p>
+      
+      <h4>2) Near-town countryside</h4>
+      <p>Smallholdings and lodges a short drive from the village give you quiet views and more space without being far from dinner plans.</p>
+      <p><strong>Good for:</strong> families and groups who prefer space, braai areas and easy parking.</p>
+      <p><strong>Consider:</strong> short gravel sections are common. Standard vehicles are fine with sensible driving.</p>
+      
+      <h4>3) Private estates around Dullstroom</h4>
+      <p>Golf, trout and country estates within a short drive offer security, views and managed open spaces. Some estates have internal rules about visitor access to facilities. Always check what your booking includes.</p>
+      <p><strong>Good for:</strong> special occasions, longer stays, golf weekends, focussed fishing trips.</p>
+      <p><strong>Consider:</strong> plan driving times to and from the village for meals and supplies.</p>
+      
+      <h3>Accommodation Types Explained</h3>
+      
+      <h4>Whole-house self-catering</h4>
+      <p>You book the entire house and get a kitchen, dining space and lounges. Perfect for families and groups who want flexible mealtimes and evenings in.</p>
+      <p><strong>Pros:</strong> space, privacy, better value per person for groups, easy early starts.</p>
+      <p><strong>Plan for:</strong> groceries on arrival and a simple menu.</p>
+      
+      <h4>Suite-only stays</h4>
+      <p>You book a private suite with hotel-style convenience. At The Browns, suites include a beverage station only with a minibar fridge, Nespresso coffee, a tea selection, hot chocolate, still water and milk.</p>
+      <p><strong>Pros:</strong> low-fuss mornings and nights, easy walking to restaurants, ideal for short stays.</p>
+      <p><strong>Plan for:</strong> meals out or takeaways. No cooking in suites.</p>
+      
+      <h4>Country hotels and lodges</h4>
+      <p>Some travellers like a full-service property. If you choose this route, confirm what is included in your rate and whether on-site fishing or activities require separate permits.</p>
+      <p><strong>Pros:</strong> on-site dining and activities in one place.</p>
+      <p><strong>Plan for:</strong> dinner reservations on peak weekends.</p>
+      
+      <h3>Price and Value Guide</h3>
+      <p>Dullstroom has options across the spectrum. Think in bands rather than chasing a single price.</p>
+      <ul>
+        <li><strong>Budget:</strong> compact rooms with simple finishes, often further from the village</li>
+        <li><strong>Mid-range:</strong> comfortable suites or cottages with thoughtful touches and parking</li>
+        <li><strong>Premium:</strong> larger houses, private estates, or suites with standout design and extras</li>
+      </ul>
+      <p><strong>Tip:</strong> for groups, a whole house often brings the nightly cost per person down while upgrading comfort.</p>
+      
+      <h3>Trip Types with Sample Plans</h3>
+      
+      <h4>Couples weekender</h4>
+      <p><strong>Stay:</strong> suite-only near the village.</p>
+      <p><strong>Plan:</strong> Friday check-in and a relaxed dinner in town. Saturday coffee, gentle walk or fly-fishing lesson, slow lunch, whisky tasting, special dinner. Sunday pancakes and a viewpoint stop on your way home.</p>
+      
+      <h4>Family or friends getaway</h4>
+      <p><strong>Stay:</strong> whole-house self-catering.</p>
+      <p><strong>Plan:</strong> Friday stock-up and easy pasta night. Saturday early activity, late breakfast at home, browsing in town, braai or shared platter dinner. Sunday quick walk and checkout.</p>
+      
+      <h4>Anglers' escape</h4>
+      <p><strong>Stay:</strong> village or near-town.</p>
+      <p><strong>Plan:</strong> early permits and first light on the water, late breakfast, second session in the afternoon, fly box tweaks by the fire.</p>
+      
+      <h3>Practical Planning</h3>
+      <ul>
+        <li>Book accommodation first for school holidays, long weekends and major events</li>
+        <li>Layer up year-round. Mornings are crisp and afternoons are often mild</li>
+        <li>Driving is simple. Main routes are tarred. Some estate and farm roads are good gravel</li>
+        <li>Dinner plans. Popular restaurants fill fast on weekends. Reserve earlier in the week</li>
+        <li>Groceries. If you booked a whole house, bring basics and top up in town</li>
+      </ul>
+      
+      <h3>Stay at The Browns in Dullstroom</h3>
+      <p>The Browns' Luxury Guest & Cottage Suites give you two clear ways to stay:</p>
+      <ul>
+        <li>Whole-house self-catering when you book an entire house</li>
+        <li>Suite-only stays with a beverage station only (minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, milk)</li>
+      </ul>
+      <p>Pick the setup that fits your trip and check live Rates & Availability to secure your dates.</p>
+    `,
+    category: "Accommodation",
+    author: "The Browns Team",
+    authorBio: "Local accommodation experts with insider knowledge of Dullstroom's best staying options and highland hospitality.",
+    date: "August 17, 2025",
+    readTime: "9 min read",
+    image: "/images/blog/self-catering-luxury.jpg",
+    keywords: ["Dullstroom accommodation 2025", "where to stay Dullstroom", "self-catering luxury", "suite accommodation", "Dullstroom areas guide"],
+    metaDescription: "Complete 2025 guide to where to stay in Dullstroom. Compare areas, accommodation types, and find the perfect base for your Highland Meander getaway.",
+    featured: false,
+    published: true
   }
 ];
 
