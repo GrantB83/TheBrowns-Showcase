@@ -11,6 +11,7 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "Accommodation", href: "/accommodation" },
   { name: "Activities", href: "/activities" },
+  { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -19,7 +20,8 @@ const itemPriority = {
   "Home": 1,
   "Accommodation": 2, 
   "Activities": 3,
-  "Contact": 4,
+  "Blog": 4,
+  "Contact": 5,
 };
 
 export function Header() {
