@@ -117,30 +117,75 @@ export const blogPosts: BlogPost[] = [
     id: "2",
     slug: "mpumalanga-events-festivals",
     title: "Upcoming Events and Festivals in Mpumalanga",
-    excerpt: "Stay updated on Dullstroom's seasonal festivals, markets, and cultural celebrations. Plan your visit around these exciting community events and local gatherings.",
+    excerpt: "Dullstroom & nearby: Belfast, Lydenburg (Mashishing), Ohrigstad, Machadodorp (eNtokozweni), Sabie, Graskop, Pilgrim's Rest. Hand-picked upcoming events within easy reach of Dullstroom—perfect for building a weekend around your stay.",
     content: `
-      <h2>Celebrate the Spirit of Dullstroom</h2>
-      <p>Dullstroom's calendar is filled with exciting events that showcase the town's rich culture, artisanal heritage, and natural beauty. From seasonal festivals to weekly markets, there's always something happening in this vibrant highland community.</p>
+      <h2>Dullstroom & Nearby: Event Planning Made Easy</h2>
+      <p><strong>Dullstroom & nearby:</strong> Belfast, Lydenburg (Mashishing), Ohrigstad, Machadodorp (eNtokozweni), Sabie, Graskop, Pilgrim's Rest<br>
+      <strong>Last updated:</strong> 17 August 2025</p>
       
-      <h3>Annual Dullstroom Fly-Fishing Championships</h3>
-      <p>Every October, the town hosts the premier fly-fishing competition in South Africa. Anglers from across the country gather to compete for prizes while enjoying the camaraderie of the fishing community.</p>
+      <p>Planning a trip to the Highlands Meander? Here's a hand-picked list of upcoming events within easy reach of Dullstroom—perfect for building a weekend around your stay.</p>
       
-      <h3>Highland Festival</h3>
-      <p>The Highland Festival celebrates Dullstroom's Scottish heritage with traditional music, dancing, and authentic cuisine. This family-friendly event typically takes place in spring and features local artisans and craftspeople.</p>
+      <p>Base yourself at The Browns' Luxury Guest & Cottage Suites in Dullstroom. Book an entire house for self-catering, or go suite-only (no cooking) with a beverage station: minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water and milk.</p>
       
-      <h3>Weekly Farmers Market</h3>
-      <p>Every Saturday morning, the local farmers market comes alive with fresh produce, homemade goods, and artisanal crafts. It's the perfect place to experience local flavors and meet the community.</p>
+      <h3>What's Still to Come in 2025</h3>
       
-      <h3>Planning Your Visit</h3>
-      <p>Book your stay at The Browns during festival season to experience Dullstroom at its most vibrant. Our central location puts you within walking distance of all the main event venues.</p>
+      <h4>Dullstroom Scenic Altitude 3-in-1 (Road Run) — Dullstroom</h4>
+      <p><strong>Saturday, 30 August 2025</strong> · 21.1 km, 10 km, ±4.5 km at Highland Gate Golf & Trout Estate. An crisp high-altitude run on rolling country roads—great excuse for a wintery weekend in town.</p>
+      
+      <h4>Graskop Heritage Carnival — Graskop</h4>
+      <p><strong>5–7 September 2025</strong> · A three-day community celebration with live music, food stalls, parade and family activities.</p>
+      
+      <h4>Mashishing Colour Festival — Lydenburg (Mashishing)</h4>
+      <p><strong>Saturday, 6 September 2025</strong> · A bright, family-friendly colour-powder day with music and kids' activities in Mashishing.</p>
+      
+      <h4>Dullstroom Village Fly-Fishing Festival — Dullstroom</h4>
+      <p><strong>23–25 October 2025</strong> · Multi-day stillwater fly-fishing across prime private waters around Dullstroom; team entry format. Book accommodation early.</p>
+      
+      <h4>South African National Gold Panning Championships — Pilgrim's Rest</h4>
+      <p><strong>8–12 October 2025</strong> · The historic gold-rush town hosts SA's national champs—spectator-friendly and uniquely Lowveld.</p>
+      
+      <h4>Africa Brew (10th Anniversary) — Sabie</h4>
+      <p><strong>7–9 November 2025</strong> · A traveling craft-beer festival, this year hosted by Sabie Brewing Company—expect tastings, demos and brewer meet-ups.</p>
+      
+      <h3>Recently Concluded—But Annual Staples to Watch for 2026</h3>
+      <p>These ran earlier this year and typically return around the same time next year. Pencil them in and check for date releases when you plan.</p>
+      
+      <ul>
+        <li><strong>Dullstroom Winter Festival / "Christmas in July"</strong> — A town-wide series of July weekends with live music, food and family events (11–26 July 2025). Expect similar mid-July timing in 2026.</li>
+        <li><strong>Sabie Tube Race</strong> — Big community river float weekend (7–8 Feb 2025). Watch for early-Feb dates.</li>
+        <li><strong>Sabie Classic (MTB)</strong> — One-day mountain-bike classic (26 Apr 2025). Traditionally late April.</li>
+        <li><strong>My Body My Space Public Arts Festival</strong> — Machadodorp (eNtokozweni) — Street-to-stage public arts across Human Rights Month (10th edition ran in March 2025). Look for March 2026 announcements.</li>
+        <li><strong>Mac Mac Ultra (Trail Running)</strong> — Sabie / Pilgrim's Rest — Next confirmed edition 1–5 July 2026, with race admin across Sabie/Pilgrim's Rest.</li>
+      </ul>
+      
+      <h3>How to Plan Your Weekend (Dullstroom-First)</h3>
+      <p><strong>Anchor the trip around one event.</strong> Add a second local activity (fly-fishing lesson, whisky tasting, glass-blowing, or a short hike) so non-participants have fun too.</p>
+      
+      <p><strong>Book accommodation first.</strong> Event weekends fill up fast. At The Browns:</p>
+      <ul>
+        <li>Whole-house self-catering when you book an entire house</li>
+        <li>Suite-only stays include a beverage station (minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, milk)</li>
+      </ul>
+      
+      <p><strong>Driving times (approx.) from Dullstroom:</strong> Sabie (±1h45), Graskop (±2h10), Pilgrim's Rest (±2h20), Lydenburg/Mashishing (±1h), Belfast (±30 min), Machadodorp/eNtokozweni (±40 min). Plan extra time on event days.</p>
+      
+      <p><strong>Pack for altitude.</strong> Even in spring, early mornings are chilly; layers and a windbreaker help.</p>
+      
+      <h3>Stay at The Browns (Dullstroom)</h3>
+      <p>The Browns' Luxury Guest & Cottage Suites are close to the village and make getting to regional events simple.</p>
+      <ul>
+        <li>Whole-house self-catering available only when booking an entire house</li>
+        <li>Suite-only stays include a beverage station (minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, milk)</li>
+      </ul>
+      <p>Check live Rates & Availability and match your dates to the right stay at The Browns.</p>
     `,
     category: "Events",
     author: "The Browns Team",
-    date: "March 10, 2024",
-    readTime: "4 min read",
+    date: "August 17, 2025",
+    readTime: "6 min read",
     image: "/images/blog/mpumalanga-events.jpg",
-    keywords: ["Dullstroom events", "Mpumalanga festivals", "seasonal celebrations", "local markets"],
-    metaDescription: "Stay updated on Dullstroom's festivals, markets, and cultural events. Plan your Mpumalanga highland getaway around exciting community celebrations.",
+    keywords: ["Mpumalanga events 2025", "Dullstroom festivals", "Highland Meander events", "regional festivals", "event accommodation"],
+    metaDescription: "Upcoming events and festivals in Mpumalanga 2025. From Dullstroom fly-fishing festivals to regional celebrations in Sabie, Graskop, and Pilgrim's Rest.",
     published: true
   },
   {
