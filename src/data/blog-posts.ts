@@ -715,6 +715,85 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "Complete guide to the best time to visit Dullstroom. Learn about seasonal weather, crowds, and activities to plan your perfect highland getaway.",
     featured: false,
     published: true
+  },
+  {
+    id: "9",
+    slug: "johannesburg-to-dullstroom-arrival-guide",
+    title: "Johannesburg to Dullstroom: The Easy Arrival Guide",
+    excerpt: "Planning a Highlands Meander escape from Joburg? Here's a clear, no-fuss guide to get you to Dullstroom smoothly, with realistic timing, simple route choices, and smart stop ideas.",
+    content: `
+      <h2>Your Complete Journey Guide from Johannesburg</h2>
+      <p><strong>Last updated:</strong> 17 August 2025</p>
+      
+      <p>Planning a Highlands Meander escape from Joburg? Here's a clear, no-fuss guide to get you to Dullstroom smoothly, with realistic timing, simple route choices, and smart stop ideas.</p>
+      
+      <p>Base yourself at The Browns' Luxury Guest & Cottage Suites in Dullstroom. Book an entire house for self-catering, or choose a suite-only stay with a beverage station only. Suites include a minibar fridge, Nespresso coffee, a tea selection, hot chocolate, still water and milk. Suites do not include cooking facilities.</p>
+      
+      <h3>Route at a Glance</h3>
+      
+      <h4>Fastest, simplest route</h4>
+      <p>Johannesburg → N12/N4 east toward eMalahleni → stay on N4 to Belfast (eMakhazeni) → turn onto R540 → Dullstroom.</p>
+      <p>The Belfast to Dullstroom stretch on the R540 is about half an hour in normal conditions.</p>
+      
+      <h3>How Long It Takes</h3>
+      <p><strong>Typical window:</strong> about 2 hrs 40 min to 3 hrs 20 min depending on departure point, traffic, and stops.</p>
+      
+      <h3>When to Leave</h3>
+      <p><strong>Fridays:</strong> depart before 14:30 or after 18:30 to avoid peak congestion leaving Gauteng.</p>
+      <p><strong>Sundays:</strong> plan a late breakfast and a mid-morning departure for a calmer return.</p>
+      
+      <h3>Tolls, Payments, and Quick Admin</h3>
+      <p>The N4 is a tolled highway. Expect 1–2 toll plazas on this route depending on where you join the N4.</p>
+      <p><strong>How to pay:</strong> cash, most bank cards, and widely rolled-out tap-to-pay at many plazas. A SANRAL mobility/tag account also works.</p>
+      <p><strong>Tip:</strong> keep a bank card handy at the driver's elbow and have small cash available as a backup.</p>
+      
+      <h3>Sensible Stop Ideas</h3>
+      <p><strong>Belfast (eMakhazeni):</strong> last straightforward fuel, ATM, and grocery stop before the R540 to Dullstroom.</p>
+      <p><strong>Milly's on the N4 (near Machadodorp/eNtokozweni):</strong> a regional institution for coffee, trout pies, and pantry treats. Great if you want to arrive with breakfast supplies.</p>
+      
+      <h3>Easy Arrival Checklist</h3>
+      <ul>
+        <li><strong>Fuel and tyres:</strong> top up in Belfast if needed</li>
+        <li><strong>Groceries:</strong> if you booked a whole house, pick up basics before turning onto the R540</li>
+        <li><strong>Check-in window:</strong> confirm your planned arrival time</li>
+        <li><strong>Navigation:</strong> save an offline map for the Belfast–Dullstroom leg in case of spotty coverage</li>
+      </ul>
+      
+      <h3>Driving Notes for a Smooth Trip</h3>
+      <p><strong>Road type:</strong> the N4 is a major dual carriageway. The R540 is a regional road with slower speeds and occasional trucks, tractors, or wildlife.</p>
+      <p><strong>Daylight:</strong> if you can, aim to do the R540 stretch in daylight for the easiest arrival.</p>
+      <p><strong>Weather:</strong> summer brings afternoon showers; winter mornings can be frosty. Pack a warm layer year-round.</p>
+      
+      <h3>What to Pack in the Car</h3>
+      <p>Reusable water bottles, a warm top for each traveller, a compact rain jacket in summer, snacks for the R540 leg, and a phone charger.</p>
+      <p>If you plan to fish, keep your permit details and a small cooler in the boot.</p>
+      
+      <h3>Sample Arrival Plans</h3>
+      
+      <h4>After-work Friday</h4>
+      <p>Leave Joburg around 15:00, fuel in Belfast, and arrive in time for an in-town dinner. Settle in for an early start on Saturday.</p>
+      
+      <h4>Leisurely Saturday</h4>
+      <p>Leave after breakfast, stop once for coffee and a stretch, check in mid-afternoon, then take a stroll down Naledi Drive before dinner.</p>
+      
+      <h3>Where to Stay</h3>
+      <p><strong>The Browns' Luxury Guest & Cottage Suites (Dullstroom)</strong></p>
+      <ul>
+        <li>Whole-house self-catering when you book an entire house</li>
+        <li>Suite-only stays with a beverage station only (minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, milk)</li>
+      </ul>
+      <p>Choose the setup that fits your trip and check live Rates & Availability to secure your dates.</p>
+    `,
+    category: "Travel Tips",
+    author: "The Browns Team",
+    authorBio: "Local travel experts with extensive knowledge of routes, timing, and practical tips for reaching the Mpumalanga highlands.",
+    date: "August 17, 2025",
+    readTime: "5 min read",
+    image: "/images/hero/gardens-mountains.jpg",
+    keywords: ["Johannesburg to Dullstroom", "driving directions", "travel guide", "route planning", "highland travel"],
+    metaDescription: "Complete driving guide from Johannesburg to Dullstroom. Route options, timing, tolls, stops, and arrival tips for your Mpumalanga highlands getaway.",
+    featured: false,
+    published: true
   }
 ];
 
