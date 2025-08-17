@@ -302,30 +302,107 @@ export const blogPosts: BlogPost[] = [
     id: "4",
     slug: "dullstroom-artisanal-food-scene",
     title: "Exploring Dullstroom's Artisanal Food Scene",
-    excerpt: "From fine dining restaurants to local delicacies, discover Dullstroom's culinary treasures. Perfect dining experiences within walking distance of The Browns.",
+    excerpt: "Slow mornings, crisp highland air, and really good small-batch food — that's Dullstroom at its best. Your guide to local coffee roasters, cheese makers, and artisanal producers.",
     content: `
-      <h2>A Culinary Journey Through the Highlands</h2>
-      <p>Dullstroom has evolved into a gastronomic destination that rivals any major city. This small highland town punches well above its weight when it comes to culinary excellence, offering everything from award-winning restaurants to charming local cafes.</p>
+      <h2>A Foodie's Guide to Highland Flavours</h2>
+      <p><strong>Last updated:</strong> 17 August 2025</p>
       
-      <h3>Fine Dining Excellence</h3>
-      <p>Several restaurants in Dullstroom have earned national recognition for their innovative use of local ingredients and exceptional service. Many feature locally-sourced trout, highland beef, and seasonal vegetables grown in the fertile mountain soil.</p>
+      <p>Slow mornings, crisp highland air, and really good small-batch food — that's Dullstroom at its best. If you love tasting things made with care (and chatting to the people who make them), use this guide to plan a flavour-forward weekend in and around town.</p>
       
-      <h3>Artisanal Producers</h3>
-      <p>The town is home to numerous artisanal food producers creating everything from handcrafted chocolates to specialty cheeses. These local artisans often use traditional methods passed down through generations.</p>
+      <p>Base yourself at The Browns' Luxury Guest & Cottage Suites. Book an entire house for self-catering, or choose a suite-only stay with a beverage station (minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, milk) for easy early starts.</p>
       
-      <h3>Coffee Culture</h3>
-      <p>Dullstroom's coffee scene is thriving, with several specialty roasters and cafes offering everything from perfectly brewed espresso to unique highland blends. Many cafes also feature homemade pastries and light meals.</p>
+      <h3>Coffee Roasted in Dullstroom</h3>
       
-      <h3>Walking Distance Dining</h3>
-      <p>One of the advantages of staying at The Browns is our central location. Most of Dullstroom's finest restaurants and cafes are within easy walking distance, allowing you to explore the food scene without worrying about transportation.</p>
+      <h4>Beans About Coffee (Dullstroom origin)</h4>
+      <p>The first Beans About Coffee roastery opened in Dullstroom back in 2009; they still champion fresh, small-batch roasts that pair perfectly with a fireside morning.</p>
+      
+      <h4>Dullstroom Coffee Roastery</h4>
+      <p>A dedicated local roastery led by a resident roast-master (look out for training and tastings from time to time).</p>
+      
+      <p><strong>Insider tip:</strong> Pick up a bag for your room and enjoy that first cup before the village wakes.</p>
+      
+      <h3>Smoked Trout & Deli Finds</h3>
+      
+      <h4>The Deli Stroom</h4>
+      <p>A favourite for picnic supplies and snack boards, with crowd-pleasers like smoked trout, biltong, breads and cakes. Handy if you're building an in-suite spread.</p>
+      
+      <h4>Lunsklip Fisheries (local producer)</h4>
+      <p>The region's long-running trout specialists supply fresh and smoked trout to shops and restaurants around Dullstroom — look for their ribbons and fillets in local fridges.</p>
+      
+      <p><strong>Make-at-home idea:</strong> Smoked-trout ribbons on hot buttered toast with a squeeze of lemon and cracked pepper.</p>
+      
+      <h3>Cheese, Handmade Pasta & Tastings Under One Roof (84 on Main)</h3>
+      <p>At 84 Naledi Drive, you'll find a compact foodie hub ideal for a lazy browse:</p>
+      
+      <h4>Bergen Cheese</h4>
+      <p>A local cheese factory & shop with weekend tasting tables.</p>
+      
+      <h4>Pasta Dullicious</h4>
+      <p>Fresh, handcrafted pasta made in Dullstroom, plus specialty pantry goodies.</p>
+      
+      <h4>Infinite Tea</h4>
+      <p>Bubble teas and sips to enjoy while you shop.</p>
+      
+      <h4>Dullstroom Cultour Co. Wine Club</h4>
+      <p>Regular themed wine tastings with pairing boards featuring Bergen Cheese selections.</p>
+      
+      <p><strong>Perfect rainy-day plan:</strong> Do a cheese tasting, grab fresh pasta and a sauce, and you've got dinner sorted if you're in a whole-house self-catering booking at The Browns.</p>
+      
+      <h3>Artisanal Sips (Whisky, Wine & More)</h3>
+      
+      <h4>Wild About Whisky</h4>
+      <p>Renowned Dullstroom bar offering themed, tutored tastings (typically six 15 ml pours per flight) spanning whisky and other premium spirits. Book a slot and take it slow.</p>
+      
+      <h3>A Classic Farm-Stall Stop (Nearby Machadodorp)</h3>
+      
+      <h4>Milly's on the N4</h4>
+      <p>A regional institution for trout pies, a well-stocked farm stall and sit-down meals — ideal for your drive in or out.</p>
+      
+      <h3>Microbrewery Side-Trip (Long Tom Pass)</h3>
+      
+      <h4>Hops Hollow Country House & Brew Pub (near Lydenburg/Mashishing)</h4>
+      <p>Small-batch beers poured at the highest point of the Long Tom Pass; pair with hearty pub plates and big views.</p>
+      
+      <p><strong>Note:</strong> Some venues in the region adjust hours seasonally. Always check current opening times before you drive.</p>
+      
+      <h3>Sweet Treats & Comfort Classics in Town</h3>
+      
+      <h4>Udderlicious Milkshake Bar</h4>
+      <p>Beloved for its long list of double-thick flavours and whimsical limited editions; a fun stop after a stroll down Naledi Drive.</p>
+      
+      <h4>Harrie's Pancakes (Dullstroom branch)</h4>
+      <p>A South African staple; expect both sweet and savoury pancakes (you'll even spot local trout on the menu).</p>
+      
+      <h3>Build-Your-Own Dullstroom Tasting Board (Easy in 10 Minutes)</h3>
+      <ul>
+        <li><strong>Cheese:</strong> a soft goat-style and a sharp cheddar from Bergen Cheese</li>
+        <li><strong>Protein:</strong> sliced smoked trout from The Deli Stroom (Lunsklip supply)</li>
+        <li><strong>Carbs & crunch:</strong> baguette or crackers from a village bakery/deli</li>
+        <li><strong>Sip:</strong> a Wild About Whisky tasting flight before dinner, or a bottle recommended by the Dullstroom Cultour Co. wine club to enjoy back at your stay</li>
+      </ul>
+      
+      <h3>Practical Tips</h3>
+      <ul>
+        <li>Book tastings ahead on peak weekends (whisky and wine sessions can fill)</li>
+        <li>Pack a cooler bag if you'll be buying chilled goods and plan to wander</li>
+        <li>Self-catering? Stock up in town for breakfast and snack boards, then keep dinners flexible with one meal out</li>
+      </ul>
+      
+      <h3>Where to Stay</h3>
+      <p><strong>The Browns' Luxury Guest & Cottage Suites (Dullstroom)</strong></p>
+      <ul>
+        <li>Whole-house self-catering is available when you book an entire house</li>
+        <li>Suite-only stays include a beverage station (minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, milk)</li>
+      </ul>
+      <p>Set your foodie weekend base and check live Rates & Availability at The Browns' — then eat, sip and explore at your own pace.</p>
     `,
     category: "Dining",
     author: "The Browns Team",
-    date: "February 28, 2024",
-    readTime: "7 min read",
+    date: "August 17, 2025",
+    readTime: "8 min read",
     image: "/images/blog/dullstroom-food-scene.jpg",
-    keywords: ["Dullstroom dining", "fine dining", "local cuisine", "artisanal food", "restaurant recommendations"],
-    metaDescription: "Explore Dullstroom's exceptional artisanal food scene. Discover fine dining, local producers, and culinary experiences in the Mpumalanga highlands.",
+    keywords: ["Dullstroom food scene", "artisanal producers", "local cheese", "whisky tasting", "coffee roasters", "trout delicacies"],
+    metaDescription: "Explore Dullstroom's artisanal food scene. From local coffee roasters to cheese makers, discover the best small-batch producers in the Mpumalanga highlands.",
     published: true
   },
   {
