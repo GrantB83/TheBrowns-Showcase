@@ -148,10 +148,6 @@ const Index = () => {
           autoPlayInterval={6000}
           enableSwipe={true}
         />
-        {/* Hero Booking Widget - Positioned prominently */}
-        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 lg:bottom-12 left-1/2 transform -translate-x-1/2 w-full px-4 z-30">
-          <HeroBookingWidget compact={true} />
-        </div>
       </section>
 
       {/* Trust Signals & Social Proof */}
@@ -174,6 +170,21 @@ const Index = () => {
               <div className="h-4 w-px bg-border"></div>
               <span>Best Rate Guarantee</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Booking Section */}
+      <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-r from-primary/10 via-background to-accent/10">
+        <div className="responsive-container">
+          <div className="max-w-4xl mx-auto text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-primary mb-4 font-playfair">Book Your Luxury Stay</h2>
+            <p className="text-fluid-lg text-muted-foreground mb-6 leading-relaxed">
+              Choose your dates and secure your perfect highland retreat with our best rate guarantee.
+            </p>
+          </div>
+          <div className="max-w-2xl mx-auto">
+            <HeroBookingWidget compact={false} />
           </div>
         </div>
       </section>
