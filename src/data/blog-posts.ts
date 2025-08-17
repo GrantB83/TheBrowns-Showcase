@@ -887,6 +887,121 @@ export const blogPosts: BlogPost[] = [
     keywords: ["Dullstroom breakfast", "coffee shops Dullstroom", "food guide", "local restaurants", "morning dining"],
     metaDescription: "Your complete guide to breakfast and coffee in Dullstroom. Local recommendations for the best morning spots, cafés, and food experiences in the village.",
     published: true
+  },
+  {
+    id: "8", 
+    slug: "romantic-dullstroom-couples-guide",
+    title: "Romantic Dullstroom: Fireplaces, Tastings, Slow Dinners",
+    excerpt: "Planning a couples' escape to the Highlands Meander? Dullstroom is built for unhurried mornings, clear days, and evenings by the fire. Use this guide to design a relaxed, romantic weekend with just the right amount of planning.",
+    content: `
+      <h2>Planning a Couples' Escape to the Highlands Meander?</h2>
+      <p><strong>Last updated:</strong> 17 August 2025</p>
+      
+      <p>Planning a couples' escape to the Highlands Meander? Dullstroom is built for unhurried mornings, clear days, and evenings by the fire. Use this guide to design a relaxed, romantic weekend with just the right amount of planning.</p>
+      
+      <p>Base yourself at The Browns' Luxury Guest & Cottage Suites in Dullstroom. Book an entire house for self-catering, or choose a suite-only stay with a beverage station only. Suites include a minibar fridge, Nespresso coffee, a tea selection, hot chocolate, still water and milk. Suites do not include cooking facilities.</p>
+      
+      <h3>Why Dullstroom works for two</h3>
+      <ul>
+        <li>Cool, crisp climate that makes fireplaces a highlight year-round.</li>
+        <li>Compact village so you can walk to coffee, tastings, and dinner.</li>
+        <li>Easy day plans from fly-fishing lessons to scenic drives and gentle walks.</li>
+      </ul>
+      
+      <h3>The perfect 48-hour couples itinerary</h3>
+      
+      <h4>Friday: arrive and exhale</h4>
+      <p>Aim for late afternoon. Check in, make a coffee in your suite, and take a slow stroll down Naledi Drive.</p>
+      <p>Uncomplicated dinner. Pick a relaxed village spot so you are rested for Saturday.</p>
+      <p>Fireplace time. End the evening with a warm drink and a quiet chat.</p>
+      
+      <h4>Saturday: easy adventure, slow evening</h4>
+      <p>Coffee and breakfast. Start at a local espresso bar or a classic breakfast venue.</p>
+      
+      <p><strong>Choose one signature activity:</strong></p>
+      <ul>
+        <li>Fly-fishing intro lesson for a shared first on still water.</li>
+        <li>Scenic walk near town for views and photos.</li>
+        <li>Pantry browsing at 84 on Main to collect cheeses and fresh pasta.</li>
+      </ul>
+      
+      <p>Afternoon reset. Read, nap, or soak up the winter sun.</p>
+      
+      <p><strong>Tasting before dinner:</strong></p>
+      <ul>
+        <li>Wild About Whisky for a guided flight and conversation starters.</li>
+        <li>Dullstroom Gin Emporium for a spirited local tasting with signature serves.</li>
+      </ul>
+      
+      <p>Slow dinner. Book ahead for a special-occasion table in the village.</p>
+      
+      <h4>Sunday: gentle farewell</h4>
+      <p>Late breakfast and a last coffee.</p>
+      <p>Short scenic stop on your way out.</p>
+      <p>Head home feeling restored.</p>
+      
+      <h3>Romantic things to do (mix and match)</h3>
+      <p><strong>Guided tastings.</strong> Book a curated whisky or gin flight for late afternoon. Go unrushed and make it a highlight rather than a quick stop.</p>
+      
+      <p><strong>Cheese and pasta haul.</strong> Pick up wedges from Bergen Cheese and fresh pasta from Pasta Dullicious at 84 on Main. If you booked a whole house, you have an instant dinner plan.</p>
+      
+      <p><strong>Fly-fishing together.</strong> A 2–3 hour lesson is enough to learn casting basics and enjoy time on the water.</p>
+      
+      <p><strong>Golden-hour walk.</strong> Choose an easy near-town route for soft light and photos.</p>
+      
+      <p><strong>Fireside games.</strong> Pack a deck of cards or a favourite board game.</p>
+      
+      <h3>Dining ideas without over-planning</h3>
+      <ul>
+        <li>One special dinner on Saturday. Reserve a table earlier in the week.</li>
+        <li>One casual meal where you can sit by a fire and keep it simple.</li>
+        <li>Suite-only stays: enjoy coffees and night-caps in your room, then eat out in the village.</li>
+        <li>Whole-house bookings: do a relaxed pasta night with your 84 on Main haul, plus a salad and fresh bread.</li>
+      </ul>
+      
+      <h3>Short scenic drives for two</h3>
+      <p><strong>Long Tom Pass outlook</strong> (via Lydenburg/Mashishing). Big views, crisp air, and the option to stop for a microbrewery lunch at Hops Hollow.</p>
+      
+      <p><strong>Pantry stop at Milly's</strong> (near Machadodorp/eNtokozweni). Trout pies and smoked trout for the road or for your self-catered dinner.</p>
+      
+      <h3>Spa and slower wellness options</h3>
+      <p>Dullstroom's calm pace makes it easy to add a couple of wellness elements: a leisurely morning stretch, a mindful walk, or simply extra time to read by the fire. If you prefer formal treatments, call ahead and book a local spa appointment to fit your itinerary.</p>
+      
+      <h3>Packing list for a cosy weekend</h3>
+      <ul>
+        <li>Warm layer for evenings, even in summer</li>
+        <li>Comfortable walking shoes</li>
+        <li>Light rain jacket in the summer months</li>
+        <li>Reusable water bottles</li>
+        <li>Board game or cards</li>
+        <li>Small cooler bag if you plan to shop for cheeses or chilled goods</li>
+      </ul>
+      
+      <h3>Practical planning tips</h3>
+      <ul>
+        <li>Book accommodation first for long weekends and busy seasons.</li>
+        <li>Reserve tastings and dinner once your dates are set.</li>
+        <li>Walk when you can. Parking is easy, but strolling the village adds to the mood.</li>
+        <li>Leave time for arrival. The last half hour from Belfast on the R540 is prettier in daylight.</li>
+      </ul>
+      
+      <h3>Where to stay</h3>
+      <p><strong>The Browns' Luxury Guest & Cottage Suites (Dullstroom)</strong></p>
+      <ul>
+        <li>Whole-house self-catering when you book an entire house</li>
+        <li>Suite-only stays with a beverage station only (minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, milk)</li>
+      </ul>
+      <p>Choose the setup that fits your couple's weekend and check live Rates & Availability to secure your dates.</p>
+    `,
+    category: "Romance",
+    author: "The Browns Team",
+    authorBio: "Local experts passionate about showcasing the best of Dullstroom and the Mpumalanga highlands.",
+    date: "August 17, 2025",
+    readTime: "8 min read",
+    image: "/src/assets/romantic-dullstroom-fireplace.jpg",
+    keywords: ["romantic Dullstroom", "couples getaway", "romantic weekend", "fireplace suites", "romantic dining"],
+    metaDescription: "Plan the perfect romantic getaway in Dullstroom. Complete guide to fireplaces, tastings, slow dinners and couples activities in the Mpumalanga highlands.",
+    published: true
   }
 ];
 
