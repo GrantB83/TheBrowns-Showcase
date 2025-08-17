@@ -23,6 +23,45 @@ export default function Blog() {
     { label: "Accommodation", category: "Accommodation" }
   ];
 
+  // Category-specific hero content
+  const categoryHeroContent = {
+    Activities: {
+      title: "Activities in Dullstroom",
+      description: "Dullstroom is perfect for easy outdoor time and relaxed exploring. Spend mornings on managed trout waters, take gentle walks around the town dams or along farm roads, and plan short scenic drives for big views on Long Tom Pass. Add a guided tasting in the late afternoon and a slow browse through local food and craft spots to round out the day."
+    },
+    Food: {
+      title: "Food & Drink in Dullstroom",
+      description: "Start with good coffee in the village, then work through simple, hearty meals that suit cool highland weather. Pick up local cheeses and pantry treats for snack boards, plan one sit-down dinner in town, and, if you booked a whole house, keep one night for a relaxed self-catered pasta or braai. Cap the afternoon with a curated whisky or gin tasting before dinner."
+    },
+    Travel: {
+      title: "Travel Tips for Dullstroom",
+      description: "From Johannesburg, the straightforward route is N12/N4 to Belfast (eMakhazeni) and then R540 to Dullstroom. Aim to do the final stretch in daylight, keep a warm layer handy year-round, and book popular restaurants or tastings ahead on weekends. If you are self-catering, stock up in Belfast before turning onto the R540."
+    },
+    Events: {
+      title: "Events in Dullstroom",
+      description: "The Highlands Meander has a steady calendar of community runs, markets, heritage days, and outdoor weekends, with Dullstroom highlights peaking in winter and spring. Build your trip around one anchor event, then add a tasting, an easy walk, or a fly-fishing session so the whole group has something to enjoy. Check dates early and secure accommodation first on busy weekends."
+    },
+    Accommodation: {
+      title: "Accommodation at The Browns",
+      description: "At The Browns' Luxury Guest & Cottage Suites you can choose whole-house self-catering when you book an entire house, or suite-only stays that include a beverage station with a minibar fridge, Nespresso coffee, a tea selection, hot chocolate, still water, and milk. Suites do not include cooking facilities. Pick the setup that fits your trip, then check live rates and availability to lock in your dates."
+    }
+  };
+
+  // Get current hero content based on selected category
+  const getCurrentHeroContent = () => {
+    if (selectedCategories.length === 1) {
+      const category = selectedCategories[0] as keyof typeof categoryHeroContent;
+      return categoryHeroContent[category] || {
+        title: "The Browns Blog",
+        description: "Discover Dullstroom's hidden gems, local insights, and travel inspiration from our luxury guest suites in the heart of Mpumalanga highlands."
+      };
+    }
+    return {
+      title: "The Browns Blog",
+      description: "Discover Dullstroom's hidden gems, local insights, and travel inspiration from our luxury guest suites in the heart of Mpumalanga highlands."
+    };
+  };
+
   // Handle URL parameters for filtering
   useEffect(() => {
     const categoryParam = searchParams.get('category');
@@ -65,10 +104,9 @@ export default function Blog() {
       <section className="section-spacing bg-gradient-to-br from-accent to-muted">
         <div className="responsive-container">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-primary mb-4 sm:mb-6">The Browns Blog</h1>
+            <h1 className="text-primary mb-4 sm:mb-6">{getCurrentHeroContent().title}</h1>
             <p className="text-fluid-lg sm:text-fluid-xl text-muted-foreground leading-relaxed max-w-none sm:max-w-3xl mx-auto">
-              Discover Dullstroom's hidden gems, local insights, and travel inspiration 
-              from our luxury guest suites in the heart of Mpumalanga highlands.
+              {getCurrentHeroContent().description}
             </p>
           </div>
         </div>
