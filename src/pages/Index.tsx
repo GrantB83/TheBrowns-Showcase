@@ -336,21 +336,9 @@ const Index = () => {
             Book directly with us for the best rates and personalized service. 
             Experience the perfect blend of luxury and comfort in Dullstroom.
           </p>
-          <Button 
-            size="lg" 
-            variant="secondary" 
-            asChild 
-            className="min-h-[48px] sm:min-h-[52px] text-sm sm:text-base font-medium touch-feedback mobile-tap-highlight"
-          >
-            <a 
-              href="https://book.nightsbridge.com/00000" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              aria-label="Book your luxury Dullstroom stay now - best rates guaranteed"
-            >
-              Book Your Stay Now
-            </a>
-          </Button>
+          <div className="max-w-lg mx-auto">
+            <HeroBookingWidget compact={false} />
+          </div>
         </div>
       </section>
     </div>
