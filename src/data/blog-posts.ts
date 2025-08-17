@@ -302,90 +302,80 @@ export const blogPosts: BlogPost[] = [
     id: "4",
     slug: "dullstroom-artisanal-food-scene",
     title: "Exploring Dullstroom's Artisanal Food Scene",
-    excerpt: "Slow mornings, crisp highland air, and really good small-batch food — that's Dullstroom at its best. Your guide to local coffee roasters, cheese makers, and artisanal producers.",
+    excerpt: "Slow mornings, crisp highland air, and small-batch flavours — Dullstroom is made for eating well at an easy pace. Your insider guide to local producers, tastings, and foodie experiences.",
     content: `
       <h2>A Foodie's Guide to Highland Flavours</h2>
       <p><strong>Last updated:</strong> 17 August 2025</p>
       
-      <p>Slow mornings, crisp highland air, and really good small-batch food — that's Dullstroom at its best. If you love tasting things made with care (and chatting to the people who make them), use this guide to plan a flavour-forward weekend in and around town.</p>
+      <p>Slow mornings, crisp highland air, and small-batch flavours — Dullstroom is made for eating well at an easy pace. Use this insider guide to plan a foodie weekend built around coffee, tastings, and proudly local producers in town and just down the road.</p>
       
-      <p>Base yourself at The Browns' Luxury Guest & Cottage Suites. Book an entire house for self-catering, or choose a suite-only stay with a beverage station (minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, milk) for easy early starts.</p>
+      <p>Base yourself at The Browns' Luxury Guest & Cottage Suites in Dullstroom. Book an entire house for self-catering, or choose a suite-only stay with a beverage station (minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, milk) for effortless early starts.</p>
       
-      <h3>Coffee Roasted in Dullstroom</h3>
+      <h3>Coffee to Start the Day</h3>
       
-      <h4>Beans About Coffee (Dullstroom origin)</h4>
-      <p>The first Beans About Coffee roastery opened in Dullstroom back in 2009; they still champion fresh, small-batch roasts that pair perfectly with a fireside morning.</p>
+      <h4>Beans About Coffee (Dullstroom Espresso Bar, Naledi Drive)</h4>
+      <p>Dullstroom's original roastery brand pours freshly roasted coffees at its espresso bar on the main drag. Grab a bag for your room and enjoy that first cup before the village wakes.</p>
       
-      <h4>Dullstroom Coffee Roastery</h4>
-      <p>A dedicated local roastery led by a resident roast-master (look out for training and tastings from time to time).</p>
+      <p><strong>Handy tip:</strong> weekends can be busy. If you're heading out early to fish or hike, get your take-away before peak breakfast time.</p>
       
-      <p><strong>Insider tip:</strong> Pick up a bag for your room and enjoy that first cup before the village wakes.</p>
+      <h3>Cheese, Pasta and Pantry at 84 on Main</h3>
       
-      <h3>Smoked Trout & Deli Finds</h3>
+      <h4>Bergen Cheese (84 Naledi Drive)</h4>
+      <p>A local favourite for tasting and take-home wedges — from cheddars to softer styles. Perfect for building a late-afternoon snack board.</p>
       
-      <h4>The Deli Stroom</h4>
-      <p>A favourite for picnic supplies and snack boards, with crowd-pleasers like smoked trout, biltong, breads and cakes. Handy if you're building an in-suite spread.</p>
+      <h4>Pasta Dullicious (same centre)</h4>
+      <p>Handmade, small-batch pasta made in Dullstroom, plus sauces and specialty pantry goods to match.</p>
       
-      <h4>Lunsklip Fisheries (local producer)</h4>
-      <p>The region's long-running trout specialists supply fresh and smoked trout to shops and restaurants around Dullstroom — look for their ribbons and fillets in local fridges.</p>
+      <h4>Dullstroom Cultour Co. Wine Club (same centre)</h4>
+      <p>A cosy spot for guided wine tastings with cheese boards inspired by Bergen's range. Book ahead on busy weekends.</p>
       
-      <p><strong>Make-at-home idea:</strong> Smoked-trout ribbons on hot buttered toast with a squeeze of lemon and cracked pepper.</p>
+      <h4>Infinite Tea (same centre)</h4>
+      <p>Bubble tea and refreshing sips while you browse the centre.</p>
       
-      <h3>Cheese, Handmade Pasta & Tastings Under One Roof (84 on Main)</h3>
-      <p>At 84 Naledi Drive, you'll find a compact foodie hub ideal for a lazy browse:</p>
+      <h3>Tastings with a Local Twist</h3>
       
-      <h4>Bergen Cheese</h4>
-      <p>A local cheese factory & shop with weekend tasting tables.</p>
+      <h4>Wild About Whisky (Naledi Drive)</h4>
+      <p>One of South Africa's most renowned whisky experiences, with curated flights across whisky — and increasingly gin, agave and more. Sessions are relaxed, informative and easy to book.</p>
       
-      <h4>Pasta Dullicious</h4>
-      <p>Fresh, handcrafted pasta made in Dullstroom, plus specialty pantry goodies.</p>
+      <h4>Dullstroom Gin — Gin Emporium (Ivy Lane, 65 Naledi Drive)</h4>
+      <p>A small, characterful tasting room pouring craft gins made for highland evenings. Expect guided tastings and a shelf of infusions and signature serves.</p>
       
-      <h4>Infinite Tea</h4>
-      <p>Bubble teas and sips to enjoy while you shop.</p>
+      <h3>Chocolate, Sweets and Family Treats</h3>
       
-      <h4>Dullstroom Cultour Co. Wine Club</h4>
-      <p>Regular themed wine tastings with pairing boards featuring Bergen Cheese selections.</p>
+      <h4>Shautany Chocolatiers (Ivy Lane, Naledi Drive)</h4>
+      <p>Handmade Belgian-style chocolates, truffles and bars — great gifts or dessert for the cottage table.</p>
       
-      <p><strong>Perfect rainy-day plan:</strong> Do a cheese tasting, grab fresh pasta and a sauce, and you've got dinner sorted if you're in a whole-house self-catering booking at The Browns.</p>
+      <h4>Udderlicious Milkshake Bar (Old Transvaal precinct)</h4>
+      <p>Double-thick, fun flavours and kid-friendly energy. A light-hearted stop after a stroll down Naledi Drive.</p>
       
-      <h3>Artisanal Sips (Whisky, Wine & More)</h3>
+      <h3>Classic Farm-Stall Stop (Nearby)</h3>
       
-      <h4>Wild About Whisky</h4>
-      <p>Renowned Dullstroom bar offering themed, tutored tastings (typically six 15 ml pours per flight) spanning whisky and other premium spirits. Book a slot and take it slow.</p>
+      <h4>Milly's on the N4 (Machadodorp/eNtokozweni)</h4>
+      <p>A regional institution en route to or from Dullstroom. Stock up on hot- or cold-smoked trout, legendary trout pies, pâtés, and pantry fillers from the on-site bakery.</p>
       
-      <h3>A Classic Farm-Stall Stop (Nearby Machadodorp)</h3>
+      <h3>A Microbrewery with a View (Easy Side Trip)</h3>
       
-      <h4>Milly's on the N4</h4>
-      <p>A regional institution for trout pies, a well-stocked farm stall and sit-down meals — ideal for your drive in or out.</p>
+      <h4>Hops Hollow Country House & Brew Pub (Long Tom Pass, near Lydenburg/Mashishing)</h4>
+      <p>Small-batch beers poured at the highest point of the pass, with hearty pub plates and big escarpment views. Ideal for a leisurely lunch on your way in or out.</p>
       
-      <h3>Microbrewery Side-Trip (Long Tom Pass)</h3>
+      <h3>Local Trout: What to Buy and Where</h3>
+      <p>Dullstroom sits in trout country, with producers in the wider area supplying smoked ribbons, fillets and pâtés to shops and restaurants. For a sure-thing takeaway, pick up smoked trout and pies at Milly's; in town, look for stocked fridges in main-road delis and bottle shops, especially on weekends.</p>
       
-      <h4>Hops Hollow Country House & Brew Pub (near Lydenburg/Mashishing)</h4>
-      <p>Small-batch beers poured at the highest point of the Long Tom Pass; pair with hearty pub plates and big views.</p>
-      
-      <p><strong>Note:</strong> Some venues in the region adjust hours seasonally. Always check current opening times before you drive.</p>
-      
-      <h3>Sweet Treats & Comfort Classics in Town</h3>
-      
-      <h4>Udderlicious Milkshake Bar</h4>
-      <p>Beloved for its long list of double-thick flavours and whimsical limited editions; a fun stop after a stroll down Naledi Drive.</p>
-      
-      <h4>Harrie's Pancakes (Dullstroom branch)</h4>
-      <p>A South African staple; expect both sweet and savoury pancakes (you'll even spot local trout on the menu).</p>
-      
-      <h3>Build-Your-Own Dullstroom Tasting Board (Easy in 10 Minutes)</h3>
+      <h3>Build-Your-Own Dullstroom Tasting Board (10-Minute Plan)</h3>
       <ul>
-        <li><strong>Cheese:</strong> a soft goat-style and a sharp cheddar from Bergen Cheese</li>
-        <li><strong>Protein:</strong> sliced smoked trout from The Deli Stroom (Lunsklip supply)</li>
-        <li><strong>Carbs & crunch:</strong> baguette or crackers from a village bakery/deli</li>
-        <li><strong>Sip:</strong> a Wild About Whisky tasting flight before dinner, or a bottle recommended by the Dullstroom Cultour Co. wine club to enjoy back at your stay</li>
+        <li><strong>Cheese:</strong> two contrasting wedges from Bergen Cheese</li>
+        <li><strong>Carbs & crunch:</strong> fresh baguette or crackers from a village bakery/deli</li>
+        <li><strong>Protein:</strong> smoked trout from Milly's for ribbons or pâté</li>
+        <li><strong>Something sweet:</strong> a small box from Shautany Chocolatiers</li>
+        <li><strong>Sip:</strong> book a Wild About Whisky or Dullstroom Gin tasting before dinner, or take a recommended bottle from the Dullstroom Cultour Co. Wine Club back to your suite</li>
       </ul>
       
-      <h3>Practical Tips</h3>
+      <h3>Practical Planning</h3>
       <ul>
-        <li>Book tastings ahead on peak weekends (whisky and wine sessions can fill)</li>
-        <li>Pack a cooler bag if you'll be buying chilled goods and plan to wander</li>
-        <li>Self-catering? Stock up in town for breakfast and snack boards, then keep dinners flexible with one meal out</li>
+        <li>Book tastings ahead for whisky, gin and wine on peak weekends</li>
+        <li>Pack a cooler bag if you'll be buying chilled goods and continuing to wander</li>
+        <li>Self-catering vs eating out: if you've booked a whole house at The Browns, plan one relaxed dinner in with fresh pasta and a salad; for suite-only stays, keep meals simple in town and use your beverage station for early coffees and night-caps</li>
+        <li>Seasonal hours: many spots adjust trading times in winter or on Sundays — check same-day hours before you drive</li>
       </ul>
       
       <h3>Where to Stay</h3>
@@ -394,15 +384,15 @@ export const blogPosts: BlogPost[] = [
         <li>Whole-house self-catering is available when you book an entire house</li>
         <li>Suite-only stays include a beverage station (minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, milk)</li>
       </ul>
-      <p>Set your foodie weekend base and check live Rates & Availability at The Browns' — then eat, sip and explore at your own pace.</p>
+      <p>Set your foodie base and check live Rates & Availability at The Browns — then eat, sip and explore at your own pace.</p>
     `,
     category: "Dining",
     author: "The Browns Team",
     date: "August 17, 2025",
     readTime: "8 min read",
     image: "/images/blog/dullstroom-food-scene.jpg",
-    keywords: ["Dullstroom food scene", "artisanal producers", "local cheese", "whisky tasting", "coffee roasters", "trout delicacies"],
-    metaDescription: "Explore Dullstroom's artisanal food scene. From local coffee roasters to cheese makers, discover the best small-batch producers in the Mpumalanga highlands.",
+    keywords: ["Dullstroom food scene", "artisanal producers", "whisky tasting", "local cheese", "gin tasting", "coffee roasters"],
+    metaDescription: "Explore Dullstroom's artisanal food scene with this insider guide. From whisky tastings to local cheese makers, discover the best foodie experiences.",
     published: true
   },
   {
