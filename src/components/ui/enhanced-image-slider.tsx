@@ -14,8 +14,6 @@ interface ImageSliderProps {
   autoPlay?: boolean;
   autoPlayInterval?: number;
   enableSwipe?: boolean;
-  textPosition?: 'center' | 'bottom-left';
-  textClassName?: string;
 }
 
 export function EnhancedImageSlider({ 
@@ -23,9 +21,7 @@ export function EnhancedImageSlider({
   className, 
   autoPlay = true, 
   autoPlayInterval = 5000,
-  enableSwipe = true,
-  textPosition = 'center',
-  textClassName = ''
+  enableSwipe = true
 }: ImageSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(autoPlay);
@@ -175,15 +171,8 @@ export function EnhancedImageSlider({
               />
             </picture>
             {(image.title || image.subtitle) && (
-              <div className={cn(
-                "absolute inset-0 bg-black/40 pointer-events-none",
-                textPosition === 'center' ? 'flex items-center justify-center' : 'flex items-end justify-start'
-              )}>
-                <div className={cn(
-                  "text-white max-w-4xl relative z-10",
-                  textPosition === 'center' ? 'text-center px-4 sm:px-6 lg:px-8 mx-auto' : 'text-left',
-                  textClassName
-                )}>
+              <div className="absolute inset-0 bg-black/40 flex items-center justify-center pointer-events-none">
+                <div className="text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto relative z-10">
                   {image.title && (
                     <h1 className="font-playfair font-bold mb-2 sm:mb-4 text-white drop-shadow-lg" 
                         style={{ fontSize: 'clamp(1.75rem, 6vw, 3.75rem)' }}>
