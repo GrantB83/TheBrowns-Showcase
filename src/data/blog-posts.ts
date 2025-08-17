@@ -601,6 +601,120 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "Complete 2025 guide to where to stay in Dullstroom. Compare areas, accommodation types, and find the perfect base for your Highland Meander getaway.",
     featured: false,
     published: true
+  },
+  {
+    id: "8",
+    slug: "best-time-to-visit-dullstroom",
+    title: "Best Time to Visit Dullstroom",
+    excerpt: "When is Dullstroom at its best? This guide explains the seasons, weather patterns, crowd levels, and what to pack for the perfect Highlands Meander getaway year-round.",
+    content: `
+      <h2>Your Complete Seasonal Guide to Dullstroom</h2>
+      <p><strong>Last updated:</strong> 17 August 2025</p>
+      
+      <p>When is Dullstroom at its best? The simple answer is that it depends on what you want from your trip. This guide explains the seasons, typical weather patterns, crowd levels, and what to pack so you can plan the perfect Highlands Meander getaway.</p>
+      
+      <p>Base yourself at The Browns' Luxury Guest & Cottage Suites in Dullstroom. Book an entire house for self-catering, or choose a suite-only stay with a beverage station only. Suites include a minibar fridge, Nespresso coffee, a tea selection, hot chocolate, still water and milk. Suites do not include cooking facilities.</p>
+      
+      <h3>Quick Picks</h3>
+      <ul>
+        <li><strong>Romantic firesides and clear days:</strong> Winter and early spring</li>
+        <li><strong>Lush green hills and afternoon thunderstorms:</strong> Mid to late summer</li>
+        <li><strong>Golden colours and calm conditions for fly fishing:</strong> Autumn</li>
+        <li><strong>Wildflowers and longer daylight:</strong> Spring</li>
+      </ul>
+      
+      <h3>Season by Season</h3>
+      
+      <h4>Summer (December to February)</h4>
+      <p><strong>What to expect:</strong> Warm afternoons with a high chance of afternoon thunder showers. Mornings are cooler than Gauteng thanks to Dullstroom's elevation. Everything is green and lively.</p>
+      <p><strong>Crowds and pricing:</strong> Popular over school holidays and long weekends. Book early for peak dates.</p>
+      <p><strong>Good for:</strong> Family trips, scenic drives, relaxed picnics, short walks before the heat of the day.</p>
+      <p><strong>Pack:</strong> A lightweight rain jacket, sun protection, comfortable walking shoes, and a warm layer for evenings.</p>
+      
+      <h4>Autumn (March to May)</h4>
+      <p><strong>What to expect:</strong> Clearer skies, mild days, and crisp mornings. Grasses turn golden and wind is often gentle.</p>
+      <p><strong>Crowds and pricing:</strong> Weekends stay busy, but midweeks are calmer.</p>
+      <p><strong>Good for:</strong> Fly fishing, photography, couples' weekends, longer hikes in cooler air.</p>
+      <p><strong>Pack:</strong> Layers, a beanie for early starts, and a warm jersey for evenings.</p>
+      
+      <h4>Winter (June to August)</h4>
+      <p><strong>What to expect:</strong> Cold mornings that can bring frost, with many bright, sunny days. Fireplaces become the weekend hero.</p>
+      <p><strong>Crowds and pricing:</strong> Strong weekend demand thanks to fireside appeal. Book dining and tastings ahead.</p>
+      <p><strong>Good for:</strong> Romantic breaks, fly fishing in clear water, slow travel with tastings and spa time.</p>
+      <p><strong>Pack:</strong> Warm layers, gloves, scarf, a proper jacket, and lip balm. If you plan sunrise sessions, add thermals.</p>
+      
+      <h4>Spring (September to November)</h4>
+      <p><strong>What to expect:</strong> Longer days, fresh green growth, and a gradual warm-up. Wind can pick up on some afternoons.</p>
+      <p><strong>Crowds and pricing:</strong> Event weekends and school holidays draw visitors, otherwise moderate.</p>
+      <p><strong>Good for:</strong> Wildflower spotting, short hikes, cycling, and mixed itineraries that include fishing and food.</p>
+      <p><strong>Pack:</strong> Layerable clothing, a light windbreaker, and sunscreen.</p>
+      
+      <h3>Best Time by Interest</h3>
+      <ul>
+        <li><strong>Fly fishing:</strong> Autumn for stable conditions and winter into early spring for clear, cold water</li>
+        <li><strong>Romantic escapes:</strong> Winter and early spring for cosy fires, calm days, and long restaurant dinners</li>
+        <li><strong>Family weekends:</strong> Summer and spring for picnics, easy walks, and kid-friendly stops</li>
+        <li><strong>Photography:</strong> Autumn and winter for crisp air and golden light, spring for flowers</li>
+      </ul>
+      
+      <h3>Month-by-Month Snapshot</h3>
+      <ul>
+        <li><strong>Dec–Jan:</strong> Green, festive, and busy. Expect afternoon showers</li>
+        <li><strong>Feb:</strong> Warm with fewer crowds outside of specific weekends</li>
+        <li><strong>Mar–Apr:</strong> Calm, clear, and comfortable. A favourite for anglers</li>
+        <li><strong>May:</strong> Cold mornings begin. Excellent for hiking and photography</li>
+        <li><strong>Jun–Jul:</strong> Coldest period with regular frost. Fireside heaven and very clear days</li>
+        <li><strong>Aug:</strong> Still crisp, with signs of spring late in the month</li>
+        <li><strong>Sep–Oct:</strong> Longer days, flowers, and active events calendar</li>
+        <li><strong>Nov:</strong> Pleasant temperatures and good mix of outdoor options</li>
+      </ul>
+      
+      <h3>Practical Planning Tips</h3>
+      <ul>
+        <li>Book accommodation first for school holidays, long weekends, and festival weekends</li>
+        <li>Reserve popular tastings and dinners early, especially in winter</li>
+        <li>Driving is straightforward. Main routes are tarred, with occasional short gravel sections for estates and farms</li>
+        <li>Altitude matters. Dullstroom sits high, so mornings are cooler year-round than in the Lowveld or Gauteng</li>
+        <li>Pack for layers. Even in summer, bring a warm top for evenings</li>
+      </ul>
+      
+      <h3>What to Pack by Season</h3>
+      <ul>
+        <li><strong>Summer:</strong> Light rain jacket, breathable shirts, hat, sunscreen, comfy shoes</li>
+        <li><strong>Autumn:</strong> Layered tops, fleece, beanie for mornings, daypack for walks</li>
+        <li><strong>Winter:</strong> Thermal base layers, insulated jacket, gloves, scarf, warm socks</li>
+        <li><strong>Spring:</strong> Light windbreaker, sun protection, a warm layer for mornings</li>
+      </ul>
+      
+      <h3>Sample Weekend Plans</h3>
+      
+      <h4>Winter romance</h4>
+      <p>Fireplace suite or whole house, whisky or gin tasting, a light hike at midday, and a slow dinner in town. Morning coffees in-suite, with a late breakfast after the frost lifts.</p>
+      
+      <h4>Autumn angling</h4>
+      <p>Early permits, first light on the water, late breakfast, browse the village, then an afternoon session at a second venue. Finish with fireside fly-tying.</p>
+      
+      <h4>Spring family trip</h4>
+      <p>Short walks, pancake stop, a picnic, and a relaxed afternoon browsing local producers. Keep dinners simple in town.</p>
+      
+      <h3>Where to Stay</h3>
+      <p><strong>The Browns' Luxury Guest & Cottage Suites (Dullstroom)</strong></p>
+      <ul>
+        <li>Whole-house self-catering when you book an entire house</li>
+        <li>Suite-only stays with a beverage station only (minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, milk)</li>
+      </ul>
+      <p>Choose the setup that fits your season, then check live Rates & Availability to secure your dates.</p>
+    `,
+    category: "Travel Tips",
+    author: "The Browns Team",
+    authorBio: "Local experts with deep knowledge of Dullstroom's seasonal patterns and highland weather conditions.",
+    date: "August 17, 2025",
+    readTime: "7 min read",
+    image: "/images/blog/highland-hiking-trails.jpg",
+    keywords: ["best time visit Dullstroom", "Dullstroom weather", "seasonal travel guide", "Dullstroom seasons", "highland climate"],
+    metaDescription: "Complete guide to the best time to visit Dullstroom. Learn about seasonal weather, crowds, and activities to plan your perfect highland getaway.",
+    featured: false,
+    published: true
   }
 ];
 
