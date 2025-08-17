@@ -1117,6 +1117,343 @@ export const blogPosts: BlogPost[] = [
     keywords: ["family Dullstroom", "kids activities", "family-friendly accommodation", "family weekend", "children activities"],
     metaDescription: "Plan a stress-free family weekend in Dullstroom. Complete guide to kid-friendly activities, easy itineraries, and family accommodation in the Mpumalanga highlands.",
     published: true
+  },
+  {
+    id: "fly-fishing-guide",
+    slug: "world-class-fly-fishing-dullstroom",
+    title: "World-Class Fly Fishing in Dullstroom: Complete Guide 2025",
+    content: `Dullstroom is renowned as South Africa's premier trout fishing destination with pristine highland streams and professional guide services.
+
+## Why Dullstroom for Fly Fishing?
+
+The high-altitude streams around Dullstroom offer some of the finest fly fishing experiences in Africa. Crystal-clear mountain waters, abundant brown and rainbow trout, and breathtaking highland scenery create the perfect fishing environment.
+
+## Best Fishing Spots
+
+**Local Dams and Streams**
+- Dullstroom Dam: Perfect for beginners
+- Wild Trout waters: For experienced anglers
+- Private reserves: Guided experiences available
+
+**Nearby Premium Waters**
+- Walkersons Estate: Luxury fishing experience
+- Critchley Hackle Lodge: World-class waters
+- Various private streams: Book through local guides
+
+## What to Expect
+
+**Brown & Rainbow Trout**
+These highland waters are home to both species, with fish ranging from 1-5 pounds on average, though larger specimens are regularly caught.
+
+**Guided Excursions**
+Professional guides know the best spots and conditions. They provide equipment, instruction, and local knowledge that dramatically improves your chances.
+
+**Equipment Rental**
+Full gear rental available locally - rods, reels, waders, and flies suited to local conditions.
+
+## Planning Your Fishing Trip
+
+**Best Times**
+- Early morning (6-10am) for optimal results
+- Year-round fishing with best conditions October-March
+- Avoid midday heat in summer months
+
+**What to Bring**
+- Warm layers for changing highland weather
+- Waterproof jacket and waders
+- Hat and sunglasses
+- Camera for scenic stream photography
+
+**Booking Tips**
+- Reserve guides in advance, especially weekends
+- Ask about equipment packages
+- Inquire about catch-and-release policies
+- Check local fishing licenses
+
+## Accommodation Pairing
+
+The Garden Suite at The Browns offers the perfect base for fishing enthusiasts, with early morning access and facilities to clean and store equipment.
+
+Ready to experience world-class fly fishing? Book your highland fishing adventure from The Browns luxury accommodation.`,
+    excerpt: "Discover South Africa's premier trout fishing destination with pristine highland streams, abundant brown and rainbow trout, and professional guide services in the misty Dullstroom highlands.",
+    author: "The Browns Team",
+    date: "17 August 2025",
+    readTime: "6 min read",
+    category: "Activities",
+    image: "/src/assets/fly-fishing-dullstroom.jpg",
+    keywords: ["fly fishing", "Dullstroom", "trout fishing", "highland streams", "fishing guides", "brown trout", "rainbow trout"],
+    metaDescription: "Experience world-class fly fishing in Dullstroom's pristine highland streams. Complete guide to trout fishing, local guides, equipment rental, and accommodation.",
+    featured: true,
+    published: true
+  },
+  {
+    id: "panorama-route-guide", 
+    slug: "panorama-route-day-trips-gods-window",
+    title: "Panorama Route Day Trips: God's Window & Blyde River Canyon 2025",
+    content: `Explore the breathtaking Blyde River Canyon, God's Window, and Bourke's Luck Potholes - some of South Africa's most spectacular natural wonders, all within easy reach of Dullstroom.
+
+## The Complete Panorama Route Experience
+
+This world-renowned scenic drive showcases some of the most dramatic landscapes in South Africa. From Dullstroom, you're perfectly positioned for a full day exploring these natural wonders.
+
+## Must-See Destinations
+
+**God's Window**
+The most famous viewpoint offers sweeping vistas across the lowveld. On clear days, you can see all the way to Mozambique. Early morning visits offer the best visibility and lighting for photography.
+
+**Three Rondavels**
+These distinctive rock formations rise from the Blyde River Canyon like ancient African huts. The viewpoint provides spectacular photo opportunities and insight into local geological history.
+
+**Bourke's Luck Potholes**
+Fascinating rock formations carved by centuries of water erosion. Walkways and viewing platforms make this geological wonder accessible to all fitness levels.
+
+**Graskop Gorge**
+Experience the cliff-top walkway and lift that descends into the indigenous forest below. Perfect for those seeking a bit more adventure.
+
+## Planning Your Day Trip
+
+**Timing**
+- Start early (7am) to avoid crowds and afternoon heat
+- Allow 8-10 hours for the complete route
+- Check weather conditions - misty days limit visibility
+
+**Route Options**
+- **Full Route**: All major viewpoints (10+ hours)
+- **Highlights Tour**: God's Window, Three Rondavels, Bourke's Luck (6-8 hours)
+- **Photography Focus**: Best viewpoints with extended stops
+
+**What to Pack**
+- Snacks and plenty of water
+- Camera with extra batteries
+- Warm layers for higher altitudes
+- Comfortable walking shoes
+
+## Accommodation Pairing
+
+The Loft Family Suite provides ample space for families embarking on full-day Panorama Route adventures, with room to store camera equipment and plan your route.
+
+Ready for your Panorama Route adventure? Base yourself at The Browns for easy access to these world-class scenic wonders.`,
+    excerpt: "Experience the breathtaking Panorama Route from Dullstroom - God's Window, Three Rondavels, and Blyde River Canyon day trips with complete planning guide and insider tips.",
+    author: "The Browns Team",
+    date: "17 August 2025", 
+    readTime: "7 min read",
+    category: "Activities",
+    image: "/src/assets/panorama-route-gods-window.jpg",
+    keywords: ["Panorama Route", "God's Window", "Blyde River Canyon", "Three Rondavels", "day trips", "scenic drives", "Graskop"],
+    metaDescription: "Complete Panorama Route day trip guide from Dullstroom - God's Window, Blyde River Canyon, Three Rondavels, and Bourke's Luck Potholes with insider tips.",
+    featured: true,
+    published: true
+  },
+  {
+    id: "highland-hiking-guide",
+    slug: "highland-hiking-trails-dullstroom-mountains", 
+    title: "Highland Hiking Trails: Explore Dullstroom's Mountain Paths 2025",
+    content: `Discover pristine mountain trails around Dullstroom with varying difficulty levels, from gentle family walks to challenging summit hikes with spectacular highland views.
+
+## Why Hike the Dullstroom Highlands?
+
+The Dullstroom area offers some of South Africa's most accessible highland hiking, with well-marked trails, stunning mountain vistas, and unique highland flora. The cool climate makes hiking pleasant year-round.
+
+## Trail Options by Difficulty
+
+**Easy Family Walks (1-2 hours)**
+- Town dam circuit: Flat, scenic walk around local dams
+- Wildflower meadow trails: Spring wildflower displays
+- Forest boardwalks: Gentle woodland paths
+
+**Moderate Hikes (2-4 hours)**
+- Highland plateau trails: Rolling hills with mountain views
+- Stream valley walks: Follow pristine mountain streams
+- Grassland paths: Open highland walking with wildlife spotting
+
+**Challenging Summit Hikes (4-8 hours)**
+- Local peaks: Serious elevation gain with panoramic rewards
+- Multi-day options: Connect with longer regional trails
+- Technical sections: Rock scrambling and steep ascents
+
+## Safety & Preparation
+
+**Essential Gear**
+- Proper hiking boots with ankle support
+- Layered clothing for changing weather
+- Rain protection (summer thunderstorms)
+- Sun hat and sunscreen
+- First aid kit
+
+**Safety Guidelines**
+- Inform someone of your hiking plans
+- Check weather forecasts
+- Carry emergency contact information
+- Don't hike alone in remote areas
+
+## Accommodation Pairing
+
+The Garden Family Suite offers the perfect base for hiking enthusiasts, with secure storage for gear and space to plan your mountain adventures.
+
+Ready to explore Dullstroom's highland trails? Book your mountain hiking getaway at The Browns.`,
+    excerpt: "Explore Dullstroom's pristine mountain hiking trails - from gentle family walks to challenging summit hikes with spectacular highland views and unique flora.",
+    author: "The Browns Team",
+    date: "17 August 2025",
+    readTime: "6 min read", 
+    category: "Activities",
+    image: "/src/assets/highland-hiking-trails.jpg",
+    keywords: ["highland hiking", "mountain trails", "Dullstroom hiking", "wildflower trails", "summit hikes", "mountain views"],
+    metaDescription: "Complete guide to highland hiking trails around Dullstroom - easy family walks to challenging summit hikes with trail maps and safety tips.",
+    featured: false,
+    published: true
+  },
+  {
+    id: "highland-spa-wellness",
+    slug: "highland-spa-wellness-dullstroom-luxury",
+    title: "Highland Spa & Wellness: Luxury Treatments in Dullstroom 2025", 
+    content: `Rejuvenate with luxury spa treatments featuring highland tranquility, holistic therapies, and couples packages in the serene Dullstroom atmosphere.
+
+## The Highland Wellness Experience
+
+Dullstroom's high-altitude location and pristine mountain air create the perfect environment for wellness and relaxation. Local spas harness the healing power of the highlands for truly restorative experiences.
+
+## Signature Highland Treatments
+
+**Highland Stone Therapy**
+Using heated stones sourced from local rivers, this treatment combines the grounding energy of the mountains with deep muscle relaxation.
+
+**Trout Stream Sound Therapy**
+Treatments accompanied by the natural sounds of mountain streams, creating a deeply calming sensory experience.
+
+**Highland Flora Aromatherapy**
+Essential oils derived from indigenous plants like wild sage and mountain heather for a uniquely South African wellness experience.
+
+## Popular Treatment Packages
+
+**Couples Highland Retreat**
+- Side-by-side massages
+- Private relaxation suite
+- Champagne and local delicacies
+- Highland sunset viewing
+
+**Solo Wellness Day**
+- Full-body massage
+- Facial with local ingredients
+- Meditation session
+- Healthy spa lunch
+
+## Accommodation Pairing
+
+The Master Suite provides the perfect continuation of your spa experience, with luxurious amenities and serene mountain views for ultimate relaxation.
+
+Ready for your highland wellness retreat? Book your rejuvenating spa escape at The Browns luxury accommodation.`,
+    excerpt: "Experience luxury highland spa treatments in Dullstroom - holistic therapies, couples packages, and mountain wellness in the serene Mpumalanga highlands.",
+    author: "The Browns Team",
+    date: "17 August 2025",
+    readTime: "5 min read",
+    category: "Activities", 
+    image: "/src/assets/highland-spa-wellness.jpg",
+    keywords: ["highland spa", "wellness Dullstroom", "luxury treatments", "couples massage", "mountain spa", "wellness retreat"],
+    metaDescription: "Luxury highland spa and wellness experiences in Dullstroom - couples treatments, holistic therapies, and mountain wellness retreats.",
+    featured: false,
+    published: true
+  },
+  {
+    id: "whisky-wine-tasting",
+    slug: "whisky-wine-tasting-dullstroom-distilleries",
+    title: "Whisky & Wine Tasting: Dullstroom's Premium Spirits Scene 2025",
+    content: `Sample premium South African whiskies and wines at local distilleries and estates, including exclusive highland varieties unique to the Mpumalanga region.
+
+## Dullstroom's Spirits Heritage
+
+The cool highland climate and pure mountain water make Dullstroom an ideal location for both whisky distillation and wine production. Local producers craft unique expressions that capture the essence of the South African highlands.
+
+## Tasting Experiences
+
+**Whisky Education Sessions**
+- Learn about highland whisky production
+- Understand the impact of altitude on aging
+- Discover local botanicals used in production
+- Master the art of whisky appreciation
+
+**Wine & Food Pairings**
+- Local wines paired with highland cuisine
+- Cheese and charcuterie platters
+- Seasonal produce combinations
+- Expert sommelier guidance
+
+## Planning Your Tasting Adventure
+
+**Safety & Responsibility**
+- Designate a sober driver
+- Use local shuttle services
+- Book accommodation within walking distance
+- Pace yourself throughout the day
+
+## Accommodation Pairing
+
+The Blue Crane Suite offers sophisticated accommodation perfect for spirits enthusiasts, with proper storage for your tasting purchases and elegant spaces to enjoy your acquisitions.
+
+Ready to explore Dullstroom's premium spirits scene? Book your tasting adventure from The Browns luxury base.`,
+    excerpt: "Discover Dullstroom's premium whisky and wine scene - local distilleries, estate tastings, educational experiences, and highland varieties unique to Mpumalanga.",
+    author: "The Browns Team",
+    date: "17 August 2025",
+    readTime: "7 min read",
+    category: "Activities",
+    image: "/src/assets/whisky-wine-tasting.jpg", 
+    keywords: ["whisky tasting", "wine tasting", "Dullstroom distilleries", "highland spirits", "craft gin", "wine estates"],
+    metaDescription: "Explore Dullstroom's premium whisky and wine tasting scene - distilleries, estate tours, educational experiences, and highland spirits.",
+    featured: false,
+    published: true
+  },
+  {
+    id: "cheese-food-tours",
+    slug: "artisanal-cheese-food-tours-dullstroom",
+    title: "Artisanal Cheese & Food Tours: Farm-to-Table Dullstroom 2025",
+    content: `Visit local cheese factories, farms, and artisanal food producers to taste highland specialties and learn about traditional production methods in the Dullstroom area.
+
+## Dullstroom's Artisanal Food Scene
+
+The highland climate and pristine pastures around Dullstroom create ideal conditions for artisanal food production. Local farmers and producers craft exceptional cheeses, cured meats, and specialty foods using traditional methods.
+
+## Food Tour Experiences
+
+**Cheese Factory Tours**
+- Behind-the-scenes production viewing
+- Aging cave visits
+- Tasting sessions with expert guidance
+- Take-home cheese selections
+
+**Farm-to-Table Experiences**
+- Visit working dairy and goat farms
+- Participate in daily farming activities
+- Enjoy fresh farm meals
+- Learn about animal welfare practices
+
+## Highland Specialties to Try
+
+**Signature Cheeses**
+- Highland cow milk varieties aged in mountain caves
+- Goat cheese with indigenous herbs
+- Seasonal specialties like spring wildflower cheese
+- Award-winning aged cheddars
+
+**Local Delicacies**
+- Trout-based specialties from local streams
+- Game meats from highland farms
+- Indigenous plant-based products
+- Seasonal fruit preserves and jams
+
+## Pairing with Accommodation
+
+The Self Catering House provides the perfect complement to food tours, with full kitchen facilities to prepare and enjoy your artisanal purchases using local recipes and techniques.
+
+Ready to explore Dullstroom's artisanal food scene? Book your farm-to-table adventure from The Browns luxury accommodation.`,
+    excerpt: "Explore Dullstroom's artisanal cheese factories, farms, and food producers - hands-on workshops, tastings, and farm-to-table experiences in the highland farming community.",
+    author: "The Browns Team", 
+    date: "17 August 2025",
+    readTime: "6 min read",
+    category: "Activities",
+    image: "/src/assets/artisanal-cheese-tours.jpg",
+    keywords: ["artisanal cheese", "food tours", "Dullstroom farms", "cheese making", "farm to table", "local produce"],
+    metaDescription: "Farm-to-table food tours in Dullstroom - artisanal cheese factories, farm experiences, and local food producers with hands-on workshops.",
+    featured: false,
+    published: true
   }
 ];
 
