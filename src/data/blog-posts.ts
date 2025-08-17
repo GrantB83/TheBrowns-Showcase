@@ -710,7 +710,7 @@ export const blogPosts: BlogPost[] = [
     authorBio: "Local experts with deep knowledge of Dullstroom's seasonal patterns and highland weather conditions.",
     date: "August 17, 2025",
     readTime: "7 min read",
-    image: "/src/assets/dullstroom-seasons.jpg",
+    image: "/images/blog/dullstroom-seasons.jpg",
     keywords: ["best time visit Dullstroom", "Dullstroom weather", "seasonal travel guide", "Dullstroom seasons", "highland climate"],
     metaDescription: "Complete guide to the best time to visit Dullstroom. Learn about seasonal weather, crowds, and activities to plan your perfect highland getaway.",
     featured: false,
@@ -789,7 +789,7 @@ export const blogPosts: BlogPost[] = [
     authorBio: "Local travel experts with extensive knowledge of routes, timing, and practical tips for reaching the Mpumalanga highlands.",
     date: "August 17, 2025",
     readTime: "5 min read",
-    image: "/src/assets/johannesburg-dullstroom-drive.jpg",
+    image: "/images/blog/johannesburg-dullstroom-drive.jpg",
     keywords: ["Johannesburg to Dullstroom", "driving directions", "travel guide", "route planning", "highland travel"],
     metaDescription: "Complete driving guide from Johannesburg to Dullstroom. Route options, timing, tolls, stops, and arrival tips for your Mpumalanga highlands getaway.",
     featured: false,
@@ -883,7 +883,7 @@ export const blogPosts: BlogPost[] = [
     authorBio: "Local experts passionate about showcasing the best of Dullstroom and the Mpumalanga highlands.",
     date: "August 17, 2025",
     readTime: "7 min read",
-    image: "/src/assets/dullstroom-breakfast-coffee.jpg",
+    image: "/images/blog/dullstroom-breakfast-coffee.jpg",
     keywords: ["Dullstroom breakfast", "coffee shops Dullstroom", "food guide", "local restaurants", "morning dining"],
     metaDescription: "Your complete guide to breakfast and coffee in Dullstroom. Local recommendations for the best morning spots, cafés, and food experiences in the village.",
     published: true
@@ -1004,8 +1004,8 @@ export const blogPosts: BlogPost[] = [
     published: true
   },
   {
-    id: "9",
-    slug: "family-friendly-dullstroom-kids-guide", 
+    id: "10",
+    slug: "family-friendly-dullstroom-kids-guide",
     title: "Family-Friendly Dullstroom: Easy Wins With Kids",
     excerpt: "Dullstroom works well for families because travel is simple, the village is compact, and there are gentle outdoor activities that suit a wide range of ages. Use this guide to plan a low-stress weekend with a few highlights, plenty of snacks, and early nights that actually happen.",
     content: `

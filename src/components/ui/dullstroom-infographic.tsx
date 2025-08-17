@@ -68,7 +68,9 @@ export function DullstroomInfographic({
           url: window.location.href,
         });
       } catch (err) {
-        console.log("Error sharing:", err);
+        if (process.env.NODE_ENV === 'development') {
+          console.log("Error sharing:", err);
+        }
       }
     } else {
       // Fallback to copying URL

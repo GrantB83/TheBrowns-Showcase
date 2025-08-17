@@ -28,7 +28,9 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
       try {
         await analyticsService.initialize();
         setIsInitialized(true);
-        console.log('[Analytics] Service initialized successfully');
+        if (process.env.NODE_ENV === 'development') {
+          console.log('[Analytics] Service initialized successfully');
+        }
       } catch (error) {
         console.error('[Analytics] Failed to initialize:', error);
       }

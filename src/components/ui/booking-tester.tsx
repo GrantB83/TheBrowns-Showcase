@@ -61,7 +61,9 @@ export function BookingTester() {
     // Override click method to count clicks
     HTMLElement.prototype.click = function() {
       clickCount++;
-      console.log(`Click ${clickCount}: ${this.tagName} - ${this.textContent?.slice(0, 50)}`);
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`Click ${clickCount}: ${this.tagName} - ${this.textContent?.slice(0, 50)}`);
+      }
       return originalClick.call(this);
     };
 
@@ -80,7 +82,9 @@ export function BookingTester() {
     const hasLinks = nightsbridgeLinks.length > 0;
     
     nightsbridgeLinks.forEach((link, index) => {
-      console.log(`Nightsbridge link ${index + 1}:`, link.getAttribute('href'));
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`Nightsbridge link ${index + 1}:`, link.getAttribute('href'));
+      }
     });
 
     updateTestStatus(
