@@ -21,22 +21,86 @@ export const blogPosts: BlogPost[] = [
     id: "1",
     slug: "top-fly-fishing-spots-dullstroom",
     title: "Top Fly-Fishing Spots in Dullstroom",
-    excerpt: "Discover the best trout fishing locations around Dullstroom, from the iconic Dullstroom Dam to hidden highland streams. Expert tips for a successful fishing holiday in Mpumalanga.",
+    excerpt: "Planning a Dullstroom fishing weekend? Here is a clean, fact-checked shortlist of places that consistently deliver for fly anglers, with access notes and venue details.",
     content: `
-      <h2>Experience World-Class Trout Fishing in Dullstroom</h2>
-      <p>Nestled in the heart of Mpumalanga's highlands, Dullstroom has earned its reputation as South Africa's premier trout fishing destination. With crystal-clear mountain streams, well-stocked dams, and a variety of fishing experiences, this charming town offers something for every angler.</p>
+      <h2>Planning a Dullstroom Fishing Weekend?</h2>
+      <p>Here is a clean, fact-checked shortlist of places that consistently deliver for fly anglers. I have included access notes so you know whether a venue welcomes day visitors or is only open to overnight guests.</p>
       
-      <h3>Dullstroom Dam - The Crown Jewel</h3>
-      <p>The iconic Dullstroom Dam is the town's most famous fishing spot. This pristine water body is home to rainbow and brown trout, with fish averaging 1-2kg. The dam offers both bank and boat fishing opportunities, making it perfect for beginners and experienced anglers alike.</p>
+      <p>Staying at The Browns' Luxury Guest & Cottage Suites puts you close to the village and a short drive from most waters. Book an entire house for self-catering or choose a suite-only stay with a beverage station for easy early-morning coffees before you hit the water.</p>
       
-      <h3>Highland Streams and Private Waters</h3>
-      <p>For those seeking a more intimate fishing experience, the numerous streams flowing through the area provide excellent opportunities. Many private farms offer day permits for stream fishing, where you can experience the thrill of wild trout in their natural habitat.</p>
+      <h3>1) Dullstroom on the Dam Town Dams (public waters with day permits)</h3>
+      <p>The two town dams are the only public fly-fishing waters inside Dullstroom. Buy a day permit at the gate, then choose between the Upper Dam and the Lower Dam. The Lower Dam is catch-and-release only and both dams are fly fishing only. Rod hire and weekend permits are available on site.</p>
       
-      <h3>Best Times to Fish</h3>
-      <p>Early morning and late afternoon are typically the most productive times. The cooler highland climate means fishing can be excellent year-round, though spring and autumn are particularly rewarding seasons.</p>
+      <p><strong>Good to know:</strong></p>
+      <ul>
+        <li>Day permits sold at the main gate and the Oak Lane gate</li>
+        <li>No bait or spinning is allowed. Non-powered craft are permitted for a small fee</li>
+      </ul>
+      
+      <h3>2) Dunkeld Country & Equestrian Estate (large stillwaters; day visitors accepted)</h3>
+      <p>Dunkeld manages an extensive network of stocked stillwaters against the Steenkampsberg. Day visitor fishing permits, rod hire, and casting lessons are available, and there is an optional trophy dam upgrade.</p>
+      
+      <p><strong>Good to know:</strong></p>
+      <ul>
+        <li>More than twenty dams across the estate</li>
+        <li>Day visitor permits, rod hire, and lessons are published by the estate's activity desk</li>
+      </ul>
+      
+      <h3>3) Elandskloof Trout Farm (multiple dams; day visitors accepted)</h3>
+      <p>A well-known venue a short drive from town. Expect several stocked dams of varying size, float-tube friendly water, and clear day-visitor rules with per-rod permits.</p>
+      
+      <p><strong>Good to know:</strong></p>
+      <ul>
+        <li>Seven dams on the property and float tubes are allowed</li>
+      </ul>
+      
+      <h3>4) Walkersons Private Estate (hotel guests and homeowners only)</h3>
+      <p>Walkersons offers dam and river fishing on a private estate. Access is restricted to hotel guests and estate homeowners. The river section closes annually for spawning from 1 June to 31 August and a special river license applies. This venue is not open for general day visitors.</p>
+      
+      <p><strong>Good to know:</strong></p>
+      <ul>
+        <li>Carry estate permits while fishing and observe the angler limits per house</li>
+      </ul>
+      
+      <h3>5) Willow Creek Trout & Nature Reserve (lodge guests; check day access directly)</h3>
+      <p>A lodge venue in the wider Dullstroom area with four stocked dams and a stretch of natural river. It is primarily a stay-over destination. Contact the lodge to confirm whether day access is available during your dates.</p>
+      
+      <h3>When to go</h3>
+      <p>Winter into early spring brings crisp mornings and clear water that rewards careful presentation. Local operators report productive fishing through much of the year when conditions are managed well. Always check recent water updates when you arrive in town.</p>
+      
+      <h3>Permits, gear and etiquette</h3>
+      
+      <h4>Permits</h4>
+      <p>Public waters and most private venues require a day permit. Buy at the gate or reception as posted by each venue. Some private waters are limited to overnight guests.</p>
+      
+      <h4>Hire and lessons</h4>
+      <p>Rod hire and casting lessons are available at several venues, including the town dams and Dunkeld.</p>
+      
+      <h4>On the water</h4>
+      <ul>
+        <li>Respect bag limits and catch-and-release rules per water</li>
+        <li>Use barbless hooks where required and keep fish wet during release</li>
+        <li>Give other anglers space, especially on river beats noted by the estate</li>
+      </ul>
+      
+      <h3>Simple 48-hour plan for anglers</h3>
+      
+      <h4>Friday</h4>
+      <p>Arrive by late afternoon, collect any permits for Saturday, and settle in at The Browns. Make an early night of it.</p>
+      
+      <h4>Saturday</h4>
+      <p>Town Dams at first light for a warm-up session. Late breakfast in the village. Afternoon session at Dunkeld or Elandskloof. Early dinner and fly-box tweaks for Sunday.</p>
+      
+      <h4>Sunday</h4>
+      <p>Choose a second venue that suits the conditions. Return to The Browns for checkout and a final coffee before the road home.</p>
       
       <h3>Where to Stay</h3>
-      <p>The Browns Luxury Guest Suites & Cottage provides the perfect base for your fishing adventure. Located in the heart of Dullstroom, you're never more than minutes away from world-class fishing opportunities.</p>
+      <p>The Browns' Luxury Guest & Cottage Suites are close to the village and a convenient base for fishing weekends.</p>
+      <ul>
+        <li>Whole-house self-catering is available when you book an entire house</li>
+        <li>Suite-only stays include a beverage station with minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, and milk</li>
+      </ul>
+      <p>Check live Rates & Availability and match your dates to the right stay at The Browns.</p>
     `,
     category: "Activities",
     author: "The Browns Team",
