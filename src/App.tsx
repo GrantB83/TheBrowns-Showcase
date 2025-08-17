@@ -9,8 +9,6 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Suites from "./pages/Suites";
 import Gallery from "./pages/Gallery";
-
-// import PayWhatYouCan from "./pages/PayWhatYouCan"; // Temporarily hidden
 import Booking from "./pages/Booking";
 import Location from "./pages/Location";
 import Contact from "./pages/Contact";
@@ -37,7 +35,6 @@ const App = () => (
             <Route path="suites" element={<Suites />} /> {/* Legacy route redirect */}
             <Route path="gallery" element={<Gallery />} />
             <Route path="activities" element={<Blog />} />
-            {/* <Route path="pay-what-you-can" element={<PayWhatYouCan />} /> */} {/* Temporarily hidden */}
             <Route path="booking" element={<Booking />} />
             <Route path="location" element={<Location />} />
             <Route path="contact" element={<Contact />} />

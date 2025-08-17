@@ -8,14 +8,10 @@ const NotFound = () => {
     if (process.env.NODE_ENV === 'development') {
       console.error(
         "404 Error: User attempted to access non-existent route:",
-        location.pathname
+        window.location.pathname
       );
     }
-    // In production, send to error tracking service
-    if (process.env.NODE_ENV === 'production') {
-      // Example: errorTracking.captureException(new Error(`404: ${location.pathname}`));
-    }
-  }, [location.pathname]);
+  }, []);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background">

@@ -10,18 +10,24 @@ import { useResponsiveNavigation } from "@/hooks/use-responsive-navigation";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Accommodation", href: "/accommodation" },
-  { name: "Activities", href: "/blog?category=Activities" },
-  { name: "Blog", href: "/blog" },
+  { name: "Activities", href: "/activities" },
+  { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" },
+  { name: "Location", href: "/location" },
+  { name: "Blog", href: "/blog" },
+  { name: "Booking", href: "/booking" },
 ];
 
 // Priority order for showing items (high priority stays visible longest)
 const itemPriority = {
   "Home": 1,
-  "Accommodation": 2, 
+  "Accommodation": 2,
   "Activities": 3,
-  "Blog": 4,
+  "Gallery": 4,
   "Contact": 5,
+  "Location": 6,
+  "Blog": 7,
+  "Booking": 8,
 };
 
 export function Header() {
