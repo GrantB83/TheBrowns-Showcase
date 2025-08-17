@@ -147,10 +147,14 @@ const Index = () => {
           autoPlay={!isTouch}
           autoPlayInterval={6000}
           enableSwipe={true}
+          textPosition="bottom-left"
+          textClassName="p-4 sm:p-6 md:p-8 lg:p-12"
         />
-        {/* Hero Booking Widget - Positioned prominently */}
-        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 lg:bottom-12 left-1/2 transform -translate-x-1/2 w-full px-4 z-30">
-          <HeroBookingWidget compact={true} />
+        {/* Hero Booking Widget - Top-right corner with backdrop */}
+        <div className="absolute top-4 sm:top-6 md:top-8 right-4 sm:right-6 md:right-8 z-40 w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px]">
+          <div className="backdrop-blur-sm bg-background/80 border border-border/50 rounded-xl p-2 shadow-lg">
+            <HeroBookingWidget compact={true} className="bg-transparent border-0 shadow-none" />
+          </div>
         </div>
       </section>
 
