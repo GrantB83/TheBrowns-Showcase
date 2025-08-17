@@ -15,6 +15,7 @@ import Booking from "./pages/Booking";
 import Location from "./pages/Location";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
 
@@ -41,6 +42,7 @@ const App = () => (
             <Route path="location" element={<Location />} />
             <Route path="contact" element={<Contact />} />
             <Route path="blog" element={<Blog />} />
+            <Route path="blog/:slug" element={<BlogPost />} />
             <Route path="privacy" element={<Privacy />} />
           </Route>
           <Route path="*" element={<NotFound />} />

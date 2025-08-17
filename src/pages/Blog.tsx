@@ -1,64 +1,13 @@
 import { useState, useMemo } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BlogSearch } from "@/components/ui/blog-search";
+import { blogPosts, categories } from "@/data/blog-posts";
 import { Calendar, Clock, User, ExternalLink } from "lucide-react";
 
-const blogPosts = [
-  {
-    title: "Top Fly-Fishing Spots in Dullstroom",
-    excerpt: "Discover the best trout fishing locations around Dullstroom, from the iconic Dullstroom Dam to hidden highland streams. Expert tips for a successful fishing holiday in Mpumalanga.",
-    category: "Activities",
-    author: "The Browns Team",
-    date: "March 15, 2024",
-    readTime: "5 min read",
-    image: "/images/blog/fly-fishing-dullstroom.jpg", // filename: fly-fishing-dullstroom.jpg, folder: /images/blog/, dimensions: 800x600
-    keywords: ["Dullstroom fishing accommodation", "trout fishing", "fly fishing", "Mpumalanga activities", "highland fishing"]
-  },
-  {
-    title: "Upcoming Events and Festivals in Mpumalanga",
-    excerpt: "Stay updated on Dullstroom's seasonal festivals, markets, and cultural celebrations. Plan your visit around these exciting community events and local gatherings.",
-    category: "Events",
-    author: "The Browns Team", 
-    date: "March 10, 2024",
-    readTime: "4 min read",
-    image: "/images/blog/mpumalanga-events.jpg", // filename: mpumalanga-events.jpg, folder: /images/blog/, dimensions: 800x600
-    keywords: ["Dullstroom events", "Mpumalanga festivals", "seasonal celebrations", "local markets"]
-  },
-  {
-    title: "Why Choose Self-Catering Luxury in Dullstroom",
-    excerpt: "Experience the freedom and comfort of self-catering luxury accommodation. Enjoy premium amenities, flexibility, and authentic highland living at The Browns.",
-    category: "Accommodation",
-    author: "The Browns Team",
-    date: "March 5, 2024",
-    readTime: "6 min read",
-    image: "/images/blog/self-catering-luxury.jpg", // filename: self-catering-luxury.jpg, folder: /images/blog/, dimensions: 800x600
-    keywords: ["self-catering luxury", "Dullstroom accommodation", "luxury suites", "highland retreat"]
-  },
-  {
-    title: "Exploring Dullstroom's Artisanal Food Scene",
-    excerpt: "From fine dining restaurants to local delicacies, discover Dullstroom's culinary treasures. Perfect dining experiences within walking distance of The Browns.",
-    category: "Dining",
-    author: "The Browns Team",
-    date: "February 28, 2024",
-    readTime: "7 min read",
-    image: "/images/blog/dullstroom-food-scene.jpg", // filename: dullstroom-food-scene.jpg, folder: /images/blog/, dimensions: 800x600
-    keywords: ["Dullstroom dining", "fine dining", "local cuisine", "artisanal food", "restaurant recommendations"]
-  },
-  {
-    title: "Highland Hiking Trails Around Dullstroom",
-    excerpt: "Explore breathtaking hiking trails in the Mpumalanga highlands. From gentle nature walks to challenging mountain paths, discover the natural beauty surrounding The Browns.",
-    category: "Outdoor Activities",
-    author: "The Browns Team",
-    date: "February 20, 2024",
-    readTime: "8 min read",
-    image: "/images/blog/highland-hiking-trails.jpg", // filename: highland-hiking-trails.jpg, folder: /images/blog/, dimensions: 800x600
-    keywords: ["Dullstroom hiking", "highland trails", "nature walks", "outdoor activities", "mountain hiking"]
-  }
-];
-
-const categories = ["All", "Activities", "Events", "Accommodation", "Dining", "Outdoor Activities"];
+// Data is now imported from /src/data/blog-posts.ts
 
 export default function Blog() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -67,6 +16,9 @@ export default function Blog() {
   // Filter blog posts based on search and categories
   const filteredPosts = useMemo(() => {
     return blogPosts.filter(post => {
+      // Only show published posts
+      if (!post.published) return false;
+      
       const matchesSearch = searchTerm === "" || 
         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -132,8 +84,9 @@ export default function Blog() {
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6 sm:gap-8">
-                {filteredPosts.map((post, index) => (
-                <Card key={index} className="group hover:shadow-lg transition-shadow cursor-pointer">
+                {filteredPosts.map((post) => (
+                <Card key={post.id} className="group hover:shadow-lg transition-shadow cursor-pointer"
+                  onClick={() => window.location.href = `/blog/${post.slug}`}>
                   <div className="relative overflow-hidden">
                     <img
                       src={post.image}
@@ -174,10 +127,17 @@ export default function Blog() {
                           </Badge>
                         ))}
                       </div>
-                      <Button variant="ghost" size="sm" className="group-hover:text-primary flex-shrink-0 min-h-[40px]">
-                        <span className="hidden sm:inline">Read More</span>
-                        <span className="sm:hidden">Read</span>
-                        <ExternalLink className="h-3 w-3 ml-1" />
+                      <Button 
+                        variant="ghost" 
+                        size="sm" 
+                        className="group-hover:text-primary flex-shrink-0 min-h-[40px]"
+                        asChild
+                      >
+                        <Link to={`/blog/${post.slug}`}>
+                          <span className="hidden sm:inline">Read More</span>
+                          <span className="sm:hidden">Read</span>
+                          <ExternalLink className="h-3 w-3 ml-1" />
+                        </Link>
                       </Button>
                     </div>
                   </CardContent>
