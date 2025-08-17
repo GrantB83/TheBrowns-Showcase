@@ -141,22 +141,16 @@ const Index = () => {
       <div className="min-h-screen mobile-scroll-smooth">
       {/* Hero Section - Dynamic height for narrowest mobile */}
       <section className="relative min-h-[50vh] h-[60vh] xs:h-[50vh] sm:h-[55vh] md:h-[65vh] lg:h-[75vh] xl:h-[80vh] mobile-select-none">
-        <div className="h-full w-full lg:grid lg:grid-cols-12 lg:gap-8">
-          {/* Image Slider - Full width on mobile, 8 columns on desktop */}
-          <div className="h-full w-full lg:col-span-8">
-            <EnhancedImageSlider 
-              images={heroImages}
-              className="h-full w-full"
-              autoPlay={!isTouch}
-              autoPlayInterval={6000}
-              enableSwipe={true}
-            />
-          </div>
-          
-          {/* Booking Widget - Bottom overlay on mobile, side panel on desktop */}
-          <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 w-full px-4 z-30 lg:relative lg:bottom-auto lg:left-auto lg:transform-none lg:col-span-4 lg:flex lg:items-center lg:justify-center lg:px-6 lg:py-8">
-            <HeroBookingWidget compact={true} className="lg:w-full lg:max-w-sm" />
-          </div>
+        <EnhancedImageSlider 
+          images={heroImages}
+          className="h-full w-full"
+          autoPlay={!isTouch}
+          autoPlayInterval={6000}
+          enableSwipe={true}
+        />
+        {/* Hero Booking Widget - Positioned prominently */}
+        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 lg:bottom-12 left-1/2 transform -translate-x-1/2 w-full px-4 z-30">
+          <HeroBookingWidget compact={true} />
         </div>
       </section>
 
