@@ -16,9 +16,11 @@ import {
   AlertCircle,
   CheckCircle,
   Star,
-  Shield
+  Shield,
+  CreditCard
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { EmbeddedBookingIframe } from "./embedded-booking-iframe";
 
 interface SuiteRecommendation {
   id: string;
@@ -78,6 +80,7 @@ export function BookingWidget({
   const [guests, setGuests] = useState("2");
   const [selectedSuite, setSelectedSuite] = useState(preselectedSuite || "");
   const [showWidget, setShowWidget] = useState(true);
+  const [showEmbeddedBooking, setShowEmbeddedBooking] = useState(false);
 
   const handleDirectBooking = (roomId?: number) => {
     const baseUrl = "https://book.nightsbridge.com/00000";
@@ -217,10 +220,10 @@ export function BookingWidget({
             <Button 
               size="lg" 
               className="w-full min-h-[48px] text-fluid-sm touch-manipulation"
-              onClick={() => handleDirectBooking()}
+              onClick={() => setShowEmbeddedBooking(true)}
             >
-              <ExternalLink className="h-4 w-4 mr-2" />
-              Book Direct Now
+              <CreditCard className="h-4 w-4 mr-2" />
+              Book Securely Now
             </Button>
             <Button 
               variant="outline" 
@@ -298,12 +301,18 @@ export function BookingWidget({
                     <Button 
                       size="sm" 
                       className="w-full"
-                      onClick={() => handleDirectBooking(suite.roomId)}
+                      onClick={() => setShowEmbeddedBooking(true)}
                     >
                       Book {suite.name}
                     </Button>
-                    <Button variant="outline" size="sm" className="w-full">
-                      View Details
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="w-full"
+                      onClick={() => handleDirectBooking(suite.roomId)}
+                    >
+                      <ExternalLink className="h-3 w-3 mr-1" />
+                      External
                     </Button>
                   </div>
                 </div>
@@ -317,6 +326,23 @@ export function BookingWidget({
             </div>
           </CardContent>
         </Card>
+      )}
+
+      {/* Embedded Booking Modal */}
+      {showEmbeddedBooking && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+          <div className="w-full max-w-5xl max-h-[90vh] overflow-hidden">
+            <EmbeddedBookingIframe
+              roomId={recommendedSuite?.roomId}
+              checkIn={checkIn}
+              checkOut={checkOut}
+              guests={guests}
+              suite={selectedSuite}
+              onClose={() => setShowEmbeddedBooking(false)}
+              fullscreen={true}
+            />
+          </div>
+        </div>
       )}
 
     </div>

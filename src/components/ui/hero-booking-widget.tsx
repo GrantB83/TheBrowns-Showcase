@@ -14,9 +14,11 @@ import {
   Shield,
   Gift,
   TrendingUp,
-  Users
+  Users,
+  CreditCard
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { EmbeddedBookingIframe } from "./embedded-booking-iframe";
 
 interface HeroBookingWidgetProps {
   className?: string;
@@ -27,6 +29,7 @@ export function HeroBookingWidget({ className, compact = false }: HeroBookingWid
   const [checkIn, setCheckIn] = useState("");
   const [checkOut, setCheckOut] = useState("");
   const [guests, setGuests] = useState("2");
+  const [showEmbeddedBooking, setShowEmbeddedBooking] = useState(false);
 
   const handleDirectBooking = () => {
     const baseUrl = "https://book.nightsbridge.com/00000";
@@ -139,10 +142,10 @@ export function HeroBookingWidget({ className, compact = false }: HeroBookingWid
             <Button 
               size="lg" 
               className="w-full min-h-[48px] text-sm font-medium"
-              onClick={handleDirectBooking}
+              onClick={() => setShowEmbeddedBooking(true)}
             >
-              <Calendar className="h-4 w-4 mr-2" />
-              Check Availability & Book
+              <CreditCard className="h-4 w-4 mr-2" />
+              Book Securely Now
             </Button>
             <Button 
               variant="outline" 
@@ -194,6 +197,21 @@ export function HeroBookingWidget({ className, compact = false }: HeroBookingWid
           </div>
         </div>
       </CardContent>
+
+      {/* Embedded Booking Modal */}
+      {showEmbeddedBooking && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+          <div className="w-full max-w-4xl max-h-[90vh] overflow-hidden">
+            <EmbeddedBookingIframe
+              checkIn={checkIn}
+              checkOut={checkOut}
+              guests={guests}
+              onClose={() => setShowEmbeddedBooking(false)}
+              fullscreen={true}
+            />
+          </div>
+        </div>
+      )}
     </Card>
   );
 }
