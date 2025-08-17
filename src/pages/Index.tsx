@@ -138,9 +138,9 @@ const Index = () => {
       />
       
       <MobileSEO />
-      <div className="min-h-screen mobile-scroll-smooth">
-      {/* Hero Section - Dynamic height for narrowest mobile */}
-      <section className="relative min-h-[50vh] h-[60vh] xs:h-[50vh] sm:h-[55vh] md:h-[65vh] lg:h-[75vh] xl:h-[80vh] mobile-select-none">
+      
+      {/* Hero Section - Clean height without whitespace */}
+      <section className="relative h-[40vh] sm:h-[55vh] md:h-[65vh] lg:h-[75vh] xl:h-[80vh] m-0 p-0">
         <EnhancedImageSlider 
           images={heroImages}
           className="h-full w-full"
@@ -150,46 +150,7 @@ const Index = () => {
         />
       </section>
 
-      {/* Trust Signals & Social Proof */}
-      <section className="py-4 sm:py-6 bg-primary/5 border-b">
-        <div className="responsive-container">
-          <div className="text-center">
-            <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground">
-              <div className="flex items-center gap-1">
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="h-4 w-4 text-yellow-500 fill-current" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <span className="font-medium">4.9/5 Rating</span>
-              </div>
-              <div className="h-4 w-px bg-border"></div>
-              <span>300+ Happy Guests</span>
-              <div className="h-4 w-px bg-border"></div>
-              <span>Best Rate Guarantee</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Booking Section */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-r from-primary/10 via-background to-accent/10">
-        <div className="responsive-container">
-          <div className="max-w-4xl mx-auto text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-primary mb-4 font-playfair">Book Your Luxury Stay</h2>
-            <p className="text-fluid-lg text-muted-foreground mb-6 leading-relaxed">
-              Choose your dates and secure your perfect highland retreat with our best rate guarantee.
-            </p>
-          </div>
-          <div className="max-w-2xl mx-auto">
-            <HeroBookingWidget compact={false} />
-          </div>
-        </div>
-      </section>
-
-      {/* Property Overview */}
+      {/* Property Overview - Moved above Testimonials */}
       <section 
         ref={overviewRef}
         className={`py-8 sm:py-12 lg:py-16 bg-background transition-all duration-1000 ${
@@ -200,7 +161,7 @@ const Index = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-primary mb-4 sm:mb-6">Luxury Accommodation in Dullstroom</h2>
             <p className="text-fluid-lg text-muted-foreground mb-8 sm:mb-10 md:mb-12 leading-relaxed max-w-none sm:max-w-3xl mx-auto">
-            Located in Dullstroom, Mpumalanga, our luxurious suites combine modern comfort with refined style across two exceptional properties. The Luxury Guest Suites host up to 10 adults and 2 children in four elegant ensuite rooms, while the charming Cottage Suites offer intimate accommodation for up to 6 adults and 1 child. Enjoy premium self-catering amenities in the heart of South Africa’s premier highland retreat.
+            Located in Dullstroom, Mpumalanga, our luxurious suites combine modern comfort with refined style across two exceptional properties. The Luxury Guest Suites host up to 10 adults and 2 children in four elegant ensuite rooms, while the charming Cottage Suites offer intimate accommodation for up to 6 adults and 1 child. Enjoy premium self-catering amenities in the heart of South Africa's premier highland retreat.
             </p>
             
             <div className="mobile-grid max-w-6xl mx-auto">
@@ -218,6 +179,53 @@ const Index = () => {
                 </Card>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials - Moved from lower down */}
+      <section 
+        ref={testimonialsRef}
+        className={`py-4 sm:py-6 md:py-8 lg:py-10 bg-primary/5 border-b transition-all duration-1000 ${
+          testimonialsVisible ? 'scroll-animate' : 'opacity-0'
+        }`}
+      >
+        <div className="responsive-container">
+          <div className="text-center mb-4 sm:mb-6 md:mb-8">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl text-primary mb-2 sm:mb-3 font-playfair">Guest Testimonials</h2>
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-2">
+              See what our guests say about their luxury stay at The Browns.
+            </p>
+          </div>
+          
+          <div className="card-grid max-w-6xl mx-auto">
+            {testimonials.map((testimonial, index) => (
+              <div 
+                key={index}
+                style={{ animationDelay: `${index * 150}ms` }}
+                className="scroll-animate h-full"
+              >
+                <TestimonialCard {...testimonial} className="h-full" />
+              </div>
+            ))}
+          </div>
+          
+          {/* Review Showcase - Moved from bottom */}
+          <ReviewShowcase compact={true} className="py-4 sm:py-6 mt-8" />
+        </div>
+      </section>
+
+      {/* Featured Booking Section */}
+      <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-r from-primary/10 via-background to-accent/10">
+        <div className="responsive-container">
+          <div className="max-w-4xl mx-auto text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-primary mb-4 font-playfair">Book Your Stay at The Browns</h2>
+            <p className="text-fluid-lg text-muted-foreground mb-6 leading-relaxed">
+              Choose your dates and secure your perfect highland retreat with our best rate guarantee.
+            </p>
+          </div>
+          <div className="max-w-2xl mx-auto">
+            <HeroBookingWidget compact={false} />
           </div>
         </div>
       </section>
@@ -268,38 +276,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section 
-        ref={testimonialsRef}
-        className={`py-6 sm:py-10 md:py-16 lg:py-20 bg-background transition-all duration-1000 ${
-          testimonialsVisible ? 'scroll-animate' : 'opacity-0'
-        }`}
-      >
-        <div className="responsive-container">
-          <div className="text-center mb-6 sm:mb-8 md:mb-10">
-            <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl text-primary mb-4 font-playfair">Guest Testimonials</h2>
-            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-2">
-              See what our guests say about their luxury stay at The Browns.
-            </p>
-          </div>
-          
-          <div className="card-grid max-w-6xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <div 
-                key={index}
-                style={{ animationDelay: `${index * 150}ms` }}
-                className="scroll-animate h-full"
-              >
-                <TestimonialCard {...testimonial} className="h-full" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Review Showcase Section */}
-      <ReviewShowcase compact={true} className="py-4 sm:py-6" />
-
       {/* Dullstroom Highlights - Interactive Infographic */}
       <section className="py-6 sm:py-10 md:py-16 lg:py-20 bg-accent">
         <div className="responsive-container">
@@ -309,30 +285,17 @@ const Index = () => {
             className="max-w-6xl mx-auto"
           />
           
-          <div className="flex flex-col xs:flex-row gap-4 max-w-md mx-auto mt-8">
+          <div className="flex justify-center mt-8">
             <Button 
               asChild 
               size="lg" 
-              className="min-h-[48px] sm:min-h-[52px] text-sm sm:text-base font-medium touch-feedback mobile-tap-highlight flex-1"
+              className="min-h-[48px] sm:min-h-[52px] text-sm sm:text-base font-medium touch-feedback mobile-tap-highlight"
             >
               <Link 
                 to="/activities"
                 aria-label="Explore Dullstroom highland activities and attractions"
               >
                 Explore Highland Activities
-              </Link>
-            </Button>
-            <Button 
-              asChild 
-              size="lg" 
-              variant="outline" 
-              className="min-h-[48px] sm:min-h-[52px] text-sm sm:text-base font-medium touch-feedback mobile-tap-highlight flex-1"
-            >
-              <Link 
-                to="/contact"
-                aria-label="Contact The Browns for bookings and inquiries"
-              >
-                Contact Us
               </Link>
             </Button>
           </div>
@@ -352,7 +315,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </div>
     </>
   );
 };

@@ -129,7 +129,7 @@ export function EnhancedImageSlider({
   return (
     <div 
       ref={sliderRef}
-      className={cn("relative overflow-hidden rounded-lg swipe-container", className)}
+      className={cn("relative overflow-hidden swipe-container", className)}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -142,15 +142,15 @@ export function EnhancedImageSlider({
     >
       {/* Images */}
       <div 
-        className="flex transition-transform duration-500 ease-in-out"
+        className="flex h-full transition-transform duration-500 ease-in-out"
         style={{ 
           transform: `translateX(-${currentIndex * 100}%)`,
           cursor: isDragging ? 'grabbing' : 'grab'
         }}
       >
         {images.map((image, index) => (
-          <div key={index} className="relative w-full flex-shrink-0 mobile-select-none">
-            <picture>
+          <div key={index} className="relative w-full h-full flex-shrink-0 mobile-select-none">
+            <picture className="w-full h-full">
               <source 
                 srcSet={getOptimizedSrc(image.src, 'fm=webp&w=800&h=600&q=80')} 
                 type="image/webp"
@@ -170,24 +170,24 @@ export function EnhancedImageSlider({
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 80vw"
               />
             </picture>
-            {(image.title || image.subtitle) && (
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center pointer-events-none">
-                <div className="text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto relative z-10">
-                  {image.title && (
-                    <h1 className="font-playfair font-bold mb-2 sm:mb-4 text-white drop-shadow-lg" 
-                        style={{ fontSize: 'clamp(1.75rem, 6vw, 3.75rem)' }}>
-                      {image.title}
-                    </h1>
-                  )}
-                  {image.subtitle && (
-                    <p className="leading-relaxed text-white/95 drop-shadow-md" 
-                       style={{ fontSize: 'clamp(1rem, 3vw, 1.5rem)' }}>
-                      {image.subtitle}
-                    </p>
-                  )}
-                </div>
-              </div>
-            )}
+                         {(image.title || image.subtitle) && (
+               <div className="absolute inset-0 bg-black/40 flex items-center justify-center pointer-events-none">
+                 <div className="text-center text-white px-8 sm:px-12 lg:px-16 max-w-3xl mx-auto relative z-10">
+                   {image.title && (
+                     <h1 className="font-playfair font-bold mb-2 sm:mb-4 text-white drop-shadow-lg" 
+                         style={{ fontSize: 'clamp(1.5rem, 5vw, 3rem)' }}>
+                       {image.title}
+                     </h1>
+                   )}
+                   {image.subtitle && (
+                     <p className="leading-relaxed text-white/95 drop-shadow-md" 
+                        style={{ fontSize: 'clamp(0.875rem, 2.5vw, 1.25rem)' }}>
+                       {image.subtitle}
+                     </p>
+                   )}
+                 </div>
+               </div>
+             )}
           </div>
         ))}
       </div>
@@ -198,50 +198,22 @@ export function EnhancedImageSlider({
           <Button
             variant="outline"
             size="icon"
-            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-background/90 hover:bg-background border-white/20 min-h-[48px] min-w-[48px] backdrop-blur-sm touch-feedback mobile-tap-highlight"
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-black/20 hover:bg-black/30 border-white/30 min-h-[48px] min-w-[48px] backdrop-blur-sm touch-feedback mobile-tap-highlight"
             onClick={goToPrevious}
             aria-label="Previous image"
           >
-            <ChevronLeft className="h-5 w-5 text-foreground" />
+            <ChevronLeft className="h-5 w-5 text-white" />
           </Button>
           <Button
             variant="outline"
             size="icon"
-            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-background/90 hover:bg-background border-white/20 min-h-[48px] min-w-[48px] backdrop-blur-sm touch-feedback mobile-tap-highlight"
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-black/20 hover:bg-black/30 border-white/30 min-h-[48px] min-w-[48px] backdrop-blur-sm touch-feedback mobile-tap-highlight"
             onClick={goToNext}
             aria-label="Next image"
           >
-            <ChevronRight className="h-5 w-5 text-foreground" />
+            <ChevronRight className="h-5 w-5 text-white" />
           </Button>
         </>
-      )}
-
-      {/* Dots Indicator - positioned to avoid button overlap */}
-      {images.length > 1 && (
-        <div className="absolute bottom-16 sm:bottom-20 md:bottom-24 lg:bottom-28 left-1/2 -translate-x-1/2 flex gap-2 sm:gap-3 z-10">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              className={cn(
-                "rounded-full transition-all duration-300 touch-feedback mobile-tap-highlight",
-                "min-h-[44px] min-w-[44px] bg-transparent border-0",
-                "hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/50"
-              )}
-              onClick={() => goToSlide(index)}
-              aria-label={`Go to slide ${index + 1} of ${images.length}`}
-              aria-current={index === currentIndex ? "true" : "false"}
-            >
-              <span
-                className={cn(
-                  "w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300",
-                  index === currentIndex
-                    ? "bg-primary"
-                    : "bg-white/80 border border-white/70"
-                )}
-              />
-            </button>
-          ))}
-        </div>
       )}
 
       {/* Swipe indicator for mobile users */}

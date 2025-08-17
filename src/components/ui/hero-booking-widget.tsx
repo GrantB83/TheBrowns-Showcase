@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { EmbeddedBookingIframe } from "./embedded-booking-iframe";
+import { format, parse } from "date-fns";
 
 interface HeroBookingWidgetProps {
   className?: string;
@@ -30,6 +31,131 @@ export function HeroBookingWidget({ className, compact = false }: HeroBookingWid
   const [checkOut, setCheckOut] = useState("");
   const [guests, setGuests] = useState("2");
   const [showEmbeddedBooking, setShowEmbeddedBooking] = useState(false);
+
+  // Convert DD/MM/YYYY to YYYY-MM-DD for HTML date input
+  const formatDateForInput = (dateString: string): string => {
+    if (!dateString) return "";
+    try {
+      const parsedDate = parse(dateString, "dd/MM/yyyy", new Date());
+      return format(parsedDate, "yyyy-MM-dd");
+    } catch {
+      return "";
+    }
+  };
+
+  // Convert YYYY-MM-DD to DD/MM/YYYY for display
+  const formatDateForDisplay = (dateString: string): string => {
+    if (!dateString) return "";
+    
+    // If it's already in DD/MM/YYYY format (raw input), return as is
+    if (dateString.includes('/')) {
+      return dateString;
+    }
+    
+    // If it's in YYYY-MM-DD format, convert to DD/MM/YYYY
+    try {
+      const parsedDate = parse(dateString, "yyyy-MM-dd", new Date());
+      return format(parsedDate, "dd/MM/yyyy");
+    } catch {
+      return dateString;
+    }
+  };
+
+  const handleCheckInChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+    
+    // Auto-format with slashes
+    if (value.length >= 2 && !value.includes('/')) {
+      value = value.slice(0, 2) + '/' + value.slice(2);
+    }
+    if (value.length >= 5 && value.split('/').length === 2) {
+      value = value.slice(0, 5) + '/' + value.slice(5);
+    }
+    
+    // Limit to DD/MM/YYYY format
+    if (value.length > 10) {
+      value = value.slice(0, 10);
+    }
+    
+    // Allow empty value
+    if (!value) {
+      setCheckIn("");
+      return;
+    }
+    
+    // Check if it matches DD/MM/YYYY pattern
+    const datePattern = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+    const match = value.match(datePattern);
+    
+    if (match) {
+      const [, day, month, year] = match;
+      const date = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+      
+      // Validate the date
+      if (date.getFullYear() === parseInt(year) && 
+          date.getMonth() === parseInt(month) - 1 && 
+          date.getDate() === parseInt(day)) {
+        // Convert to YYYY-MM-DD for internal storage
+        const formattedDate = format(date, "yyyy-MM-dd");
+        setCheckIn(formattedDate);
+      } else {
+        // Invalid date, store as raw input
+        setCheckIn(value);
+      }
+    } else {
+      // If it doesn't match the pattern, store the raw input
+      // This allows for partial typing
+      setCheckIn(value);
+    }
+  };
+
+  const handleCheckOutChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+    
+    // Auto-format with slashes
+    if (value.length >= 2 && !value.includes('/')) {
+      value = value.slice(0, 2) + '/' + value.slice(2);
+    }
+    if (value.length >= 5 && value.split('/').length === 2) {
+      value = value.slice(0, 5) + '/' + value.slice(5);
+    }
+    
+    // Limit to DD/MM/YYYY format
+    if (value.length > 10) {
+      value = value.slice(0, 10);
+    }
+    
+    // Allow empty value
+    if (!value) {
+      setCheckOut("");
+      return;
+    }
+    
+    // Check if it matches DD/MM/YYYY pattern
+    const datePattern = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+    const match = value.match(datePattern);
+    
+    if (match) {
+      const [, day, month, year] = match;
+      const date = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+      
+      // Validate the date
+      if (date.getFullYear() === parseInt(year) && 
+          date.getMonth() === parseInt(month) - 1 && 
+          date.getDate() === parseInt(day)) {
+        // Convert to YYYY-MM-DD for internal storage
+        const formattedDate = format(date, "yyyy-MM-dd");
+        setCheckOut(formattedDate);
+      } else {
+        // Invalid date, store as raw input
+        setCheckOut(value);
+      }
+    } else {
+      // If it doesn't match the pattern, store the raw input
+      // This allows for partial typing
+      setCheckOut(value);
+    }
+  };
 
   const handleDirectBooking = () => {
     const baseUrl = "https://book.nightsbridge.com/00000";
@@ -88,10 +214,7 @@ export function HeroBookingWidget({ className, compact = false }: HeroBookingWid
               Best Rate Guarantee
             </Badge>
           </div>
-          <div className="flex items-center gap-1 text-sm text-muted-foreground">
-            <Star className="h-4 w-4 text-yellow-500 fill-current" />
-            <span className="font-medium">4.9/5</span>
-          </div>
+          {/* Removed star rating display */}
         </div>
 
         {/* Quick Booking Form */}
@@ -101,22 +224,26 @@ export function HeroBookingWidget({ className, compact = false }: HeroBookingWid
               <Label htmlFor="hero-checkin" className="text-xs font-medium text-muted-foreground">Check-in</Label>
               <Input
                 id="hero-checkin"
-                type="date"
-                value={checkIn}
-                onChange={(e) => setCheckIn(e.target.value)}
-                min={new Date().toISOString().split('T')[0]}
+                type="text"
+                placeholder="DD/MM/YYYY"
+                value={formatDateForDisplay(checkIn)}
+                onChange={handleCheckInChange}
                 className="min-h-[40px] text-sm"
+                pattern="\d{2}/\d{2}/\d{4}"
+                title="Please enter date in DD/MM/YYYY format"
               />
             </div>
             <div>
               <Label htmlFor="hero-checkout" className="text-xs font-medium text-muted-foreground">Check-out</Label>
               <Input
                 id="hero-checkout"
-                type="date"
-                value={checkOut}
-                onChange={(e) => setCheckOut(e.target.value)}
-                min={checkIn || new Date().toISOString().split('T')[0]}
+                type="text"
+                placeholder="DD/MM/YYYY"
+                value={formatDateForDisplay(checkOut)}
+                onChange={handleCheckOutChange}
                 className="min-h-[40px] text-sm"
+                pattern="\d{2}/\d{2}/\d{4}"
+                title="Please enter date in DD/MM/YYYY format"
               />
             </div>
           </div>
