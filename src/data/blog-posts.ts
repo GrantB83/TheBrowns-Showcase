@@ -1002,6 +1002,121 @@ export const blogPosts: BlogPost[] = [
     keywords: ["romantic Dullstroom", "couples getaway", "romantic weekend", "fireplace suites", "romantic dining"],
     metaDescription: "Plan the perfect romantic getaway in Dullstroom. Complete guide to fireplaces, tastings, slow dinners and couples activities in the Mpumalanga highlands.",
     published: true
+  },
+  {
+    id: "9",
+    slug: "family-friendly-dullstroom-kids-guide", 
+    title: "Family-Friendly Dullstroom: Easy Wins With Kids",
+    excerpt: "Dullstroom works well for families because travel is simple, the village is compact, and there are gentle outdoor activities that suit a wide range of ages. Use this guide to plan a low-stress weekend with a few highlights, plenty of snacks, and early nights that actually happen.",
+    content: `
+      <h2>Easy Family Wins in Dullstroom</h2>
+      <p><strong>Last updated:</strong> 17 August 2025</p>
+      
+      <p>Dullstroom works well for families because travel is simple, the village is compact, and there are gentle outdoor activities that suit a wide range of ages. Use this guide to plan a low-stress weekend with a few highlights, plenty of snacks, and early nights that actually happen.</p>
+      
+      <p>Base yourself at The Browns' Luxury Guest & Cottage Suites in Dullstroom. Book an entire house for self-catering, or choose a suite-only stay with a beverage station only. Suites include a minibar fridge, Nespresso coffee, a tea selection, hot chocolate, still water and milk. Suites do not include cooking facilities.</p>
+      
+      <h3>Why Dullstroom is an easy family pick</h3>
+      <ul>
+        <li><strong>Driving is straightforward.</strong> The N4 and R540 make for a calm arrival, with Belfast as a sensible last stop for fuel and groceries.</li>
+        <li><strong>Days are simple to plan.</strong> Choose one morning activity, add a relaxed lunch, then keep afternoons flexible.</li>
+        <li><strong>Short, scenic options.</strong> You can enjoy trout waters, gentle walks, and small-town browsing without long hikes or long queues.</li>
+      </ul>
+      
+      <h3>A no-fuss 48-hour family itinerary</h3>
+      
+      <h4>Friday</h4>
+      <p>Arrive before sunset if possible. Check in and stretch legs with a short stroll on Naledi Drive.</p>
+      <p>Casual dinner in the village or easy takeaways. Keep bedtime on schedule.</p>
+      
+      <h4>Saturday</h4>
+      <p>Simple breakfast in town or at your whole-house booking.</p>
+      
+      <p><strong>Choose one headline activity:</strong></p>
+      <ul>
+        <li>Intro fly-fishing session on a managed stillwater. Young anglers can learn basic casting in a short lesson.</li>
+        <li>Short lakeside walk around the town dams for photos and fresh air.</li>
+        <li>Pantry browse at 84 on Main for local cheeses and fresh pasta to sort dinner.</li>
+      </ul>
+      
+      <p>Lunch in the village. Look for spots with outdoor seating and quick service.</p>
+      <p>Quiet afternoon. Board games, books, or a short drive for views.</p>
+      
+      <p><strong>Dinner plan:</strong></p>
+      <ul>
+        <li>Whole-house bookings: fresh pasta night with a simple salad and bread.</li>
+        <li>Suite-only stays: relaxed dinner out, then hot chocolate in your room.</li>
+      </ul>
+      
+      <h4>Sunday</h4>
+      <p>Pancake stop for a crowd-pleasing brunch.</p>
+      <p>One last view or coffee, then the easy drive home.</p>
+      
+      <h3>Family activities in and around Dullstroom</h3>
+      
+      <h4>In town</h4>
+      <p><strong>Town dams walk.</strong> Flat paths and open space for toddlers to burn energy. Maintain a safe distance from the water.</p>
+      <p><strong>Coffee and milkshakes.</strong> Start with a takeaway coffee for the adults, then reward kids with a milkshake stop after the walk.</p>
+      <p><strong>Cheese and pasta shopping.</strong> 84 on Main is handy for quick tastings, take-home wedges, and fresh pasta if you have a kitchen.</p>
+      
+      <h4>Short scenic drives</h4>
+      <p><strong>Long Tom Pass outlooks</strong> (via Lydenburg/Mashishing). Big views and fresh air with easy parking.</p>
+      <p><strong>Milly's on the N4</strong> (near Machadodorp/eNtokozweni). Trout pies and pantry treats for the drive home or your dinner plan.</p>
+      
+      <h4>Waterfalls and picnics near Sabie and Graskop</h4>
+      <p>Plan a half-day loop and choose one or two stops to keep it fun for younger kids. Popular options include Mac Mac Pools for a gentle splash and picnic, plus viewpoints at Mac Mac Falls, Bridal Veil Falls, or Lone Creek Falls. Check trading hours and road conditions on the morning you go.</p>
+      
+      <h3>Rainy-day ideas</h3>
+      <p><strong>Tasting flights for grown-ups, a treat for kids.</strong> Split up briefly so one adult enjoys a curated whisky or gin tasting while the other does a short shop or a hot chocolate stop with the kids, then swap.</p>
+      <p><strong>Board games and books.</strong> Keep a deck of cards and a favourite game in your bag.</p>
+      <p><strong>Pasta-and-movie night</strong> if you booked a whole house. Keep it simple and early.</p>
+      
+      <h3>Eating with kids: what works</h3>
+      <p><strong>Breakfast early.</strong> Beat the rush and keep moods steady.</p>
+      <p><strong>One sitting lunch.</strong> Choose a spot with kid-friendly choices and outdoor seating if the weather allows.</p>
+      
+      <p><strong>Dinner strategy:</strong></p>
+      <ul>
+        <li>Whole-house self-catering: one make-at-home dinner and one meal out keeps everyone happy.</li>
+        <li>Suite-only: choose quick service or takeaways and use your beverage station for bedtime drinks.</li>
+      </ul>
+      
+      <h3>Packing list for families</h3>
+      <ul>
+        <li>Layered clothing for crisp mornings</li>
+        <li>Comfortable walking shoes and a light rain jacket in summer</li>
+        <li>Sunscreen and hats</li>
+        <li>Reusable water bottles and road snacks</li>
+        <li>Small first-aid kit</li>
+        <li>A compact cooler bag for cheeses, trout products, and milk</li>
+        <li>Board game or cards, plus a favourite bedtime book</li>
+      </ul>
+      
+      <h3>Practical tips</h3>
+      <ul>
+        <li>Book accommodation first for school holidays and long weekends.</li>
+        <li>Reserve one meal each day over peak weekends to avoid waits.</li>
+        <li>Aim for daylight arrivals on the R540 from Belfast. The last half hour feels easier with good light.</li>
+        <li>Manage expectations with a simple plan. One main activity each morning is enough. Keep afternoons open for naps or a short scenic drive.</li>
+      </ul>
+      
+      <h3>Where to stay</h3>
+      <p><strong>The Browns' Luxury Guest & Cottage Suites (Dullstroom)</strong></p>
+      <ul>
+        <li>Whole-house self-catering when you book an entire house</li>
+        <li>Suite-only stays with a beverage station only (minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, milk)</li>
+      </ul>
+      <p>Choose the setup that suits your family and check live Rates & Availability to secure your dates.</p>
+    `,
+    category: "Family",
+    author: "The Browns Team", 
+    authorBio: "Local experts passionate about showcasing the best of Dullstroom and the Mpumalanga highlands.",
+    date: "August 17, 2025",
+    readTime: "7 min read",
+    image: "/src/assets/family-friendly-dullstroom.jpg",
+    keywords: ["family Dullstroom", "kids activities", "family-friendly accommodation", "family weekend", "children activities"],
+    metaDescription: "Plan a stress-free family weekend in Dullstroom. Complete guide to kid-friendly activities, easy itineraries, and family accommodation in the Mpumalanga highlands.",
+    published: true
   }
 ];
 
