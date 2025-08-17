@@ -81,16 +81,47 @@ export function BookingWidget({
 
   const handleDirectBooking = (roomId?: number) => {
     const baseUrl = "https://book.nightsbridge.com/00000";
-    const bookingUrl = roomId ? `${baseUrl}?rtid=${roomId}` : baseUrl;
+    const urlParams = new URLSearchParams();
+    
+    // Add room ID if specified
+    if (roomId) {
+      urlParams.append('rtid', roomId.toString());
+    }
+    
+    // Add dates if selected
+    if (checkIn) {
+      urlParams.append('checkin', checkIn);
+    }
+    if (checkOut) {
+      urlParams.append('checkout', checkOut);
+    }
+    
+    // Add guest count
+    if (guests && guests !== "2") {
+      urlParams.append('guests', guests);
+    }
+    
+    // Add suite preference if selected
+    if (selectedSuite) {
+      urlParams.append('suite', selectedSuite);
+    }
+    
+    const bookingUrl = urlParams.toString() ? `${baseUrl}?${urlParams.toString()}` : baseUrl;
     
     window.open(bookingUrl, '_blank', 'noopener,noreferrer');
     
-    // Track conversion
+    // Track conversion with enhanced data
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'booking_attempt', {
         event_category: 'conversion',
         event_label: selectedSuite || 'general_booking',
-        value: roomId || 0
+        value: roomId || 0,
+        custom_parameters: {
+          checkin_date: checkIn,
+          checkout_date: checkOut,
+          guest_count: guests,
+          room_id: roomId
+        }
       });
     }
   };

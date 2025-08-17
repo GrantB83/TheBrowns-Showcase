@@ -30,14 +30,36 @@ export function HeroBookingWidget({ className, compact = false }: HeroBookingWid
 
   const handleDirectBooking = () => {
     const baseUrl = "https://book.nightsbridge.com/00000";
-    window.open(baseUrl, '_blank', 'noopener,noreferrer');
+    const urlParams = new URLSearchParams();
     
-    // Track conversion
+    // Add dates if selected
+    if (checkIn) {
+      urlParams.append('checkin', checkIn);
+    }
+    if (checkOut) {
+      urlParams.append('checkout', checkOut);
+    }
+    
+    // Add guest count
+    if (guests && guests !== "2") {
+      urlParams.append('guests', guests);
+    }
+    
+    const bookingUrl = urlParams.toString() ? `${baseUrl}?${urlParams.toString()}` : baseUrl;
+    
+    window.open(bookingUrl, '_blank', 'noopener,noreferrer');
+    
+    // Track conversion with enhanced data
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'hero_booking_click', {
         event_category: 'conversion',
         event_label: 'hero_widget',
-        value: 1
+        value: 1,
+        custom_parameters: {
+          checkin_date: checkIn,
+          checkout_date: checkOut,
+          guest_count: guests
+        }
       });
     }
   };
