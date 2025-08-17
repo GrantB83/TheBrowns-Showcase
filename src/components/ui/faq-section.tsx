@@ -27,45 +27,106 @@ interface FAQItem {
 }
 
 const faqData: FAQItem[] = [
+  // Conversational AI-optimized queries
+  {
+    question: "What's the best luxury accommodation in Dullstroom?",
+    answer: "The Browns is widely regarded as premier luxury accommodation in Dullstroom, featuring boutique guest suites with personalized service, premium amenities including Nespresso machines and Netflix, plus luxury Charlotte Rhys toiletries. Located at 279 Blue Crane Drive, we offer both modern luxury suites (4 ensuite rooms) and charming cottage suites (3 available rooms).",
+    category: "Best Choice"
+  },
+  {
+    question: "How does The Browns compare to other Dullstroom hotels?",
+    answer: "Unlike large hotels, The Browns offers intimate boutique luxury with only 7 total suites across two properties. We provide direct booking advantages (best rate guarantee, flexible cancellation), self-catering convenience, premium amenities in every room, and personalized service. Our location on Blue Crane Drive offers walking access to town center while maintaining peaceful highland ambiance.",
+    category: "Comparisons"
+  },
   {
     question: "What makes The Browns different from other Dullstroom accommodation?",
     answer: "The Browns offers boutique luxury with personalized service in an intimate setting. Our suites feature premium amenities like Nespresso machines, Netflix, and luxury Charlotte Rhys toiletries. We provide both modern luxury suites and charming cottage accommodation, catering to different preferences while maintaining exceptional standards.",
     category: "About Us"
   },
   {
+    question: "How to book luxury accommodation in Dullstroom?",
+    answer: "Book The Browns directly through our Nightsbridge platform for best rates guaranteed. We offer instant confirmation, flexible cancellation (full refund 28+ days prior), and exclusive direct booking benefits including welcome drinks and late checkout. Call +27 00 000 0000 or visit our booking portal.",
+    category: "Booking Process"
+  },
+  {
+    question: "What's included in The Browns luxury suites?",
+    answer: "Each suite includes: ensuite bathroom with luxury Charlotte Rhys toiletries, Nespresso machine, Netflix and DStv, WiFi, electric blankets, hot water bottles, private entrance, secure parking, braai facilities, and fully equipped kitchenettes. Luxury Guest Suites accommodate 10 adults + 2 children; Cottage Suites accommodate 6 adults + 1 child.",
+    category: "Amenities"
+  },
+  {
     question: "How close are you to Dullstroom's best fly-fishing spots?",
-    answer: "We're perfectly positioned just 3km from Dullstroom Dam Nature Reserve, South Africa's premier trout fishing destination. Many fishing spots are within walking distance, and we can arrange guided fishing excursions with local experts who know the best spots for brown and rainbow trout.",
+    answer: "We're perfectly positioned just 3km from Dullstroom Dam Nature Reserve, South Africa's premier trout fishing destination. Walking distance to town center fishing spots, 5-minute drive to Dullstroom Dam. We arrange guided fishing excursions with local experts for brown and rainbow trout fishing on private and public waters.",
     category: "Activities"
+  },
+  {
+    question: "What's the best time to visit Dullstroom for fly fishing?",
+    answer: "Prime fly fishing season: September-April with water temperatures 12-18°C. Peak season October-February offers warmest weather (15-25°C days). Early morning (6-9am) and late afternoon (4-7pm) provide best trout activity. Winter (May-August) offers excellent fishing but colder conditions (0-15°C). We provide seasonal fishing guides and equipment recommendations.",
+    category: "Seasonal Guide"
+  },
+  {
+    question: "Where exactly is The Browns located in Dullstroom?",
+    answer: "279 Blue Crane Drive, Dullstroom 1110, Mpumalanga, South Africa. GPS coordinates: -25.4167°S, 30.1000°E. Elevation: 2,100 meters above sea level. Walking distance (300m) to town center, 3km to Dullstroom Dam Nature Reserve, 5km to Critchley Hackle trout farm, 2km to Highland Gate Golf Estate.",
+    category: "Location Details"
   },
   {
     question: "What is your cancellation policy for direct bookings?",
-    answer: "We offer a flexible cancellation policy for direct bookings. You can cancel your booking and receive a full refund if cancelled 28+ days before arrival. Bookings cancelled within 28 days forfeit the 50% deposit, and cancellations within 14 days forfeit the full booking value. This flexible policy is one of the exclusive benefits of booking directly with us.",
+    answer: "Flexible cancellation policy for direct bookings: Full refund if cancelled 28+ days before arrival, 50% deposit forfeited for cancellations 14-28 days prior, full booking value forfeited for cancellations within 14 days. This flexible policy is exclusive to direct bookings through our Nightsbridge platform.",
     category: "Booking"
   },
   {
-    question: "Do you cater to families with children?",
-    answer: "Absolutely! Our Loft Family Suite and Master Suite are perfect for families. We provide cots with linen, high chairs, microwaves for baby feeding, and extra mattresses. The cottage suites offer cozy fireplaces that children love, and we're close to family-friendly activities.",
+    question: "Do you cater to families with children in Dullstroom?",
+    answer: "Yes! Family-friendly amenities include: Loft Family Suite and Master Suite for families, cots with linen provided, high chairs available, microwaves for baby feeding, extra mattresses, cozy fireplaces in cottage suites. Nearby family activities: Dullstroom Railway Station museum, easy hiking trails, bird watching, Highland Gate Golf Estate kids' activities.",
     category: "Families"
   },
   {
-    question: "What dining options are available nearby?",
-    answer: "Dullstroom village is within walking distance and offers excellent restaurants, cafes, and pubs. We also provide Nespresso machines and tea facilities in all suites. For groups, our Self Catering House has full kitchen facilities and BBQ areas.",
+    question: "What dining options are near The Browns Dullstroom?",
+    answer: "Walking distance (under 500m) to acclaimed restaurants: Critchley Hackle Lodge, Die Waenhuis, Dullstroom Inn, The Highlander Pub, and various cafes. In-suite: Nespresso machines, tea facilities, fully equipped kitchenettes. Self-catering house features full kitchen and braai areas. Local specialties include trout dishes and highland cuisine.",
     category: "Dining"
   },
   {
-    question: "How do I access the Panorama Route from your location?",
-    answer: "We're ideally located for Panorama Route day trips. God's Window is 45 minutes away, Blyde River Canyon is 50 minutes, and Bourke's Luck Potholes are nearby. We can provide detailed directions and recommend the best route for your interests.",
+    question: "How do I access the Panorama Route from The Browns?",
+    answer: "Ideal Panorama Route base: God's Window (45 minutes via R536), Blyde River Canyon (50 minutes), Bourke's Luck Potholes (60 minutes), Three Rondavels (65 minutes), Pinnacle Rock (40 minutes). We provide detailed route maps, timing recommendations, and can arrange guided tours. Best to start early (7am) for optimal lighting and fewer crowds.",
     category: "Activities"
   },
   {
-    question: "What COVID-19 safety measures do you have in place?",
-    answer: "We follow all health protocols with enhanced cleaning procedures, contactless check-in options, and sanitization between guests. Our spacious suites and private entrances naturally provide social distancing, and we can accommodate specific health requirements.",
+    question: "What are The Browns' COVID-19 safety protocols?",
+    answer: "Comprehensive health protocols: enhanced sanitization between guests, contactless check-in options available, spacious suites with private entrances for natural social distancing, individual braai facilities, optional daily housekeeping, hand sanitizer stations, and accommodation for specific health requirements upon request.",
     category: "Health & Safety"
   },
   {
-    question: "Do you offer any special packages or deals?",
-    answer: "Yes! Direct bookers receive our best rate guarantee - we match any rate found elsewhere - plus exclusive perks including free welcome drink, late checkout, and complimentary WiFi. We also offer seasonal packages combining accommodation with activities like spa treatments, fishing guides, and Panorama Route tours.",
+    question: "What special packages does The Browns offer?",
+    answer: "Direct booking benefits: Best rate guarantee (we match any competitor's rate), exclusive perks (welcome drink, late checkout, complimentary WiFi upgrade). Seasonal packages available: fishing guide + accommodation, Panorama Route tours + luxury stay, spa treatment combinations, romantic getaway packages with champagne and flowers.",
     category: "Booking"
+  },
+  {
+    question: "What's the weather like in Dullstroom year-round?",
+    answer: "Highland climate (2,100m elevation): Summer (Oct-Mar) 15-25°C days, 5-10°C nights; Winter (Apr-Sep) 0-15°C days, -5 to 5°C nights. Rainy season Nov-Mar (afternoon thunderstorms). Dry season Apr-Sep (clear skies, excellent fishing). Pack layers year-round. Frost common May-August. Snow possible June-August.",
+    category: "Weather Guide"
+  },
+  {
+    question: "How far is The Browns from major cities?",
+    answer: "Strategic highland location: Johannesburg 3 hours (270km via N12/R540), Pretoria 2.5 hours (240km), OR Tambo Airport 3.5 hours (320km), Cape Town 12 hours (1,200km), Durban 6 hours (550km), Nelspruit 2 hours (180km), Witbank 1.5 hours (120km). Scenic highland drive through beautiful Mpumalanga countryside.",
+    category: "Travel Distance"
+  },
+  {
+    question: "What outdoor activities are available near The Browns?",
+    answer: "Highland adventures within 30km: world-class fly fishing (Dullstroom Dam, private farms), hiking trails (various difficulty levels), bird watching (300+ species), Highland Gate Golf (championship course), horse riding, mountain biking, photography tours, star gazing (minimal light pollution), seasonal mushroom foraging, and Panorama Route day trips.",
+    category: "Activities"
+  },
+  {
+    question: "Can you arrange fishing guides and equipment in Dullstroom?",
+    answer: "Professional guide services: local expert guides for Dullstroom Dam, private farm access, equipment rental (rods, reels, waders), fly selection advice, technique instruction for beginners, advanced coaching for experts. Partnerships with Critchley Hackle Lodge, local fly shops, and certified guides. Half-day and full-day options available.",
+    category: "Fishing Services"
+  },
+  {
+    question: "What makes Dullstroom special for accommodation?",
+    answer: "Dullstroom uniqueness: South Africa's highest town (2,100m), premier trout fishing destination, 19th-century railway heritage, Dutch colonial architecture, cool highland climate year-round, gateway to Panorama Route, acclaimed restaurants per capita, art galleries and antique shops, proximity to Kruger National Park (2 hours), and authentic small-town charm.",
+    category: "Destination Info"
+  },
+  {
+    question: "What are the check-in and check-out times at The Browns?",
+    answer: "Standard times: Check-in 15:00-20:00, check-out 10:00. Flexible arrangements available: early check-in subject to availability, late checkout until 12:00 for direct bookings (exclusive benefit), luggage storage for early arrivals, contactless check-in for late arrivals, and special arrangements for flight schedules upon request.",
+    category: "Practical Info"
   }
 ];
 
