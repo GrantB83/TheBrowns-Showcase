@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -22,6 +22,10 @@ import {
 import { cn } from "@/lib/utils";
 import { EmbeddedBookingIframe } from "./embedded-booking-iframe";
 import { RealTimeAvailability } from "./real-time-availability";
+import { BookingAbandonmentRecovery, BookingSessionTracker } from "./booking-abandonment-recovery";
+import { ABTestBookingButton, BookingButtonVariants } from "./ab-test-booking-button";
+import { useConversionFunnel } from "./conversion-funnel-tracker";
+import { EnhancedMobileGestureNav, MobileQuickActions } from "./enhanced-mobile-gesture-nav";
 
 interface SuiteRecommendation {
   id: string;
@@ -82,6 +86,25 @@ export function BookingWidget({
   const [selectedSuite, setSelectedSuite] = useState(preselectedSuite || "");
   const [showWidget, setShowWidget] = useState(true);
   const [showEmbeddedBooking, setShowEmbeddedBooking] = useState(false);
+  
+  // Advanced features
+  const { trackStep, startFunnel } = useConversionFunnel();
+  const sessionTracker = BookingSessionTracker.getInstance();
+
+  // Initialize tracking on component mount
+  useEffect(() => {
+    startFunnel();
+    trackStep('page_view');
+    sessionTracker.startSession({ guests, checkIn, checkOut });
+  }, [startFunnel, trackStep]);
+
+  // Track form interactions
+  useEffect(() => {
+    if (checkIn && checkOut) {
+      trackStep('dates_selected', { checkIn, checkOut, guests });
+      sessionTracker.updateSession({ checkIn, checkOut, guests });
+    }
+  }, [checkIn, checkOut, guests, trackStep]);
 
   const handleDirectBooking = (roomId?: number) => {
     const baseUrl = "https://book.nightsbridge.com/00000";
@@ -130,11 +153,6 @@ export function BookingWidget({
     }
   };
 
-  const handleWhatsAppBooking = () => {
-    const message = `Hi! I'd like to book at The Browns for ${checkIn || '[dates]'} to ${checkOut || '[dates]'} for ${guests} guests. ${selectedSuite ? `Interested in the ${selectedSuite}.` : ''} Can you help?`;
-    const whatsappUrl = `https://wa.me/27000000000?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
-  };
 
   const getRecommendedSuite = () => {
     const guestCount = parseInt(guests);
@@ -158,8 +176,28 @@ export function BookingWidget({
     );
   }
 
+  const handleEmbeddedBooking = () => {
+    trackStep('booking_widget_opened');
+    sessionTracker.updateSession({ 
+      roomId: recommendedSuite?.roomId,
+      suiteName: recommendedSuite?.name 
+    });
+    setShowEmbeddedBooking(true);
+  };
+
+  const handleWhatsAppContact = () => {
+    trackStep('whatsapp_initiated');
+    const message = `Hi! I'd like to book at The Browns for ${checkIn || '[dates]'} to ${checkOut || '[dates]'} for ${guests} guests. ${selectedSuite ? `Interested in the ${selectedSuite}.` : ''} Can you help?`;
+    const whatsappUrl = `https://wa.me/27000000000?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
-    <div className={cn("space-y-6", className)}>
+    <EnhancedMobileGestureNav
+      onSwipeUp={() => setShowEmbeddedBooking(true)}
+      onSwipeLeft={() => trackStep('gesture_navigation')}
+      className={cn("space-y-6", className)}
+    >
 
       {/* Quick Booking Form */}
       <Card className="border-primary/20">
@@ -218,19 +256,20 @@ export function BookingWidget({
           </div>
 
           <div className="grid grid-cols-1 mobile-landscape:grid-cols-2 gap-3 sm:gap-4">
-            <Button 
-              size="lg" 
-              className="w-full min-h-[48px] text-fluid-sm touch-manipulation"
-              onClick={() => setShowEmbeddedBooking(true)}
-            >
-              <CreditCard className="h-4 w-4 mr-2" />
-              Book Securely Now
-            </Button>
+            <ABTestBookingButton
+              testName="main_booking_cta"
+              variants={BookingButtonVariants.HERO_BOOKING}
+              onButtonClick={(variantId) => {
+                trackStep('form_started', { variant: variantId });
+                handleEmbeddedBooking();
+              }}
+              className="min-h-[48px]"
+            />
             <Button 
               variant="outline" 
               size="lg" 
               className="w-full min-h-[48px] text-fluid-sm touch-manipulation"
-              onClick={handleWhatsAppBooking}
+              onClick={handleWhatsAppContact}
             >
               <MessageCircle className="h-4 w-4 mr-2" />
               WhatsApp Booking
@@ -261,7 +300,7 @@ export function BookingWidget({
           checkIn={checkIn}
           checkOut={checkOut}
           guests={guests}
-          onBookNow={() => setShowEmbeddedBooking(true)}
+          onBookNow={handleEmbeddedBooking}
           className="mt-4"
         />
       )}
@@ -321,13 +360,18 @@ export function BookingWidget({
                   </div>
                   
                   <div className="grid grid-cols-2 gap-2">
-                    <Button 
-                      size="sm" 
-                      className="w-full"
-                      onClick={() => setShowEmbeddedBooking(true)}
-                    >
-                      Book {suite.name}
-                    </Button>
+                    <ABTestBookingButton
+                      testName="suite_booking_cta"
+                      variants={BookingButtonVariants.SUITE_BOOKING}
+                      onButtonClick={(variantId) => {
+                        trackStep('suite_booking_clicked', { 
+                          suite: suite.name, 
+                          variant: variantId 
+                        });
+                        handleEmbeddedBooking();
+                      }}
+                      className="text-xs"
+                    />
                     <Button 
                       variant="outline" 
                       size="sm" 
@@ -351,6 +395,19 @@ export function BookingWidget({
         </Card>
       )}
 
+      {/* Mobile Quick Actions */}
+      <MobileQuickActions
+        onBooking={handleEmbeddedBooking}
+        onCall={() => window.open('tel:+27000000000', '_self')}
+        onWhatsApp={handleWhatsAppContact}
+      />
+
+      {/* Booking Abandonment Recovery */}
+      <BookingAbandonmentRecovery
+        onReEngage={handleEmbeddedBooking}
+        onDismiss={() => trackStep('abandonment_dismissed')}
+      />
+
       {/* Embedded Booking Modal */}
       {showEmbeddedBooking && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
@@ -361,13 +418,16 @@ export function BookingWidget({
               checkOut={checkOut}
               guests={guests}
               suite={selectedSuite}
-              onClose={() => setShowEmbeddedBooking(false)}
+              onClose={() => {
+                setShowEmbeddedBooking(false);
+                trackStep('booking_modal_closed');
+              }}
               fullscreen={true}
             />
           </div>
         </div>
       )}
 
-    </div>
+    </EnhancedMobileGestureNav>
   );
 }
