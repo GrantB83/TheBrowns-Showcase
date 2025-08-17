@@ -83,22 +83,102 @@ export const blogPosts: BlogPost[] = [
     id: "3",
     slug: "self-catering-luxury-dullstroom",
     title: "Why Choose Self-Catering Luxury in Dullstroom",
-    excerpt: "Experience the freedom and comfort of self-catering luxury accommodation. Enjoy premium amenities, flexibility, and authentic highland living at The Browns.",
+    excerpt: "Thinking about a Dullstroom escape and comparing stay types? Self-catering can be the perfect fit if you want privacy, space, and control over your mealtimes.",
     content: `
-      <h2>The Best of Both Worlds: Luxury and Independence</h2>
-      <p>Self-catering luxury accommodation offers the perfect balance between premium comfort and personal freedom. At The Browns, we've elevated this concept to new heights, providing guests with all the amenities of a luxury hotel while maintaining the flexibility and privacy of your own highland retreat.</p>
+      <h2>Two Ways to Stay at The Browns</h2>
+      <p>Thinking about a Dullstroom escape and comparing stay types? Self-catering can be the perfect fit if you want privacy, space, and control over your mealtimes. At The Browns' Luxury Guest & Cottage Suites, there are two clear ways to stay that suit different trips:</p>
       
-      <h3>Freedom to Explore</h3>
-      <p>With your own fully equipped kitchen, you have the freedom to dine when and how you choose. Whether you want to prepare a simple breakfast before heading out fishing or create a gourmet dinner with local ingredients from the farmers market, the choice is yours.</p>
+      <p><strong>Whole-house self-catering</strong> when you book an entire property.</p>
+      <p><strong>Suite-only stays</strong> that include a beverage station for easy hot drinks and light refreshments, but no cooking facilities.</p>
       
-      <h3>Premium Amenities Without Compromise</h3>
-      <p>Our luxury suites feature top-of-the-line appliances, premium finishes, and thoughtful touches that make your stay special. From Egyptian cotton linens to state-of-the-art entertainment systems, we ensure your comfort never takes a backseat to independence.</p>
+      <h3>1) Whole-house self-catering</h3>
+      <p>Book an entire house to enjoy a private home setting in Dullstroom. This option suits families and small groups who value shared living spaces and the ability to prepare their own meals in comfort.</p>
       
-      <h3>Authentic Highland Living</h3>
-      <p>Self-catering allows you to live like a local while enjoying luxury amenities. Shop at the local markets, cook with regional ingredients, and experience Dullstroom the way it was meant to be experienced.</p>
+      <p><strong>Best for:</strong></p>
+      <ul>
+        <li>Family weekends and friends' getaways</li>
+        <li>Longer stays that benefit from cooking at home</li>
+        <li>Early starts for activities with flexible meal times</li>
+      </ul>
       
-      <h3>Perfect for Extended Stays</h3>
-      <p>Whether you're planning a weekend getaway or an extended highland retreat, self-catering luxury provides the comfort and convenience for stays of any length.</p>
+      <p><strong>What to plan for:</strong></p>
+      <ul>
+        <li>Bring your favourite ingredients or shop in the village on arrival</li>
+        <li>Plan one relaxed dinner in, one dinner out, and simple breakfasts to keep the weekend smooth</li>
+      </ul>
+      
+      <h3>2) Suite-only with beverage station</h3>
+      <p>Prefer a hotel-style rhythm without cooking? Choose an individual suite. You will have a minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, and milk for easy mornings and wind-down evenings.</p>
+      
+      <p><strong>Good to know:</strong></p>
+      <ul>
+        <li>No cooking facilities are provided in suites</li>
+        <li>Eat out in the village or enjoy takeaways</li>
+        <li>Use the minibar fridge for milk, cold drinks, and small snacks</li>
+      </ul>
+      
+      <p><strong>Best for:</strong></p>
+      <ul>
+        <li>Short stays and couples' trips</li>
+        <li>Travellers who want a simple, low-fuss plan</li>
+        <li>Guests who prefer Dullstroom's cafés and restaurants for meals</li>
+      </ul>
+      
+      <h3>Self-catering vs suite-only: which fits your trip?</h3>
+      <table class="w-full border-collapse border border-gray-300 my-4">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border border-gray-300 p-2">Trip type</th>
+            <th class="border border-gray-300 p-2">Choose whole-house self-catering if…</th>
+            <th class="border border-gray-300 p-2">Choose suite-only if…</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border border-gray-300 p-2"><strong>Families or groups</strong></td>
+            <td class="border border-gray-300 p-2">You want shared lounge and dining space</td>
+            <td class="border border-gray-300 p-2">You are splitting time between activities and meals out</td>
+          </tr>
+          <tr>
+            <td class="border border-gray-300 p-2"><strong>Longer stays</strong></td>
+            <td class="border border-gray-300 p-2">You prefer to cook some meals and control timing</td>
+            <td class="border border-gray-300 p-2">You want a simple base with easy hot drinks</td>
+          </tr>
+          <tr>
+            <td class="border border-gray-300 p-2"><strong>Early starts</strong></td>
+            <td class="border border-gray-300 p-2">You need flexible breakfasts before activities</td>
+            <td class="border border-gray-300 p-2">You are happy to grab coffee and head out</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <h3>Sample weekend plans</h3>
+      
+      <h4>Whole-house self-catering plan</h4>
+      <p><strong>Friday:</strong> Arrive, stock up in the village, easy dinner in.</p>
+      <p><strong>Saturday:</strong> Early activity, late brunch at home, slow afternoon, relaxed dinner in or out.</p>
+      <p><strong>Sunday:</strong> Simple breakfast, short scenic stop, drive home.</p>
+      
+      <h4>Suite-only plan</h4>
+      <p><strong>Friday:</strong> Arrive, in-room coffee or tea, dinner in the village.</p>
+      <p><strong>Saturday:</strong> Nespresso and a quiet start, breakfast at a café, explore, dinner out or takeaway.</p>
+      <p><strong>Sunday:</strong> Hot drink in the room, light breakfast in town, final stroll before checkout.</p>
+      
+      <h3>Quick FAQ</h3>
+      
+      <p><strong>Can I cook in a suite?</strong><br>
+      No. Suites are suite-only with a beverage station. There are no cooking facilities.</p>
+      
+      <p><strong>What is included in the beverage station?</strong><br>
+      A minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, and milk.</p>
+      
+      <p><strong>How do I book self-catering at The Browns?</strong><br>
+      Select an entire house option to enjoy whole-house self-catering. If you book an individual suite, it will be suite-only with a beverage station.</p>
+      
+      <h3>Ready to choose your stay?</h3>
+      <p><strong>Whole-house self-catering:</strong> ideal for families and groups who want space and mealtime flexibility.</p>
+      <p><strong>Suite-only with beverage station:</strong> perfect for couples and short stays that focus on exploring the village.</p>
+      <p>Check live Rates & Availability at The Browns' Luxury Guest & Cottage Suites and pick the option that matches your Dullstroom itinerary.</p>
     `,
     category: "Accommodation",
     author: "The Browns Team",
