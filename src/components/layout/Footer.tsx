@@ -37,7 +37,7 @@ export function Footer() {
           {/* Logo & Description */}
           <div className="space-y-4 sm:col-span-2 lg:col-span-1">
             <Link to="/" className="inline-flex items-center">
-              <img src="/assets/logo.png" alt="The Browns Logo" className="h-8 sm:h-10 w-auto" />
+              <img src="/images/logo.png" alt="The Browns Logo" className="h-8 sm:h-10 w-auto" />
             </Link>
             <p className="text-fluid-sm text-muted-foreground leading-relaxed">
               Luxury guest suites and cottage accommodation in the heart of Dullstroom, Mpumalanga.

@@ -67,7 +67,7 @@ export function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0">
             <img 
-              src="/assets/logo.png" 
+              src="/images/logo.png" 
               alt="The Browns Logo" 
               className="h-8 w-auto xs:h-9 sm:h-10 md:h-12 lg:h-14 transition-all duration-200"
             />
@@ -173,7 +173,7 @@ export function Header() {
                   {/* Logo */}
                   <div className="flex items-center mb-6 px-2">
                     <img 
-                      src="/assets/logo.png" 
+                      src="/images/logo.png" 
                       alt="The Browns Logo" 
                       className="h-8 w-auto"
                     />
