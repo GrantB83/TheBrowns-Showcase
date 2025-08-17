@@ -8,10 +8,8 @@ import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { BookingWidget } from "@/components/ui/booking-widget";
 import { ReviewShowcase } from "@/components/ui/review-showcase";
 import { TwoHouseSelectionHero } from "@/components/ui/two-house-selection-hero";
-import { SmartSuiteFilter } from "@/components/ui/smart-suite-filter";
-import { PersonalizationEngine } from "@/components/ui/personalization-engine";
 import { Link } from "react-router-dom";
-import { Clock, Gift, Users, ExternalLink, Filter } from "lucide-react";
+import { Clock, Gift, Users, ExternalLink, Filter, Crown } from "lucide-react";
 const luxurySuites = [{
   title: "Master Suite",
   capacity: "2 adults + 2 children under 12",
@@ -306,47 +304,44 @@ export default function Suites() {
         {/* Review Showcase Section */}
         <ReviewShowcase />
 
-        {/* Smart Suite Filter */}
-        <section className="py-8 sm:py-12 lg:py-16 bg-muted/30" id="suites-section">
+        {/* Quick Booking Widget */}
+        <section className="py-8 sm:py-12 lg:py-16 bg-muted/30">
           <div className="responsive-container">
-            <div className="text-center mb-8">
-              <h2 className="mb-4">Find Your Perfect Suite</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Advanced filtering and personalized recommendations to match your exact preferences.
-              </p>
+            <div className="max-w-2xl mx-auto">
+              <BookingWidget showRecommendations={false} />
             </div>
-            
-            <SmartSuiteFilter 
-              className="max-w-6xl mx-auto"
-              onSuiteSelect={(suiteId) => {
-                const roomId = luxurySuites.find(s => s.slug === suiteId)?.roomId || 
-                              cottageSuites.find(s => s.slug === suiteId)?.roomId;
-                if (roomId) {
-                  const bookingUrl = `https://book.nightsbridge.com/00000?rtid=${roomId}`;
-                  window.open(bookingUrl, '_blank', 'noopener,noreferrer');
-                }
-              }}
-            />
           </div>
         </section>
 
-        {/* Personalized Recommendations */}
-        <section className="py-8 sm:py-12 lg:py-16">
+        {/* Simple Suite Filter */}
+        <section className="py-4 sm:py-6" id="suites-section">
           <div className="responsive-container">
-            <div className="text-center mb-8">
-              <h2 className="mb-4">Recommended For You</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                AI-powered suggestions based on your travel preferences and booking history.
-              </p>
+            <div className="flex flex-wrap justify-center gap-3 mb-8">
+              <Button
+                variant={activeFilter === 'all' ? 'default' : 'outline'}
+                onClick={() => handleFilterChange('all')}
+                className="min-h-[44px]"
+              >
+                <Filter className="h-4 w-4 mr-2" />
+                All Suites
+              </Button>
+              <Button
+                variant={activeFilter === 'luxury' ? 'default' : 'outline'}
+                onClick={() => handleFilterChange('luxury')}
+                className="min-h-[44px]"
+              >
+                <Crown className="h-4 w-4 mr-2" />
+                Luxury Suites
+              </Button>
+              <Button
+                variant={activeFilter === 'cottage' ? 'default' : 'outline'}
+                onClick={() => handleFilterChange('cottage')}
+                className="min-h-[44px]"
+              >
+                <Gift className="h-4 w-4 mr-2" />
+                Cottage Suites
+              </Button>
             </div>
-            
-            <PersonalizationEngine 
-              className="max-w-4xl mx-auto"
-              onSuiteSelect={(suiteId, roomId) => {
-                const bookingUrl = `https://book.nightsbridge.com/00000?rtid=${roomId}`;
-                window.open(bookingUrl, '_blank', 'noopener,noreferrer');
-              }}
-            />
           </div>
         </section>
 
