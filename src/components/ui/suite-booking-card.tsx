@@ -28,6 +28,7 @@ import {
   ChefHat
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { RealTimeAvailability } from "./real-time-availability";
 
 interface Amenity {
   text: string;
@@ -183,7 +184,13 @@ export function SuiteBookingCard({
             </div>
           </div>
           
-          <div className="flex flex-col items-end gap-2">
+          <div className="flex flex-col items-end gap-2 w-full sm:w-auto">
+            <RealTimeAvailability
+              roomId={roomId}
+              onBookNow={handleBookNow}
+              compact={true}
+              className="w-full"
+            />
             
             <Button 
               size="sm" 

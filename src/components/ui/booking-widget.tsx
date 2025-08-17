@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { EmbeddedBookingIframe } from "./embedded-booking-iframe";
+import { RealTimeAvailability } from "./real-time-availability";
 
 interface SuiteRecommendation {
   id: string;
@@ -254,6 +255,17 @@ export function BookingWidget({
         </CardContent>
       </Card>
 
+      {/* Real-time Availability Check */}
+      {checkIn && checkOut && (
+        <RealTimeAvailability
+          checkIn={checkIn}
+          checkOut={checkOut}
+          guests={guests}
+          onBookNow={() => setShowEmbeddedBooking(true)}
+          className="mt-4"
+        />
+      )}
+
       {/* Personalized Recommendations */}
       {showRecommendations && (
         <Card>
@@ -296,6 +308,17 @@ export function BookingWidget({
                     </div>
                   </div>
                   
+                  {/* Real-time availability for recommended suite */}
+                  <div className="mt-3">
+                    <RealTimeAvailability
+                      roomId={suite.roomId}
+                      checkIn={checkIn}
+                      checkOut={checkOut}
+                      guests={guests}
+                      onBookNow={() => setShowEmbeddedBooking(true)}
+                      compact={true}
+                    />
+                  </div>
                   
                   <div className="grid grid-cols-2 gap-2">
                     <Button 
