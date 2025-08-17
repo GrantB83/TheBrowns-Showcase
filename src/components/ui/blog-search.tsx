@@ -14,6 +14,7 @@ interface BlogSearchProps {
   onCategoryChange: (categories: string[]) => void;
   availableCategories: string[];
   resultsCount?: number;
+  quickFilters?: { label: string; category: string; }[];
 }
 
 export function BlogSearch({
@@ -22,7 +23,8 @@ export function BlogSearch({
   selectedCategories,
   onCategoryChange,
   availableCategories,
-  resultsCount
+  resultsCount,
+  quickFilters = []
 }: BlogSearchProps) {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
@@ -47,6 +49,37 @@ export function BlogSearch({
 
   return (
     <div className="space-y-4">
+      {/* Quick Filters */}
+      {quickFilters.length > 0 && (
+        <div className="flex flex-wrap gap-2">
+          <Button
+            variant={selectedCategories.length === 0 ? "default" : "outline"}
+            size="sm"
+            onClick={() => onCategoryChange([])}
+            className="h-8"
+          >
+            All Topics
+          </Button>
+          {quickFilters.map((filter) => (
+            <Button
+              key={filter.category}
+              variant={selectedCategories.includes(filter.category) ? "default" : "outline"}
+              size="sm"
+              onClick={() => {
+                if (selectedCategories.includes(filter.category)) {
+                  onCategoryChange(selectedCategories.filter(c => c !== filter.category));
+                } else {
+                  onCategoryChange([filter.category]);
+                }
+              }}
+              className="h-8"
+            >
+              {filter.label}
+            </Button>
+          ))}
+        </div>
+      )}
+
       {/* Search Input */}
       <div className="relative">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />

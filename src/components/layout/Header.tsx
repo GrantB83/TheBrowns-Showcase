@@ -10,7 +10,7 @@ import { useResponsiveNavigation } from "@/hooks/use-responsive-navigation";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Accommodation", href: "/accommodation" },
-  { name: "Activities", href: "/activities" },
+  { name: "Activities", href: "/blog?category=Activities" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ];

@@ -1,5 +1,5 @@
-import { useState, useMemo } from "react";
-import { Link } from "react-router-dom";
+import { useState, useMemo, useEffect } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -10,8 +10,36 @@ import { Calendar, Clock, User, ExternalLink } from "lucide-react";
 // Data is now imported from /src/data/blog-posts.ts
 
 export default function Blog() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+
+  // Quick filter buttons for main topics
+  const quickFilters = [
+    { label: "Activities", category: "Activities" },
+    { label: "Food & Drink", category: "Food" },
+    { label: "Travel Tips", category: "Travel" },
+    { label: "Events", category: "Events" },
+    { label: "Accommodation", category: "Accommodation" }
+  ];
+
+  // Handle URL parameters for filtering
+  useEffect(() => {
+    const categoryParam = searchParams.get('category');
+    if (categoryParam && categories.includes(categoryParam)) {
+      setSelectedCategories([categoryParam]);
+    }
+  }, [searchParams]);
+
+  // Update URL when categories change
+  const handleCategoryChange = (newCategories: string[]) => {
+    setSelectedCategories(newCategories);
+    if (newCategories.length === 1) {
+      setSearchParams({ category: newCategories[0] });
+    } else {
+      setSearchParams({});
+    }
+  };
 
   // Filter blog posts based on search and categories
   const filteredPosts = useMemo(() => {
@@ -54,9 +82,10 @@ export default function Blog() {
               searchTerm={searchTerm}
               onSearchChange={setSearchTerm}
               selectedCategories={selectedCategories}
-              onCategoryChange={setSelectedCategories}
+              onCategoryChange={handleCategoryChange}
               availableCategories={categories}
               resultsCount={filteredPosts.length}
+              quickFilters={quickFilters}
             />
           </div>
         </div>
@@ -76,7 +105,7 @@ export default function Blog() {
                   className="min-h-[48px] text-fluid-base"
                   onClick={() => {
                     setSearchTerm("");
-                    setSelectedCategories([]);
+                    handleCategoryChange([]);
                   }}
                 >
                   Clear Filters

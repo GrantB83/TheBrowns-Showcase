@@ -1120,7 +1120,7 @@ export const blogPosts: BlogPost[] = [
   }
 ];
 
-export const categories = ["All", "Activities", "Events", "Accommodation", "Dining", "Outdoor Activities"];
+export const categories = ["All", "Activities", "Events", "Accommodation", "Food", "Travel"];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find(post => post.slug === slug && post.published);
