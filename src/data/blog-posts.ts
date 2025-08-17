@@ -794,6 +794,99 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "Complete driving guide from Johannesburg to Dullstroom. Route options, timing, tolls, stops, and arrival tips for your Mpumalanga highlands getaway.",
     featured: false,
     published: true
+  },
+  {
+    id: "7",
+    slug: "breakfast-coffee-dullstroom-guide",
+    title: "Breakfast and Coffee in Dullstroom: A Local Shortlist",
+    excerpt: "Early light, crisp air, and a first cup done right. If you are planning a foodie morning in Dullstroom, use this practical shortlist of trusted spots for coffee and breakfast in and around the village.",
+    content: `
+      <h2>Early Light, Crisp Air, and a First Cup Done Right</h2>
+      <p><strong>Last updated:</strong> 17 August 2025</p>
+      
+      <p>Early light, crisp air, and a first cup done right. If you are planning a foodie morning in Dullstroom, use this practical shortlist of trusted spots for coffee and breakfast in and around the village.</p>
+      
+      <p>Base yourself at The Browns' Luxury Guest & Cottage Suites. Book an entire house for self-catering, or choose a suite-only stay with a beverage station only. Suites include a minibar fridge, Nespresso coffee, a tea selection, hot chocolate, still water and milk. Suites do not include cooking facilities.</p>
+      
+      <h3>Quick picks</h3>
+      <p><strong>Best for a straight espresso and takeaway:</strong> Beans About Coffee, Dullstroom Espresso Bar</p>
+      <p><strong>Classic sit-down breakfast:</strong> Harrie's Pancakes, Mayfly, Duck & Trout</p>
+      <p><strong>Cheese, fresh pasta and pantry browsing with your brew:</strong> 84 on Main</p>
+      <p><strong>Guided tastings later in the day:</strong> Wild About Whisky, Dullstroom Gin Emporium</p>
+      
+      <h3>In-town favourites</h3>
+      
+      <h4>Beans About Coffee — Dullstroom Espresso Bar (Old Transvaal Inn precinct)</h4>
+      <p>The brand that brought small-batch roasting to town runs a compact espresso bar on Naledi Drive. It is ideal for a quality flat white before the day gets going. Expect a steady morning flow on weekends. If you are heading out early to fish or hike, grab a takeaway before the breakfast rush.</p>
+      <p><strong>Good to know:</strong> Closed on some midweek days. Check same-day hours if you are planning an early start.</p>
+      
+      <h4>Harrie's Pancakes (corner Cunning and Hugenote)</h4>
+      <p>A South African staple for both breakfast and brunch. Go sweet or savoury, add a coffee, and you are set for a relaxed morning. Families love the reliable menu and fast service.</p>
+      <p><strong>Order idea:</strong> Cinnamon-sugar to share, then a savoury pancake each with a long coffee.</p>
+      
+      <h4>Mayfly Restaurant & Cocktail Lounge (Naledi Drive)</h4>
+      <p>A local favourite where the breakfast section runs until late morning. Pick a traditional breakfast or something lighter, then take a short stroll along the main road.</p>
+      <p><strong>Order idea:</strong> A full breakfast with a side of grilled tomato, coffee to start and juice to finish.</p>
+      
+      <h4>Duck & Trout Restaurant and Pub (Naledi Drive)</h4>
+      <p>Casual and welcoming with hearty plates. Their breakfast offering includes lighter options and all-day crowd pleasers. Good for mixed groups where everyone wants something different.</p>
+      <p><strong>Order idea:</strong> Full English or a breakfast pizza if you want something more substantial before a long day out.</p>
+      
+      <h3>Coffee plus pantry shopping</h3>
+      
+      <h4>84 on Main (84 Naledi Drive)</h4>
+      <p>This small food hub is perfect for an unhurried morning browse.</p>
+      <ul>
+        <li><strong>Bergen Cheese:</strong> local cheeses for a late-afternoon board.</li>
+        <li><strong>Pasta Dullicious:</strong> fresh, handmade pasta and sauces to take back if you booked a whole-house self-catering stay at The Browns.</li>
+        <li><strong>Infinite Tea:</strong> fun, refreshing sips for a mid-morning break.</li>
+        <li><strong>Dullstroom Cultour Co. Wine Club:</strong> themed wine tastings with cheese boards on set dates. Book ahead on busy weekends.</li>
+      </ul>
+      <p><strong>Tip:</strong> Bring a small cooler bag if you plan to shop and wander.</p>
+      
+      <h3>Roastery to know</h3>
+      
+      <h4>Dullstroom Coffee Roastery (Naledi Drive)</h4>
+      <p>A local micro-roastery focused on fresh beans and blends. It is a handy stop if you want to take a bag home or stock your kitchen for a full-house booking. Look for seasonal roasts and small-batch runs.</p>
+      
+      <h3>Tastings for later in the day</h3>
+      
+      <h4>Wild About Whisky (506 Naledi Drive)</h4>
+      <p>One of the country's best known tasting rooms, with guided flights and a shop. Not a breakfast stop, but perfect for a slow late afternoon session after your morning in town.</p>
+      
+      <h4>Dullstroom Gin Emporium (Ivy Lane, 65 Naledi Drive)</h4>
+      <p>A characterful underground tasting room with guided gin flights and specials. Another good option for the late afternoon once the day's exploring is done.</p>
+      
+      <h3>One easy morning plan</h3>
+      <p><strong>Coffee first:</strong> Beans About Coffee espresso bar for a takeaway.</p>
+      <p><strong>Breakfast:</strong> Harrie's Pancakes, Mayfly, or Duck & Trout depending on your mood.</p>
+      <p><strong>Browse:</strong> Walk to 84 on Main for cheese and pantry treats.</p>
+      <p><strong>Back to base:</strong> Drop perishables in the fridge at The Browns, then plan a scenic stroll or fly-fishing lesson.</p>
+      <p><strong>Later:</strong> Book a whisky or gin tasting before dinner.</p>
+      
+      <h3>Practical notes</h3>
+      <p><strong>Weekend demand:</strong> Breakfast spots get busy between 09:00 and 11:00. Arrive early or plan for a short wait.</p>
+      <p><strong>Trading hours:</strong> Many venues adjust hours seasonally or midweek. Check same-day times if you are on a tight schedule.</p>
+      <p><strong>Payments:</strong> Cards are widely accepted, but it is useful to keep a little cash for small purchases.</p>
+      <p><strong>Parking:</strong> Street parking is the norm on Naledi Drive. Please be considerate of driveways and loading zones.</p>
+      
+      <h3>Where to stay</h3>
+      <p><strong>The Browns' Luxury Guest & Cottage Suites (Dullstroom)</strong></p>
+      <ul>
+        <li>Whole-house self-catering when you book an entire house</li>
+        <li>Suite-only stays with a beverage station only (minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, milk)</li>
+      </ul>
+      <p>Choose the setup that fits your trip and check live Rates & Availability to secure your dates.</p>
+    `,
+    category: "Food & Drink",
+    author: "The Browns Team",
+    authorBio: "Local experts passionate about showcasing the best of Dullstroom and the Mpumalanga highlands.",
+    date: "August 17, 2025",
+    readTime: "7 min read",
+    image: "/images/hero/suite-interior.jpg",
+    keywords: ["Dullstroom breakfast", "coffee shops Dullstroom", "food guide", "local restaurants", "morning dining"],
+    metaDescription: "Your complete guide to breakfast and coffee in Dullstroom. Local recommendations for the best morning spots, cafés, and food experiences in the village.",
+    published: true
   }
 ];
 
