@@ -435,9 +435,8 @@ export default function Suites() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-2xl font-bold text-primary mb-4">What Our Guests Say</h2>
-              <div className="flex items-center justify-center gap-1 mb-6">
-                {[...Array(5)].map((_, i) => <div key={i} className="h-5 w-5 text-secondary fill-secondary">⭐</div>)}
-                <span className="ml-2 text-muted-foreground">4.9/5 from 200+ reviews</span>
+              <div className="mb-6">
+                <span className="text-muted-foreground">200+ reviews</span>
               </div>
             </div>
             

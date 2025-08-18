@@ -162,7 +162,7 @@ export function TwoHouseSelectionHero({ onFilterChange, activeFilter }: TwoHouse
             }`}>
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
-                  src="/images/suites/robin-suite-01.jpg"
+                  src="/images/suites/heritage-cottage-cover.jpg"
                   alt="Heritage Cottage Suites - Authentic Dullstroom cottage accommodation"
                   className="w-full h-full object-cover transition-transform hover:scale-105"
                   onError={(e) => {

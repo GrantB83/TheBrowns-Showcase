@@ -26,7 +26,7 @@ const defaultPlatforms: ReviewPlatform[] = [
     name: 'Booking.com',
     rating: 8.8,
     maxRating: 10,
-    reviewCount: 421,
+    reviewCount: 401,
     url: 'https://www.booking.com/reviews/za/hotel/the-browns-39-luxury-guest-suites.en-gb.html',
     color: '#003580',
     logo: BookingLogo

@@ -139,9 +139,8 @@ export function TrustIndicators({ className }: SocialProofProps) {
       </div>
       
       <div className="flex items-center gap-1">
-        <Star className="h-4 w-4 text-yellow-500 fill-current" />
-        <span className="font-medium">4.9/5</span>
-        <span>(127 reviews)</span>
+        <Users className="h-4 w-4 text-blue-600" />
+        <span>127 reviews</span>
       </div>
       
       <div className="flex items-center gap-1">

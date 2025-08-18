@@ -126,10 +126,10 @@ class BookingSessionTracker {
       clearTimeout(this.abandonmentTimer);
     }
     
-    // Mark as abandoned after 5 minutes of inactivity
+    // Mark as abandoned after 3 minutes of inactivity
     this.abandonmentTimer = setTimeout(() => {
       this.markAbandoned();
-    }, 5 * 60 * 1000);
+    }, 3 * 60 * 1000);
   }
 
   private getSessionDuration() {
@@ -160,7 +160,7 @@ export function BookingAbandonmentRecovery({
 }: BookingAbandonmentProps) {
   const [session, setSession] = useState<BookingSession | null>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(300); // 5 minutes
+  const [timeLeft, setTimeLeft] = useState(180); // 3 minutes
 
   const tracker = BookingSessionTracker.getInstance();
 
@@ -262,7 +262,7 @@ export function BookingAbandonmentRecovery({
           <div className="bg-orange-100 rounded-lg p-3">
             <div className="flex items-center gap-2 text-orange-700 text-sm font-medium mb-2">
               <Gift className="h-4 w-4" />
-              <span>Special Offer Expires Soon!</span>
+              <span>Exclusive WhatsApp Discount!</span>
             </div>
             <div className="text-xs text-orange-600">
               <Clock className="h-3 w-3 inline mr-1" />
@@ -272,17 +272,17 @@ export function BookingAbandonmentRecovery({
 
           <div className="space-y-2">
             <Button 
-              className="w-full bg-orange-600 hover:bg-orange-700"
-              onClick={handleReEngage}
+              className="w-full bg-green-600 hover:bg-green-700"
+              onClick={handleWhatsAppContact}
             >
-              <TrendingUp className="h-4 w-4 mr-2" />
-              Complete Booking - Save 10%
+              <MessageCircle className="h-4 w-4 mr-2" />
+              Book via WhatsApp - Save 5%
             </Button>
             
             <div className="grid grid-cols-2 gap-2">
-              <Button variant="outline" size="sm" onClick={handleWhatsAppContact}>
-                <MessageCircle className="h-3 w-3 mr-1" />
-                WhatsApp
+              <Button variant="outline" size="sm" onClick={handleReEngage}>
+                <TrendingUp className="h-3 w-3 mr-1" />
+                Book Online
               </Button>
               <Button variant="outline" size="sm" onClick={() => window.open('tel:+27000000000', '_self')}>
                 <Phone className="h-3 w-3 mr-1" />
@@ -292,7 +292,7 @@ export function BookingAbandonmentRecovery({
           </div>
 
           <div className="text-xs text-orange-600 text-center">
-            Limited time offer • Best rate guarantee
+            WhatsApp bookings only • Limited time offer
           </div>
         </CardContent>
       </Card>

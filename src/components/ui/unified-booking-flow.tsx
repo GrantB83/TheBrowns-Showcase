@@ -398,8 +398,8 @@ export function UnifiedBookingFlow({
                   <span>Instant Confirmation</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <Star className="h-3 w-3" />
-                  <span>4.9/5 Rating</span>
+                  <Users className="h-3 w-3" />
+                  <span>Guest Reviews</span>
                 </div>
               </div>
             </div>

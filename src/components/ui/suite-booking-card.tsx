@@ -309,11 +309,8 @@ export function SuiteBookingCard({
               <TestimonialCard {...testimonial} />
             ) : (
               <div className="text-center py-8">
-                <div className="flex items-center justify-center gap-1 mb-2">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 text-secondary fill-secondary" />
-                  ))}
-                  <span className="ml-2 text-sm text-muted-foreground">4.9/5 Average</span>
+                <div className="mb-2">
+                  <span className="text-sm text-muted-foreground">Guest Reviews</span>
                 </div>
                 <p className="text-muted-foreground text-sm">
                   Guests love the {title.toLowerCase()} for its comfort and amenities.

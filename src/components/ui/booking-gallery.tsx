@@ -278,11 +278,8 @@ export function BookingGallery({
         <div className="bg-muted/30 rounded-lg p-4 sm:p-6 lg:p-8">
           <div className="text-center mb-6">
             <h2 className="text-xl sm:text-2xl font-semibold mb-2">What Our Guests Say</h2>
-            <div className="flex items-center justify-center gap-1 mb-2">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-4 w-4 text-secondary fill-secondary" />
-              ))}
-              <span className="ml-2 text-sm text-muted-foreground">4.9/5 on Google Reviews</span>
+            <div className="mb-2">
+              <span className="text-sm text-muted-foreground">Google Reviews</span>
             </div>
           </div>
           
