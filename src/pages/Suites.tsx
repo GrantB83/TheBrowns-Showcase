@@ -235,35 +235,68 @@ const cottageSuites = [{
   roomId: 16,
   urgencyMessage: "Family elegance"
 }];
-const selfCateringHouse = {
-  title: "Self Catering House",
-  capacity: "Up to 16 guests",
-  bedConfig: "8 bedrooms with flexible configurations",
-  description: "Fully equipped luxury self-catering house perfect for large groups, families, or corporate retreats. Features multiple bedrooms, full kitchen facilities, barbecue areas, and secure parking for the ultimate Dullstroom group experience.",
-  mainAmenities: [{
-    text: "Full kitchen facilities",
-    emoji: "🍳"
-  }, {
-    text: "Barbecue entertainment areas",
-    emoji: "🔥"
-  }, {
-    text: "Secure parking for multiple vehicles",
-    emoji: "🚗"
-  }, {
-    text: "Large group dining areas",
-    emoji: "🍽️"
-  }, {
-    text: "Multiple entertainment zones",
-    emoji: "📺"
-  }, {
-    text: "Highland countryside views",
-    emoji: "🏔️"
-  }],
-  additionalAmenities: ["8 fully equipped bedrooms", "Multiple bathroom facilities", "Large commercial-style kitchen", "Indoor and outdoor dining spaces", "Entertainment and lounge areas", "Secure off-street parking", "Free WiFi throughout property", "Laundry facilities included", "Barbecue and outdoor entertaining", "Group accommodation rates", "Corporate retreat facilities", "Event hosting capabilities"],
-  slug: "self-catering-house",
-  roomId: 18,
-  urgencyMessage: "Perfect for groups"
-};
+const selfCateringHouses = [
+  {
+    title: "Luxury Guest House",
+    capacity: "Up to 8 guests",
+    bedConfig: "4 suites (Master, Loft, Garden, Cove)",
+    description: "Our main luxury guest house features four elegantly appointed suites with modern amenities, mountain views, and sophisticated comfort. Perfect for smaller groups seeking premium accommodation with full self-catering facilities.",
+    mainAmenities: [{
+      text: "Full kitchen facilities",
+      emoji: "🍳"
+    }, {
+      text: "Mountain views from balcony",
+      emoji: "🏔️"
+    }, {
+      text: "4 luxury suites",
+      emoji: "🛏️"
+    }, {
+      text: "Entertainment areas",
+      emoji: "📺"
+    }, {
+      text: "Secure parking",
+      emoji: "🚗"
+    }, {
+      text: "WiFi throughout",
+      emoji: "📶"
+    }],
+    additionalAmenities: ["Master Suite with private dressing room", "Loft Suite perfect for families", "Garden Suite with spa bath", "Cove Suite with modern amenities", "Commercial-style kitchen", "Indoor and outdoor dining", "Laundry facilities", "Barbecue area", "Free WiFi throughout", "Daily housekeeping available"],
+    slug: "luxury-guest-house",
+    roomId: 18,
+    urgencyMessage: "Premium luxury house",
+    images: ['/images/suites/master-suite-01.jpg', '/images/suites/loft-suite-01.jpg', '/images/suites/garden-suite-01.jpg', '/images/suites/cove-suite-01.jpg']
+  },
+  {
+    title: "Heritage Cottage House", 
+    capacity: "Up to 8 guests",
+    bedConfig: "3 cottage suites (Robin, Blue Crane, Falcon)",
+    description: "Our charming heritage cottage house offers authentic cottage character with warm fireplaces and cozy atmospheres. Features three distinctive cottage suites, each with unique charm and full self-catering capabilities.",
+    mainAmenities: [{
+      text: "Cottage fireplaces",
+      emoji: "🔥"
+    }, {
+      text: "Heritage character",
+      emoji: "🏡"
+    }, {
+      text: "3 cottage suites",
+      emoji: "🛏️"
+    }, {
+      text: "Garden access",
+      emoji: "🌿"
+    }, {
+      text: "Self-catering kitchen",
+      emoji: "🍳"
+    }, {
+      text: "Authentic atmosphere",
+      emoji: "✨"
+    }],
+    additionalAmenities: ["Robin Suite with fireplace and flexible bedding", "Blue Crane Suite perfect for couples", "Falcon Suite ideal for small families", "Full cottage kitchen facilities", "Cottage garden access", "Wood for fireplaces included", "Free WiFi throughout", "Authentic Dullstroom cottage experience", "Private cottage entrance", "Secure parking"],
+    slug: "heritage-cottage-house",
+    roomId: 19,
+    urgencyMessage: "Cottage charm house",
+    images: ['/images/suites/heritage-cottage-cover.jpg', '/images/suites/robin-suite-01.jpg', '/images/suites/blue-crane-suite-01.jpg', '/images/suites/falcon-suite-01.jpg']
+  }
+];
 const testimonials = [{
   quote: "Everything was so luxurious, it felt like we booked into a hotel. The rooms are spacious, and the beds have electric blankets.",
   author: "Elsabe83",
@@ -405,7 +438,7 @@ export default function Suites() {
           <Separator className="my-8" />
         )}
 
-        {/* Self Catering House Section */}
+        {/* Self Catering Houses Section */}
         {showSelfCateringHouse && (
           <section className="py-12 sm:py-16 lg:py-20 bg-muted/30">
             <div className="container mx-auto px-4">
@@ -414,18 +447,32 @@ export default function Suites() {
                   <Users className="h-4 w-4 mr-2" />
                   Groups & Events
                 </Badge>
-                <h2 className="text-primary mb-4">Self Catering House</h2>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                  Perfect for large groups, family reunions, or corporate retreats. 
-                  Fully equipped for independent luxury living in the Dullstroom highlands.
+                <h2 className="text-primary mb-4">Self-Catering Houses</h2>
+                <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+                  Two beautifully appointed houses perfect for groups, family reunions, or corporate retreats. 
+                  Book the Luxury Guest House (up to 8 guests) or Heritage Cottage House (up to 8 guests) separately, 
+                  or combine both adjoining houses for larger groups up to 16 guests. Each house offers fully equipped 
+                  self-catering facilities for independent luxury living in the Dullstroom highlands.
                 </p>
               </div>
               
-              <SuiteBookingCard 
-                {...selfCateringHouse} 
-                images={['/images/suites/self-catering-house-01.jpg', '/images/suites/self-catering-house-02.jpg']} 
-                className="max-w-4xl mx-auto" 
-              />
+              <div className="space-y-8 max-w-6xl mx-auto">
+                {selfCateringHouses.map((house, index) => (
+                  <SuiteBookingCard 
+                    key={house.slug} 
+                    {...house} 
+                    className={index % 2 === 1 ? "bg-background/50" : ""} 
+                  />
+                ))}
+                
+                <div className="text-center mt-8 p-6 bg-primary/10 border border-primary/20 rounded-lg max-w-2xl mx-auto">
+                  <h3 className="text-primary font-semibold mb-2">Combined Booking Option</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Both houses adjoin each other and can be booked together for groups up to 16 guests, 
+                    offering the ultimate private highland retreat experience.
+                  </p>
+                </div>
+              </div>
             </div>
           </section>
         )}
