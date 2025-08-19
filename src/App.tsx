@@ -11,7 +11,7 @@ import About from "./pages/About";
 import Suites from "./pages/Suites";
 import Gallery from "./pages/Gallery";
 import Booking from "./pages/Booking";
-import Location from "./pages/Location";
+
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
@@ -38,7 +38,7 @@ const App = () => (
             <Route path="gallery" element={<Gallery />} />
             <Route path="activities" element={<Blog />} />
             <Route path="booking" element={<Booking />} />
-            <Route path="location" element={<Location />} />
+            
             <Route path="contact" element={<Contact />} />
             <Route path="blog" element={<Blog />} />
             <Route path="blog/:slug" element={<BlogPost />} />

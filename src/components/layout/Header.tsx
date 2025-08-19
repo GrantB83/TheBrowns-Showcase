@@ -13,7 +13,6 @@ const navigation = [
   { name: "Activities", href: "/activities" },
   { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" },
-  { name: "Location", href: "/location" },
   { name: "Blog", href: "/blog" },
   { name: "Booking", href: "/booking" },
 ];
@@ -25,9 +24,8 @@ const itemPriority = {
   "Activities": 3,
   "Gallery": 4,
   "Contact": 5,
-  "Location": 6,
-  "Blog": 7,
-  "Booking": 8,
+  "Blog": 6,
+  "Booking": 7,
 };
 
 export function Header() {
