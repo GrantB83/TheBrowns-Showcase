@@ -231,7 +231,7 @@ export function MobileQuickActions({
   useMobileQuickActionsRegistry();
   return (
     <div className={cn(
-      "md:hidden fixed bottom-4 left-4 right-4 z-40",
+      "lg:hidden fixed bottom-4 left-4 right-4 z-40",
       "flex items-center justify-center gap-3",
       className
     )}>

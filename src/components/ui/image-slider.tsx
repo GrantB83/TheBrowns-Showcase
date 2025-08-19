@@ -113,7 +113,7 @@ export function ImageSlider({
             <button
               key={index}
               className={cn(
-                "w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors min-h-[24px] min-w-[24px] flex items-center justify-center",
+                "w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-colors min-h-[32px] min-w-[32px] flex items-center justify-center",
                 index === currentIndex
                   ? "bg-primary"
                   : "bg-white/50 hover:bg-white/70"

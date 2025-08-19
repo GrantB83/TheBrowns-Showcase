@@ -31,7 +31,7 @@ export function Layout() {
         </main>
         <Footer />
         <ScrollToTop />
-        <div className={`${mobileQuickActionsActive ? 'hidden md:block' : 'block'}`}>
+        <div className={`${mobileQuickActionsActive ? 'hidden lg:block' : 'block'}`}>
           <WhatsAppFloatingButton />
         </div>
       </div>
