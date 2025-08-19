@@ -48,23 +48,23 @@ export function SuiteFilter({ activeFilter, onFilterChange, className }: SuiteFi
   };
 
   return (
-    <div className={`space-y-4 ${className}`}>
-      <Card className="max-w-md mx-auto">
-        <CardContent className="pt-6">
-          <div className="space-y-6">
+    <div className={`space-y-6 ${className}`}>
+      <Card className="max-w-lg mx-auto shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <CardContent className="pt-8 pb-8">
+          <div className="space-y-8">
             {/* Slider Header */}
             <div className="text-center">
-              <div className="flex items-center justify-center gap-2 mb-2">
+              <div className="flex items-center justify-center gap-3 mb-3">
                 {getActiveFilterIcon()}
-                <span className="text-sm font-medium">{getActiveFilterLabel()}</span>
+                <span className="text-base font-semibold text-primary">{getActiveFilterLabel()}</span>
               </div>
-              <p className="text-xs text-muted-foreground">
+              <p className="text-sm text-muted-foreground">
                 Select your preferred accommodation type
               </p>
             </div>
 
             {/* Main Slider */}
-            <div className="space-y-3">
+            <div className="space-y-6">
               <Slider
                 value={getSliderValue()}
                 onValueChange={handleSliderChange}
@@ -73,17 +73,17 @@ export function SuiteFilter({ activeFilter, onFilterChange, className }: SuiteFi
                 className="w-full"
               />
               <div className="flex justify-between text-xs text-muted-foreground">
-                <div className="flex flex-col items-center gap-1">
-                  <Crown className="h-3 w-3" />
-                  <span>Luxury</span>
+                <div className="flex flex-col items-center gap-2 p-2 rounded-lg hover:bg-muted/30 transition-colors">
+                  <Crown className="h-4 w-4" />
+                  <span className="font-medium">Luxury</span>
                 </div>
-                <div className="flex flex-col items-center gap-1">
-                  <Gift className="h-3 w-3" />
-                  <span>Cottage</span>
+                <div className="flex flex-col items-center gap-2 p-2 rounded-lg hover:bg-muted/30 transition-colors">
+                  <Gift className="h-4 w-4" />
+                  <span className="font-medium">Cottage</span>
                 </div>
-                <div className="flex flex-col items-center gap-1">
-                  <Home className="h-3 w-3" />
-                  <span>Self-Catering</span>
+                <div className="flex flex-col items-center gap-2 p-2 rounded-lg hover:bg-muted/30 transition-colors">
+                  <Home className="h-4 w-4" />
+                  <span className="font-medium">Self-Catering</span>
                 </div>
               </div>
             </div>

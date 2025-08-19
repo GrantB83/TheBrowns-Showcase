@@ -150,12 +150,12 @@ export function TwoHouseSelectionHero({ onFilterChange, activeFilter }: TwoHouse
                   </div>
                 </div>
                 
-                <Button 
-                  className="w-full min-h-[48px] text-base font-medium"
+                 <Button 
+                  className="w-full min-h-[56px] text-base font-semibold touch-target"
                   onClick={() => handleHouseSelection('luxury')}
                 >
                   View Luxury Suites
-                  <ArrowRight className="h-4 w-4 ml-2" />
+                  <ArrowRight className="h-5 w-5 ml-2" />
                 </Button>
               </CardContent>
             </Card>
@@ -231,11 +231,11 @@ export function TwoHouseSelectionHero({ onFilterChange, activeFilter }: TwoHouse
                 
                 <Button 
                   variant="outline"
-                  className="w-full min-h-[48px] text-base font-medium"
+                  className="w-full min-h-[56px] text-base font-semibold touch-target"
                   onClick={() => handleHouseSelection('cottage')}
                 >
                   View Cottage Suites
-                  <ArrowRight className="h-4 w-4 ml-2" />
+                  <ArrowRight className="h-5 w-5 ml-2" />
                 </Button>
               </CardContent>
             </Card>

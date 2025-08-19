@@ -235,7 +235,7 @@ export function SuiteBookingCard({
     <Card className={cn("overflow-hidden hover:shadow-xl transition-shadow duration-300", className)}>
       {/* Main Image */}
       {images && images.length > 0 && (
-        <div className="relative h-48 sm:h-64 overflow-hidden">
+        <div className="relative h-48 sm:h-64 lg:h-72 overflow-hidden">
           <img
             src={images[0]}
             alt={`${title} - luxury suite interior at The Browns Dullstroom`}
@@ -246,14 +246,14 @@ export function SuiteBookingCard({
               target.src = `https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=800&h=600&fit=crop&crop=center`;
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
         </div>
       )}
-      <CardHeader className="pb-4">
-        <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
+      <CardHeader className="pb-6">
+        <div className="flex flex-col sm:flex-row justify-between items-start gap-6">
           <div className="flex-1">
-            <div className="flex flex-wrap items-center gap-2 mb-2">
-              <h3 className="text-xl sm:text-2xl font-bold text-primary">{title}</h3>
+            <div className="flex flex-wrap items-center gap-3 mb-3">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary">{title}</h3>
               {urgencyMessage && (
                 <Badge className="bg-green-500 text-white text-xs">
                   <Lightbulb className="h-3 w-3 mr-1" />
@@ -262,14 +262,12 @@ export function SuiteBookingCard({
               )}
             </div>
             
-
-            
-            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-              <div className="flex items-center gap-1">
+            <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground mb-4">
+              <div className="flex items-center gap-2">
                 <Users className="h-4 w-4" />
                 <span>{capacity}</span>
               </div>
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-2">
                 <Bed className="h-4 w-4" />
                 <span>{bedConfig}</span>
               </div>
@@ -278,27 +276,27 @@ export function SuiteBookingCard({
           
           <div className="flex flex-col items-end gap-2 w-full sm:w-auto">
             <Button 
-              size="sm" 
-              className="min-h-[44px] w-full sm:w-auto"
+              size="lg" 
+              className="min-h-[56px] w-full sm:w-auto text-base font-semibold touch-target px-8"
               onClick={handleBookNow}
             >
-              <ExternalLink className="h-4 w-4 mr-2" />
+              <ExternalLink className="h-5 w-5 mr-2" />
               Book Direct Now
             </Button>
           </div>
         </div>
         
         {offerText && (
-          <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-accent/10 border border-primary/20 rounded-lg p-3 mt-4 shadow-sm">
-            <div className="flex items-center gap-3">
+          <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-accent/10 border border-primary/20 rounded-lg p-4 mt-6 shadow-sm">
+            <div className="flex items-center gap-4">
               <div className="flex-shrink-0">
-                <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Gift className="h-4 w-4 text-primary" />
+                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Gift className="h-5 w-5 text-primary" />
                 </div>
               </div>
               <div className="flex-1">
-                <div className="text-sm font-semibold text-primary mb-1">Book Direct Benefits</div>
-                <div className="text-xs text-muted-foreground leading-relaxed">{offerText}</div>
+                <div className="text-sm font-semibold text-primary mb-2">Book Direct Benefits</div>
+                <div className="text-sm text-muted-foreground leading-relaxed">{offerText}</div>
               </div>
             </div>
           </div>
@@ -373,33 +371,33 @@ export function SuiteBookingCard({
             </TabsTrigger>
           </TabsList>
 
-          <TabsContent value="overview" className="space-y-4 mt-0 pt-12 sm:pt-0">
-            <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{getCombinedDescription()}</p>
+          <TabsContent value="overview" className="space-y-6 mt-0 pt-12 sm:pt-0">
+            <p className="text-muted-foreground leading-relaxed text-fluid-base">{getCombinedDescription()}</p>
             
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
               {mainAmenities.slice(0, 6).map((amenity, index) => {
                 const Icon = getAmenityIcon(amenity.text);
                 return (
-                  <div key={index} className="flex items-center gap-2 text-sm">
-                    <Icon className="h-4 w-4 text-primary" />
-                    <span>{amenity.text}</span>
+                  <div key={index} className="flex items-center gap-3 text-sm p-3 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
+                    <Icon className="h-5 w-5 text-primary flex-shrink-0" />
+                    <span className="font-medium">{amenity.text}</span>
                   </div>
                 );
               })}
             </div>
           </TabsContent>
 
-          <TabsContent value="amenities" className="space-y-4">
-            <div className="space-y-4">
+          <TabsContent value="amenities" className="space-y-6">
+            <div className="space-y-6">
               <div>
-                <h4 className="font-semibold mb-3 text-primary">Main Features</h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <h4 className="font-semibold mb-4 text-primary text-lg">Main Features</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {mainAmenities.map((amenity, index) => {
                     const Icon = getAmenityIcon(amenity.text);
                     return (
-                      <div key={index} className="flex items-center gap-2 text-sm p-2 bg-muted/30 rounded">
-                        <Icon className="h-4 w-4 text-primary" />
-                        <span>{amenity.text}</span>
+                      <div key={index} className="flex items-center gap-3 text-sm p-3 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
+                        <Icon className="h-5 w-5 text-primary flex-shrink-0" />
+                        <span className="font-medium">{amenity.text}</span>
                       </div>
                     );
                   })}
@@ -408,15 +406,15 @@ export function SuiteBookingCard({
               
               <Accordion type="single" collapsible>
                 <AccordionItem value="additional">
-                  <AccordionTrigger className="text-sm font-medium">
+                  <AccordionTrigger className="text-base font-semibold text-primary">
                     Additional Amenities & Services
                   </AccordionTrigger>
                   <AccordionContent>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
                       {additionalAmenities.map((amenity, index) => (
-                        <div key={index} className="flex items-center gap-2 text-sm">
-                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                          <span>{amenity}</span>
+                        <div key={index} className="flex items-center gap-3 text-sm">
+                          <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
+                          <span className="leading-relaxed">{amenity}</span>
                         </div>
                       ))}
                     </div>
@@ -426,22 +424,23 @@ export function SuiteBookingCard({
             </div>
           </TabsContent>
 
-          <TabsContent value="gallery" className="space-y-4">
+          <TabsContent value="gallery" className="space-y-6">
             {isLoadingImages ? (
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {Array.from({ length: 6 }, (_, i) => (
                   <div key={i} className="aspect-square bg-muted rounded-lg animate-pulse" />
                 ))}
               </div>
             ) : availableImages.length > 0 ? (
               <>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                   {availableImages.slice(0, 6).map((image, i) => (
-                    <div key={i} className="aspect-square bg-muted rounded-lg overflow-hidden">
+                    <div key={i} className="aspect-square bg-muted rounded-lg overflow-hidden group cursor-pointer">
                       <img
                         src={image.src}
                         alt={image.alt}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
                           target.src = `https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=300&h=300&fit=crop&crop=center`;
@@ -454,7 +453,7 @@ export function SuiteBookingCard({
                 {availableImages.length > 6 && (
                   <Button 
                     variant="outline" 
-                    className="w-full"
+                    className="w-full min-h-[48px] touch-target"
                     onClick={handleViewFullGallery}
                   >
                     View Full Gallery ({availableImages.length} images)
@@ -468,37 +467,53 @@ export function SuiteBookingCard({
             )}
           </TabsContent>
 
-          <TabsContent value="reviews" className="space-y-4">
+          <TabsContent value="reviews" className="space-y-6">
             {testimonials && testimonials.length > 0 ? (
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {testimonials.map((item, index) => (
-                  <TestimonialCard
-                    key={index}
-                    quote={item.quote}
-                    author={item.author}
-                    year={item.year}
-                    rating={item.rating ?? 5}
-                  />
+              <div className="space-y-6">
+                {testimonials.slice(0, 3).map((testimonial, index) => (
+                  <div key={index} className="bg-muted/30 rounded-lg p-4 border-l-4 border-primary/40">
+                    <div className="flex items-center gap-1 mb-3">
+                      {Array.from({ length: testimonial.rating || 5 }, (_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <blockquote className="text-fluid-base text-muted-foreground italic mb-3 leading-relaxed">
+                      "{testimonial.quote}"
+                    </blockquote>
+                    <cite className="text-sm text-muted-foreground font-semibold">
+                      — {testimonial.author}
+                      {testimonial.year && (
+                        <span className="text-muted-foreground/70 font-normal"> ({testimonial.year})</span>
+                      )}
+                    </cite>
+                  </div>
                 ))}
+                
+                {testimonials.length > 3 && (
+                  <div className="text-center pt-4 p-4 bg-primary/5 rounded-lg">
+                    <span className="text-sm text-primary font-medium">
+                      + {testimonials.length - 3} more five-star reviews
+                    </span>
+                  </div>
+                )}
               </div>
             ) : testimonial ? (
-              <TestimonialCard {...testimonial} />
-            ) : (
-              <div className="text-center py-8">
-                <div className="mb-2">
-                  <span className="text-sm text-muted-foreground">Guest Reviews</span>
+              <div className="bg-muted/30 rounded-lg p-4 border-l-4 border-primary/40">
+                <div className="flex items-center gap-1 mb-3">
+                  {Array.from({ length: testimonial.rating }, (_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                  ))}
                 </div>
-                <p className="text-muted-foreground text-sm">
-                  Guests love the {title.toLowerCase()} for its comfort and amenities.
-                </p>
+                <blockquote className="text-fluid-base text-muted-foreground italic mb-3 leading-relaxed">
+                  "{testimonial.quote}"
+                </blockquote>
+                <cite className="text-sm text-muted-foreground font-semibold">
+                  — {testimonial.author}
+                </cite>
               </div>
+            ) : (
+              <p className="text-fluid-base text-muted-foreground text-center p-8">No reviews available yet.</p>
             )}
-            
-            <div className="bg-muted/30 rounded-lg p-4 text-center">
-              <p className="text-sm text-muted-foreground mb-2">
-                Join our satisfied guests
-              </p>
-            </div>
           </TabsContent>
         </Tabs>
       </CardContent>

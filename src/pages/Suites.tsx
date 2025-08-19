@@ -404,8 +404,6 @@ export default function Suites() {
           activeFilter={activeFilter}
         />
 
-        {/* Review Showcase Section - Removed yellow social proof badge */}
-
         {/* Quick Booking Widget */}
         <section className="section-spacing bg-muted/30">
           <div className="responsive-container">
@@ -416,7 +414,7 @@ export default function Suites() {
         </section>
 
         {/* Enhanced Suite Filter */}
-        <section className="py-4 sm:py-6" id="suites-section">
+        <section className="section-spacing" id="suites-section">
           <div className="responsive-container">
             <SuiteFilter
               activeFilter={activeFilter}
@@ -427,12 +425,14 @@ export default function Suites() {
 
         {/* Luxury Suites Section */}
         {filteredLuxurySuites.length > 0 && (
-          <section className="section-spacing" id="suites-section">
+          <section className="section-spacing">
             <div className="responsive-container">
-              <div className="text-center mb-8 sm:mb-10 lg:mb-12">
-                <Badge variant="secondary" className="mb-4 text-xs sm:text-sm">Modern Luxury</Badge>
-                <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl text-primary mb-4 font-playfair">Luxury Guest Suites</h2>
-                <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-2">
+              <div className="text-center mb-12">
+                <Badge variant="secondary" className="mb-6 text-sm px-4 py-2">
+                  Modern Luxury
+                </Badge>
+                <h2 className="text-primary mb-6">Luxury Guest Suites</h2>
+                <p className="text-fluid-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
                   Sophisticated design meets modern comfort in our guest house. Perfect for couples, families, 
                   and discerning travelers seeking premium highland accommodation.
                 </p>
@@ -458,11 +458,13 @@ export default function Suites() {
         {/* Cottage Suites Section */}
         {filteredCottageSuites.length > 0 && (
           <section className="section-spacing">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-8">
-                <Badge className="mb-4 bg-secondary text-secondary-foreground">Cottage Charm</Badge>
-                <h2 className="text-primary mb-4">Heritage Cottage Suites</h2>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <div className="responsive-container">
+              <div className="text-center mb-12">
+                <Badge variant="secondary" className="mb-6 text-sm px-4 py-2 bg-secondary text-secondary-foreground">
+                  Cottage Charm
+                </Badge>
+                <h2 className="text-primary mb-6">Heritage Cottage Suites</h2>
+                <p className="text-fluid-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
                   Authentic cottage character with warm fireplaces and cozy atmospheres. 
                   Perfect for romantic getaways and families seeking genuine highland charm.
                 </p>
@@ -488,14 +490,14 @@ export default function Suites() {
         {/* Self Catering Houses Section */}
         {showSelfCateringHouse && (
           <section className="section-spacing bg-muted/30">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-8">
-                <Badge variant="outline" className="mb-4 border-primary text-primary">
+            <div className="responsive-container">
+              <div className="text-center mb-12">
+                <Badge variant="outline" className="mb-6 text-sm px-4 py-2 border-primary text-primary">
                   <Users className="h-4 w-4 mr-2" />
                   Groups & Events
                 </Badge>
-                <h2 className="text-primary mb-4">Self-Catering Houses</h2>
-                <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+                <h2 className="text-primary mb-6">Self-Catering Houses</h2>
+                <p className="text-fluid-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
                   Two beautifully appointed houses perfect for groups, family reunions, or corporate retreats. 
                   Book the Luxury Guest House (up to 10 adults & 2 children under 12) or Heritage Cottage House (up to 6 adults) separately, 
                   or combine both adjoining houses for larger groups up to 18+ guests. Mattresses can also be added for little children. Each house offers fully equipped 
@@ -526,27 +528,31 @@ export default function Suites() {
 
         {/* Social Proof Section */}
         <section className="section-spacing">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-primary mb-4">What Our Guests Say</h2>
+          <div className="responsive-container">
+            <div className="text-center mb-12">
+              <h2 className="text-primary mb-6">What Our Guests Say</h2>
               <div className="mb-6">
-                <span className="text-muted-foreground">200+ reviews</span>
+                <Badge variant="outline" className="text-sm px-4 py-2">
+                  200+ Five Star Reviews
+                </Badge>
               </div>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              {testimonials.map((testimonial, index) => <TestimonialCard key={index} {...testimonial} />)}
+            <div className="card-grid max-w-6xl mx-auto">
+              {testimonials.map((testimonial, index) => (
+                <TestimonialCard key={index} {...testimonial} className="animate-fade-in" />
+              ))}
             </div>
           </div>
         </section>
 
         {/* Enhanced Booking Section */}
         <section className="section-spacing">
-          <div className="container mx-auto px-4">
+          <div className="responsive-container">
             <div className="max-w-2xl mx-auto">
-              <div className="text-center mb-6">
-                <h2 className="text-primary mb-4">Ready to Book Your Suite?</h2>
-                <p className="text-lg text-muted-foreground">
+              <div className="text-center mb-8">
+                <h2 className="text-primary mb-6">Ready to Book Your Suite?</h2>
+                <p className="text-fluid-lg text-muted-foreground">
                   Secure your luxury highland accommodation with our streamlined booking process
                 </p>
               </div>
@@ -558,28 +564,30 @@ export default function Suites() {
 
         {/* Final Call to Action */}
         <section className="section-spacing bg-gradient-to-br from-primary/10 to-accent/5">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-primary mb-4">Ready for Your Dullstroom Highland Escape?</h2>
-            <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto leading-relaxed">Book direct for guaranteed best rates, and a complimentary welcome drink. Your luxury highland experience awaits in the heart of South Africa's trout fishing capital.</p>
+          <div className="responsive-container text-center">
+            <h2 className="text-primary mb-6">Ready for Your Dullstroom Highland Escape?</h2>
+            <p className="text-fluid-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+              Book direct for guaranteed best rates, and a complimentary welcome drink. Your luxury highland experience awaits in the heart of South Africa's trout fishing capital.
+            </p>
             
-              <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mb-8 max-w-md mx-auto">
-                <div className="flex items-center justify-center gap-2 text-primary font-semibold mb-2">
-                  <Clock className="h-4 w-4" />
-                  <span>Highland Luxury Awaits</span>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  Experience the best of Dullstroom hospitality
-                </p>
+            <div className="bg-primary/10 border border-primary/20 rounded-lg p-6 mb-10 max-w-md mx-auto">
+              <div className="flex items-center justify-center gap-2 text-primary font-semibold mb-2">
+                <Clock className="h-5 w-5" />
+                <span>Highland Luxury Awaits</span>
               </div>
+              <p className="text-sm text-muted-foreground">
+                Experience the best of Dullstroom hospitality
+              </p>
+            </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <Button size="lg" className="min-h-[48px] flex-1" asChild>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
+              <Button size="lg" className="min-h-[56px] flex-1 text-base font-semibold touch-target" asChild>
                 <a href="https://book.nightsbridge.com/00000" target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="h-4 w-4 mr-2" />
+                  <ExternalLink className="h-5 w-5 mr-2" />
                   Book Your Perfect Suite
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="min-h-[48px] flex-1" asChild>
+              <Button variant="outline" size="lg" className="min-h-[56px] flex-1 text-base font-semibold touch-target" asChild>
                 <Link to="/contact">Ask Questions</Link>
               </Button>
             </div>
