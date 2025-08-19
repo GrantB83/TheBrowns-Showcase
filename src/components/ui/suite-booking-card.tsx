@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { AmenityDisclosure, DescriptionDisclosure } from "@/components/ui/progressive-disclosure";
 import { UrgencyIndicator } from "@/components/ui/social-proof";
@@ -258,32 +259,31 @@ export function SuiteBookingCard({
           )}
         </div>
         
-        <div className="flex flex-wrap items-center gap-2 mb-4">
-          <Badge variant="default" className="flex items-center gap-1.5">
-            <Users className="h-3 w-3" />
-            {capacity}
-          </Badge>
-          <Badge variant="secondary" className="flex items-center gap-1.5">
-            <Bed className="h-3 w-3" />
-            {bedConfig}
-          </Badge>
-        </div>
-        
-        {offerText && (
-          <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-accent/10 border border-primary/20 rounded-lg p-3 mt-4 shadow-sm">
-            <div className="flex items-center gap-3">
-              <div className="flex-shrink-0">
-                <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Gift className="h-4 w-4 text-primary" />
-                </div>
-              </div>
-              <div className="flex-1">
-                <div className="text-xs font-semibold text-primary mb-1">Book Direct Benefits</div>
-                <div className="text-xs text-muted-foreground leading-relaxed">{offerText}</div>
-              </div>
-            </div>
+        <TooltipProvider>
+          <div className="flex flex-wrap items-center gap-2">
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Badge variant="default" className="p-1.5">
+                  <Users className="h-4 w-4" />
+                </Badge>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Capacity: {capacity}</p>
+              </TooltipContent>
+            </Tooltip>
+            
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Badge variant="secondary" className="p-1.5">
+                  <Bed className="h-4 w-4" />
+                </Badge>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Beds: {bedConfig}</p>
+              </TooltipContent>
+            </Tooltip>
           </div>
-        )}
+        </TooltipProvider>
       </CardHeader>
 
       <CardContent>
