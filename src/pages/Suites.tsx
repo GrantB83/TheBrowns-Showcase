@@ -7,7 +7,6 @@ import { SEO } from "@/components/ui/seo";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { BookingWidget } from "@/components/ui/booking-widget";
 import { SuiteFilter } from "@/components/ui/suite-filter";
-import { TwoHouseSelectionHero } from "@/components/ui/two-house-selection-hero";
 import { Link } from "react-router-dom";
 import { Clock, Gift, Users, ExternalLink } from "lucide-react";
 const luxurySuites = [{
@@ -381,29 +380,30 @@ const testimonials = [{
   year: "2019"
 }];
 export default function Suites() {
-  const [activeFilter, setActiveFilter] = useState<'luxury' | 'cottage' | 'self-catering'>('luxury');
+  const [activeFilter, setActiveFilter] = useState<'suite-only' | 'self-catering'>('suite-only');
+  const [showLuxurySuites, setShowLuxurySuites] = useState(true);
+  const [showCottageSuites, setShowCottageSuites] = useState(true);
 
   // Filter logic for individual suites
-  const filteredLuxurySuites = activeFilter === 'luxury' ? luxurySuites : [];
-  const filteredCottageSuites = activeFilter === 'cottage' ? cottageSuites : [];
+  const filteredLuxurySuites = (activeFilter === 'suite-only' && showLuxurySuites) ? luxurySuites : [];
+  const filteredCottageSuites = (activeFilter === 'suite-only' && showCottageSuites) ? cottageSuites : [];
   
   // Filter logic for self-catering houses
   const showSelfCateringHouse = activeFilter === 'self-catering';
 
-  const handleFilterChange = (filter: 'luxury' | 'cottage' | 'self-catering') => {
+  const handleFilterChange = (filter: 'suite-only' | 'self-catering') => {
     setActiveFilter(filter);
+  };
+
+  const handleSuiteTypeChange = (luxury: boolean, cottage: boolean) => {
+    setShowLuxurySuites(luxury);
+    setShowCottageSuites(cottage);
   };
 
   return <>
       <SEO title="Discover Tailored Dullstroom Luxury Suites 2025 - The Browns" description="Luxury Dullstroom accommodation with Master Suite featuring King XL bed, Self Catering House for groups up to 16. Direct booking benefits included." keywords="Dullstroom luxury guesthouse 2025, Panorama Route accommodation, self catering Dullstroom, family suites Mpumalanga, luxury cottage accommodation" />
       
       <div className="min-h-screen">
-        {/* Two House Selection Hero */}
-        <TwoHouseSelectionHero 
-          onFilterChange={handleFilterChange}
-          activeFilter={activeFilter}
-        />
-
         {/* Quick Booking Widget */}
         <section className="section-spacing bg-muted/30">
           <div className="responsive-container">
@@ -419,6 +419,9 @@ export default function Suites() {
             <SuiteFilter
               activeFilter={activeFilter}
               onFilterChange={handleFilterChange}
+              showLuxurySuites={showLuxurySuites}
+              showCottageSuites={showCottageSuites}
+              onSuiteTypeChange={handleSuiteTypeChange}
             />
           </div>
         </section>
@@ -483,7 +486,7 @@ export default function Suites() {
           </section>
         )}
 
-        {(filteredCottageSuites.length > 0 && showSelfCateringHouse && activeFilter !== 'self-catering') && (
+        {(filteredCottageSuites.length > 0 && showSelfCateringHouse) && (
           <Separator className="my-6" />
         )}
 
@@ -527,22 +530,6 @@ export default function Suites() {
         )}
 
 
-        {/* Enhanced Booking Section */}
-        <section className="section-spacing">
-          <div className="responsive-container">
-            <div className="max-w-2xl mx-auto">
-              <div className="text-center mb-8">
-                <h2 className="text-primary mb-6">Ready to Book Your Suite?</h2>
-                <p className="text-fluid-lg text-muted-foreground">
-                  Secure your luxury highland accommodation with our streamlined booking process
-                </p>
-              </div>
-              
-              <BookingWidget showRecommendations={false} />
-            </div>
-          </div>
-        </section>
-
         {/* Final Call to Action */}
         <section className="section-spacing bg-gradient-to-br from-primary/10 to-accent/5">
           <div className="responsive-container text-center">
@@ -550,16 +537,6 @@ export default function Suites() {
             <p className="text-fluid-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
               Book direct for guaranteed best rates, and a complimentary welcome drink. Your luxury highland experience awaits in the heart of South Africa's trout fishing capital.
             </p>
-            
-            <div className="bg-primary/10 border border-primary/20 rounded-lg p-6 mb-10 max-w-md mx-auto">
-              <div className="flex items-center justify-center gap-2 text-primary font-semibold mb-2">
-                <Clock className="h-5 w-5" />
-                <span>Highland Luxury Awaits</span>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Experience the best of Dullstroom hospitality
-              </p>
-            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
               <Button size="lg" className="min-h-[56px] flex-1 text-base font-semibold touch-target" asChild>
