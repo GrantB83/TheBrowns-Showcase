@@ -247,41 +247,26 @@ export function SuiteBookingCard({
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
         </div>
       )}
-      <CardHeader className="pb-4">
-        <div className="flex flex-col sm:flex-row justify-between items-start gap-6">
-          <div className="flex-1">
-            <div className="flex flex-wrap items-center gap-3 mb-3">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary">{title}</h3>
-              {urgencyMessage && (
-                <Badge className="bg-green-500 text-white text-xs">
-                  <Lightbulb className="h-3 w-3 mr-1" />
-                  {urgencyMessage}
-                </Badge>
-              )}
-            </div>
-            
-            <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground mb-4">
-              <div className="flex items-center gap-2">
-                <Users className="h-4 w-4" />
-                <span>{capacity}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Bed className="h-4 w-4" />
-                <span>{bedConfig}</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="flex flex-col items-end gap-2 w-full sm:w-auto">
-            <Button 
-              size="lg" 
-              className="min-h-[56px] w-full sm:w-auto text-base font-semibold touch-target px-8"
-              onClick={handleBookNow}
-            >
-              <ExternalLink className="h-5 w-5 mr-2" />
-              Book Direct Now
-            </Button>
-          </div>
+      <CardHeader className="pb-2">
+        <div className="flex flex-wrap items-center gap-3 mb-3">
+          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary">{title}</h3>
+          {urgencyMessage && (
+            <Badge className="bg-green-500 text-white text-xs">
+              <Lightbulb className="h-3 w-3 mr-1" />
+              {urgencyMessage}
+            </Badge>
+          )}
+        </div>
+        
+        <div className="flex flex-wrap items-center gap-2 mb-4">
+          <Badge variant="default" className="flex items-center gap-1.5">
+            <Users className="h-3 w-3" />
+            {capacity}
+          </Badge>
+          <Badge variant="secondary" className="flex items-center gap-1.5">
+            <Bed className="h-3 w-3" />
+            {bedConfig}
+          </Badge>
         </div>
         
         {offerText && (
@@ -487,53 +472,65 @@ export function SuiteBookingCard({
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-
-        {/* Full Gallery Modal */}
-        {galleryOpen && (
-          <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
-            <div className="relative max-w-4xl w-full">
-              <button
-                onClick={() => setGalleryOpen(false)}
-                className="absolute top-4 right-4 z-10 text-white bg-black/50 rounded-full p-2 hover:bg-black/70 transition-colors"
-              >
-                ×
-              </button>
-              
-              {availableImages.length > 0 && (
-                <>
-                  <img
-                    src={availableImages[currentImageIndex].src}
-                    alt={availableImages[currentImageIndex].alt}
-                    className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
-                  />
-                  
-                  <div className="flex justify-between items-center mt-4">
-                    <button
-                      onClick={prevImage}
-                      className="text-white bg-black/50 rounded-full px-4 py-2 hover:bg-black/70 transition-colors"
-                      disabled={availableImages.length <= 1}
-                    >
-                      Previous
-                    </button>
-                    
-                    <span className="text-white">
-                      {currentImageIndex + 1} of {availableImages.length}
-                    </span>
-                    
-                    <button
-                      onClick={nextImage}
-                      className="text-white bg-black/50 rounded-full px-4 py-2 hover:bg-black/70 transition-colors"
-                      disabled={availableImages.length <= 1}
-                    >
-                      Next
-                    </button>
-                  </div>
-                </>
-              )}
-            </div>
-          </div>
-        )}
       </CardContent>
+      
+      {/* Bottom Booking Button */}
+      <div className="px-6 pb-6 pt-2 border-t bg-muted/20">
+        <Button 
+          size="lg" 
+          className="w-full min-h-[56px] text-base font-semibold touch-target"
+          onClick={handleBookNow}
+        >
+          <ExternalLink className="h-5 w-5 mr-2" />
+          Book This Suite
+        </Button>
+      </div>
+
+      {/* Full Gallery Modal */}
+      {galleryOpen && (
+        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
+          <div className="relative max-w-4xl w-full">
+            <button
+              onClick={() => setGalleryOpen(false)}
+              className="absolute top-4 right-4 z-10 text-white bg-black/50 rounded-full p-2 hover:bg-black/70 transition-colors"
+            >
+              ×
+            </button>
+            
+            {availableImages.length > 0 && (
+              <>
+                <img
+                  src={availableImages[currentImageIndex].src}
+                  alt={availableImages[currentImageIndex].alt}
+                  className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+                />
+                
+                <div className="flex justify-between items-center mt-4">
+                  <button
+                    onClick={prevImage}
+                    className="text-white bg-black/50 rounded-full px-4 py-2 hover:bg-black/70 transition-colors"
+                    disabled={availableImages.length <= 1}
+                  >
+                    Previous
+                  </button>
+                  
+                  <span className="text-white">
+                    {currentImageIndex + 1} of {availableImages.length}
+                  </span>
+                  
+                  <button
+                    onClick={nextImage}
+                    className="text-white bg-black/50 rounded-full px-4 py-2 hover:bg-black/70 transition-colors"
+                    disabled={availableImages.length <= 1}
+                  >
+                    Next
+                  </button>
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+      )}
     </Card>
   );
 }
