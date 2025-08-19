@@ -65,7 +65,7 @@ export function BookingGallery({
   images, 
   categories = [], 
   className,
-  showTestimonials = true 
+  showTestimonials = false 
 }: BookingGalleryProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [lightboxOpen, setLightboxOpen] = useState(false);

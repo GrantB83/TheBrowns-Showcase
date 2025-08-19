@@ -526,25 +526,6 @@ export default function Suites() {
           </section>
         )}
 
-        {/* Social Proof Section */}
-        <section className="section-spacing">
-          <div className="responsive-container">
-            <div className="text-center mb-12">
-              <h2 className="text-primary mb-6">What Our Guests Say</h2>
-              <div className="mb-6">
-                <Badge variant="outline" className="text-sm px-4 py-2">
-                  200+ Five Star Reviews
-                </Badge>
-              </div>
-            </div>
-            
-            <div className="card-grid max-w-6xl mx-auto">
-              {testimonials.map((testimonial, index) => (
-                <TestimonialCard key={index} {...testimonial} className="animate-fade-in" />
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Enhanced Booking Section */}
         <section className="section-spacing">

@@ -204,7 +204,7 @@ export function BookingWidget({
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Calendar className="h-5 w-5 text-primary" />
-            Book Direct for Best Rates
+            <span className="text-sm sm:text-base lg:text-lg">Book Direct for Best Rates</span>
           </CardTitle>
           <div className="bg-primary/10 rounded-lg p-3">
             <div className="flex items-center gap-2 text-primary font-medium text-sm">

@@ -183,37 +183,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials - Moved from lower down */}
-      <section 
-        ref={testimonialsRef}
-        className={`py-4 sm:py-6 md:py-8 lg:py-10 bg-primary/5 border-b transition-all duration-1000 ${
-          testimonialsVisible ? 'scroll-animate' : 'opacity-0'
-        }`}
-      >
-        <div className="responsive-container">
-          <div className="text-center mb-4 sm:mb-6 md:mb-8">
-            <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl text-primary mb-2 sm:mb-3 font-playfair">Guest Testimonials</h2>
-            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-2">
-              See what our guests say about their luxury stay at The Browns.
-            </p>
-          </div>
-          
-          <div className="card-grid max-w-6xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <div 
-                key={index}
-                style={{ animationDelay: `${index * 150}ms` }}
-                className="scroll-animate h-full"
-              >
-                <TestimonialCard {...testimonial} className="h-full" />
-              </div>
-            ))}
-          </div>
-          
-          {/* Review Showcase - Moved from bottom */}
-          <ReviewShowcase compact={true} className="py-4 sm:py-6 mt-8" />
-        </div>
-      </section>
 
       {/* Featured Booking Section */}
       <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-r from-primary/10 via-background to-accent/10">
