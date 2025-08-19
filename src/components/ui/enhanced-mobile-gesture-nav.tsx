@@ -255,7 +255,7 @@ export function MobileQuickActions({
                 variant="outline" 
                 size="sm" 
                 onClick={onWhatsApp}
-                className="min-h-[44px] px-3"
+                className="min-h-[44px] px-3 border-green-600 text-green-600 hover:bg-green-600 hover:text-white"
               >
                 <MessageCircle className="h-4 w-4" />
               </Button>

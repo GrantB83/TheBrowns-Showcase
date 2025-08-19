@@ -356,7 +356,7 @@ export function DirectBookingBenefitsPopup({
 
           <div className="space-y-2 pt-2">
             <Button 
-              className="w-full bg-green-600 hover:bg-green-700 text-white"
+              className="w-full bg-green-600 hover:bg-green-700 text-white md:block hidden"
               onClick={handleWhatsAppContact}
             >
               <MessageCircle className="h-4 w-4 mr-2" />
