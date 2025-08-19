@@ -260,11 +260,12 @@ export function SuiteBookingCard({
         </div>
         
         <TooltipProvider>
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2 mb-4">
             <Tooltip>
               <TooltipTrigger asChild>
-                <Badge variant="default" className="p-1.5">
+                <Badge variant="default" className="flex items-center gap-1 px-2 py-1">
                   <Users className="h-4 w-4" />
+                  <span className="text-xs font-medium">{capacity.replace('Up to ', '').replace(' guests', '')}</span>
                 </Badge>
               </TooltipTrigger>
               <TooltipContent>
@@ -274,8 +275,11 @@ export function SuiteBookingCard({
             
             <Tooltip>
               <TooltipTrigger asChild>
-                <Badge variant="secondary" className="p-1.5">
+                <Badge variant="secondary" className="flex items-center gap-1 px-2 py-1">
                   <Bed className="h-4 w-4" />
+                  <span className="text-xs font-medium">
+                    {bedConfig.replace(/^\d+\s*x?\s*/, '').replace(' bed', '').replace(' beds', '')}
+                  </span>
                 </Badge>
               </TooltipTrigger>
               <TooltipContent>
