@@ -163,23 +163,23 @@ export function UnifiedBookingFlow({
   return (
     <div className={cn("max-w-2xl mx-auto", className)}>
       <Card className="border-primary/20">
-        <CardHeader>
-          <div className="flex items-center justify-between mb-4">
-            <CardTitle className="text-xl">Book Your Stay</CardTitle>
+        <CardHeader className="px-3 sm:px-6 py-3 sm:py-6">
+          <div className="flex items-center justify-between mb-2 sm:mb-4">
+            <CardTitle className="text-lg sm:text-xl">Book Your Stay</CardTitle>
             {onClose && (
-              <Button variant="ghost" size="sm" onClick={onClose}>
+              <Button variant="ghost" size="sm" onClick={onClose} className="h-6 w-6 sm:h-8 sm:w-8 p-0">
                 ×
               </Button>
             )}
           </div>
           
           {/* Progress Indicator */}
-          <div className="space-y-2">
-            <div className="flex items-center justify-between text-sm">
+          <div className="space-y-1 sm:space-y-2">
+            <div className="flex items-center justify-between text-xs sm:text-sm">
               <span>Step {step} of {totalSteps}</span>
               <span className="text-muted-foreground">{getStepTitle(step)}</span>
             </div>
-            <Progress value={progress} className="h-2" />
+            <Progress value={progress} className="h-1.5 sm:h-2" />
             <div className="flex items-center justify-between text-xs text-muted-foreground">
               <span className={step >= 1 ? "text-primary" : ""}>Dates</span>
               <span className={step >= 2 ? "text-primary" : ""}>Suite</span>
@@ -188,28 +188,28 @@ export function UnifiedBookingFlow({
           </div>
         </CardHeader>
 
-        <CardContent className="space-y-6">
+        <CardContent className="space-y-3 sm:space-y-6 px-3 sm:px-6">
           {/* Step 1: Date & Guest Selection */}
           {step === 1 && (
-            <div className="space-y-6">
+            <div className="space-y-3 sm:space-y-6">
               <div>
-                <h3 className="text-lg font-semibold mb-4">When would you like to stay?</h3>
-                <div className="grid gap-4">
+                <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-4">When would you like to stay?</h3>
+                <div className="grid gap-2 sm:gap-4">
                   <Calendar
                     mode="range"
                     selected={{ from: checkIn, to: checkOut }}
                     onSelect={handleDateSelection}
                     disabled={(date) => date < new Date()}
-                    numberOfMonths={2}
-                    className="rounded-md border"
+                    numberOfMonths={1}
+                    className="rounded-md border text-xs sm:text-sm"
                   />
                 </div>
               </div>
 
               <div>
-                <h4 className="font-semibold mb-2">Number of Guests</h4>
+                <h4 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Number of Guests</h4>
                 <Select value={guests} onValueChange={setGuests}>
-                  <SelectTrigger className="w-full">
+                  <SelectTrigger className="w-full h-8 sm:h-10 text-sm">
                     <SelectValue placeholder="Select guests" />
                   </SelectTrigger>
                   <SelectContent>
@@ -223,12 +223,12 @@ export function UnifiedBookingFlow({
               </div>
 
               {checkIn && checkOut && (
-                <div className="bg-primary/5 rounded-lg p-4">
-                  <div className="flex items-center gap-2 text-primary font-medium mb-2">
-                    <CalendarIcon className="h-4 w-4" />
-                    Your Stay Details
+                <div className="bg-primary/5 rounded-lg p-2 sm:p-4">
+                  <div className="flex items-center gap-2 text-primary font-medium mb-1 sm:mb-2">
+                    <CalendarIcon className="h-3 w-3 sm:h-4 sm:w-4" />
+                    <span className="text-xs sm:text-sm">Your Stay Details</span>
                   </div>
-                  <div className="text-sm space-y-1">
+                  <div className="text-xs sm:text-sm space-y-0.5 sm:space-y-1">
                     <p>Check-in: {checkIn.toLocaleDateString()}</p>
                     <p>Check-out: {checkOut.toLocaleDateString()}</p>
                     <p>Duration: {Math.ceil((checkOut.getTime() - checkIn.getTime()) / (1000 * 60 * 60 * 24))} nights</p>
@@ -241,37 +241,37 @@ export function UnifiedBookingFlow({
 
           {/* Step 2: Suite Selection */}
           {step === 2 && (
-            <div className="space-y-6">
-              <h3 className="text-lg font-semibold">Choose Your Perfect Suite</h3>
+            <div className="space-y-3 sm:space-y-6">
+              <h3 className="text-base sm:text-lg font-semibold">Choose Your Perfect Suite</h3>
               
-              <div className="space-y-4">
+              <div className="space-y-2 sm:space-y-4">
                 {filteredSuites.map((suite) => (
                   <div 
                     key={suite.id}
                     className={cn(
-                      "border rounded-lg p-4 cursor-pointer transition-all",
+                      "border rounded-lg p-2 sm:p-4 cursor-pointer transition-all",
                       selectedSuite === suite.id 
                         ? "border-primary bg-primary/5" 
                         : "border-muted hover:border-primary/50"
                     )}
                     onClick={() => setSelectedSuite(suite.id)}
                   >
-                    <div className="flex justify-between items-start mb-3">
-                      <div>
-                        <div className="flex items-center gap-2 mb-1">
-                          <h4 className="font-semibold">{suite.name}</h4>
+                    <div className="flex justify-between items-start mb-2 sm:mb-3">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-1 sm:gap-2 mb-1">
+                          <h4 className="font-semibold text-sm sm:text-base">{suite.name}</h4>
                           {suite.urgencyMessage && (
                             <Badge variant="destructive" className="text-xs">
                               {suite.urgencyMessage}
                             </Badge>
                           )}
                         </div>
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                          <Users className="h-4 w-4" />
+                        <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm text-muted-foreground mb-1 sm:mb-2">
+                          <Users className="h-3 w-3 sm:h-4 sm:w-4" />
                           <span>{suite.capacity}</span>
                         </div>
-                        <div className="flex flex-wrap gap-1 mb-3">
-                          {suite.features.slice(0, 3).map((feature, idx) => (
+                        <div className="flex flex-wrap gap-1 mb-2 sm:mb-3">
+                          {suite.features.slice(0, 2).map((feature, idx) => (
                             <Badge key={idx} variant="outline" className="text-xs">
                               {feature}
                             </Badge>
@@ -279,7 +279,7 @@ export function UnifiedBookingFlow({
                         </div>
                       </div>
                       <div className="text-right">
-                        <div className="text-2xl font-bold text-primary">
+                        <div className="text-lg sm:text-2xl font-bold text-primary">
                           R{suite.price.toLocaleString()}
                         </div>
                         <div className="text-xs text-muted-foreground">per night</div>
@@ -287,7 +287,7 @@ export function UnifiedBookingFlow({
                     </div>
                     
                     {selectedSuite === suite.id && (
-                      <div className="bg-green-50 border border-green-200 rounded p-2 text-green-700 text-sm">
+                      <div className="bg-green-50 border border-green-200 rounded p-1.5 sm:p-2 text-green-700 text-xs sm:text-sm">
                         ✓ Selected - Perfect for your group size
                       </div>
                     )}
@@ -299,13 +299,13 @@ export function UnifiedBookingFlow({
 
           {/* Step 3: Booking Confirmation */}
           {step === 3 && selectedSuiteData && (
-            <div className="space-y-6">
-              <h3 className="text-lg font-semibold">Complete Your Booking</h3>
+            <div className="space-y-3 sm:space-y-6">
+              <h3 className="text-base sm:text-lg font-semibold">Complete Your Booking</h3>
               
               {/* Booking Summary */}
-              <div className="bg-primary/5 rounded-lg p-4 space-y-3">
-                <h4 className="font-semibold text-primary">Booking Summary</h4>
-                <div className="space-y-2 text-sm">
+              <div className="bg-primary/5 rounded-lg p-2 sm:p-4 space-y-2 sm:space-y-3">
+                <h4 className="font-semibold text-primary text-sm sm:text-base">Booking Summary</h4>
+                <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
                   <div className="flex justify-between">
                     <span>Suite:</span>
                     <span className="font-medium">{selectedSuiteData.name}</span>
@@ -322,7 +322,7 @@ export function UnifiedBookingFlow({
                     <span>Guests:</span>
                     <span>{guests}</span>
                   </div>
-                  <div className="flex justify-between border-t pt-2 font-semibold">
+                  <div className="flex justify-between border-t pt-1 sm:pt-2 font-semibold">
                     <span>Total per night:</span>
                     <span className="text-primary">R{selectedSuiteData.price.toLocaleString()}</span>
                   </div>
@@ -330,12 +330,12 @@ export function UnifiedBookingFlow({
               </div>
 
               {/* Direct Booking Benefits */}
-              <div className="border rounded-lg p-4">
-                <h4 className="font-semibold mb-3 flex items-center gap-2">
-                  <Star className="h-4 w-4 text-yellow-500" />
+              <div className="border rounded-lg p-2 sm:p-4">
+                <h4 className="font-semibold mb-2 sm:mb-3 flex items-center gap-2 text-sm sm:text-base">
+                  <Star className="h-3 w-3 sm:h-4 sm:w-4 text-yellow-500" />
                   Direct Booking Benefits
                 </h4>
-                <div className="grid grid-cols-2 gap-2 text-sm">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-2 text-xs sm:text-sm">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-3 w-3 text-green-600" />
                     <span>Best Rate Guarantee</span>
@@ -356,21 +356,21 @@ export function UnifiedBookingFlow({
               </div>
 
               {/* Booking Options */}
-              <div className="space-y-3">
+              <div className="space-y-2 sm:space-y-3">
                 <Button 
-                  size="lg" 
-                  className="w-full" 
+                  size="sm" 
+                  className="w-full h-9 sm:h-11 text-sm sm:text-base" 
                   onClick={handleDirectBooking}
                   disabled={isLoading}
                 >
                   {isLoading ? (
                     <>
-                      <Clock className="h-4 w-4 mr-2 animate-spin" />
+                      <Clock className="h-3 w-3 sm:h-4 sm:w-4 mr-2 animate-spin" />
                       Opening Booking System...
                     </>
                   ) : (
                     <>
-                      <ExternalLink className="h-4 w-4 mr-2" />
+                      <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
                       Complete Booking Now
                     </>
                   )}
@@ -378,51 +378,58 @@ export function UnifiedBookingFlow({
                 
                 <Button 
                   variant="outline" 
-                  size="lg" 
-                  className="w-full"
+                  size="sm" 
+                  className="w-full h-9 sm:h-11 text-sm sm:text-base"
                   onClick={handleWhatsAppBooking}
                 >
-                  <MessageCircle className="h-4 w-4 mr-2" />
+                  <MessageCircle className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
                   Book via WhatsApp
                 </Button>
               </div>
 
               {/* Trust Indicators */}
-              <div className="flex items-center justify-center gap-4 text-xs text-muted-foreground pt-2 border-t">
+              <div className="flex items-center justify-center gap-2 sm:gap-4 text-xs text-muted-foreground pt-1 sm:pt-2 border-t">
                 <div className="flex items-center gap-1">
                   <Shield className="h-3 w-3" />
-                  <span>SSL Secured</span>
+                  <span className="hidden sm:inline">SSL Secured</span>
+                  <span className="sm:hidden">SSL</span>
                 </div>
                 <div className="flex items-center gap-1">
                   <CheckCircle className="h-3 w-3" />
-                  <span>Instant Confirmation</span>
+                  <span className="hidden sm:inline">Instant Confirmation</span>
+                  <span className="sm:hidden">Instant</span>
                 </div>
                 <div className="flex items-center gap-1">
                   <Users className="h-3 w-3" />
-                  <span>Guest Reviews</span>
+                  <span className="hidden sm:inline">Guest Reviews</span>
+                  <span className="sm:hidden">Reviews</span>
                 </div>
               </div>
             </div>
           )}
 
           {/* Navigation Buttons */}
-          <div className="flex justify-between pt-4 border-t">
+          <div className="flex justify-between pt-2 sm:pt-4 border-t">
             <Button 
               variant="outline" 
+              size="sm"
               onClick={handlePrevStep}
               disabled={step === 1}
+              className="h-8 sm:h-10 text-xs sm:text-sm"
             >
-              <ArrowLeft className="h-4 w-4 mr-2" />
+              <ArrowLeft className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
               Previous
             </Button>
             
             {step < totalSteps ? (
               <Button 
+                size="sm"
                 onClick={handleNextStep}
                 disabled={!isStepValid(step)}
+                className="h-8 sm:h-10 text-xs sm:text-sm"
               >
                 Next
-                <ArrowRight className="h-4 w-4 ml-2" />
+                <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 ml-1 sm:ml-2" />
               </Button>
             ) : null}
           </div>

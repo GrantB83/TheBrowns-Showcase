@@ -119,11 +119,11 @@ export function EmbeddedBookingIframe({
       isFullscreen && "fixed inset-4 z-50 shadow-2xl",
       className
     )}>
-      <CardHeader className="pb-2">
+      <CardHeader className="pb-1 sm:pb-2 px-3 sm:px-6 py-2 sm:py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <CardTitle className="text-lg">Secure Booking</CardTitle>
-            <Badge className="bg-green-100 text-green-700 text-xs">
+          <div className="flex items-center gap-1 sm:gap-2">
+            <CardTitle className="text-sm sm:text-lg">Secure Booking</CardTitle>
+            <Badge className="bg-green-100 text-green-700 text-xs hidden sm:inline-flex">
               SSL Protected
             </Badge>
           </div>
@@ -132,16 +132,16 @@ export function EmbeddedBookingIframe({
               variant="ghost" 
               size="sm" 
               onClick={() => setIsFullscreen(!isFullscreen)}
-              className="h-8 w-8 p-0"
+              className="h-6 w-6 sm:h-8 sm:w-8 p-0"
             >
               {isFullscreen ? 
-                <Minimize2 className="h-4 w-4" /> : 
-                <Maximize2 className="h-4 w-4" />
+                <Minimize2 className="h-3 w-3 sm:h-4 sm:w-4" /> : 
+                <Maximize2 className="h-3 w-3 sm:h-4 sm:w-4" />
               }
             </Button>
             {onClose && (
-              <Button variant="ghost" size="sm" onClick={onClose} className="h-8 w-8 p-0">
-                <X className="h-4 w-4" />
+              <Button variant="ghost" size="sm" onClick={onClose} className="h-6 w-6 sm:h-8 sm:w-8 p-0">
+                <X className="h-3 w-3 sm:h-4 sm:w-4" />
               </Button>
             )}
           </div>
@@ -161,7 +161,7 @@ export function EmbeddedBookingIframe({
           src={buildBookingUrl()}
           className={cn(
             "w-full border-0 bg-white",
-            isFullscreen ? "h-[calc(100vh-8rem)]" : "h-[600px]"
+            isFullscreen ? "h-[calc(100vh-6rem)] sm:h-[calc(100vh-8rem)]" : "h-[400px] sm:h-[500px] md:h-[600px]"
           )}
           onLoad={handleIframeLoad}
           onError={handleIframeError}
