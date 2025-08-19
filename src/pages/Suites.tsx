@@ -8,7 +8,7 @@ import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { BookingWidget } from "@/components/ui/booking-widget";
 import { SuiteFilter } from "@/components/ui/suite-filter";
 import { Link } from "react-router-dom";
-import { Clock, Gift, Users, ExternalLink } from "lucide-react";
+import { Clock, Gift, Users, ExternalLink, Home } from "lucide-react";
 const luxurySuites = [{
   title: "Master Suite",
   capacity: "2 adults + 2 children under 12",
@@ -404,11 +404,29 @@ export default function Suites() {
       <SEO title="Discover Tailored Dullstroom Luxury Suites 2025 - The Browns" description="Luxury Dullstroom accommodation with Master Suite featuring King XL bed, Self Catering House for groups up to 16. Direct booking benefits included." keywords="Dullstroom luxury guesthouse 2025, Panorama Route accommodation, self catering Dullstroom, family suites Mpumalanga, luxury cottage accommodation" />
       
       <div className="min-h-screen">
-        {/* Quick Booking Widget */}
-        <section className="section-spacing bg-muted/30">
-          <div className="responsive-container">
-            <div className="max-w-2xl mx-auto">
-              <BookingWidget showRecommendations={false} />
+        {/* Intro Section */}
+        <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-primary/10 to-accent/5">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <Badge variant="secondary" className="mb-4 text-sm px-4 py-2">
+                  <Home className="h-4 w-4 mr-2" />
+                  <span className="hidden sm:inline">Two Distinct Houses, One Exceptional Experience</span>
+                  <span className="sm:hidden">
+                    Two Distinct Houses,<br />
+                    One Exceptional Experience
+                  </span>
+                </Badge>
+                
+                <h1 className="text-primary mb-6">
+                  Choose Your Perfect Dullstroom Retreat
+                </h1>
+                
+                <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8 max-w-4xl mx-auto">
+                  Experience luxury highland accommodation with two distinct styles: modern sophistication in our Luxury Guest Suites 
+                  or authentic cottage charm in our neighbouring Heritage Cottage. Each offers premium amenities and personalized service.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -481,6 +499,17 @@ export default function Suites() {
                     className={index % 2 === 0 ? "bg-muted/20" : ""} 
                   />
                 ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Booking Widget after suites */}
+        {(filteredLuxurySuites.length > 0 || filteredCottageSuites.length > 0) && (
+          <section className="section-spacing bg-muted/30">
+            <div className="responsive-container">
+              <div className="max-w-2xl mx-auto">
+                <BookingWidget showRecommendations={false} />
               </div>
             </div>
           </section>
