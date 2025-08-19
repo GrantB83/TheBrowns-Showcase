@@ -207,14 +207,16 @@ export function BookingWidget({
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Calendar className="h-5 w-5 text-primary" />
-            <span className="text-base sm:text-lg lg:text-xl">Book Direct for Best Rates</span>
+            <span className="text-base sm:text-lg lg:text-xl">
+              <span className="block sm:hidden">
+                Book Direct for Best Rates<br />
+                5% Lower Guaranteed!
+              </span>
+              <span className="hidden sm:block">
+                Book Direct for Best Rates - 5% Lower Guaranteed!
+              </span>
+            </span>
           </CardTitle>
-          <div className="bg-primary/10 rounded-lg p-3">
-            <div className="flex items-center gap-2 text-primary font-medium text-sm">
-              <Gift className="h-4 w-4" />
-              Free welcome drink + WiFi included
-            </div>
-          </div>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
