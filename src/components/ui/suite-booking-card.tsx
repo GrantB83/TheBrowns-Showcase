@@ -2,7 +2,6 @@ import { useState, useMemo, useEffect } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
@@ -109,7 +108,6 @@ export function SuiteBookingCard({
   images = [],
   className
 }: SuiteBookingCardProps) {
-  const [activeTab, setActiveTab] = useState("overview");
   const [galleryOpen, setGalleryOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -249,7 +247,7 @@ export function SuiteBookingCard({
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
         </div>
       )}
-      <CardHeader className="pb-6">
+      <CardHeader className="pb-4">
         <div className="flex flex-col sm:flex-row justify-between items-start gap-6">
           <div className="flex-1">
             <div className="flex flex-wrap items-center gap-3 mb-3">
@@ -287,16 +285,16 @@ export function SuiteBookingCard({
         </div>
         
         {offerText && (
-          <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-accent/10 border border-primary/20 rounded-lg p-4 mt-6 shadow-sm">
-            <div className="flex items-center gap-4">
+          <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-accent/10 border border-primary/20 rounded-lg p-3 mt-4 shadow-sm">
+            <div className="flex items-center gap-3">
               <div className="flex-shrink-0">
-                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Gift className="h-5 w-5 text-primary" />
+                <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Gift className="h-4 w-4 text-primary" />
                 </div>
               </div>
               <div className="flex-1">
-                <div className="text-sm font-semibold text-primary mb-2">Book Direct Benefits</div>
-                <div className="text-sm text-muted-foreground leading-relaxed">{offerText}</div>
+                <div className="text-xs font-semibold text-primary mb-1">Book Direct Benefits</div>
+                <div className="text-xs text-muted-foreground leading-relaxed">{offerText}</div>
               </div>
             </div>
           </div>
@@ -304,273 +302,238 @@ export function SuiteBookingCard({
       </CardHeader>
 
       <CardContent>
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          {/* Mobile: 2x2 grid of visible buttons */}
-            <TabsList
-            aria-label="Suite details navigation"
-            className="grid grid-cols-2 gap-2 mb-6 sm:hidden bg-transparent p-0"
-          >
-            <TabsTrigger
-              value="overview"
-              className="min-h-[44px] px-3 py-2 text-sm rounded-md border border-primary/20 text-primary/80 hover:text-primary hover:bg-primary/5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary"
-            >
-              Overview
-            </TabsTrigger>
-            <TabsTrigger
-              value="amenities"
-              className="min-h-[44px] px-3 py-2 text-sm rounded-md border border-primary/20 text-primary/80 hover:text-primary hover:bg-primary/5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary"
-            >
-              Amenities
-            </TabsTrigger>
-            <TabsTrigger
-              value="gallery"
-              className="min-h-[44px] px-3 py-2 text-sm rounded-md border border-primary/20 text-primary/80 hover:text-primary hover:bg-primary/5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary"
-            >
-              Gallery
-            </TabsTrigger>
-            <TabsTrigger
-              value="reviews"
-              className="min-h-[44px] px-3 py-2 text-sm rounded-md border border-primary/20 text-primary/80 hover:text-primary hover:bg-primary/5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary"
-            >
-              Reviews
-            </TabsTrigger>
-          </TabsList>
-
-          {/* Tablet/Desktop: pill tab list */}
-          <TabsList
-            aria-label="Suite details navigation"
-            className="hidden sm:flex w-full mb-4 gap-2 overflow-x-auto md:overflow-visible md:grid md:grid-cols-4 bg-transparent p-1 rounded-none"
-          >
-            <TabsTrigger
-              value="overview"
-              className="shrink-0 snap-start min-h-[44px] px-4 py-2 text-sm sm:text-base rounded-full border border-primary/20 text-primary/80 hover:text-primary hover:bg-primary/5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary transition-colors"
-            >
-              <Info className="h-4 w-4 mr-2 hidden sm:inline-block" />
-              Overview
-            </TabsTrigger>
-            <TabsTrigger
-              value="amenities"
-              className="shrink-0 snap-start min-h-[44px] px-4 py-2 text-sm sm:text-base rounded-full border border-primary/20 text-primary/80 hover:text-primary hover:bg-primary/5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary transition-colors"
-            >
-              <List className="h-4 w-4 mr-2 hidden sm:inline-block" />
-              Amenities
-            </TabsTrigger>
-            <TabsTrigger
-              value="gallery"
-              className="shrink-0 snap-start min-h-[44px] px-4 py-2 text-sm sm:text-base rounded-full border border-primary/20 text-primary/80 hover:text-primary hover:bg-primary/5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary transition-colors"
-            >
-              <Image className="h-4 w-4 mr-2 hidden sm:inline-block" />
-              Gallery
-            </TabsTrigger>
-            <TabsTrigger
-              value="reviews"
-              className="shrink-0 snap-start min-h-[44px] px-4 py-2 text-sm sm:text-base rounded-full border border-primary/20 text-primary/80 hover:text-primary hover:bg-primary/5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary transition-colors"
-            >
-              <MessageSquare className="h-4 w-4 mr-2 hidden sm:inline-block" />
-              Reviews
-            </TabsTrigger>
-          </TabsList>
-
-          <TabsContent value="overview" className="space-y-6 mt-0 pt-8 sm:pt-0">
-            <p className="text-muted-foreground leading-relaxed text-fluid-base">{getCombinedDescription()}</p>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
-              {mainAmenities.slice(0, 6).map((amenity, index) => {
-                const Icon = getAmenityIcon(amenity.text);
-                return (
-                  <div key={index} className="flex items-center gap-3 text-sm p-3 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
-                    <Icon className="h-5 w-5 text-primary flex-shrink-0" />
-                    <span className="font-medium">{amenity.text}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </TabsContent>
-
-          <TabsContent value="amenities" className="space-y-6 mt-0 pt-8 sm:pt-0">
-            <div className="space-y-6">
-              <div>
-                <h4 className="font-semibold mb-4 text-primary text-lg">Main Features</h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {mainAmenities.map((amenity, index) => {
+        <Accordion type="multiple" className="w-full space-y-2">
+          {/* Suite Details Section */}
+          <AccordionItem value="overview" className="border rounded-lg">
+            <AccordionTrigger className="px-4 py-4 hover:no-underline text-left">
+              <div className="flex items-center gap-3 w-full">
+                <Info className="h-5 w-5 text-primary flex-shrink-0" />
+                <div className="flex-1">
+                  <div className="font-semibold text-base">Suite Details</div>
+                  <div className="text-sm text-muted-foreground">Overview and key highlights</div>
+                </div>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-4 pb-4">
+              <div className="space-y-4">
+                <p className="text-muted-foreground leading-relaxed">{getCombinedDescription()}</p>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                  {mainAmenities.slice(0, 6).map((amenity, index) => {
                     const Icon = getAmenityIcon(amenity.text);
                     return (
                       <div key={index} className="flex items-center gap-3 text-sm p-3 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
-                        <Icon className="h-5 w-5 text-primary flex-shrink-0" />
+                        <Icon className="h-4 w-4 text-primary flex-shrink-0" />
                         <span className="font-medium">{amenity.text}</span>
                       </div>
                     );
                   })}
                 </div>
               </div>
-              
-              <Accordion type="single" collapsible>
-                <AccordionItem value="additional">
-                  <AccordionTrigger className="text-base font-semibold text-primary">
-                    Additional Amenities & Services
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
-                      {additionalAmenities.map((amenity, index) => (
-                        <div key={index} className="flex items-center gap-3 text-sm">
-                          <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
-                          <span className="leading-relaxed">{amenity}</span>
+            </AccordionContent>
+          </AccordionItem>
+
+          {/* Features & Amenities Section */}
+          <AccordionItem value="amenities" className="border rounded-lg">
+            <AccordionTrigger className="px-4 py-4 hover:no-underline text-left">
+              <div className="flex items-center gap-3 w-full">
+                <List className="h-5 w-5 text-primary flex-shrink-0" />
+                <div className="flex-1">
+                  <div className="font-semibold text-base">Features & Amenities</div>
+                  <div className="text-sm text-muted-foreground">{mainAmenities.length + additionalAmenities.length} total features</div>
+                </div>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-4 pb-4">
+              <div className="space-y-6">
+                <div>
+                  <h4 className="font-semibold mb-4 text-primary text-base">Main Features</h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {mainAmenities.map((amenity, index) => {
+                      const Icon = getAmenityIcon(amenity.text);
+                      return (
+                        <div key={index} className="flex items-center gap-3 text-sm p-3 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
+                          <Icon className="h-4 w-4 text-primary flex-shrink-0" />
+                          <span className="font-medium">{amenity.text}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+                
+                <Accordion type="single" collapsible>
+                  <AccordionItem value="additional">
+                    <AccordionTrigger className="text-base font-semibold text-primary">
+                      Additional Amenities & Services
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
+                        {additionalAmenities.map((amenity, index) => (
+                          <div key={index} className="flex items-center gap-3 text-sm">
+                            <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
+                            <span className="leading-relaxed">{amenity}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+
+          {/* Photo Gallery Section */}
+          <AccordionItem value="gallery" className="border rounded-lg">
+            <AccordionTrigger className="px-4 py-4 hover:no-underline text-left">
+              <div className="flex items-center gap-3 w-full">
+                <Image className="h-5 w-5 text-primary flex-shrink-0" />
+                <div className="flex-1">
+                  <div className="font-semibold text-base">Photo Gallery</div>
+                  <div className="text-sm text-muted-foreground">
+                    {isLoadingImages ? 'Loading images...' : `${availableImages.length} photos`}
+                  </div>
+                </div>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-4 pb-4">
+              <div className="space-y-4">
+                {isLoadingImages ? (
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    {Array.from({ length: 6 }, (_, i) => (
+                      <div key={i} className="aspect-square bg-muted rounded-lg animate-pulse" />
+                    ))}
+                  </div>
+                ) : availableImages.length > 0 ? (
+                  <>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                      {availableImages.slice(0, 6).map((image, i) => (
+                        <div key={i} className="aspect-square bg-muted rounded-lg overflow-hidden group cursor-pointer">
+                          <img
+                            src={image.src}
+                            alt={image.alt}
+                            loading="lazy"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            onError={(e) => {
+                              const target = e.target as HTMLImageElement;
+                              target.src = `https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=400&fit=crop&crop=center`;
+                            }}
+                          />
                         </div>
                       ))}
                     </div>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            </div>
-          </TabsContent>
-
-          <TabsContent value="gallery" className="space-y-6 mt-0 pt-8 sm:pt-0">
-            {isLoadingImages ? (
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                {Array.from({ length: 6 }, (_, i) => (
-                  <div key={i} className="aspect-square bg-muted rounded-lg animate-pulse" />
-                ))}
+                    {availableImages.length > 6 && (
+                      <Button 
+                        variant="outline" 
+                        className="w-full mt-4"
+                        onClick={handleViewFullGallery}
+                      >
+                        <Image className="h-4 w-4 mr-2" />
+                        View Full Gallery ({availableImages.length} photos)
+                      </Button>
+                    )}
+                  </>
+                ) : (
+                  <div className="text-center py-8 text-muted-foreground">
+                    <Image className="h-12 w-12 mx-auto mb-4 opacity-50" />
+                    <p>No images available</p>
+                  </div>
+                )}
               </div>
-            ) : availableImages.length > 0 ? (
-              <>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                  {availableImages.slice(0, 6).map((image, i) => (
-                    <div key={i} className="aspect-square bg-muted rounded-lg overflow-hidden group cursor-pointer">
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        loading="lazy"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.src = `https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=300&h=300&fit=crop&crop=center`;
-                        }}
+            </AccordionContent>
+          </AccordionItem>
+
+          {/* Guest Reviews Section */}
+          <AccordionItem value="reviews" className="border rounded-lg">
+            <AccordionTrigger className="px-4 py-4 hover:no-underline text-left">
+              <div className="flex items-center gap-3 w-full">
+                <MessageSquare className="h-5 w-5 text-primary flex-shrink-0" />
+                <div className="flex-1">
+                  <div className="font-semibold text-base">Guest Reviews</div>
+                  <div className="text-sm text-muted-foreground">
+                    {testimonials && testimonials.length > 0 ? `${testimonials.length} reviews` : 'Guest feedback'}
+                  </div>
+                </div>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-4 pb-4">
+              <div className="space-y-4">
+                {testimonials && testimonials.length > 0 ? (
+                  <>
+                    {testimonials.slice(0, 3).map((testimonial, index) => (
+                      <TestimonialCard
+                        key={index}
+                        quote={testimonial.quote}
+                        author={testimonial.author}
+                        rating={testimonial.rating || 5}
+                        year={testimonial.year}
+                        className="border-none shadow-sm"
                       />
-                    </div>
-                  ))}
-                </div>
-                
-                {availableImages.length > 6 && (
-                  <Button 
-                    variant="outline" 
-                    className="w-full min-h-[48px] touch-target"
-                    onClick={handleViewFullGallery}
-                  >
-                    View Full Gallery ({availableImages.length} images)
-                  </Button>
-                )}
-              </>
-            ) : (
-              <div className="text-center py-8">
-                <p className="text-muted-foreground">No gallery images available yet.</p>
-              </div>
-            )}
-          </TabsContent>
-
-          <TabsContent value="reviews" className="space-y-6 mt-0 pt-8 sm:pt-0">
-            {testimonials && testimonials.length > 0 ? (
-              <div className="space-y-6">
-                {testimonials.slice(0, 3).map((testimonial, index) => (
-                  <div key={index} className="bg-muted/30 rounded-lg p-4 border-l-4 border-primary/40">
-                    <div className="flex items-center gap-1 mb-3">
-                      {Array.from({ length: testimonial.rating || 5 }, (_, i) => (
-                        <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                      ))}
-                    </div>
-                    <blockquote className="text-fluid-base text-muted-foreground italic mb-3 leading-relaxed">
-                      "{testimonial.quote}"
-                    </blockquote>
-                    <cite className="text-sm text-muted-foreground font-semibold">
-                      — {testimonial.author}
-                      {testimonial.year && (
-                        <span className="text-muted-foreground/70 font-normal"> ({testimonial.year})</span>
-                      )}
-                    </cite>
+                    ))}
+                    {testimonials.length > 3 && (
+                      <div className="text-center pt-4">
+                        <span className="text-sm text-muted-foreground">
+                          +{testimonials.length - 3} more reviews available
+                        </span>
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <div className="text-center py-6 text-muted-foreground">
+                    <MessageSquare className="h-8 w-8 mx-auto mb-3 opacity-50" />
+                    <p className="text-sm">Guest reviews will appear here</p>
                   </div>
-                ))}
-                
-                {testimonials.length > 3 && (
-                  <div className="text-center pt-4 p-4 bg-primary/5 rounded-lg">
-                    <span className="text-sm text-primary font-medium">
-                      + {testimonials.length - 3} more five-star reviews
+                )}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+
+        {/* Full Gallery Modal */}
+        {galleryOpen && (
+          <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
+            <div className="relative max-w-4xl w-full">
+              <button
+                onClick={() => setGalleryOpen(false)}
+                className="absolute top-4 right-4 z-10 text-white bg-black/50 rounded-full p-2 hover:bg-black/70 transition-colors"
+              >
+                ×
+              </button>
+              
+              {availableImages.length > 0 && (
+                <>
+                  <img
+                    src={availableImages[currentImageIndex].src}
+                    alt={availableImages[currentImageIndex].alt}
+                    className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+                  />
+                  
+                  <div className="flex justify-between items-center mt-4">
+                    <button
+                      onClick={prevImage}
+                      className="text-white bg-black/50 rounded-full px-4 py-2 hover:bg-black/70 transition-colors"
+                      disabled={availableImages.length <= 1}
+                    >
+                      Previous
+                    </button>
+                    
+                    <span className="text-white">
+                      {currentImageIndex + 1} of {availableImages.length}
                     </span>
+                    
+                    <button
+                      onClick={nextImage}
+                      className="text-white bg-black/50 rounded-full px-4 py-2 hover:bg-black/70 transition-colors"
+                      disabled={availableImages.length <= 1}
+                    >
+                      Next
+                    </button>
                   </div>
-                )}
-              </div>
-            ) : testimonial ? (
-              <div className="bg-muted/30 rounded-lg p-4 border-l-4 border-primary/40">
-                <div className="flex items-center gap-1 mb-3">
-                  {Array.from({ length: testimonial.rating }, (_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <blockquote className="text-fluid-base text-muted-foreground italic mb-3 leading-relaxed">
-                  "{testimonial.quote}"
-                </blockquote>
-                <cite className="text-sm text-muted-foreground font-semibold">
-                  — {testimonial.author}
-                </cite>
-              </div>
-            ) : (
-              <p className="text-fluid-base text-muted-foreground text-center p-8">No reviews available yet.</p>
-            )}
-          </TabsContent>
-        </Tabs>
-      </CardContent>
-
-      {/* Gallery Modal */}
-      {galleryOpen && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
-          <div className="relative max-w-4xl w-full max-h-full">
-            {/* Close button */}
-            <button
-              onClick={() => setGalleryOpen(false)}
-              className="absolute top-4 right-4 z-10 bg-white/20 hover:bg-white/30 text-white rounded-full p-2 transition-colors"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-
-            {/* Navigation buttons */}
-            <button
-              onClick={prevImage}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/20 hover:bg-white/30 text-white rounded-full p-2 transition-colors"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-
-            <button
-              onClick={nextImage}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/20 hover:bg-white/30 text-white rounded-full p-2 transition-colors"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-
-            {/* Image */}
-            <div className="flex items-center justify-center h-full">
-              <img
-                src={availableImages[currentImageIndex]?.src}
-                alt={availableImages[currentImageIndex]?.alt || `${title} gallery image`}
-                className="max-w-full max-h-full object-contain"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = `https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=800&h=600&fit=crop&crop=center`;
-                }}
-              />
-            </div>
-
-            {/* Image counter */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
-              {currentImageIndex + 1} / {availableImages.length}
+                </>
+              )}
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </CardContent>
     </Card>
   );
 }
