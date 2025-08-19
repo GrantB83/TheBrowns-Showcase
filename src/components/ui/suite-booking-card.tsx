@@ -308,7 +308,7 @@ export function SuiteBookingCard({
           {/* Mobile: 2x2 grid of visible buttons */}
             <TabsList
             aria-label="Suite details navigation"
-            className="grid grid-cols-2 gap-2 mb-4 sm:hidden bg-transparent p-0"
+            className="grid grid-cols-2 gap-2 mb-6 sm:hidden bg-transparent p-0"
           >
             <TabsTrigger
               value="overview"
@@ -371,7 +371,7 @@ export function SuiteBookingCard({
             </TabsTrigger>
           </TabsList>
 
-          <TabsContent value="overview" className="space-y-6 mt-0 pt-12 sm:pt-0">
+          <TabsContent value="overview" className="space-y-6 mt-0 pt-4 sm:pt-0">
             <p className="text-muted-foreground leading-relaxed text-fluid-base">{getCombinedDescription()}</p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
@@ -387,7 +387,7 @@ export function SuiteBookingCard({
             </div>
           </TabsContent>
 
-          <TabsContent value="amenities" className="space-y-6">
+          <TabsContent value="amenities" className="space-y-6 mt-0 pt-4 sm:pt-0">
             <div className="space-y-6">
               <div>
                 <h4 className="font-semibold mb-4 text-primary text-lg">Main Features</h4>
@@ -424,7 +424,7 @@ export function SuiteBookingCard({
             </div>
           </TabsContent>
 
-          <TabsContent value="gallery" className="space-y-6">
+          <TabsContent value="gallery" className="space-y-6 mt-0 pt-4 sm:pt-0">
             {isLoadingImages ? (
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {Array.from({ length: 6 }, (_, i) => (
@@ -467,7 +467,7 @@ export function SuiteBookingCard({
             )}
           </TabsContent>
 
-          <TabsContent value="reviews" className="space-y-6">
+          <TabsContent value="reviews" className="space-y-6 mt-0 pt-4 sm:pt-0">
             {testimonials && testimonials.length > 0 ? (
               <div className="space-y-6">
                 {testimonials.slice(0, 3).map((testimonial, index) => (
