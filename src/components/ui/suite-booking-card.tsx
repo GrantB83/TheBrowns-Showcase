@@ -25,7 +25,8 @@ import {
   TreePine,
   Heart,
   Baby,
-  ChefHat
+  ChefHat,
+  Lightbulb
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { RealTimeAvailability } from "./real-time-availability";
@@ -161,8 +162,8 @@ export function SuiteBookingCard({
             <div className="flex flex-wrap items-center gap-2 mb-2">
               <h3 className="text-xl sm:text-2xl font-bold text-primary">{title}</h3>
               {urgencyMessage && (
-                <Badge variant="destructive" className="bg-red-500 text-white text-xs">
-                  <Clock className="h-3 w-3 mr-1" />
+                <Badge className="bg-green-500 text-white text-xs">
+                  <Lightbulb className="h-3 w-3 mr-1" />
                   {urgencyMessage}
                 </Badge>
               )}

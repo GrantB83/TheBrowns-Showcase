@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Lightbox } from "@/components/ui/lightbox";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { ImagePlaceholder } from "@/components/ui/image-placeholder";
-import { ZoomIn, Eye, ExternalLink, Clock, Star } from "lucide-react";
+import { ZoomIn, Eye, ExternalLink, Clock, Star, Lightbulb } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface GalleryImage {
@@ -209,8 +209,8 @@ export function BookingGallery({
               {/* Urgency messaging */}
               {image.urgencyMessage && (
                 <div className="absolute top-2 left-2">
-                  <Badge variant="destructive" className="bg-red-500/90 text-white text-xs">
-                    <Clock className="h-3 w-3 mr-1" />
+                  <Badge className="bg-green-500/90 text-white text-xs">
+                    <Lightbulb className="h-3 w-3 mr-1" />
                     {image.urgencyMessage}
                   </Badge>
                 </div>

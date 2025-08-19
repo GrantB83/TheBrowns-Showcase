@@ -238,7 +238,7 @@ const cottageSuites = [{
 const selfCateringHouses = [
   {
     title: "Luxury Guest House",
-    capacity: "Up to 8 guests",
+    capacity: "Up to 10 adults + 2 children under 12",
     bedConfig: "4 suites (Master, Loft, Garden, Cove)",
     description: "Our main luxury guest house features four elegantly appointed suites with modern amenities, mountain views, and sophisticated comfort. Perfect for smaller groups seeking premium accommodation with full self-catering facilities.",
     mainAmenities: [{
@@ -268,7 +268,7 @@ const selfCateringHouses = [
   },
   {
     title: "Heritage Cottage House", 
-    capacity: "Up to 8 guests",
+    capacity: "Up to 6 adults",
     bedConfig: "3 cottage suites (Robin, Blue Crane, Falcon)",
     description: "Our charming heritage cottage house offers authentic cottage character with warm fireplaces and cozy atmospheres. Features three distinctive cottage suites, each with unique charm and full self-catering capabilities.",
     mainAmenities: [{
@@ -450,8 +450,8 @@ export default function Suites() {
                 <h2 className="text-primary mb-4">Self-Catering Houses</h2>
                 <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
                   Two beautifully appointed houses perfect for groups, family reunions, or corporate retreats. 
-                  Book the Luxury Guest House (up to 8 guests) or Heritage Cottage House (up to 8 guests) separately, 
-                  or combine both adjoining houses for larger groups up to 16 guests. Each house offers fully equipped 
+                  Book the Luxury Guest House (up to 10 adults & 2 children under 12) or Heritage Cottage House (up to 6 adults) separately, 
+                  or combine both adjoining houses for larger groups up to 18+ guests. Mattresses can also be added for little children. Each house offers fully equipped 
                   self-catering facilities for independent luxury living in the Dullstroom highlands.
                 </p>
               </div>

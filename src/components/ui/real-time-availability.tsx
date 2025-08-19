@@ -53,18 +53,18 @@ const checkAvailability = async (
       status: 'limited' as const, 
       roomsLeft: Math.floor(Math.random() * 2) + 1,
       price: 1400 + Math.floor(Math.random() * 300),
-      urgencyMessage: "Only 2 rooms left at this rate!" 
+      urgencyMessage: "Popular dates - book early!" 
     },
     { 
       status: 'limited' as const, 
       roomsLeft: 1,
       price: 1600 + Math.floor(Math.random() * 200),
-      urgencyMessage: "Last room available!" 
+      urgencyMessage: "High demand period!" 
     },
     { 
       status: 'sold-out' as const, 
       roomsLeft: 0,
-      urgencyMessage: "Fully booked for these dates" 
+      urgencyMessage: "Alternative dates available" 
     }
   ];
   
@@ -108,7 +108,7 @@ export function RealTimeAvailability({
     } catch (error) {
       setAvailability({ 
         status: 'available', 
-        urgencyMessage: 'Unable to check availability - booking still available' 
+        urgencyMessage: 'Contact us for availability' 
       });
     } finally {
       setIsRefreshing(false);

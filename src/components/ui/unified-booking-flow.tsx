@@ -49,7 +49,7 @@ const suites: Suite[] = [
     features: ["Queen XL Bed", "Garden Views", "Spa Bath", "Private Entrance"],
     image: "/images/suites/garden-suite-01.jpg",
     available: true,
-    urgencyMessage: "Only 2 rooms left"
+    urgencyMessage: "Popular choice"
   },
   {
     id: "master-suite",
@@ -60,7 +60,7 @@ const suites: Suite[] = [
     features: ["King XL Bed", "Private Lounge", "Mountain Views", "Fireplace"],
     image: "/images/suites/master-suite-01.jpg",
     available: true,
-    urgencyMessage: "Last room available"
+    urgencyMessage: "Premium suite"
   },
   {
     id: "loft-family-suite",
