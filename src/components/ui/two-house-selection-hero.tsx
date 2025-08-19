@@ -15,8 +15,8 @@ import {
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 interface TwoHouseSelectionHeroProps {
-  onFilterChange: (filter: 'all' | 'luxury' | 'cottage') => void;
-  activeFilter: 'all' | 'luxury' | 'cottage';
+  onFilterChange: (filter: 'luxury' | 'cottage' | 'self-catering') => void;
+  activeFilter: 'luxury' | 'cottage' | 'self-catering';
 }
 
 export function TwoHouseSelectionHero({ onFilterChange, activeFilter }: TwoHouseSelectionHeroProps) {
@@ -49,10 +49,14 @@ export function TwoHouseSelectionHero({ onFilterChange, activeFilter }: TwoHouse
           
           {/* Header Section */}
           <div className="text-center mb-12">
-            <Badge variant="secondary" className="mb-4 text-sm px-4 py-2">
-              <Home className="h-4 w-4 mr-2" />
-              Two Distinct Houses, One Exceptional Experience
-            </Badge>
+                         <Badge variant="secondary" className="mb-4 text-sm px-4 py-2">
+               <Home className="h-4 w-4 mr-2" />
+               <span className="hidden sm:inline">Two Distinct Houses, One Exceptional Experience</span>
+               <span className="sm:hidden">
+                 Two Distinct Houses,<br />
+                 One Exceptional Experience
+               </span>
+             </Badge>
             
             <h1 className="text-primary mb-6">
               Choose Your Perfect Dullstroom Retreat
@@ -237,27 +241,7 @@ export function TwoHouseSelectionHero({ onFilterChange, activeFilter }: TwoHouse
             </Card>
           </div>
 
-          {/* Call to Action */}
-          <div className="text-center">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto mb-6">
-              <Button 
-                size="lg" 
-                className="min-h-[48px] flex-1"
-                onClick={handleDirectBooking}
-              >
-                <ExternalLink className="h-4 w-4 mr-2" />
-                Book Direct Now
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="min-h-[48px] flex-1"
-                onClick={() => onFilterChange('all')}
-              >
-                View All Suites
-              </Button>
-            </div>
-          </div>
+
         </div>
       </div>
     </section>

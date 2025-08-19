@@ -6,10 +6,10 @@ import { Separator } from "@/components/ui/separator";
 import { SEO } from "@/components/ui/seo";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { BookingWidget } from "@/components/ui/booking-widget";
-import { ReviewShowcase } from "@/components/ui/review-showcase";
+import { SuiteFilter } from "@/components/ui/suite-filter";
 import { TwoHouseSelectionHero } from "@/components/ui/two-house-selection-hero";
 import { Link } from "react-router-dom";
-import { Clock, Gift, Users, ExternalLink, Filter, Crown } from "lucide-react";
+import { Clock, Gift, Users, ExternalLink } from "lucide-react";
 const luxurySuites = [{
   title: "Master Suite",
   capacity: "2 adults + 2 children under 12",
@@ -38,12 +38,20 @@ const luxurySuites = [{
   images: ["/images/suites/master-suite-01.jpg", "/images/suites/master-suite-02.jpg", "/images/suites/master-suite-03.jpg", "/images/suites/master-suite-04.jpg", "/images/suites/master-suite-05.jpg", "/images/suites/master-suite-06.jpg", "/images/suites/master-suite-07.jpg"],
   slug: "master-suite",
   roomId: 6,
-  urgencyMessage: "Premium luxury suite",
+
   testimonial: {
     quote: "The Master Suite exceeded all expectations. Perfect for our anniversary with incredible attention to detail.",
     author: "Sarah & Michael K.",
     rating: 5
-  }
+  },
+  testimonials: [
+    { quote: "Breathtaking. Had a great stay and had a wonderful room. Beautiful place.", author: "Flip K", year: "2024", rating: 5 },
+    { quote: "Luxurious stay with impeccable facilities. Walking distance to the village centre and all the restaurants.", author: "Sonja", year: "2025", rating: 5 },
+    { quote: "Excellent location in Dullstroom. Highly recommended!", author: "Jonathan", year: "2025", rating: 5 },
+    { quote: "Clean and loved the little extras like sherry and teas and coffee station.", author: "Thaveshini", year: "2025", rating: 5 },
+    { quote: "Couldn’t fault this accommodation, it was outstanding.", author: "Wendy", year: "2023", rating: 5 },
+    { quote: "The room was amazing, the bed is so comfortable, it's clean and well designed.", author: "Eyal", year: "2023", rating: 5 }
+  ]
 }, {
   title: "Loft Family Suite",
   capacity: "4 adults",
@@ -72,12 +80,20 @@ const luxurySuites = [{
   images: ["/images/suites/loft-suite-01.jpg", "/images/suites/loft-suite-02.jpg", "/images/suites/loft-suite-03.jpg", "/images/suites/loft-suite-04.jpg", "/images/suites/loft-suite-05.jpg", "/images/suites/loft-suite-06.jpg", "/images/suites/loft-suite-07.jpg"],
   slug: "loft-suite",
   roomId: 5,
-  urgencyMessage: "Ideal for families",
+
   testimonial: {
     quote: "Perfect for our family of four. The kids loved having their own space while we enjoyed the Zuikerboschkop views from the balcony.",
     author: "The Johnson Family",
     rating: 5
-  }
+  },
+  testimonials: [
+    { quote: "Super luxurious b&b style accommodation staying in The Loft Suite.", author: "Martin", year: "2022", rating: 5 },
+    { quote: "We stayed in the Loft and it was nice and quiet and private.", author: "Magna V", year: "2024", rating: 5 },
+    { quote: "Easy access, good WiFi, heating, cleanliness, space and linen were of the highest quality.", author: "Reynard B", year: "2024", rating: 5 },
+    { quote: "Spacious and had all amenities one would need for a comfortable stay.", author: "Erica", year: "2025", rating: 5 },
+    { quote: "The location is perfect, walking distance to everything. Rooms well equipped, lots of extras.", author: "Terence", year: "2025", rating: 5 },
+    { quote: "Our room was huge and the property was well looked after and very peaceful.", author: "Kirsten", year: "2023", rating: 5 }
+  ]
 }, {
   title: "Garden Suite",
   capacity: "2 guests",
@@ -106,12 +122,20 @@ const luxurySuites = [{
   images: ["/images/suites/garden-suite-01.jpg", "/images/suites/garden-suite-02.jpg", "/images/suites/garden-suite-03.jpg", "/images/suites/garden-suite-04.jpg", "/images/suites/garden-suite-05.jpg", "/images/suites/garden-suite-06.jpg"],
   slug: "garden-suite",
   roomId: 4,
-  urgencyMessage: "Romantic retreat",
+
   testimonial: {
     quote: "The most romantic suite with incredible garden views. The spa bath was pure luxury after a day of fly-fishing.",
     author: "Emma & David R.",
     rating: 5
-  }
+  },
+  testimonials: [
+    { quote: "The room was spectacular with some extra treats.", author: "Charlene H", year: "2024", rating: 5 },
+    { quote: "Lovely, clean and lots of extras.", author: "Elmarie V", year: "2024", rating: 5 },
+    { quote: "Very good value for money and the finer details are special.", author: "Fanie I", year: "2024", rating: 5 },
+    { quote: "Very clean, comfortable stay.", author: "Alti", year: "2025", rating: 5 },
+    { quote: "The room was modern, cozy and very comfortable.", author: "Lauren", year: "2023", rating: 5 },
+    { quote: "Attention to detail, welcome complimentary sherry on arrival.", author: "Reg", year: "2023", rating: 5 }
+  ]
 }, {
   title: "Cove Suite",
   capacity: "2 guests",
@@ -140,7 +164,14 @@ const luxurySuites = [{
   images: ["/images/suites/cove-suite-01.jpg", "/images/suites/cove-suite-02.jpg", "/images/suites/cove-suite-03.jpg", "/images/suites/cove-suite-04.jpg", "/images/suites/cove-suite-05.jpg", "/images/suites/cove-suite-06.jpg"],
   slug: "cove-suite",
   roomId: 3,
-  urgencyMessage: "Intimate & modern"
+  testimonials: [
+    { quote: "Good location, new, clean and everything in good working order.", author: "Cas P", year: "2025", rating: 5 },
+    { quote: "Beautifully appointed, well equipped, and spotlessly clean.", author: "Eugene", year: "2025", rating: 5 },
+    { quote: "Impeccable cleanliness and the fireplace abundantly supplied.", author: "Kavi", year: "2023", rating: 5 },
+    { quote: "Extremely well equipped and comfortable.", author: "Frik", year: "2023", rating: 5 },
+    { quote: "Really good and cozy place, feels like home.", author: "Boris", year: "2023", rating: 5 },
+    { quote: "Beautiful place with luxurious treats everywhere you look.", author: "Marisa", year: "2023", rating: 5 }
+  ]
 }];
 const cottageSuites = [{
   title: "Robin Suite",
@@ -170,12 +201,20 @@ const cottageSuites = [{
   images: ["/images/suites/robin-suite-01.jpg", "/images/suites/robin-suite-02.jpg", "/images/suites/robin-suite-03.jpg", "/images/suites/robin-suite-04.jpg", "/images/suites/robin-suite-05.jpg", "/images/suites/robin-suite-06.jpg"],
   slug: "robin-suite",
   roomId: 15,
-  urgencyMessage: "Cottage charm",
+
   testimonial: {
     quote: "The cottage charm is incredible! Kids loved the fireplace and we loved the authentic Dullstroom experience.",
     author: "The Williams Family",
     rating: 5
-  }
+  },
+  testimonials: [
+    { quote: "The fireplace in the Robin room, the coffee machine, the heater in the bathroom.", author: "Samuels", year: "2024", rating: 5 },
+    { quote: "Perfect place for stay in family.", author: "Xavier", year: "2025", rating: 5 },
+    { quote: "Beautiful room with a large bathroom. Walking distance to shops and the historic pub.", author: "Peter", year: "2024", rating: 5 },
+    { quote: "Thoughtful touches for load shedding.", author: "Lauren", year: "2024", rating: 5 },
+    { quote: "Great location and everything you need.", author: "Kirsty", year: "2024", rating: 5 },
+    { quote: "Lovely, spacious, and well equipped.", author: "Anneli", year: "2023", rating: 5 }
+  ]
 }, {
   title: "Blue Crane Suite",
   capacity: "2 guests",
@@ -204,7 +243,14 @@ const cottageSuites = [{
   images: ["/images/suites/blue-crane-suite-01.jpg", "/images/suites/blue-crane-suite-02.jpg", "/images/suites/blue-crane-suite-03.jpg", "/images/suites/blue-crane-suite-04.jpg", "/images/suites/blue-crane-suite-05.jpg", "/images/suites/blue-crane-suite-06.jpg", "/images/suites/blue-crane-suite-07.jpg"],
   slug: "blue-crane-suite",
   roomId: 17,
-  urgencyMessage: "Couples' favorite"
+  testimonials: [
+    { quote: "Near all shops and restaurants… Spacious and beautiful room.", author: "Maruzaan", year: "2024", rating: 5 },
+    { quote: "Very quiet spot with an old school feeling. The Indoor fire place is a welcome treat.", author: "Robin", year: "2024", rating: 5 },
+    { quote: "Nothing, I liked everything… I'm definitely going to book there again.", author: "Ntombifuthi", year: "2024", rating: 5 },
+    { quote: "It was very well appointed, comfortable and convenient.", author: "Jen", year: "2024", rating: 5 },
+    { quote: "Beautiful room with a large bathroom. Walking distance to shops and the historic pub.", author: "Peter", year: "2024", rating: 5 },
+    { quote: "Great location and everything you need.", author: "Kirsty", year: "2024", rating: 5 }
+  ]
 }, {
   title: "Falcon Suite",
   capacity: "2-3 guests",
@@ -233,7 +279,14 @@ const cottageSuites = [{
   images: ["/images/suites/falcon-suite-01.jpg", "/images/suites/falcon-suite-02.jpg", "/images/suites/falcon-suite-03.jpg", "/images/suites/falcon-suite-04.jpg", "/images/suites/falcon-suite-05.jpg", "/images/suites/falcon-suite-06.jpg", "/images/suites/falcon-suite-07.jpg"],
   slug: "falcon-suite",
   roomId: 16,
-  urgencyMessage: "Family elegance"
+  testimonials: [
+    { quote: "Clean and comfortable.", author: "Clement", year: "2024", rating: 5 },
+    { quote: "It was very well appointed, comfortable and convenient.", author: "Jen", year: "2024", rating: 5 },
+    { quote: "I loved that they put the heater on for me before I arrived.", author: "Carla", year: "2024", rating: 5 },
+    { quote: "I thoroughly enjoyed my stay… well-appointed and cosy.", author: "Thanda", year: "2024", rating: 5 },
+    { quote: "Close to town, quiet, good value, suite had nice little touches.", author: "Jaegar", year: "2024", rating: 5 },
+    { quote: "The room was clean and user friendly.", author: "Ellen", year: "2023", rating: 5 }
+  ]
 }];
 const selfCateringHouses = [
   {
@@ -263,7 +316,14 @@ const selfCateringHouses = [
     additionalAmenities: ["Master Suite with private dressing room", "Loft Suite perfect for families", "Garden Suite with spa bath", "Cove Suite with modern amenities", "Commercial-style kitchen", "Indoor and outdoor dining", "Laundry facilities", "Barbecue area", "Free WiFi throughout", "Daily housekeeping available"],
     slug: "luxury-guest-house",
     roomId: 18,
-    urgencyMessage: "Premium luxury house",
+    testimonials: [
+      { quote: "The house is well stocked and furnished beautifully.", author: "Sonja", year: "2025", rating: 5 },
+      { quote: "Spacious and had all amenities one would need for a comfortable stay.", author: "Erica", year: "2025", rating: 5 },
+      { quote: "Cute attention to detail with coffee, water and sherry provided.", author: "Paula", year: "2023", rating: 5 },
+      { quote: "Excellent location in Dullstroom. Highly recommended!", author: "Jonathan", year: "2025", rating: 5 },
+      { quote: "Very clean, comfortable stay.", author: "Alti", year: "2025", rating: 5 },
+      { quote: "Beautifully appointed, well equipped, and spotlessly clean.", author: "Eugene", year: "2025", rating: 5 }
+    ],
     images: ['/images/suites/master-suite-01.jpg', '/images/suites/loft-suite-01.jpg', '/images/suites/garden-suite-01.jpg', '/images/suites/cove-suite-01.jpg']
   },
   {
@@ -293,7 +353,14 @@ const selfCateringHouses = [
     additionalAmenities: ["Robin Suite with fireplace and flexible bedding", "Blue Crane Suite perfect for couples", "Falcon Suite ideal for small families", "Full cottage kitchen facilities", "Cottage garden access", "Wood for fireplaces included", "Free WiFi throughout", "Authentic Dullstroom cottage experience", "Private cottage entrance", "Secure parking"],
     slug: "heritage-cottage-house",
     roomId: 19,
-    urgencyMessage: "Cottage charm house",
+    testimonials: [
+      { quote: "Everything you can think about for an ultra comfortable home stay… Lovely garden.", author: "Sonja", year: "2024", rating: 5 },
+      { quote: "I thoroughly enjoyed my stay… well-appointed and cosy.", author: "Thanda", year: "2024", rating: 5 },
+      { quote: "It was very well appointed, comfortable and convenient.", author: "Jen", year: "2024", rating: 5 },
+      { quote: "Beautiful room with a large bathroom. Walking distance to shops and the historic pub.", author: "Peter", year: "2024", rating: 5 },
+      { quote: "Great location and everything you need.", author: "Kirsty", year: "2024", rating: 5 },
+      { quote: "Near all shops and restaurants… Spacious and beautiful room.", author: "Maruzaan", year: "2024", rating: 5 }
+    ],
     images: ['/images/suites/heritage-cottage-cover.jpg', '/images/suites/robin-suite-01.jpg', '/images/suites/blue-crane-suite-01.jpg', '/images/suites/falcon-suite-01.jpg']
   }
 ];
@@ -314,13 +381,16 @@ const testimonials = [{
   year: "2019"
 }];
 export default function Suites() {
-  const [activeFilter, setActiveFilter] = useState<'all' | 'luxury' | 'cottage'>('all');
+  const [activeFilter, setActiveFilter] = useState<'luxury' | 'cottage' | 'self-catering'>('luxury');
 
-  const filteredLuxurySuites = activeFilter === 'cottage' ? [] : luxurySuites;
-  const filteredCottageSuites = activeFilter === 'luxury' ? [] : cottageSuites;
-  const showSelfCateringHouse = activeFilter !== 'cottage';
+  // Filter logic for individual suites
+  const filteredLuxurySuites = activeFilter === 'luxury' ? luxurySuites : [];
+  const filteredCottageSuites = activeFilter === 'cottage' ? cottageSuites : [];
+  
+  // Filter logic for self-catering houses
+  const showSelfCateringHouse = activeFilter === 'self-catering';
 
-  const handleFilterChange = (filter: 'all' | 'luxury' | 'cottage') => {
+  const handleFilterChange = (filter: 'luxury' | 'cottage' | 'self-catering') => {
     setActiveFilter(filter);
   };
 
@@ -334,11 +404,10 @@ export default function Suites() {
           activeFilter={activeFilter}
         />
 
-        {/* Review Showcase Section */}
-        <ReviewShowcase />
+        {/* Review Showcase Section - Removed yellow social proof badge */}
 
         {/* Quick Booking Widget */}
-        <section className="py-8 sm:py-12 lg:py-16 bg-muted/30">
+        <section className="section-spacing bg-muted/30">
           <div className="responsive-container">
             <div className="max-w-2xl mx-auto">
               <BookingWidget showRecommendations={false} />
@@ -346,41 +415,19 @@ export default function Suites() {
           </div>
         </section>
 
-        {/* Simple Suite Filter */}
+        {/* Enhanced Suite Filter */}
         <section className="py-4 sm:py-6" id="suites-section">
           <div className="responsive-container">
-            <div className="flex flex-wrap justify-center gap-3 mb-8">
-              <Button
-                variant={activeFilter === 'all' ? 'default' : 'outline'}
-                onClick={() => handleFilterChange('all')}
-                className="min-h-[44px]"
-              >
-                <Filter className="h-4 w-4 mr-2" />
-                All Suites
-              </Button>
-              <Button
-                variant={activeFilter === 'luxury' ? 'default' : 'outline'}
-                onClick={() => handleFilterChange('luxury')}
-                className="min-h-[44px]"
-              >
-                <Crown className="h-4 w-4 mr-2" />
-                Luxury Suites
-              </Button>
-              <Button
-                variant={activeFilter === 'cottage' ? 'default' : 'outline'}
-                onClick={() => handleFilterChange('cottage')}
-                className="min-h-[44px]"
-              >
-                <Gift className="h-4 w-4 mr-2" />
-                Cottage Suites
-              </Button>
-            </div>
+            <SuiteFilter
+              activeFilter={activeFilter}
+              onFilterChange={handleFilterChange}
+            />
           </div>
         </section>
 
         {/* Luxury Suites Section */}
         {filteredLuxurySuites.length > 0 && (
-          <section className="section-spacing" id={activeFilter === 'all' ? 'suites-section' : ''}>
+          <section className="section-spacing" id="suites-section">
             <div className="responsive-container">
               <div className="text-center mb-8 sm:mb-10 lg:mb-12">
                 <Badge variant="secondary" className="mb-4 text-xs sm:text-sm">Modern Luxury</Badge>
@@ -404,15 +451,15 @@ export default function Suites() {
           </section>
         )}
 
-        {(filteredLuxurySuites.length > 0 && filteredCottageSuites.length > 0) && (
-          <Separator className="my-8" />
+        {(filteredLuxurySuites.length > 0 && filteredCottageSuites.length > 0 && activeFilter !== 'self-catering') && (
+          <Separator className="my-6" />
         )}
 
         {/* Cottage Suites Section */}
         {filteredCottageSuites.length > 0 && (
-          <section className="py-12 sm:py-16 lg:py-20">
+          <section className="section-spacing">
             <div className="container mx-auto px-4">
-              <div className="text-center mb-12">
+              <div className="text-center mb-8">
                 <Badge className="mb-4 bg-secondary text-secondary-foreground">Cottage Charm</Badge>
                 <h2 className="text-primary mb-4">Heritage Cottage Suites</h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -434,15 +481,15 @@ export default function Suites() {
           </section>
         )}
 
-        {(filteredCottageSuites.length > 0 && showSelfCateringHouse) && (
-          <Separator className="my-8" />
+        {(filteredCottageSuites.length > 0 && showSelfCateringHouse && activeFilter !== 'self-catering') && (
+          <Separator className="my-6" />
         )}
 
         {/* Self Catering Houses Section */}
         {showSelfCateringHouse && (
-          <section className="py-12 sm:py-16 lg:py-20 bg-muted/30">
+          <section className="section-spacing bg-muted/30">
             <div className="container mx-auto px-4">
-              <div className="text-center mb-12">
+              <div className="text-center mb-8">
                 <Badge variant="outline" className="mb-4 border-primary text-primary">
                   <Users className="h-4 w-4 mr-2" />
                   Groups & Events
@@ -478,9 +525,9 @@ export default function Suites() {
         )}
 
         {/* Social Proof Section */}
-        <section className="py-12 sm:py-16 lg:py-20">
+        <section className="section-spacing">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
+            <div className="text-center mb-8">
               <h2 className="text-2xl font-bold text-primary mb-4">What Our Guests Say</h2>
               <div className="mb-6">
                 <span className="text-muted-foreground">200+ reviews</span>
@@ -494,26 +541,26 @@ export default function Suites() {
         </section>
 
         {/* Enhanced Booking Section */}
-        <section className="py-12 sm:py-16 lg:py-20">
+        <section className="section-spacing">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto">
-              <div className="text-center mb-8">
+              <div className="text-center mb-6">
                 <h2 className="text-primary mb-4">Ready to Book Your Suite?</h2>
                 <p className="text-lg text-muted-foreground">
                   Secure your luxury highland accommodation with our streamlined booking process
                 </p>
               </div>
               
-              <BookingWidget showRecommendations={true} />
+              <BookingWidget showRecommendations={false} />
             </div>
           </div>
         </section>
 
         {/* Final Call to Action */}
-        <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-primary/10 to-accent/5">
+        <section className="section-spacing bg-gradient-to-br from-primary/10 to-accent/5">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-primary mb-6">Ready for Your Dullstroom Highland Escape?</h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">Book direct for guaranteed best rates, and a complimentary welcome drink. Your luxury highland experience awaits in the heart of South Africa's trout fishing capital.</p>
+            <h2 className="text-primary mb-4">Ready for Your Dullstroom Highland Escape?</h2>
+            <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto leading-relaxed">Book direct for guaranteed best rates, and a complimentary welcome drink. Your luxury highland experience awaits in the heart of South Africa's trout fishing capital.</p>
             
               <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mb-8 max-w-md mx-auto">
                 <div className="flex items-center justify-center gap-2 text-primary font-semibold mb-2">

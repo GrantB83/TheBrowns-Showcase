@@ -17,7 +17,6 @@ interface AvailabilityStatus {
   status: 'available' | 'limited' | 'sold-out' | 'checking';
   roomsLeft?: number;
   price?: number;
-  urgencyMessage?: string;
   lastChecked?: Date;
 }
 
@@ -46,25 +45,21 @@ const checkAvailability = async (
     { 
       status: 'available' as const, 
       roomsLeft: Math.floor(Math.random() * 5) + 3,
-      price: 1200 + Math.floor(Math.random() * 400),
-      urgencyMessage: undefined 
+      price: 1200 + Math.floor(Math.random() * 400)
     },
     { 
       status: 'limited' as const, 
       roomsLeft: Math.floor(Math.random() * 2) + 1,
-      price: 1400 + Math.floor(Math.random() * 300),
-      urgencyMessage: "Popular dates - book early!" 
+      price: 1400 + Math.floor(Math.random() * 300)
     },
     { 
       status: 'limited' as const, 
       roomsLeft: 1,
-      price: 1600 + Math.floor(Math.random() * 200),
-      urgencyMessage: "High demand period!" 
+      price: 1600 + Math.floor(Math.random() * 200)
     },
     { 
       status: 'sold-out' as const, 
-      roomsLeft: 0,
-      urgencyMessage: "Alternative dates available" 
+      roomsLeft: 0
     }
   ];
   
@@ -105,12 +100,11 @@ export function RealTimeAvailability({
     try {
       const result = await checkAvailability(roomId, checkIn, checkOut, guests);
       setAvailability(result);
-    } catch (error) {
-      setAvailability({ 
-        status: 'available', 
-        urgencyMessage: 'Contact us for availability' 
-      });
-    } finally {
+         } catch (error) {
+       setAvailability({ 
+         status: 'available'
+       });
+     } finally {
       setIsRefreshing(false);
     }
   }, [roomId, checkIn, checkOut, guests]);
@@ -164,9 +158,9 @@ export function RealTimeAvailability({
       case 'checking':
         return 'Checking availability...';
       case 'available':
-        return availability.roomsLeft ? `${availability.roomsLeft} rooms available` : 'Available';
+        return 'Available';
       case 'limited':
-        return availability.roomsLeft === 1 ? 'Last room!' : `Only ${availability.roomsLeft} left`;
+        return 'Limited availability';
       case 'sold-out':
         return 'Sold out';
     }
@@ -188,11 +182,7 @@ export function RealTimeAvailability({
           {getStatusIcon()}
           <span className="ml-1">{getStatusText()}</span>
         </Badge>
-        {availability.status === 'limited' && availability.urgencyMessage && (
-          <span className="text-xs text-orange-600 font-medium">
-            {availability.urgencyMessage}
-          </span>
-        )}
+
       </div>
     );
   }
@@ -234,25 +224,11 @@ export function RealTimeAvailability({
           <div className="flex items-center gap-2">
             <span className="text-2xl font-bold">R{availability.price}</span>
             <span className="text-sm text-muted-foreground">per night</span>
-            {availability.status === 'limited' && (
-              <Badge className="bg-orange-100 text-orange-700 text-xs">
-                <TrendingUp className="h-3 w-3 mr-1" />
-                High demand
-              </Badge>
-            )}
+            
           </div>
         )}
 
-        {/* Urgency Message */}
-        {availability.urgencyMessage && (
-          <div className={cn(
-            "p-2 rounded-lg text-sm font-medium",
-            availability.status === 'limited' && "bg-orange-100 text-orange-700",
-            availability.status === 'sold-out' && "bg-red-100 text-red-700"
-          )}>
-            {availability.urgencyMessage}
-          </div>
-        )}
+
 
         {/* Guest Capacity Check */}
         {guests && parseInt(guests) > 2 && availability.status === 'limited' && (

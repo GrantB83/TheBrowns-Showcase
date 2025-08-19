@@ -194,11 +194,10 @@ export const BookingButtonVariants = {
       buttonVariant: 'default' as const
     },
     {
-      id: 'hero_urgent',
-      name: 'Urgent CTA',
-      buttonText: 'Book Now - Limited Availability',
-      buttonVariant: 'destructive' as const,
-      urgencyText: 'High Demand'
+      id: 'hero_alternative',
+      name: 'Alternative CTA',
+      buttonText: 'Book Your Stay',
+      buttonVariant: 'default' as const
     }
   ],
   
