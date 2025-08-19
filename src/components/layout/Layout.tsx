@@ -8,10 +8,12 @@ import { SkipToContent } from "@/components/ui/accessibility";
 import { ErrorBoundary } from "@/components/ui/error-boundary";
 import { BreadcrumbNavigation } from "@/components/ui/breadcrumb-navigation";
 import { WhatsAppFloatingButton } from "@/components/ui/whatsapp-contact";
+import { useMobileQuickActions } from "@/hooks/use-mobile-quick-actions";
 
 export function Layout() {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
+  const { isActive: mobileQuickActionsActive } = useMobileQuickActions();
 
   return (
     <ErrorBoundary>
@@ -29,7 +31,7 @@ export function Layout() {
         </main>
         <Footer />
         <ScrollToTop />
-        <WhatsAppFloatingButton />
+        {!mobileQuickActionsActive && <WhatsAppFloatingButton />}
       </div>
     </ErrorBoundary>
   );

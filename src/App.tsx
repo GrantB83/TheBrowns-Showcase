@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { AnalyticsProvider } from "@/components/layout/AnalyticsProvider";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
+import { MobileQuickActionsProvider } from "@/hooks/use-mobile-quick-actions";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Suites from "./pages/Suites";
@@ -23,9 +24,10 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <AnalyticsProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
+        <MobileQuickActionsProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Index />} />
@@ -43,8 +45,9 @@ const App = () => (
             <Route path="privacy" element={<Privacy />} />
           </Route>
           <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+          </Routes>
+        </BrowserRouter>
+        </MobileQuickActionsProvider>
       </AnalyticsProvider>
     </TooltipProvider>
   </QueryClientProvider>

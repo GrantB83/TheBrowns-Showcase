@@ -213,6 +213,8 @@ export function EnhancedMobileGestureNav({
   );
 }
 
+import { useMobileQuickActionsRegistry } from "@/hooks/use-mobile-quick-actions";
+
 // Quick action buttons for mobile
 export function MobileQuickActions({ 
   onBooking, 
@@ -225,6 +227,8 @@ export function MobileQuickActions({
   onWhatsApp?: () => void;
   className?: string;
 }) {
+  // Register this component as active mobile quick actions
+  useMobileQuickActionsRegistry();
   return (
     <div className={cn(
       "md:hidden fixed bottom-4 left-4 right-4 z-40",
