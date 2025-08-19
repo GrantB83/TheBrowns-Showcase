@@ -1,6 +1,8 @@
 import { EnhancedGallery } from "@/components/ui/enhanced-gallery";
 import { SEO } from "@/components/ui/seo";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 // Generate accurate, conservative descriptions for suite images
 const generateSuiteDescription = (category: string, imageNumber: string): string => {
@@ -569,6 +571,8 @@ const luxurySuiteCategories = ["Master Suite", "Loft Suite", "Garden Suite", "Bl
 const heritageCottageCategories = ["Exterior", "Living Spaces", "Bedrooms", "Kitchen & Dining", "Bathrooms", "Interior Features", "Outdoor Spaces"];
 
 export default function Gallery() {
+  const [activeGallery, setActiveGallery] = useState<'luxury' | 'heritage'>('luxury');
+
   return (
     <>
       <SEO
@@ -584,50 +588,84 @@ export default function Gallery() {
               <h1 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-primary mb-3 sm:mb-4 px-2 font-playfair">
                 Gallery - Luxury Dullstroom Accommodation
               </h1>
-              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto px-2 leading-relaxed">
+              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto px-2 leading-relaxed mb-8">
                 Explore our luxury suites, beautiful highland gardens, and stunning Dullstroom location. Book direct for guaranteed best rates and exclusive perks.
               </p>
+
+              {/* House Selection Interface */}
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8 sm:mb-12">
+                <div className="bg-card rounded-lg p-2 border shadow-sm">
+                  <div className="flex flex-col xs:flex-row gap-2">
+                    <Button
+                      onClick={() => setActiveGallery('luxury')}
+                      variant={activeGallery === 'luxury' ? 'default' : 'ghost'}
+                      className={`px-4 sm:px-6 py-3 text-sm sm:text-base font-medium transition-all duration-200 ${
+                        activeGallery === 'luxury' 
+                          ? 'bg-primary text-primary-foreground shadow-sm' 
+                          : 'hover:bg-muted'
+                      }`}
+                    >
+                      🏨 Luxury Suites Collection
+                    </Button>
+                    <Button
+                      onClick={() => setActiveGallery('heritage')}
+                      variant={activeGallery === 'heritage' ? 'default' : 'ghost'}
+                      className={`px-4 sm:px-6 py-3 text-sm sm:text-base font-medium transition-all duration-200 ${
+                        activeGallery === 'heritage' 
+                          ? 'bg-primary text-primary-foreground shadow-sm' 
+                          : 'hover:bg-muted'
+                      }`}
+                    >
+                      🏡 Heritage Cottage Suites
+                    </Button>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Luxury Suites Gallery */}
-            <div className="mb-12 lg:mb-16">
-              <Card className="p-4 sm:p-6 lg:p-8">
-                <div className="text-center mb-6 sm:mb-8">
-                  <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl text-primary mb-2 sm:mb-3 font-playfair">
-                    Luxury Suites Collection
-                  </h2>
-                  <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                    Discover our premium luxury suites featuring elegant interiors, modern amenities, and stunning highland views. Each suite offers a unique blend of comfort and sophistication.
-                  </p>
-                </div>
-                <EnhancedGallery 
-                  images={luxurySuitesImages}
-                  categories={luxurySuiteCategories}
-                  columns={3}
-                  showCategories={true}
-                />
-              </Card>
-            </div>
+            {activeGallery === 'luxury' && (
+              <div className="mb-12 lg:mb-16">
+                <Card className="p-4 sm:p-6 lg:p-8">
+                  <div className="text-center mb-6 sm:mb-8">
+                    <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl text-primary mb-2 sm:mb-3 font-playfair">
+                      Luxury Suites Collection
+                    </h2>
+                    <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                      Discover our premium luxury suites featuring elegant interiors, modern amenities, and stunning highland views. Each suite offers a unique blend of comfort and sophistication.
+                    </p>
+                  </div>
+                  <EnhancedGallery 
+                    images={luxurySuitesImages}
+                    categories={luxurySuiteCategories}
+                    columns={3}
+                    showCategories={true}
+                  />
+                </Card>
+              </div>
+            )}
 
             {/* Heritage Cottage Gallery */}
-            <div className="mb-8">
-              <Card className="p-4 sm:p-6 lg:p-8">
-                <div className="text-center mb-6 sm:mb-8">
-                  <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl text-primary mb-2 sm:mb-3 font-playfair">
-                    Heritage Cottage Suites
-                  </h2>
-                  <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                    Experience authentic heritage charm in our traditional cottage accommodation. Perfect for families and groups seeking spacious, self-catering luxury with historical character.
-                  </p>
-                </div>
-                <EnhancedGallery 
-                  images={heritageCottageImages}
-                  categories={heritageCottageCategories}
-                  columns={3}
-                  showCategories={true}
-                />
-              </Card>
-            </div>
+            {activeGallery === 'heritage' && (
+              <div className="mb-12 lg:mb-16">
+                <Card className="p-4 sm:p-6 lg:p-8">
+                  <div className="text-center mb-6 sm:mb-8">
+                    <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl text-primary mb-2 sm:mb-3 font-playfair">
+                      Heritage Cottage Suites
+                    </h2>
+                    <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                      Experience authentic heritage charm in our traditional cottage accommodation. Perfect for families and groups seeking spacious, self-catering luxury with historical character.
+                    </p>
+                  </div>
+                  <EnhancedGallery 
+                    images={heritageCottageImages}
+                    categories={heritageCottageCategories}
+                    columns={3}
+                    showCategories={true}
+                  />
+                </Card>
+              </div>
+            )}
 
             {/* Call to Action */}
             <div className="text-center mt-8 sm:mt-12 lg:mt-16">
