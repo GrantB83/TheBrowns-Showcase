@@ -308,7 +308,7 @@ export function SuiteBookingCard({
           {/* Mobile: 2x2 grid of visible buttons */}
             <TabsList
             aria-label="Suite details navigation"
-            className="grid grid-cols-2 gap-2 mb-8 sm:hidden bg-transparent p-0"
+            className="grid grid-cols-2 gap-2 mb-6 sm:hidden bg-transparent p-0"
           >
             <TabsTrigger
               value="overview"
