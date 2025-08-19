@@ -14,7 +14,6 @@ const navigation = [
   { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" },
   { name: "Blog", href: "/blog" },
-  { name: "Booking", href: "/booking" },
 ];
 
 // Priority order for showing items (high priority stays visible longest)
@@ -25,7 +24,6 @@ const itemPriority = {
   "Gallery": 4,
   "Contact": 5,
   "Blog": 6,
-  "Booking": 7,
 };
 
 export function Header() {

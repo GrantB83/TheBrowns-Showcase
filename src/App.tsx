@@ -10,7 +10,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Suites from "./pages/Suites";
 import Gallery from "./pages/Gallery";
-import Booking from "./pages/Booking";
+
 
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
@@ -37,7 +37,7 @@ const App = () => (
             <Route path="suites" element={<Suites />} /> {/* Legacy route redirect */}
             <Route path="gallery" element={<Gallery />} />
             <Route path="activities" element={<Blog />} />
-            <Route path="booking" element={<Booking />} />
+            
             
             <Route path="contact" element={<Contact />} />
             <Route path="blog" element={<Blog />} />
