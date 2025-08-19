@@ -22,7 +22,7 @@ import {
 import { cn } from "@/lib/utils";
 import { EmbeddedBookingIframe } from "./embedded-booking-iframe";
 import { RealTimeAvailability } from "./real-time-availability";
-import { BookingAbandonmentRecovery, BookingSessionTracker } from "./booking-abandonment-recovery";
+import { DirectBookingBenefitsPopup, DirectBookingTracker } from "./direct-booking-benefits-popup";
 import { ABTestBookingButton, BookingButtonVariants } from "./ab-test-booking-button";
 import { useConversionFunnel } from "./conversion-funnel-tracker";
 import { EnhancedMobileGestureNav, MobileQuickActions } from "./enhanced-mobile-gesture-nav";
@@ -89,13 +89,13 @@ export function BookingWidget({
   
   // Advanced features
   const { trackStep, startFunnel } = useConversionFunnel();
-  const sessionTracker = BookingSessionTracker.getInstance();
+  const sessionTracker = DirectBookingTracker.getInstance();
 
   // Initialize tracking on component mount
   useEffect(() => {
     startFunnel();
     trackStep('page_view');
-    sessionTracker.startSession({ guests, checkIn, checkOut });
+    sessionTracker.startSession();
   }, [startFunnel, trackStep]);
 
   // Track form interactions
@@ -179,6 +179,9 @@ export function BookingWidget({
   const handleEmbeddedBooking = () => {
     trackStep('booking_widget_opened');
     sessionTracker.updateSession({ 
+      checkIn, 
+      checkOut, 
+      guests,
       roomId: recommendedSuite?.roomId,
       suiteName: recommendedSuite?.name 
     });
@@ -402,10 +405,10 @@ export function BookingWidget({
         onWhatsApp={handleWhatsAppContact}
       />
 
-      {/* Booking Abandonment Recovery */}
-      <BookingAbandonmentRecovery
-        onReEngage={handleEmbeddedBooking}
-        onDismiss={() => trackStep('abandonment_dismissed')}
+      {/* Direct Booking Benefits Popup */}
+      <DirectBookingBenefitsPopup
+        onBookingClick={handleEmbeddedBooking}
+        onDismiss={() => trackStep('direct_booking_dismissed')}
       />
 
       {/* Embedded Booking Modal */}

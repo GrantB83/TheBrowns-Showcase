@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Users, Bed, ChevronDown, ChevronUp } from "lucide-react";
+import { DirectBookingTracker } from "./direct-booking-benefits-popup";
 
 interface SuiteCardProps {
   title: string;
@@ -29,6 +30,19 @@ export function SuiteCard({
   className
 }: SuiteCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const tracker = DirectBookingTracker.getInstance();
+
+  // Track suite view when component mounts or when expanded
+  useEffect(() => {
+    tracker.addViewedSuite(title);
+  }, [title, tracker]);
+
+  const handleBookingClick = () => {
+    tracker.trackEvent('suite_booking_clicked', {
+      suite_name: title,
+      source: 'suite_card'
+    });
+  };
 
   return (
     <Card className={`${className} hover:shadow-lg transition-all duration-300 overflow-hidden`}>
@@ -107,6 +121,7 @@ export function SuiteCard({
             target="_blank" 
             rel="noopener noreferrer"
             aria-label={`Book ${title} suite now`}
+            onClick={handleBookingClick}
           >
             Book Now
           </a>
