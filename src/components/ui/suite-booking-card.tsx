@@ -235,7 +235,7 @@ export function SuiteBookingCard({
   const getSuiteHighlights = () => {
     switch (slug) {
       case "master-suite":
-        return "King XL bed, private lounge with fireplace and Netflix – Ideal for Couples";
+        return "King XL bed, private lounge opening to two balconies – Ideal for Couples";
       case "loft-suite":
         return "Family-friendly with 4 beds and Zuikerboschkop views – Perfect for Groups";
       case "garden-suite":
