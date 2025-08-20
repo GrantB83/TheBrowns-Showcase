@@ -31,7 +31,11 @@ import {
   Info,
   List,
   Image,
-  MessageSquare
+  MessageSquare,
+  Armchair,
+  Sparkles,
+  Shield,
+  Link
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -70,16 +74,42 @@ interface SuiteBookingCardProps {
 
 const AMENITY_ICONS: Record<string, any> = {
   'WiFi': Wifi,
+  'Wi-Fi': Wifi,
   'Netflix': Tv,
+  'TV': Tv,
   'Nespresso': Coffee,
+  'coffee': Coffee,
+  'bean-to-cup': Coffee,
   'fireplace': Flame,
   'views': Mountain,
+  'balcony': Mountain,
   'garden': TreePine,
+  'patio': TreePine,
   'bathroom': Bath,
+  'bath': Bath,
+  'shower': Bath,
+  'vanity': Bath,
+  'ensuite': Bath,
   'parking': Car,
   'romantic': Heart,
   'infant': Baby,
-  'kitchen': ChefHat
+  'kitchen': ChefHat,
+  'dining': ChefHat,
+  'braai': Flame,
+  'barbecue': Flame,
+  'lounge': Armchair,
+  'charlotte rhys': Sparkles,
+  'amenities': Sparkles,
+  'backup': Shield,
+  'generator': Shield,
+  'power': Shield,
+  'electric': Shield,
+  'fencing': Shield,
+  'interleads': Link,
+  'sofa': Armchair,
+  'fold-out': Armchair,
+  'seating': Armchair,
+  'outdoor': TreePine
 };
 
 const getAmenityIcon = (amenity: string) => {

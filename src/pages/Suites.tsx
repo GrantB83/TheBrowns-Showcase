@@ -12,28 +12,28 @@ import { Clock, Gift, Users, ExternalLink, Home } from "lucide-react";
 const luxurySuites = [{
   title: "Master Suite",
   capacity: "2 adults + 2 children under 12",
-  bedConfig: "King XL bed + Double sofa bed (kids under 12)",
-  description: "Our flagship suite offers the ultimate in luxury with a spacious private unit featuring a dedicated dressing room, spacious lounge area, and full ensuite bathroom with double vanity and double shower. Enjoy Zuikerboschkop mountain views from the first-floor balcony. Perfect for romantic getaways with modern conveniences.",
+  bedConfig: "King XL bed + Double fold-out sofa (kids under 12)",
+  description: "First-floor, extra-spacious suite with a King XL bed and a double fold-out sofa (recommended for children up to 12). Large bedroom + dressing room with bay windows, a private lounge opening to two balconies, and a full bathroom with double vanity and double shower (plus separate toilet). Interleads with the Loft Family Suite.",
   mainAmenities: [{
-    text: "Hot water bottles & electric blankets",
-    emoji: "🔥"
-  }, {
-    text: "WiFi & Netflix system",
+    text: "Free Wi-Fi & TV with Netflix",
     emoji: "📺"
   }, {
-    text: "Nespresso coffee machine",
+    text: "Nespresso + milk frother",
     emoji: "☕"
   }, {
-    text: "Zuikerboschkop views from balcony",
-    emoji: "🏔️"
-  }, {
-    text: "Double vanity ensuite",
+    text: "Double vanity & double shower + separate toilet",
     emoji: "🛁"
   }, {
-    text: "Private dressing room",
+    text: "Private lounge opening to two balconies",
+    emoji: "🏠"
+  }, {
+    text: "Dressing room with bay windows",
     emoji: "👗"
+  }, {
+    text: "Charlotte Rhys amenities",
+    emoji: "🧴"
   }],
-  additionalAmenities: ["Elegant lounge area with fireplace", "Interleads with Loft Suite for families", "Free high-speed WiFi throughout", "Charlotte Rhys premium toiletries", "Extra mattresses available for children", "Cot with linen for infants", "High chair & microwave for baby feeding", "Zuikerboschkop mountain views from first-floor balcony", "Secure parking included", "Daily housekeeping available", "Complimentary tea and coffee selection"],
+  additionalAmenities: ["DVD player", "Hair dryer", "Heater/fan", "Electric blankets", "Down duvets", "Beverage station with minibar fridge (still water & milk)", "Premium tea selection", "Hot chocolate", "Rusks", "Percale linen", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Lovely garden & outdoor kids' play area", "Interleads with Loft Family Suite"],
   images: ["/images/suites/master-suite-01.jpg", "/images/suites/master-suite-02.jpg", "/images/suites/master-suite-03.jpg", "/images/suites/master-suite-04.jpg", "/images/suites/master-suite-05.jpg", "/images/suites/master-suite-06.jpg", "/images/suites/master-suite-07.jpg"],
   slug: "master-suite",
   roomId: 6,
@@ -54,28 +54,28 @@ const luxurySuites = [{
 }, {
   title: "Loft Family Suite",
   capacity: "4 adults",
-  bedConfig: "Queen XL bed + 2 Single XL beds",
-  description: "Perfect for families, the Loft Suite features two comfortable bedrooms with Zuikerboschkop mountain views from the first-floor balcony, a welcoming lounge area, and spacious bathroom. Connects with Master Suite for larger groups.",
+  bedConfig: "Queen XL main; two single beds in second (not combinable)",
+  description: "First-floor family unit with two bedrooms (Queen XL main; two single beds in second, not combinable), a spacious lounge with full surround sound, full bathroom with double vanity and separate toilet, plus a balcony with Zuikerboschkop views. Interleads with the Master Suite.",
   mainAmenities: [{
-    text: "Zuikerboschkop views from balcony",
+    text: "Two bedrooms (Queen XL + two singles)",
+    emoji: "🛏️"
+  }, {
+    text: "Spacious lounge with full surround sound",
+    emoji: "🔊"
+  }, {
+    text: "Balcony with Zuikerboschkop views",
     emoji: "🏔️"
   }, {
-    text: "Hot water bottles & electric blankets",
-    emoji: "🔥"
-  }, {
-    text: "Netflix & entertainment",
+    text: "Free Wi-Fi & TV with Netflix",
     emoji: "📺"
   }, {
-    text: "Nespresso coffee machine",
+    text: "Nespresso + frother",
     emoji: "☕"
   }, {
-    text: "Double vanity bathroom",
-    emoji: "🛁"
-  }, {
-    text: "Two separate bedrooms",
-    emoji: "🛏️"
+    text: "Charlotte Rhys amenities",
+    emoji: "🧴"
   }],
-  additionalAmenities: ["Comfortable family lounge area", "Connects to Master Suite for large groups", "Free WiFi throughout both bedrooms", "Premium tea and coffee selection", "Charlotte Rhys toiletries and amenities", "Extra mattresses for additional guests", "Cot with linen for infants", "High chair & microwave facilities", "Zuikerboschkop mountain views from first-floor balcony", "Secure covered parking"],
+  additionalAmenities: ["DVD player", "Hair dryer", "Heater/fan", "Electric blankets", "Down duvets", "Minibar fridge (still water & milk)", "Premium teas", "Hot chocolate", "Rusks", "Percale linen", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Garden & kids' play area", "Interleads with Master Suite"],
   images: ["/images/suites/loft-suite-01.jpg", "/images/suites/loft-suite-02.jpg", "/images/suites/loft-suite-03.jpg", "/images/suites/loft-suite-04.jpg", "/images/suites/loft-suite-05.jpg", "/images/suites/loft-suite-06.jpg", "/images/suites/loft-suite-07.jpg"],
   slug: "loft-suite",
   roomId: 5,
@@ -97,27 +97,27 @@ const luxurySuites = [{
   title: "Garden Suite",
   capacity: "2 guests",
   bedConfig: "Queen XL bed",
-  description: "A romantic ground floor retreat with private entrance and enchanting garden views. Features luxurious dual vanity bathroom with both spa bath and shower, perfect for couples seeking intimate luxury.",
+  description: "Ground-floor suite with Queen XL bed, wonderful garden views, and a full bathroom featuring double vanity and a sumptuous bath (plus shower). Interleads with the Cove Suite.",
   mainAmenities: [{
-    text: "Stunning garden views",
+    text: "Wonderful garden views",
     emoji: "🌿"
   }, {
-    text: "Private entrance",
-    emoji: "🚪"
-  }, {
-    text: "Dual vanity bathroom",
+    text: "Double vanity bathroom",
     emoji: "🛁"
   }, {
-    text: "Spa bath and shower",
+    text: "Sumptuous bath + shower",
     emoji: "🛀"
   }, {
-    text: "Hot water bottles & electric blankets",
-    emoji: "🔥"
-  }, {
-    text: "Netflix & DVD player",
+    text: "Free Wi-Fi & TV with Netflix",
     emoji: "📺"
+  }, {
+    text: "Nespresso + frother",
+    emoji: "☕"
+  }, {
+    text: "Charlotte Rhys amenities",
+    emoji: "🧴"
   }],
-  additionalAmenities: ["48-inch LED TV with premium channels", "Free high-speed WiFi", "Nespresso machine with premium pods", "Charlotte Rhys luxury toiletries", "Private garden terrace access", "Romantic lighting and ambiance", "Extra mattresses if needed", "Cot with linen for infants", "High chair & microwave for babies", "Complimentary wine on arrival (weekends)"],
+  additionalAmenities: ["DVD player", "Hair dryer", "Heater/fan", "Electric blankets", "Down duvets", "Minibar fridge (still water & milk)", "Premium teas", "Hot chocolate", "Rusks", "Percale linen", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Garden & kids' play area", "Interleads with Cove Suite"],
   images: ["/images/suites/garden-suite-01.jpg", "/images/suites/garden-suite-02.jpg", "/images/suites/garden-suite-03.jpg", "/images/suites/garden-suite-04.jpg", "/images/suites/garden-suite-05.jpg", "/images/suites/garden-suite-06.jpg"],
   slug: "garden-suite",
   roomId: 4,
@@ -139,27 +139,27 @@ const luxurySuites = [{
   title: "Cove Suite",
   capacity: "2 guests",
   bedConfig: "Queen XL bed",
-  description: "An intimate ground floor suite featuring a cozy lounge, comfortable bedroom, and modern shower bathroom. Perfect blend of comfort and convenience with premium entertainment and luxury amenities.",
+  description: "Ground-floor retreat with Queen XL bed, a private lounge for two, shower-only bathroom, and a charming outdoor seating area. Interleads with the Garden Suite.",
   mainAmenities: [{
-    text: "Hot water bottles & electric blankets",
-    emoji: "🔥"
-  }, {
-    text: "Netflix & DVD player",
-    emoji: "📺"
-  }, {
-    text: "Nespresso coffee machine",
-    emoji: "☕"
-  }, {
-    text: "Modern shower bathroom",
-    emoji: "🚿"
-  }, {
-    text: "Comfortable lounge area",
+    text: "Private lounge for two",
     emoji: "🛋️"
   }, {
-    text: "Premium entertainment system",
-    emoji: "🎬"
+    text: "Shower-only bathroom",
+    emoji: "🚿"
+  }, {
+    text: "Charming outdoor seating area",
+    emoji: "🪑"
+  }, {
+    text: "Free Wi-Fi & TV with Netflix",
+    emoji: "📺"
+  }, {
+    text: "Nespresso + frother",
+    emoji: "☕"
+  }, {
+    text: "Charlotte Rhys amenities",
+    emoji: "🧴"
   }],
-  additionalAmenities: ["48-inch LED TV with streaming", "Free WiFi throughout suite", "Charlotte Rhys premium toiletries", "Daily housekeeping service available", "Ground floor accessibility", "Intimate dining space for two", "Extra mattresses available", "Cot with linen for infants", "High chair & microwave facilities", "Private entrance and parking"],
+  additionalAmenities: ["DVD player", "Hair dryer", "Heater/fan", "Electric blankets", "Down duvets", "Minibar fridge (still water & milk)", "Premium teas", "Hot chocolate", "Rusks", "Percale linen", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Garden & kids' play area", "Interleads with Garden Suite"],
   images: ["/images/suites/cove-suite-01.jpg", "/images/suites/cove-suite-02.jpg", "/images/suites/cove-suite-03.jpg", "/images/suites/cove-suite-04.jpg", "/images/suites/cove-suite-05.jpg", "/images/suites/cove-suite-06.jpg"],
   slug: "cove-suite",
   roomId: 3,
@@ -174,29 +174,29 @@ const luxurySuites = [{
 }];
 const cottageSuites = [{
   title: "Robin Suite",
-  capacity: "2 adults + 2 children under 12",
-  bedConfig: "King XL bed or 2 Singles + Fold-out double sofa (kids under 12)",
-  description: "Stylish and comfortable cottage suite featuring a warm fireplace and flexible bedding arrangements. Combines modern comfort with authentic Dullstroom cottage character, perfect for families.",
+  capacity: "2 adults",
+  bedConfig: "King bed or two singles (configurable)",
+  description: "Ground-floor, spacious bedroom opening to a private patio overlooking the garden. Bedding configurable as King or two singles. Full ensuite bathroom (bath + shower). Interleads with the Falcon Suite and the kitchen/dining area.",
   mainAmenities: [{
-    text: "Warm fireplace",
+    text: "Fireplace",
     emoji: "🔥"
   }, {
-    text: "Netflix entertainment",
-    emoji: "📺"
+    text: "Private patio overlooking garden",
+    emoji: "🌿"
   }, {
-    text: "Nespresso coffee machine",
-    emoji: "☕"
-  }, {
-    text: "Full ensuite bathroom",
+    text: "Full ensuite bathroom (bath + shower)",
     emoji: "🛁"
   }, {
-    text: "Flexible bedding options",
-    emoji: "🛏️"
+    text: "Free Wi-Fi & TV with Netflix",
+    emoji: "📺"
   }, {
-    text: "Cottage garden access",
-    emoji: "🌿"
+    text: "Nespresso + frother",
+    emoji: "☕"
+  }, {
+    text: "Charlotte Rhys amenities",
+    emoji: "🧴"
   }],
-  additionalAmenities: ["Charlotte Rhys luxury toiletries", "Free WiFi throughout cottage", "Premium tea and coffee selection", "Daily housekeeping available", "Hot water bottles & electric blankets", "Authentic cottage atmosphere", "Extra mattresses for children", "Cot with linen for infants", "High chair & microwave for babies", "Private cottage garden access", "Wood for fireplace included"],
+  additionalAmenities: ["Hair dryer", "Heater/fan", "Electric blankets", "Down duvets", "Minibar fridge (still water & milk)", "Premium teas", "Hot chocolate", "Rusks", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Lovely garden & kids' play area", "Interleads with Falcon Suite and kitchen/dining area"],
   images: ["/images/suites/robin-suite-01.jpg", "/images/suites/robin-suite-02.jpg", "/images/suites/robin-suite-03.jpg", "/images/suites/robin-suite-04.jpg", "/images/suites/robin-suite-05.jpg", "/images/suites/robin-suite-06.jpg"],
   slug: "robin-suite",
   roomId: 15,
@@ -217,28 +217,28 @@ const cottageSuites = [{
 }, {
   title: "Blue Crane Suite",
   capacity: "2 guests",
-  bedConfig: "Flexible bed configuration",
-  description: "Charming and comfortable cottage suite designed for couples, featuring a private beverage station and cozy fireplace. Embodies the essence of cottage comfort with romantic atmosphere.",
+  bedConfig: "King bed",
+  description: "Ground-floor, spacious bedroom with a private patio, King bed, and a full ensuite bathroom (bath + shower).",
   mainAmenities: [{
-    text: "Private beverage station",
-    emoji: "☕"
-  }, {
-    text: "Cozy fireplace",
+    text: "Fireplace",
     emoji: "🔥"
   }, {
-    text: "Garden views",
+    text: "Private patio",
     emoji: "🌿"
   }, {
-    text: "Romantic ambiance",
-    emoji: "💕"
+    text: "Full ensuite bathroom (bath + shower)",
+    emoji: "🛁"
   }, {
-    text: "Comfortable seating area",
-    emoji: "🛋️"
+    text: "Free Wi-Fi & TV with Netflix",
+    emoji: "📺"
   }, {
-    text: "Cottage atmosphere",
-    emoji: "🏡"
+    text: "Nespresso + frother",
+    emoji: "☕"
+  }, {
+    text: "Charlotte Rhys amenities",
+    emoji: "🧴"
   }],
-  additionalAmenities: ["Free WiFi throughout", "Charlotte Rhys luxury toiletries", "Premium coffee and tea facilities", "Flexible room layout options", "Hot water bottles & electric blankets", "Cottage garden access", "Extra mattresses available", "Cot with linen for infants", "High chair & microwave facilities", "Romantic cottage lighting", "Complimentary wood for fireplace"],
+  additionalAmenities: ["Hair dryer", "Heater/fan", "Electric blankets", "Down duvets", "Minibar fridge (still water & milk)", "Premium teas", "Hot chocolate", "Rusks", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Garden & kids' play area"],
   images: ["/images/suites/blue-crane-suite-01.jpg", "/images/suites/blue-crane-suite-02.jpg", "/images/suites/blue-crane-suite-03.jpg", "/images/suites/blue-crane-suite-04.jpg", "/images/suites/blue-crane-suite-05.jpg", "/images/suites/blue-crane-suite-06.jpg", "/images/suites/blue-crane-suite-07.jpg"],
   slug: "blue-crane-suite",
   roomId: 17,
@@ -252,29 +252,29 @@ const cottageSuites = [{
   ]
 }, {
   title: "Falcon Suite",
-  capacity: "2-3 guests",
-  bedConfig: "Flexible bed configuration for small families",
-  description: "Spacious and elegant cottage suite offering cozy comfort with sophisticated touches. Features warm fireplace, premium entertainment, and flexible accommodation for small families.",
+  capacity: "2 guests",
+  bedConfig: "King bed or two singles (configurable)",
+  description: "Ground-floor suite with a private patio, King bed (or two singles), and a spacious private lounge with fold-out sofa; shower-only ensuite bathroom. Interleads with the Robin Suite and the kitchen/dining area.",
   mainAmenities: [{
-    text: "Warm fireplace",
+    text: "Fireplace",
     emoji: "🔥"
   }, {
-    text: "Netflix entertainment",
-    emoji: "📺"
+    text: "Private patio",
+    emoji: "🌿"
   }, {
-    text: "Bootlegger coffee station",
-    emoji: "☕"
-  }, {
-    text: "Spacious living area",
+    text: "Spacious private lounge with fold-out sofa",
     emoji: "🛋️"
   }, {
-    text: "Family-friendly layout",
-    emoji: "👨‍👩‍👧‍👦"
+    text: "Shower-only ensuite bathroom",
+    emoji: "🚿"
   }, {
-    text: "Cottage garden access",
-    emoji: "🌿"
+    text: "Free Wi-Fi & TV with Netflix",
+    emoji: "📺"
+  }, {
+    text: "Charlotte Rhys amenities",
+    emoji: "🧴"
   }],
-  additionalAmenities: ["Free WiFi throughout cottage", "Charlotte Rhys toiletries", "Elegant cozy comfort furnishings", "Premium entertainment system", "Hot water bottles & electric blankets", "Flexible family sleeping arrangements", "Extra mattresses available", "Cot with linen for infants", "High chair & microwave for children", "Private cottage entrance", "Secure parking space"],
+  additionalAmenities: ["Hair dryer", "Heater/fan", "Electric blankets", "Down duvets", "Minibar fridge (still water & milk)", "Nespresso + frother", "Premium teas", "Hot chocolate", "Rusks", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Garden & kids' play area", "Interleads with Robin Suite and kitchen/dining area"],
   images: ["/images/suites/falcon-suite-01.jpg", "/images/suites/falcon-suite-02.jpg", "/images/suites/falcon-suite-03.jpg", "/images/suites/falcon-suite-04.jpg", "/images/suites/falcon-suite-05.jpg", "/images/suites/falcon-suite-06.jpg", "/images/suites/falcon-suite-07.jpg"],
   slug: "falcon-suite",
   roomId: 16,
@@ -289,30 +289,30 @@ const cottageSuites = [{
 }];
 const selfCateringHouses = [
   {
-    title: "Luxury Guest House",
-    capacity: "Up to 10 adults + 2 children under 12",
+    title: "Luxury Suites — Whole-house",
+    capacity: "Up to 10 adults + 2 children",
     bedConfig: "4 suites (Master, Loft, Garden, Cove)",
-    description: "Our main luxury guest house features four elegantly appointed suites with modern amenities, mountain views, and sophisticated comfort. Perfect for smaller groups seeking premium accommodation with full self-catering facilities.",
+    description: "Exclusive use of the entire Luxury Suites house (all four suites together) for families or groups (up to 10 adults + 2 children). Private suite entrances; walkable village location.",
     mainAmenities: [{
-      text: "Full kitchen facilities",
+      text: "Bean-to-cup coffee machine",
+      emoji: "☕"
+    }, {
+      text: "Gas stove, electric oven, microwave",
       emoji: "🍳"
     }, {
-      text: "Mountain views from balcony",
-      emoji: "🏔️"
+      text: "Dishwasher & scullery",
+      emoji: "🏠"
     }, {
-      text: "4 luxury suites",
-      emoji: "🛏️"
+      text: "Breakfast nook & dining room",
+      emoji: "🍽️"
     }, {
-      text: "Entertainment areas",
-      emoji: "📺"
+      text: "Lounge with 2 Morso fireplaces",
+      emoji: "🔥"
     }, {
-      text: "Secure parking",
-      emoji: "🚗"
-    }, {
-      text: "WiFi throughout",
-      emoji: "📶"
+      text: "Gas braai/barbecue",
+      emoji: "🔥"
     }],
-    additionalAmenities: ["Master Suite with private dressing room", "Loft Suite perfect for families", "Garden Suite with spa bath", "Cove Suite with modern amenities", "Commercial-style kitchen", "Indoor and outdoor dining", "Laundry facilities", "Barbecue area", "Free WiFi throughout", "Daily housekeeping available"],
+    additionalAmenities: ["Charlotte Rhys amenities", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Garden & kids' play area", "All four luxury suites included", "Private suite entrances", "Walkable village location"],
     slug: "luxury-guest-house",
     roomId: 18,
     testimonials: [
@@ -326,30 +326,30 @@ const selfCateringHouses = [
     images: ['/images/suites/master-suite-01.jpg', '/images/suites/loft-suite-01.jpg', '/images/suites/garden-suite-01.jpg', '/images/suites/cove-suite-01.jpg']
   },
   {
-    title: "Heritage Cottage House", 
-    capacity: "Up to 6 adults",
-    bedConfig: "3 cottage suites (Robin, Blue Crane, Falcon)",
-    description: "Our charming heritage cottage house offers authentic cottage character with warm fireplaces and cozy atmospheres. Features three distinctive cottage suites, each with unique charm and full self-catering capabilities.",
+    title: "Heritage Cottage — Whole-house", 
+    capacity: "~6 guests",
+    bedConfig: "3 ensuite units (Robin, Falcon, Blue Crane)",
+    description: "Reserve the entire Heritage Cottage across its independent ensuite units (three available while Owlet is under renovation) for ~6 guests.",
     mainAmenities: [{
-      text: "Cottage fireplaces",
-      emoji: "🔥"
+      text: "Bean-to-cup coffee machine",
+      emoji: "☕"
     }, {
-      text: "Heritage character",
-      emoji: "🏡"
-    }, {
-      text: "3 cottage suites",
-      emoji: "🛏️"
-    }, {
-      text: "Garden access",
-      emoji: "🌿"
-    }, {
-      text: "Self-catering kitchen",
+      text: "Gas stove, electric oven, microwave",
       emoji: "🍳"
     }, {
-      text: "Authentic atmosphere",
-      emoji: "✨"
+      text: "Dishwasher & scullery",
+      emoji: "🏠"
+    }, {
+      text: "Dining room",
+      emoji: "🍽️"
+    }, {
+      text: "Lounge & kitchen fireplace",
+      emoji: "🔥"
+    }, {
+      text: "Patio braai area",
+      emoji: "🔥"
     }],
-    additionalAmenities: ["Robin Suite with fireplace and flexible bedding", "Blue Crane Suite perfect for couples", "Falcon Suite ideal for small families", "Full cottage kitchen facilities", "Cottage garden access", "Wood for fireplaces included", "Free WiFi throughout", "Authentic Dullstroom cottage experience", "Private cottage entrance", "Secure parking"],
+    additionalAmenities: ["Charlotte Rhys amenities", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Garden & kids' play area", "Three available cottage suites (while Owlet under renovation)", "Independent ensuite units", "Authentic cottage character"],
     slug: "heritage-cottage-house",
     roomId: 19,
     testimonials: [
