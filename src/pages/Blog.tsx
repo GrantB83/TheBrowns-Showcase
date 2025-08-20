@@ -86,15 +86,7 @@ export default function Blog() {
 
   // Filter blog posts based on search and categories
   const filteredPosts = useMemo(() => {
-    if (import.meta.env.DEV) {
-      console.log("🔍 Filtering posts:", {
-        searchTerm,
-        selectedCategories,
-        totalPosts: blogPosts.length
-      });
-    }
-    
-    const filtered = blogPosts.filter(post => {
+    return blogPosts.filter(post => {
       // Only show published posts
       if (!post.published) return false;
       
@@ -106,23 +98,8 @@ export default function Blog() {
       const matchesCategory = selectedCategories.length === 0 || 
         selectedCategories.includes(post.category);
       
-      const passes = matchesSearch && matchesCategory;
-      
-      if (import.meta.env.DEV && selectedCategories.length > 0) {
-        console.log(`📝 Post "${post.title}" - Category: "${post.category}" - Matches: ${passes}`);
-      }
-      
-      return passes;
+      return matchesSearch && matchesCategory;
     });
-    
-    if (import.meta.env.DEV) {
-      console.log("✅ Filtered results:", {
-        count: filtered.length,
-        categories: filtered.map(p => p.category).slice(0, 6)
-      });
-    }
-    
-    return filtered;
   }, [searchTerm, selectedCategories]);
 
   return (
