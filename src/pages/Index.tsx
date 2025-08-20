@@ -15,6 +15,7 @@ import { HeroBookingWidget } from "@/components/ui/hero-booking-widget";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useMobileDetection } from "@/hooks/use-mobile-optimization";
 import { MapPin, Wifi, Car, Coffee, Zap, Shield, Droplets, Tv } from "lucide-react";
+import { MobileQuickActions } from "@/components/ui/enhanced-mobile-gesture-nav";
 
 const heroImages = [
   {
@@ -284,6 +285,13 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Mobile Quick Actions */}
+      <MobileQuickActions
+        onBooking={() => window.open('https://book.nightsbridge.com/00000', '_blank')}
+        onCall={() => window.open('tel:+27000000000', '_self')}
+        onWhatsApp={() => window.open('https://wa.me/27000000000?text=Hi! I would like to enquire about The Browns Guest Suites.', '_blank')}
+      />
     </>
   );
 };
