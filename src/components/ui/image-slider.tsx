@@ -55,7 +55,7 @@ export function ImageSlider({
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((image, index) => (
-          <div key={index} className="relative w-full flex-shrink-0">
+          <div key={`slider-${image.src}-${image.title || 'slide'}-${index}`} className="relative w-full flex-shrink-0">
             <img
               src={image.src}
               alt={image.alt}
@@ -109,9 +109,9 @@ export function ImageSlider({
       {/* Dots Indicator */}
       {images.length > 1 && (
         <div className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex space-x-1.5 sm:space-x-2">
-          {images.map((_, index) => (
+          {images.map((image, index) => (
             <button
-              key={index}
+              key={`dot-${image.src}-${index}`}
               className={cn(
                 "w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-colors min-h-[32px] min-w-[32px] flex items-center justify-center",
                 index === currentIndex

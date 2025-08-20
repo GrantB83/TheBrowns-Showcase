@@ -72,7 +72,7 @@ export function AmenityDisclosure({ mainAmenities, additionalAmenities, classNam
       preview={
         <div className="space-y-2">
           {mainAmenities.slice(0, 4).map((amenity, index) => (
-            <div key={index} className="flex items-center gap-2 text-sm">
+            <div key={`main-amenity-${amenity.text.replace(/\s+/g, '-').toLowerCase()}-${index}`} className="flex items-center gap-2 text-sm">
               <span className="text-lg">{amenity.emoji}</span>
               <span>{amenity.text}</span>
             </div>
@@ -90,7 +90,7 @@ export function AmenityDisclosure({ mainAmenities, additionalAmenities, classNam
           <h4 className="font-medium mb-2 text-sm">Key Features</h4>
           <div className="space-y-2">
             {mainAmenities.map((amenity, index) => (
-              <div key={index} className="flex items-center gap-2 text-sm">
+              <div key={`full-amenity-${amenity.text.replace(/\s+/g, '-').toLowerCase()}-${index}`} className="flex items-center gap-2 text-sm">
                 <span className="text-lg">{amenity.emoji}</span>
                 <span>{amenity.text}</span>
               </div>
@@ -103,7 +103,7 @@ export function AmenityDisclosure({ mainAmenities, additionalAmenities, classNam
             <h4 className="font-medium mb-2 text-sm">Additional Amenities</h4>
             <div className="grid grid-cols-2 gap-1">
               {additionalAmenities.map((amenity, index) => (
-                <div key={index} className="text-sm text-muted-foreground">
+                <div key={`additional-${amenity.replace(/\s+/g, '-').toLowerCase()}-${index}`} className="text-sm text-muted-foreground">
                   • {amenity}
                 </div>
               ))}

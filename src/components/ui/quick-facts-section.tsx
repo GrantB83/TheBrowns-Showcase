@@ -110,7 +110,7 @@ export function QuickFactsSection() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {quickFacts.map((section, index) => (
-          <Card key={index} className="h-full">
+          <Card key={`fact-section-${section.category.replace(/\s+/g, '-').toLowerCase()}-${index}`} className="h-full">
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center gap-3 text-lg">
                 <div className="bg-primary/10 p-2 rounded-lg">
@@ -122,7 +122,7 @@ export function QuickFactsSection() {
             <CardContent className="pt-0">
               <ul className="space-y-2">
                 {section.facts.map((fact, factIndex) => (
-                  <li key={factIndex} className="flex items-start text-sm text-muted-foreground">
+                  <li key={`fact-${fact.substring(0, 20).replace(/\s+/g, '-').toLowerCase()}-${factIndex}`} className="flex items-start text-sm text-muted-foreground">
                     <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-3 flex-shrink-0" />
                     <span className="leading-relaxed">{fact}</span>
                   </li>

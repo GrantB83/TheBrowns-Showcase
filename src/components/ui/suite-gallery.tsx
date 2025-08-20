@@ -104,7 +104,7 @@ export function SuiteGallery({ suiteSlug, suiteName, className }: SuiteGalleryPr
           >
             {images.map((image, index) => (
               <div 
-                key={`${image.src}-${index}`}
+                key={`mobile-${image.src.split('/').pop()}-${index}`}
                 className="w-full flex-shrink-0 relative cursor-pointer"
                 onClick={() => openLightbox(index)}
               >
@@ -161,9 +161,9 @@ export function SuiteGallery({ suiteSlug, suiteName, className }: SuiteGalleryPr
 
           {/* Slide Indicators */}
           <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex space-x-1">
-            {images.slice(0, 8).map((_, index) => (
+            {images.slice(0, 8).map((image, index) => (
               <button
-                key={index}
+                key={`indicator-${image.src.split('/').pop()}-${index}`}
                 className={cn(
                   "w-1 h-1 rounded-full transition-colors opacity-80",
                   index === currentSlide ? "bg-white" : "bg-white/50"
@@ -180,7 +180,7 @@ export function SuiteGallery({ suiteSlug, suiteName, className }: SuiteGalleryPr
       <div className="hidden lg:grid grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 justify-items-center">
         {images.slice(0, 12).map((image, index) => (
           <Card 
-            key={index}
+            key={`desktop-${image.src.split('/').pop()}-${index}`}
             className="group overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300 w-full max-w-[300px]"
             onClick={() => openLightbox(index)}
           >

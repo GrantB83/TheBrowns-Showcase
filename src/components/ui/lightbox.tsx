@@ -53,8 +53,10 @@ export function Lightbox({ images, isOpen, onClose, initialIndex = 0 }: Lightbox
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('keydown', handleKeyDown);
+      return () => window.removeEventListener('keydown', handleKeyDown);
+    }
   }, [isOpen, currentIndex]);
 
   const goToPrevious = () => {
@@ -197,7 +199,7 @@ export function Lightbox({ images, isOpen, onClose, initialIndex = 0 }: Lightbox
         <div className="hidden lg:flex absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 space-x-1 sm:space-x-2 bg-black/70 p-1 sm:p-2 rounded-lg max-w-[80vw] overflow-x-auto backdrop-blur-sm">
           {images.map((image, index) => (
             <button
-              key={index}
+              key={`lightbox-thumb-${image.src.split('/').pop()}-${index}`}
               className={cn(
                 "flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded border-2 overflow-hidden transition-all duration-200 min-h-[44px] min-w-[44px] touch-manipulation",
                 index === currentIndex ? "border-primary opacity-100 scale-105" : "border-transparent opacity-60 hover:opacity-80 hover:scale-105"

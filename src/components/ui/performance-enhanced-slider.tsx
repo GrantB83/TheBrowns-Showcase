@@ -178,7 +178,7 @@ export function PerformanceEnhancedSlider({
       <div className="relative aspect-[16/9] overflow-hidden">
         {images.map((image, index) => (
           <div
-            key={index}
+            key={`perf-slider-${image.src.split('/').pop()}-${index}`}
             className={cn(
               "absolute inset-0 transition-transform duration-500 ease-in-out",
               index === currentIndex ? "translate-x-0" : 
@@ -232,9 +232,9 @@ export function PerformanceEnhancedSlider({
       {/* Dot indicators */}
       {images.length > 1 && (
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-          {images.map((_, index) => (
+          {images.map((image, index) => (
             <button
-              key={index}
+              key={`perf-dot-${image.src.split('/').pop()}-${index}`}
               className={cn(
                 "w-3 h-3 rounded-full transition-all duration-300 min-h-[32px] min-w-[32px] flex items-center justify-center",
                 index === currentIndex ? "bg-white scale-125" : "bg-white/50 hover:bg-white/75"

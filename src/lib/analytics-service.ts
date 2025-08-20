@@ -1,16 +1,30 @@
 // TypeScript interfaces for better type safety
 interface GtagFunction {
-  (...args: any[]): void;
-  q?: any[];
+  (...args: unknown[]): void;
+  q?: unknown[];
   l?: number;
+}
+
+interface FacebookPixelFunction {
+  (...args: unknown[]): void;
+  q?: unknown[];
+  loaded?: boolean;
+  version?: string;
+  queue?: unknown[];
+  push?: FacebookPixelFunction;
+}
+
+interface DataLayerItem {
+  event?: string;
+  [key: string]: unknown;
 }
 
 declare global {
   interface Window {
     gtag?: GtagFunction;
-    fbq?: any;
-    _fbq?: any;
-    dataLayer?: any[];
+    fbq?: FacebookPixelFunction;
+    _fbq?: FacebookPixelFunction;
+    dataLayer?: DataLayerItem[];
   }
 }
 
@@ -53,7 +67,7 @@ export interface CustomEventData {
   event_category?: string;
   event_label?: string;
   value?: number;
-  custom_parameters?: Record<string, any>;
+  custom_parameters?: Record<string, unknown>;
 }
 
 class AnalyticsService {
@@ -132,8 +146,8 @@ class AnalyticsService {
     };
 
     // GTM data layer initialization
-    (window as any).dataLayer = (window as any).dataLayer || [];
-    (window as any).dataLayer.push({
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
       'gtm.start': new Date().getTime(),
       event: 'gtm.js'
     });
@@ -152,10 +166,10 @@ class AnalyticsService {
     document.head.appendChild(script);
 
     // Initialize gtag
-    window.gtag = window.gtag || function(...args: any[]) {
+    window.gtag = window.gtag || function(...args: unknown[]) {
       (window.gtag!.q = window.gtag!.q || []).push(args);
     } as GtagFunction;
-    (window.gtag as any).l = +new Date();
+    (window.gtag as GtagFunction & { l: number }).l = +new Date();
 
     // Configure GA4
     window.gtag('config', this.config.ga4Id, {
@@ -180,7 +194,7 @@ class AnalyticsService {
     if (!this.config.googleAdsId) return;
 
     // Google Ads conversion linker
-    window.gtag = window.gtag || function(...args: any[]) {
+    window.gtag = window.gtag || function(...args: unknown[]) {
       (window.gtag!.q = window.gtag!.q || []).push(args);
     } as GtagFunction;
 
@@ -197,30 +211,30 @@ class AnalyticsService {
     if (!this.config.metaPixelId) return;
 
     // Meta Pixel implementation
-    (window as any).fbq = (window as any).fbq || function(...args: any[]) {
-      ((window as any).fbq.q = (window as any).fbq.q || []).push(args);
-    };
+    window.fbq = window.fbq || function(...args: unknown[]) {
+      (window.fbq!.q = window.fbq!.q || []).push(args);
+    } as FacebookPixelFunction;
 
-    if (!(window as any)._fbq) (window as any)._fbq = (window as any).fbq;
-    (window as any).fbq.push = (window as any).fbq;
-    (window as any).fbq.loaded = true;
-    (window as any).fbq.version = '2.0';
-    (window as any).fbq.queue = [];
+    if (!window._fbq) window._fbq = window.fbq;
+    window.fbq.push = window.fbq;
+    window.fbq.loaded = true;
+    window.fbq.version = '2.0';
+    window.fbq.queue = [];
 
     const script = document.createElement('script');
     script.async = true;
     script.src = 'https://connect.facebook.net/en_US/fbevents.js';
     document.head.appendChild(script);
 
-    (window as any).fbq('init', this.config.metaPixelId);
-    (window as any).fbq('track', 'PageView');
+    window.fbq!('init', this.config.metaPixelId);
+    window.fbq!('track', 'PageView');
 
     this.log('Meta Pixel initialized');
   }
 
   // Initialize data layer for GTM
   private initializeDataLayer(): void {
-    (window as any).dataLayer = (window as any).dataLayer || [];
+    window.dataLayer = window.dataLayer || [];
     
     // Push initial data
     this.pushToDataLayer({
@@ -235,8 +249,8 @@ class AnalyticsService {
   setConsent(granted: boolean): void {
     this.consentGranted = granted;
 
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('consent', 'update', {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('consent', 'update', {
         analytics_storage: granted ? 'granted' : 'denied',
         ad_storage: granted ? 'granted' : 'denied',
         ad_user_data: granted ? 'granted' : 'denied',
@@ -245,10 +259,10 @@ class AnalyticsService {
     }
 
     // Update Meta Pixel consent
-    if ((window as any).fbq && granted) {
-      (window as any).fbq('consent', 'grant');
-    } else if ((window as any).fbq) {
-      (window as any).fbq('consent', 'revoke');
+    if (window.fbq && granted) {
+      window.fbq('consent', 'grant');
+    } else if (window.fbq) {
+      window.fbq('consent', 'revoke');
     }
 
     this.log(`Consent ${granted ? 'granted' : 'revoked'}`);
@@ -261,7 +275,7 @@ class AnalyticsService {
     const data = {
       page_path: path,
       page_title: title || document.title,
-      page_location: window.location.href
+      page_location: typeof window !== 'undefined' ? window.location.href : ''
     };
 
     // GTM
@@ -271,13 +285,13 @@ class AnalyticsService {
     });
 
     // GA4
-    if ((window as any).gtag) {
-      (window as any).gtag('event', 'page_view', data);
+    if (window.gtag) {
+      window.gtag('event', 'page_view', data);
     }
 
     // Meta Pixel
-    if ((window as any).fbq) {
-      (window as any).fbq('track', 'PageView');
+    if (window.fbq) {
+      window.fbq('track', 'PageView');
     }
 
     this.log('Page view tracked', data);
@@ -301,8 +315,8 @@ class AnalyticsService {
     });
 
     // GA4
-    if ((window as any).gtag) {
-      (window as any).gtag('event', eventName, eventData);
+    if (window.gtag) {
+      window.gtag('event', eventName, eventData);
     }
 
     this.log('Event tracked', { eventName, ...eventData });
@@ -335,8 +349,8 @@ class AnalyticsService {
     });
 
     // GA4 Enhanced Ecommerce
-    if ((window as any).gtag) {
-      (window as any).gtag('event', 'purchase', {
+    if (window.gtag) {
+      window.gtag('event', 'purchase', {
         transaction_id: purchaseData.transaction_id,
         value: purchaseData.value,
         currency: purchaseData.currency,
@@ -345,8 +359,8 @@ class AnalyticsService {
     }
 
     // Google Ads Conversion
-    if ((window as any).gtag && this.config.googleAdsId) {
-      (window as any).gtag('event', 'conversion', {
+    if (window.gtag && this.config.googleAdsId) {
+      window.gtag('event', 'conversion', {
         send_to: `${this.config.googleAdsId}/booking-conversion`,
         value: purchaseData.value,
         currency: purchaseData.currency,
@@ -355,8 +369,8 @@ class AnalyticsService {
     }
 
     // Meta Pixel Purchase
-    if ((window as any).fbq) {
-      (window as any).fbq('track', 'Purchase', {
+    if (window.fbq) {
+      window.fbq('track', 'Purchase', {
         value: purchaseData.value,
         currency: purchaseData.currency,
         content_ids: purchaseData.items.map(item => item.item_id),
@@ -368,7 +382,7 @@ class AnalyticsService {
   }
 
   // Track booking funnel steps
-  trackFunnelStep(step: string, data: Record<string, any> = {}): void {
+  trackFunnelStep(step: string, data: Record<string, unknown> = {}): void {
     if (!this.isInitialized || !this.consentGranted) return;
 
     const stepData = {
@@ -384,18 +398,18 @@ class AnalyticsService {
     });
 
     // Meta Pixel funnel events
-    if ((window as any).fbq) {
+    if (window.fbq) {
       const fbEventName = this.mapToFacebookEvent(step);
       if (fbEventName) {
-        (window as any).fbq('track', fbEventName, data);
+        window.fbq('track', fbEventName, data);
       }
     }
   }
 
   // Helper: Push data to GTM data layer
-  private pushToDataLayer(data: Record<string, any>): void {
-    if (typeof window !== 'undefined' && (window as any).dataLayer) {
-      (window as any).dataLayer.push(data);
+  private pushToDataLayer(data: DataLayerItem): void {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push(data);
     }
   }
 
@@ -423,8 +437,8 @@ class AnalyticsService {
   }
 
   // Debug logging
-  private log(message: string, data?: any): void {
-    if (this.config.debugMode) {
+  private log(message: string, data?: unknown): void {
+    if (this.config.debugMode && process.env.NODE_ENV === 'development') {
       console.log(`[Analytics] ${message}`, data || '');
     }
   }
