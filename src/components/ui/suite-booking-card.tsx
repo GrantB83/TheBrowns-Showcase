@@ -256,8 +256,7 @@ export function SuiteBookingCard({
   };
 
   const getCombinedDescription = () => {
-    const highlights = getSuiteHighlights();
-    return `${highlights}. ${description}`;
+    return description;
   };
 
   return (
