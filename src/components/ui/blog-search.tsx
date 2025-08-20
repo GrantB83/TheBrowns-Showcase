@@ -35,6 +35,18 @@ export function BlogSearch({
     onCategoryChange(selectedCategories.filter(c => c !== category));
   };
 
+  const handleRemoveClick = (e: React.MouseEvent, category: string) => {
+    e.preventDefault();
+    e.stopPropagation();
+    removeCategory(category);
+  };
+
+  const handleClearAllClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    clearFilters();
+  };
+
   const hasActiveFilters = selectedCategories.length > 0;
 
   return (
@@ -74,7 +86,7 @@ export function BlogSearch({
                 <Button
                   variant="ghost"
                   size="sm"
-                  onClick={() => removeCategory(category)}
+                  onClick={(e) => handleRemoveClick(e, category)}
                   className="ml-1 h-3 w-3 p-0 hover:bg-transparent"
                   aria-label={`Remove ${category} filter`}
                 >
@@ -86,7 +98,7 @@ export function BlogSearch({
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={clearFilters}
+                onClick={handleClearAllClick}
                 className="text-xs text-muted-foreground h-6 px-2"
               >
                 Clear all

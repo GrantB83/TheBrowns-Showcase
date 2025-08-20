@@ -39,6 +39,10 @@ export function SuiteFilter({
     onFilterChange(newFilter);
   };
 
+  const handleIconClick = (filter: 'suite-only' | 'self-catering') => {
+    onFilterChange(filter);
+  };
+
   const getActiveFilterLabel = () => {
     switch (activeFilter) {
       case 'suite-only': return 'Suite Only';
@@ -78,14 +82,32 @@ export function SuiteFilter({
                 className="w-full"
               />
               <div className="flex justify-between text-xs text-muted-foreground">
-                <div className="flex flex-col items-center gap-2 p-2 rounded-lg hover:bg-muted/30 transition-colors">
-                  <Crown className="h-4 w-4" />
+                <button
+                  onClick={() => handleIconClick('suite-only')}
+                  className={`flex flex-col items-center gap-2 p-2 rounded-lg transition-all duration-200 cursor-pointer ${
+                    activeFilter === 'suite-only' 
+                      ? 'bg-primary/10 text-primary border border-primary/20' 
+                      : 'hover:bg-muted/30 text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  <Crown className={`h-4 w-4 ${
+                    activeFilter === 'suite-only' ? 'text-primary' : ''
+                  }`} />
                   <span className="font-medium">Suite Only</span>
-                </div>
-                <div className="flex flex-col items-center gap-2 p-2 rounded-lg hover:bg-muted/30 transition-colors">
-                  <Home className="h-4 w-4" />
+                </button>
+                <button
+                  onClick={() => handleIconClick('self-catering')}
+                  className={`flex flex-col items-center gap-2 p-2 rounded-lg transition-all duration-200 cursor-pointer ${
+                    activeFilter === 'self-catering' 
+                      ? 'bg-primary/10 text-primary border border-primary/20' 
+                      : 'hover:bg-muted/30 text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  <Home className={`h-4 w-4 ${
+                    activeFilter === 'self-catering' ? 'text-primary' : ''
+                  }`} />
                   <span className="font-medium">Self-Catering</span>
-                </div>
+                </button>
               </div>
             </div>
 

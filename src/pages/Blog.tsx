@@ -4,15 +4,19 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BlogSearch } from "@/components/ui/blog-search";
+import { SEO } from "@/components/ui/seo";
 import { blogPosts, categories } from "@/data/blog-posts";
 import { Calendar, Clock, User, ExternalLink } from "lucide-react";
 import { MobileQuickActions } from "@/components/ui/enhanced-mobile-gesture-nav";
+import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 
 // Data is now imported from /src/data/blog-posts.ts
 
 export default function Blog() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [displayCount, setDisplayCount] = useState(6);
+  const [imageLoadingStates, setImageLoadingStates] = useState<Record<string, boolean>>({});
 
   // Quick filter buttons for main topics
   const quickFilters = [
@@ -71,7 +75,12 @@ export default function Blog() {
       // Auto-activate Activities filter when accessed via /activities route
       setSelectedCategories(['Activities']);
     }
-  }, [searchParams]);
+  }, [searchParams, categories]);
+
+  // Reset display count when selectedCategories change
+  useEffect(() => {
+    setDisplayCount(6);
+  }, [selectedCategories]);
 
   // Update URL when categories change
   const handleCategoryChange = (newCategories: string[]) => {
@@ -81,6 +90,11 @@ export default function Blog() {
     } else {
       setSearchParams({});
     }
+    
+    // Scroll to top smoothly when filters change (with small delay to ensure content updates)
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
   };
 
   // Filter blog posts based on categories only
@@ -97,8 +111,33 @@ export default function Blog() {
     });
   }, [selectedCategories]);
 
+  // Get posts to display (limited by displayCount)
+  const displayedPosts = filteredPosts.slice(0, displayCount);
+
+  // Check if there are more posts to load
+  const hasMorePosts = displayedPosts.length < filteredPosts.length;
+
+  // Handle load more
+  const handleLoadMore = () => {
+    setDisplayCount(prev => prev + 6);
+  };
+
+  // Handle image loading
+  const handleImageLoad = (postId: string) => {
+    setImageLoadingStates(prev => ({ ...prev, [postId]: false }));
+  };
+
+  const handleImageError = (postId: string) => {
+    setImageLoadingStates(prev => ({ ...prev, [postId]: false }));
+  };
+
   return (
     <>
+      <SEO 
+        title="The Browns Blog - Dullstroom Travel Guide & Local Insights"
+        description="Discover Dullstroom's hidden gems, local insights, and travel inspiration. Expert guides on fly fishing, accommodation, food, events, and activities in the Mpumalanga highlands."
+        keywords="Dullstroom blog, travel guide, fly fishing, accommodation, food, events, activities, Mpumalanga highlands, local insights"
+      />
       <div className="min-h-screen">
         {/* Hero Section */}
         <section className="section-spacing bg-gradient-to-br from-accent to-muted">
@@ -146,15 +185,26 @@ export default function Blog() {
                 </div>
               ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6 sm:gap-8">
-                  {filteredPosts.map((post) => (
+                  {displayedPosts.map((post) => (
                   <Card key={post.id} className="group hover:shadow-lg transition-shadow cursor-pointer"
                     onClick={() => window.location.href = `/blog/${post.slug}`}>
                     <div className="relative overflow-hidden">
+                      {imageLoadingStates[post.id] !== false && (
+                        <ImagePlaceholder className="w-full h-48 sm:h-56 md:h-64" />
+                      )}
                       <img
                         src={post.image}
                         alt={post.title}
-                        className="w-full h-48 sm:h-56 md:h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                        className={`w-full h-48 sm:h-56 md:h-64 object-cover group-hover:scale-105 transition-transform duration-300 ${
+                          imageLoadingStates[post.id] === false ? 'block' : 'hidden'
+                        }`}
                         loading="lazy"
+                        onLoad={() => handleImageLoad(post.id)}
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.src = '/images/blog/fly-fishing-dullstroom.jpg'; // Fallback image
+                          handleImageError(post.id);
+                        }}
                       />
                       <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
                         <Badge variant="secondary" className="text-xs sm:text-sm">{post.category}</Badge>
@@ -209,11 +259,18 @@ export default function Blog() {
               )}
 
               {/* Load More */}
-              <div className="text-center mt-8 sm:mt-12">
-                <Button variant="outline" size="lg" className="min-h-[48px] text-fluid-base">
-                  Load More Posts
-                </Button>
-              </div>
+              {hasMorePosts && (
+                <div className="text-center mt-8 sm:mt-12">
+                  <Button 
+                    variant="outline" 
+                    size="lg" 
+                    className="min-h-[48px] text-fluid-base"
+                    onClick={handleLoadMore}
+                  >
+                    Load More Posts
+                  </Button>
+                </div>
+              )}
             </div>
           </div>
         </section>
