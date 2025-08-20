@@ -418,6 +418,8 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Social Proof Section */}
+      <ReviewShowcase />
 
       {/* Featured Booking Section */}
       <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-r from-primary/10 via-background to-accent/10">

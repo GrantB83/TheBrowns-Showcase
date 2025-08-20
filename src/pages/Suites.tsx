@@ -9,6 +9,7 @@ import { BookingWidget } from "@/components/ui/booking-widget";
 import { SuiteFilter } from "@/components/ui/suite-filter";
 import { Link } from "react-router-dom";
 import { Clock, Gift, Users, ExternalLink, Home } from "lucide-react";
+import { ReviewShowcase } from "@/components/ui/review-showcase";
 const luxurySuites = [{
   title: "Master Suite",
   capacity: "2 adults + 2 children under 12",
@@ -558,6 +559,12 @@ export default function Suites() {
           </section>
         )}
 
+        {/* Social Proof Section */}
+        <ReviewShowcase 
+          title="Trusted by Hundreds of Highland Guests"
+          subtitle="See why travelers choose The Browns for their Dullstroom luxury accommodation"
+          compact={true} 
+        />
 
         {/* Final Call to Action */}
         <section className="section-spacing bg-gradient-to-br from-primary/10 to-accent/5">
