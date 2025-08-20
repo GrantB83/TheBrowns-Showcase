@@ -3,6 +3,7 @@ import { SEO } from "@/components/ui/seo";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { MobileQuickActions } from "@/components/ui/enhanced-mobile-gesture-nav";
 
 
 // Luxury Suites Gallery Images - Updated with accurate descriptions
@@ -597,17 +598,17 @@ export default function Gallery() {
                   </a>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+             </div>
+           </div>
+         </div>
+       </div>
 
-      {/* Mobile Quick Actions */}
-      <MobileQuickActions
-        onBooking={() => window.open('https://book.nightsbridge.com/00000', '_blank')}
-        onCall={() => window.open('tel:+27000000000', '_self')}
-        onWhatsApp={() => window.open('https://wa.me/27000000000?text=Hi! I would like to enquire about The Browns Guest Suites.', '_blank')}
-      />
-  );
-}
+       {/* Mobile Quick Actions */}
+       <MobileQuickActions
+         onBooking={() => window.open('https://book.nightsbridge.com/00000', '_blank')}
+         onCall={() => window.open('tel:+27000000000', '_self')}
+         onWhatsApp={() => window.open('https://wa.me/27000000000?text=Hi! I would like to enquire about The Browns Guest Suites.', '_blank')}
+       />
+     </>
+   );
+ }
