@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback } from "react";
 interface ConversionEvent {
   event: string;
   timestamp: Date;
-  data?: any;
+  data?: Record<string, any>;
   userId?: string;
   sessionId?: string;
 }
@@ -68,7 +68,7 @@ class ConversionFunnelTracker {
     return funnelSessionId;
   }
 
-  trackStep(stepName: string, data?: any) {
+  trackStep(stepName: string, data?: Record<string, any>) {
     if (!this.currentFunnel) {
       this.startFunnel();
     }
@@ -124,7 +124,7 @@ class ConversionFunnelTracker {
     this.notifyListeners();
   }
 
-  private trackEvent(event: string, data?: any) {
+  private trackEvent(event: string, data?: Record<string, any>) {
     const conversionEvent: ConversionEvent = {
       event,
       timestamp: new Date(),
@@ -205,7 +205,7 @@ export function useConversionFunnel() {
     return tracker.startFunnel(sessionId);
   }, [tracker]);
 
-  const trackStep = useCallback((stepName: string, data?: any) => {
+  const trackStep = useCallback((stepName: string, data?: Record<string, any>) => {
     tracker.trackStep(stepName, data);
   }, [tracker]);
 

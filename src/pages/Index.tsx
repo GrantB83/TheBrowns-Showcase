@@ -217,10 +217,10 @@ const Index = () => {
           </div>
           
           <div className="card-grid max-w-7xl mx-auto">
-            {featuredSuites.map((suite, index) => (
+            {featuredSuites.map((suite, idx) => (
               <div 
-                key={index}
-                style={{ animationDelay: `${index * 150}ms` }}
+                key={`suite-${idx}`}
+                style={{ animationDelay: `${idx * 150}ms` }}
                 className="scroll-animate h-full"
               >
                 <SuiteCard {...suite} className="h-full" />

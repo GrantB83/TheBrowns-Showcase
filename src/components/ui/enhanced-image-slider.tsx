@@ -149,7 +149,7 @@ export function EnhancedImageSlider({
         }}
       >
         {images.map((image, index) => (
-          <div key={index} className="relative w-full h-full flex-shrink-0 mobile-select-none">
+          <div key={`${image.src}-${index}`} className="relative w-full h-full flex-shrink-0 mobile-select-none">
             <picture className="w-full h-full">
               <source 
                 srcSet={getOptimizedSrc(image.src, 'fm=webp&w=800&h=600&q=80')} 

@@ -82,7 +82,7 @@ export function EnhancedGallery({
       <div className={cn("grid gap-2 sm:gap-3 lg:gap-4", getGridCols())}>
         {filteredImages.map((image, index) => (
           <Card 
-            key={index} 
+            key={`${image.src}-${index}`}
             className="group overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300 touch-manipulation"
             onClick={() => openLightbox(index)}
           >

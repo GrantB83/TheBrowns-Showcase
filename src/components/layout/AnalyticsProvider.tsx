@@ -8,7 +8,7 @@ interface AnalyticsContextType {
   isInitialized: boolean;
   hasConsent: boolean;
   trackPageView: (path?: string, title?: string) => void;
-  trackEvent: (eventName: string, data?: any) => void;
+  trackEvent: (eventName: string, data?: Record<string, any>) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);

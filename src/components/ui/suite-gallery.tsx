@@ -104,7 +104,7 @@ export function SuiteGallery({ suiteSlug, suiteName, className }: SuiteGalleryPr
           >
             {images.map((image, index) => (
               <div 
-                key={index}
+                key={`${image.src}-${index}`}
                 className="w-full flex-shrink-0 relative cursor-pointer"
                 onClick={() => openLightbox(index)}
               >

@@ -1,3 +1,19 @@
+// TypeScript interfaces for better type safety
+interface GtagFunction {
+  (...args: any[]): void;
+  q?: any[];
+  l?: number;
+}
+
+declare global {
+  interface Window {
+    gtag?: GtagFunction;
+    fbq?: any;
+    _fbq?: any;
+    dataLayer?: any[];
+  }
+}
+
 // Analytics Service - Centralized tracking for GA4, Google Ads, and Meta Pixel
 // This service provides a single interface for all tracking needs
 
@@ -136,13 +152,13 @@ class AnalyticsService {
     document.head.appendChild(script);
 
     // Initialize gtag
-    (window as any).gtag = (window as any).gtag || function(...args: any[]) {
-      ((window as any).gtag.q = (window as any).gtag.q || []).push(args);
-    };
-    (window as any).gtag.l = +new Date();
+    window.gtag = window.gtag || function(...args: any[]) {
+      (window.gtag!.q = window.gtag!.q || []).push(args);
+    } as GtagFunction;
+    (window.gtag as any).l = +new Date();
 
     // Configure GA4
-    (window as any).gtag('config', this.config.ga4Id, {
+    window.gtag('config', this.config.ga4Id, {
       page_title: document.title,
       page_location: window.location.href,
       send_page_view: true,
@@ -164,11 +180,11 @@ class AnalyticsService {
     if (!this.config.googleAdsId) return;
 
     // Google Ads conversion linker
-    (window as any).gtag = (window as any).gtag || function(...args: any[]) {
-      ((window as any).gtag.q = (window as any).gtag.q || []).push(args);
-    };
+    window.gtag = window.gtag || function(...args: any[]) {
+      (window.gtag!.q = window.gtag!.q || []).push(args);
+    } as GtagFunction;
 
-    (window as any).gtag('config', this.config.googleAdsId, {
+    window.gtag('config', this.config.googleAdsId, {
       conversion_linker: true,
       enhanced_conversions: true
     });
