@@ -386,7 +386,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
       <p>Set your foodie base and check live Rates & Availability at The Browns — then eat, sip and explore at your own pace.</p>
     `,
-    category: "Dining",
+    category: "Food",
     author: "The Browns Team",
     date: "August 17, 2025",
     readTime: "8 min read",
@@ -481,7 +481,7 @@ export const blogPosts: BlogPost[] = [
       <h3>Preparation and Safety</h3>
       <p>Highland weather can change quickly, so proper preparation is essential. We provide all our guests with detailed trail maps and current weather information to ensure safe and enjoyable hiking experiences.</p>
     `,
-    category: "Outdoor Activities",
+    category: "Activities",
     author: "The Browns Team",
     date: "February 20, 2024",
     readTime: "8 min read",
@@ -705,7 +705,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
       <p>Choose the setup that fits your season, then check live Rates & Availability to secure your dates.</p>
     `,
-    category: "Travel Tips",
+    category: "Travel",
     author: "The Browns Team",
     authorBio: "Local experts with deep knowledge of Dullstroom's seasonal patterns and highland weather conditions.",
     date: "August 17, 2025",
@@ -784,7 +784,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
       <p>Choose the setup that fits your trip and check live Rates & Availability to secure your dates.</p>
     `,
-    category: "Travel Tips",
+    category: "Travel",
     author: "The Browns Team",
     authorBio: "Local travel experts with extensive knowledge of routes, timing, and practical tips for reaching the Mpumalanga highlands.",
     date: "August 17, 2025",
@@ -878,7 +878,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
       <p>Choose the setup that fits your trip and check live Rates & Availability to secure your dates.</p>
     `,
-    category: "Food & Drink",
+    category: "Food",
     author: "The Browns Team",
     authorBio: "Local experts passionate about showcasing the best of Dullstroom and the Mpumalanga highlands.",
     date: "August 17, 2025",
@@ -993,7 +993,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
       <p>Choose the setup that fits your couple's weekend and check live Rates & Availability to secure your dates.</p>
     `,
-    category: "Romance",
+    category: "Activities",
     author: "The Browns Team",
     authorBio: "Local experts passionate about showcasing the best of Dullstroom and the Mpumalanga highlands.",
     date: "August 17, 2025",
@@ -1108,7 +1108,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
       <p>Choose the setup that suits your family and check live Rates & Availability to secure your dates.</p>
     `,
-    category: "Family",
+    category: "Activities",
     author: "The Browns Team", 
     authorBio: "Local experts passionate about showcasing the best of Dullstroom and the Mpumalanga highlands.",
     date: "August 17, 2025",
