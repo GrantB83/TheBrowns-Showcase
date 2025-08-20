@@ -1,11 +1,6 @@
-import { useState } from "react";
-import { Search, X, Filter } from "lucide-react";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Label } from "@/components/ui/label";
+import { X } from "lucide-react";
 
 interface BlogSearchProps {
   selectedCategories: string[];
@@ -22,32 +17,36 @@ export function BlogSearch({
   resultsCount,
   quickFilters = []
 }: BlogSearchProps) {
-  const [isFilterOpen, setIsFilterOpen] = useState(false);
-
   const clearFilters = () => {
     onCategoryChange([]);
   };
 
-  const toggleCategory = (category: string) => {
+  const selectCategory = (category: string) => {
     if (selectedCategories.includes(category)) {
-      onCategoryChange(selectedCategories.filter(c => c !== category));
+      // If already selected, clear all filters
+      onCategoryChange([]);
     } else {
-      onCategoryChange([...selectedCategories, category]);
+      // Select only this category (single selection mode)
+      onCategoryChange([category]);
     }
+  };
+
+  const removeCategory = (category: string) => {
+    onCategoryChange(selectedCategories.filter(c => c !== category));
   };
 
   const hasActiveFilters = selectedCategories.length > 0;
 
   return (
-    <div className="space-y-4">
-      {/* Quick Filters */}
+    <div className="space-y-3">
+      {/* Quick Filters - Optimized for 2 lines */}
       {quickFilters.length > 0 && (
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2">
           <Button
             variant={selectedCategories.length === 0 ? "default" : "outline"}
             size="sm"
-            onClick={() => onCategoryChange([])}
-            className="h-8"
+            onClick={clearFilters}
+            className="h-7 px-3 text-xs sm:h-8 sm:px-4 sm:text-sm"
           >
             All Topics
           </Button>
@@ -56,14 +55,8 @@ export function BlogSearch({
               key={filter.category}
               variant={selectedCategories.includes(filter.category) ? "default" : "outline"}
               size="sm"
-              onClick={() => {
-                if (selectedCategories.includes(filter.category)) {
-                  onCategoryChange(selectedCategories.filter(c => c !== filter.category));
-                } else {
-                  onCategoryChange([filter.category]);
-                }
-              }}
-              className="h-8"
+              onClick={() => selectCategory(filter.category)}
+              className="h-7 px-3 text-xs sm:h-8 sm:px-4 sm:text-sm"
             >
               {filter.label}
             </Button>
@@ -71,83 +64,43 @@ export function BlogSearch({
         </div>
       )}
 
-      {/* Additional Filter Options */}
-      <div className="flex justify-end">
-        <Popover open={isFilterOpen} onOpenChange={setIsFilterOpen}>
-          <PopoverTrigger asChild>
-            <Button variant="outline" size="sm" className="h-8 gap-2">
-              <Filter className="h-4 w-4" />
-              More Filters
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent className="w-64" align="end">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <h4 className="font-medium">Filter by Category</h4>
-                {selectedCategories.length > 0 && (
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => onCategoryChange([])}
-                    className="h-6 px-2 text-xs"
-                  >
-                    Clear
-                  </Button>
-                )}
-              </div>
-              <div className="space-y-2">
-                {availableCategories.filter(cat => cat !== "All").map((category) => (
-                  <div key={category} className="flex items-center space-x-2">
-                    <Checkbox
-                      id={category}
-                      checked={selectedCategories.includes(category)}
-                      onCheckedChange={() => toggleCategory(category)}
-                    />
-                    <Label htmlFor={category} className="text-sm">
-                      {category}
-                    </Label>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </PopoverContent>
-        </Popover>
-      </div>
-
       {/* Active Filters & Results */}
-      <div className="flex items-center justify-between flex-wrap gap-2">
-        <div className="flex items-center space-x-2">
-          {selectedCategories.map((category) => (
-            <Badge key={category} variant="secondary" className="text-xs">
-              {category}
+      {(hasActiveFilters || resultsCount !== undefined) && (
+        <div className="flex items-center justify-between flex-wrap gap-2">
+          <div className="flex items-center gap-2">
+            {selectedCategories.map((category) => (
+              <Badge key={category} variant="secondary" className="text-xs h-6">
+                {category}
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => removeCategory(category)}
+                  className="ml-1 h-3 w-3 p-0 hover:bg-transparent"
+                  aria-label={`Remove ${category} filter`}
+                >
+                  <X className="h-2 w-2" />
+                </Button>
+              </Badge>
+            ))}
+            {hasActiveFilters && (
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={() => toggleCategory(category)}
-                className="ml-1 h-3 w-3 p-0 hover:bg-transparent"
+                onClick={clearFilters}
+                className="text-xs text-muted-foreground h-6 px-2"
               >
-                <X className="h-2 w-2" />
+                Clear all
               </Button>
-            </Badge>
-          ))}
-          {hasActiveFilters && (
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={clearFilters}
-              className="text-xs text-muted-foreground"
-            >
-              Clear all
-            </Button>
+            )}
+          </div>
+          
+          {resultsCount !== undefined && (
+            <span className="text-sm text-muted-foreground">
+              {resultsCount} {resultsCount === 1 ? 'result' : 'results'}
+            </span>
           )}
         </div>
-        
-        {resultsCount !== undefined && (
-          <span className="text-sm text-muted-foreground">
-            {resultsCount} {resultsCount === 1 ? 'result' : 'results'}
-          </span>
-        )}
-      </div>
+      )}
     </div>
   );
 }
