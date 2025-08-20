@@ -335,18 +335,6 @@ export function SuiteBookingCard({
             <AccordionContent className="px-4 pb-4">
               <div className="space-y-4">
                 <p className="text-muted-foreground leading-relaxed">{getCombinedDescription()}</p>
-                
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                  {mainAmenities.slice(0, 6).map((amenity, index) => {
-                    const Icon = getAmenityIcon(amenity.text);
-                    return (
-                      <div key={index} className="flex items-center gap-3 text-sm p-3 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
-                        <Icon className="h-4 w-4 text-primary flex-shrink-0" />
-                        <span className="font-medium">{amenity.text}</span>
-                      </div>
-                    );
-                  })}
-                </div>
               </div>
             </AccordionContent>
           </AccordionItem>
