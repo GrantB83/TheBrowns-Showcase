@@ -235,19 +235,19 @@ export function SuiteBookingCard({
   const getSuiteHighlights = () => {
     switch (slug) {
       case "master-suite":
-        return "King XL bed, private lounge opening to two balconies – Ideal for Couples";
+        return "Extra-spacious with dressing room and bay windows – Ideal for Couples";
       case "loft-suite":
-        return "Family unit with Queen XL + two singles, Zuikerboschkop views – Perfect for Families";
+        return "Family unit with spacious lounge and mountain views – Perfect for Families";
       case "garden-suite":
-        return "Garden views with sumptuous bath, double vanity – Couples' Haven";
+        return "Ground-floor with wonderful garden views – Couples' Haven";
       case "cove-suite":
-        return "Private lounge for two, charming outdoor seating area – Intimate Retreat";
+        return "Ground-floor retreat with charming outdoor seating – Intimate Retreat";
       case "robin-suite":
-        return "Cottage charm with fireplace, private garden patio – Family Favorite";
+        return "Cottage charm with configurable bedding – Family Favorite";
       case "blue-crane-suite":
-        return "Spacious bedroom with fireplace and private patio – Perfect for Two";
+        return "Spacious cottage bedroom with private patio – Perfect for Two";
       case "falcon-suite":
-        return "Private lounge with fold-out sofa, fireplace – Small Families";
+        return "Ground-floor with spacious private lounge – Small Families";
       case "self-catering-house":
         return "Fully equipped for groups up to 16 with barbecues and secure parking";
       default:
