@@ -11,7 +11,7 @@ const footerLinks = {
     href: "/about"
   }, {
     name: "Suites",
-    href: "/suites"
+    href: "/accommodation"
   }, {
     name: "Gallery",
     href: "/gallery"

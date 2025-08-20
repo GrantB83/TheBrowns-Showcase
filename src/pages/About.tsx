@@ -219,7 +219,7 @@ export default function About() {
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" asChild className="min-h-[48px] text-fluid-base font-medium touch-manipulation">
-                  <Link to="/accommodations">
+                  <Link to="/accommodation">
                     Explore Our Suites
                   </Link>
                 </Button>
