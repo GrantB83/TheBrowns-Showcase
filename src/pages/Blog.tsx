@@ -63,11 +63,14 @@ export default function Blog() {
     };
   };
 
-  // Handle URL parameters for filtering
+  // Handle URL parameters and route-based filtering
   useEffect(() => {
     const categoryParam = searchParams.get('category');
     if (categoryParam && categories.includes(categoryParam)) {
       setSelectedCategories([categoryParam]);
+    } else if (window.location.pathname === '/activities') {
+      // Auto-activate Activities filter when accessed via /activities route
+      setSelectedCategories(['Activities']);
     }
   }, [searchParams]);
 
