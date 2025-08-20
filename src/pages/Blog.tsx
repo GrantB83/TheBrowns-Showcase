@@ -12,7 +12,6 @@ import { MobileQuickActions } from "@/components/ui/enhanced-mobile-gesture-nav"
 
 export default function Blog() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 
   // Quick filter buttons for main topics
@@ -84,23 +83,19 @@ export default function Blog() {
     }
   };
 
-  // Filter blog posts based on search and categories
+  // Filter blog posts based on categories only
   const filteredPosts = useMemo(() => {
     return blogPosts.filter(post => {
       // Only show published posts
       if (!post.published) return false;
       
-      const matchesSearch = searchTerm === "" || 
-        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.keywords.some(keyword => keyword.toLowerCase().includes(searchTerm.toLowerCase()));
-      
+      // Filter by categories only
       const matchesCategory = selectedCategories.length === 0 || 
         selectedCategories.includes(post.category);
       
-      return matchesSearch && matchesCategory;
+      return matchesCategory;
     });
-  }, [searchTerm, selectedCategories]);
+  }, [selectedCategories]);
 
   return (
     <>
@@ -122,8 +117,6 @@ export default function Blog() {
           <div className="responsive-container">
             <div className="max-w-4xl mx-auto">
               <BlogSearch
-                searchTerm={searchTerm}
-                onSearchChange={setSearchTerm}
                 selectedCategories={selectedCategories}
                 onCategoryChange={handleCategoryChange}
                 availableCategories={categories}
@@ -141,15 +134,12 @@ export default function Blog() {
               {filteredPosts.length === 0 ? (
                 <div className="text-center py-8 sm:py-12">
                   <p className="text-muted-foreground text-fluid-lg mb-4">
-                    No blog posts found matching your search criteria.
+                    No blog posts found matching your selected categories.
                   </p>
                   <Button 
                     variant="ghost" 
                     className="min-h-[48px] text-fluid-base"
-                    onClick={() => {
-                      setSearchTerm("");
-                      handleCategoryChange([]);
-                    }}
+                    onClick={() => handleCategoryChange([])}
                   >
                     Clear Filters
                   </Button>
