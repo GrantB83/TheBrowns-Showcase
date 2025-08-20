@@ -4,26 +4,6 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
-// Generate accurate, conservative descriptions for suite images
-const generateSuiteDescription = (category: string, imageNumber: string): string => {
-  const roomTypes = {
-    "01": "Main room interior",
-    "02": "Secondary living space", 
-    "03": "Additional room area",
-    "04": "Kitchen or dining space",
-    "05": "Bathroom facilities",
-    "06": "Interior details and furnishings",
-    "07": "Room features and amenities",
-    "08": "Additional accommodation space",
-    "09": "Interior design elements",
-    "10": "Room layout and features",
-    "11": "Entrance and reception area",
-    "12": "Additional living area",
-    "13": "Evening interior ambiance"
-  };
-  
-  return roomTypes[imageNumber as keyof typeof roomTypes] || "Interior accommodation space";
-};
 
 // Luxury Suites Gallery Images - Updated with accurate descriptions
 const luxurySuitesImages = [
@@ -32,50 +12,43 @@ const luxurySuitesImages = [
     src: "/images/suites/master-suite-01.jpg",
     alt: "Master Suite main accommodation area",
     title: "Master Suite - Main Area",
-    category: "Master Suite",
-    description: generateSuiteDescription("Master Suite", "01")
+    category: "Master Suite"
   },
   {
     src: "/images/suites/master-suite-02.jpg",
     alt: "Master Suite secondary living space",
     title: "Master Suite - Living Space",
-    category: "Master Suite",
-    description: generateSuiteDescription("Master Suite", "02")
+    category: "Master Suite"
   },
   {
     src: "/images/suites/master-suite-03.jpg",
     alt: "Master Suite bathroom facilities",
     title: "Master Suite - Bathroom",
-    category: "Master Suite",
-    description: generateSuiteDescription("Master Suite", "03")
+    category: "Master Suite"
   },
   {
     src: "/images/suites/master-suite-04.jpg",
     alt: "Master Suite kitchen or dining area",
     title: "Master Suite - Kitchen Area",
-    category: "Master Suite",
-    description: generateSuiteDescription("Master Suite", "04")
+    category: "Master Suite"
   },
   {
     src: "/images/suites/master-suite-05.jpg",
     alt: "Master Suite additional room features",
     title: "Master Suite - Room Features",
-    category: "Master Suite", 
-    description: generateSuiteDescription("Master Suite", "05")
+    category: "Master Suite"
   },
   {
     src: "/images/suites/master-suite-06.jpg",
     alt: "Master Suite interior design and furnishings",
     title: "Master Suite - Interior Design",
-    category: "Master Suite",
-    description: generateSuiteDescription("Master Suite", "06")
+    category: "Master Suite"
   },
   {
     src: "/images/suites/master-suite-07.jpg",
     alt: "Master Suite room amenities and features",
     title: "Master Suite - Room Amenities",
-    category: "Master Suite",
-    description: generateSuiteDescription("Master Suite", "07")
+    category: "Master Suite"
   },
 
   // Loft Suite
@@ -83,50 +56,43 @@ const luxurySuitesImages = [
     src: "/images/suites/loft-suite-01.jpg",
     alt: "Loft Suite main accommodation area",
     title: "Loft Suite - Main Area",
-    category: "Loft Suite",
-    description: generateSuiteDescription("Loft Suite", "01")
+    category: "Loft Suite"
   },
   {
     src: "/images/suites/loft-suite-02.jpg",
     alt: "Loft Suite secondary living space",
     title: "Loft Suite - Living Space",
-    category: "Loft Suite", 
-    description: generateSuiteDescription("Loft Suite", "02")
+    category: "Loft Suite"
   },
   {
     src: "/images/suites/loft-suite-03.jpg",
     alt: "Loft Suite kitchen facilities",
     title: "Loft Suite - Kitchen",
-    category: "Loft Suite",
-    description: generateSuiteDescription("Loft Suite", "03")
+    category: "Loft Suite"
   },
   {
     src: "/images/suites/loft-suite-04.jpg",
     alt: "Loft Suite bathroom amenities",
     title: "Loft Suite - Bathroom",
-    category: "Loft Suite",
-    description: generateSuiteDescription("Loft Suite", "04")
+    category: "Loft Suite"
   },
   {
     src: "/images/suites/loft-suite-05.jpg",
     alt: "Loft Suite additional room features",
     title: "Loft Suite - Room Features",
-    category: "Loft Suite",
-    description: generateSuiteDescription("Loft Suite", "05")
+    category: "Loft Suite"
   },
   {
     src: "/images/suites/loft-suite-06.jpg",
     alt: "Loft Suite interior design elements",
     title: "Loft Suite - Interior Design",
-    category: "Loft Suite",
-    description: generateSuiteDescription("Loft Suite", "06")
+    category: "Loft Suite"
   },
   {
     src: "/images/suites/loft-suite-07.jpg",
     alt: "Loft Suite room amenities",
     title: "Loft Suite - Room Amenities",
-    category: "Loft Suite",
-    description: generateSuiteDescription("Loft Suite", "07")
+    category: "Loft Suite"
   },
 
   // Garden Suite
@@ -134,43 +100,37 @@ const luxurySuitesImages = [
     src: "/images/suites/garden-suite-01.jpg",
     alt: "Garden Suite main accommodation area",
     title: "Garden Suite - Main Area",
-    category: "Garden Suite",
-    description: generateSuiteDescription("Garden Suite", "01")
+    category: "Garden Suite"
   },
   {
     src: "/images/suites/garden-suite-02.jpg",
     alt: "Garden Suite secondary room space",
     title: "Garden Suite - Secondary Room",
-    category: "Garden Suite",
-    description: generateSuiteDescription("Garden Suite", "02")
+    category: "Garden Suite"
   },
   {
     src: "/images/suites/garden-suite-03.jpg",
     alt: "Garden Suite additional living area",
     title: "Garden Suite - Living Area",
-    category: "Garden Suite",
-    description: generateSuiteDescription("Garden Suite", "03")
+    category: "Garden Suite"
   },
   {
     src: "/images/suites/garden-suite-04.jpg",
     alt: "Garden Suite kitchen facilities",
     title: "Garden Suite - Kitchen",
-    category: "Garden Suite",
-    description: generateSuiteDescription("Garden Suite", "04")
+    category: "Garden Suite"
   },
   {
     src: "/images/suites/garden-suite-05.jpg",
     alt: "Garden Suite bathroom amenities",
     title: "Garden Suite - Bathroom",
-    category: "Garden Suite",
-    description: generateSuiteDescription("Garden Suite", "05")
+    category: "Garden Suite"
   },
   {
     src: "/images/suites/garden-suite-06.jpg",
     alt: "Garden Suite interior design features",
     title: "Garden Suite - Interior Features",
-    category: "Garden Suite",
-    description: generateSuiteDescription("Garden Suite", "06")
+    category: "Garden Suite"
   },
 
   // Blue Crane Suite
@@ -178,50 +138,43 @@ const luxurySuitesImages = [
     src: "/images/suites/blue-crane-suite-01.jpg",
     alt: "Blue Crane Suite main accommodation area",
     title: "Blue Crane Suite - Main Area",
-    category: "Blue Crane Suite",
-    description: generateSuiteDescription("Blue Crane Suite", "01")
+    category: "Blue Crane Suite"
   },
   {
     src: "/images/suites/blue-crane-suite-02.jpg",
     alt: "Blue Crane Suite secondary living space",
     title: "Blue Crane Suite - Living Space",
-    category: "Blue Crane Suite",
-    description: generateSuiteDescription("Blue Crane Suite", "02")
+    category: "Blue Crane Suite"
   },
   {
     src: "/images/suites/blue-crane-suite-03.jpg",
     alt: "Blue Crane Suite additional room area",
     title: "Blue Crane Suite - Additional Room",
-    category: "Blue Crane Suite",
-    description: generateSuiteDescription("Blue Crane Suite", "03")
+    category: "Blue Crane Suite"
   },
   {
     src: "/images/suites/blue-crane-suite-04.jpg",
     alt: "Blue Crane Suite kitchen facilities",
     title: "Blue Crane Suite - Kitchen",
-    category: "Blue Crane Suite",
-    description: generateSuiteDescription("Blue Crane Suite", "04")
+    category: "Blue Crane Suite"
   },
   {
     src: "/images/suites/blue-crane-suite-05.jpg",
     alt: "Blue Crane Suite bathroom amenities",
     title: "Blue Crane Suite - Bathroom",
-    category: "Blue Crane Suite",
-    description: generateSuiteDescription("Blue Crane Suite", "05")
+    category: "Blue Crane Suite"
   },
   {
     src: "/images/suites/blue-crane-suite-06.jpg",
     alt: "Blue Crane Suite interior design details",
     title: "Blue Crane Suite - Interior Details",
-    category: "Blue Crane Suite",
-    description: generateSuiteDescription("Blue Crane Suite", "06")
+    category: "Blue Crane Suite"
   },
   {
     src: "/images/suites/blue-crane-suite-07.jpg",
     alt: "Blue Crane Suite room features and amenities",
     title: "Blue Crane Suite - Room Features",
-    category: "Blue Crane Suite",
-    description: generateSuiteDescription("Blue Crane Suite", "07")
+    category: "Blue Crane Suite"
   },
 
   // Falcon Suite
@@ -229,50 +182,43 @@ const luxurySuitesImages = [
     src: "/images/suites/falcon-suite-01.jpg",
     alt: "Falcon Suite main accommodation area",
     title: "Falcon Suite - Main Area",
-    category: "Falcon Suite",
-    description: generateSuiteDescription("Falcon Suite", "01")
+    category: "Falcon Suite"
   },
   {
     src: "/images/suites/falcon-suite-02.jpg",
     alt: "Falcon Suite secondary living space",
     title: "Falcon Suite - Living Space",
-    category: "Falcon Suite",
-    description: generateSuiteDescription("Falcon Suite", "02")
+    category: "Falcon Suite"
   },
   {
     src: "/images/suites/falcon-suite-03.jpg",
     alt: "Falcon Suite additional room area",
     title: "Falcon Suite - Additional Room",
-    category: "Falcon Suite",
-    description: generateSuiteDescription("Falcon Suite", "03")
+    category: "Falcon Suite"
   },
   {
     src: "/images/suites/falcon-suite-04.jpg",
     alt: "Falcon Suite kitchen facilities",
     title: "Falcon Suite - Kitchen",
-    category: "Falcon Suite",
-    description: generateSuiteDescription("Falcon Suite", "04")
+    category: "Falcon Suite"
   },
   {
     src: "/images/suites/falcon-suite-05.jpg",
     alt: "Falcon Suite bathroom amenities",
     title: "Falcon Suite - Bathroom",
-    category: "Falcon Suite",
-    description: generateSuiteDescription("Falcon Suite", "05")
+    category: "Falcon Suite"
   },
   {
     src: "/images/suites/falcon-suite-06.jpg",
     alt: "Falcon Suite interior design features",
     title: "Falcon Suite - Interior Design",
-    category: "Falcon Suite",
-    description: generateSuiteDescription("Falcon Suite", "06")
+    category: "Falcon Suite"
   },
   {
     src: "/images/suites/falcon-suite-07.jpg",
     alt: "Falcon Suite room amenities and features",
     title: "Falcon Suite - Room Features",
-    category: "Falcon Suite", 
-    description: generateSuiteDescription("Falcon Suite", "07")
+    category: "Falcon Suite"
   },
 
   // Cove Suite
@@ -280,43 +226,37 @@ const luxurySuitesImages = [
     src: "/images/suites/cove-suite-01.jpg",
     alt: "Cove Suite main accommodation area",
     title: "Cove Suite - Main Area",
-    category: "Cove Suite",
-    description: generateSuiteDescription("Cove Suite", "01")
+    category: "Cove Suite"
   },
   {
     src: "/images/suites/cove-suite-02.jpg",
     alt: "Cove Suite secondary living space",
     title: "Cove Suite - Living Space",
-    category: "Cove Suite",
-    description: generateSuiteDescription("Cove Suite", "02")
+    category: "Cove Suite"
   },
   {
     src: "/images/suites/cove-suite-03.jpg",
     alt: "Cove Suite additional room area",
     title: "Cove Suite - Additional Room",
-    category: "Cove Suite",
-    description: generateSuiteDescription("Cove Suite", "03")
+    category: "Cove Suite"
   },
   {
     src: "/images/suites/cove-suite-04.jpg",
     alt: "Cove Suite kitchen facilities",
     title: "Cove Suite - Kitchen",
-    category: "Cove Suite",
-    description: generateSuiteDescription("Cove Suite", "04")
+    category: "Cove Suite"
   },
   {
     src: "/images/suites/cove-suite-05.jpg",
     alt: "Cove Suite bathroom amenities",
     title: "Cove Suite - Bathroom",
-    category: "Cove Suite",
-    description: generateSuiteDescription("Cove Suite", "05")
+    category: "Cove Suite"
   },
   {
     src: "/images/suites/cove-suite-06.jpg",
     alt: "Cove Suite interior features",
     title: "Cove Suite - Interior Features",
-    category: "Cove Suite",
-    description: generateSuiteDescription("Cove Suite", "06")
+    category: "Cove Suite"
   },
 
   // Robin Suite
@@ -324,43 +264,37 @@ const luxurySuitesImages = [
     src: "/images/suites/robin-suite-01.jpg",
     alt: "Robin Suite main accommodation area",
     title: "Robin Suite - Main Area",
-    category: "Robin Suite",
-    description: generateSuiteDescription("Robin Suite", "01")
+    category: "Robin Suite"
   },
   {
     src: "/images/suites/robin-suite-02.jpg",
     alt: "Robin Suite secondary living space",
     title: "Robin Suite - Living Space",
-    category: "Robin Suite",
-    description: generateSuiteDescription("Robin Suite", "02")
+    category: "Robin Suite"
   },
   {
     src: "/images/suites/robin-suite-03.jpg",
     alt: "Robin Suite additional room area",
     title: "Robin Suite - Additional Room",
-    category: "Robin Suite",
-    description: generateSuiteDescription("Robin Suite", "03")
+    category: "Robin Suite"
   },
   {
     src: "/images/suites/robin-suite-04.jpg",
     alt: "Robin Suite kitchen facilities",
     title: "Robin Suite - Kitchen",
-    category: "Robin Suite",
-    description: generateSuiteDescription("Robin Suite", "04")
+    category: "Robin Suite"
   },
   {
     src: "/images/suites/robin-suite-05.jpg",
     alt: "Robin Suite bathroom amenities",
     title: "Robin Suite - Bathroom",
-    category: "Robin Suite",
-    description: generateSuiteDescription("Robin Suite", "05")
+    category: "Robin Suite"
   },
   {
     src: "/images/suites/robin-suite-06.jpg",
     alt: "Robin Suite interior features",
     title: "Robin Suite - Interior Features",
-    category: "Robin Suite",
-    description: generateSuiteDescription("Robin Suite", "06")
+    category: "Robin Suite"
   },
 
   // Luxury Guest House
@@ -368,92 +302,79 @@ const luxurySuitesImages = [
     src: "/images/suites/luxury-guest-house-01.jpg",
     alt: "Luxury Guest House main accommodation area",
     title: "Luxury Guest House - Main Area",
-    category: "Luxury Guest House",
-    description: generateSuiteDescription("Luxury Guest House", "01")
+    category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-02.jpg",
     alt: "Luxury Guest House secondary living space",
     title: "Luxury Guest House - Living Space",
-    category: "Luxury Guest House",
-    description: generateSuiteDescription("Luxury Guest House", "02")
+    category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-03.jpg",
     alt: "Luxury Guest House additional room area",
     title: "Luxury Guest House - Additional Room",
-    category: "Luxury Guest House",
-    description: generateSuiteDescription("Luxury Guest House", "03")
+    category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-04.jpg",
     alt: "Luxury Guest House kitchen facilities",
     title: "Luxury Guest House - Kitchen",
-    category: "Luxury Guest House",
-    description: generateSuiteDescription("Luxury Guest House", "04")
+    category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-05.jpg",
     alt: "Luxury Guest House bathroom facilities",
     title: "Luxury Guest House - Bathroom",
-    category: "Luxury Guest House",
-    description: generateSuiteDescription("Luxury Guest House", "05")
+    category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-06.jpg",
     alt: "Luxury Guest House interior design features",
     title: "Luxury Guest House - Interior Design",
-    category: "Luxury Guest House",
-    description: generateSuiteDescription("Luxury Guest House", "06")
+    category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-07.jpg",
     alt: "Luxury Guest House room amenities",
     title: "Luxury Guest House - Room Amenities",
-    category: "Luxury Guest House",
-    description: generateSuiteDescription("Luxury Guest House", "07")
+    category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-08.jpg",
     alt: "Luxury Guest House additional accommodation space",
     title: "Luxury Guest House - Additional Space",
-    category: "Luxury Guest House",
-    description: generateSuiteDescription("Luxury Guest House", "08")
+    category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-09.jpg",
     alt: "Luxury Guest House interior design elements",
     title: "Luxury Guest House - Design Elements",
-    category: "Luxury Guest House",
-    description: generateSuiteDescription("Luxury Guest House", "09")
+    category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-10.jpg",
     alt: "Luxury Guest House room layout and features",
     title: "Luxury Guest House - Room Layout",
-    category: "Luxury Guest House",
-    description: generateSuiteDescription("Luxury Guest House", "10")
+    category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-11.jpg",
     alt: "Luxury Guest House entrance and reception area",
     title: "Luxury Guest House - Entrance",
-    category: "Luxury Guest House",
-    description: generateSuiteDescription("Luxury Guest House", "11")
+    category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-12.jpg",
     alt: "Luxury Guest House additional living area",
     title: "Luxury Guest House - Additional Living",
-    category: "Luxury Guest House",
-    description: generateSuiteDescription("Luxury Guest House", "12")
+    category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-13.jpg",
     alt: "Luxury Guest House evening interior ambiance",
     title: "Luxury Guest House - Evening Ambiance",
-    category: "Luxury Guest House",
-    description: generateSuiteDescription("Luxury Guest House", "13")
+    category: "Luxury Guest House"
   }
 ];
 
@@ -464,106 +385,91 @@ const heritageCottageImages = [
     src: "/images/suites/heritage-cottage-cover.jpg",
     alt: "Heritage Cottage exterior view",
     title: "Heritage Cottage - Exterior",
-    category: "Exterior",
-    description: "Traditional cottage exterior architecture"
+    category: "Exterior"
   },
   {
     src: "/images/suites/heritage-cottage-house-01.jpg",
     alt: "Heritage Cottage main living area",
     title: "Heritage Cottage - Main Living Area",
-    category: "Living Spaces",
-    description: generateSuiteDescription("Heritage Cottage", "01")
+    category: "Living Spaces"
   },
   {
     src: "/images/suites/heritage-cottage-house-02.jpg",
     alt: "Heritage Cottage secondary living space",
     title: "Heritage Cottage - Secondary Living",
-    category: "Living Spaces",
-    description: generateSuiteDescription("Heritage Cottage", "02")
+    category: "Living Spaces"
   },
   {
     src: "/images/suites/heritage-cottage-house-03.jpg",
     alt: "Heritage Cottage bedroom accommodation",
     title: "Heritage Cottage - Bedroom",
-    category: "Bedrooms",
-    description: generateSuiteDescription("Heritage Cottage", "03")
+    category: "Bedrooms"
   },
   {
     src: "/images/suites/heritage-cottage-house-04.jpg",
     alt: "Heritage Cottage additional bedroom space",
     title: "Heritage Cottage - Additional Bedroom",
-    category: "Bedrooms",
-    description: generateSuiteDescription("Heritage Cottage", "04")
+    category: "Bedrooms"
   },
   {
     src: "/images/suites/heritage-cottage-house-05.jpg",
     alt: "Heritage Cottage third bedroom area",
     title: "Heritage Cottage - Third Bedroom",
-    category: "Bedrooms",
-    description: generateSuiteDescription("Heritage Cottage", "05")
+    category: "Bedrooms"
   },
   {
     src: "/images/suites/heritage-cottage-house-06.jpg",
     alt: "Heritage Cottage kitchen facilities",
     title: "Heritage Cottage - Kitchen",
-    category: "Kitchen & Dining",
-    description: generateSuiteDescription("Heritage Cottage", "06")
+    category: "Kitchen & Dining"
   },
   {
     src: "/images/suites/heritage-cottage-house-07.jpg",
     alt: "Heritage Cottage dining area",
     title: "Heritage Cottage - Dining Area",
-    category: "Kitchen & Dining",
-    description: generateSuiteDescription("Heritage Cottage", "07")
+    category: "Kitchen & Dining"
   },
   {
     src: "/images/suites/heritage-cottage-house-08.jpg",
     alt: "Heritage Cottage kitchen details",
     title: "Heritage Cottage - Kitchen Details",
-    category: "Kitchen & Dining",
-    description: generateSuiteDescription("Heritage Cottage", "08")
+    category: "Kitchen & Dining"
   },
   {
     src: "/images/suites/heritage-cottage-house-09.jpg",
     alt: "Heritage Cottage bathroom facilities",
     title: "Heritage Cottage - Main Bathroom",
-    category: "Bathrooms",
-    description: generateSuiteDescription("Heritage Cottage", "09")
+    category: "Bathrooms"
   },
   {
     src: "/images/suites/heritage-cottage-house-10.jpg",
     alt: "Heritage Cottage additional bathroom",
     title: "Heritage Cottage - Additional Bathroom",
-    category: "Bathrooms",
-    description: generateSuiteDescription("Heritage Cottage", "10")
+    category: "Bathrooms"
   },
   {
     src: "/images/suites/heritage-cottage-house-11.jpg",
     alt: "Heritage Cottage entrance area",
     title: "Heritage Cottage - Entrance",
-    category: "Interior Features",
-    description: generateSuiteDescription("Heritage Cottage", "11")
+    category: "Interior Features"
   },
   {
     src: "/images/suites/heritage-cottage-house-12.jpg",
     alt: "Heritage Cottage interior details",
     title: "Heritage Cottage - Interior Details",
-    category: "Interior Features",
-    description: generateSuiteDescription("Heritage Cottage", "12")
+    category: "Interior Features"
   },
   {
     src: "/images/suites/heritage-cottage-house-13.jpg",
     alt: "Heritage Cottage outdoor space",
     title: "Heritage Cottage - Outdoor Area",
-    category: "Outdoor Spaces",
-    description: generateSuiteDescription("Heritage Cottage", "13")
+    category: "Outdoor Spaces"
   },
   {
     src: "/images/suites/heritage-cottage-house-14.jpg",
     alt: "Heritage Cottage additional outdoor area",
     title: "Heritage Cottage - Additional Outdoor",
-    category: "Outdoor Spaces", 
-    description: "Additional outdoor accommodation space"
+    category: "Outdoor Spaces"
   }
 ];
 
