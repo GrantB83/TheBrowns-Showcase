@@ -72,7 +72,9 @@ export function ImageAnalyzer({ images, onAnalysisComplete }: ImageAnalyzerProps
 
       return { description, confidence, features };
     } catch (error) {
-      console.error('Error analyzing image:', error);
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Error analyzing image:', error);
+      }
       return {
         description: "Interior space with quality amenities",
         confidence: 0,
@@ -101,7 +103,9 @@ export function ImageAnalyzer({ images, onAnalysisComplete }: ImageAnalyzerProps
 
         setProgress(((i + 1) / images.length) * 100);
       } catch (error) {
-        console.error(`Error analyzing image ${image.src}:`, error);
+        if (process.env.NODE_ENV === 'development') {
+          console.error(`Error analyzing image ${image.src}:`, error);
+        }
         analysisResults.push({
           src: image.src,
           originalDescription: image.description || "",

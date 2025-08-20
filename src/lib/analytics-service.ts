@@ -116,7 +116,9 @@ class AnalyticsService {
       this.isInitialized = true;
       this.log('Analytics service initialized');
     } catch (error) {
-      console.error('Failed to initialize analytics:', error);
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Failed to initialize analytics:', error);
+      }
     }
   }
 
@@ -210,24 +212,29 @@ class AnalyticsService {
   private initializeMetaPixel(): void {
     if (!this.config.metaPixelId) return;
 
-    // Meta Pixel implementation
+    // Meta Pixel is already initialized in index.html
+    // This method just ensures the fbq function is available
     window.fbq = window.fbq || function(...args: unknown[]) {
       (window.fbq!.q = window.fbq!.q || []).push(args);
     } as FacebookPixelFunction;
 
     if (!window._fbq) window._fbq = window.fbq;
-    window.fbq.push = window.fbq;
-    window.fbq.loaded = true;
-    window.fbq.version = '2.0';
-    window.fbq.queue = [];
+    
+    // Don't re-initialize if already loaded from HTML
+    if (!window.fbq.loaded) {
+      window.fbq.push = window.fbq;
+      window.fbq.loaded = true;
+      window.fbq.version = '2.0';
+      window.fbq.queue = [];
 
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://connect.facebook.net/en_US/fbevents.js';
-    document.head.appendChild(script);
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://connect.facebook.net/en_US/fbevents.js';
+      document.head.appendChild(script);
 
-    window.fbq!('init', this.config.metaPixelId);
-    window.fbq!('track', 'PageView');
+      window.fbq!('init', this.config.metaPixelId);
+      window.fbq!('track', 'PageView');
+    }
 
     this.log('Meta Pixel initialized');
   }

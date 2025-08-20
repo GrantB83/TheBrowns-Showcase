@@ -106,7 +106,9 @@ export function SuiteDetail({
       setAvailableImages(images);
     } catch (err) {
       setError('Failed to load images');
-      console.error('Image detection error:', err);
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Image detection error:', err);
+      }
     } finally {
       setIsLoading(false);
     }

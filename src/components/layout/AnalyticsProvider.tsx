@@ -32,7 +32,9 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
           console.log('[Analytics] Service initialized successfully');
         }
       } catch (error) {
-        console.error('[Analytics] Failed to initialize:', error);
+        if (process.env.NODE_ENV === 'development') {
+          console.error('[Analytics] Failed to initialize:', error);
+        }
       }
     };
 
