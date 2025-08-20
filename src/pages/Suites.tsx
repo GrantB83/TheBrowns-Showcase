@@ -30,10 +30,10 @@ const luxurySuites = [{
     text: "Dressing room with bay windows",
     emoji: "👗"
   }, {
-    text: "Charlotte Rhys amenities",
-    emoji: "🧴"
+    text: "Percale linen",
+    emoji: "🛏️"
   }],
-  additionalAmenities: ["DVD player", "Hair dryer", "Heater/fan", "Electric blankets", "Down duvets", "Beverage station with minibar fridge (still water & milk)", "Premium tea selection", "Hot chocolate", "Rusks", "Percale linen", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Lovely garden & outdoor kids' play area", "Interleads with Loft Family Suite"],
+  additionalAmenities: ["DVD player", "Hair dryer", "Heater/fan", "Electric blankets", "Down duvets", "Beverage station with minibar fridge (still water & milk)", "Premium tea selection", "Hot chocolate", "Rusks", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Lovely garden & outdoor kids' play area", "Interleads with Loft Family Suite"],
   images: ["/images/suites/master-suite-01.jpg", "/images/suites/master-suite-02.jpg", "/images/suites/master-suite-03.jpg", "/images/suites/master-suite-04.jpg", "/images/suites/master-suite-05.jpg", "/images/suites/master-suite-06.jpg", "/images/suites/master-suite-07.jpg"],
   slug: "master-suite",
   roomId: 6,
@@ -72,10 +72,10 @@ const luxurySuites = [{
     text: "Nespresso + frother",
     emoji: "☕"
   }, {
-    text: "Charlotte Rhys amenities",
-    emoji: "🧴"
+    text: "Percale linen",
+    emoji: "🛏️"
   }],
-  additionalAmenities: ["DVD player", "Hair dryer", "Heater/fan", "Electric blankets", "Down duvets", "Minibar fridge (still water & milk)", "Premium teas", "Hot chocolate", "Rusks", "Percale linen", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Garden & kids' play area", "Interleads with Master Suite"],
+  additionalAmenities: ["DVD player", "Hair dryer", "Heater/fan", "Electric blankets", "Down duvets", "Minibar fridge (still water & milk)", "Premium teas", "Hot chocolate", "Rusks", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Garden & kids' play area", "Interleads with Master Suite"],
   images: ["/images/suites/loft-suite-01.jpg", "/images/suites/loft-suite-02.jpg", "/images/suites/loft-suite-03.jpg", "/images/suites/loft-suite-04.jpg", "/images/suites/loft-suite-05.jpg", "/images/suites/loft-suite-06.jpg", "/images/suites/loft-suite-07.jpg"],
   slug: "loft-suite",
   roomId: 5,
@@ -114,10 +114,10 @@ const luxurySuites = [{
     text: "Nespresso + frother",
     emoji: "☕"
   }, {
-    text: "Charlotte Rhys amenities",
-    emoji: "🧴"
+    text: "Percale linen",
+    emoji: "🛏️"
   }],
-  additionalAmenities: ["DVD player", "Hair dryer", "Heater/fan", "Electric blankets", "Down duvets", "Minibar fridge (still water & milk)", "Premium teas", "Hot chocolate", "Rusks", "Percale linen", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Garden & kids' play area", "Interleads with Cove Suite"],
+  additionalAmenities: ["DVD player", "Hair dryer", "Heater/fan", "Electric blankets", "Down duvets", "Minibar fridge (still water & milk)", "Premium teas", "Hot chocolate", "Rusks", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Garden & kids' play area", "Interleads with Cove Suite"],
   images: ["/images/suites/garden-suite-01.jpg", "/images/suites/garden-suite-02.jpg", "/images/suites/garden-suite-03.jpg", "/images/suites/garden-suite-04.jpg", "/images/suites/garden-suite-05.jpg", "/images/suites/garden-suite-06.jpg"],
   slug: "garden-suite",
   roomId: 4,
@@ -156,10 +156,10 @@ const luxurySuites = [{
     text: "Nespresso + frother",
     emoji: "☕"
   }, {
-    text: "Charlotte Rhys amenities",
-    emoji: "🧴"
+    text: "Percale linen",
+    emoji: "🛏️"
   }],
-  additionalAmenities: ["DVD player", "Hair dryer", "Heater/fan", "Electric blankets", "Down duvets", "Minibar fridge (still water & milk)", "Premium teas", "Hot chocolate", "Rusks", "Percale linen", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Garden & kids' play area", "Interleads with Garden Suite"],
+  additionalAmenities: ["DVD player", "Hair dryer", "Heater/fan", "Electric blankets", "Down duvets", "Minibar fridge (still water & milk)", "Premium teas", "Hot chocolate", "Rusks", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Garden & kids' play area", "Interleads with Garden Suite"],
   images: ["/images/suites/cove-suite-01.jpg", "/images/suites/cove-suite-02.jpg", "/images/suites/cove-suite-03.jpg", "/images/suites/cove-suite-04.jpg", "/images/suites/cove-suite-05.jpg", "/images/suites/cove-suite-06.jpg"],
   slug: "cove-suite",
   roomId: 3,
@@ -312,7 +312,7 @@ const selfCateringHouses = [
       text: "Gas braai/barbecue",
       emoji: "🔥"
     }],
-    additionalAmenities: ["Charlotte Rhys amenities", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Garden & kids' play area", "All four luxury suites included", "Private suite entrances", "Walkable village location"],
+    additionalAmenities: ["Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Garden & kids' play area", "All four luxury suites included", "Private suite entrances", "Walkable village location"],
     slug: "luxury-guest-house",
     roomId: 18,
     testimonials: [
