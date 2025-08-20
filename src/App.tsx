@@ -3,7 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { AnalyticsProvider } from "@/components/layout/AnalyticsProvider";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { MobileQuickActionsProvider } from "@/hooks/use-mobile-quick-actions";
 import Index from "./pages/Index";
@@ -33,8 +33,8 @@ const App = () => (
             <Route index element={<Index />} />
             <Route path="about" element={<About />} />
             <Route path="accommodation" element={<Suites />} />
-            <Route path="accommodations" element={<Suites />} /> {/* Legacy route redirect */}
-            <Route path="suites" element={<Suites />} /> {/* Legacy route redirect */}
+            <Route path="accommodations" element={<Navigate to="/accommodation" replace />} /> {/* Legacy route redirect */}
+            <Route path="suites" element={<Navigate to="/accommodation" replace />} /> {/* Legacy route redirect */}
             <Route path="gallery" element={<Gallery />} />
             <Route path="activities" element={<Blog />} />
             
