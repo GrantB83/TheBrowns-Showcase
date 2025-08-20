@@ -4,6 +4,7 @@ import { SEO } from "@/components/ui/seo";
 import { StructuredData } from "@/components/ui/structured-data";
 import { EnhancedImageSlider } from "@/components/ui/enhanced-image-slider";
 import { SuiteCard } from "@/components/ui/suite-card";
+import { SuiteBookingCard } from "@/components/ui/suite-booking-card";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { Card, CardContent } from "@/components/ui/card";
 import { MobileSEO } from "@/components/ui/mobile-seo";
@@ -11,6 +12,7 @@ import { DullstroomInfographic } from "@/components/ui/dullstroom-infographic";
 import { ReviewShowcase } from "@/components/ui/review-showcase";
 import { PremiumImage } from "@/components/ui/premium-image";
 import { HeroBookingWidget } from "@/components/ui/hero-booking-widget";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useMobileDetection } from "@/hooks/use-mobile-optimization";
@@ -38,54 +40,286 @@ const heroImages = [
   }
 ];
 
-const featuredSuites = [
+// All suites data from Accommodation page
+const allSuites = [
   {
     title: "Master Suite",
-    description: "Our premium suite with elegant appointments and spacious living area.",
-    capacity: "Family of 4",
-    bedConfig: "King XL + Double sofa bed",
-    image: <img src="/images/suites/master-suite-01.jpg" alt="Master Suite at The Browns featuring king XL bed and elegant luxury appointments" className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-t-lg" />,
-    mainAmenities: [
-      { text: "Dressing room", emoji: "👗" },
-      { text: "Large lounge + sofa bed", emoji: "🛋️" },
-      { text: "Hot water bottle", emoji: "🔥" },
-      { text: "Double shower", emoji: "🚿" },
-      { text: "Netflix", emoji: "📺" },
-      { text: "Nespresso", emoji: "☕" }
-    ],
-    additionalAmenities: []
+    capacity: "2 adults + 2 children under 12",
+    bedConfig: "King XL bed + Double fold-out sofa (kids under 12)",
+    description: "First-floor, extra-spacious suite with a King XL bed and a double fold-out sofa (recommended for children up to 12). Large bedroom + dressing room with bay windows, a private lounge opening to two balconies, and a full bathroom with double vanity and double shower (plus separate toilet). Interleads with the Loft Family Suite.",
+    mainAmenities: [{
+      text: "Free Wi-Fi & TV with Netflix",
+      emoji: "📺"
+    }, {
+      text: "Nespresso + milk frother",
+      emoji: "☕"
+    }, {
+      text: "Double vanity & double shower + separate toilet",
+      emoji: "🛁"
+    }, {
+      text: "Private lounge opening to two balconies",
+      emoji: "🏠"
+    }, {
+      text: "Dressing room with bay windows",
+      emoji: "👗"
+    }, {
+      text: "Percale linen",
+      emoji: "🛏️"
+    }],
+    additionalAmenities: ["DVD player", "Hair dryer", "Heater/fan", "Electric blankets", "Down duvets", "Beverage station with minibar fridge (still water & milk)", "Premium tea selection", "Hot chocolate", "Rusks", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Lovely garden & outdoor kids' play area", "Interleads with Loft Family Suite"],
+    images: ["/images/suites/master-suite-01.jpg", "/images/suites/master-suite-02.jpg", "/images/suites/master-suite-03.jpg", "/images/suites/master-suite-04.jpg", "/images/suites/master-suite-05.jpg", "/images/suites/master-suite-06.jpg", "/images/suites/master-suite-07.jpg"],
+    slug: "master-suite",
+    roomId: 6,
+    testimonial: {
+      quote: "The Master Suite exceeded all expectations. Perfect for our anniversary with incredible attention to detail.",
+      author: "Sarah & Michael K.",
+      rating: 5
+    },
+    testimonials: [
+      { quote: "Breathtaking. Had a great stay and had a wonderful room. Beautiful place.", author: "Flip K", year: "2024", rating: 5 },
+      { quote: "Luxurious stay with impeccable facilities. Walking distance to the village centre and all the restaurants.", author: "Sonja", year: "2025", rating: 5 },
+      { quote: "Excellent location in Dullstroom. Highly recommended!", author: "Jonathan", year: "2025", rating: 5 },
+      { quote: "Clean and loved the little extras like sherry and teas and coffee station.", author: "Thaveshini", year: "2025", rating: 5 },
+      { quote: "Couldn't fault this accommodation, it was outstanding.", author: "Wendy", year: "2023", rating: 5 },
+      { quote: "The room was amazing, the bed is so comfortable, it's clean and well designed.", author: "Eyal", year: "2023", rating: 5 }
+    ]
+  },
+  {
+    title: "Loft Family Suite",
+    capacity: "4 adults",
+    bedConfig: "Queen XL main; two single beds in second (not combinable)",
+    description: "First-floor family unit with two bedrooms (Queen XL main; two single beds in second, not combinable), a spacious lounge with full surround sound, full bathroom with double vanity and separate toilet, plus a balcony with Zuikerboschkop views. Interleads with the Master Suite.",
+    mainAmenities: [{
+      text: "Two bedrooms (Queen XL + two singles)",
+      emoji: "🛏️"
+    }, {
+      text: "Spacious lounge with full surround sound",
+      emoji: "🔊"
+    }, {
+      text: "Balcony with Zuikerboschkop views",
+      emoji: "🏔️"
+    }, {
+      text: "Free Wi-Fi & TV with Netflix",
+      emoji: "📺"
+    }, {
+      text: "Nespresso + frother",
+      emoji: "☕"
+    }, {
+      text: "Percale linen",
+      emoji: "🛏️"
+    }],
+    additionalAmenities: ["DVD player", "Hair dryer", "Heater/fan", "Electric blankets", "Down duvets", "Minibar fridge (still water & milk)", "Premium teas", "Hot chocolate", "Rusks", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Garden & kids' play area", "Interleads with Master Suite"],
+    images: ["/images/suites/loft-suite-01.jpg", "/images/suites/loft-suite-02.jpg", "/images/suites/loft-suite-03.jpg", "/images/suites/loft-suite-04.jpg", "/images/suites/loft-suite-05.jpg", "/images/suites/loft-suite-06.jpg", "/images/suites/loft-suite-07.jpg"],
+    slug: "loft-suite",
+    roomId: 5,
+    testimonial: {
+      quote: "Perfect for our family of four. The kids loved having their own space while we enjoyed the Zuikerboschkop views from the balcony.",
+      author: "The Johnson Family",
+      rating: 5
+    },
+    testimonials: [
+      { quote: "Super luxurious b&b style accommodation staying in The Loft Suite.", author: "Martin", year: "2022", rating: 5 },
+      { quote: "We stayed in the Loft and it was nice and quiet and private.", author: "Magna V", year: "2024", rating: 5 },
+      { quote: "Easy access, good WiFi, heating, cleanliness, space and linen were of the highest quality.", author: "Reynard B", year: "2024", rating: 5 },
+      { quote: "Spacious and had all amenities one would need for a comfortable stay.", author: "Erica", year: "2025", rating: 5 },
+      { quote: "The location is perfect, walking distance to everything. Rooms well equipped, lots of extras.", author: "Terence", year: "2025", rating: 5 },
+      { quote: "Our room was huge and the property was well looked after and very peaceful.", author: "Kirsten", year: "2023", rating: 5 }
+    ]
   },
   {
     title: "Garden Suite",
-    description: "Ground floor suite with private entrance and beautiful garden views.",
     capacity: "2 guests",
     bedConfig: "Queen XL bed",
-    image: <img src="/images/suites/garden-suite-01.jpg" alt="Garden Suite at The Browns with private entrance and beautiful garden views" className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-t-lg" />,
-    mainAmenities: [
-      { text: "Lovely bath", emoji: "🛀" },
-      { text: "Double vanity", emoji: "🪞" },
-      { text: "Hot water bottle", emoji: "🔥" },
-      { text: "Private entrance", emoji: "🚪" },
-      { text: "Netflix", emoji: "📺" },
-      { text: "Nespresso", emoji: "☕" }
-    ],
-    additionalAmenities: []
+    description: "Ground-floor suite with Queen XL bed, wonderful garden views, and a full bathroom featuring double vanity and a sumptuous bath (plus shower). Interleads with the Cove Suite.",
+    mainAmenities: [{
+      text: "Wonderful garden views",
+      emoji: "🌿"
+    }, {
+      text: "Double vanity bathroom",
+      emoji: "🛁"
+    }, {
+      text: "Sumptuous bath + shower",
+      emoji: "🛀"
+    }, {
+      text: "Free Wi-Fi & TV with Netflix",
+      emoji: "📺"
+    }, {
+      text: "Nespresso + frother",
+      emoji: "☕"
+    }, {
+      text: "Percale linen",
+      emoji: "🛏️"
+    }],
+    additionalAmenities: ["DVD player", "Hair dryer", "Heater/fan", "Electric blankets", "Down duvets", "Minibar fridge (still water & milk)", "Premium teas", "Hot chocolate", "Rusks", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Garden & kids' play area", "Interleads with Cove Suite"],
+    images: ["/images/suites/garden-suite-01.jpg", "/images/suites/garden-suite-02.jpg", "/images/suites/garden-suite-03.jpg", "/images/suites/garden-suite-04.jpg", "/images/suites/garden-suite-05.jpg", "/images/suites/garden-suite-06.jpg"],
+    slug: "garden-suite",
+    roomId: 4,
+    testimonial: {
+      quote: "The most romantic suite with incredible garden views. The spa bath was pure luxury after a day of fly-fishing.",
+      author: "Emma & David R.",
+      rating: 5
+    },
+    testimonials: [
+      { quote: "The room was spectacular with some extra treats.", author: "Charlene H", year: "2024", rating: 5 },
+      { quote: "Lovely, clean and lots of extras.", author: "Elmarie V", year: "2024", rating: 5 },
+      { quote: "Very good value for money and the finer details are special.", author: "Fanie I", year: "2024", rating: 5 },
+      { quote: "Very clean, comfortable stay.", author: "Alti", year: "2025", rating: 5 },
+      { quote: "The room was modern, cozy and very comfortable.", author: "Lauren", year: "2023", rating: 5 },
+      { quote: "Attention to detail, welcome complimentary sherry on arrival.", author: "Reg", year: "2023", rating: 5 }
+    ]
+  },
+  {
+    title: "Cove Suite",
+    capacity: "2 guests",
+    bedConfig: "Queen XL bed",
+    description: "Ground-floor retreat with Queen XL bed, a private lounge for two, shower-only bathroom, and a charming outdoor seating area. Interleads with the Garden Suite.",
+    mainAmenities: [{
+      text: "Private lounge for two",
+      emoji: "🛋️"
+    }, {
+      text: "Shower-only bathroom",
+      emoji: "🚿"
+    }, {
+      text: "Charming outdoor seating area",
+      emoji: "🪑"
+    }, {
+      text: "Free Wi-Fi & TV with Netflix",
+      emoji: "📺"
+    }, {
+      text: "Nespresso + frother",
+      emoji: "☕"
+    }, {
+      text: "Percale linen",
+      emoji: "🛏️"
+    }],
+    additionalAmenities: ["DVD player", "Hair dryer", "Heater/fan", "Electric blankets", "Down duvets", "Minibar fridge (still water & milk)", "Premium teas", "Hot chocolate", "Rusks", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Garden & kids' play area", "Interleads with Garden Suite"],
+    images: ["/images/suites/cove-suite-01.jpg", "/images/suites/cove-suite-02.jpg", "/images/suites/cove-suite-03.jpg", "/images/suites/cove-suite-04.jpg", "/images/suites/cove-suite-05.jpg", "/images/suites/cove-suite-06.jpg"],
+    slug: "cove-suite",
+    roomId: 3,
+    testimonials: [
+      { quote: "Good location, new, clean and everything in good working order.", author: "Cas P", year: "2025", rating: 5 },
+      { quote: "Beautifully appointed, well equipped, and spotlessly clean.", author: "Eugene", year: "2025", rating: 5 },
+      { quote: "Impeccable cleanliness and the fireplace abundantly supplied.", author: "Kavi", year: "2023", rating: 5 },
+      { quote: "Extremely well equipped and comfortable.", author: "Frik", year: "2023", rating: 5 },
+      { quote: "Really good and cozy place, feels like home.", author: "Boris", year: "2023", rating: 5 },
+      { quote: "Beautiful place with luxurious treats everywhere you look.", author: "Marisa", year: "2023", rating: 5 }
+    ]
   },
   {
     title: "Robin Suite",
-    description: "Cottage suite with fireplace and charming, comfortable styling.",
+    capacity: "2 adults",
+    bedConfig: "King bed or two singles (configurable)",
+    description: "Ground-floor, spacious bedroom opening to a private patio overlooking the garden. Bedding configurable as King or two singles. Full ensuite bathroom (bath + shower). Interleads with the Falcon Suite and the kitchen/dining area.",
+    mainAmenities: [{
+      text: "Fireplace",
+      emoji: "🔥"
+    }, {
+      text: "Private patio overlooking garden",
+      emoji: "🌿"
+    }, {
+      text: "Full ensuite bathroom (bath + shower)",
+      emoji: "🛁"
+    }, {
+      text: "Free Wi-Fi & TV with Netflix",
+      emoji: "📺"
+    }, {
+      text: "Nespresso + frother",
+      emoji: "☕"
+    }, {
+      text: "Charlotte Rhys amenities",
+      emoji: "🧴"
+    }],
+    additionalAmenities: ["Hair dryer", "Heater/fan", "Electric blankets", "Down duvets", "Minibar fridge (still water & milk)", "Premium teas", "Hot chocolate", "Rusks", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Lovely garden & kids' play area", "Interleads with Falcon Suite and kitchen/dining area"],
+    images: ["/images/suites/robin-suite-01.jpg", "/images/suites/robin-suite-02.jpg", "/images/suites/robin-suite-03.jpg", "/images/suites/robin-suite-04.jpg", "/images/suites/robin-suite-05.jpg", "/images/suites/robin-suite-06.jpg"],
+    slug: "robin-suite",
+    roomId: 15,
+    testimonial: {
+      quote: "The cottage charm is incredible! Kids loved the fireplace and we loved the authentic Dullstroom experience.",
+      author: "The Williams Family",
+      rating: 5
+    },
+    testimonials: [
+      { quote: "The fireplace in the Robin room, the coffee machine, the heater in the bathroom.", author: "Samuels", year: "2024", rating: 5 },
+      { quote: "Perfect place for stay in family.", author: "Xavier", year: "2025", rating: 5 },
+      { quote: "Beautiful room with a large bathroom. Walking distance to shops and the historic pub.", author: "Peter", year: "2024", rating: 5 },
+      { quote: "Thoughtful touches for load shedding.", author: "Lauren", year: "2024", rating: 5 },
+      { quote: "Great location and everything you need.", author: "Kirsty", year: "2024", rating: 5 },
+      { quote: "Lovely, spacious, and well equipped.", author: "Anneli", year: "2023", rating: 5 }
+    ]
+  },
+  {
+    title: "Blue Crane Suite",
     capacity: "2 guests",
-    bedConfig: "King or 2 Singles",
-    image: <img src="/images/suites/robin-suite-01.jpg" alt="Robin Suite at The Browns cottage with fireplace and comfortable styling for 2 guests" className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-t-lg" />,
-    mainAmenities: [
-      { text: "Fireplace", emoji: "🔥" },
-      { text: "Configurable twin/king", emoji: "🛏️" },
-      { text: "Charlotte Rhys", emoji: "✨" },
-      { text: "Full ensuite", emoji: "🛁" },
-      { text: "Netflix", emoji: "📺" },
-      { text: "Nespresso", emoji: "☕" }
-    ],
-    additionalAmenities: []
+    bedConfig: "King bed",
+    description: "Ground-floor, spacious bedroom with a private patio, King bed, and a full ensuite bathroom (bath + shower).",
+    mainAmenities: [{
+      text: "Fireplace",
+      emoji: "🔥"
+    }, {
+      text: "Private patio",
+      emoji: "🌿"
+    }, {
+      text: "Full ensuite bathroom (bath + shower)",
+      emoji: "🛁"
+    }, {
+      text: "Free Wi-Fi & TV with Netflix",
+      emoji: "📺"
+    }, {
+      text: "Nespresso + frother",
+      emoji: "☕"
+    }, {
+      text: "Charlotte Rhys amenities",
+      emoji: "🧴"
+    }],
+    additionalAmenities: ["Hair dryer", "Heater/fan", "Electric blankets", "Down duvets", "Minibar fridge (still water & milk)", "Premium teas", "Hot chocolate", "Rusks", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Garden & kids' play area"],
+    images: ["/images/suites/blue-crane-suite-01.jpg", "/images/suites/blue-crane-suite-02.jpg", "/images/suites/blue-crane-suite-03.jpg", "/images/suites/blue-crane-suite-04.jpg", "/images/suites/blue-crane-suite-05.jpg", "/images/suites/blue-crane-suite-06.jpg", "/images/suites/blue-crane-suite-07.jpg"],
+    slug: "blue-crane-suite",
+    roomId: 17,
+    testimonials: [
+      { quote: "Near all shops and restaurants… Spacious and beautiful room.", author: "Maruzaan", year: "2024", rating: 5 },
+      { quote: "Very quiet spot with an old school feeling. The Indoor fire place is a welcome treat.", author: "Robin", year: "2024", rating: 5 },
+      { quote: "Nothing, I liked everything… I'm definitely going to book there again.", author: "Ntombifuthi", year: "2024", rating: 5 },
+      { quote: "It was very well appointed, comfortable and convenient.", author: "Jen", year: "2024", rating: 5 },
+      { quote: "Beautiful room with a large bathroom. Walking distance to shops and the historic pub.", author: "Peter", year: "2024", rating: 5 },
+      { quote: "Great location and everything you need.", author: "Kirsty", year: "2024", rating: 5 }
+    ]
+  },
+  {
+    title: "Falcon Suite",
+    capacity: "2 guests",
+    bedConfig: "King bed or two singles (configurable)",
+    description: "Ground-floor suite with a private patio, King bed (or two singles), and a spacious private lounge with fold-out sofa; shower-only ensuite bathroom. Interleads with the Robin Suite and the kitchen/dining area.",
+    mainAmenities: [{
+      text: "Fireplace",
+      emoji: "🔥"
+    }, {
+      text: "Private patio",
+      emoji: "🌿"
+    }, {
+      text: "Spacious private lounge with fold-out sofa",
+      emoji: "🛋️"
+    }, {
+      text: "Shower-only ensuite bathroom",
+      emoji: "🚿"
+    }, {
+      text: "Free Wi-Fi & TV with Netflix",
+      emoji: "📺"
+    }, {
+      text: "Charlotte Rhys amenities",
+      emoji: "🧴"
+    }],
+    additionalAmenities: ["Hair dryer", "Heater/fan", "Electric blankets", "Down duvets", "Minibar fridge (still water & milk)", "Nespresso + frother", "Premium teas", "Hot chocolate", "Rusks", "Backup power for lights & Wi-Fi", "Backup generator", "Backup water", "Secure parking", "Electric fencing", "Garden & kids' play area", "Interleads with Robin Suite and kitchen/dining area"],
+    images: ["/images/suites/falcon-suite-01.jpg", "/images/suites/falcon-suite-02.jpg", "/images/suites/falcon-suite-03.jpg", "/images/suites/falcon-suite-04.jpg", "/images/suites/falcon-suite-05.jpg", "/images/suites/falcon-suite-06.jpg", "/images/suites/falcon-suite-07.jpg"],
+    slug: "falcon-suite",
+    roomId: 16,
+    testimonials: [
+      { quote: "Clean and comfortable.", author: "Clement", year: "2024", rating: 5 },
+      { quote: "It was very well appointed, comfortable and convenient.", author: "Jen", year: "2024", rating: 5 },
+      { quote: "I loved that they put the heater on for me before I arrived.", author: "Carla", year: "2024", rating: 5 },
+      { quote: "I thoroughly enjoyed my stay… well-appointed and cosy.", author: "Thanda", year: "2024", rating: 5 },
+      { quote: "Close to town, quiet, good value, suite had nice little touches.", author: "Jaegar", year: "2024", rating: 5 },
+      { quote: "The room was clean and user friendly.", author: "Ellen", year: "2023", rating: 5 }
+    ]
   }
 ];
 
@@ -200,7 +434,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Featured Suites */}
+      {/* Featured Suites Carousel */}
       <section 
         ref={suitesRef}
         className={`py-6 sm:py-10 md:py-16 lg:py-20 bg-muted transition-all duration-1000 ${
@@ -209,23 +443,32 @@ const Index = () => {
       >
         <div className="responsive-container">
           <div className="text-center mb-8 sm:mb-10 md:mb-12">
-            <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl text-primary mb-4 font-playfair">Featured Suites</h2>
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl text-primary mb-4 font-playfair">Our Elegant Suites</h2>
             <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-2">
-              Choose from our collection of luxury suites, each uniquely designed with premium amenities 
-              and thoughtful touches for an unforgettable stay.
+              Explore our two distinct properties: modern Luxury Guest Suites with elegant amenities and our charming Heritage Cottage with authentic character. Swipe through to discover your perfect Dullstroom accommodation.
             </p>
           </div>
           
-          <div className="card-grid max-w-7xl mx-auto">
-            {featuredSuites.map((suite, idx) => (
-              <div 
-                key={`suite-${idx}`}
-                style={{ animationDelay: `${idx * 150}ms` }}
-                className="scroll-animate h-full"
-              >
-                <SuiteCard {...suite} className="h-full" />
-              </div>
-            ))}
+          <div className="max-w-7xl mx-auto">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {allSuites.map((suite, idx) => (
+                  <CarouselItem key={`suite-${idx}`} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                    <div className="h-full">
+                      <SuiteBookingCard {...suite} className="h-full" />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-2 md:left-4" />
+              <CarouselNext className="right-2 md:right-4" />
+            </Carousel>
           </div>
           
           <div className="text-center mt-8 sm:mt-10 md:mt-12">
