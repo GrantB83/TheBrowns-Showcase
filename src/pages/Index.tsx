@@ -12,6 +12,7 @@ import { DullstroomInfographic } from "@/components/ui/dullstroom-infographic";
 import { ReviewShowcase } from "@/components/ui/review-showcase";
 import { PremiumImage } from "@/components/ui/premium-image";
 import { HeroBookingWidget } from "@/components/ui/hero-booking-widget";
+import { AugustWinePromotion } from "@/components/ui/august-wine-promotion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
@@ -384,6 +385,13 @@ const Index = () => {
           enableSwipe={true}
         />
       </section>
+
+      {/* August Wine Promotion Banner */}
+      <AugustWinePromotion 
+        variant="banner" 
+        dismissible={true} 
+        showCountdown={true} 
+      />
 
       {/* Property Overview - Moved above Testimonials */}
       <section 

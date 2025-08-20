@@ -14,7 +14,8 @@ import {
   MessageCircle,
   Percent,
   CheckCircle,
-  Clock
+  Clock,
+  Wine
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -273,6 +274,11 @@ export function DirectBookingBenefitsPopup({
   };
 
   const benefits = [
+    {
+      icon: Wine,
+      title: "August Special: Premium Red Wine",
+      description: "Complimentary bottle for 2+ night stays - August only!"
+    },
     {
       icon: Percent,
       title: "5% Price Beat Guarantee",

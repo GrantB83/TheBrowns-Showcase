@@ -94,6 +94,11 @@ const faqData: FAQItem[] = [
     category: "Health & Safety"
   },
   {
+    question: "What is the August 2025 wine promotion at The Browns?",
+    answer: "During August 2025, all guests who book directly with us for 2 or more nights will receive a complimentary bottle of premium red wine as our welcome gift. This exclusive offer is only available for direct bookings through our website or by calling +27 00 000 0000. The promotion runs until August 31st, 2025, and cannot be combined with other offers.",
+    category: "Booking"
+  },
+  {
     question: "What special packages does The Browns offer?",
     answer: "Direct booking benefits: Best rate guarantee (we match any competitor's rate), exclusive perks (welcome drink, late checkout, complimentary WiFi upgrade). Seasonal packages available: fishing guide + accommodation, Panorama Route tours + luxury stay, spa treatment combinations, romantic getaway packages with champagne and flowers.",
     category: "Booking"

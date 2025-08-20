@@ -285,6 +285,17 @@ export function HeroBookingWidget({ className, compact = false }: HeroBookingWid
             </Button>
           </div>
           
+          {/* August Wine Promotion */}
+          <div className="bg-red-50 border border-red-200 rounded-lg p-3 mb-3">
+            <div className="flex items-center gap-2 text-red-700 text-xs font-medium mb-2">
+              <Gift className="h-3 w-3" />
+              August Special Offer
+            </div>
+            <p className="text-xs text-red-600 font-medium">
+              Book direct for 2+ nights and receive a complimentary bottle of premium red wine as our welcome gift
+            </p>
+          </div>
+
           {/* Benefits Bar */}
           <div className="bg-primary/5 rounded-lg p-3">
             <div className="flex items-center gap-2 text-primary text-xs font-medium mb-2">
