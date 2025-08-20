@@ -170,7 +170,7 @@ export function FAQSection() {
         <CardContent className="pt-6">
           <Accordion type="single" collapsible className="w-full">
             {filteredFAQs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
+              <AccordionItem key={`faq-${faq.category}-${index}`} value={`item-${index}`}>
                 <AccordionTrigger className="text-left hover:no-underline">
                   <div className="flex items-start gap-3">
                     <Badge variant="outline" className="text-xs">

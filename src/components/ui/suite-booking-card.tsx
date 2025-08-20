@@ -193,7 +193,9 @@ export function SuiteBookingCard({
         });
       }
       
-      console.log(`[${title}] Generated ${validImages.length} images for ${slug}:`, validImages.map(img => img.src));
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`[${title}] Generated ${validImages.length} images for ${slug}:`, validImages.map(img => img.src));
+      }
       setAvailableImages(validImages);
       setIsLoadingImages(false);
     };
@@ -206,14 +208,16 @@ export function SuiteBookingCard({
   };
 
   const handleBookNow = () => {
-    window.open(getBookingUrl(), '_blank', 'noopener,noreferrer');
-    
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'suite_booking_click', {
-        event_category: 'conversion',
-        event_label: title,
-        value: roomId
-      });
+    if (typeof window !== 'undefined') {
+      window.open(getBookingUrl(), '_blank', 'noopener,noreferrer');
+      
+      if ((window as any).gtag) {
+        (window as any).gtag('event', 'suite_booking_click', {
+          event_category: 'conversion',
+          event_label: title,
+          value: roomId
+        });
+      }
     }
   };
 
@@ -358,7 +362,7 @@ export function SuiteBookingCard({
                     {mainAmenities.map((amenity, index) => {
                       const Icon = getAmenityIcon(amenity.text);
                       return (
-                        <div key={index} className="flex items-center gap-3 text-sm p-3 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
+                        <div key={`main-amenity-${amenity.text}-${index}`} className="flex items-center gap-3 text-sm p-3 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
                           <Icon className="h-4 w-4 text-primary flex-shrink-0" />
                           <span className="font-medium">{amenity.text}</span>
                         </div>
@@ -375,7 +379,7 @@ export function SuiteBookingCard({
                     <AccordionContent>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
                         {additionalAmenities.map((amenity, index) => (
-                          <div key={index} className="flex items-center gap-3 text-sm">
+                          <div key={`additional-amenity-${amenity}-${index}`} className="flex items-center gap-3 text-sm">
                             <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
                             <span className="leading-relaxed">{amenity}</span>
                           </div>
@@ -467,7 +471,7 @@ export function SuiteBookingCard({
                   <>
                     {testimonials.slice(0, 3).map((testimonial, index) => (
                       <TestimonialCard
-                        key={index}
+                        key={`testimonial-${testimonial.author}-${index}`}
                         quote={testimonial.quote}
                         author={testimonial.author}
                         rating={testimonial.rating || 5}

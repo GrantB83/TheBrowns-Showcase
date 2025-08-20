@@ -123,7 +123,7 @@ export function GeoEnhancedContent() {
               <h4 className="font-semibold mb-2">Walking Distances from Property</h4>
               <div className="space-y-1 text-sm">
                 {locationEntities.primaryLocation.walkingDistances.map((item, index) => (
-                  <div key={index} className="flex justify-between">
+                  <div key={`walking-${item.place}-${index}`} className="flex justify-between">
                     <span className="text-muted-foreground">{item.place}:</span>
                     <span className="text-primary font-medium">{item.distance} ({item.time})</span>
                   </div>
@@ -145,7 +145,7 @@ export function GeoEnhancedContent() {
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {locationEntities.nearbyAttractions.map((attraction, index) => (
-              <div key={index} className="border border-border rounded-lg p-4">
+              <div key={`attraction-${attraction.name.replace(/\s+/g, '-').toLowerCase()}-${index}`} className="border border-border rounded-lg p-4">
                 <div className="flex items-start justify-between mb-2">
                   <h4 className="font-semibold text-sm">{attraction.name}</h4>
                   <Badge variant="outline" className="text-xs">{attraction.type}</Badge>
@@ -178,7 +178,7 @@ export function GeoEnhancedContent() {
         <CardContent>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
             {Object.values(seasonalInfo).map((season, index) => (
-              <div key={index} className="border border-border rounded-lg p-4">
+              <div key={`season-${season.season.split(' ')[0].toLowerCase()}-${index}`} className="border border-border rounded-lg p-4">
                 <h4 className="font-semibold mb-3 text-primary">{season.season}</h4>
                 <div className="space-y-2 text-sm">
                   <div>
@@ -230,7 +230,7 @@ export function GeoEnhancedContent() {
               </thead>
               <tbody>
                 {drivingDistances.map((item, index) => (
-                  <tr key={index} className="border-b border-border/50">
+                  <tr key={`driving-${item.city.replace(/\s+/g, '-').toLowerCase()}-${index}`} className="border-b border-border/50">
                     <td className="py-2 px-2 font-medium">{item.city}</td>
                     <td className="py-2 px-2 text-muted-foreground">{item.distance}</td>
                     <td className="py-2 px-2 text-primary font-medium">{item.time}</td>

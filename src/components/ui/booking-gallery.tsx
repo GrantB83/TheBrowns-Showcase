@@ -87,15 +87,17 @@ export function BookingGallery({
   };
 
   const handleBookNow = (roomId: number, suiteName: string) => {
-    window.open(getBookingUrl(roomId), '_blank', 'noopener,noreferrer');
-    
-    // Track booking click for analytics
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'booking_click', {
-        event_category: 'conversion',
-        event_label: suiteName,
-        value: roomId
-      });
+    if (typeof window !== 'undefined') {
+      window.open(getBookingUrl(roomId), '_blank', 'noopener,noreferrer');
+      
+      // Track booking click for analytics
+      if ((window as any).gtag) {
+        (window as any).gtag('event', 'booking_click', {
+          event_category: 'conversion',
+          event_label: suiteName,
+          value: roomId
+        });
+      }
     }
   };
 
@@ -128,7 +130,7 @@ export function BookingGallery({
       <div className="grid grid-cols-1 xxs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
         {filteredImages.map((image, index) => (
           <Card 
-            key={index} 
+            key={`gallery-${image.src}-${index}`}
             className={cn(
               "group overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300 touch-manipulation",
               "hover:scale-[1.02] transform-gpu",
@@ -286,7 +288,7 @@ export function BookingGallery({
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {testimonials.map((testimonial, index) => (
               <TestimonialCard 
-                key={index}
+                key={`testimonial-${testimonial.author}-${index}`}
                 {...testimonial}
                 className="hover:shadow-md transition-shadow duration-200"
               />

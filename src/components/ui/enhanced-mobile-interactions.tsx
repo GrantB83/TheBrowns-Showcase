@@ -105,7 +105,7 @@ export function TouchOptimizedGallery({ images, alt, className }: TouchOptimized
         onTouchEnd={onTouchEnd}
       >
         {images.map((image, index) => (
-          <div key={index} className="w-full flex-shrink-0">
+          <div key={`gallery-image-${index}-${image.substring(image.lastIndexOf('/') + 1)}`} className="w-full flex-shrink-0">
             <img
               src={image}
               alt={`${alt} - Image ${index + 1}`}
@@ -123,7 +123,7 @@ export function TouchOptimizedGallery({ images, alt, className }: TouchOptimized
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
         {images.map((_, index) => (
           <button
-            key={index}
+            key={`dot-${index}`}
             className={cn(
               "w-2 h-2 rounded-full transition-all duration-200",
               index === currentIndex 
@@ -260,7 +260,7 @@ export function PullToRefresh({
     const currentY = e.touches[0].clientY;
     const distance = currentY - startY;
     
-    if (distance > 0 && window.scrollY === 0) {
+    if (distance > 0 && typeof window !== 'undefined' && window.scrollY === 0) {
       setPullDistance(Math.min(distance, threshold * 1.5));
       e.preventDefault();
     }
