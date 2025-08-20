@@ -421,21 +421,6 @@ const Index = () => {
       {/* Social Proof Section */}
       <ReviewShowcase />
 
-      {/* Featured Booking Section */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-r from-primary/10 via-background to-accent/10">
-        <div className="responsive-container">
-          <div className="max-w-4xl mx-auto text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-primary mb-4 font-playfair">Book Your Stay at The Browns</h2>
-            <p className="text-fluid-lg text-muted-foreground mb-6 leading-relaxed">
-              Choose your dates and secure your perfect highland retreat with our best rate guarantee.
-            </p>
-          </div>
-          <div className="max-w-2xl mx-auto">
-            <HeroBookingWidget compact={false} />
-          </div>
-        </div>
-      </section>
-
       {/* Featured Suites Carousel */}
       <section 
         ref={suitesRef}
@@ -487,6 +472,21 @@ const Index = () => {
                 View All Suites
               </Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Booking Section */}
+      <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-r from-primary/10 via-background to-accent/10">
+        <div className="responsive-container">
+          <div className="max-w-4xl mx-auto text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-primary mb-4 font-playfair">Book Your Stay at The Browns</h2>
+            <p className="text-fluid-lg text-muted-foreground mb-6 leading-relaxed">
+              Choose your dates and secure your perfect highland retreat with our best rate guarantee.
+            </p>
+          </div>
+          <div className="max-w-2xl mx-auto">
+            <HeroBookingWidget compact={false} />
           </div>
         </div>
       </section>
