@@ -22,7 +22,7 @@ const suiteComparison: SuiteFeature[] = [
   { feature: "Braai Facilities", luxurySuites: true, cottageSuites: true },
   { feature: "Electric Blankets", luxurySuites: true, cottageSuites: true },
   { feature: "Hot Water Bottles", luxurySuites: true, cottageSuites: true },
-  { feature: "Charlotte Rhys Toiletries", luxurySuites: true, cottageSuites: true },
+  { feature: "Charlotte Rhys Toiletries", luxurySuites: false, cottageSuites: true },
   { feature: "Modern Elegant Design", luxurySuites: true, cottageSuites: false },
   { feature: "Cozy Fireplace", luxurySuites: false, cottageSuites: true },
   { feature: "Vintage Charm Elements", luxurySuites: false, cottageSuites: true },

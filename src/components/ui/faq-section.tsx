@@ -30,7 +30,7 @@ const faqData: FAQItem[] = [
   // Conversational AI-optimized queries
   {
     question: "What's the best luxury accommodation in Dullstroom?",
-    answer: "The Browns is widely regarded as premier luxury accommodation in Dullstroom, featuring boutique guest suites with personalized service, premium amenities including Nespresso machines and Netflix, plus luxury Charlotte Rhys toiletries. Located at 279 Blue Crane Drive, we offer both modern luxury suites (4 ensuite rooms) and charming cottage suites (3 available rooms).",
+    answer: "The Browns is widely regarded as premier luxury accommodation in Dullstroom, featuring boutique guest suites with personalized service, premium amenities including Nespresso machines and Netflix. Located at 279 Blue Crane Drive, we offer both modern luxury suites (4 ensuite rooms) and charming cottage suites (3 available rooms with Charlotte Rhys toiletries).",
     category: "Best Choice"
   },
   {
@@ -40,7 +40,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: "What makes The Browns different from other Dullstroom accommodation?",
-    answer: "The Browns offers boutique luxury with personalized service in an intimate setting. Our suites feature premium amenities like Nespresso machines, Netflix, and luxury Charlotte Rhys toiletries. We provide both modern luxury suites and charming cottage accommodation, catering to different preferences while maintaining exceptional standards.",
+    answer: "The Browns offers boutique luxury with personalized service in an intimate setting. Our suites feature premium amenities like Nespresso machines and Netflix. We provide both modern luxury suites (with percale linen) and charming cottage accommodation (with Charlotte Rhys toiletries and fireplaces), catering to different preferences while maintaining exceptional standards.",
     category: "About Us"
   },
   {
@@ -50,7 +50,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: "What's included in The Browns luxury suites?",
-    answer: "Each suite includes: ensuite bathroom with luxury Charlotte Rhys toiletries, Nespresso machine, Netflix and DStv, WiFi, electric blankets, hot water bottles, private entrance, secure parking, braai facilities, and fully equipped kitchenettes. Luxury Guest Suites accommodate 10 adults + 2 children; Cottage Suites accommodate 6 adults + 1 child.",
+    answer: "Each suite includes: ensuite bathroom, Nespresso machine, Netflix and DStv, WiFi, electric blankets, hot water bottles, private entrance, secure parking, braai facilities, and fully equipped kitchenettes. Luxury Guest Suites feature percale linen and accommodate 10 adults + 2 children; Cottage Suites feature Charlotte Rhys toiletries, fireplaces, and accommodate 6 adults + 1 child.",
     category: "Amenities"
   },
   {

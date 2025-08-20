@@ -51,8 +51,8 @@ const quickFacts = [
     category: "Premium Amenities",
     facts: [
       "Nespresso machines in every suite",
-      "Netflix & DStv entertainment",
-      "Luxury Charlotte Rhys toiletries",
+      "Netflix & DStv entertainment", 
+      "Percale linen (Luxury Suites) & Charlotte Rhys toiletries (Cottage Suites)",
       "Electric blankets & hot water bottles"
     ]
   },
