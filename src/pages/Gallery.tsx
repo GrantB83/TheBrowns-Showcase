@@ -11,43 +11,43 @@ const luxurySuitesImages = [
   {
     src: "/images/suites/master-suite-01.jpg",
     alt: "Master Suite main accommodation area",
-    title: "Master Suite - Main Area",
+    title: "The Browns ~ Master Suite",
     category: "Master Suite"
   },
   {
     src: "/images/suites/master-suite-02.jpg",
     alt: "Master Suite secondary living space",
-    title: "Master Suite - Living Space",
+    title: "The Browns ~ Master Suite",
     category: "Master Suite"
   },
   {
     src: "/images/suites/master-suite-03.jpg",
     alt: "Master Suite bathroom facilities",
-    title: "Master Suite - Bathroom",
+    title: "The Browns ~ Master Suite",
     category: "Master Suite"
   },
   {
     src: "/images/suites/master-suite-04.jpg",
     alt: "Master Suite kitchen or dining area",
-    title: "Master Suite - Kitchen Area",
+    title: "The Browns ~ Master Suite",
     category: "Master Suite"
   },
   {
     src: "/images/suites/master-suite-05.jpg",
     alt: "Master Suite additional room features",
-    title: "Master Suite - Room Features",
+    title: "The Browns ~ Master Suite",
     category: "Master Suite"
   },
   {
     src: "/images/suites/master-suite-06.jpg",
     alt: "Master Suite interior design and furnishings",
-    title: "Master Suite - Interior Design",
+    title: "The Browns ~ Master Suite",
     category: "Master Suite"
   },
   {
     src: "/images/suites/master-suite-07.jpg",
     alt: "Master Suite room amenities and features",
-    title: "Master Suite - Room Amenities",
+    title: "The Browns ~ Master Suite",
     category: "Master Suite"
   },
 
@@ -55,43 +55,43 @@ const luxurySuitesImages = [
   {
     src: "/images/suites/loft-suite-01.jpg",
     alt: "Loft Suite main accommodation area",
-    title: "Loft Suite - Main Area",
+    title: "The Browns ~ Loft Suite",
     category: "Loft Suite"
   },
   {
     src: "/images/suites/loft-suite-02.jpg",
     alt: "Loft Suite secondary living space",
-    title: "Loft Suite - Living Space",
+    title: "The Browns ~ Loft Suite",
     category: "Loft Suite"
   },
   {
     src: "/images/suites/loft-suite-03.jpg",
     alt: "Loft Suite kitchen facilities",
-    title: "Loft Suite - Kitchen",
+    title: "The Browns ~ Loft Suite",
     category: "Loft Suite"
   },
   {
     src: "/images/suites/loft-suite-04.jpg",
     alt: "Loft Suite bathroom amenities",
-    title: "Loft Suite - Bathroom",
+    title: "The Browns ~ Loft Suite",
     category: "Loft Suite"
   },
   {
     src: "/images/suites/loft-suite-05.jpg",
     alt: "Loft Suite additional room features",
-    title: "Loft Suite - Room Features",
+    title: "The Browns ~ Loft Suite",
     category: "Loft Suite"
   },
   {
     src: "/images/suites/loft-suite-06.jpg",
     alt: "Loft Suite interior design elements",
-    title: "Loft Suite - Interior Design",
+    title: "The Browns ~ Loft Suite",
     category: "Loft Suite"
   },
   {
     src: "/images/suites/loft-suite-07.jpg",
     alt: "Loft Suite room amenities",
-    title: "Loft Suite - Room Amenities",
+    title: "The Browns ~ Loft Suite",
     category: "Loft Suite"
   },
 
@@ -99,37 +99,37 @@ const luxurySuitesImages = [
   {
     src: "/images/suites/garden-suite-01.jpg",
     alt: "Garden Suite main accommodation area",
-    title: "Garden Suite - Main Area",
+    title: "The Browns ~ Garden Suite",
     category: "Garden Suite"
   },
   {
     src: "/images/suites/garden-suite-02.jpg",
     alt: "Garden Suite secondary room space",
-    title: "Garden Suite - Secondary Room",
+    title: "The Browns ~ Garden Suite",
     category: "Garden Suite"
   },
   {
     src: "/images/suites/garden-suite-03.jpg",
     alt: "Garden Suite additional living area",
-    title: "Garden Suite - Living Area",
+    title: "The Browns ~ Garden Suite",
     category: "Garden Suite"
   },
   {
     src: "/images/suites/garden-suite-04.jpg",
     alt: "Garden Suite kitchen facilities",
-    title: "Garden Suite - Kitchen",
+    title: "The Browns ~ Garden Suite",
     category: "Garden Suite"
   },
   {
     src: "/images/suites/garden-suite-05.jpg",
     alt: "Garden Suite bathroom amenities",
-    title: "Garden Suite - Bathroom",
+    title: "The Browns ~ Garden Suite",
     category: "Garden Suite"
   },
   {
     src: "/images/suites/garden-suite-06.jpg",
     alt: "Garden Suite interior design features",
-    title: "Garden Suite - Interior Features",
+    title: "The Browns ~ Garden Suite",
     category: "Garden Suite"
   },
 
@@ -137,43 +137,43 @@ const luxurySuitesImages = [
   {
     src: "/images/suites/blue-crane-suite-01.jpg",
     alt: "Blue Crane Suite main accommodation area",
-    title: "Blue Crane Suite - Main Area",
+    title: "The Browns ~ Blue Crane Suite",
     category: "Blue Crane Suite"
   },
   {
     src: "/images/suites/blue-crane-suite-02.jpg",
     alt: "Blue Crane Suite secondary living space",
-    title: "Blue Crane Suite - Living Space",
+    title: "The Browns ~ Blue Crane Suite",
     category: "Blue Crane Suite"
   },
   {
     src: "/images/suites/blue-crane-suite-03.jpg",
     alt: "Blue Crane Suite additional room area",
-    title: "Blue Crane Suite - Additional Room",
+    title: "The Browns ~ Blue Crane Suite",
     category: "Blue Crane Suite"
   },
   {
     src: "/images/suites/blue-crane-suite-04.jpg",
     alt: "Blue Crane Suite kitchen facilities",
-    title: "Blue Crane Suite - Kitchen",
+    title: "The Browns ~ Blue Crane Suite",
     category: "Blue Crane Suite"
   },
   {
     src: "/images/suites/blue-crane-suite-05.jpg",
     alt: "Blue Crane Suite bathroom amenities",
-    title: "Blue Crane Suite - Bathroom",
+    title: "The Browns ~ Blue Crane Suite",
     category: "Blue Crane Suite"
   },
   {
     src: "/images/suites/blue-crane-suite-06.jpg",
     alt: "Blue Crane Suite interior design details",
-    title: "Blue Crane Suite - Interior Details",
+    title: "The Browns ~ Blue Crane Suite",
     category: "Blue Crane Suite"
   },
   {
     src: "/images/suites/blue-crane-suite-07.jpg",
     alt: "Blue Crane Suite room features and amenities",
-    title: "Blue Crane Suite - Room Features",
+    title: "The Browns ~ Blue Crane Suite",
     category: "Blue Crane Suite"
   },
 
@@ -181,43 +181,43 @@ const luxurySuitesImages = [
   {
     src: "/images/suites/falcon-suite-01.jpg",
     alt: "Falcon Suite main accommodation area",
-    title: "Falcon Suite - Main Area",
+    title: "The Browns ~ Falcon Suite",
     category: "Falcon Suite"
   },
   {
     src: "/images/suites/falcon-suite-02.jpg",
     alt: "Falcon Suite secondary living space",
-    title: "Falcon Suite - Living Space",
+    title: "The Browns ~ Falcon Suite",
     category: "Falcon Suite"
   },
   {
     src: "/images/suites/falcon-suite-03.jpg",
     alt: "Falcon Suite additional room area",
-    title: "Falcon Suite - Additional Room",
+    title: "The Browns ~ Falcon Suite",
     category: "Falcon Suite"
   },
   {
     src: "/images/suites/falcon-suite-04.jpg",
     alt: "Falcon Suite kitchen facilities",
-    title: "Falcon Suite - Kitchen",
+    title: "The Browns ~ Falcon Suite",
     category: "Falcon Suite"
   },
   {
     src: "/images/suites/falcon-suite-05.jpg",
     alt: "Falcon Suite bathroom amenities",
-    title: "Falcon Suite - Bathroom",
+    title: "The Browns ~ Falcon Suite",
     category: "Falcon Suite"
   },
   {
     src: "/images/suites/falcon-suite-06.jpg",
     alt: "Falcon Suite interior design features",
-    title: "Falcon Suite - Interior Design",
+    title: "The Browns ~ Falcon Suite",
     category: "Falcon Suite"
   },
   {
     src: "/images/suites/falcon-suite-07.jpg",
     alt: "Falcon Suite room amenities and features",
-    title: "Falcon Suite - Room Features",
+    title: "The Browns ~ Falcon Suite",
     category: "Falcon Suite"
   },
 
@@ -225,37 +225,37 @@ const luxurySuitesImages = [
   {
     src: "/images/suites/cove-suite-01.jpg",
     alt: "Cove Suite main accommodation area",
-    title: "Cove Suite - Main Area",
+    title: "The Browns ~ Cove Suite",
     category: "Cove Suite"
   },
   {
     src: "/images/suites/cove-suite-02.jpg",
     alt: "Cove Suite secondary living space",
-    title: "Cove Suite - Living Space",
+    title: "The Browns ~ Cove Suite",
     category: "Cove Suite"
   },
   {
     src: "/images/suites/cove-suite-03.jpg",
     alt: "Cove Suite additional room area",
-    title: "Cove Suite - Additional Room",
+    title: "The Browns ~ Cove Suite",
     category: "Cove Suite"
   },
   {
     src: "/images/suites/cove-suite-04.jpg",
     alt: "Cove Suite kitchen facilities",
-    title: "Cove Suite - Kitchen",
+    title: "The Browns ~ Cove Suite",
     category: "Cove Suite"
   },
   {
     src: "/images/suites/cove-suite-05.jpg",
     alt: "Cove Suite bathroom amenities",
-    title: "Cove Suite - Bathroom",
+    title: "The Browns ~ Cove Suite",
     category: "Cove Suite"
   },
   {
     src: "/images/suites/cove-suite-06.jpg",
     alt: "Cove Suite interior features",
-    title: "Cove Suite - Interior Features",
+    title: "The Browns ~ Cove Suite",
     category: "Cove Suite"
   },
 
@@ -263,37 +263,37 @@ const luxurySuitesImages = [
   {
     src: "/images/suites/robin-suite-01.jpg",
     alt: "Robin Suite main accommodation area",
-    title: "Robin Suite - Main Area",
+    title: "The Browns ~ Robin Suite",
     category: "Robin Suite"
   },
   {
     src: "/images/suites/robin-suite-02.jpg",
     alt: "Robin Suite secondary living space",
-    title: "Robin Suite - Living Space",
+    title: "The Browns ~ Robin Suite",
     category: "Robin Suite"
   },
   {
     src: "/images/suites/robin-suite-03.jpg",
     alt: "Robin Suite additional room area",
-    title: "Robin Suite - Additional Room",
+    title: "The Browns ~ Robin Suite",
     category: "Robin Suite"
   },
   {
     src: "/images/suites/robin-suite-04.jpg",
     alt: "Robin Suite kitchen facilities",
-    title: "Robin Suite - Kitchen",
+    title: "The Browns ~ Robin Suite",
     category: "Robin Suite"
   },
   {
     src: "/images/suites/robin-suite-05.jpg",
     alt: "Robin Suite bathroom amenities",
-    title: "Robin Suite - Bathroom",
+    title: "The Browns ~ Robin Suite",
     category: "Robin Suite"
   },
   {
     src: "/images/suites/robin-suite-06.jpg",
     alt: "Robin Suite interior features",
-    title: "Robin Suite - Interior Features",
+    title: "The Browns ~ Robin Suite",
     category: "Robin Suite"
   },
 
@@ -301,79 +301,79 @@ const luxurySuitesImages = [
   {
     src: "/images/suites/luxury-guest-house-01.jpg",
     alt: "Luxury Guest House main accommodation area",
-    title: "Luxury Guest House - Main Area",
+    title: "The Browns ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-02.jpg",
     alt: "Luxury Guest House secondary living space",
-    title: "Luxury Guest House - Living Space",
+    title: "The Browns ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-03.jpg",
     alt: "Luxury Guest House additional room area",
-    title: "Luxury Guest House - Additional Room",
+    title: "The Browns ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-04.jpg",
     alt: "Luxury Guest House kitchen facilities",
-    title: "Luxury Guest House - Kitchen",
+    title: "The Browns ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-05.jpg",
     alt: "Luxury Guest House bathroom facilities",
-    title: "Luxury Guest House - Bathroom",
+    title: "The Browns ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-06.jpg",
     alt: "Luxury Guest House interior design features",
-    title: "Luxury Guest House - Interior Design",
+    title: "The Browns ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-07.jpg",
     alt: "Luxury Guest House room amenities",
-    title: "Luxury Guest House - Room Amenities",
+    title: "The Browns ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-08.jpg",
     alt: "Luxury Guest House additional accommodation space",
-    title: "Luxury Guest House - Additional Space",
+    title: "The Browns ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-09.jpg",
     alt: "Luxury Guest House interior design elements",
-    title: "Luxury Guest House - Design Elements",
+    title: "The Browns ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-10.jpg",
     alt: "Luxury Guest House room layout and features",
-    title: "Luxury Guest House - Room Layout",
+    title: "The Browns ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-11.jpg",
     alt: "Luxury Guest House entrance and reception area",
-    title: "Luxury Guest House - Entrance",
+    title: "The Browns ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-12.jpg",
     alt: "Luxury Guest House additional living area",
-    title: "Luxury Guest House - Additional Living",
+    title: "The Browns ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-13.jpg",
     alt: "Luxury Guest House evening interior ambiance",
-    title: "Luxury Guest House - Evening Ambiance",
+    title: "The Browns ~ Luxury Guest House",
     category: "Luxury Guest House"
   }
 ];
@@ -384,91 +384,91 @@ const heritageCottageImages = [
   {
     src: "/images/suites/heritage-cottage-cover.jpg",
     alt: "Heritage Cottage exterior view",
-    title: "Heritage Cottage - Exterior",
+    title: "Heritage Cottage ~ Cottage",
     category: "Exterior"
   },
   {
     src: "/images/suites/heritage-cottage-house-01.jpg",
     alt: "Heritage Cottage main living area",
-    title: "Heritage Cottage - Main Living Area",
+    title: "Heritage Cottage ~ Cottage",
     category: "Living Spaces"
   },
   {
     src: "/images/suites/heritage-cottage-house-02.jpg",
     alt: "Heritage Cottage secondary living space",
-    title: "Heritage Cottage - Secondary Living",
+    title: "Heritage Cottage ~ Cottage",
     category: "Living Spaces"
   },
   {
     src: "/images/suites/heritage-cottage-house-03.jpg",
     alt: "Heritage Cottage bedroom accommodation",
-    title: "Heritage Cottage - Bedroom",
+    title: "Heritage Cottage ~ Cottage",
     category: "Bedrooms"
   },
   {
     src: "/images/suites/heritage-cottage-house-04.jpg",
     alt: "Heritage Cottage additional bedroom space",
-    title: "Heritage Cottage - Additional Bedroom",
+    title: "Heritage Cottage ~ Cottage",
     category: "Bedrooms"
   },
   {
     src: "/images/suites/heritage-cottage-house-05.jpg",
     alt: "Heritage Cottage third bedroom area",
-    title: "Heritage Cottage - Third Bedroom",
+    title: "Heritage Cottage ~ Cottage",
     category: "Bedrooms"
   },
   {
     src: "/images/suites/heritage-cottage-house-06.jpg",
     alt: "Heritage Cottage kitchen facilities",
-    title: "Heritage Cottage - Kitchen",
+    title: "Heritage Cottage ~ Cottage",
     category: "Kitchen & Dining"
   },
   {
     src: "/images/suites/heritage-cottage-house-07.jpg",
     alt: "Heritage Cottage dining area",
-    title: "Heritage Cottage - Dining Area",
+    title: "Heritage Cottage ~ Cottage",
     category: "Kitchen & Dining"
   },
   {
     src: "/images/suites/heritage-cottage-house-08.jpg",
     alt: "Heritage Cottage kitchen details",
-    title: "Heritage Cottage - Kitchen Details",
+    title: "Heritage Cottage ~ Cottage",
     category: "Kitchen & Dining"
   },
   {
     src: "/images/suites/heritage-cottage-house-09.jpg",
     alt: "Heritage Cottage bathroom facilities",
-    title: "Heritage Cottage - Main Bathroom",
+    title: "Heritage Cottage ~ Cottage",
     category: "Bathrooms"
   },
   {
     src: "/images/suites/heritage-cottage-house-10.jpg",
     alt: "Heritage Cottage additional bathroom",
-    title: "Heritage Cottage - Additional Bathroom",
+    title: "Heritage Cottage ~ Cottage",
     category: "Bathrooms"
   },
   {
     src: "/images/suites/heritage-cottage-house-11.jpg",
     alt: "Heritage Cottage entrance area",
-    title: "Heritage Cottage - Entrance",
+    title: "Heritage Cottage ~ Cottage",
     category: "Interior Features"
   },
   {
     src: "/images/suites/heritage-cottage-house-12.jpg",
     alt: "Heritage Cottage interior details",
-    title: "Heritage Cottage - Interior Details",
+    title: "Heritage Cottage ~ Cottage",
     category: "Interior Features"
   },
   {
     src: "/images/suites/heritage-cottage-house-13.jpg",
     alt: "Heritage Cottage outdoor space",
-    title: "Heritage Cottage - Outdoor Area",
+    title: "Heritage Cottage ~ Cottage",
     category: "Outdoor Spaces"
   },
   {
     src: "/images/suites/heritage-cottage-house-14.jpg",
     alt: "Heritage Cottage additional outdoor area",
-    title: "Heritage Cottage - Additional Outdoor",
+    title: "Heritage Cottage ~ Cottage",
     category: "Outdoor Spaces"
   }
 ];
