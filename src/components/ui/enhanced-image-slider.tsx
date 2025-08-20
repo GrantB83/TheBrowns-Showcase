@@ -216,14 +216,6 @@ export function EnhancedImageSlider({
         </>
       )}
 
-      {/* Swipe indicator for mobile users */}
-      {enableSwipe && images.length > 1 && (
-        <div className="absolute top-4 right-4 sm:hidden">
-          <div className="bg-black/50 text-white text-xs px-2 py-1 rounded backdrop-blur-sm">
-            Swipe to navigate
-          </div>
-        </div>
-      )}
     </div>
   );
 }
