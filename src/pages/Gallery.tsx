@@ -11,43 +11,43 @@ const luxurySuitesImages = [
   {
     src: "/images/suites/master-suite-01.jpg",
     alt: "Master Suite main accommodation area",
-    title: "The Browns ~ Master Suite",
+    title: "Luxury Suites ~ Master Suite",
     category: "Master Suite"
   },
   {
     src: "/images/suites/master-suite-02.jpg",
     alt: "Master Suite secondary living space",
-    title: "The Browns ~ Master Suite",
+    title: "Luxury Suites ~ Master Suite",
     category: "Master Suite"
   },
   {
     src: "/images/suites/master-suite-03.jpg",
     alt: "Master Suite bathroom facilities",
-    title: "The Browns ~ Master Suite",
+    title: "Luxury Suites ~ Master Suite",
     category: "Master Suite"
   },
   {
     src: "/images/suites/master-suite-04.jpg",
     alt: "Master Suite kitchen or dining area",
-    title: "The Browns ~ Master Suite",
+    title: "Luxury Suites ~ Master Suite",
     category: "Master Suite"
   },
   {
     src: "/images/suites/master-suite-05.jpg",
     alt: "Master Suite additional room features",
-    title: "The Browns ~ Master Suite",
+    title: "Luxury Suites ~ Master Suite",
     category: "Master Suite"
   },
   {
     src: "/images/suites/master-suite-06.jpg",
     alt: "Master Suite interior design and furnishings",
-    title: "The Browns ~ Master Suite",
+    title: "Luxury Suites ~ Master Suite",
     category: "Master Suite"
   },
   {
     src: "/images/suites/master-suite-07.jpg",
     alt: "Master Suite room amenities and features",
-    title: "The Browns ~ Master Suite",
+    title: "Luxury Suites ~ Master Suite",
     category: "Master Suite"
   },
 
@@ -55,43 +55,43 @@ const luxurySuitesImages = [
   {
     src: "/images/suites/loft-suite-01.jpg",
     alt: "Loft Suite main accommodation area",
-    title: "The Browns ~ Loft Suite",
+    title: "Luxury Suites ~ Loft Suite",
     category: "Loft Suite"
   },
   {
     src: "/images/suites/loft-suite-02.jpg",
     alt: "Loft Suite secondary living space",
-    title: "The Browns ~ Loft Suite",
+    title: "Luxury Suites ~ Loft Suite",
     category: "Loft Suite"
   },
   {
     src: "/images/suites/loft-suite-03.jpg",
     alt: "Loft Suite kitchen facilities",
-    title: "The Browns ~ Loft Suite",
+    title: "Luxury Suites ~ Loft Suite",
     category: "Loft Suite"
   },
   {
     src: "/images/suites/loft-suite-04.jpg",
     alt: "Loft Suite bathroom amenities",
-    title: "The Browns ~ Loft Suite",
+    title: "Luxury Suites ~ Loft Suite",
     category: "Loft Suite"
   },
   {
     src: "/images/suites/loft-suite-05.jpg",
     alt: "Loft Suite additional room features",
-    title: "The Browns ~ Loft Suite",
+    title: "Luxury Suites ~ Loft Suite",
     category: "Loft Suite"
   },
   {
     src: "/images/suites/loft-suite-06.jpg",
     alt: "Loft Suite interior design elements",
-    title: "The Browns ~ Loft Suite",
+    title: "Luxury Suites ~ Loft Suite",
     category: "Loft Suite"
   },
   {
     src: "/images/suites/loft-suite-07.jpg",
     alt: "Loft Suite room amenities",
-    title: "The Browns ~ Loft Suite",
+    title: "Luxury Suites ~ Loft Suite",
     category: "Loft Suite"
   },
 
@@ -99,37 +99,37 @@ const luxurySuitesImages = [
   {
     src: "/images/suites/garden-suite-01.jpg",
     alt: "Garden Suite main accommodation area",
-    title: "The Browns ~ Garden Suite",
+    title: "Luxury Suites ~ Garden Suite",
     category: "Garden Suite"
   },
   {
     src: "/images/suites/garden-suite-02.jpg",
     alt: "Garden Suite secondary room space",
-    title: "The Browns ~ Garden Suite",
+    title: "Luxury Suites ~ Garden Suite",
     category: "Garden Suite"
   },
   {
     src: "/images/suites/garden-suite-03.jpg",
     alt: "Garden Suite additional living area",
-    title: "The Browns ~ Garden Suite",
+    title: "Luxury Suites ~ Garden Suite",
     category: "Garden Suite"
   },
   {
     src: "/images/suites/garden-suite-04.jpg",
     alt: "Garden Suite kitchen facilities",
-    title: "The Browns ~ Garden Suite",
+    title: "Luxury Suites ~ Garden Suite",
     category: "Garden Suite"
   },
   {
     src: "/images/suites/garden-suite-05.jpg",
     alt: "Garden Suite bathroom amenities",
-    title: "The Browns ~ Garden Suite",
+    title: "Luxury Suites ~ Garden Suite",
     category: "Garden Suite"
   },
   {
     src: "/images/suites/garden-suite-06.jpg",
     alt: "Garden Suite interior design features",
-    title: "The Browns ~ Garden Suite",
+    title: "Luxury Suites ~ Garden Suite",
     category: "Garden Suite"
   },
 
@@ -137,43 +137,43 @@ const luxurySuitesImages = [
   {
     src: "/images/suites/blue-crane-suite-01.jpg",
     alt: "Blue Crane Suite main accommodation area",
-    title: "The Browns ~ Blue Crane Suite",
+    title: "Luxury Suites ~ Blue Crane Suite",
     category: "Blue Crane Suite"
   },
   {
     src: "/images/suites/blue-crane-suite-02.jpg",
     alt: "Blue Crane Suite secondary living space",
-    title: "The Browns ~ Blue Crane Suite",
+    title: "Luxury Suites ~ Blue Crane Suite",
     category: "Blue Crane Suite"
   },
   {
     src: "/images/suites/blue-crane-suite-03.jpg",
     alt: "Blue Crane Suite additional room area",
-    title: "The Browns ~ Blue Crane Suite",
+    title: "Luxury Suites ~ Blue Crane Suite",
     category: "Blue Crane Suite"
   },
   {
     src: "/images/suites/blue-crane-suite-04.jpg",
     alt: "Blue Crane Suite kitchen facilities",
-    title: "The Browns ~ Blue Crane Suite",
+    title: "Luxury Suites ~ Blue Crane Suite",
     category: "Blue Crane Suite"
   },
   {
     src: "/images/suites/blue-crane-suite-05.jpg",
     alt: "Blue Crane Suite bathroom amenities",
-    title: "The Browns ~ Blue Crane Suite",
+    title: "Luxury Suites ~ Blue Crane Suite",
     category: "Blue Crane Suite"
   },
   {
     src: "/images/suites/blue-crane-suite-06.jpg",
     alt: "Blue Crane Suite interior design details",
-    title: "The Browns ~ Blue Crane Suite",
+    title: "Luxury Suites ~ Blue Crane Suite",
     category: "Blue Crane Suite"
   },
   {
     src: "/images/suites/blue-crane-suite-07.jpg",
     alt: "Blue Crane Suite room features and amenities",
-    title: "The Browns ~ Blue Crane Suite",
+    title: "Luxury Suites ~ Blue Crane Suite",
     category: "Blue Crane Suite"
   },
 
@@ -181,43 +181,43 @@ const luxurySuitesImages = [
   {
     src: "/images/suites/falcon-suite-01.jpg",
     alt: "Falcon Suite main accommodation area",
-    title: "The Browns ~ Falcon Suite",
+    title: "Luxury Suites ~ Falcon Suite",
     category: "Falcon Suite"
   },
   {
     src: "/images/suites/falcon-suite-02.jpg",
     alt: "Falcon Suite secondary living space",
-    title: "The Browns ~ Falcon Suite",
+    title: "Luxury Suites ~ Falcon Suite",
     category: "Falcon Suite"
   },
   {
     src: "/images/suites/falcon-suite-03.jpg",
     alt: "Falcon Suite additional room area",
-    title: "The Browns ~ Falcon Suite",
+    title: "Luxury Suites ~ Falcon Suite",
     category: "Falcon Suite"
   },
   {
     src: "/images/suites/falcon-suite-04.jpg",
     alt: "Falcon Suite kitchen facilities",
-    title: "The Browns ~ Falcon Suite",
+    title: "Luxury Suites ~ Falcon Suite",
     category: "Falcon Suite"
   },
   {
     src: "/images/suites/falcon-suite-05.jpg",
     alt: "Falcon Suite bathroom amenities",
-    title: "The Browns ~ Falcon Suite",
+    title: "Luxury Suites ~ Falcon Suite",
     category: "Falcon Suite"
   },
   {
     src: "/images/suites/falcon-suite-06.jpg",
     alt: "Falcon Suite interior design features",
-    title: "The Browns ~ Falcon Suite",
+    title: "Luxury Suites ~ Falcon Suite",
     category: "Falcon Suite"
   },
   {
     src: "/images/suites/falcon-suite-07.jpg",
     alt: "Falcon Suite room amenities and features",
-    title: "The Browns ~ Falcon Suite",
+    title: "Luxury Suites ~ Falcon Suite",
     category: "Falcon Suite"
   },
 
@@ -225,37 +225,37 @@ const luxurySuitesImages = [
   {
     src: "/images/suites/cove-suite-01.jpg",
     alt: "Cove Suite main accommodation area",
-    title: "The Browns ~ Cove Suite",
+    title: "Luxury Suites ~ Cove Suite",
     category: "Cove Suite"
   },
   {
     src: "/images/suites/cove-suite-02.jpg",
     alt: "Cove Suite secondary living space",
-    title: "The Browns ~ Cove Suite",
+    title: "Luxury Suites ~ Cove Suite",
     category: "Cove Suite"
   },
   {
     src: "/images/suites/cove-suite-03.jpg",
     alt: "Cove Suite additional room area",
-    title: "The Browns ~ Cove Suite",
+    title: "Luxury Suites ~ Cove Suite",
     category: "Cove Suite"
   },
   {
     src: "/images/suites/cove-suite-04.jpg",
     alt: "Cove Suite kitchen facilities",
-    title: "The Browns ~ Cove Suite",
+    title: "Luxury Suites ~ Cove Suite",
     category: "Cove Suite"
   },
   {
     src: "/images/suites/cove-suite-05.jpg",
     alt: "Cove Suite bathroom amenities",
-    title: "The Browns ~ Cove Suite",
+    title: "Luxury Suites ~ Cove Suite",
     category: "Cove Suite"
   },
   {
     src: "/images/suites/cove-suite-06.jpg",
     alt: "Cove Suite interior features",
-    title: "The Browns ~ Cove Suite",
+    title: "Luxury Suites ~ Cove Suite",
     category: "Cove Suite"
   },
 
@@ -263,37 +263,37 @@ const luxurySuitesImages = [
   {
     src: "/images/suites/robin-suite-01.jpg",
     alt: "Robin Suite main accommodation area",
-    title: "The Browns ~ Robin Suite",
+    title: "Luxury Suites ~ Robin Suite",
     category: "Robin Suite"
   },
   {
     src: "/images/suites/robin-suite-02.jpg",
     alt: "Robin Suite secondary living space",
-    title: "The Browns ~ Robin Suite",
+    title: "Luxury Suites ~ Robin Suite",
     category: "Robin Suite"
   },
   {
     src: "/images/suites/robin-suite-03.jpg",
     alt: "Robin Suite additional room area",
-    title: "The Browns ~ Robin Suite",
+    title: "Luxury Suites ~ Robin Suite",
     category: "Robin Suite"
   },
   {
     src: "/images/suites/robin-suite-04.jpg",
     alt: "Robin Suite kitchen facilities",
-    title: "The Browns ~ Robin Suite",
+    title: "Luxury Suites ~ Robin Suite",
     category: "Robin Suite"
   },
   {
     src: "/images/suites/robin-suite-05.jpg",
     alt: "Robin Suite bathroom amenities",
-    title: "The Browns ~ Robin Suite",
+    title: "Luxury Suites ~ Robin Suite",
     category: "Robin Suite"
   },
   {
     src: "/images/suites/robin-suite-06.jpg",
     alt: "Robin Suite interior features",
-    title: "The Browns ~ Robin Suite",
+    title: "Luxury Suites ~ Robin Suite",
     category: "Robin Suite"
   },
 
@@ -301,79 +301,79 @@ const luxurySuitesImages = [
   {
     src: "/images/suites/luxury-guest-house-01.jpg",
     alt: "Luxury Guest House main accommodation area",
-    title: "The Browns ~ Luxury Guest House",
+    title: "Luxury Suites ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-02.jpg",
     alt: "Luxury Guest House secondary living space",
-    title: "The Browns ~ Luxury Guest House",
+    title: "Luxury Suites ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-03.jpg",
     alt: "Luxury Guest House additional room area",
-    title: "The Browns ~ Luxury Guest House",
+    title: "Luxury Suites ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-04.jpg",
     alt: "Luxury Guest House kitchen facilities",
-    title: "The Browns ~ Luxury Guest House",
+    title: "Luxury Suites ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-05.jpg",
     alt: "Luxury Guest House bathroom facilities",
-    title: "The Browns ~ Luxury Guest House",
+    title: "Luxury Suites ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-06.jpg",
     alt: "Luxury Guest House interior design features",
-    title: "The Browns ~ Luxury Guest House",
+    title: "Luxury Suites ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-07.jpg",
     alt: "Luxury Guest House room amenities",
-    title: "The Browns ~ Luxury Guest House",
+    title: "Luxury Suites ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-08.jpg",
     alt: "Luxury Guest House additional accommodation space",
-    title: "The Browns ~ Luxury Guest House",
+    title: "Luxury Suites ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-09.jpg",
     alt: "Luxury Guest House interior design elements",
-    title: "The Browns ~ Luxury Guest House",
+    title: "Luxury Suites ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-10.jpg",
     alt: "Luxury Guest House room layout and features",
-    title: "The Browns ~ Luxury Guest House",
+    title: "Luxury Suites ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-11.jpg",
     alt: "Luxury Guest House entrance and reception area",
-    title: "The Browns ~ Luxury Guest House",
+    title: "Luxury Suites ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-12.jpg",
     alt: "Luxury Guest House additional living area",
-    title: "The Browns ~ Luxury Guest House",
+    title: "Luxury Suites ~ Luxury Guest House",
     category: "Luxury Guest House"
   },
   {
     src: "/images/suites/luxury-guest-house-13.jpg",
     alt: "Luxury Guest House evening interior ambiance",
-    title: "The Browns ~ Luxury Guest House",
+    title: "Luxury Suites ~ Luxury Guest House",
     category: "Luxury Guest House"
   }
 ];
