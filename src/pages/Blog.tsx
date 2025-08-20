@@ -8,7 +8,6 @@ import { SEO } from "@/components/ui/seo";
 import { blogPosts, categories } from "@/data/blog-posts";
 import { Calendar, Clock, User, ExternalLink } from "lucide-react";
 import { MobileQuickActions } from "@/components/ui/enhanced-mobile-gesture-nav";
-import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 
 // Data is now imported from /src/data/blog-posts.ts
 
@@ -16,7 +15,6 @@ export default function Blog() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [displayCount, setDisplayCount] = useState(6);
-  const [imageLoadingStates, setImageLoadingStates] = useState<Record<string, boolean>>({});
 
   // Quick filter buttons for main topics
   const quickFilters = [
@@ -35,7 +33,7 @@ export default function Blog() {
     },
     Food: {
       title: "Food & Drink in Dullstroom",
-      description: "Start with good coffee in the village, then work through simple, hearty meals that suit cool highland weather. Pick up local cheeses and pantry treats for snack boards, plan one sit-down dinner in town, and, if you booked a whole house, keep one night for a relaxed self-catered pasta or braai. Cap the afternoon with a curated whisky or gin tasting before dinner."
+      description: "Dullstroom's food scene is a celebration of highland hospitality and local flavors. Savor artisanal coffees in cozy village cafes, indulge in farm-fresh cheeses and craft spirits, and experience the region's best restaurants serving hearty, seasonal dishes that perfectly complement the cool mountain air."
     },
     Travel: {
       title: "Travel Tips for Dullstroom",
@@ -122,15 +120,6 @@ export default function Blog() {
     setDisplayCount(prev => prev + 6);
   };
 
-  // Handle image loading
-  const handleImageLoad = (postId: string) => {
-    setImageLoadingStates(prev => ({ ...prev, [postId]: false }));
-  };
-
-  const handleImageError = (postId: string) => {
-    setImageLoadingStates(prev => ({ ...prev, [postId]: false }));
-  };
-
   return (
     <>
       <SEO 
@@ -189,21 +178,14 @@ export default function Blog() {
                   <Card key={post.id} className="group hover:shadow-lg transition-shadow cursor-pointer"
                     onClick={() => window.location.href = `/blog/${post.slug}`}>
                     <div className="relative overflow-hidden">
-                      {imageLoadingStates[post.id] !== false && (
-                        <ImagePlaceholder className="w-full h-48 sm:h-56 md:h-64" />
-                      )}
                       <img
                         src={post.image}
                         alt={post.title}
-                        className={`w-full h-48 sm:h-56 md:h-64 object-cover group-hover:scale-105 transition-transform duration-300 ${
-                          imageLoadingStates[post.id] === false ? 'block' : 'hidden'
-                        }`}
+                        className="w-full h-48 sm:h-56 md:h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                         loading="lazy"
-                        onLoad={() => handleImageLoad(post.id)}
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
                           target.src = '/images/blog/fly-fishing-dullstroom.jpg'; // Fallback image
-                          handleImageError(post.id);
                         }}
                       />
                       <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
