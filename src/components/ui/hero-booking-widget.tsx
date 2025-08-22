@@ -20,6 +20,7 @@ import {
 import { cn } from "@/lib/utils";
 import { EmbeddedBookingIframe } from "./embedded-booking-iframe";
 import { format, parse } from "date-fns";
+import { trackNightsbridgeBooking, trackBookingWidgetInteraction, trackWhatsAppBooking } from "@/lib/conversion-tracking";
 
 interface HeroBookingWidgetProps {
   className?: string;
@@ -176,26 +177,22 @@ export function HeroBookingWidget({ className, compact = false }: HeroBookingWid
     
     const bookingUrl = urlParams.toString() ? `${baseUrl}?${urlParams.toString()}` : baseUrl;
     
-    window.open(bookingUrl, '_blank', 'noopener,noreferrer');
+    // Track booking widget interaction
+    trackBookingWidgetInteraction('hero_widget', checkIn, checkOut, guests);
     
-    // Track conversion with enhanced data
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'hero_booking_click', {
-        event_category: 'conversion',
-        event_label: 'hero_widget',
-        value: 1,
-        custom_parameters: {
-          checkin_date: checkIn,
-          checkout_date: checkOut,
-          guest_count: guests
-        }
-      });
-    }
+    // Track Nightsbridge booking conversion
+    trackNightsbridgeBooking();
+    
+    window.open(bookingUrl, '_blank', 'noopener,noreferrer');
   };
 
   const handleWhatsAppBooking = () => {
     const message = `Hi! I'd like to book at The Browns for ${checkIn || '[dates]'} to ${checkOut || '[dates]'} for ${guests} guests. Can you help with availability and rates?`;
     const whatsappUrl = `https://wa.me/27000000000?text=${encodeURIComponent(message)}`;
+    
+    // Track WhatsApp booking interaction
+    trackWhatsAppBooking('hero_widget');
+    
     window.open(whatsappUrl, '_blank');
   };
 

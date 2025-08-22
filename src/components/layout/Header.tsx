@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 import { useResponsiveNavigation } from "@/hooks/use-responsive-navigation";
+import { trackNightsbridgeBooking } from "@/lib/conversion-tracking";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -30,6 +31,10 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+
+  const handleBookNowClick = () => {
+    trackNightsbridgeBooking();
+  };
 
   // Use dynamic responsive navigation
   const { visibleItems, overflowItems, hasOverflow, containerRef, measureItems } = 
@@ -141,12 +146,17 @@ export function Header() {
 
           {/* Book Now Button & Mobile Menu */}
           <div className="flex items-center space-x-2 sm:space-x-3">
-            <Button asChild className="hidden xs:inline-flex text-fluid-sm px-2 xs:px-3 py-2 lg:px-4 lg:py-2 min-h-[44px] touch-manipulation" size="sm">
+            <Button 
+              className="hidden xs:inline-flex text-fluid-sm px-2 xs:px-3 py-2 lg:px-4 lg:py-2 min-h-[44px] touch-manipulation" 
+              size="sm"
+              onClick={handleBookNowClick}
+            >
               <a 
                 href="https://book.nightsbridge.com/00000" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="Book accommodation now"
+                className="w-full h-full flex items-center justify-center"
               >
                 Book Now
               </a>
@@ -238,11 +248,15 @@ export function Header() {
 
                   {/* Book Now Button */}
                   <div className="pt-4 border-t px-2">
-                    <Button asChild className="w-full min-h-[48px] text-fluid-base touch-manipulation">
+                    <Button 
+                      className="w-full min-h-[48px] text-fluid-base touch-manipulation"
+                      onClick={handleBookNowClick}
+                    >
                       <a 
                         href="https://book.nightsbridge.com/00000" 
                         target="_blank" 
                         rel="noopener noreferrer"
+                        className="w-full h-full flex items-center justify-center"
                       >
                         Book Now
                       </a>

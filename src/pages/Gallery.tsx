@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useState, useMemo } from "react";
 import { MobileQuickActions } from "@/components/ui/enhanced-mobile-gesture-nav";
+import { ConversionTrackingPage } from "@/components/ui/conversion-tracking-page";
 
 // All Gallery Images Combined
 const allGalleryImages = [
@@ -591,6 +592,9 @@ export default function Gallery() {
         description="View luxury suites, gardens, and Dullstrom attractions. The Browns - premier highland accommodation near fly-fishing and Panorama Route with direct booking benefits."
         keywords="Dullstroom luxury guesthouse photos, highland accommodation gallery, Panorama Route accommodation, Dullstroom suite interiors, self-catering luxury Mpumalanga"
       />
+      
+      {/* Conversion Tracking for Gallery Page */}
+      <ConversionTrackingPage pageType="gallery" />
       
       <div className="min-h-screen section-spacing">
         <div className="responsive-container">

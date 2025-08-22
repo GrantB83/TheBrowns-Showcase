@@ -4,10 +4,14 @@ import { ContactForm } from "@/components/ui/contact-form";
 import { WhatsAppContact } from "@/components/ui/whatsapp-contact";
 import { Phone, Mail, MapPin, Instagram } from "lucide-react";
 import { MobileQuickActions } from "@/components/ui/enhanced-mobile-gesture-nav";
+import { ConversionTrackingPage } from "@/components/ui/conversion-tracking-page";
 
 export default function Contact() {
   return (
     <>
+      {/* Conversion Tracking for Contact Page */}
+      <ConversionTrackingPage pageType="contact" />
+      
       <div className="min-h-screen section-spacing">
         <div className="responsive-container px-fluid-md">
           <div className="max-w-7xl mx-auto">

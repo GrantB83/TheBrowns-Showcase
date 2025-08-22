@@ -8,6 +8,7 @@ import { SEO } from "@/components/ui/seo";
 import { blogPosts, categories } from "@/data/blog-posts";
 import { Calendar, Clock, User, ExternalLink } from "lucide-react";
 import { MobileQuickActions } from "@/components/ui/enhanced-mobile-gesture-nav";
+import { ConversionTrackingPage } from "@/components/ui/conversion-tracking-page";
 
 // Data is now imported from /src/data/blog-posts.ts
 
@@ -127,6 +128,9 @@ export default function Blog() {
         description="Discover Dullstroom's hidden gems, local insights, and travel inspiration. Expert guides on fly fishing, accommodation, food, events, and activities in the Mpumalanga highlands."
         keywords="Dullstroom blog, travel guide, fly fishing, accommodation, food, events, activities, Mpumalanga highlands, local insights"
       />
+      
+      {/* Conversion Tracking for Blog Page */}
+      <ConversionTrackingPage pageType="blog" />
       <div className="min-h-screen">
         {/* Hero Section */}
         <section className="section-spacing bg-gradient-to-br from-accent to-muted">

@@ -38,6 +38,7 @@ import {
   Link
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { trackNightsbridgeBooking, trackSuiteBookingClick } from "@/lib/conversion-tracking";
 
 
 interface Amenity {
@@ -209,15 +210,13 @@ export function SuiteBookingCard({
 
   const handleBookNow = () => {
     if (typeof window !== 'undefined') {
-      window.open(getBookingUrl(), '_blank', 'noopener,noreferrer');
+      // Track suite booking click
+      trackSuiteBookingClick(title, 'suite_card');
       
-      if ((window as any).gtag) {
-        (window as any).gtag('event', 'suite_booking_click', {
-          event_category: 'conversion',
-          event_label: title,
-          value: roomId
-        });
-      }
+      // Track Nightsbridge booking conversion
+      trackNightsbridgeBooking();
+      
+      window.open(getBookingUrl(), '_blank', 'noopener,noreferrer');
     }
   };
 

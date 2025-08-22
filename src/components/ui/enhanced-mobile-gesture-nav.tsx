@@ -214,6 +214,7 @@ export function EnhancedMobileGestureNav({
 }
 
 import { useMobileQuickActionsRegistry } from "@/hooks/use-mobile-quick-actions";
+import { trackNightsbridgeBooking, trackWhatsAppBooking } from "@/lib/conversion-tracking";
 
 // Quick action buttons for mobile
 export function MobileQuickActions({ 
@@ -229,6 +230,16 @@ export function MobileQuickActions({
 }) {
   // Register this component as active mobile quick actions
   useMobileQuickActionsRegistry();
+
+  const handleBookingClick = () => {
+    trackNightsbridgeBooking();
+    onBooking?.();
+  };
+
+  const handleWhatsAppClick = () => {
+    trackWhatsAppBooking('mobile_quick_actions');
+    onWhatsApp?.();
+  };
   return (
     <div className={cn(
       "lg:hidden fixed bottom-4 left-4 right-4 z-40",
@@ -239,7 +250,7 @@ export function MobileQuickActions({
         <CardContent className="p-3">
           <div className="flex items-center justify-center gap-3">
             {onBooking && (
-              <Button size="sm" onClick={onBooking} className="min-h-[44px] flex-1">
+              <Button size="sm" onClick={handleBookingClick} className="min-h-[44px] flex-1">
                 <CreditCard className="h-4 w-4 mr-1" />
                 Book
               </Button>
@@ -258,7 +269,7 @@ export function MobileQuickActions({
               <Button 
                 variant="outline" 
                 size="sm" 
-                onClick={onWhatsApp}
+                onClick={handleWhatsAppClick}
                 className="min-h-[44px] px-3 border-green-600 text-green-600 hover:bg-green-600 hover:text-white"
               >
                 <MessageCircle className="h-4 w-4" />
