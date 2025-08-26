@@ -40,3 +40,769 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Blog Article Styling */
+.article-content {
+  max-width: 100%;
+  line-height: 1.7;
+}
+
+.article-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: hsl(var(--primary));
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  font-family: 'Playfair Display', serif;
+}
+
+.article-lead {
+  font-size: 1.25rem;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 2rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.article-meta {
+  background: hsl(var(--muted) / 0.3);
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid hsl(var(--primary));
+}
+
+.article-meta p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.section-heading {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: hsl(var(--primary));
+  margin: 2.5rem 0 1.5rem 0;
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--primary) / 0.6));
+  border-radius: 2px;
+}
+
+/* Fishing Venues Styling */
+.fishing-venues {
+  margin: 2rem 0;
+}
+
+.venue-heading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  margin: 2rem 0 0.5rem 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.venue-subtitle {
+  font-size: 0.9rem;
+  color: hsl(var(--primary));
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.info-box {
+  background: hsl(var(--muted) / 0.2);
+  border: 1px solid hsl(var(--muted));
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.info-box h4 {
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Event Cards Styling */
+.upcoming-events {
+  margin: 2rem 0;
+}
+
+.event-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px hsl(var(--muted) / 0.1);
+  transition: all 0.3s ease;
+}
+
+.event-card:hover {
+  box-shadow: 0 4px 16px hsl(var(--muted) / 0.2);
+  transform: translateY(-2px);
+}
+
+.event-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.event-location {
+  color: hsl(var(--primary));
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.event-date {
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 1rem;
+}
+
+.event-details {
+  color: hsl(var(--muted-foreground));
+  line-height: 1.6;
+}
+
+/* Annual Events Styling */
+.annual-event-list {
+  margin: 1.5rem 0;
+}
+
+.annual-event {
+  background: hsl(var(--muted) / 0.1);
+  border-left: 3px solid hsl(var(--primary));
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.annual-event h4 {
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* Planning Tips Styling */
+.planning-tips {
+  margin: 2rem 0;
+}
+
+.tip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.tip-item {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px hsl(var(--muted) / 0.1);
+}
+
+.tip-item h4 {
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Accommodation Types Styling */
+.accommodation-types {
+  margin: 2rem 0;
+}
+
+.accommodation-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px hsl(var(--muted) / 0.1);
+}
+
+.accommodation-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.feature-list {
+  margin: 1.5rem 0;
+}
+
+.feature-list h4 {
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.planning-tips {
+  margin: 1.5rem 0;
+}
+
+/* Comparison Table Styling */
+.comparison-section {
+  margin: 2rem 0;
+}
+
+.comparison-table {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px hsl(var(--muted) / 0.1);
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-weight: 600;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-cell {
+  padding: 1rem;
+  border-right: 1px solid hsl(var(--border));
+}
+
+.table-cell:last-child {
+  border-right: none;
+}
+
+.table-header .table-cell {
+  border-right: 1px solid hsl(var(--primary) / 0.3);
+}
+
+.table-header .table-cell:last-child {
+  border-right: none;
+}
+
+/* Sample Plans Styling */
+.sample-plans {
+  margin: 2rem 0;
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.plan-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px hsl(var(--muted) / 0.1);
+}
+
+.plan-title {
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.day-breakdown p {
+  margin: 0.75rem 0;
+  line-height: 1.6;
+}
+
+/* FAQ Section Styling */
+.faq-section {
+  margin: 2rem 0;
+}
+
+.faq-item {
+  background: hsl(var(--muted) / 0.1);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.faq-item h4 {
+  color: hsl(var(--primary));
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+/* Fishing Spots Styling */
+.fishing-spots {
+  margin: 2rem 0;
+}
+
+.spot-category {
+  margin: 1.5rem 0;
+}
+
+.category-title {
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Fishing Expectations Styling */
+.fishing-expectations {
+  margin: 2rem 0;
+}
+
+.expectation-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 8px hsl(var(--muted) / 0.1);
+}
+
+.expectation-title {
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Trip Planning Styling */
+.trip-planning {
+  margin: 2rem 0;
+}
+
+.planning-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.planning-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px hsl(var(--muted) / 0.1);
+}
+
+.planning-title {
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Destinations Section Styling */
+.destinations-section {
+  margin: 2rem 0;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.destination-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px hsl(var(--muted) / 0.1);
+  transition: all 0.3s ease;
+}
+
+.destination-card:hover {
+  box-shadow: 0 4px 16px hsl(var(--muted) / 0.2);
+  transform: translateY(-2px);
+}
+
+.destination-title {
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Planning Section Styling */
+.planning-section {
+  margin: 2rem 0;
+}
+
+/* Photography Section Styling */
+.photography-section {
+  margin: 2rem 0;
+}
+
+.photo-tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.photo-tip-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px hsl(var(--muted) / 0.1);
+}
+
+.photo-tip-title {
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Practical Info Styling */
+.practical-info {
+  margin: 2rem 0;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.info-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px hsl(var(--muted) / 0.1);
+}
+
+.info-title {
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Trail Options Styling */
+.trail-options {
+  margin: 2rem 0;
+}
+
+.difficulty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.difficulty-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px hsl(var(--muted) / 0.1);
+}
+
+.difficulty-title {
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Safety Section Styling */
+.safety-section {
+  margin: 2rem 0;
+}
+
+.safety-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.safety-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px hsl(var(--muted) / 0.1);
+}
+
+.safety-title {
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Treatments Section Styling */
+.treatments-section {
+  margin: 2rem 0;
+}
+
+.treatment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.treatment-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px hsl(var(--muted) / 0.1);
+}
+
+.treatment-title {
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Packages Section Styling */
+.packages-section {
+  margin: 2rem 0;
+}
+
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.package-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px hsl(var(--muted) / 0.1);
+}
+
+.package-title {
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Tasting Experiences Styling */
+.tasting-experiences {
+  margin: 2rem 0;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.experience-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px hsl(var(--muted) / 0.1);
+}
+
+.experience-title {
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Food Tours Styling */
+.food-tours {
+  margin: 2rem 0;
+}
+
+.tour-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.tour-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px hsl(var(--muted) / 0.1);
+}
+
+.tour-title {
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Highland Specialties Styling */
+.highland-specialties {
+  margin: 2rem 0;
+}
+
+.specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.specialty-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px hsl(var(--muted) / 0.1);
+}
+
+.specialty-title {
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Accommodation CTA Styling */
+.accommodation-cta {
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.05), hsl(var(--primary) / 0.1));
+  border: 1px solid hsl(var(--primary) / 0.2);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+.cta-text {
+  font-size: 1.1rem;
+  color: hsl(var(--primary));
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .article-heading {
+    font-size: 2rem;
+  }
+  
+  .article-lead {
+    font-size: 1.1rem;
+  }
+  
+  .section-heading {
+    font-size: 1.5rem;
+  }
+  
+  .tip-grid,
+  .planning-grid,
+  .destination-grid,
+  .photo-tips-grid,
+  .info-grid,
+  .difficulty-grid,
+  .safety-grid,
+  .treatment-grid,
+  .package-grid,
+  .experience-grid,
+  .tour-grid,
+  .specialties-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .comparison-table {
+    font-size: 0.9rem;
+  }
+  
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .table-cell {
+    border-right: none;
+    border-bottom: 1px solid hsl(var(--border));
+  }
+  
+  .table-cell:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Enhanced List Styling */
+.article-content ul,
+.article-content ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.article-content li {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.article-content ul li {
+  list-style-type: disc;
+  color: hsl(var(--muted-foreground));
+}
+
+.article-content ol li {
+  list-style-type: decimal;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Enhanced Paragraph Styling */
+.article-content p {
+  margin: 1rem 0;
+  line-height: 1.7;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Enhanced Link Styling */
+.article-content a {
+  color: hsl(var(--primary));
+  text-decoration: none;
+  border-bottom: 1px solid hsl(var(--primary) / 0.3);
+  transition: all 0.3s ease;
+}
+
+.article-content a:hover {
+  color: hsl(var(--primary));
+  border-bottom-color: hsl(var(--primary));
+}
+
+/* Enhanced Strong Text Styling */
+.article-content strong {
+  color: hsl(var(--foreground));
+  font-weight: 600;
+}
+
+/* Enhanced Emphasis Styling */
+.article-content em {
+  color: hsl(var(--muted-foreground));
+  font-style: italic;
+}

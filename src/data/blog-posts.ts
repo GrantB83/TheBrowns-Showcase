@@ -23,84 +23,122 @@ export const blogPosts: BlogPost[] = [
     title: "Top Fly-Fishing Spots in Dullstroom",
     excerpt: "Planning a Dullstroom fishing weekend? Here is a clean, fact-checked shortlist of places that consistently deliver for fly anglers, with access notes and venue details.",
     content: `
-      <h2>Planning a Dullstroom Fishing Weekend?</h2>
-      <p>Here is a clean, fact-checked shortlist of places that consistently deliver for fly anglers. I have included access notes so you know whether a venue welcomes day visitors or is only open to overnight guests.</p>
-      
-      <p>Staying at The Browns' Luxury Guest & Cottage Suites puts you close to the village and a short drive from most waters. Book an entire house for self-catering or choose a suite-only stay with a beverage station for easy early-morning coffees before you hit the water.</p>
-      
-      <h3>1) Dullstroom on the Dam Town Dams (public waters with day permits)</h3>
-      <p>The two town dams are the only public fly-fishing waters inside Dullstroom. Buy a day permit at the gate, then choose between the Upper Dam and the Lower Dam. The Lower Dam is catch-and-release only and both dams are fly fishing only. Rod hire and weekend permits are available on site.</p>
-      
-      <p><strong>Good to know:</strong></p>
-      <ul>
-        <li>Day permits sold at the main gate and the Oak Lane gate</li>
-        <li>No bait or spinning is allowed. Non-powered craft are permitted for a small fee</li>
-      </ul>
-      
-      <h3>2) Dunkeld Country & Equestrian Estate (large stillwaters; day visitors accepted)</h3>
-      <p>Dunkeld manages an extensive network of stocked stillwaters against the Steenkampsberg. Day visitor fishing permits, rod hire, and casting lessons are available, and there is an optional trophy dam upgrade.</p>
-      
-      <p><strong>Good to know:</strong></p>
-      <ul>
-        <li>More than twenty dams across the estate</li>
-        <li>Day visitor permits, rod hire, and lessons are published by the estate's activity desk</li>
-      </ul>
-      
-      <h3>3) Elandskloof Trout Farm (multiple dams; day visitors accepted)</h3>
-      <p>A well-known venue a short drive from town. Expect several stocked dams of varying size, float-tube friendly water, and clear day-visitor rules with per-rod permits.</p>
-      
-      <p><strong>Good to know:</strong></p>
-      <ul>
-        <li>Seven dams on the property and float tubes are allowed</li>
-      </ul>
-      
-      <h3>4) Walkersons Private Estate (hotel guests and homeowners only)</h3>
-      <p>Walkersons offers dam and river fishing on a private estate. Access is restricted to hotel guests and estate homeowners. The river section closes annually for spawning from 1 June to 31 August and a special river license applies. This venue is not open for general day visitors.</p>
-      
-      <p><strong>Good to know:</strong></p>
-      <ul>
-        <li>Carry estate permits while fishing and observe the angler limits per house</li>
-      </ul>
-      
-      <h3>5) Willow Creek Trout & Nature Reserve (lodge guests; check day access directly)</h3>
-      <p>A lodge venue in the wider Dullstroom area with four stocked dams and a stretch of natural river. It is primarily a stay-over destination. Contact the lodge to confirm whether day access is available during your dates.</p>
-      
-      <h3>When to go</h3>
-      <p>Winter into early spring brings crisp mornings and clear water that rewards careful presentation. Local operators report productive fishing through much of the year when conditions are managed well. Always check recent water updates when you arrive in town.</p>
-      
-      <h3>Permits, gear and etiquette</h3>
-      
-      <h4>Permits</h4>
-      <p>Public waters and most private venues require a day permit. Buy at the gate or reception as posted by each venue. Some private waters are limited to overnight guests.</p>
-      
-      <h4>Hire and lessons</h4>
-      <p>Rod hire and casting lessons are available at several venues, including the town dams and Dunkeld.</p>
-      
-      <h4>On the water</h4>
-      <ul>
-        <li>Respect bag limits and catch-and-release rules per water</li>
-        <li>Use barbless hooks where required and keep fish wet during release</li>
-        <li>Give other anglers space, especially on river beats noted by the estate</li>
-      </ul>
-      
-      <h3>Simple 48-hour plan for anglers</h3>
-      
-      <h4>Friday</h4>
-      <p>Arrive by late afternoon, collect any permits for Saturday, and settle in at The Browns. Make an early night of it.</p>
-      
-      <h4>Saturday</h4>
-      <p>Town Dams at first light for a warm-up session. Late breakfast in the village. Afternoon session at Dunkeld or Elandskloof. Early dinner and fly-box tweaks for Sunday.</p>
-      
-      <h4>Sunday</h4>
-      <p>Choose a second venue that suits the conditions. Return to The Browns for checkout and a final coffee before the road home.</p>
-      
-      <h3>Where to Stay</h3>
-      <p>The Browns' Luxury Guest & Cottage Suites are close to the village and a convenient base for fishing weekends.</p>
-      <ul>
-        <li>Whole-house self-catering is available when you book an entire house</li>
-        <li>Suite-only stays include a beverage station with minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, and milk</li>
-      </ul>
-      <p>Check live Rates & Availability and match your dates to the right stay at The Browns.</p>
+      <div class="article-content">
+        <h2 class="article-heading">Planning a Dullstroom Fishing Weekend?</h2>
+        
+        <p class="article-lead">Here is a clean, fact-checked shortlist of places that consistently deliver for fly anglers. I have included access notes so you know whether a venue welcomes day visitors or is only open to overnight guests.</p>
+        
+        <p>Staying at The Browns' Luxury Guest & Cottage Suites puts you close to the village and a short drive from most waters. Book an entire house for self-catering or choose a suite-only stay with a beverage station for easy early-morning coffees before you hit the water.</p>
+        
+        <div class="fishing-venues">
+          <h3 class="venue-heading">1) Dullstroom on the Dam Town Dams</h3>
+          <p class="venue-subtitle">Public waters with day permits</p>
+          <p>The two town dams are the only public fly-fishing waters inside Dullstroom. Buy a day permit at the gate, then choose between the Upper Dam and the Lower Dam. The Lower Dam is catch-and-release only and both dams are fly fishing only. Rod hire and weekend permits are available on site.</p>
+          
+          <div class="info-box">
+            <h4>Good to know:</h4>
+            <ul>
+              <li>Day permits sold at the main gate and the Oak Lane gate</li>
+              <li>No bait or spinning is allowed. Non-powered craft are permitted for a small fee</li>
+            </ul>
+          </div>
+          
+          <h3 class="venue-heading">2) Dunkeld Country & Equestrian Estate</h3>
+          <p class="venue-subtitle">Large stillwaters; day visitors accepted</p>
+          <p>Dunkeld manages an extensive network of stocked stillwaters against the Steenkampsberg. Day visitor fishing permits, rod hire, and casting lessons are available, and there is an optional trophy dam upgrade.</p>
+          
+          <div class="info-box">
+            <h4>Good to know:</h4>
+            <ul>
+              <li>More than twenty dams across the estate</li>
+              <li>Day visitor permits, rod hire, and lessons are published by the estate's activity desk</li>
+            </ul>
+          </div>
+          
+          <h3 class="venue-heading">3) Elandskloof Trout Farm</h3>
+          <p class="venue-subtitle">Multiple dams; day visitors accepted</p>
+          <p>A well-known venue a short drive from town. Expect several stocked dams of varying size, float-tube friendly water, and clear day-visitor rules with per-rod permits.</p>
+          
+          <div class="info-box">
+            <h4>Good to know:</h4>
+            <ul>
+              <li>Seven dams on the property and float tubes are allowed</li>
+            </ul>
+          </div>
+          
+          <h3 class="venue-heading">4) Walkersons Private Estate</h3>
+          <p class="venue-subtitle">Hotel guests and homeowners only</p>
+          <p>Walkersons offers dam and river fishing on a private estate. Access is restricted to hotel guests and estate homeowners. The river section closes annually for spawning from 1 June to 31 August and a special river license applies. This venue is not open for general day visitors.</p>
+          
+          <div class="info-box">
+            <h4>Good to know:</h4>
+            <ul>
+              <li>Carry estate permits while fishing and observe the angler limits per house</li>
+            </ul>
+          </div>
+          
+          <h3 class="venue-heading">5) Willow Creek Trout & Nature Reserve</h3>
+          <p class="venue-subtitle">Lodge guests; check day access directly</p>
+          <p>A lodge venue in the wider Dullstroom area with four stocked dams and a stretch of natural river. It is primarily a stay-over destination. Contact the lodge to confirm whether day access is available during your dates.</p>
+        </div>
+        
+        <div class="fishing-tips">
+          <h3 class="section-heading">When to go</h3>
+          <p>Winter into early spring brings crisp mornings and clear water that rewards careful presentation. Local operators report productive fishing through much of the year when conditions are managed well. Always check recent water updates when you arrive in town.</p>
+          
+          <h3 class="section-heading">Permits, gear and etiquette</h3>
+          
+          <div class="tips-grid">
+            <div class="tip-card">
+              <h4>Permits</h4>
+              <p>Public waters and most private venues require a day permit. Buy at the gate or reception as posted by each venue. Some private waters are limited to overnight guests.</p>
+            </div>
+            
+            <div class="tip-card">
+              <h4>Hire and lessons</h4>
+              <p>Rod hire and casting lessons are available at several venues, including the town dams and Dunkeld.</p>
+            </div>
+            
+            <div class="tip-card">
+              <h4>On the water</h4>
+              <ul>
+                <li>Respect bag limits and catch-and-release rules per water</li>
+                <li>Use barbless hooks where required and keep fish wet during release</li>
+                <li>Give other anglers space, especially on river beats noted by the estate</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="itinerary">
+          <h3 class="section-heading">Simple 48-hour plan for anglers</h3>
+          
+          <div class="day-plan">
+            <h4 class="day-heading">Friday</h4>
+            <p>Arrive by late afternoon, collect any permits for Saturday, and settle in at The Browns. Make an early night of it.</p>
+          </div>
+          
+          <div class="day-plan">
+            <h4 class="day-heading">Saturday</h4>
+            <p>Town Dams at first light for a warm-up session. Late breakfast in the village. Afternoon session at Dunkeld or Elandskloof. Early dinner and fly-box tweaks for Sunday.</p>
+          </div>
+          
+          <div class="day-plan">
+            <h4 class="day-heading">Sunday</h4>
+            <p>Choose a second venue that suits the conditions. Return to The Browns for checkout and a final coffee before the road home.</p>
+          </div>
+        </div>
+        
+        <div class="accommodation-cta">
+          <h3 class="section-heading">Where to Stay</h3>
+          <p>The Browns' Luxury Guest & Cottage Suites are close to the village and a convenient base for fishing weekends.</p>
+          <ul>
+            <li>Whole-house self-catering is available when you book an entire house</li>
+            <li>Suite-only stays include a beverage station with minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, and milk</li>
+          </ul>
+          <p class="cta-text">Check live Rates & Availability and match your dates to the right stay at The Browns.</p>
+        </div>
+      </div>
     `,
     category: "Activities",
     author: "The Browns Team",
@@ -119,65 +157,136 @@ export const blogPosts: BlogPost[] = [
     title: "Upcoming Events and Festivals in Mpumalanga",
     excerpt: "Dullstroom & nearby: Belfast, Lydenburg (Mashishing), Ohrigstad, Machadodorp (eNtokozweni), Sabie, Graskop, Pilgrim's Rest. Hand-picked upcoming events within easy reach of Dullstroom—perfect for building a weekend around your stay.",
     content: `
-      <h2>Dullstroom & Nearby: Event Planning Made Easy</h2>
-      <p><strong>Dullstroom & nearby:</strong> Belfast, Lydenburg (Mashishing), Ohrigstad, Machadodorp (eNtokozweni), Sabie, Graskop, Pilgrim's Rest<br>
-      <strong>Last updated:</strong> 17 August 2025</p>
-      
-      <p>Planning a trip to the Highlands Meander? Here's a hand-picked list of upcoming events within easy reach of Dullstroom—perfect for building a weekend around your stay.</p>
-      
-      <p>Base yourself at The Browns' Luxury Guest & Cottage Suites in Dullstroom. Book an entire house for self-catering, or go suite-only (no cooking) with a beverage station: minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water and milk.</p>
-      
-      <h3>What's Still to Come in 2025</h3>
-      
-      <h4>Dullstroom Scenic Altitude 3-in-1 (Road Run) — Dullstroom</h4>
-      <p><strong>Saturday, 30 August 2025</strong> · 21.1 km, 10 km, ±4.5 km at Highland Gate Golf & Trout Estate. An crisp high-altitude run on rolling country roads—great excuse for a wintery weekend in town.</p>
-      
-      <h4>Graskop Heritage Carnival — Graskop</h4>
-      <p><strong>5–7 September 2025</strong> · A three-day community celebration with live music, food stalls, parade and family activities.</p>
-      
-      <h4>Mashishing Colour Festival — Lydenburg (Mashishing)</h4>
-      <p><strong>Saturday, 6 September 2025</strong> · A bright, family-friendly colour-powder day with music and kids' activities in Mashishing.</p>
-      
-      <h4>Dullstroom Village Fly-Fishing Festival — Dullstroom</h4>
-      <p><strong>23–25 October 2025</strong> · Multi-day stillwater fly-fishing across prime private waters around Dullstroom; team entry format. Book accommodation early.</p>
-      
-      <h4>South African National Gold Panning Championships — Pilgrim's Rest</h4>
-      <p><strong>8–12 October 2025</strong> · The historic gold-rush town hosts SA's national champs—spectator-friendly and uniquely Lowveld.</p>
-      
-      <h4>Africa Brew (10th Anniversary) — Sabie</h4>
-      <p><strong>7–9 November 2025</strong> · A traveling craft-beer festival, this year hosted by Sabie Brewing Company—expect tastings, demos and brewer meet-ups.</p>
-      
-      <h3>Recently Concluded—But Annual Staples to Watch for 2026</h3>
-      <p>These ran earlier this year and typically return around the same time next year. Pencil them in and check for date releases when you plan.</p>
-      
-      <ul>
-        <li><strong>Dullstroom Winter Festival / "Christmas in July"</strong> — A town-wide series of July weekends with live music, food and family events (11–26 July 2025). Expect similar mid-July timing in 2026.</li>
-        <li><strong>Sabie Tube Race</strong> — Big community river float weekend (7–8 Feb 2025). Watch for early-Feb dates.</li>
-        <li><strong>Sabie Classic (MTB)</strong> — One-day mountain-bike classic (26 Apr 2025). Traditionally late April.</li>
-        <li><strong>My Body My Space Public Arts Festival</strong> — Machadodorp (eNtokozweni) — Street-to-stage public arts across Human Rights Month (10th edition ran in March 2025). Look for March 2026 announcements.</li>
-        <li><strong>Mac Mac Ultra (Trail Running)</strong> — Sabie / Pilgrim's Rest — Next confirmed edition 1–5 July 2026, with race admin across Sabie/Pilgrim's Rest.</li>
-      </ul>
-      
-      <h3>How to Plan Your Weekend (Dullstroom-First)</h3>
-      <p><strong>Anchor the trip around one event.</strong> Add a second local activity (fly-fishing lesson, whisky tasting, glass-blowing, or a short hike) so non-participants have fun too.</p>
-      
-      <p><strong>Book accommodation first.</strong> Event weekends fill up fast. At The Browns:</p>
-      <ul>
-        <li>Whole-house self-catering when you book an entire house</li>
-        <li>Suite-only stays include a beverage station (minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, milk)</li>
-      </ul>
-      
-      <p><strong>Driving times (approx.) from Dullstroom:</strong> Sabie (±1h45), Graskop (±2h10), Pilgrim's Rest (±2h20), Lydenburg/Mashishing (±1h), Belfast (±30 min), Machadodorp/eNtokozweni (±40 min). Plan extra time on event days.</p>
-      
-      <p><strong>Pack for altitude.</strong> Even in spring, early mornings are chilly; layers and a windbreaker help.</p>
-      
-      <h3>Stay at The Browns (Dullstroom)</h3>
-      <p>The Browns' Luxury Guest & Cottage Suites are close to the village and make getting to regional events simple.</p>
-      <ul>
-        <li>Whole-house self-catering available only when booking an entire house</li>
-        <li>Suite-only stays include a beverage station (minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, milk)</li>
-      </ul>
-      <p>Check live Rates & Availability and match your dates to the right stay at The Browns.</p>
+      <div class="article-content">
+        <h2 class="article-heading">Dullstroom & Nearby: Event Planning Made Easy</h2>
+        
+        <div class="article-meta">
+          <p><strong>Dullstroom & nearby:</strong> Belfast, Lydenburg (Mashishing), Ohrigstad, Machadodorp (eNtokozweni), Sabie, Graskop, Pilgrim's Rest</p>
+          <p><strong>Last updated:</strong> 17 August 2025</p>
+        </div>
+        
+        <p class="article-lead">Planning a trip to the Highlands Meander? Here's a hand-picked list of upcoming events within easy reach of Dullstroom—perfect for building a weekend around your stay.</p>
+        
+        <p>Base yourself at The Browns' Luxury Guest & Cottage Suites in Dullstroom. Book an entire house for self-catering, or go suite-only (no cooking) with a beverage station: minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water and milk.</p>
+        
+        <div class="upcoming-events">
+          <h3 class="section-heading">What's Still to Come in 2025</h3>
+          
+          <div class="event-card">
+            <h4 class="event-title">Dullstroom Scenic Altitude 3-in-1 (Road Run)</h4>
+            <p class="event-location">Dullstroom</p>
+            <p class="event-date"><strong>Saturday, 30 August 2025</strong></p>
+            <p class="event-details">21.1 km, 10 km, ±4.5 km at Highland Gate Golf & Trout Estate. An crisp high-altitude run on rolling country roads—great excuse for a wintery weekend in town.</p>
+          </div>
+          
+          <div class="event-card">
+            <h4 class="event-title">Graskop Heritage Carnival</h4>
+            <p class="event-location">Graskop</p>
+            <p class="event-date"><strong>5–7 September 2025</strong></p>
+            <p class="event-details">A three-day community celebration with live music, food stalls, parade and family activities.</p>
+          </div>
+          
+          <div class="event-card">
+            <h4 class="event-title">Mashishing Colour Festival</h4>
+            <p class="event-location">Lydenburg (Mashishing)</p>
+            <p class="event-date"><strong>Saturday, 6 September 2025</strong></p>
+            <p class="event-details">A bright, family-friendly colour-powder day with music and kids' activities in Mashishing.</p>
+          </div>
+          
+          <div class="event-card">
+            <h4 class="event-title">Dullstroom Village Fly-Fishing Festival</h4>
+            <p class="event-location">Dullstroom</p>
+            <p class="event-date"><strong>23–25 October 2025</strong></p>
+            <p class="event-details">Multi-day stillwater fly-fishing across prime private waters around Dullstroom; team entry format. Book accommodation early.</p>
+          </div>
+          
+          <div class="event-card">
+            <h4 class="event-title">South African National Gold Panning Championships</h4>
+            <p class="event-location">Pilgrim's Rest</p>
+            <p class="event-date"><strong>8–12 October 2025</strong></p>
+            <p class="event-details">The historic gold-rush town hosts SA's national champs—spectator-friendly and uniquely Lowveld.</p>
+          </div>
+          
+          <div class="event-card">
+            <h4 class="event-title">Africa Brew (10th Anniversary)</h4>
+            <p class="event-location">Sabie</p>
+            <p class="event-date"><strong>7–9 November 2025</strong></p>
+            <p class="event-details">A traveling craft-beer festival, this year hosted by Sabie Brewing Company—expect tastings, demos and brewer meet-ups.</p>
+          </div>
+        </div>
+        
+        <div class="annual-events">
+          <h3 class="section-heading">Recently Concluded—But Annual Staples to Watch for 2026</h3>
+          <p>These ran earlier this year and typically return around the same time next year. Pencil them in and check for date releases when you plan.</p>
+          
+          <div class="annual-event-list">
+            <div class="annual-event">
+              <h4>Dullstroom Winter Festival / "Christmas in July"</h4>
+              <p>A town-wide series of July weekends with live music, food and family events (11–26 July 2025). Expect similar mid-July timing in 2026.</p>
+            </div>
+            
+            <div class="annual-event">
+              <h4>Sabie Tube Race</h4>
+              <p>Big community river float weekend (7–8 Feb 2025). Watch for early-Feb dates.</p>
+            </div>
+            
+            <div class="annual-event">
+              <h4>Sabie Classic (MTB)</h4>
+              <p>One-day mountain-bike classic (26 Apr 2025). Traditionally late April.</p>
+            </div>
+            
+            <div class="annual-event">
+              <h4>My Body My Space Public Arts Festival</h4>
+              <p>Machadodorp (eNtokozweni) — Street-to-stage public arts across Human Rights Month (10th edition ran in March 2025). Look for March 2026 announcements.</p>
+            </div>
+            
+            <div class="annual-event">
+              <h4>Mac Mac Ultra (Trail Running)</h4>
+              <p>Sabie / Pilgrim's Rest — Next confirmed edition 1–5 July 2026, with race admin across Sabie/Pilgrim's Rest.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="planning-tips">
+          <h3 class="section-heading">How to Plan Your Weekend (Dullstroom-First)</h3>
+          
+          <div class="tip-grid">
+            <div class="tip-item">
+              <h4>Anchor the trip around one event</h4>
+              <p>Add a second local activity (fly-fishing lesson, whisky tasting, glass-blowing, or a short hike) so non-participants have fun too.</p>
+            </div>
+            
+            <div class="tip-item">
+              <h4>Book accommodation first</h4>
+              <p>Event weekends fill up fast. At The Browns:</p>
+              <ul>
+                <li>Whole-house self-catering when you book an entire house</li>
+                <li>Suite-only stays include a beverage station (minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, milk)</li>
+              </ul>
+            </div>
+            
+            <div class="tip-item">
+              <h4>Driving times (approx.) from Dullstroom</h4>
+              <p>Sabie (±1h45), Graskop (±2h10), Pilgrim's Rest (±2h20), Lydenburg/Mashishing (±1h), Belfast (±30 min), Machadodorp/eNtokozweni (±40 min). Plan extra time on event days.</p>
+            </div>
+            
+            <div class="tip-item">
+              <h4>Pack for altitude</h4>
+              <p>Even in spring, early mornings are chilly; layers and a windbreaker help.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accommodation-cta">
+          <h3 class="section-heading">Stay at The Browns (Dullstroom)</h3>
+          <p>The Browns' Luxury Guest & Cottage Suites are close to the village and make getting to regional events simple.</p>
+          <ul>
+            <li>Whole-house self-catering available only when booking an entire house</li>
+            <li>Suite-only stays include a beverage station (minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, milk)</li>
+          </ul>
+          <p class="cta-text">Check live Rates & Availability and match your dates to the right stay at The Browns.</p>
+        </div>
+      </div>
     `,
     category: "Events",
     author: "The Browns Team",
@@ -194,100 +303,143 @@ export const blogPosts: BlogPost[] = [
     title: "Why Choose Self-Catering Luxury in Dullstroom",
     excerpt: "Thinking about a Dullstroom escape and comparing stay types? Self-catering can be the perfect fit if you want privacy, space, and control over your mealtimes.",
     content: `
-      <h2>Two Ways to Stay at The Browns</h2>
-      <p>Thinking about a Dullstroom escape and comparing stay types? Self-catering can be the perfect fit if you want privacy, space, and control over your mealtimes. At The Browns' Luxury Guest & Cottage Suites, there are two clear ways to stay that suit different trips:</p>
-      
-      <p><strong>Whole-house self-catering</strong> when you book an entire property.</p>
-      <p><strong>Suite-only stays</strong> that include a beverage station for easy hot drinks and light refreshments, but no cooking facilities.</p>
-      
-      <h3>1) Whole-house self-catering</h3>
-      <p>Book an entire house to enjoy a private home setting in Dullstroom. This option suits families and small groups who value shared living spaces and the ability to prepare their own meals in comfort.</p>
-      
-      <p><strong>Best for:</strong></p>
-      <ul>
-        <li>Family weekends and friends' getaways</li>
-        <li>Longer stays that benefit from cooking at home</li>
-        <li>Early starts for activities with flexible meal times</li>
-      </ul>
-      
-      <p><strong>What to plan for:</strong></p>
-      <ul>
-        <li>Bring your favourite ingredients or shop in the village on arrival</li>
-        <li>Plan one relaxed dinner in, one dinner out, and simple breakfasts to keep the weekend smooth</li>
-      </ul>
-      
-      <h3>2) Suite-only with beverage station</h3>
-      <p>Prefer a hotel-style rhythm without cooking? Choose an individual suite. You will have a minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, and milk for easy mornings and wind-down evenings.</p>
-      
-      <p><strong>Good to know:</strong></p>
-      <ul>
-        <li>No cooking facilities are provided in suites</li>
-        <li>Eat out in the village or enjoy takeaways</li>
-        <li>Use the minibar fridge for milk, cold drinks, and small snacks</li>
-      </ul>
-      
-      <p><strong>Best for:</strong></p>
-      <ul>
-        <li>Short stays and couples' trips</li>
-        <li>Travellers who want a simple, low-fuss plan</li>
-        <li>Guests who prefer Dullstroom's cafés and restaurants for meals</li>
-      </ul>
-      
-      <h3>Self-catering vs suite-only: which fits your trip?</h3>
-      <table class="w-full border-collapse border border-gray-300 my-4">
-        <thead>
-          <tr class="bg-gray-100">
-            <th class="border border-gray-300 p-2">Trip type</th>
-            <th class="border border-gray-300 p-2">Choose whole-house self-catering if…</th>
-            <th class="border border-gray-300 p-2">Choose suite-only if…</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border border-gray-300 p-2"><strong>Families or groups</strong></td>
-            <td class="border border-gray-300 p-2">You want shared lounge and dining space</td>
-            <td class="border border-gray-300 p-2">You are splitting time between activities and meals out</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 p-2"><strong>Longer stays</strong></td>
-            <td class="border border-gray-300 p-2">You prefer to cook some meals and control timing</td>
-            <td class="border border-gray-300 p-2">You want a simple base with easy hot drinks</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 p-2"><strong>Early starts</strong></td>
-            <td class="border border-gray-300 p-2">You need flexible breakfasts before activities</td>
-            <td class="border border-gray-300 p-2">You are happy to grab coffee and head out</td>
-          </tr>
-        </tbody>
-      </table>
-      
-      <h3>Sample weekend plans</h3>
-      
-      <h4>Whole-house self-catering plan</h4>
-      <p><strong>Friday:</strong> Arrive, stock up in the village, easy dinner in.</p>
-      <p><strong>Saturday:</strong> Early activity, late brunch at home, slow afternoon, relaxed dinner in or out.</p>
-      <p><strong>Sunday:</strong> Simple breakfast, short scenic stop, drive home.</p>
-      
-      <h4>Suite-only plan</h4>
-      <p><strong>Friday:</strong> Arrive, in-room coffee or tea, dinner in the village.</p>
-      <p><strong>Saturday:</strong> Nespresso and a quiet start, breakfast at a café, explore, dinner out or takeaway.</p>
-      <p><strong>Sunday:</strong> Hot drink in the room, light breakfast in town, final stroll before checkout.</p>
-      
-      <h3>Quick FAQ</h3>
-      
-      <p><strong>Can I cook in a suite?</strong><br>
-      No. Suites are suite-only with a beverage station. There are no cooking facilities.</p>
-      
-      <p><strong>What is included in the beverage station?</strong><br>
-      A minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, and milk.</p>
-      
-      <p><strong>How do I book self-catering at The Browns?</strong><br>
-      Select an entire house option to enjoy whole-house self-catering. If you book an individual suite, it will be suite-only with a beverage station.</p>
-      
-      <h3>Ready to choose your stay?</h3>
-      <p><strong>Whole-house self-catering:</strong> ideal for families and groups who want space and mealtime flexibility.</p>
-      <p><strong>Suite-only with beverage station:</strong> perfect for couples and short stays that focus on exploring the village.</p>
-      <p>Check live Rates & Availability at The Browns' Luxury Guest & Cottage Suites and pick the option that matches your Dullstroom itinerary.</p>
+      <div class="article-content">
+        <h2 class="article-heading">Two Ways to Stay at The Browns</h2>
+        
+        <p class="article-lead">Thinking about a Dullstroom escape and comparing stay types? Self-catering can be the perfect fit if you want privacy, space, and control over your mealtimes. At The Browns' Luxury Guest & Cottage Suites, there are two clear ways to stay that suit different trips:</p>
+        
+        <div class="stay-options">
+          <p><strong>Whole-house self-catering</strong> when you book an entire property.</p>
+          <p><strong>Suite-only stays</strong> that include a beverage station for easy hot drinks and light refreshments, but no cooking facilities.</p>
+        </div>
+        
+        <div class="accommodation-types">
+          <div class="accommodation-card">
+            <h3 class="accommodation-title">1) Whole-house self-catering</h3>
+            <p>Book an entire house to enjoy a private home setting in Dullstroom. This option suits families and small groups who value shared living spaces and the ability to prepare their own meals in comfort.</p>
+            
+            <div class="feature-list">
+              <h4>Best for:</h4>
+              <ul>
+                <li>Family weekends and friends' getaways</li>
+                <li>Longer stays that benefit from cooking at home</li>
+                <li>Early starts for activities with flexible meal times</li>
+              </ul>
+            </div>
+            
+            <div class="planning-tips">
+              <h4>What to plan for:</h4>
+              <ul>
+                <li>Bring your favourite ingredients or shop in the village on arrival</li>
+                <li>Plan one relaxed dinner in, one dinner out, and simple breakfasts to keep the weekend smooth</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="accommodation-card">
+            <h3 class="accommodation-title">2) Suite-only with beverage station</h3>
+            <p>Prefer a hotel-style rhythm without cooking? Choose an individual suite. You will have a minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, and milk for easy mornings and wind-down evenings.</p>
+            
+            <div class="feature-list">
+              <h4>Good to know:</h4>
+              <ul>
+                <li>No cooking facilities are provided in suites</li>
+                <li>Eat out in the village or enjoy takeaways</li>
+                <li>Use the minibar fridge for milk, cold drinks, and small snacks</li>
+              </ul>
+            </div>
+            
+            <div class="feature-list">
+              <h4>Best for:</h4>
+              <ul>
+                <li>Short stays and couples' trips</li>
+                <li>Travellers who want a simple, low-fuss plan</li>
+                <li>Guests who prefer Dullstroom's cafés and restaurants for meals</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comparison-section">
+          <h3 class="section-heading">Self-catering vs suite-only: which fits your trip?</h3>
+          
+          <div class="comparison-table">
+            <div class="table-header">
+              <div class="table-cell">Trip type</div>
+              <div class="table-cell">Choose whole-house self-catering if…</div>
+              <div class="table-cell">Choose suite-only if…</div>
+            </div>
+            
+            <div class="table-row">
+              <div class="table-cell"><strong>Families or groups</strong></div>
+              <div class="table-cell">You want shared lounge and dining space</div>
+              <div class="table-cell">You are splitting time between activities and meals out</div>
+            </div>
+            
+            <div class="table-row">
+              <div class="table-cell"><strong>Longer stays</strong></div>
+              <div class="table-cell">You prefer to cook some meals and control timing</div>
+              <div class="table-cell">You want a simple base with easy hot drinks</div>
+            </div>
+            
+            <div class="table-row">
+              <div class="table-cell"><strong>Early starts</strong></div>
+              <div class="table-cell">You need flexible breakfasts before activities</div>
+              <div class="table-cell">You are happy to grab coffee and head out</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="sample-plans">
+          <h3 class="section-heading">Sample weekend plans</h3>
+          
+          <div class="plan-grid">
+            <div class="plan-card">
+              <h4 class="plan-title">Whole-house self-catering plan</h4>
+              <div class="day-breakdown">
+                <p><strong>Friday:</strong> Arrive, stock up in the village, easy dinner in.</p>
+                <p><strong>Saturday:</strong> Early activity, late brunch at home, slow afternoon, relaxed dinner in or out.</p>
+                <p><strong>Sunday:</strong> Simple breakfast, short scenic stop, drive home.</p>
+              </div>
+            </div>
+            
+            <div class="plan-card">
+              <h4 class="plan-title">Suite-only plan</h4>
+              <div class="day-breakdown">
+                <p><strong>Friday:</strong> Arrive, in-room coffee or tea, dinner in the village.</p>
+                <p><strong>Saturday:</strong> Nespresso and a quiet start, breakfast at a café, explore, dinner out or takeaway.</p>
+                <p><strong>Sunday:</strong> Hot drink in the room, light breakfast in town, final stroll before checkout.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-section">
+          <h3 class="section-heading">Quick FAQ</h3>
+          
+          <div class="faq-item">
+            <h4>Can I cook in a suite?</h4>
+            <p>No. Suites are suite-only with a beverage station. There are no cooking facilities.</p>
+          </div>
+          
+          <div class="faq-item">
+            <h4>What is included in the beverage station?</h4>
+            <p>A minibar fridge, Nespresso coffee, tea selection, hot chocolate, still water, and milk.</p>
+          </div>
+          
+          <div class="faq-item">
+            <h4>How do I book self-catering at The Browns?</h4>
+            <p>Select an entire house option to enjoy whole-house self-catering. If you book an individual suite, it will be suite-only with a beverage station.</p>
+          </div>
+        </div>
+        
+        <div class="accommodation-cta">
+          <h3 class="section-heading">Ready to choose your stay?</h3>
+          <p><strong>Whole-house self-catering:</strong> ideal for families and groups who want space and mealtime flexibility.</p>
+          <p><strong>Suite-only with beverage station:</strong> perfect for couples and short stays that focus on exploring the village.</p>
+          <p class="cta-text">Check live Rates & Availability at The Browns' Luxury Guest & Cottage Suites and pick the option that matches your Dullstroom itinerary.</p>
+        </div>
+      </div>
     `,
     category: "Accommodation",
     author: "The Browns Team",
@@ -1122,59 +1274,100 @@ export const blogPosts: BlogPost[] = [
     id: "fly-fishing-guide",
     slug: "world-class-fly-fishing-dullstroom",
     title: "World-Class Fly Fishing in Dullstroom: Complete Guide 2025",
-    content: `Dullstroom is renowned as South Africa's premier trout fishing destination with pristine highland streams and professional guide services.
-
-## Why Dullstroom for Fly Fishing?
-
-The high-altitude streams around Dullstroom offer some of the finest fly fishing experiences in Africa. Crystal-clear mountain waters, abundant brown and rainbow trout, and breathtaking highland scenery create the perfect fishing environment.
-
-## Best Fishing Spots
-
-**Local Dams and Streams**
-- Dullstroom Dam: Perfect for beginners
-- Wild Trout waters: For experienced anglers
-- Private reserves: Guided experiences available
-
-**Nearby Premium Waters**
-- Walkersons Estate: Luxury fishing experience
-- Critchley Hackle Lodge: World-class waters
-- Various private streams: Book through local guides
-
-## What to Expect
-
-**Brown & Rainbow Trout**
-These highland waters are home to both species, with fish ranging from 1-5 pounds on average, though larger specimens are regularly caught.
-
-**Guided Excursions**
-Professional guides know the best spots and conditions. They provide equipment, instruction, and local knowledge that dramatically improves your chances.
-
-**Equipment Rental**
-Full gear rental available locally - rods, reels, waders, and flies suited to local conditions.
-
-## Planning Your Fishing Trip
-
-**Best Times**
-- Early morning (6-10am) for optimal results
-- Year-round fishing with best conditions October-March
-- Avoid midday heat in summer months
-
-**What to Bring**
-- Warm layers for changing highland weather
-- Waterproof jacket and waders
-- Hat and sunglasses
-- Camera for scenic stream photography
-
-**Booking Tips**
-- Reserve guides in advance, especially weekends
-- Ask about equipment packages
-- Inquire about catch-and-release policies
-- Check local fishing licenses
-
-## Accommodation Pairing
-
-The Garden Suite at The Browns offers the perfect base for fishing enthusiasts, with early morning access and facilities to clean and store equipment.
-
-Ready to experience world-class fly fishing? Book your highland fishing adventure from The Browns luxury accommodation.`,
+    content: `
+      <div class="article-content">
+        <h2 class="article-heading">World-Class Fly Fishing in Dullstroom</h2>
+        
+        <p class="article-lead">Dullstroom is renowned as South Africa's premier trout fishing destination with pristine highland streams and professional guide services.</p>
+        
+        <div class="fishing-intro">
+          <h3 class="section-heading">Why Dullstroom for Fly Fishing?</h3>
+          <p>The high-altitude streams around Dullstroom offer some of the finest fly fishing experiences in Africa. Crystal-clear mountain waters, abundant brown and rainbow trout, and breathtaking highland scenery create the perfect fishing environment.</p>
+        </div>
+        
+        <div class="fishing-spots">
+          <h3 class="section-heading">Best Fishing Spots</h3>
+          
+          <div class="spot-category">
+            <h4 class="category-title">Local Dams and Streams</h4>
+            <ul>
+              <li>Dullstroom Dam: Perfect for beginners</li>
+              <li>Wild Trout waters: For experienced anglers</li>
+              <li>Private reserves: Guided experiences available</li>
+            </ul>
+          </div>
+          
+          <div class="spot-category">
+            <h4 class="category-title">Nearby Premium Waters</h4>
+            <ul>
+              <li>Walkersons Estate: Luxury fishing experience</li>
+              <li>Critchley Hackle Lodge: World-class waters</li>
+              <li>Various private streams: Book through local guides</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="fishing-expectations">
+          <h3 class="section-heading">What to Expect</h3>
+          
+          <div class="expectation-card">
+            <h4 class="expectation-title">Brown & Rainbow Trout</h4>
+            <p>These highland waters are home to both species, with fish ranging from 1-5 pounds on average, though larger specimens are regularly caught.</p>
+          </div>
+          
+          <div class="expectation-card">
+            <h4 class="expectation-title">Guided Excursions</h4>
+            <p>Professional guides know the best spots and conditions. They provide equipment, instruction, and local knowledge that dramatically improves your chances.</p>
+          </div>
+          
+          <div class="expectation-card">
+            <h4 class="expectation-title">Equipment Rental</h4>
+            <p>Full gear rental available locally - rods, reels, waders, and flies suited to local conditions.</p>
+          </div>
+        </div>
+        
+        <div class="trip-planning">
+          <h3 class="section-heading">Planning Your Fishing Trip</h3>
+          
+          <div class="planning-grid">
+            <div class="planning-card">
+              <h4 class="planning-title">Best Times</h4>
+              <ul>
+                <li>Early morning (6-10am) for optimal results</li>
+                <li>Year-round fishing with best conditions October-March</li>
+                <li>Avoid midday heat in summer months</li>
+              </ul>
+            </div>
+            
+            <div class="planning-card">
+              <h4 class="planning-title">What to Bring</h4>
+              <ul>
+                <li>Warm layers for changing highland weather</li>
+                <li>Waterproof jacket and waders</li>
+                <li>Hat and sunglasses</li>
+                <li>Camera for scenic stream photography</li>
+              </ul>
+            </div>
+            
+            <div class="planning-card">
+              <h4 class="planning-title">Booking Tips</h4>
+              <ul>
+                <li>Reserve guides in advance, especially weekends</li>
+                <li>Ask about equipment packages</li>
+                <li>Inquire about catch-and-release policies</li>
+                <li>Check local fishing licenses</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accommodation-cta">
+          <h3 class="section-heading">Accommodation Pairing</h3>
+          <p>The Garden Suite at The Browns offers the perfect base for fishing enthusiasts, with early morning access and facilities to clean and store equipment.</p>
+          <p class="cta-text">Ready to experience world-class fly fishing? Book your highland fishing adventure from The Browns luxury accommodation.</p>
+        </div>
+      </div>
+    `,
     excerpt: "Discover South Africa's premier trout fishing destination with pristine highland streams, abundant brown and rainbow trout, and professional guide services in the misty Dullstroom highlands.",
     author: "The Browns Team",
     date: "17 August 2024",
@@ -1190,49 +1383,81 @@ Ready to experience world-class fly fishing? Book your highland fishing adventur
     id: "panorama-route-guide", 
     slug: "panorama-route-day-trips-gods-window",
     title: "Panorama Route Day Trips: God's Window & Blyde River Canyon 2025",
-    content: `Explore the breathtaking Blyde River Canyon, God's Window, and Bourke's Luck Potholes - some of South Africa's most spectacular natural wonders, all within easy reach of Dullstroom.
-
-## The Complete Panorama Route Experience
-
-This world-renowned scenic drive showcases some of the most dramatic landscapes in South Africa. From Dullstroom, you're perfectly positioned for a full day exploring these natural wonders.
-
-## Must-See Destinations
-
-**God's Window**
-The most famous viewpoint offers sweeping vistas across the lowveld. On clear days, you can see all the way to Mozambique. Early morning visits offer the best visibility and lighting for photography.
-
-**Three Rondavels**
-These distinctive rock formations rise from the Blyde River Canyon like ancient African huts. The viewpoint provides spectacular photo opportunities and insight into local geological history.
-
-**Bourke's Luck Potholes**
-Fascinating rock formations carved by centuries of water erosion. Walkways and viewing platforms make this geological wonder accessible to all fitness levels.
-
-**Graskop Gorge**
-Experience the cliff-top walkway and lift that descends into the indigenous forest below. Perfect for those seeking a bit more adventure.
-
-## Planning Your Day Trip
-
-**Timing**
-- Start early (7am) to avoid crowds and afternoon heat
-- Allow 8-10 hours for the complete route
-- Check weather conditions - misty days limit visibility
-
-**Route Options**
-- **Full Route**: All major viewpoints (10+ hours)
-- **Highlights Tour**: God's Window, Three Rondavels, Bourke's Luck (6-8 hours)
-- **Photography Focus**: Best viewpoints with extended stops
-
-**What to Pack**
-- Snacks and plenty of water
-- Camera with extra batteries
-- Warm layers for higher altitudes
-- Comfortable walking shoes
-
-## Accommodation Pairing
-
-The Loft Family Suite provides ample space for families embarking on full-day Panorama Route adventures, with room to store camera equipment and plan your route.
-
-Ready for your Panorama Route adventure? Base yourself at The Browns for easy access to these world-class scenic wonders.`,
+    content: `
+      <div class="article-content">
+        <h2 class="article-heading">The Complete Panorama Route Experience</h2>
+        
+        <p class="article-lead">Explore the breathtaking Blyde River Canyon, God's Window, and Bourke's Luck Potholes - some of South Africa's most spectacular natural wonders, all within easy reach of Dullstroom.</p>
+        
+        <p>This world-renowned scenic drive showcases some of the most dramatic landscapes in South Africa. From Dullstroom, you're perfectly positioned for a full day exploring these natural wonders.</p>
+        
+        <div class="destinations-section">
+          <h3 class="section-heading">Must-See Destinations</h3>
+          
+          <div class="destination-grid">
+            <div class="destination-card">
+              <h4 class="destination-title">God's Window</h4>
+              <p>The most famous viewpoint offers sweeping vistas across the lowveld. On clear days, you can see all the way to Mozambique. Early morning visits offer the best visibility and lighting for photography.</p>
+            </div>
+            
+            <div class="destination-card">
+              <h4 class="destination-title">Three Rondavels</h4>
+              <p>These distinctive rock formations rise from the Blyde River Canyon like ancient African huts. The viewpoint provides spectacular photo opportunities and insight into local geological history.</p>
+            </div>
+            
+            <div class="destination-card">
+              <h4 class="destination-title">Bourke's Luck Potholes</h4>
+              <p>Fascinating rock formations carved by centuries of water erosion. Walkways and viewing platforms make this geological wonder accessible to all fitness levels.</p>
+            </div>
+            
+            <div class="destination-card">
+              <h4 class="destination-title">Graskop Gorge</h4>
+              <p>Experience the cliff-top walkway and lift that descends into the indigenous forest below. Perfect for those seeking a bit more adventure.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="planning-section">
+          <h3 class="section-heading">Planning Your Day Trip</h3>
+          
+          <div class="planning-grid">
+            <div class="planning-card">
+              <h4 class="planning-title">Timing</h4>
+              <ul>
+                <li>Start early (7am) to avoid crowds and afternoon heat</li>
+                <li>Allow 8-10 hours for the complete route</li>
+                <li>Check weather conditions - misty days limit visibility</li>
+              </ul>
+            </div>
+            
+            <div class="planning-card">
+              <h4 class="planning-title">Route Options</h4>
+              <ul>
+                <li><strong>Full Route</strong>: All major viewpoints (10+ hours)</li>
+                <li><strong>Highlights Tour</strong>: God's Window, Three Rondavels, Bourke's Luck (6-8 hours)</li>
+                <li><strong>Photography Focus</strong>: Best viewpoints with extended stops</li>
+              </ul>
+            </div>
+            
+            <div class="planning-card">
+              <h4 class="planning-title">What to Pack</h4>
+              <ul>
+                <li>Snacks and plenty of water</li>
+                <li>Camera with extra batteries</li>
+                <li>Warm layers for higher altitudes</li>
+                <li>Comfortable walking shoes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accommodation-cta">
+          <h3 class="section-heading">Accommodation Pairing</h3>
+          <p>The Loft Family Suite provides ample space for families embarking on full-day Panorama Route adventures, with room to store camera equipment and plan your route.</p>
+          <p class="cta-text">Ready for your Panorama Route adventure? Base yourself at The Browns for easy access to these world-class scenic wonders.</p>
+        </div>
+      </div>
+    `,
     excerpt: "Experience the breathtaking Panorama Route from Dullstroom - God's Window, Three Rondavels, and Blyde River Canyon day trips with complete planning guide and insider tips.",
     author: "The Browns Team",
     date: "17 August 2024", 
@@ -1248,49 +1473,81 @@ Ready for your Panorama Route adventure? Base yourself at The Browns for easy ac
     id: "highland-hiking-guide",
     slug: "highland-hiking-trails-dullstroom-mountains", 
     title: "Highland Hiking Trails: Explore Dullstroom's Mountain Paths 2025",
-    content: `Discover pristine mountain trails around Dullstroom with varying difficulty levels, from gentle family walks to challenging summit hikes with spectacular highland views.
-
-## Why Hike the Dullstroom Highlands?
-
-The Dullstroom area offers some of South Africa's most accessible highland hiking, with well-marked trails, stunning mountain vistas, and unique highland flora. The cool climate makes hiking pleasant year-round.
-
-## Trail Options by Difficulty
-
-**Easy Family Walks (1-2 hours)**
-- Town dam circuit: Flat, scenic walk around local dams
-- Wildflower meadow trails: Spring wildflower displays
-- Forest boardwalks: Gentle woodland paths
-
-**Moderate Hikes (2-4 hours)**
-- Highland plateau trails: Rolling hills with mountain views
-- Stream valley walks: Follow pristine mountain streams
-- Grassland paths: Open highland walking with wildlife spotting
-
-**Challenging Summit Hikes (4-8 hours)**
-- Local peaks: Serious elevation gain with panoramic rewards
-- Multi-day options: Connect with longer regional trails
-- Technical sections: Rock scrambling and steep ascents
-
-## Safety & Preparation
-
-**Essential Gear**
-- Proper hiking boots with ankle support
-- Layered clothing for changing weather
-- Rain protection (summer thunderstorms)
-- Sun hat and sunscreen
-- First aid kit
-
-**Safety Guidelines**
-- Inform someone of your hiking plans
-- Check weather forecasts
-- Carry emergency contact information
-- Don't hike alone in remote areas
-
-## Accommodation Pairing
-
-The Garden Family Suite offers the perfect base for hiking enthusiasts, with secure storage for gear and space to plan your mountain adventures.
-
-Ready to explore Dullstroom's highland trails? Book your mountain hiking getaway at The Browns.`,
+    content: `
+      <div class="article-content">
+        <h2 class="article-heading">Why Hike the Dullstroom Highlands?</h2>
+        
+        <p class="article-lead">Discover pristine mountain trails around Dullstroom with varying difficulty levels, from gentle family walks to challenging summit hikes with spectacular highland views.</p>
+        
+        <p>The Dullstroom area offers some of South Africa's most accessible highland hiking, with well-marked trails, stunning mountain vistas, and unique highland flora. The cool climate makes hiking pleasant year-round.</p>
+        
+        <div class="trail-options">
+          <h3 class="section-heading">Trail Options by Difficulty</h3>
+          
+          <div class="difficulty-grid">
+            <div class="difficulty-card">
+              <h4 class="difficulty-title">Easy Family Walks (1-2 hours)</h4>
+              <ul>
+                <li>Town dam circuit: Flat, scenic walk around local dams</li>
+                <li>Wildflower meadow trails: Spring wildflower displays</li>
+                <li>Forest boardwalks: Gentle woodland paths</li>
+              </ul>
+            </div>
+            
+            <div class="difficulty-card">
+              <h4 class="difficulty-title">Moderate Hikes (2-4 hours)</h4>
+              <ul>
+                <li>Highland plateau trails: Rolling hills with mountain views</li>
+                <li>Stream valley walks: Follow pristine mountain streams</li>
+                <li>Grassland paths: Open highland walking with wildlife spotting</li>
+              </ul>
+            </div>
+            
+            <div class="difficulty-card">
+              <h4 class="difficulty-title">Challenging Summit Hikes (4-8 hours)</h4>
+              <ul>
+                <li>Local peaks: Serious elevation gain with panoramic rewards</li>
+                <li>Multi-day options: Connect with longer regional trails</li>
+                <li>Technical sections: Rock scrambling and steep ascents</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="safety-section">
+          <h3 class="section-heading">Safety & Preparation</h3>
+          
+          <div class="safety-grid">
+            <div class="safety-card">
+              <h4 class="safety-title">Essential Gear</h4>
+              <ul>
+                <li>Proper hiking boots with ankle support</li>
+                <li>Layered clothing for changing weather</li>
+                <li>Rain protection (summer thunderstorms)</li>
+                <li>Sun hat and sunscreen</li>
+                <li>First aid kit</li>
+              </ul>
+            </div>
+            
+            <div class="safety-card">
+              <h4 class="safety-title">Safety Guidelines</h4>
+              <ul>
+                <li>Inform someone of your hiking plans</li>
+                <li>Check weather forecasts</li>
+                <li>Carry emergency contact information</li>
+                <li>Don't hike alone in remote areas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accommodation-cta">
+          <h3 class="section-heading">Accommodation Pairing</h3>
+          <p>The Garden Family Suite offers the perfect base for hiking enthusiasts, with secure storage for gear and space to plan your mountain adventures.</p>
+          <p class="cta-text">Ready to explore Dullstroom's highland trails? Book your mountain hiking getaway at The Browns.</p>
+        </div>
+      </div>
+    `,
     excerpt: "Explore Dullstroom's pristine mountain hiking trails - from gentle family walks to challenging summit hikes with spectacular highland views and unique flora.",
     author: "The Browns Team",
     date: "17 August 2024",
@@ -1306,42 +1563,68 @@ Ready to explore Dullstroom's highland trails? Book your mountain hiking getaway
     id: "highland-spa-wellness",
     slug: "highland-spa-wellness-dullstroom-luxury",
     title: "Highland Spa & Wellness: Luxury Treatments in Dullstroom 2025", 
-    content: `Rejuvenate with luxury spa treatments featuring highland tranquility, holistic therapies, and couples packages in the serene Dullstroom atmosphere.
-
-## The Highland Wellness Experience
-
-Dullstroom's high-altitude location and pristine mountain air create the perfect environment for wellness and relaxation. Local spas harness the healing power of the highlands for truly restorative experiences.
-
-## Signature Highland Treatments
-
-**Highland Stone Therapy**
-Using heated stones sourced from local rivers, this treatment combines the grounding energy of the mountains with deep muscle relaxation.
-
-**Trout Stream Sound Therapy**
-Treatments accompanied by the natural sounds of mountain streams, creating a deeply calming sensory experience.
-
-**Highland Flora Aromatherapy**
-Essential oils derived from indigenous plants like wild sage and mountain heather for a uniquely South African wellness experience.
-
-## Popular Treatment Packages
-
-**Couples Highland Retreat**
-- Side-by-side massages
-- Private relaxation suite
-- Champagne and local delicacies
-- Highland sunset viewing
-
-**Solo Wellness Day**
-- Full-body massage
-- Facial with local ingredients
-- Meditation session
-- Healthy spa lunch
-
-## Accommodation Pairing
-
-The Master Suite provides the perfect continuation of your spa experience, with luxurious amenities and serene mountain views for ultimate relaxation.
-
-Ready for your highland wellness retreat? Book your rejuvenating spa escape at The Browns luxury accommodation.`,
+    content: `
+      <div class="article-content">
+        <h2 class="article-heading">The Highland Wellness Experience</h2>
+        
+        <p class="article-lead">Rejuvenate with luxury spa treatments featuring highland tranquility, holistic therapies, and couples packages in the serene Dullstroom atmosphere.</p>
+        
+        <p>Dullstroom's high-altitude location and pristine mountain air create the perfect environment for wellness and relaxation. Local spas harness the healing power of the highlands for truly restorative experiences.</p>
+        
+        <div class="treatments-section">
+          <h3 class="section-heading">Signature Highland Treatments</h3>
+          
+          <div class="treatment-grid">
+            <div class="treatment-card">
+              <h4 class="treatment-title">Highland Stone Therapy</h4>
+              <p>Using heated stones sourced from local rivers, this treatment combines the grounding energy of the mountains with deep muscle relaxation.</p>
+            </div>
+            
+            <div class="treatment-card">
+              <h4 class="treatment-title">Trout Stream Sound Therapy</h4>
+              <p>Treatments accompanied by the natural sounds of mountain streams, creating a deeply calming sensory experience.</p>
+            </div>
+            
+            <div class="treatment-card">
+              <h4 class="treatment-title">Highland Flora Aromatherapy</h4>
+              <p>Essential oils derived from indigenous plants like wild sage and mountain heather for a uniquely South African wellness experience.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="packages-section">
+          <h3 class="section-heading">Popular Treatment Packages</h3>
+          
+          <div class="package-grid">
+            <div class="package-card">
+              <h4 class="package-title">Couples Highland Retreat</h4>
+              <ul>
+                <li>Side-by-side massages</li>
+                <li>Private relaxation suite</li>
+                <li>Champagne and local delicacies</li>
+                <li>Highland sunset viewing</li>
+              </ul>
+            </div>
+            
+            <div class="package-card">
+              <h4 class="package-title">Solo Wellness Day</h4>
+              <ul>
+                <li>Full-body massage</li>
+                <li>Facial with local ingredients</li>
+                <li>Meditation session</li>
+                <li>Healthy spa lunch</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accommodation-cta">
+          <h3 class="section-heading">Accommodation Pairing</h3>
+          <p>The Master Suite provides the perfect continuation of your spa experience, with luxurious amenities and serene mountain views for ultimate relaxation.</p>
+          <p class="cta-text">Ready for your highland wellness retreat? Book your rejuvenating spa escape at The Browns luxury accommodation.</p>
+        </div>
+      </div>
+    `,
     excerpt: "Experience luxury highland spa treatments in Dullstroom - holistic therapies, couples packages, and mountain wellness in the serene Mpumalanga highlands.",
     author: "The Browns Team",
     date: "17 August 2024",
@@ -1357,39 +1640,61 @@ Ready for your highland wellness retreat? Book your rejuvenating spa escape at T
     id: "whisky-wine-tasting",
     slug: "whisky-wine-tasting-dullstroom-distilleries",
     title: "Whisky & Wine Tasting: Dullstroom's Premium Spirits Scene 2025",
-    content: `Sample premium South African whiskies and wines at local distilleries and estates, including exclusive highland varieties unique to the Mpumalanga region.
-
-## Dullstroom's Spirits Heritage
-
-The cool highland climate and pure mountain water make Dullstroom an ideal location for both whisky distillation and wine production. Local producers craft unique expressions that capture the essence of the South African highlands.
-
-## Tasting Experiences
-
-**Whisky Education Sessions**
-- Learn about highland whisky production
-- Understand the impact of altitude on aging
-- Discover local botanicals used in production
-- Master the art of whisky appreciation
-
-**Wine & Food Pairings**
-- Local wines paired with highland cuisine
-- Cheese and charcuterie platters
-- Seasonal produce combinations
-- Expert sommelier guidance
-
-## Planning Your Tasting Adventure
-
-**Safety & Responsibility**
-- Designate a sober driver
-- Use local shuttle services
-- Book accommodation within walking distance
-- Pace yourself throughout the day
-
-## Accommodation Pairing
-
-The Blue Crane Suite offers sophisticated accommodation perfect for spirits enthusiasts, with proper storage for your tasting purchases and elegant spaces to enjoy your acquisitions.
-
-Ready to explore Dullstroom's premium spirits scene? Book your tasting adventure from The Browns luxury base.`,
+    content: `
+      <div class="article-content">
+        <h2 class="article-heading">Dullstroom's Spirits Heritage</h2>
+        
+        <p class="article-lead">Sample premium South African whiskies and wines at local distilleries and estates, including exclusive highland varieties unique to the Mpumalanga region.</p>
+        
+        <p>The cool highland climate and pure mountain water make Dullstroom an ideal location for both whisky distillation and wine production. Local producers craft unique expressions that capture the essence of the South African highlands.</p>
+        
+        <div class="tasting-experiences">
+          <h3 class="section-heading">Tasting Experiences</h3>
+          
+          <div class="experience-grid">
+            <div class="experience-card">
+              <h4 class="experience-title">Whisky Education Sessions</h4>
+              <ul>
+                <li>Learn about highland whisky production</li>
+                <li>Understand the impact of altitude on aging</li>
+                <li>Discover local botanicals used in production</li>
+                <li>Master the art of whisky appreciation</li>
+              </ul>
+            </div>
+            
+            <div class="experience-card">
+              <h4 class="experience-title">Wine & Food Pairings</h4>
+              <ul>
+                <li>Local wines paired with highland cuisine</li>
+                <li>Cheese and charcuterie platters</li>
+                <li>Seasonal produce combinations</li>
+                <li>Expert sommelier guidance</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="planning-section">
+          <h3 class="section-heading">Planning Your Tasting Adventure</h3>
+          
+          <div class="safety-card">
+            <h4 class="safety-title">Safety & Responsibility</h4>
+            <ul>
+              <li>Designate a sober driver</li>
+              <li>Use local shuttle services</li>
+              <li>Book accommodation within walking distance</li>
+              <li>Pace yourself throughout the day</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="accommodation-cta">
+          <h3 class="section-heading">Accommodation Pairing</h3>
+          <p>The Blue Crane Suite offers sophisticated accommodation perfect for spirits enthusiasts, with proper storage for your tasting purchases and elegant spaces to enjoy your acquisitions.</p>
+          <p class="cta-text">Ready to explore Dullstroom's premium spirits scene? Book your tasting adventure from The Browns luxury base.</p>
+        </div>
+      </div>
+    `,
     excerpt: "Discover Dullstroom's premium whisky and wine scene - local distilleries, estate tastings, educational experiences, and highland varieties unique to Mpumalanga.",
     author: "The Browns Team",
     date: "17 August 2024",
@@ -1405,45 +1710,73 @@ Ready to explore Dullstroom's premium spirits scene? Book your tasting adventure
     id: "cheese-food-tours",
     slug: "artisanal-cheese-food-tours-dullstroom",
     title: "Artisanal Cheese & Food Tours: Farm-to-Table Dullstroom 2025",
-    content: `Visit local cheese factories, farms, and artisanal food producers to taste highland specialties and learn about traditional production methods in the Dullstroom area.
-
-## Dullstroom's Artisanal Food Scene
-
-The highland climate and pristine pastures around Dullstroom create ideal conditions for artisanal food production. Local farmers and producers craft exceptional cheeses, cured meats, and specialty foods using traditional methods.
-
-## Food Tour Experiences
-
-**Cheese Factory Tours**
-- Behind-the-scenes production viewing
-- Aging cave visits
-- Tasting sessions with expert guidance
-- Take-home cheese selections
-
-**Farm-to-Table Experiences**
-- Visit working dairy and goat farms
-- Participate in daily farming activities
-- Enjoy fresh farm meals
-- Learn about animal welfare practices
-
-## Highland Specialties to Try
-
-**Signature Cheeses**
-- Highland cow milk varieties aged in mountain caves
-- Goat cheese with indigenous herbs
-- Seasonal specialties like spring wildflower cheese
-- Award-winning aged cheddars
-
-**Local Delicacies**
-- Trout-based specialties from local streams
-- Game meats from highland farms
-- Indigenous plant-based products
-- Seasonal fruit preserves and jams
-
-## Pairing with Accommodation
-
-The Self Catering House provides the perfect complement to food tours, with full kitchen facilities to prepare and enjoy your artisanal purchases using local recipes and techniques.
-
-Ready to explore Dullstroom's artisanal food scene? Book your farm-to-table adventure from The Browns luxury accommodation.`,
+    content: `
+      <div class="article-content">
+        <h2 class="article-heading">Dullstroom's Artisanal Food Scene</h2>
+        
+        <p class="article-lead">Visit local cheese factories, farms, and artisanal food producers to taste highland specialties and learn about traditional production methods in the Dullstroom area.</p>
+        
+        <p>The highland climate and pristine pastures around Dullstroom create ideal conditions for artisanal food production. Local farmers and producers craft exceptional cheeses, cured meats, and specialty foods using traditional methods.</p>
+        
+        <div class="food-tours">
+          <h3 class="section-heading">Food Tour Experiences</h3>
+          
+          <div class="tour-grid">
+            <div class="tour-card">
+              <h4 class="tour-title">Cheese Factory Tours</h4>
+              <ul>
+                <li>Behind-the-scenes production viewing</li>
+                <li>Aging cave visits</li>
+                <li>Tasting sessions with expert guidance</li>
+                <li>Take-home cheese selections</li>
+              </ul>
+            </div>
+            
+            <div class="tour-card">
+              <h4 class="tour-title">Farm-to-Table Experiences</h4>
+              <ul>
+                <li>Visit working dairy and goat farms</li>
+                <li>Participate in daily farming activities</li>
+                <li>Enjoy fresh farm meals</li>
+                <li>Learn about animal welfare practices</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="highland-specialties">
+          <h3 class="section-heading">Highland Specialties to Try</h3>
+          
+          <div class="specialties-grid">
+            <div class="specialty-card">
+              <h4 class="specialty-title">Signature Cheeses</h4>
+              <ul>
+                <li>Highland cow milk varieties aged in mountain caves</li>
+                <li>Goat cheese with indigenous herbs</li>
+                <li>Seasonal specialties like spring wildflower cheese</li>
+                <li>Award-winning aged cheddars</li>
+              </ul>
+            </div>
+            
+            <div class="specialty-card">
+              <h4 class="specialty-title">Local Delicacies</h4>
+              <ul>
+                <li>Trout-based specialties from local streams</li>
+                <li>Game meats from highland farms</li>
+                <li>Indigenous plant-based products</li>
+                <li>Seasonal fruit preserves and jams</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accommodation-cta">
+          <h3 class="section-heading">Pairing with Accommodation</h3>
+          <p>The Self Catering House provides the perfect complement to food tours, with full kitchen facilities to prepare and enjoy your artisanal purchases using local recipes and techniques.</p>
+          <p class="cta-text">Ready to explore Dullstroom's artisanal food scene? Book your farm-to-table adventure from The Browns luxury accommodation.</p>
+        </div>
+      </div>
+    `,
     excerpt: "Explore Dullstroom's artisanal cheese factories, farms, and food producers - hands-on workshops, tastings, and farm-to-table experiences in the highland farming community.",
     author: "The Browns Team", 
     date: "17 August 2024",

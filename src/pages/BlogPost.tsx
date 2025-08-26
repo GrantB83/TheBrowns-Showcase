@@ -19,6 +19,7 @@ import {
 import { useState } from "react";
 import { MobileQuickActions } from "@/components/ui/enhanced-mobile-gesture-nav";
 
+
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
