@@ -53,7 +53,7 @@ export function PersonalizationEngine({
   };
 
   const handleBookNow = (roomId: number) => {
-    const bookingUrl = `https://book.nightsbridge.com/00000?rtid=${roomId}`;
+    const bookingUrl = `https://book.nightsbridge.com/00000?promocode=PUBLICDEMO&rtid=${roomId}`;
     window.open(bookingUrl, '_blank', 'noopener,noreferrer');
   };
 

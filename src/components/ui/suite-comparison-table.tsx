@@ -85,7 +85,7 @@ export function SuiteComparisonTable() {
               ))}
             </ul>
             <Button className="w-full" asChild>
-              <a href="https://book.nightsbridge.com/00000" target="_blank" rel="noopener noreferrer">
+              <a href="https://book.nightsbridge.com/00000?promocode=PUBLICDEMO" target="_blank" rel="noopener noreferrer">
                 Book Luxury Suites
               </a>
             </Button>
@@ -115,7 +115,7 @@ export function SuiteComparisonTable() {
               ))}
             </ul>
             <Button variant="outline" className="w-full" asChild>
-              <a href="https://book.nightsbridge.com/00000" target="_blank" rel="noopener noreferrer">
+              <a href="https://book.nightsbridge.com/00000?promocode=PUBLICDEMO" target="_blank" rel="noopener noreferrer">
                 Book Cottage Suites
               </a>
             </Button>

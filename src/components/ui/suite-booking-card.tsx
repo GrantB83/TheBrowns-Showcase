@@ -205,7 +205,7 @@ export function SuiteBookingCard({
   }, [slug, title]);
 
   const getBookingUrl = () => {
-    return `https://book.nightsbridge.com/00000?rtid=${roomId}`;
+    return `https://book.nightsbridge.com/00000?promocode=PUBLICDEMO&rtid=${roomId}`;
   };
 
   const handleBookNow = () => {

@@ -43,7 +43,7 @@ export function Footer() {
               Luxury guest suites and cottage accommodation in the heart of Dullstroom, Mpumalanga.
             </p>
             <Button asChild className="min-h-[44px] touch-manipulation">
-              <a href="https://book.nightsbridge.com/00000" target="_blank" rel="noopener noreferrer">
+                              <a href="https://book.nightsbridge.com/00000?promocode=PUBLICDEMO" target="_blank" rel="noopener noreferrer">
                 Book Now
               </a>
             </Button>

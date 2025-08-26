@@ -152,7 +152,7 @@ export function Header() {
               onClick={handleBookNowClick}
             >
               <a 
-                href="https://book.nightsbridge.com/00000" 
+                                    href="https://book.nightsbridge.com/00000?promocode=PUBLICDEMO" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="Book accommodation now"
@@ -253,7 +253,7 @@ export function Header() {
                       onClick={handleBookNowClick}
                     >
                       <a 
-                        href="https://book.nightsbridge.com/00000" 
+                        href="https://book.nightsbridge.com/00000?promocode=PUBLICDEMO" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="w-full h-full flex items-center justify-center"

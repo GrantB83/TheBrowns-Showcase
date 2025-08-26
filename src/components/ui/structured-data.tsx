@@ -88,7 +88,7 @@ export function StructuredData({ type, data }: StructuredDataProps) {
               price: "2200-3600"
             },
             availability: "https://schema.org/InStock",
-            url: "https://book.nightsbridge.com/00000"
+            url: "https://book.nightsbridge.com/00000?promocode=PUBLICDEMO"
           },
           aggregateRating: {
             "@type": "AggregateRating",

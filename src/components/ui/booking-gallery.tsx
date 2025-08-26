@@ -83,7 +83,7 @@ export function BookingGallery({
   };
 
   const getBookingUrl = (roomId: number) => {
-    return `https://book.nightsbridge.com/00000?rtid=${roomId}`;
+    return `https://book.nightsbridge.com/00000?promocode=PUBLICDEMO&rtid=${roomId}`;
   };
 
   const handleBookNow = (roomId: number, suiteName: string) => {

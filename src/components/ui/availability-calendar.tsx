@@ -28,7 +28,7 @@ export function AvailabilityCalendar({
 
   const handleBookNow = () => {
     // Redirect to Nightsbridge booking system
-    const bookingUrl = `https://book.nightsbridge.com/00000?rtid=${getRoomId(suiteId)}`;
+    const bookingUrl = `https://book.nightsbridge.com/00000?promocode=PUBLICDEMO&rtid=${getRoomId(suiteId)}`;
     window.open(bookingUrl, '_blank', 'noopener,noreferrer');
   };
 

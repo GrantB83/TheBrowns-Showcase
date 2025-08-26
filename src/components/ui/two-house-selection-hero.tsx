@@ -34,7 +34,7 @@ export function TwoHouseSelectionHero({ onFilterChange, activeFilter }: TwoHouse
   };
 
   const handleDirectBooking = () => {
-    window.open('https://book.nightsbridge.com/00000', '_blank', 'noopener,noreferrer');
+            window.open('https://book.nightsbridge.com/00000?promocode=PUBLICDEMO', '_blank', 'noopener,noreferrer');
   };
 
   return (

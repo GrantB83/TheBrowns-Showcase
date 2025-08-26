@@ -580,7 +580,7 @@ export default function Suites() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
               <Button size="lg" className="min-h-[56px] flex-1 text-base font-semibold touch-target" asChild>
-                <a href="https://book.nightsbridge.com/00000" target="_blank" rel="noopener noreferrer">
+                <a href="https://book.nightsbridge.com/00000?promocode=PUBLICDEMO" target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="h-5 w-5 mr-2" />
                   Book Your Perfect Suite
                 </a>

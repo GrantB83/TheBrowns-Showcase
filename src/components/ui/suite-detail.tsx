@@ -228,7 +228,7 @@ export function SuiteDetail({
             {/* Book Now Button */}
             <Button asChild size="lg" className="w-full">
               <a 
-                href="https://book.nightsbridge.com/00000" 
+                                  href="https://book.nightsbridge.com/00000?promocode=PUBLICDEMO" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >

@@ -117,7 +117,7 @@ export function SuiteCard({
       <CardFooter className="p-4 sm:p-5 lg:p-6 pt-0">
         <Button asChild className="w-full min-h-[48px] sm:min-h-[52px] text-sm sm:text-base font-medium touch-target">
           <a 
-            href="https://book.nightsbridge.com/00000" 
+                              href="https://book.nightsbridge.com/00000?promocode=PUBLICDEMO" 
             target="_blank" 
             rel="noopener noreferrer"
             aria-label={`Book ${title} suite now`}

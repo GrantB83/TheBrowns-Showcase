@@ -31,7 +31,7 @@ export function EmbeddedBookingIframe({
   const [isFullscreen, setIsFullscreen] = useState(fullscreen);
 
   const buildBookingUrl = () => {
-    const baseUrl = "https://book.nightsbridge.com/00000";
+    const baseUrl = "https://book.nightsbridge.com/00000?promocode=PUBLICDEMO";
     const urlParams = new URLSearchParams();
     
     if (roomId) urlParams.append('rtid', roomId.toString());

@@ -118,7 +118,7 @@ export function UnifiedBookingFlow({
 
   const handleDirectBooking = () => {
     setIsLoading(true);
-    const baseUrl = "https://book.nightsbridge.com/00000";
+    const baseUrl = "https://book.nightsbridge.com/00000?promocode=PUBLICDEMO";
     const bookingUrl = selectedSuiteData?.roomId ? `${baseUrl}?rtid=${selectedSuiteData.roomId}` : baseUrl;
     
     // Track conversion

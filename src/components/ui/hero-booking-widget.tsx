@@ -159,7 +159,7 @@ export function HeroBookingWidget({ className, compact = false }: HeroBookingWid
   };
 
   const handleDirectBooking = () => {
-    const baseUrl = "https://book.nightsbridge.com/00000";
+    const baseUrl = "https://book.nightsbridge.com/00000?promocode=PUBLICDEMO";
     const urlParams = new URLSearchParams();
     
     // Add dates if selected

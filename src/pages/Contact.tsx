@@ -101,7 +101,7 @@ export default function Contact() {
                       For the best rates and personalized service, book directly through our secure Nightsbridge platform.
                     </p>
                     <Button asChild className="w-full min-h-[48px] touch-manipulation">
-                      <a href="https://book.nightsbridge.com/00000" target="_blank" rel="noopener noreferrer">
+                      <a href="https://book.nightsbridge.com/00000?promocode=PUBLICDEMO" target="_blank" rel="noopener noreferrer">
                         Book Now
                       </a>
                     </Button>
@@ -138,7 +138,7 @@ export default function Contact() {
 
       {/* Mobile Quick Actions */}
       <MobileQuickActions
-        onBooking={() => window.open('https://book.nightsbridge.com/00000', '_blank')}
+        onBooking={() => window.open('https://book.nightsbridge.com/00000?promocode=PUBLICDEMO', '_blank')}
         onCall={() => window.open('tel:+27000000000', '_self')}
         onWhatsApp={() => window.open('https://wa.me/27000000000?text=Hi! I would like to enquire about The Browns Guest Suites.', '_blank')}
       />
