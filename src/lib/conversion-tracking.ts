@@ -1,7 +1,13 @@
 // Google Ads Conversion Tracking Utility
+interface GtagFunction {
+  (...args: unknown[]): void;
+  q?: unknown[];
+  l?: number;
+}
+
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag?: GtagFunction;
   }
 }
 
