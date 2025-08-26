@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNavigation } from "@/components/ui/breadcrumb-navigation";
 import { SEO } from "@/components/ui/seo";
+import { ReadingProgress } from "@/components/ui/reading-progress";
 import { 
   ArrowLeft, 
   Calendar, 
@@ -58,6 +59,9 @@ export default function BlogPost() {
 
   return (
     <>
+      {/* Reading Progress Indicator */}
+      <ReadingProgress />
+      
       <div className="min-h-screen">
         <SEO 
           title={post.title}
@@ -199,7 +203,7 @@ export default function BlogPost() {
 
               {/* Article Content */}
               <div 
-                className="prose prose-lg max-w-none prose-headings:text-primary prose-headings:font-playfair prose-p:text-muted-foreground prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground"
+                className="prose prose-lg max-w-none prose-headings:text-primary prose-headings:font-playfair prose-p:text-muted-foreground prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-li:text-muted-foreground"
                 dangerouslySetInnerHTML={{ __html: post.content }}
               />
 

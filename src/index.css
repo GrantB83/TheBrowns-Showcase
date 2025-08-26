@@ -403,4 +403,325 @@ All colors MUST be HSL.
     font-size: clamp(0.875rem, 2.5vw, 1.125rem);
     line-height: 1.6;
   }
+
+  /* ========================================
+     BLOG ARTICLE STYLES - Premium Typography & Layout
+     ======================================== */
+  
+  /* Main article container */
+  .article-content {
+    @apply max-w-4xl mx-auto;
+    line-height: 1.7;
+    color: hsl(var(--foreground));
+  }
+
+  /* Article headings hierarchy */
+  .article-heading {
+    @apply text-3xl md:text-4xl font-playfair text-primary mb-6 leading-tight;
+    letter-spacing: -0.02em;
+  }
+
+  .section-heading {
+    @apply text-2xl md:text-3xl font-playfair text-primary mb-4 mt-8 leading-tight;
+    letter-spacing: -0.015em;
+  }
+
+  .venue-heading {
+    @apply text-xl md:text-2xl font-playfair text-primary mb-3 mt-6;
+    letter-spacing: -0.01em;
+  }
+
+  .day-heading {
+    @apply text-lg font-semibold text-primary mb-2;
+  }
+
+  /* Article lead paragraph */
+  .article-lead {
+    @apply text-lg md:text-xl text-muted-foreground mb-6 leading-relaxed font-medium;
+    max-width: 70ch;
+  }
+
+  /* Venue subtitles */
+  .venue-subtitle {
+    @apply text-sm font-medium text-secondary mb-3 uppercase tracking-wide;
+  }
+
+  /* Article meta information */
+  .article-meta {
+    @apply bg-muted/50 p-4 rounded-lg mb-6 text-sm text-muted-foreground border-l-4 border-secondary;
+  }
+
+  .article-meta strong {
+    @apply text-foreground font-medium;
+  }
+
+  /* Info boxes - premium styling */
+  .info-box {
+    @apply bg-accent/30 border border-accent/50 rounded-lg p-5 my-6;
+    backdrop-filter: blur(10px);
+  }
+
+  .info-box h4 {
+    @apply font-semibold text-primary mb-3 text-base;
+  }
+
+  .info-box ul {
+    @apply space-y-2 text-sm text-muted-foreground;
+  }
+
+  .info-box li {
+    @apply flex items-start;
+  }
+
+  .info-box li:before {
+    content: "•";
+    @apply text-secondary mr-3 font-bold text-base;
+    margin-top: -2px;
+  }
+
+  /* Venue sections */
+  .fishing-venues {
+    @apply space-y-8 my-8;
+  }
+
+  /* Grid layouts for tips and content */
+  .tips-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8;
+  }
+
+  .tip-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6 my-6;
+  }
+
+  /* Tip cards - elegant design */
+  .tip-card {
+    @apply bg-card border border-border rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow;
+  }
+
+  .tip-card h4 {
+    @apply font-semibold text-primary mb-3 text-base;
+  }
+
+  .tip-card p {
+    @apply text-sm text-muted-foreground leading-relaxed;
+  }
+
+  .tip-card ul {
+    @apply space-y-2 text-sm text-muted-foreground mt-3;
+  }
+
+  .tip-card li {
+    @apply flex items-start;
+  }
+
+  .tip-card li:before {
+    content: "✓";
+    @apply text-secondary mr-2 font-bold text-sm;
+    margin-top: 1px;
+  }
+
+  /* Event cards */
+  .event-card {
+    @apply bg-card border border-border rounded-lg p-6 mb-6 hover:shadow-lg transition-shadow;
+  }
+
+  .event-title {
+    @apply text-xl font-playfair text-primary mb-2;
+  }
+
+  .event-location {
+    @apply text-sm font-medium text-secondary mb-1 uppercase tracking-wide;
+  }
+
+  .event-date {
+    @apply text-base text-primary mb-3 font-medium;
+  }
+
+  .event-details {
+    @apply text-sm text-muted-foreground leading-relaxed;
+  }
+
+  /* Annual events styling */
+  .annual-event-list {
+    @apply space-y-6 my-6;
+  }
+
+  .annual-event {
+    @apply border-l-4 border-secondary pl-6 py-3;
+  }
+
+  .annual-event h4 {
+    @apply font-semibold text-primary mb-2 text-base;
+  }
+
+  .annual-event p {
+    @apply text-sm text-muted-foreground leading-relaxed;
+  }
+
+  /* Day planning sections */
+  .day-plan {
+    @apply bg-muted/30 rounded-lg p-5 mb-4;
+  }
+
+  .day-plan p {
+    @apply text-sm text-muted-foreground leading-relaxed;
+  }
+
+  /* Accommodation sections */
+  .stay-options {
+    @apply bg-accent/20 border border-accent/40 rounded-lg p-5 my-6;
+  }
+
+  .stay-options p {
+    @apply mb-2 last:mb-0;
+  }
+
+  .accommodation-types {
+    @apply space-y-8 my-8;
+  }
+
+  .accommodation-card {
+    @apply bg-card border border-border rounded-lg p-6;
+  }
+
+  .accommodation-title {
+    @apply text-xl font-playfair text-primary mb-4;
+  }
+
+  .feature-list {
+    @apply mb-4;
+  }
+
+  .feature-list h4,
+  .planning-tips h4 {
+    @apply font-semibold text-primary mb-3 text-base;
+  }
+
+  .feature-list ul,
+  .planning-tips ul {
+    @apply space-y-2 text-sm text-muted-foreground;
+  }
+
+  .feature-list li,
+  .planning-tips li {
+    @apply flex items-start;
+  }
+
+  .feature-list li:before,
+  .planning-tips li:before {
+    content: "→";
+    @apply text-secondary mr-3 font-bold;
+    margin-top: 1px;
+  }
+
+  /* CTA sections */
+  .accommodation-cta {
+    @apply bg-primary/5 border border-primary/20 rounded-lg p-6 my-8;
+  }
+
+  .accommodation-cta h3 {
+    @apply text-xl font-playfair text-primary mb-4;
+  }
+
+  .accommodation-cta ul {
+    @apply space-y-2 text-sm text-muted-foreground mb-4;
+  }
+
+  .accommodation-cta li {
+    @apply flex items-start;
+  }
+
+  .accommodation-cta li:before {
+    content: "★";
+    @apply text-secondary mr-3 font-bold;
+    margin-top: 1px;
+  }
+
+  .cta-text {
+    @apply text-base font-medium text-primary;
+  }
+
+  /* Generic tip items */
+  .tip-item {
+    @apply bg-card border border-border rounded-lg p-5;
+  }
+
+  .tip-item h4 {
+    @apply font-semibold text-primary mb-3 text-base;
+  }
+
+  .tip-item p {
+    @apply text-sm text-muted-foreground leading-relaxed mb-2 last:mb-0;
+  }
+
+  .tip-item ul {
+    @apply space-y-1 text-sm text-muted-foreground mt-2;
+  }
+
+  .tip-item li {
+    @apply flex items-start;
+  }
+
+  .tip-item li:before {
+    content: "•";
+    @apply text-secondary mr-2 font-bold;
+    margin-top: 1px;
+  }
+
+  /* Itinerary sections */
+  .itinerary {
+    @apply my-8;
+  }
+
+  /* Enhanced mobile responsiveness for blog content */
+  @media (max-width: 768px) {
+    .tips-grid {
+      @apply grid-cols-1 gap-4;
+    }
+
+    .tip-grid {
+      @apply grid-cols-1 gap-4;
+    }
+
+    .article-heading {
+      @apply text-2xl;
+    }
+
+    .section-heading {
+      @apply text-xl;
+    }
+
+    .venue-heading {
+      @apply text-lg;
+    }
+
+    .tip-card,
+    .event-card,
+    .accommodation-card {
+      @apply p-4;
+    }
+
+    .info-box {
+      @apply p-4;
+    }
+  }
+
+  /* Print styles for articles */
+  @media print {
+    .article-content {
+      @apply text-black;
+    }
+
+    .article-heading,
+    .section-heading,
+    .venue-heading {
+      @apply text-black;
+    }
+
+    .info-box,
+    .tip-card,
+    .event-card {
+      @apply border border-gray-300 break-inside-avoid;
+    }
+  }
 }
