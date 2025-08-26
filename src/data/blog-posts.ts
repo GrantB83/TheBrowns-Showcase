@@ -1796,6 +1796,10 @@ export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find(post => post.slug === slug && post.published);
 }
 
+export function getAllBlogPosts(): BlogPost[] {
+  return blogPosts;
+}
+
 export function getFeaturedPosts(): BlogPost[] {
   return blogPosts.filter(post => post.featured && post.published);
 }

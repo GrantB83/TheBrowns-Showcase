@@ -455,6 +455,45 @@ All colors MUST be HSL.
     @apply text-foreground font-medium;
   }
 
+  /* Article content typography with accessibility */
+  .article-content h2 {
+    @apply text-2xl font-playfair text-primary mt-8 mb-4 font-semibold scroll-mt-24;
+  }
+
+  .article-content h3 {
+    @apply text-xl font-playfair text-primary mt-6 mb-3 font-medium scroll-mt-24;
+  }
+
+  .article-content h4 {
+    @apply text-lg font-playfair text-primary mt-4 mb-2 font-medium scroll-mt-24;
+  }
+
+  .article-content p {
+    @apply text-muted-foreground mb-4 leading-relaxed;
+    max-width: 75ch;
+  }
+
+  .article-content a {
+    @apply text-primary underline-offset-4 hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded;
+  }
+
+  .article-content ul,
+  .article-content ol {
+    @apply mb-4 space-y-2;
+  }
+
+  .article-content li {
+    @apply text-muted-foreground leading-relaxed;
+  }
+
+  .article-content blockquote {
+    @apply border-l-4 border-primary/30 pl-6 py-2 my-6 text-muted-foreground italic bg-muted/30 rounded-r;
+  }
+
+  .article-content img {
+    @apply rounded-lg shadow-sm my-6 max-w-full h-auto;
+  }
+
   /* Info boxes - premium styling */
   .info-box {
     @apply bg-accent/30 border border-accent/50 rounded-lg p-5 my-6;
@@ -695,6 +734,18 @@ All colors MUST be HSL.
       @apply text-lg;
     }
 
+    .article-content h2 {
+      @apply text-xl;
+    }
+
+    .article-content h3 {
+      @apply text-lg;
+    }
+
+    .article-content h4 {
+      @apply text-base;
+    }
+
     .tip-card,
     .event-card,
     .accommodation-card {
@@ -712,6 +763,12 @@ All colors MUST be HSL.
       @apply text-black;
     }
 
+    .article-content h2,
+    .article-content h3,
+    .article-content h4 {
+      @apply text-black break-after-avoid;
+    }
+
     .article-heading,
     .section-heading,
     .venue-heading {
@@ -722,6 +779,13 @@ All colors MUST be HSL.
     .tip-card,
     .event-card {
       @apply border border-gray-300 break-inside-avoid;
+    }
+
+    /* Hide navigation elements in print */
+    .table-of-contents,
+    .reading-progress,
+    .share-buttons {
+      display: none !important;
     }
   }
 }

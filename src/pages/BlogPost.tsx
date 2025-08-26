@@ -1,11 +1,13 @@
 import { useParams, useNavigate, Link } from "react-router-dom";
-import { getBlogPostBySlug, getRelatedPosts } from "@/data/blog-posts";
+import { getBlogPostBySlug, getRelatedPosts, getAllBlogPosts } from "@/data/blog-posts";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNavigation } from "@/components/ui/breadcrumb-navigation";
 import { SEO } from "@/components/ui/seo";
 import { ReadingProgress } from "@/components/ui/reading-progress";
+import { TableOfContents } from "@/components/ui/table-of-contents";
+import { ArticleNavigation } from "@/components/ui/article-navigation";
 import { 
   ArrowLeft, 
   Calendar, 
@@ -27,6 +29,7 @@ export default function BlogPost() {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   const post = slug ? getBlogPostBySlug(slug) : null;
+  const allPosts = getAllBlogPosts();
 
   if (!post) {
     return (
@@ -144,7 +147,7 @@ export default function BlogPost() {
                 </div>
 
                 {/* Share Buttons */}
-                <div className="flex items-center gap-2 mb-8">
+                <div className="flex items-center gap-2 mb-8 share-buttons">
                   <span className="text-sm text-muted-foreground mr-2">Share:</span>
                   <Button 
                     variant="outline" 
@@ -201,11 +204,33 @@ export default function BlogPost() {
                 )}
               </div>
 
-              {/* Article Content */}
-              <div 
-                className="prose prose-lg max-w-none prose-headings:text-primary prose-headings:font-playfair prose-p:text-muted-foreground prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-li:text-muted-foreground"
-                dangerouslySetInnerHTML={{ __html: post.content }}
-              />
+              {/* Article Content with TOC */}
+              <div className="lg:grid lg:grid-cols-4 lg:gap-12">
+                {/* Main Content */}
+                <div className="lg:col-span-3">
+                  <div 
+                    className="article-content prose prose-lg max-w-none prose-headings:text-primary prose-headings:font-playfair prose-p:text-muted-foreground prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-li:text-muted-foreground"
+                    dangerouslySetInnerHTML={{ __html: post.content }}
+                  />
+                </div>
+
+                {/* Table of Contents - Desktop */}
+                <div className="hidden lg:block lg:col-span-1">
+                  <div className="sticky top-24 bg-card border rounded-lg p-4 shadow-sm">
+                    <TableOfContents />
+                  </div>
+                </div>
+              </div>
+
+              {/* Table of Contents - Mobile */}
+              <div className="lg:hidden mt-8 bg-muted/50 border rounded-lg p-4">
+                <TableOfContents />
+              </div>
+
+              {/* Article Navigation */}
+              <div className="mt-12 pt-8 border-t">
+                <ArticleNavigation currentPost={post} allPosts={allPosts} />
+              </div>
 
               {/* Author Bio */}
               {post.authorBio && (
