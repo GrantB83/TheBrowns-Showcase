@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "build:dev": "vite build --mode development",
+    "postbuild": "node -e \"const fs = require('fs'); if (fs.existsSync('.htaccess')) { fs.copyFileSync('.htaccess', 'dist/.htaccess'); console.log('✅ .htaccess copied to dist/'); } else { console.log('⚠️ .htaccess not found'); }\"",
+    "copy-htaccess": "node copy-htaccess.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },

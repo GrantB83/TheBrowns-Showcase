@@ -2,6 +2,23 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
+import fs from 'fs';
+
+// Plugin to copy .htaccess file to build output
+const copyHtaccessPlugin = () => {
+  return {
+    name: 'copy-htaccess',
+    writeBundle() {
+      // Copy .htaccess from root to dist
+      if (fs.existsSync('.htaccess')) {
+        fs.copyFileSync('.htaccess', 'dist/.htaccess');
+        console.log('✅ .htaccess file copied to dist/');
+      } else {
+        console.warn('⚠️ .htaccess file not found in root directory');
+      }
+    }
+  };
+};
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -34,6 +51,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     mode === 'development' && componentTagger(),
+    copyHtaccessPlugin(),
   ].filter(Boolean),
   resolve: {
     alias: {
