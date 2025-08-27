@@ -1,11 +1,12 @@
 import { Helmet } from "react-helmet-async";
+import { SITE_CONFIG, getCanonicalUrl } from "@/lib/config";
 
 interface SEOProps {
   title: string;
   description: string;
   keywords?: string;
   image?: string;
-  url?: string;
+  canonicalOverride?: string;
   type?: string;
   schemaData?: any;
 }
@@ -14,15 +15,18 @@ export function SEO({
   title, 
   description, 
   keywords = "Dullstroom luxury accommodation, highland guest suites, Mpumalanga boutique hotel, fly fishing accommodation, Panorama Route base, luxury self-catering Dullstroom",
-  image = "https://thebrowns.co.za/images/gallery/main-building-exterior.jpg",
-  url,
+  image = `${SITE_CONFIG.BASE_URL}/images/gallery/main-building-exterior.jpg`,
+  canonicalOverride,
   type = "website",
   schemaData
 }: SEOProps) {
-  const siteName = "The Browns Luxury Guest Suites";
+  const siteName = SITE_CONFIG.SITE_NAME;
   const defaultTitle = "The Browns - Luxury Highland Accommodation | Dullstroom Guest Suites";
   const fullTitle = title === defaultTitle ? title : `${title} | ${siteName}`;
-  const canonicalUrl = url || `https://thebrowns.co.za${typeof window !== 'undefined' ? window.location.pathname : ''}`;
+  const canonicalUrl = getCanonicalUrl(
+    typeof window !== 'undefined' ? window.location.pathname : '',
+    canonicalOverride
+  );
 
   // Enhanced meta keywords with long-tail variations
   const enhancedKeywords = [
@@ -86,10 +90,10 @@ export function SEO({
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LodgingBusiness",
-          "@id": "https://thebrowns.co.za/#business",
-          name: "The Browns Luxury Guest Suites",
+          "@id": `${SITE_CONFIG.BASE_URL}/#business`,
+          name: SITE_CONFIG.SITE_NAME,
           description: "Premier boutique luxury accommodation in Dullstroom's misty highlands, specializing in personalized hospitality, world-class fly-fishing access, and Panorama Route adventures.",
-          url: "https://thebrowns.co.za",
+          url: SITE_CONFIG.BASE_URL,
           telephone: "+27000000000",
           email: "stay@thebrowns.co.za",
           address: {

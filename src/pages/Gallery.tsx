@@ -674,13 +674,13 @@ export default function Gallery() {
                 </p>
                 <div className="flex flex-col xs:flex-row gap-3 xs:gap-4 justify-center items-center">
                   <a 
-                    href="/booking" 
+                    href="/accommodation" 
                     className="inline-flex items-center justify-center px-4 sm:px-6 py-2.5 sm:py-3 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg text-sm sm:text-base font-medium transition-colors duration-200 min-h-[44px] min-w-[120px]"
                   >
                     Book Now
                   </a>
                   <a 
-                    href="/suites" 
+                    href="/accommodation" 
                     className="inline-flex items-center justify-center px-4 sm:px-6 py-2.5 sm:py-3 bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg text-sm sm:text-base font-medium transition-colors duration-200 min-h-[44px] min-w-[120px]"
                   >
                     View Suites
