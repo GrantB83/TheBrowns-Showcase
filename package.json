@@ -12,6 +12,9 @@
     "copy-htaccess": "node copy-htaccess.js",
     "generate-sitemap": "node scripts/generate-sitemap.js",
     "validate-seo": "node scripts/validate-seo.js",
+    "optimize-images": "node scripts/optimize-images.js && node scripts/optimize-suite-images.js",
+    "optimize-hero": "node scripts/optimize-images.js",
+    "optimize-suites": "node scripts/optimize-suite-images.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -86,6 +89,7 @@
     "globals": "^15.9.0",
     "lovable-tagger": "^1.1.7",
     "postcss": "^8.4.47",
+    "sharp": "^0.34.3",
     "tailwindcss": "^3.4.11",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",

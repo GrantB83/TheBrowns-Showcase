@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ContactForm } from "@/components/ui/contact-form";
 import { WhatsAppContact } from "@/components/ui/whatsapp-contact";
 import { Phone, Mail, MapPin, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 import { MobileQuickActions } from "@/components/ui/enhanced-mobile-gesture-nav";
 import { ConversionTrackingPage } from "@/components/ui/conversion-tracking-page";
 

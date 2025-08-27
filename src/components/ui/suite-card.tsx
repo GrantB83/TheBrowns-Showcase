@@ -53,6 +53,9 @@ export function SuiteCard({
             alt={`${title} interior at The Browns luxury accommodation in Dullstroom`}
             className="w-full h-48 xs:h-52 sm:h-56 md:h-60 lg:h-64 object-cover"
             loading="lazy"
+            width={400}
+            height={256}
+            style={{ aspectRatio: '16/10' }}
           />
         ) : (
           image

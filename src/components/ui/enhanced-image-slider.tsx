@@ -114,14 +114,40 @@ export function EnhancedImageSlider({
     }
   }, [autoPlay, isDragging]);
 
-  // Helper function to check if image is external
-  const isExternalImage = (src: string) => {
-    return src.startsWith('http://') || src.startsWith('https://');
+  // Generate optimized image sources
+  const getOptimizedSrc = (originalSrc: string, format: 'avif' | 'webp' | 'jpg', size: string) => {
+    // Check if this is a hero image that has optimized variants
+    if (originalSrc.includes('/images/hero/')) {
+      const basePath = originalSrc.replace('.jpg', '');
+      return `/images/hero/optimized/${basePath.split('/').pop()}-${size}.${format}`;
+    }
+    
+    // For other images, return original with optimization params
+    if (originalSrc.startsWith('http')) {
+      const params = new URLSearchParams({
+        auto: 'format',
+        fit: 'crop',
+        w: size === 'mobile' ? '768' : size === 'tablet' ? '1200' : '1920',
+        h: size === 'mobile' ? '461' : size === 'tablet' ? '720' : '1152',
+        q: '80',
+        fm: format
+      });
+      return `${originalSrc}?${params.toString()}`;
+    }
+    
+    return originalSrc;
   };
 
-  // Helper function to get optimized src for external images only
-  const getOptimizedSrc = (src: string, params: string) => {
-    return isExternalImage(src) ? `${src}?${params}` : src;
+  const generateSrcSet = (originalSrc: string, format: 'avif' | 'webp' | 'jpg') => {
+    const sizes = [
+      { name: 'mobile', width: 768 },
+      { name: 'tablet', width: 1200 },
+      { name: 'desktop', width: 1920 }
+    ];
+    
+    return sizes
+      .map(size => `${getOptimizedSrc(originalSrc, format, size.name)} ${size.width}w`)
+      .join(', ');
   };
 
   if (images.length === 0) return null;
@@ -151,43 +177,62 @@ export function EnhancedImageSlider({
         {images.map((image, index) => (
           <div key={`${image.src}-${index}`} className="relative w-full h-full flex-shrink-0 mobile-select-none">
             <picture className="w-full h-full">
+              {/* AVIF - Best compression for modern browsers */}
               <source 
-                srcSet={getOptimizedSrc(image.src, 'fm=webp&w=800&h=600&q=80')} 
+                srcSet={generateSrcSet(image.src, 'avif')} 
+                type="image/avif"
+                media="(max-width: 768px)"
+              />
+              <source 
+                srcSet={generateSrcSet(image.src, 'avif')} 
+                type="image/avif"
+                media="(min-width: 769px)"
+              />
+              {/* WebP - Good compression, wide support */}
+              <source 
+                srcSet={generateSrcSet(image.src, 'webp')} 
                 type="image/webp"
                 media="(max-width: 768px)"
               />
               <source 
-                srcSet={getOptimizedSrc(image.src, 'fm=webp&w=1200&h=800&q=80')} 
+                srcSet={generateSrcSet(image.src, 'webp')} 
                 type="image/webp"
                 media="(min-width: 769px)"
               />
+              {/* Optimized JPEG fallback */}
               <img
-                src={getOptimizedSrc(image.src, 'w=1200&h=800&q=80')}
+                src={getOptimizedSrc(image.src, 'jpg', 'desktop')}
+                srcSet={generateSrcSet(image.src, 'jpg')}
                 alt={image.alt}
                 className="w-full h-full object-cover"
                 loading={index === 0 ? "eager" : "lazy"}
+                decoding={index === 0 ? "sync" : "async"}
+                {...(index === 0 && { fetchpriority: "high" } as any)}
                 draggable={false}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 80vw"
+                width={1920}
+                height={1152}
+                style={{ aspectRatio: '16/9' }}
               />
             </picture>
-                         {(image.title || image.subtitle) && (
-               <div className="absolute inset-0 bg-black/40 flex items-center justify-center pointer-events-none">
-                 <div className="text-center text-white px-8 sm:px-12 lg:px-16 max-w-3xl mx-auto relative z-10">
-                   {image.title && (
-                     <h1 className="font-playfair font-bold mb-2 sm:mb-4 text-white drop-shadow-lg" 
-                         style={{ fontSize: 'clamp(1.5rem, 5vw, 3rem)' }}>
-                       {image.title}
-                     </h1>
-                   )}
-                   {image.subtitle && (
-                     <p className="leading-relaxed text-white/95 drop-shadow-md" 
-                        style={{ fontSize: 'clamp(0.875rem, 2.5vw, 1.25rem)' }}>
-                       {image.subtitle}
-                     </p>
-                   )}
-                 </div>
-               </div>
-             )}
+            {(image.title || image.subtitle) && (
+              <div className="absolute inset-0 bg-black/40 flex items-center justify-center pointer-events-none">
+                <div className="text-center text-white px-8 sm:px-12 lg:px-16 max-w-3xl mx-auto relative z-10">
+                  {image.title && (
+                    <h1 className="font-playfair font-bold mb-2 sm:mb-4 text-white drop-shadow-lg" 
+                        style={{ fontSize: 'clamp(1.5rem, 5vw, 3rem)' }}>
+                      {image.title}
+                    </h1>
+                  )}
+                  {image.subtitle && (
+                    <p className="leading-relaxed text-white/95 drop-shadow-md" 
+                       style={{ fontSize: 'clamp(0.875rem, 2.5vw, 1.25rem)' }}>
+                      {image.subtitle}
+                    </p>
+                  )}
+                </div>
+              </div>
+            )}
           </div>
         ))}
       </div>

@@ -3,6 +3,7 @@ import { SEO } from "@/components/ui/seo";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useState, useMemo } from "react";
+import { Link } from "react-router-dom";
 import { MobileQuickActions } from "@/components/ui/enhanced-mobile-gesture-nav";
 import { ConversionTrackingPage } from "@/components/ui/conversion-tracking-page";
 

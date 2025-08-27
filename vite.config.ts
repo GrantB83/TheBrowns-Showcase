@@ -41,8 +41,13 @@ export default defineConfig(({ mode }) => ({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-tabs'],
+          ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-tabs', '@radix-ui/react-accordion'],
           utils: ['clsx', 'class-variance-authority', 'tailwind-merge'],
+          analytics: ['@tanstack/react-query'],
+          forms: ['react-hook-form', '@hookform/resolvers', 'zod'],
+          maps: ['mapbox-gl'],
+          charts: ['recharts'],
+          markdown: ['react-markdown', 'rehype-raw'],
         },
       },
     },

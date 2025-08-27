@@ -52,23 +52,22 @@ export function OptimizedHeroImage({
     return () => observer.disconnect();
   }, [priority]);
 
-  // Generate responsive image sources
-  const getOptimizedSrc = (originalSrc: string, width?: number) => {
-    const extension = originalSrc.split('.').pop();
-    const basePath = originalSrc.replace(`.${extension}`, '');
-    
-    if (width) {
-      return `${basePath}-${width}w.webp`;
-    }
-    
-    // Try WebP first, fallback to original
-    return `${basePath}.webp`;
+  // Generate optimized image sources
+  const getOptimizedSrc = (originalSrc: string, format: 'avif' | 'webp' | 'jpg', size: string) => {
+    const basePath = originalSrc.replace('.jpg', '');
+    return `/images/hero/optimized/${basePath.split('/').pop()}-${size}.${format}`;
   };
 
-  const generateSrcSet = (originalSrc: string) => {
-    const widths = [400, 800, 1200, 1920];
-    return widths
-      .map(width => `${getOptimizedSrc(originalSrc, width)} ${width}w`)
+  const generateSrcSet = (originalSrc: string, format: 'avif' | 'webp' | 'jpg') => {
+    const sizes = [
+      { name: 'mobile', width: 768 },
+      { name: 'tablet', width: 1200 },
+      { name: 'desktop', width: 1920 },
+      { name: 'large', width: 2560 }
+    ];
+    
+    return sizes
+      .map(size => `${getOptimizedSrc(originalSrc, format, size.name)} ${size.width}w`)
       .join(', ');
   };
 
@@ -86,9 +85,9 @@ export function OptimizedHeroImage({
   };
 
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
-    // Fallback to original image if WebP fails
+    // Fallback to original image if optimized variants fail
     const img = e.currentTarget;
-    if (img.src.includes('.webp')) {
+    if (!img.src.includes('/images/hero/')) {
       img.src = src;
     } else {
       handleError();
@@ -117,15 +116,23 @@ export function OptimizedHeroImage({
       
       {!hasError ? (
         <picture>
+          {/* AVIF - Best compression for modern browsers */}
           <source
-            srcSet={generateSrcSet(src)}
+            srcSet={generateSrcSet(src, 'avif')}
+            sizes={sizes}
+            type="image/avif"
+          />
+          {/* WebP - Good compression, wide support */}
+          <source
+            srcSet={generateSrcSet(src, 'webp')}
             sizes={sizes}
             type="image/webp"
           />
+          {/* Optimized JPEG fallback */}
           <img
             ref={imgRef}
-            src={priority ? getOptimizedSrc(src) : src}
-            srcSet={generateSrcSet(src)}
+            src={getOptimizedSrc(src, 'jpg', 'desktop')}
+            srcSet={generateSrcSet(src, 'jpg')}
             sizes={sizes}
             alt={alt}
             loading={priority ? "eager" : "lazy"}
