@@ -4,6 +4,7 @@ import { SuiteBookingCard } from "@/components/ui/suite-booking-card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { SEO } from "@/components/ui/seo";
+import { HotelStructuredData } from "@/components/ui/hotel-structured-data";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { BookingWidget } from "@/components/ui/booking-widget";
 import { SuiteFilter } from "@/components/ui/suite-filter";
@@ -404,6 +405,20 @@ export default function Suites() {
 
   return <>
       <SEO title="Discover Tailored Dullstroom Luxury Suites 2025 - The Browns" description="Luxury Dullstroom accommodation with Master Suite featuring King XL bed, Self Catering House for groups up to 16. Direct booking benefits included." keywords="Dullstroom luxury guesthouse 2025, Panorama Route accommodation, self catering Dullstroom, family suites Mpumalanga, luxury cottage accommodation" />
+      
+      {/* Hotel Structured Data */}
+      <HotelStructuredData type="hotel" />
+      
+      {/* Breadcrumb Structured Data */}
+      <HotelStructuredData 
+        type="breadcrumb" 
+        data={{
+          items: [
+            { name: "Home", url: "https://thebrowns.co.za/" },
+            { name: "Accommodation", url: "https://thebrowns.co.za/accommodation" }
+          ]
+        }}
+      />
       
       {/* Conversion Tracking for Accommodation Page */}
       <ConversionTrackingPage pageType="accommodation" />

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/ui/seo";
-import { StructuredData } from "@/components/ui/structured-data";
+import { HotelStructuredData } from "@/components/ui/hotel-structured-data";
 import { EnhancedImageSlider } from "@/components/ui/enhanced-image-slider";
 import { SuiteCard } from "@/components/ui/suite-card";
 import { SuiteBookingCard } from "@/components/ui/suite-booking-card";
@@ -367,10 +367,7 @@ const Index = () => {
         keywords="Dullstroom luxury accommodation 2025, boutique guesthouse, Mpumalanga highlands accommodation, fly fishing, Panorama Route accommodation, luxury self-catering Dullstroom, luxury suites Dullstroom"
       />
       
-      <StructuredData 
-        type="hotel" 
-        data={{}}
-      />
+      <HotelStructuredData type="hotel" />
       
       <MobileSEO />
       
