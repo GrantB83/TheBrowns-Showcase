@@ -8,7 +8,7 @@ import './index.css'
 (function() {
   // Check if we're on a valid route
   const currentPath = window.location.pathname;
-  const validRoutes = ['/', '/blog', '/about', '/accommodation', '/gallery', '/contact', '/privacy', '/activities'];
+  const validRoutes = ['/', '/blog', '/about', '/accommodation', '/gallery', '/contact', '/privacy', '/activities', '/dullstroom-accommodation-travel-guide'];
   const isValidRoute = validRoutes.some(route => currentPath === route || currentPath.startsWith(route + '/'));
   
   if (!isValidRoute && currentPath !== '/') {

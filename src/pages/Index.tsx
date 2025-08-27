@@ -398,6 +398,9 @@ const Index = () => {
             <p className="text-fluid-lg text-muted-foreground mb-8 sm:mb-10 md:mb-12 leading-relaxed max-w-none sm:max-w-3xl mx-auto">
             Located in Dullstroom, Mpumalanga, our luxurious suites combine modern comfort with refined style across two exceptional properties. The Luxury Guest Suites host up to 10 adults and 2 children in four elegant ensuite rooms, while the charming Cottage Suites offer intimate accommodation for up to 6 adults and 1 child. Enjoy premium self-catering amenities in the heart of South Africa's premier highland retreat.
             </p>
+            <p className="text-fluid-base text-muted-foreground mb-6">
+              For a complete guide to <Link to="/dullstroom-accommodation-travel-guide" className="text-primary hover:underline">where to stay in Dullstroom</Link> and planning your perfect getaway, explore our comprehensive travel resource.
+            </p>
             
             <div className="mobile-grid max-w-6xl mx-auto">
               {keyFeatures.map((feature, index) => (

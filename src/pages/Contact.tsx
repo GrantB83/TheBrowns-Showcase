@@ -22,6 +22,9 @@ export default function Contact() {
               <p className="text-fluid-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                 Get in touch for reservations, inquiries, or to learn more about our luxury suites.
               </p>
+              <p className="text-fluid-base text-muted-foreground mt-4">
+                Planning your trip? Check out our <Link to="/dullstroom-accommodation-travel-guide" className="text-primary hover:underline">Dullstroom accommodation guide</Link> for travel tips and local insights.
+              </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-fluid-lg lg:gap-fluid-xl">

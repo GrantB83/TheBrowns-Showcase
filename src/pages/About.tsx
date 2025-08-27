@@ -78,6 +78,9 @@ export default function About() {
                   the Dullstroom Dam. Our location offers the perfect balance of peaceful retreat and 
                   convenient access to nature and local attractions.
                 </p>
+                <p className="text-fluid-base text-muted-foreground">
+                  Discover more about <Link to="/dullstroom-accommodation-travel-guide" className="text-primary hover:underline">best places to stay in Dullstroom</Link> and planning your perfect highland getaway in our comprehensive travel guide.
+                </p>
               </div>
             </div>
 

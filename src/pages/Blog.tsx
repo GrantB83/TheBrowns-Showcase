@@ -140,6 +140,9 @@ export default function Blog() {
               <p className="text-fluid-lg sm:text-fluid-xl text-muted-foreground leading-relaxed max-w-none sm:max-w-3xl mx-auto">
                 {getCurrentHeroContent().description}
               </p>
+              <p className="text-fluid-base text-muted-foreground mt-4">
+                For a complete <Link to="/dullstroom-accommodation-travel-guide" className="text-primary hover:underline">Dullstroom travel guide</Link> with accommodation tips, activities, and insider recommendations, visit our comprehensive resource.
+              </p>
             </div>
           </div>
         </section>

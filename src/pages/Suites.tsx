@@ -429,7 +429,8 @@ export default function Suites() {
                 
                 <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8 max-w-4xl mx-auto">
                   Experience luxury highland accommodation with two distinct styles: modern sophistication in our Luxury Guest Suites 
-                  or authentic cottage charm in our neighbouring Heritage Cottage. Each offers premium amenities and personalized service.
+                  or authentic cottage charm in our neighbouring Heritage Cottage. Each offers premium amenities and personalized service. 
+                  For a complete guide to <Link to="/dullstroom-accommodation-travel-guide" className="text-primary hover:underline">where to stay in Dullstroom</Link> and planning your perfect getaway, visit our comprehensive travel guide.
                 </p>
               </div>
             </div>

@@ -606,6 +606,9 @@ export default function Gallery() {
               <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto px-2 leading-relaxed mb-8">
                 Discover two distinct highland experiences: our modern Luxury Guest Suites with elegant interiors and premium amenities, and our charming Heritage Cottage with authentic character and self-catering comfort. Browse our complete collection and find your perfect Dullstroom retreat.
               </p>
+              <p className="text-sm sm:text-base text-muted-foreground mb-6">
+                Planning your visit? Explore our <Link to="/dullstroom-accommodation-travel-guide" className="text-primary hover:underline">Dullstroom travel guide</Link> for accommodation tips and local recommendations.
+              </p>
 
               {/* House Selection Interface */}
               <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8 sm:mb-12">
