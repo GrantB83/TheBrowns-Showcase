@@ -128,7 +128,7 @@ class AnalyticsService {
     this.config = {
       ...this.config,
       gtmId: 'GTM-MSDSS25G',
-      ga4Id: 'G-D77N80KFFH',
+      ga4Id: 'G-XXXXXXXX',
       googleAdsId: 'AW-822238420',
       metaPixelId: '770659805912273'
     };
