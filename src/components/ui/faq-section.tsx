@@ -45,7 +45,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: "How to book luxury accommodation in Dullstroom?",
-    answer: "Book The Browns directly through our Nightsbridge platform for best rates guaranteed. We offer instant confirmation, flexible cancellation (full refund 28+ days prior), and exclusive direct booking benefits including welcome drinks and late checkout. Call +27 00 000 0000 or visit our booking portal.",
+    answer: "Book The Browns directly through our Nightsbridge platform for best rates guaranteed. We offer instant confirmation, flexible cancellation (full refund up to 14 days prior), and exclusive direct booking benefits including welcome drinks and late checkout. Call +27 00 000 0000 or visit our booking portal.",
     category: "Booking Process"
   },
   {
@@ -70,7 +70,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: "What is your cancellation policy for direct bookings?",
-    answer: "Flexible cancellation policy for direct bookings: Full refund if cancelled 28+ days before arrival, 50% deposit forfeited for cancellations 14-28 days prior, full booking value forfeited for cancellations within 14 days. This flexible policy is exclusive to direct bookings through our Nightsbridge platform.",
+    answer: "Flexible cancellation policy for direct bookings: Full refund if cancelled 14+ days before arrival. This flexible policy is exclusive to direct bookings via our website.",
     category: "Booking"
   },
   {

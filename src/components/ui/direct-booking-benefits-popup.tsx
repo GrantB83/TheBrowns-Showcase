@@ -291,7 +291,7 @@ export function DirectBookingBenefitsPopup({
     {
       icon: RefreshCw,
       title: "Flexible Cancellation",
-      description: "Free cancellation up to 48 hours before"
+      description: "Free cancellation up to 14 days before"
     },
     {
       icon: MessageSquare,
